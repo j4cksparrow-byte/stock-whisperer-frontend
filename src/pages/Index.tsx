@@ -1,5 +1,5 @@
-
 import StockAnalysis from "@/components/StockAnalysis";
+import TradingViewChart from "@/components/TradingViewChart";
 
 const Index = () => {
   return (
@@ -12,6 +12,10 @@ const Index = () => {
           <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
             Get detailed analysis and insights for any publicly traded company
           </p>
+        </div>
+
+        <div className="mb-8">
+          <TradingViewChart />
         </div>
         
         <StockAnalysis />
