@@ -17,7 +17,11 @@ const POPULAR_STOCKS = [
   "MS", "SBUX", "BA", "GE", "CAT", "MMM", "JNJ", "CVS", "ORCL", "WFC"
 ];
 
-const StockAnalysis = () => {
+interface StockAnalysisProps {
+  onAnalysisComplete?: (symbol: string) => void;
+}
+
+const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
   const [tickerSymbol, setTickerSymbol] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [analysisText, setAnalysisText] = useState<string>("");
@@ -56,6 +60,11 @@ const StockAnalysis = () => {
       setAnalysisText(data.text);
       setChartImageUrl(data.url);
       setSymbol(data.symbol);
+      
+      // Notify parent component of the new symbol
+      if (onAnalysisComplete) {
+        onAnalysisComplete(data.symbol);
+      }
       
       toast({
         title: "Success",

@@ -2,6 +2,8 @@
 import StockAnalysis from "@/components/StockAnalysis";
 import TradingViewChart from "@/components/TradingViewChart";
 import GraphLogo from "@/components/GraphLogo";
+import NewsFeed from "@/components/NewsFeed";
+import { useState } from "react";
 
 const NASDAQ_INDICES = [
   { symbol: "IXIC", name: "NASDAQ Composite" },
@@ -16,6 +18,13 @@ const NASDAQ_INDICES = [
 ];
 
 const Index = () => {
+  const [selectedSymbol, setSelectedSymbol] = useState<string>("AAPL");
+
+  // This function will be called when a stock analysis is completed
+  const handleAnalysisComplete = (symbol: string) => {
+    setSelectedSymbol(symbol);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
@@ -32,7 +41,7 @@ const Index = () => {
           <div className="w-[150px]"></div> {/* Spacer to balance the logo on left */}
         </div>
 
-        <StockAnalysis />
+        <StockAnalysis onAnalysisComplete={handleAnalysisComplete} />
         
         {/* NASDAQ Indices Section */}
         <div className="mt-16">
@@ -49,6 +58,9 @@ const Index = () => {
             ))}
           </div>
         </div>
+
+        {/* News Feed Section */}
+        <NewsFeed symbol={selectedSymbol} />
         
         <footer className="mt-16 text-center text-gray-500 text-sm">
           <p>Data provided for informational purposes only. Not financial advice.</p>
