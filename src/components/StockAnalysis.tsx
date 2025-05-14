@@ -1,11 +1,21 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { fetchStockAnalysis } from "@/services/stockService";
 import { Loader } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import ReactMarkdown from 'react-markdown';
+
+// Top 50 popular stock symbols
+const POPULAR_STOCKS = [
+  "AAPL", "MSFT", "TSLA", "GOOGL", "AMZN", "META", "NVDA", "NFLX", "JPM", "V", 
+  "WMT", "BAC", "PG", "DIS", "PYPL", "INTC", "VZ", "CSCO", "ADBE", "CRM",
+  "KO", "PEP", "T", "CMCSA", "XOM", "PFE", "ABT", "MRK", "CVX", "NKE",
+  "AVGO", "QCOM", "TXN", "COST", "UNH", "HD", "MCD", "IBM", "AMD", "GS",
+  "MS", "SBUX", "BA", "GE", "CAT", "MMM", "JNJ", "CVS", "ORCL", "WFC"
+];
 
 const StockAnalysis = () => {
   const [tickerSymbol, setTickerSymbol] = useState<string>("");
@@ -13,10 +23,11 @@ const StockAnalysis = () => {
   const [analysisText, setAnalysisText] = useState<string>("");
   const [chartImageUrl, setChartImageUrl] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const [symbol, setSymbol] = useState<string>("");
   const { toast } = useToast();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTickerSymbol(e.target.value.toUpperCase());
+  const handleSymbolChange = (value: string) => {
+    setTickerSymbol(value);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -25,7 +36,7 @@ const StockAnalysis = () => {
     if (!tickerSymbol.trim()) {
       toast({
         title: "Error",
-        description: "Please enter a stock ticker symbol",
+        description: "Please select a stock symbol",
         variant: "destructive",
       });
       return;
@@ -36,15 +47,17 @@ const StockAnalysis = () => {
     setAnalysisText("");
     setChartImageUrl("");
     setErrorMessage("");
+    setSymbol("");
 
     try {
       const data = await fetchStockAnalysis(tickerSymbol);
-      setAnalysisText(data.analysisText);
-      setChartImageUrl(data.chartImageUrl);
+      setAnalysisText(data.text);
+      setChartImageUrl(data.url);
+      setSymbol(data.symbol);
       
       toast({
         title: "Success",
-        description: `Analysis for ${tickerSymbol} loaded successfully`,
+        description: `Analysis for ${data.symbol} loaded successfully`,
       });
     } catch (error) {
       const errorMsg = error instanceof Error ? error.message : 'Failed to fetch analysis';
@@ -67,33 +80,38 @@ const StockAnalysis = () => {
       <Card className="bg-white shadow-lg border-t-4 border-t-finance-primary">
         <CardHeader className="bg-gradient-to-r from-finance-muted to-white">
           <CardTitle className="text-3xl font-bold text-finance-primary">Stock Analysis Dashboard</CardTitle>
-          <CardDescription>Enter a ticker symbol to analyze stock performance and insights</CardDescription>
+          <CardDescription>Select a stock symbol to analyze performance and insights</CardDescription>
         </CardHeader>
         <CardContent className="pt-6">
-          <form onSubmit={handleSubmit} className="flex gap-2 mb-6">
-            <div className="relative flex-1">
-              <Input
-                type="text"
-                placeholder="AAPL, MSFT, GOOGL..."
-                value={tickerSymbol}
-                onChange={handleInputChange}
-                className="bg-white border-2 focus:border-finance-accent text-lg uppercase tracking-wider pl-3"
-                disabled={isLoading}
-                maxLength={10}
-              />
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label htmlFor="ticker-select" className="block text-sm font-medium text-gray-700 mb-1">
+                Select Stock Symbol
+              </label>
+              <Select value={tickerSymbol} onValueChange={handleSymbolChange}>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select a stock symbol" />
+                </SelectTrigger>
+                <SelectContent>
+                  {POPULAR_STOCKS.map((stock) => (
+                    <SelectItem key={stock} value={stock}>{stock}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
+
             <Button 
               type="submit" 
               disabled={isLoading}
-              className="bg-finance-primary hover:bg-finance-secondary text-white min-w-[140px] transition-all"
+              className="w-full bg-finance-primary hover:bg-finance-secondary text-white transition-all"
             >
               {isLoading ? (
                 <>
                   <Loader className="mr-2 h-4 w-4 animate-spin" /> 
-                  Fetching...
+                  Analyzing...
                 </>
               ) : (
-                "Fetch Analysis"
+                "Analyze"
               )}
             </Button>
           </form>
@@ -102,8 +120,8 @@ const StockAnalysis = () => {
           {isLoading && (
             <div className="bg-finance-muted p-8 rounded-lg text-center animate-pulse-subtle my-4">
               <Loader size={40} className="mx-auto text-finance-primary animate-spin mb-4" />
-              <p className="text-lg text-finance-primary font-medium">Fetching data...</p>
-              <p className="text-sm text-gray-500 mt-2">Analyzing {tickerSymbol}...</p>
+              <p className="text-lg text-finance-primary font-medium">Analyzing stock data...</p>
+              <p className="text-sm text-gray-500 mt-2">This might take a moment...</p>
             </div>
           )}
 
@@ -120,33 +138,31 @@ const StockAnalysis = () => {
           )}
 
           {/* Analysis results */}
-          {!isLoading && !errorMessage && analysisText && (
-            <div className="mt-6 grid grid-cols-1 lg:grid-cols-5 gap-6">
-              {/* Analysis text */}
-              <div className="lg:col-span-2 order-2 lg:order-1">
-                <h3 className="text-xl font-semibold text-finance-primary mb-3 border-b pb-2">
-                  Analysis for {tickerSymbol}
-                </h3>
-                <div className="prose max-w-none">
-                  <p className="text-gray-700 whitespace-pre-line">{analysisText}</p>
-                </div>
-              </div>
+          {!isLoading && !errorMessage && chartImageUrl && analysisText && (
+            <div className="mt-6 space-y-6">
+              <h2 className="text-2xl font-bold text-finance-primary border-b pb-2">
+                Technical Analysis for {symbol}
+              </h2>
               
               {/* Chart image */}
-              <div className="lg:col-span-3 order-1 lg:order-2">
-                {chartImageUrl && (
-                  <div className="border rounded-lg overflow-hidden shadow-sm bg-white p-1">
-                    <img 
-                      src={chartImageUrl} 
-                      alt={`${tickerSymbol} Stock Chart`} 
-                      className="w-full h-auto rounded" 
-                    />
-                    <p className="text-xs text-center text-gray-500 mt-2">
-                      {tickerSymbol} Performance Chart
-                    </p>
+              {chartImageUrl && (
+                <div className="border rounded-lg overflow-hidden shadow-sm bg-white p-2">
+                  <img 
+                    src={chartImageUrl} 
+                    alt={`${symbol} Stock Chart`} 
+                    className="w-full max-w-[600px] h-auto rounded mx-auto" 
+                  />
+                </div>
+              )}
+              
+              {/* Analysis text with markdown rendering */}
+              {analysisText && (
+                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                  <div className="prose max-w-none">
+                    <ReactMarkdown>{analysisText}</ReactMarkdown>
                   </div>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           )}
         </CardContent>

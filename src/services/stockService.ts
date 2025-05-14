@@ -1,7 +1,8 @@
 
 export type StockAnalysisResponse = {
-  analysisText: string;
-  chartImageUrl: string;
+  url: string;
+  text: string;
+  symbol: string;
 };
 
 export const fetchStockAnalysis = async (symbol: string): Promise<StockAnalysisResponse> => {
