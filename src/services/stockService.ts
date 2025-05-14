@@ -5,8 +5,8 @@ export type StockAnalysisResponse = {
 };
 
 export const fetchStockAnalysis = async (symbol: string): Promise<StockAnalysisResponse> => {
-  // Replace this with your actual webhook URL in production
-  const WEBHOOK_URL = 'YOUR_N8N_PRODUCTION_WEBHOOK_URL';
+  // Using the provided webhook URL
+  const WEBHOOK_URL = 'https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis';
 
   const response = await fetch(WEBHOOK_URL, {
     method: 'POST',
