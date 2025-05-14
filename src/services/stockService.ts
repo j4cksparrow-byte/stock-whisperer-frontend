@@ -4,14 +4,17 @@ export type StockAnalysisResponse = {
   symbol: string;
 };
 
-export const fetchStockAnalysis = async (symbol: string): Promise<StockAnalysisResponse> => {
+export const fetchStockAnalysis = async (symbol: string, exchange: string = 'NASDAQ'): Promise<StockAnalysisResponse> => {
   // Use the proxy endpoint instead of direct webhook URL
   const response = await fetch('/api/stock-analysis', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ symbol }),
+    body: JSON.stringify({ 
+      symbol,
+      exchange 
+    }),
   });
 
   if (!response.ok) {
