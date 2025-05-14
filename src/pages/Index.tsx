@@ -1,5 +1,7 @@
+
 import StockAnalysis from "@/components/StockAnalysis";
 import TradingViewChart from "@/components/TradingViewChart";
+import GraphLogo from "@/components/GraphLogo";
 
 const NASDAQ_INDICES = [
   { symbol: "IXIC", name: "NASDAQ Composite" },
@@ -17,13 +19,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-10">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-            Stock <span className="text-finance-accent">Analysis</span> Dashboard
-          </h1>
-          <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-            Get detailed analysis and insights for any publicly traded company
-          </p>
+        <div className="flex justify-between items-center mb-10">
+          <GraphLogo />
+          <div className="text-center flex-grow">
+            <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+              Stock <span className="text-finance-accent">Analysis</span> Dashboard
+            </h1>
+            <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
+              Get detailed analysis and insights for any publicly traded company
+            </p>
+          </div>
+          <div className="w-[150px]"></div> {/* Spacer to balance the logo on left */}
         </div>
 
         <StockAnalysis />
