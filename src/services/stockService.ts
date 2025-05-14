@@ -1,4 +1,3 @@
-
 export type StockAnalysisResponse = {
   url: string;
   text: string;
@@ -6,10 +5,8 @@ export type StockAnalysisResponse = {
 };
 
 export const fetchStockAnalysis = async (symbol: string): Promise<StockAnalysisResponse> => {
-  // Using the provided webhook URL
-  const WEBHOOK_URL = 'https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis';
-
-  const response = await fetch(WEBHOOK_URL, {
+  // Use the proxy endpoint instead of direct webhook URL
+  const response = await fetch('/api/stock-analysis', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -21,6 +18,6 @@ export const fetchStockAnalysis = async (symbol: string): Promise<StockAnalysisR
     const errorText = await response.text();
     throw new Error(errorText || 'Failed to fetch analysis');
   }
-
+  console.log("Response:", response.text);
   return response.json();
 };

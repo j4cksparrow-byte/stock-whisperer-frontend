@@ -50,7 +50,9 @@ const StockAnalysis = () => {
     setSymbol("");
 
     try {
+      console.log("Fetching stock analysis for:", tickerSymbol);
       const data = await fetchStockAnalysis(tickerSymbol);
+      console.log(data);
       setAnalysisText(data.text);
       setChartImageUrl(data.url);
       setSymbol(data.symbol);
@@ -141,7 +143,7 @@ const StockAnalysis = () => {
           {!isLoading && !errorMessage && chartImageUrl && analysisText && (
             <div className="mt-6 space-y-6">
               <h2 className="text-2xl font-bold text-finance-primary border-b pb-2">
-                Technical Analysis for {symbol}
+                Technical Analysis for <span className= "font-bold">{symbol} </span>
               </h2>
               
               {/* Chart image */}
@@ -158,7 +160,8 @@ const StockAnalysis = () => {
               {/* Analysis text with markdown rendering */}
               {analysisText && (
                 <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-                  <div className="prose max-w-none">
+                  <div className="prose max-w-none">  
+                    
                     <ReactMarkdown>{analysisText}</ReactMarkdown>
                   </div>
                 </div>

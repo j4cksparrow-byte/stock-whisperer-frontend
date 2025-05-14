@@ -1,6 +1,18 @@
 import StockAnalysis from "@/components/StockAnalysis";
 import TradingViewChart from "@/components/TradingViewChart";
 
+const NASDAQ_INDICES = [
+  { symbol: "IXIC", name: "NASDAQ Composite" },
+  { symbol: "NDX", name: "NASDAQ-100" },
+  { symbol: "AAPL", name: "Apple Inc." },
+  { symbol: "MSFT", name: "Microsoft" },
+  { symbol: "GOOGL", name: "Alphabet" },
+  { symbol: "AMZN", name: "Amazon" },
+  { symbol: "META", name: "Meta" },
+  { symbol: "NVDA", name: "NVIDIA" },
+  { symbol: "TSLA", name: "Tesla" }
+];
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6">
@@ -14,11 +26,23 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="mb-8">
-          <TradingViewChart />
-        </div>
-        
         <StockAnalysis />
+        
+        {/* NASDAQ Indices Section */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">NASDAQ Market Overview</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {NASDAQ_INDICES.map((index) => (
+              <div key={index.symbol} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="p-4 border-b">
+                  <h3 className="text-lg font-semibold text-gray-900">{index.name}</h3>
+                  <p className="text-sm text-gray-500">{index.symbol}</p>
+                </div>
+                <TradingViewChart symbol={index.symbol} height={250} />
+              </div>
+            ))}
+          </div>
+        </div>
         
         <footer className="mt-16 text-center text-gray-500 text-sm">
           <p>Data provided for informational purposes only. Not financial advice.</p>
