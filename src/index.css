@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -87,6 +88,13 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Finance colors for dark mode */
+    --finance-primary: 214 100% 50%;
+    --finance-secondary: 174 75% 35%;
+    --finance-accent: 199 89% 48%;
+    --finance-muted: 213 50% 15%;
+    --finance-background: 222 47% 11%;
   }
 }
 
@@ -97,5 +105,25 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Add dark mode by default */
+  html {
+    @apply dark;
+  }
+
+  /* Glass card effect */
+  .glass-card {
+    @apply bg-black/30 backdrop-blur-sm border border-white/10 shadow-xl;
+  }
+  
+  /* Gradients for charts */
+  .chart-gradient {
+    @apply bg-gradient-to-br from-blue-600/30 via-blue-400/20 to-transparent;
+  }
+  
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
   }
 }

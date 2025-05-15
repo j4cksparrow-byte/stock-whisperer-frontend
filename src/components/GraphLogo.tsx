@@ -6,13 +6,13 @@ interface GraphLogoProps {
   size?: number;
 }
 
-const GraphLogo: React.FC<GraphLogoProps> = ({ size = 36 }) => {
+const GraphLogo: React.FC<GraphLogoProps> = ({ size = 48 }) => {
   return (
-    <div className="flex items-center gap-2">
-      <div className="flex items-center justify-center bg-gradient-to-r from-blue-600 to-teal-500 rounded-lg p-2 shadow-lg">
+    <div className="flex flex-col items-center gap-2">
+      <div className="flex items-center justify-center bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl p-3 shadow-lg shadow-blue-600/20">
         <LineChart size={size} strokeWidth={2.5} className="text-white" />
       </div>
-      <span className="font-bold text-xl text-gray-800">StockViz</span>
+      <span className="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">StockViz</span>
     </div>
   );
 };
