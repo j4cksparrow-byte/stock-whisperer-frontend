@@ -15,44 +15,52 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     console.log('Environment:', import.meta.env.PROD ? 'Production' : 'Development');
     console.log('Using API URL:', API_BASE_URL);
     
-    // Create payload with properly sanitized values
+    // Further sanitize and format the values to prevent issues
+    const sanitizedSymbol = symbol.trim().replace(/[^\w.-]/g, '');
+    const sanitizedExchange = exchange.trim().replace(/[^\w.-]/g, '');
+    
     const payload = JSON.stringify({
-      symbol: symbol.trim(),
-      exchange: exchange.trim()
+      symbol: sanitizedSymbol,
+      exchange: sanitizedExchange
     });
     
     console.log('Sending payload:', payload);
     
-    // Set up request with appropriate CORS headers
+    // Configure request with optimal settings for cross-origin requests
     const response = await fetch(API_BASE_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
+        // Explicitly specify origin to help with CORS
         'Origin': window.location.origin
       },
       body: payload,
-      // Add credentials to ensure cookies are sent
-      credentials: 'include'
+      // Don't send credentials in production as it may trigger preflight complexity
+      credentials: import.meta.env.PROD ? 'omit' : 'include',
+      // Add a reasonable timeout
+      signal: AbortSignal.timeout(15000)
     });
 
+    console.log('Response status:', response.status);
+    
     if (!response.ok) {
       const errorText = await response.text();
       console.error('API Error Response:', errorText);
       
       // Check for specific error patterns
       if (errorText.includes('regex') || errorText.includes('invalid character')) {
-        console.warn('Detected regex or special character issue. Providing mock data.');
-        return provideMockAnalysis(symbol);
+        console.warn('Detected regex or special character issue in response. Providing mock data.');
+        return provideMockAnalysis(sanitizedSymbol);
       }
       
-      throw new Error(errorText || 'Failed to fetch analysis');
+      throw new Error(errorText || `Failed to fetch analysis (Status: ${response.status})`);
     }
 
     const contentType = response.headers.get('content-type');
     if (!contentType || !contentType.includes('application/json')) {
       const text = await response.text();
-      console.error('Invalid response type:', contentType, 'Response:', text);
+      console.error('Invalid response type:', contentType, 'Response text:', text);
       
       // Try to parse the text as JSON in case the content type header is incorrect
       try {
@@ -73,6 +81,12 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     return data;
   } catch (error) {
     console.error('Error in fetchStockAnalysis:', error);
+    
+    // Special handling for network errors that might happen in production
+    if (error instanceof TypeError && error.message.includes('Failed to fetch')) {
+      console.error('Network error occurred. This often happens with CORS issues in production.');
+    }
+    
     // Always provide a fallback for any error
     return provideMockAnalysis(symbol);
   }

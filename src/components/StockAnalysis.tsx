@@ -8,6 +8,8 @@ import { useToast } from "@/components/ui/use-toast";
 import ReactMarkdown from 'react-markdown';
 import CompanySearch from "./CompanySearch";
 import { Company } from "@/data/companies";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { ExclamationTriangleIcon } from "lucide-react";
 
 interface StockAnalysisProps {
   onAnalysisComplete?: (symbol: string) => void;
@@ -19,6 +21,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
   const [analysisText, setAnalysisText] = useState<string>("");
   const [chartImageUrl, setChartImageUrl] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const [isMockData, setIsMockData] = useState<boolean>(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -38,6 +41,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
     setAnalysisText("");
     setChartImageUrl("");
     setErrorMessage("");
+    setIsMockData(false);
 
     try {
       console.log("Fetching stock analysis for:", selectedCompany);
@@ -57,6 +61,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
         // This is our error fallback
         setErrorMessage("");  // Clear any previous error
         setAnalysisText(data.text);  // Show the mock analysis as markdown
+        setIsMockData(true);
         
         toast({
           title: "API Connectivity Issue",
@@ -71,6 +76,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
       } else {
         setAnalysisText(data.text);
         setChartImageUrl(data.url);
+        setIsMockData(false);
         
         // Notify parent component of the new symbol
         if (onAnalysisComplete) {
@@ -85,6 +91,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
     } catch (error) {
       const errorMsg = error instanceof Error ? error.message : 'Failed to fetch analysis';
       setErrorMessage(errorMsg);
+      setIsMockData(true);
       
       toast({
         title: "Error",
@@ -152,15 +159,26 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
             </div>
           )}
 
+          {/* Mock data notice */}
+          {!isLoading && isMockData && (
+            <Alert className="mt-6 bg-amber-900/30 border-amber-500">
+              <ExclamationTriangleIcon className="h-4 w-4 text-amber-500" />
+              <AlertTitle>Mock Data</AlertTitle>
+              <AlertDescription>
+                We're showing mock data due to API connectivity issues. The actual stock analysis is currently unavailable.
+              </AlertDescription>
+            </Alert>
+          )}
+
           {/* Results */}
-          {!isLoading && !errorMessage && chartImageUrl && analysisText && selectedCompany && (
+          {!isLoading && !errorMessage && analysisText && selectedCompany && (
             <div className="mt-6 space-y-6">
               <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 border-b border-gray-700 pb-2">
                 Technical Analysis for <span className="font-bold">{selectedCompany.exchange}:{selectedCompany.symbol}</span>
               </h2>
               
-              {/* Chart image */}
-              {chartImageUrl && (
+              {/* Chart image - only show if not mock data */}
+              {chartImageUrl && !isMockData && (
                 <div className="border border-gray-700 rounded-lg overflow-hidden shadow-sm bg-gray-800/50 p-2">
                   <img 
                     src={chartImageUrl} 
