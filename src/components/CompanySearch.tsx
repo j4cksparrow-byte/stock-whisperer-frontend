@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { COMPANIES, Company } from '@/data/companies';
 import { Input } from '@/components/ui/input';
@@ -79,8 +78,8 @@ const CompanySearch = ({ onSelect, placeholder = "Search for a company..." }: Co
             >
               <Building2 className="h-4 w-4 text-gray-500" />
               <div>
-                <div className="font-medium">{company.name}</div>
-                <div className="text-sm text-gray-500">
+                <div className="font-medium text-black">{company.name}</div>
+                <div className="text-sm text-gray-600">
                   {company.exchange}:{company.symbol}
                 </div>
               </div>
