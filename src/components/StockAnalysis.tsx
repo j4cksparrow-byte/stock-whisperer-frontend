@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { fetchStockAnalysis } from "@/services/stockService";
 import { Loader } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "@/components/ui/use-toast";
 import ReactMarkdown from 'react-markdown';
 import CompanySearch from "./CompanySearch";
 import { Company } from "@/data/companies";
@@ -50,12 +50,19 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
       
       if (data.url.includes("placeholder-chart.com/error")) {
         // This is our error fallback
-        setErrorMessage(data.text);
+        setErrorMessage("");  // Clear any previous error
+        setAnalysisText(data.text);  // Show the mock analysis as markdown
+        
         toast({
-          title: "API Error",
-          description: "There was an issue with the stock analysis service. This might be due to CORS restrictions in production.",
+          title: "API Connectivity Issue",
+          description: "Using mock analysis due to API connection issues in production environment.",
           variant: "destructive",
         });
+        
+        // Notify parent component of the new symbol even with mock data
+        if (onAnalysisComplete) {
+          onAnalysisComplete(selectedCompany.symbol);
+        }
       } else {
         setAnalysisText(data.text);
         setChartImageUrl(data.url);

@@ -6,9 +6,9 @@ export type StockAnalysisResponse = {
 };
 
 const getApiBaseUrl = () => {
-  // Ensure we're using the production API endpoint with the CORS proxy
+  // Try different CORS proxies for production to improve reliability
   return import.meta.env.PROD
-    ? 'https://corsproxy.io/?https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis'
+    ? 'https://api.allorigins.win/raw?url=https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis'
     : '/api/stock-analysis';
 };
 
@@ -17,20 +17,26 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     const API_BASE_URL = getApiBaseUrl();
     console.log('Using API URL:', API_BASE_URL);
     
+    // Include timeout to avoid long wait times if the service is down
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 15000); // 15-second timeout
+    
     const response = await fetch(API_BASE_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Origin': window.location.origin,
-        'Access-Control-Allow-Origin': '*',
       },
       mode: 'cors',
+      signal: controller.signal,
       body: JSON.stringify({ 
         symbol,
         exchange 
       }),
     });
+    
+    clearTimeout(timeoutId);
 
     if (!response.ok) {
       const errorText = await response.text();
@@ -65,23 +71,20 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
         }
       }
       
-      // If all else fails, create a mock response for better user experience
-      return {
-        url: "https://placeholder-chart.com/error",
-        text: "Unable to fetch stock analysis. The API returned an invalid format in production. Please try again later.",
-        symbol: symbol
-      };
+      // Create mock data for better user experience
+      return provideMockAnalysis(symbol);
     }
   } catch (error) {
     console.error('Error in fetchStockAnalysis:', error);
-    // Provide a more informative error response for production environments
-    if (import.meta.env.PROD) {
-      return {
-        url: "https://placeholder-chart.com/error",
-        text: "There was an issue connecting to our analysis service. This might be due to CORS restrictions in the production environment. We're working on a solution.",
-        symbol: symbol
-      };
-    }
-    throw error;
+    return provideMockAnalysis(symbol);
   }
+};
+
+// Provide mock analysis data for better user experience when the API fails
+const provideMockAnalysis = (symbol: string): StockAnalysisResponse => {
+  return {
+    url: "https://placeholder-chart.com/error",
+    text: `# Mock Analysis for ${symbol}\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. This could be due to:\n\n1. CORS restrictions in the production environment\n2. Temporary service outage\n3. Network connectivity issues\n\nPlease try again later or use our application in development mode for testing purposes.`,
+    symbol: symbol
+  };
 };
