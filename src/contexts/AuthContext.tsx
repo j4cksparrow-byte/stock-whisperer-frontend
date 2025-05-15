@@ -12,7 +12,6 @@ interface AuthContextProps {
   isLoading: boolean;
   signUp: (email: string, password: string, options?: { full_name?: string, username?: string }) => Promise<void>;
   signIn: (email: string, password: string) => Promise<void>;
-  signInWithGoogle: () => Promise<void>;
   signOut: () => Promise<void>;
   resetPassword: (email: string) => Promise<void>;
   updateProfile: (updates: Partial<Profile>) => Promise<void>;
@@ -143,26 +142,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }
 
-  async function signInWithGoogle() {
-    try {
-      const { error } = await supabase.auth.signInWithOAuth({
-        provider: 'google',
-        options: {
-          redirectTo: `${window.location.origin}/auth/callback`
-        }
-      });
-
-      if (error) throw error;
-    } catch (error: any) {
-      toast({
-        title: "Google sign-in failed",
-        description: error.message,
-        variant: "destructive"
-      });
-      throw error;
-    }
-  }
-
   async function signOut() {
     try {
       const { error } = await supabase.auth.signOut();
@@ -240,7 +219,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     isLoading: authState.isLoading,
     signUp,
     signIn,
-    signInWithGoogle,
     signOut,
     resetPassword,
     updateProfile,
