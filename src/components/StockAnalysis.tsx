@@ -42,10 +42,14 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
     try {
       console.log("Fetching stock analysis for:", selectedCompany);
       
+      // Sanitize symbol to remove any potential problematic characters
+      const sanitizedSymbol = selectedCompany.symbol.replace(/[^\w.-]/g, '');
+      console.log("Using sanitized symbol:", sanitizedSymbol);
+      
       // Add environment info to help debug issues
       console.log("Environment:", import.meta.env.PROD ? "Production" : "Development");
       
-      const data = await fetchStockAnalysis(selectedCompany.symbol, selectedCompany.exchange);
+      const data = await fetchStockAnalysis(sanitizedSymbol, selectedCompany.exchange);
       console.log("Response received:", data);
       
       if (data.url.includes("placeholder-chart.com/error")) {
@@ -55,13 +59,13 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
         
         toast({
           title: "API Connectivity Issue",
-          description: "Using mock analysis due to API connection issues in production environment.",
+          description: "Using mock analysis due to connection issues. Please try again later.",
           variant: "destructive",
         });
         
         // Notify parent component of the new symbol even with mock data
         if (onAnalysisComplete) {
-          onAnalysisComplete(selectedCompany.symbol);
+          onAnalysisComplete(sanitizedSymbol);
         }
       } else {
         setAnalysisText(data.text);
@@ -69,12 +73,12 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
         
         // Notify parent component of the new symbol
         if (onAnalysisComplete) {
-          onAnalysisComplete(selectedCompany.symbol);
+          onAnalysisComplete(sanitizedSymbol);
         }
         
         toast({
           title: "Success",
-          description: `Analysis for ${selectedCompany.exchange}:${selectedCompany.symbol} loaded successfully`,
+          description: `Analysis for ${selectedCompany.exchange}:${sanitizedSymbol} loaded successfully`,
         });
       }
     } catch (error) {
