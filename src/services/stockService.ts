@@ -4,10 +4,9 @@ export type StockAnalysisResponse = {
   symbol: string;
 };
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 
-  (import.meta.env.PROD 
-    ? 'https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis'
-    : '/api/stock-analysis');
+const API_BASE_URL = import.meta.env.PROD
+  ? 'https://corsproxy.io/?https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis'
+  : '/api/stock-analysis';
 
 export const fetchStockAnalysis = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {
   try {
