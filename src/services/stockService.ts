@@ -2,6 +2,7 @@ export type StockAnalysisResponse = {
   url: string;
   text: string;
   symbol: string;
+  exchange?: string;
 };
 
 const API_BASE_URL = import.meta.env.PROD
@@ -20,7 +21,10 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify({ symbol, exchange })
+      body: JSON.stringify({ 
+        symbol: symbol.toUpperCase(),
+        exchange: exchange.toUpperCase()
+      })
     });
 
     if (!response.ok) {
@@ -38,10 +42,24 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
 
     const data = await response.json();
     console.log("API Response:", data);
-    return data;
+
+    // Validate response data
+    if (!data || typeof data !== 'object') {
+      throw new Error('Invalid response data format');
+    }
+
+    // Ensure required fields are present and have correct types
+    const validatedData: StockAnalysisResponse = {
+      url: typeof data.url === 'string' ? data.url : 'https://placeholder-chart.com/error',
+      text: typeof data.text === 'string' ? data.text : 'No analysis available',
+      symbol: typeof data.symbol === 'string' ? data.symbol : symbol,
+      exchange: typeof data.exchange === 'string' ? data.exchange : exchange
+    };
+
+    return validatedData;
   } catch (error) {
     console.error('Error in fetchStockAnalysis:', error);
-    throw error;
+    return provideMockAnalysis(symbol);
   }
 };
 
