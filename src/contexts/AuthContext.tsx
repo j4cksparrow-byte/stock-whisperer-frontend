@@ -33,6 +33,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // Set up auth state listener FIRST
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, currentSession) => {
+        console.log("Auth state changed:", event);
         setSession(currentSession);
         setAuthState(prev => ({ 
           ...prev, 
@@ -54,6 +55,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     // THEN check for existing session
     supabase.auth.getSession().then(({ data: { session: currentSession } }) => {
+      console.log("Initial session check:", currentSession ? "Logged in" : "Not logged in");
       setSession(currentSession);
       setAuthState(prev => ({ 
         ...prev, 
@@ -99,7 +101,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           data: {
             full_name: options?.full_name || null,
             username: options?.username || null
-          }
+          },
+          emailRedirectTo: window.location.origin + '/auth/callback'
         }
       });
 
@@ -111,6 +114,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       });
       
     } catch (error: any) {
+      console.error("Sign up error:", error);
       toast({
         title: "Sign up failed",
         description: error.message,
@@ -122,6 +126,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   async function signIn(email: string, password: string) {
     try {
+      console.log("Attempting sign in for:", email);
       const { error } = await supabase.auth.signInWithPassword({
         email,
         password
@@ -133,6 +138,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         title: "Signed in successfully",
       });
     } catch (error: any) {
+      console.error("Sign in error:", error);
       toast({
         title: "Sign in failed",
         description: error.message,

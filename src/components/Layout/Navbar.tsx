@@ -22,10 +22,10 @@ export function Navbar() {
       <div className="container flex h-16 items-center justify-between py-4">
         <div className="flex items-center gap-6 md:gap-10">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="font-bold text-xl inline-block">StockApp</span>
+            <span className="font-bold text-xl inline-block text-foreground">StockApp</span>
           </Link>
           <nav className="hidden md:flex gap-6">
-            <Link to="/" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link to="/" className="text-sm font-medium text-foreground transition-colors hover:text-primary">
               Home
             </Link>
             {/* Add additional navbar links here as needed */}
@@ -48,12 +48,12 @@ export function Navbar() {
           ) : (
             <>
               <Link to="/auth/login">
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" className="text-foreground border-foreground hover:bg-secondary">
                   Log in
                 </Button>
               </Link>
               <Link to="/auth/signup">
-                <Button size="sm">Sign up</Button>
+                <Button size="sm" className="bg-primary hover:bg-primary/80">Sign up</Button>
               </Link>
             </>
           )}
