@@ -79,7 +79,14 @@ export function useAuthState() {
 
   async function signUp(email: string, password: string, options?: { full_name?: string, username?: string }) {
     try {
-      const { error } = await supabase.auth.signUp({
+      // Log the signup attempt for debugging
+      console.log("Attempting to sign up with email:", email);
+      
+      // Use the current window location for redirection
+      const currentUrl = window.location.origin;
+      console.log("Current origin for redirect:", currentUrl);
+      
+      const { data, error } = await supabase.auth.signUp({
         email,
         password,
         options: {
@@ -87,15 +94,27 @@ export function useAuthState() {
             full_name: options?.full_name || null,
             username: options?.username || null
           },
-          emailRedirectTo: window.location.origin + '/auth/callback'
+          emailRedirectTo: `${currentUrl}/auth/callback`
         }
       });
 
       if (error) throw error;
       
+      console.log("Sign up response:", data);
+      
+      // Check if user is new or just confirming their email
+      if (data.user && data.user.identities && data.user.identities.length === 0) {
+        toast({
+          title: "Email already registered",
+          description: "This email is already registered. Please try logging in.",
+          variant: "destructive"
+        });
+        return;
+      }
+      
       toast({
         title: "Account created",
-        description: "Please check your email for verification instructions."
+        description: "Please check your email for verification instructions. If you don't see it, check your spam folder.",
       });
       
     } catch (error: any) {
