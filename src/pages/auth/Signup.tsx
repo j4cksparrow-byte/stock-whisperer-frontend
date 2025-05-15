@@ -17,7 +17,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { InfoCircledIcon } from '@radix-ui/react-icons';
+import { InfoIcon } from 'lucide-react';
 
 const signupSchema = z.object({
   email: z.string().email({ message: 'Please enter a valid email address' }),
@@ -86,7 +86,7 @@ export default function Signup() {
           {emailSent ? (
             <div className="space-y-4 text-center">
               <div className="mx-auto bg-primary/10 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <InfoCircledIcon className="h-6 w-6 text-primary" />
+                <InfoIcon className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-lg font-medium">Verification Email Sent</h3>
               <p className="text-sm text-muted-foreground">
