@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,6 +21,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
   const [chartImageUrl, setChartImageUrl] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [isMockData, setIsMockData] = useState<boolean>(false);
+  const [loadingMessage, setLoadingMessage] = useState<string>("");
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -40,6 +42,12 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
     setChartImageUrl("");
     setErrorMessage("");
     setIsMockData(false);
+    setLoadingMessage("Analyzing stock data...");
+
+    // Set up a timeout to update the loading message after 10 seconds
+    const loadingMessageTimeout = setTimeout(() => {
+      setLoadingMessage("This is taking longer than expected. Please wait...");
+    }, 10000);
 
     try {
       console.log("Fetching stock analysis for:", selectedCompany);
@@ -100,6 +108,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
       console.error("Error fetching stock analysis:", error);
     } finally {
       setIsLoading(false);
+      clearTimeout(loadingMessageTimeout);
     }
   };
 
@@ -146,7 +155,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
           {isLoading && (
             <div className="mt-6 flex flex-col items-center justify-center py-8">
               <Loader className="w-12 h-12 text-blue-400 animate-spin mb-4" />
-              <p className="text-gray-400">Analyzing stock data...</p>
+              <p className="text-gray-400">{loadingMessage}</p>
             </div>
           )}
 

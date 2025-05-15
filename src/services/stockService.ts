@@ -38,8 +38,8 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
       body: payload,
       // Don't send credentials in production as it may trigger preflight complexity
       credentials: import.meta.env.PROD ? 'omit' : 'include',
-      // Add a reasonable timeout
-      signal: AbortSignal.timeout(15000)
+      // Increase timeout to 30 seconds to give the API more time to respond
+      signal: AbortSignal.timeout(30000)
     });
 
     console.log('Response status:', response.status);
@@ -85,6 +85,8 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     // Special handling for network errors that might happen in production
     if (error instanceof TypeError && error.message.includes('Failed to fetch')) {
       console.error('Network error occurred. This often happens with CORS issues in production.');
+    } else if (error instanceof DOMException && error.name === 'TimeoutError') {
+      console.error('Request timed out after 30 seconds. Consider using a more responsive API endpoint.');
     }
     
     // Always provide a fallback for any error
@@ -117,7 +119,7 @@ const extractJsonFromText = (text: string): StockAnalysisResponse | null => {
 const provideMockAnalysis = (symbol: string): StockAnalysisResponse => {
   return {
     url: "https://placeholder-chart.com/error",
-    text: `# Mock Analysis for ${symbol}\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.`,
+    text: `# Mock Analysis for ${symbol}\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes`,
     symbol: symbol
   };
 };
