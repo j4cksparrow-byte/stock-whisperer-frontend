@@ -1,15 +1,13 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { fetchStockAnalysis } from "@/services/stockService";
-import { Loader } from "lucide-react";
+import { Loader, AlertTriangle } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import ReactMarkdown from 'react-markdown';
 import CompanySearch from "./CompanySearch";
 import { Company } from "@/data/companies";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { ExclamationTriangleIcon } from "lucide-react";
 
 interface StockAnalysisProps {
   onAnalysisComplete?: (symbol: string) => void;
@@ -162,7 +160,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
           {/* Mock data notice */}
           {!isLoading && isMockData && (
             <Alert className="mt-6 bg-amber-900/30 border-amber-500">
-              <ExclamationTriangleIcon className="h-4 w-4 text-amber-500" />
+              <AlertTriangle className="h-4 w-4 text-amber-500" />
               <AlertTitle>Mock Data</AlertTitle>
               <AlertDescription>
                 We're showing mock data due to API connectivity issues. The actual stock analysis is currently unavailable.
