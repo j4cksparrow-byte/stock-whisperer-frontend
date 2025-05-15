@@ -6,6 +6,7 @@ export type StockAnalysisResponse = {
 };
 
 const getApiBaseUrl = () => {
+  // Ensure we're using the production API endpoint with the CORS proxy
   return import.meta.env.PROD
     ? 'https://corsproxy.io/?https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis'
     : '/api/stock-analysis';
@@ -22,7 +23,9 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Origin': window.location.origin,
+        'Access-Control-Allow-Origin': '*',
       },
+      mode: 'cors',
       body: JSON.stringify({ 
         symbol,
         exchange 
@@ -65,12 +68,20 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
       // If all else fails, create a mock response for better user experience
       return {
         url: "https://placeholder-chart.com/error",
-        text: "Unable to fetch stock analysis. The API returned an invalid format. Please try again later.",
+        text: "Unable to fetch stock analysis. The API returned an invalid format in production. Please try again later.",
         symbol: symbol
       };
     }
   } catch (error) {
     console.error('Error in fetchStockAnalysis:', error);
+    // Provide a more informative error response for production environments
+    if (import.meta.env.PROD) {
+      return {
+        url: "https://placeholder-chart.com/error",
+        text: "There was an issue connecting to our analysis service. This might be due to CORS restrictions in the production environment. We're working on a solution.",
+        symbol: symbol
+      };
+    }
     throw error;
   }
 };

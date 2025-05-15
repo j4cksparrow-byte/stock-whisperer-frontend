@@ -41,20 +41,35 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
 
     try {
       console.log("Fetching stock analysis for:", selectedCompany);
+      
+      // Add environment info to help debug issues
+      console.log("Environment:", import.meta.env.PROD ? "Production" : "Development");
+      
       const data = await fetchStockAnalysis(selectedCompany.symbol, selectedCompany.exchange);
-      console.log(data);
-      setAnalysisText(data.text);
-      setChartImageUrl(data.url);
+      console.log("Response received:", data);
       
-      // Notify parent component of the new symbol
-      if (onAnalysisComplete) {
-        onAnalysisComplete(selectedCompany.symbol);
+      if (data.url.includes("placeholder-chart.com/error")) {
+        // This is our error fallback
+        setErrorMessage(data.text);
+        toast({
+          title: "API Error",
+          description: "There was an issue with the stock analysis service. This might be due to CORS restrictions in production.",
+          variant: "destructive",
+        });
+      } else {
+        setAnalysisText(data.text);
+        setChartImageUrl(data.url);
+        
+        // Notify parent component of the new symbol
+        if (onAnalysisComplete) {
+          onAnalysisComplete(selectedCompany.symbol);
+        }
+        
+        toast({
+          title: "Success",
+          description: `Analysis for ${selectedCompany.exchange}:${selectedCompany.symbol} loaded successfully`,
+        });
       }
-      
-      toast({
-        title: "Success",
-        description: `Analysis for ${selectedCompany.exchange}:${selectedCompany.symbol} loaded successfully`,
-      });
     } catch (error) {
       const errorMsg = error instanceof Error ? error.message : 'Failed to fetch analysis';
       setErrorMessage(errorMsg);
