@@ -26,32 +26,32 @@ const Index = () => {
   };
  
   return (
-    <div className="min-h-screen bg-gray-900 py-12 px-4 sm:px-6">
+    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Centered Logo */}
-        <div className="flex flex-col items-center mb-10">
+        <div className="flex justify-between items-center mb-10">
           <GraphLogo />
-          <div className="text-center mt-6">
-            <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 sm:text-5xl sm:tracking-tight lg:text-6xl">
-              Stock Analysis Dashboard
+          <div className="text-center flex-grow">
+            <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+              Stock <span className="text-finance-accent">Analysis</span> Dashboard
             </h1>
-            <p className="max-w-xl mt-5 mx-auto text-xl text-gray-400">
+            <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
               Get detailed analysis and insights for any publicly traded company
             </p>
           </div>
+          <div className="w-[150px]"></div> {/* Spacer to balance the logo on left */}
         </div>
 
         <StockAnalysis onAnalysisComplete={handleAnalysisComplete} />
         
         {/* NASDAQ Indices Section */}
         <div className="mt-16">
-          <h2 className="text-2xl font-bold text-gray-200 mb-6">NASDAQ Market Overview</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">NASDAQ Market Overview</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {NASDAQ_INDICES.map((index) => (
-              <div key={index.symbol} className="glass-card rounded-lg overflow-hidden hover-lift">
-                <div className="p-4 border-b border-gray-700">
-                  <h3 className="text-lg font-semibold text-gray-200">{index.name}</h3>
-                  <p className="text-sm text-gray-400">{index.symbol}</p>
+              <div key={index.symbol} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="p-4 border-b">
+                  <h3 className="text-lg font-semibold text-gray-900">{index.name}</h3>
+                  <p className="text-sm text-gray-500">{index.symbol}</p>
                 </div>
                 <TradingViewChart symbol={index.symbol} height={250} />
               </div>

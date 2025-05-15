@@ -1,8 +1,7 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { COMPANIES, Company } from '@/data/companies';
 import { Input } from '@/components/ui/input';
-import { useToast } from '@/components/ui/use-toast';
+import { useToast } from '@/hooks/use-toast';
 import { Search, Building2 } from 'lucide-react';
 
 interface CompanySearchProps {
@@ -92,4 +91,4 @@ const CompanySearch = ({ onSelect, placeholder = "Search for a company..." }: Co
   );
 };
 
-export default CompanySearch;
+export default CompanySearch; 
