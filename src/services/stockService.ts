@@ -67,7 +67,7 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
 const provideMockAnalysis = (symbol: string): StockAnalysisResponse => {
   return {
     url: "https://placeholder-chart.com/error",
-    text: `# Mock Analysis for ${symbol}\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.`,
+    text: "# Mock Analysis for " + symbol + "\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.",
     symbol: symbol
   };
 };
