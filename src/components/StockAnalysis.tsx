@@ -43,6 +43,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
       console.log("Fetching stock analysis for:", selectedCompany);
       
       // Sanitize symbol to remove any potential problematic characters
+      // Allow only letters, numbers, dots, and hyphens
       const sanitizedSymbol = selectedCompany.symbol.replace(/[^\w.-]/g, '');
       console.log("Using sanitized symbol:", sanitizedSymbol);
       

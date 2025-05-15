@@ -15,21 +15,25 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     console.log('Environment:', import.meta.env.PROD ? 'Production' : 'Development');
     console.log('Using API URL:', API_BASE_URL);
     
-    // Properly encode the payload as a JSON string
-    const payload = JSON.stringify({ 
-      symbol, 
-      exchange 
+    // Create payload with properly sanitized values
+    const payload = JSON.stringify({
+      symbol: symbol.trim(),
+      exchange: exchange.trim()
     });
     
     console.log('Sending payload:', payload);
     
+    // Set up request with appropriate CORS headers
     const response = await fetch(API_BASE_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        'Accept': 'application/json',
+        'Origin': window.location.origin
       },
-      body: payload
+      body: payload,
+      // Add credentials to ensure cookies are sent
+      credentials: 'include'
     });
 
     if (!response.ok) {
