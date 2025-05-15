@@ -5,18 +5,18 @@ export type StockAnalysisResponse = {
   symbol: string;
 };
 
-const API_BASE_URL = import.meta.env.PROD
-  ? 'https://corsproxy.io/?https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis'
-  : '/api/stock-analysis';
+const getApiBaseUrl = () => {
+  return import.meta.env.PROD
+    ? 'https://corsproxy.io/?https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis'
+    : '/api/stock-analysis';
+};
 
 export const fetchStockAnalysis = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {
   try {
+    const API_BASE_URL = getApiBaseUrl();
     console.log('Using API URL:', API_BASE_URL);
     
-    // Use URL search params for more reliable data transmission
-    const url = new URL(API_BASE_URL);
-    
-    const response = await fetch(url, {
+    const response = await fetch(API_BASE_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
