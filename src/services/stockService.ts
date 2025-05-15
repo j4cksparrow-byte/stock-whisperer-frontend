@@ -6,7 +6,7 @@ export type StockAnalysisResponse = {
 };
 
 const API_BASE_URL = import.meta.env.PROD
-  ? 'https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis'
+  ? 'https://egiiqbgumgltatfljbcs.supabase.co/functions/v1/stock-analysis-proxy'
   : '/api/stock-analysis';
 
 export const fetchStockAnalysis = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {

@@ -1,1 +1,5 @@
+
 project_id = "egiiqbgumgltatfljbcs"
+
+[functions.stock-analysis-proxy]
+verify_jwt = false
