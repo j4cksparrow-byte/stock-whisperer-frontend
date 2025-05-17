@@ -87,7 +87,7 @@ const CompanySearch = ({ onSelect, placeholder = "Search for a company..." }: Co
             className="absolute left-0 right-0 mt-1 bg-white rounded-md shadow-lg border border-gray-200" 
             style={{ zIndex: 10001 }}
           >
-            <ScrollArea className="h-[160px]"> {/* Reduced height from 320px to 160px (approximately 1cm) */}
+            <ScrollArea className="h-[90px]"> {/* Increased from 160px to 90px */}
               {suggestions.map((company) => (
                 <div
                   key={`${company.exchange}:${company.symbol}`}
