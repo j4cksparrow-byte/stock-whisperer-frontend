@@ -50,8 +50,8 @@ const TradingViewChart = ({ symbol, height = 300 }: TradingViewChartProps) => {
     <div 
       id={`tradingview_${symbol}`} 
       ref={container} 
-      className="w-full rounded-lg shadow-lg overflow-hidden"
-      style={{ zIndex: 1 }} // Lower z-index for charts
+      className="w-full rounded-lg shadow-lg overflow-hidden mt-8" // Added mt-8 (margin-top) to move charts down
+      style={{ zIndex: 1 }} // Kept lower z-index for charts
     />
   );
 };
