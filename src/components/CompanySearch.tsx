@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
@@ -65,8 +66,8 @@ const CompanySearch = ({ onSelect, placeholder = "Search for a company..." }: Co
   };
 
   return (
-    <div className="relative w-full" ref={searchRef} style={{ position: 'relative', zIndex: 9999 }}>
-      <div className="relative" style={{ position: 'relative' }}>
+    <div className="relative w-full" ref={searchRef}>
+      <div className="relative">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
         <Input
           type="text"
@@ -81,7 +82,10 @@ const CompanySearch = ({ onSelect, placeholder = "Search for a company..." }: Co
         />
 
         {showSuggestions && suggestions.length > 0 && (
-          <div className="absolute left-0 right-0 mt-1 bg-white rounded-md shadow-lg border border-gray-200 max-h-[80vh] overflow-y-auto" style={{ zIndex: 9999 }}>
+          <div 
+            className="absolute left-0 right-0 mt-1 bg-white rounded-md shadow-lg border border-gray-200 max-h-[80vh] overflow-y-auto" 
+            style={{ zIndex: 10001 }} // Increased z-index to ensure it shows above charts
+          >
             {suggestions.map((company) => (
               <div
                 key={`${company.exchange}:${company.symbol}`}
