@@ -25,33 +25,38 @@ const TradingViewChart = ({ symbol, height = 300 }: TradingViewChartProps) => {
         new window.TradingView.widget({
           width: '100%',
           height: height,
-          symbol: `NASDAQ:${symbol}`,
+          symbol: symbol.includes(':') ? symbol : `NASDAQ:${symbol}`,
           interval: 'D',
           timezone: 'Etc/UTC',
-          theme: 'light',
+          theme: 'dark',
           style: '1',
           locale: 'en',
-          toolbar_bg: '#f1f3f6',
+          toolbar_bg: '#1e293b', // Tailwind slate-800
           enable_publishing: false,
-          allow_symbol_change: false,
-          hide_side_toolbar: true,
+          allow_symbol_change: true,
           container_id: container.current.id,
+          hide_top_toolbar: false,
+          hide_side_toolbar: false,
+          withdateranges: true,
+          studies: ['RSI@tv-basicstudies', 'MASimple@tv-basicstudies'],
         });
       }
     };
     document.head.appendChild(script);
 
     return () => {
-      script.remove();
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
     };
   }, [symbol, height]);
 
   return (
     <div 
-      id={`tradingview_${symbol}`} 
+      id={`tradingview_${symbol.replace(/[^\w]/g, '_')}`} 
       ref={container} 
-      className="w-full rounded-lg shadow-lg overflow-hidden mt-20" // Increased from mt-16 to mt-20
-      style={{ zIndex: 1 }} // Kept lower z-index for charts
+      className="w-full rounded-lg overflow-hidden"
+      style={{ height: `${height}px` }} 
     />
   );
 };
