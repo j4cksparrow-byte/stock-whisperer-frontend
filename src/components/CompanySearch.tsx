@@ -51,7 +51,7 @@ const CompanySearch = ({ onSelect, placeholder = "Search for a company..." }: Co
     const filteredCompanies = ALL_COMPANIES.filter(company => 
       company.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       company.symbol.toLowerCase().includes(searchTerm.toLowerCase())
-    ).slice(0, 5); // Reduced from 10 to 5 suggestions
+    ).slice(0, 10); // Increased from 5 to 10 suggestions to make scrolling more useful
 
     setSuggestions(filteredCompanies);
   }, [searchTerm]);
@@ -85,9 +85,9 @@ const CompanySearch = ({ onSelect, placeholder = "Search for a company..." }: Co
         {showSuggestions && suggestions.length > 0 && (
           <div 
             className="absolute left-0 right-0 mt-1 bg-white rounded-md shadow-lg border border-gray-200" 
-            style={{ zIndex: 10001 }}
+            style={{ zIndex: 10001 }} // Maintained high z-index to ensure it shows above charts
           >
-            <ScrollArea className="h-[160px]"> {/* Reduced height from 320px to 160px (approximately 1cm) */}
+            <ScrollArea className="h-[320px]">
               {suggestions.map((company) => (
                 <div
                   key={`${company.exchange}:${company.symbol}`}
