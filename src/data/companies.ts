@@ -16,6 +16,24227 @@ export const COMPANIES: Company[] = [
   { name: "Netflix Inc.", symbol: "NFLX", exchange: "NASDAQ" },
   { name: "Adobe Inc.", symbol: "ADBE", exchange: "NASDAQ" },
   { name: "PayPal Holdings Inc.", symbol: "PYPL", exchange: "NASDAQ" },
+  {
+        "name": "Artius II Acquisition Inc.",
+        "symbol": "AACB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Artius II Acquisition Inc.",
+        "symbol": "AACBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Artius II Acquisition Inc.",
+        "symbol": "AACBU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ATA Creativity Global",
+        "symbol": "AACG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AdvisorShares Dorsey Wright ADR ETF",
+        "symbol": "AADR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "American Airlines Group, Inc.",
+        "symbol": "AAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atlantic American Corporation",
+        "symbol": "AAME",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Applied Optoelectronics, Inc.",
+        "symbol": "AAOI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AAON, Inc.",
+        "symbol": "AAON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long AAPL Daily ETF",
+        "symbol": "AAPB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily AAPL Bear 1X Shares",
+        "symbol": "AAPD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ascentage Pharma Group International",
+        "symbol": "AAPG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Apple Inc.",
+        "symbol": "AAPL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily AAPL Bull 2X Shares",
+        "symbol": "AAPU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aardvark Therapeutics, Inc.",
+        "symbol": "AARD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Architect Global Factor Equity ETF",
+        "symbol": "AAVM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI All Country Asia ex Japan ETF",
+        "symbol": "AAXJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "American Battery Technology Company",
+        "symbol": "ABAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AbCellera Biologics Inc.",
+        "symbol": "ABCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Blue Capital US Small-Mid Cap Dynamic ETF",
+        "symbol": "ABCS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Abeona Therapeutics Inc.",
+        "symbol": "ABEO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Argent Large Cap ETF",
+        "symbol": "ABIG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Abacus Global Management, Inc.",
+        "symbol": "ABL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Abacus Global Management, Inc.",
+        "symbol": "ABLLL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Abacus Global Management, Inc.",
+        "symbol": "ABLLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Able View Global Inc.",
+        "symbol": "ABLV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Able View Global Inc.",
+        "symbol": "ABLVW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Airbnb, Inc.",
+        "symbol": "ABNB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Acumen Pharmaceuticals, Inc.",
+        "symbol": "ABOS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Abpro Holdings, Inc",
+        "symbol": "ABP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Abpro Holdings, Inc",
+        "symbol": "ABPWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Absci Corporation",
+        "symbol": "ABSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Abits Group Inc",
+        "symbol": "ABTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arbutus Biopharma Corporation",
+        "symbol": "ABUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ABVC BioPharma, Inc.",
+        "symbol": "ABVC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Above Food Ingredients Inc.",
+        "symbol": "ABVE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Above Food Ingredients Inc.",
+        "symbol": "ABVEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Abivax SA",
+        "symbol": "ABVX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ACADIA Pharmaceuticals Inc.",
+        "symbol": "ACAD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aurora Cannabis Inc.",
+        "symbol": "ACB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProFrac Holding Corp.",
+        "symbol": "ACDC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Adicet Bio, Inc.",
+        "symbol": "ACET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arch Capital Group Ltd.",
+        "symbol": "ACGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arch Capital Group Ltd.",
+        "symbol": "ACGLN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arch Capital Group Ltd.",
+        "symbol": "ACGLO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Acadia Healthcare Company, Inc.",
+        "symbol": "ACHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Achieve Life Sciences, Inc.",
+        "symbol": "ACHV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "American Coastal Insurance Corporation",
+        "symbol": "ACIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AC Immune SA",
+        "symbol": "ACIU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ACI Worldwide, Inc.",
+        "symbol": "ACIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Axcelis Technologies, Inc.",
+        "symbol": "ACLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arcellx, Inc.",
+        "symbol": "ACLX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ACM Research, Inc.",
+        "symbol": "ACMR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ACNB Corporation",
+        "symbol": "ACNB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ascent Industries Co.",
+        "symbol": "ACNT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Cognition Inc.",
+        "symbol": "ACOG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aclarion, Inc.",
+        "symbol": "ACON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aclarion, Inc.",
+        "symbol": "ACONW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aclaris Therapeutics, Inc.",
+        "symbol": "ACRS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Acrivon Therapeutics, Inc.",
+        "symbol": "ACRV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enact Holdings, Inc.",
+        "symbol": "ACT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Acacia Research Corporation",
+        "symbol": "ACTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Actuate Therapeutics, Inc.",
+        "symbol": "ACTU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI ACWI ETF",
+        "symbol": "ACWI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI ACWI ex U.S. ETF",
+        "symbol": "ACWX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Acurx Pharmaceuticals, Inc.",
+        "symbol": "ACXP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Adagene Inc.",
+        "symbol": "ADAG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Adaptimmune Therapeutics plc",
+        "symbol": "ADAP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Adobe Inc.",
+        "symbol": "ADBE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long ADBE Daily ETF",
+        "symbol": "ADBG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Color Star Technology Co., Ltd.",
+        "symbol": "ADD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Adeia Inc.",
+        "symbol": "ADEA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Adagio Medical Holdings, Inc",
+        "symbol": "ADGM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Analog Devices, Inc.",
+        "symbol": "ADI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Adial Pharmaceuticals, Inc",
+        "symbol": "ADIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ADMA Biologics Inc",
+        "symbol": "ADMA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Advent Technologies Holdings, Inc.",
+        "symbol": "ADN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Advent Technologies Holdings, Inc.",
+        "symbol": "ADNWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Automatic Data Processing, Inc.",
+        "symbol": "ADP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Adaptive Biotechnologies Corporation",
+        "symbol": "ADPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ADS-TEC ENERGY PLC",
+        "symbol": "ADSE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ADS-TEC ENERGY PLC",
+        "symbol": "ADSEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Autodesk, Inc.",
+        "symbol": "ADSK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ADTRAN Holdings, Inc.",
+        "symbol": "ADTN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aditxt, Inc.",
+        "symbol": "ADTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aduro Clean Technologies Inc.",
+        "symbol": "ADUR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Addus HomeCare Corporation",
+        "symbol": "ADUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Advantage Solutions Inc.",
+        "symbol": "ADV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Advanced Biomed Inc.",
+        "symbol": "ADVB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Adverum Biotechnologies, Inc.",
+        "symbol": "ADVM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Advantage Solutions Inc.",
+        "symbol": "ADVWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Addex Therapeutics Ltd",
+        "symbol": "ADXN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Antelope Enterprise Holdings Limited",
+        "symbol": "AEHL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aehr Test Systems",
+        "symbol": "AEHR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alset Inc.",
+        "symbol": "AEI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Advanced Energy Industries, Inc.",
+        "symbol": "AEIS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aethlon Medical, Inc.",
+        "symbol": "AEMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alliance Entertainment Holding Corporation",
+        "symbol": "AENT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alliance Entertainment Holding Corporation",
+        "symbol": "AENTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "American Electric Power Company, Inc.",
+        "symbol": "AEP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aeries Technology, Inc.",
+        "symbol": "AERT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aeries Technology, Inc.",
+        "symbol": "AERTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aeva Technologies, Inc.",
+        "symbol": "AEVA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aeva Technologies, Inc.",
+        "symbol": "AEVAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AudioEye, Inc.",
+        "symbol": "AEYE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Affinity Bancshares, Inc.",
+        "symbol": "AFBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Advanced Flower Capital Inc.",
+        "symbol": "AFCG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aimei Health Technology Co., Ltd",
+        "symbol": "AFJK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aimei Health Technology Co., Ltd",
+        "symbol": "AFJKR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aimei Health Technology Co., Ltd",
+        "symbol": "AFJKU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Affimed N.V.",
+        "symbol": "AFMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Forafric Global PLC",
+        "symbol": "AFRI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Forafric Global PLC",
+        "symbol": "AFRIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Affirm Holdings, Inc.",
+        "symbol": "AFRM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "abrdn Focused U.S. Small Cap Active ETF",
+        "symbol": "AFSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Afya Limited",
+        "symbol": "AFYA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Allied Gaming & Entertainment Inc.",
+        "symbol": "AGAE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "abrdn Emerging Markets Dividend Active ETF",
+        "symbol": "AGEM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Agenus Inc.",
+        "symbol": "AGEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Agrify Corporation",
+        "symbol": "AGFY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aureus Greenway Holdings Inc.",
+        "symbol": "AGH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Agios Pharmaceuticals, Inc.",
+        "symbol": "AGIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "KraneShares Artificial Intelligence & Technology ETF",
+        "symbol": "AGIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AGM Group Holdings Inc.",
+        "symbol": "AGMH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes Silver Miners ETF",
+        "symbol": "AGMI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AGNC Investment Corp.",
+        "symbol": "AGNC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AGNC Investment Corp.",
+        "symbol": "AGNCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AGNC Investment Corp.",
+        "symbol": "AGNCM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AGNC Investment Corp.",
+        "symbol": "AGNCN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AGNC Investment Corp.",
+        "symbol": "AGNCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AGNC Investment Corp.",
+        "symbol": "AGNCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Aging Population ETF",
+        "symbol": "AGNG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AgriFORCE  Growing Systems Ltd.",
+        "symbol": "AGRI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Agilysys, Inc.",
+        "symbol": "AGYS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree Interest Rate Hedged U.S. Aggregate Bond Fund",
+        "symbol": "AGZD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AdaptHealth Corp.",
+        "symbol": "AHCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Akso Health Group",
+        "symbol": "AHG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Asia 50 ETF",
+        "symbol": "AIA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aifeex Nexus Acquisition Corporation",
+        "symbol": "AIFE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aifeex Nexus Acquisition Corporation",
+        "symbol": "AIFER",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aifeex Nexus Acquisition Corporation",
+        "symbol": "AIFEU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Firefly Neuroscience, Inc.",
+        "symbol": "AIFF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AIFU Inc.",
+        "symbol": "AIFU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Senmiao Technology Limited",
+        "symbol": "AIHS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aimfinity Investment Corp. I",
+        "symbol": "AIMAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aimfinity Investment Corp. I",
+        "symbol": "AIMAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aimfinity Investment Corp. I",
+        "symbol": "AIMBU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ainos, Inc.",
+        "symbol": "AIMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ainos, Inc.",
+        "symbol": "AIMDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PowerFleet, Inc.",
+        "symbol": "AIOT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arteris, Inc.",
+        "symbol": "AIP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "REX AI Equity Premium Income ETF",
+        "symbol": "AIPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Artificial Intelligence & Technology ETF",
+        "symbol": "AIQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "reAlpha Tech Corp.",
+        "symbol": "AIRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Airgain, Inc.",
+        "symbol": "AIRG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AirJoule Technologies Corporation",
+        "symbol": "AIRJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AirJoule Technologies Corporation",
+        "symbol": "AIRJW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes Airlines ETF",
+        "symbol": "AIRL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust RBA American Industrial Renaissance ETF",
+        "symbol": "AIRR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AirSculpt Technologies, Inc.",
+        "symbol": "AIRS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Air T, Inc.",
+        "symbol": "AIRT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Air T, Inc.",
+        "symbol": "AIRTP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Airship AI Holdings, Inc",
+        "symbol": "AISP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Airship AI Holdings, Inc",
+        "symbol": "AISPW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XIAO-I Corporation",
+        "symbol": "AIXI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Akamai Technologies, Inc.",
+        "symbol": "AKAM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Akanda Corp.",
+        "symbol": "AKAN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Akebia Therapeutics, Inc.",
+        "symbol": "AKBA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Akero Therapeutics, Inc.",
+        "symbol": "AKRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Akari Therapeutics Plc",
+        "symbol": "AKTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Akoya BioSciences, Inc.",
+        "symbol": "AKYA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Astera Labs, Inc.",
+        "symbol": "ALAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alarum Technologies Ltd.",
+        "symbol": "ALAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Avalon GloboCare Corp.",
+        "symbol": "ALBT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alico, Inc.",
+        "symbol": "ALCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alchemy Investments Acquisition Corp 1",
+        "symbol": "ALCY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alchemy Investments Acquisition Corp 1",
+        "symbol": "ALCYU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alchemy Investments Acquisition Corp 1",
+        "symbol": "ALCYW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aldel Financial II Inc.",
+        "symbol": "ALDF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aldel Financial II Inc.",
+        "symbol": "ALDFU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aldel Financial II Inc.",
+        "symbol": "ALDFW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aldeyra Therapeutics, Inc.",
+        "symbol": "ALDX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alector, Inc.",
+        "symbol": "ALEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Centurion Acquisition Corp.",
+        "symbol": "ALF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Centurion Acquisition Corp.",
+        "symbol": "ALFUU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Centurion Acquisition Corp.",
+        "symbol": "ALFUW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Allegro MicroSystems, Inc.",
+        "symbol": "ALGM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Align Technology, Inc.",
+        "symbol": "ALGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aligos Therapeutics, Inc.",
+        "symbol": "ALGS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Allegiant Travel Company",
+        "symbol": "ALGT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alignment Healthcare, Inc.",
+        "symbol": "ALHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Argent Focused Small Cap ETF",
+        "symbol": "ALIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alkermes plc",
+        "symbol": "ALKS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alkami Technology, Inc.",
+        "symbol": "ALKT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Allakos Inc.",
+        "symbol": "ALLK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Allogene Therapeutics, Inc.",
+        "symbol": "ALLO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Allarity Therapeutics, Inc.",
+        "symbol": "ALLR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Allot Ltd.",
+        "symbol": "ALLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR Bridgewater All Weather ETF",
+        "symbol": "ALLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alumis Inc.",
+        "symbol": "ALMS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aeluma, Inc.",
+        "symbol": "ALMU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Allient Inc.",
+        "symbol": "ALNT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alnylam Pharmaceuticals, Inc.",
+        "symbol": "ALNY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AstroNova, Inc.",
+        "symbol": "ALOT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alarm.com Holdings, Inc.",
+        "symbol": "ALRM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alerus Financial Corporation",
+        "symbol": "ALRS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Altimmune, Inc.",
+        "symbol": "ALT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AlTi Global, Inc.",
+        "symbol": "ALTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alto Ingredients, Inc.",
+        "symbol": "ALTO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ALT5 Sigma Corporation",
+        "symbol": "ALTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Alternative Income ETF",
+        "symbol": "ALTY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alvotech",
+        "symbol": "ALVO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alvotech",
+        "symbol": "ALVOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ALX Oncology Holdings Inc.",
+        "symbol": "ALXO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alzamend Neuro, Inc.",
+        "symbol": "ALZN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amalgamated Financial Corp.",
+        "symbol": "AMAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Applied Materials, Inc.",
+        "symbol": "AMAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ambarella, Inc.",
+        "symbol": "AMBA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amber International Holding Limited",
+        "symbol": "AMBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AMC Networks Inc.",
+        "symbol": "AMCX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Advanced Micro Devices, Inc.",
+        "symbol": "AMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily AMD Bear 1X Shares",
+        "symbol": "AMDD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long AMD Daily ETF",
+        "symbol": "AMDG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long AMD Daily ETF",
+        "symbol": "AMDL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 1x Short AMD Daily ETF",
+        "symbol": "AMDS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amedisys Inc",
+        "symbol": "AMED",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amgen Inc.",
+        "symbol": "AMGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Argent Mid Cap ETF",
+        "symbol": "AMID",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Autonomix Medical, Inc.",
+        "symbol": "AMIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amkor Technology, Inc.",
+        "symbol": "AMKR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amylyx Pharmaceuticals, Inc.",
+        "symbol": "AMLX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Modus Holdings, Inc.",
+        "symbol": "AMOD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Modus Holdings, Inc.",
+        "symbol": "AMODW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amplitech Group, Inc.",
+        "symbol": "AMPG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amplitech Group, Inc.",
+        "symbol": "AMPGW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amphastar Pharmaceuticals, Inc.",
+        "symbol": "AMPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amplitude, Inc.",
+        "symbol": "AMPL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "A-Mark Precious Metals, Inc.",
+        "symbol": "AMRK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amarin Corporation plc",
+        "symbol": "AMRN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amneal Pharmaceuticals, Inc.",
+        "symbol": "AMRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "American Superconductor Corporation",
+        "symbol": "AMSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AMERISAFE, Inc.",
+        "symbol": "AMSF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amesite Inc.",
+        "symbol": "AMST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aemetis, Inc",
+        "symbol": "AMTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily AMD Bull 2X Shares",
+        "symbol": "AMUU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "American Woodmark Corporation",
+        "symbol": "AMWD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily AMZN Bear 1X Shares",
+        "symbol": "AMZD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amazon.com, Inc.",
+        "symbol": "AMZN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily AMZN Bull 2X Shares",
+        "symbol": "AMZU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long AMZN Daily ETF",
+        "symbol": "AMZZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AnaptysBio, Inc.",
+        "symbol": "ANAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Andersons, Inc.",
+        "symbol": "ANDE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Anebulo Pharmaceuticals, Inc.",
+        "symbol": "ANEB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Anghami Inc.",
+        "symbol": "ANGH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Anghami Inc.",
+        "symbol": "ANGHW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Angi Inc.",
+        "symbol": "ANGI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VanEck Fallen Angel High Yield Bond ETF",
+        "symbol": "ANGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AngioDynamics, Inc.",
+        "symbol": "ANGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Anika Therapeutics Inc.",
+        "symbol": "ANIK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ANI Pharmaceuticals, Inc.",
+        "symbol": "ANIP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Anixa Biosciences, Inc.",
+        "symbol": "ANIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Adlai Nortye Ltd.",
+        "symbol": "ANL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AleAnna, Inc.",
+        "symbol": "ANNA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AleAnna, Inc.",
+        "symbol": "ANNAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Annexon, Inc.",
+        "symbol": "ANNX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Agriculture & Natural Solutions Acquisition Corporation",
+        "symbol": "ANSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Agriculture & Natural Solutions Acquisition Corporation",
+        "symbol": "ANSCU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Agriculture & Natural Solutions Acquisition Corporation",
+        "symbol": "ANSCW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ANSYS, Inc.",
+        "symbol": "ANSS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AirNet Technology Inc.",
+        "symbol": "ANTE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AN2 Therapeutics, Inc.",
+        "symbol": "ANTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sphere 3D Corp.",
+        "symbol": "ANY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Angel Oak High Yield Opportunities ETF",
+        "symbol": "AOHY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha and Omega Semiconductor Limited",
+        "symbol": "AOSL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AOT Growth and Innovation ETF",
+        "symbol": "AOTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "American Outdoor Brands, Inc.",
+        "symbol": "AOUT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "APA Corporation",
+        "symbol": "APA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AppTech Payments Corp.",
+        "symbol": "APCX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AppTech Payments Corp.",
+        "symbol": "APCXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Applied DNA Sciences, Inc.",
+        "symbol": "APDN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "STKd 100% MSTR & 100% COIN ETF",
+        "symbol": "APED",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "American Public Education, Inc.",
+        "symbol": "APEI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Apogee Therapeutics, Inc.",
+        "symbol": "APGE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Agora, Inc.",
+        "symbol": "API",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Applied Digital Corporation",
+        "symbol": "APLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Apollomics Inc.",
+        "symbol": "APLM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Apollomics Inc.",
+        "symbol": "APLMW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Apellis Pharmaceuticals, Inc.",
+        "symbol": "APLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Applied Therapeutics, Inc.",
+        "symbol": "APLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aptorum Group Limited",
+        "symbol": "APM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Apogee Enterprises, Inc.",
+        "symbol": "APOG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Applovin Corporation",
+        "symbol": "APP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AppFolio, Inc.",
+        "symbol": "APPF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Appian Corporation",
+        "symbol": "APPN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Digital Turbine, Inc.",
+        "symbol": "APPS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tradr 2X Long APP Daily ETF",
+        "symbol": "APPX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aprea Therapeutics, Inc.",
+        "symbol": "APRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aptevo Therapeutics Inc.",
+        "symbol": "APVO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Asia Pacific Wire & Cable Corporation Limited",
+        "symbol": "APWC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Apyx Medical Corporation",
+        "symbol": "APYX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AquaBounty Technologies, Inc.",
+        "symbol": "AQB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aqua Metals, Inc.",
+        "symbol": "AQMS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aquestive Therapeutics, Inc.",
+        "symbol": "AQST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Clean Water ETF",
+        "symbol": "AQWA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Accuray Incorporated",
+        "symbol": "ARAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ARB IOT Group Limited",
+        "symbol": "ARBB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arbe Robotics Ltd.",
+        "symbol": "ARBE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arbe Robotics Ltd.",
+        "symbol": "ARBEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Argo Blockchain plc",
+        "symbol": "ARBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Argo Blockchain plc",
+        "symbol": "ARBKL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ArcBest Corporation",
+        "symbol": "ARCB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ares Capital Corporation",
+        "symbol": "ARCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arcturus Therapeutics Holdings Inc.",
+        "symbol": "ARCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ardelyx, Inc.",
+        "symbol": "ARDX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "American Rebel Holdings, Inc.",
+        "symbol": "AREB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "American Rebel Holdings, Inc.",
+        "symbol": "AREBW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "American Resources Corporation",
+        "symbol": "AREC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "argenx SE",
+        "symbol": "ARGX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arhaus, Inc.",
+        "symbol": "ARHS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ARKO Corp.",
+        "symbol": "ARKO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ARKO Corp.",
+        "symbol": "ARKOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ark Restaurants Corp.",
+        "symbol": "ARKR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alliance Resource Partners, L.P.",
+        "symbol": "ARLP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arm Holdings plc",
+        "symbol": "ARM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long ARM Daily ETF",
+        "symbol": "ARMG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arrow Financial Corporation",
+        "symbol": "AROW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arq, Inc.",
+        "symbol": "ARQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arqit Quantum Inc.",
+        "symbol": "ARQQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arqit Quantum Inc.",
+        "symbol": "ARQQW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arcutis Biotherapeutics, Inc.",
+        "symbol": "ARQT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Array Technologies, Inc.",
+        "symbol": "ARRY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Artelo Biosciences, Inc.",
+        "symbol": "ARTL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Artesian Resources Corporation",
+        "symbol": "ARTNA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Artiva Biotherapeutics, Inc.",
+        "symbol": "ARTV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Art's-Way Manufacturing Co., Inc.",
+        "symbol": "ARTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arvinas, Inc.",
+        "symbol": "ARVN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Indxx Metaverse ETF",
+        "symbol": "ARVR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arrowhead Pharmaceuticals, Inc.",
+        "symbol": "ARWR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aspire Biopharma Holdings, Inc.",
+        "symbol": "ASBP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aspire Biopharma Holdings, Inc.",
+        "symbol": "ASBPW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FlexShares Real Assets Allocation Index Fund",
+        "symbol": "ASET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AerSale Corporation",
+        "symbol": "ASLE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Assembly Biosciences, Inc.",
+        "symbol": "ASMB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long ASML Daily ETF",
+        "symbol": "ASMG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ASML Holding N.V.",
+        "symbol": "ASML",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ascendis Pharma A/S",
+        "symbol": "ASND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Actelis Networks, Inc.",
+        "symbol": "ASNS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Academy Sports and Outdoors, Inc.",
+        "symbol": "ASO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "A SPAC III Acquisition Corp.",
+        "symbol": "ASPC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "A SPAC III Acquisition Corp.",
+        "symbol": "ASPCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "A SPAC III Acquisition Corp.",
+        "symbol": "ASPCU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ASP Isotopes Inc.",
+        "symbol": "ASPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Altisource Portfolio Solutions S.A.",
+        "symbol": "ASPS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Assertio Holdings, Inc.",
+        "symbol": "ASRT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AmeriServ Financial Inc.",
+        "symbol": "ASRV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Asset Entities Inc.",
+        "symbol": "ASST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Astrotech Corporation",
+        "symbol": "ASTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Astec Industries, Inc.",
+        "symbol": "ASTE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Astrana Health Inc.",
+        "symbol": "ASTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ascent Solar Technologies, Inc",
+        "symbol": "ASTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Algoma Steel Group Inc.",
+        "symbol": "ASTL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Algoma Steel Group Inc.",
+        "symbol": "ASTLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AST SpaceMobile, Inc.",
+        "symbol": "ASTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Asure Software Inc",
+        "symbol": "ASUR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amtech Systems, Inc.",
+        "symbol": "ASYS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ATAI Life Sciences N.V.",
+        "symbol": "ATAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atour Lifestyle Holdings Limited",
+        "symbol": "ATAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atlas Corp.",
+        "symbol": "ATCOL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alphatec Holdings, Inc.",
+        "symbol": "ATEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aterian, Inc.",
+        "symbol": "ATER",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Anterix Inc.",
+        "symbol": "ATEX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Technology Group Limited",
+        "symbol": "ATGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Athira Pharma, Inc.",
+        "symbol": "ATHA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alterity Therapeutics Limited",
+        "symbol": "ATHE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aether Holdings, Inc.",
+        "symbol": "ATHR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Archimedes Tech SPAC Partners II Co.",
+        "symbol": "ATII",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Archimedes Tech SPAC Partners II Co.",
+        "symbol": "ATIIU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Archimedes Tech SPAC Partners II Co.",
+        "symbol": "ATIIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atlanticus Holdings Corporation",
+        "symbol": "ATLC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atlanticus Holdings Corporation",
+        "symbol": "ATLCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atlanticus Holdings Corporation",
+        "symbol": "ATLCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atlanticus Holdings Corporation",
+        "symbol": "ATLCZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atlantic International Corp.",
+        "symbol": "ATLN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ames National Corporation",
+        "symbol": "ATLO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atlas Lithium Corporation",
+        "symbol": "ATLX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AlphaTime Acquisition Corp",
+        "symbol": "ATMC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AlphaTime Acquisition Corp",
+        "symbol": "ATMCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AlphaTime Acquisition Corp",
+        "symbol": "ATMCU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AlphaTime Acquisition Corp",
+        "symbol": "ATMCW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AlphaVest Acquisition Corp",
+        "symbol": "ATMV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AlphaVest Acquisition Corp",
+        "symbol": "ATMVR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AlphaVest Acquisition Corp",
+        "symbol": "ATMVU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "180 Life Sciences Corp.",
+        "symbol": "ATNF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "180 Life Sciences Corp.",
+        "symbol": "ATNFW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ATN International, Inc.",
+        "symbol": "ATNI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atomera Incorporated",
+        "symbol": "ATOM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atossa Therapeutics, Inc.",
+        "symbol": "ATOS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Agape ATP Corporation",
+        "symbol": "ATPC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atara Biotherapeutics, Inc.",
+        "symbol": "ATRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AtriCure, Inc.",
+        "symbol": "ATRC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Astronics Corporation",
+        "symbol": "ATRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Addentax Group Corp.",
+        "symbol": "ATXG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Astria Therapeutics, Inc.",
+        "symbol": "ATXS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "aTyr Pharma, Inc.",
+        "symbol": "ATYR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Auburn National Bancorporation, Inc.",
+        "symbol": "AUBN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AudioCodes Ltd.",
+        "symbol": "AUDC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "authID Inc.",
+        "symbol": "AUID",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes Gold Miners ETF",
+        "symbol": "AUMI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aurinia Pharmaceuticals Inc",
+        "symbol": "AUPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aurora Innovation, Inc.",
+        "symbol": "AUR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aura Biosciences, Inc.",
+        "symbol": "AURA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aurora Innovation, Inc.",
+        "symbol": "AUROW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Autolus Therapeutics plc",
+        "symbol": "AUTL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Auddia Inc.",
+        "symbol": "AUUD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Auddia Inc.",
+        "symbol": "AUUDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aveanna Healthcare Holdings Inc.",
+        "symbol": "AVAH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AeroVironment, Inc.",
+        "symbol": "AVAV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ArriVent BioPharma, Inc.",
+        "symbol": "AVBP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Avadel Pharmaceuticals plc",
+        "symbol": "AVDL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AvidXchange Holdings, Inc.",
+        "symbol": "AVDX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Avantis Credit ETF",
+        "symbol": "AVGB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Broadcom Inc.",
+        "symbol": "AVGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Daily Target 2X Long AVGO ETF",
+        "symbol": "AVGX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atea Pharmaceuticals, Inc.",
+        "symbol": "AVIR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily AVGO Bull 2X Shares",
+        "symbol": "AVL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aviat Networks, Inc.",
+        "symbol": "AVNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mission Produce, Inc.",
+        "symbol": "AVO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AvePoint, Inc.",
+        "symbol": "AVPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AvePoint, Inc.",
+        "symbol": "AVPTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Anteris Technologies Global Corp.",
+        "symbol": "AVR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily AVGO Bear 1X Shares",
+        "symbol": "AVS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Avnet, Inc.",
+        "symbol": "AVT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Avalo Therapeutics, Inc.",
+        "symbol": "AVTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Avantis U.S. Quality ETF",
+        "symbol": "AVUQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Avantis Emerging Markets ex-China Equity ETF",
+        "symbol": "AVXC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Anavex Life Sciences Corp.",
+        "symbol": "AVXL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aware, Inc.",
+        "symbol": "AWRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Accelerate Diagnostics, Inc.",
+        "symbol": "AXDX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Axogen, Inc.",
+        "symbol": "AXGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Axon Enterprise, Inc.",
+        "symbol": "AXON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Axsome Therapeutics, Inc.",
+        "symbol": "AXSM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AXT Inc",
+        "symbol": "AXTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AYRO, Inc.",
+        "symbol": "AYRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aytu BioPharma, Inc.",
+        "symbol": "AYTU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "A2Z Cust2Mate Solutions Corp.",
+        "symbol": "AZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Autozi Internet Technology (Global) Ltd.",
+        "symbol": "AZI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AstraZeneca PLC",
+        "symbol": "AZN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Azenta, Inc.",
+        "symbol": "AZTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long BABA Daily ETF",
+        "symbol": "BABX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bleichroeder Acquisition Corp. I",
+        "symbol": "BACQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bleichroeder Acquisition Corp. I",
+        "symbol": "BACQR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bleichroeder Acquisition Corp. I",
+        "symbol": "BACQU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bridger Aerospace Group Holdings, Inc.",
+        "symbol": "BAER",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bridger Aerospace Group Holdings, Inc.",
+        "symbol": "BAERW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brown Advisory Flexible Equity ETF",
+        "symbol": "BAFE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BayFirst Financial Corp.",
+        "symbol": "BAFN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bandwidth Inc.",
+        "symbol": "BAND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BancFirst Corporation",
+        "symbol": "BANF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BancFirst Corporation",
+        "symbol": "BANFP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CBL International Limited",
+        "symbol": "BANL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Banner Corporation",
+        "symbol": "BANR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ArrowMark Financial Corp.",
+        "symbol": "BANX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Baosheng Media Group Holdings Limited",
+        "symbol": "BAOS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Couchbase, Inc.",
+        "symbol": "BASE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atlanta Braves Holdings, Inc.",
+        "symbol": "BATRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atlanta Braves Holdings, Inc.",
+        "symbol": "BATRK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bayview Acquisition Corp",
+        "symbol": "BAYA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bayview Acquisition Corp",
+        "symbol": "BAYAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bayview Acquisition Corp",
+        "symbol": "BAYAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Concrete Pumping Holdings, Inc.",
+        "symbol": "BBCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Beasley Broadcast Group, Inc.",
+        "symbol": "BBGI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VanEck Biotech ETF",
+        "symbol": "BBH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BridgeBio Pharma, Inc.",
+        "symbol": "BBIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bone Biologics Corp",
+        "symbol": "BBLG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bone Biologics Corp",
+        "symbol": "BBLGW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Beta Bionics, Inc.",
+        "symbol": "BBNX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Barrett Business Services, Inc.",
+        "symbol": "BBSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioAtla, Inc.",
+        "symbol": "BCAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "California BanCorp",
+        "symbol": "BCAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bicara Therapeutics Inc.",
+        "symbol": "BCAX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BCB Bancorp, Inc. (NJ)",
+        "symbol": "BCBP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioCardia, Inc.",
+        "symbol": "BCDA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Binah Capital Group, Inc.",
+        "symbol": "BCG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Binah Capital Group, Inc.",
+        "symbol": "BCGWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brainstorm Cell Therapeutics Inc.",
+        "symbol": "BCLI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares BBB-B CLO Active ETF",
+        "symbol": "BCLO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BayCom Corp",
+        "symbol": "BCML",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Balchem Corporation",
+        "symbol": "BCPC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioCryst Pharmaceuticals, Inc.",
+        "symbol": "BCRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BriaCell Therapeutics Corp.",
+        "symbol": "BCTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BriaCell Therapeutics Corp.",
+        "symbol": "BCTXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BriaCell Therapeutics Corp.",
+        "symbol": "BCTXZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bicycle Therapeutics plc",
+        "symbol": "BCYC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bridges Capital Tactical ETF",
+        "symbol": "BDGS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Baird Medical Investment Holdings Ltd",
+        "symbol": "BDMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Baird Medical Investment Holdings Ltd",
+        "symbol": "BDMDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Biodexa Pharmaceuticals plc",
+        "symbol": "BDRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Biodesix, Inc.",
+        "symbol": "BDSX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Black Diamond Therapeutics, Inc.",
+        "symbol": "BDTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bold Eagle Acquisition Corp.",
+        "symbol": "BEAG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bold Eagle Acquisition Corp.",
+        "symbol": "BEAGR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bold Eagle Acquisition Corp.",
+        "symbol": "BEAGU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Beam Therapeutics Inc.",
+        "symbol": "BEAM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Heartbeam, Inc.",
+        "symbol": "BEAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Heartbeam, Inc.",
+        "symbol": "BEATW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Beam Global",
+        "symbol": "BEEM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Beehive ETF",
+        "symbol": "BEEX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Honeytree U.S. Equity ETF",
+        "symbol": "BEEZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bel Fuse Inc.",
+        "symbol": "BELFA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bel Fuse Inc.",
+        "symbol": "BELFB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Long-Term U.S. Equity Active ETF",
+        "symbol": "BELT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Beneficient",
+        "symbol": "BENF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Beneficient",
+        "symbol": "BENFW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Better Home & Finance Holding Company",
+        "symbol": "BETR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Better Home & Finance Holding Company",
+        "symbol": "BETRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bank First Corporation",
+        "symbol": "BFC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BankFinancial Corporation",
+        "symbol": "BFIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bullfrog AI Holdings, Inc.",
+        "symbol": "BFRG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bullfrog AI Holdings, Inc.",
+        "symbol": "BFRGW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Biofrontera Inc.",
+        "symbol": "BFRI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Biofrontera Inc.",
+        "symbol": "BFRIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Business First Bancshares, Inc.",
+        "symbol": "BFST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BGC Group, Inc.",
+        "symbol": "BGC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Big 5 Sporting Goods Corporation",
+        "symbol": "BGFV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioNexus Gene Lab Corp",
+        "symbol": "BGLC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BGM Group Ltd.",
+        "symbol": "BGM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares USD Green Bond ETF",
+        "symbol": "BGRN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Large Cap Growth Active ETF",
+        "symbol": "BGRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Blue Hat Interactive Entertainment Technology",
+        "symbol": "BHAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brighthouse Financial, Inc.",
+        "symbol": "BHF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brighthouse Financial, Inc.",
+        "symbol": "BHFAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brighthouse Financial, Inc.",
+        "symbol": "BHFAM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brighthouse Financial, Inc.",
+        "symbol": "BHFAN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brighthouse Financial, Inc.",
+        "symbol": "BHFAO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brighthouse Financial, Inc.",
+        "symbol": "BHFAP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Burke & Herbert Financial Services Corp.",
+        "symbol": "BHRB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioHarvest Sciences Inc.",
+        "symbol": "BHST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "bioAffinity Technologies, Inc.",
+        "symbol": "BIAF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "bioAffinity Technologies, Inc.",
+        "symbol": "BIAFW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProShares Ultra Nasdaq Biotechnology",
+        "symbol": "BIB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Baidu, Inc.",
+        "symbol": "BIDU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BigCommerce Holdings, Inc.",
+        "symbol": "BIGC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Biogen Inc.",
+        "symbol": "BIIB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bilibili Inc.",
+        "symbol": "BILI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioAge Labs, Inc.",
+        "symbol": "BIOA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bioceres Crop Solutions Corp.",
+        "symbol": "BIOX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Allbirds, Inc.",
+        "symbol": "BIRD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProShares UltraShort Nasdaq Biotechnology",
+        "symbol": "BIS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bitfarms Ltd.",
+        "symbol": "BITF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Blockchain & Bitcoin Strategy ETF",
+        "symbol": "BITS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioVie Inc.",
+        "symbol": "BIVI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Baiya International Group Inc.",
+        "symbol": "BIYA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bluejay Diagnostics, Inc.",
+        "symbol": "BJDX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VanEck Gaming ETF",
+        "symbol": "BJK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BJ's Restaurants, Inc.",
+        "symbol": "BJRI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Blockchain ETF",
+        "symbol": "BKCH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Black Hawk Acquisition Corporation",
+        "symbol": "BKHA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Black Hawk Acquisition Corporation",
+        "symbol": "BKHAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Black Hawk Acquisition Corporation",
+        "symbol": "BKHAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BNY Mellon Innovators ETF",
+        "symbol": "BKIV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Booking Holdings Inc.",
+        "symbol": "BKNG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Baker Hughes Company",
+        "symbol": "BKR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BNY Mellon Women's Opportunities ETF",
+        "symbol": "BKWO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BIO-key International, Inc.",
+        "symbol": "BKYI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BlackLine, Inc.",
+        "symbol": "BL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Blue Bird Corporation",
+        "symbol": "BLBD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Blackboxstocks Inc.",
+        "symbol": "BLBX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Siren Nasdaq NexGen Economy ETF",
+        "symbol": "BLCN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Large Cap Core Active ETF",
+        "symbol": "BLCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Blade Air Mobility, Inc.",
+        "symbol": "BLDE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Blade Air Mobility, Inc.",
+        "symbol": "BLDEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ballard Power Systems, Inc.",
+        "symbol": "BLDP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioLife Solutions, Inc.",
+        "symbol": "BLFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Blue Foundry Bancorp",
+        "symbol": "BLFY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bridgeline Digital, Inc.",
+        "symbol": "BLIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BeLive Holdings",
+        "symbol": "BLIV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Blackbaud, Inc.",
+        "symbol": "BLKB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bloomin' Brands, Inc.",
+        "symbol": "BLMN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BloomZ Inc.",
+        "symbol": "BLMZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Beeline Holdings, Inc.",
+        "symbol": "BLNE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Blink Charging Co.",
+        "symbol": "BLNK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioLineRx Ltd.",
+        "symbol": "BLRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Belite Bio, Inc",
+        "symbol": "BLTE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "bluebird bio, Inc.",
+        "symbol": "BLUE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Backblaze, Inc.",
+        "symbol": "BLZE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "REX Bitcoin Corporate Treasury Convertible Bond ETF",
+        "symbol": "BMAX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bumble Inc.",
+        "symbol": "BMBL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares WestEnd Economic Cycle Bond ETF",
+        "symbol": "BMDL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Biomea Fusion, Inc.",
+        "symbol": "BMEA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Basel Medical Group Ltd",
+        "symbol": "BMGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Beamr Imaging Ltd.",
+        "symbol": "BMR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Biomerica, Inc.",
+        "symbol": "BMRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bank of Marin Bancorp",
+        "symbol": "BMRC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioMarin Pharmaceutical Inc.",
+        "symbol": "BMRN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brand Engagement Network Inc.",
+        "symbol": "BNAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brand Engagement Network Inc.",
+        "symbol": "BNAIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Total Bond Market ETF",
+        "symbol": "BND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Total World Bond ETF",
+        "symbol": "BNDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Total International Bond ETF",
+        "symbol": "BNDX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bionano Genomics, Inc.",
+        "symbol": "BNGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Burning Rock Biotech Limited",
+        "symbol": "BNR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brenmiller Energy Ltd",
+        "symbol": "BNRG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Benitec Biopharma Inc.",
+        "symbol": "BNTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioNTech SE",
+        "symbol": "BNTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Banzai International, Inc.",
+        "symbol": "BNZI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Banzai International, Inc.",
+        "symbol": "BNZIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily BA Bear 1X Shares",
+        "symbol": "BOED",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily BA Bull 2X Shares",
+        "symbol": "BOEU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BranchOut Food Inc.",
+        "symbol": "BOF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BOK Financial Corporation",
+        "symbol": "BOKF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Boundless Bio, Inc.",
+        "symbol": "BOLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bolt Biotherapeutics, Inc.",
+        "symbol": "BOLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bon Natural Life Limited",
+        "symbol": "BON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DMC Global Inc.",
+        "symbol": "BOOM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "B.O.S. Better Online Solutions",
+        "symbol": "BOSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bank of the James Financial Group, Inc.",
+        "symbol": "BOTJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes Robotics & Automation ETF",
+        "symbol": "BOTT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Robotics & Artificial Intelligence ETF",
+        "symbol": "BOTZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bowen Acquisition Corp",
+        "symbol": "BOWN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bowen Acquisition Corp",
+        "symbol": "BOWNR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bowen Acquisition Corp",
+        "symbol": "BOWNU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Boxlight Corporation",
+        "symbol": "BOXL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Blueprint Medicines Corporation",
+        "symbol": "BPMC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Popular, Inc.",
+        "symbol": "BPOP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Popular, Inc.",
+        "symbol": "BPOPM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Princeton Bancorp, Inc.",
+        "symbol": "BPRN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brookfield Property Partners L.P.",
+        "symbol": "BPYPM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brookfield Property Partners L.P.",
+        "symbol": "BPYPN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brookfield Property Partners L.P.",
+        "symbol": "BPYPO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brookfield Property Partners L.P.",
+        "symbol": "BPYPP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bragg Gaming Group Inc.",
+        "symbol": "BRAG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brera Holdings PLC",
+        "symbol": "BREA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Barfresh Food Group Inc.",
+        "symbol": "BRFH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares High Yield Active ETF",
+        "symbol": "BRHY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bridgford Foods Corporation",
+        "symbol": "BRID",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily BRKB Bear 1X Shares",
+        "symbol": "BRKD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brookline Bancorp, Inc.",
+        "symbol": "BRKL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bruker Corporation",
+        "symbol": "BRKR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily BRKB Bull 2X Shares",
+        "symbol": "BRKU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Borealis Foods Inc.",
+        "symbol": "BRLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Borealis Foods Inc.",
+        "symbol": "BRLSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brilliant Earth Group, Inc.",
+        "symbol": "BRLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Barinthus Biotherapeutics plc",
+        "symbol": "BRNS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Burney U.S. Factor Rotation ETF",
+        "symbol": "BRNY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brooge Energy Limited",
+        "symbol": "BROG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Coinshares Valkyrie Bitcoin Fund",
+        "symbol": "BRRR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Total Return Active ETF",
+        "symbol": "BRTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioRestorative Therapies, Inc.",
+        "symbol": "BRTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Berry Corporation (bry)",
+        "symbol": "BRY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Braze, Inc.",
+        "symbol": "BRZE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bogota Financial Corp.",
+        "symbol": "BSBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2025 Corporate Bond ETF",
+        "symbol": "BSCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2026 Corporate Bond ETF",
+        "symbol": "BSCQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2027 Corporate Bond ETF",
+        "symbol": "BSCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2028 Corporate Bond ETF",
+        "symbol": "BSCS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2029 Corporate Bond ETF",
+        "symbol": "BSCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2030 Corporate Bond ETF",
+        "symbol": "BSCU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2031 Corporate Bond ETF",
+        "symbol": "BSCV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2032 Corporate Bond ETF",
+        "symbol": "BSCW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2033 Corporate Bond ETF",
+        "symbol": "BSCX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2034 Corporate Bond ETF",
+        "symbol": "BSCY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bassett Furniture Industries, Incorporated",
+        "symbol": "BSET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioSig Technologies, Inc.",
+        "symbol": "BSGM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Black Spade Acquisition II Co",
+        "symbol": "BSII",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Black Spade Acquisition II Co",
+        "symbol": "BSIIU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Black Spade Acquisition II Co",
+        "symbol": "BSIIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2025 High Yield Corporate Bond ETF",
+        "symbol": "BSJP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2026 High Yield Corporate Bond ETF",
+        "symbol": "BSJQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2027 High Yield Corporate Bond ETF",
+        "symbol": "BSJR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2028 High Yield Corporate Bond ETF",
+        "symbol": "BSJS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2029 High Yield Corporate Bond ETF",
+        "symbol": "BSJT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2030 High Yield Corporate Bond ETF",
+        "symbol": "BSJU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2031 High Yield Corporate Bond ETF",
+        "symbol": "BSJV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2032 High Yield Corporate Bond ETF",
+        "symbol": "BSJW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bolt Projects Holdings, Inc.",
+        "symbol": "BSLK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bolt Projects Holdings, Inc.",
+        "symbol": "BSLKW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2025 Municipal Bond ETF",
+        "symbol": "BSMP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2026 Municipal Bond ETF",
+        "symbol": "BSMQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2027 Municipal Bond ETF",
+        "symbol": "BSMR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2028 Municipal Bond ETF",
+        "symbol": "BSMS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2029 Municipal Bond ETF",
+        "symbol": "BSMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2030 Municipal Bond ETF",
+        "symbol": "BSMU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2031 Municipal Bond ETF",
+        "symbol": "BSMV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2032 Municipal Bond ETF",
+        "symbol": "BSMW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2034 Municipal Bond ETF",
+        "symbol": "BSMY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sierra Bancorp",
+        "symbol": "BSRR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BulletShares 2033 Municipal Bond ETF",
+        "symbol": "BSSX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bank7 Corp.",
+        "symbol": "BSVN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EA Bridgeway Omni Small-Cap Value ETF",
+        "symbol": "BSVO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bentley Systems, Incorporated",
+        "symbol": "BSY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BioXcel Therapeutics, Inc.",
+        "symbol": "BTAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BT Brands, Inc.",
+        "symbol": "BTBD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BT Brands, Inc.",
+        "symbol": "BTBDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bit Digital, Inc.",
+        "symbol": "BTBT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BTCS Inc.",
+        "symbol": "BTCS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BTC Digital Ltd.",
+        "symbol": "BTCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bitdeer Technologies Group",
+        "symbol": "BTDR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CoinShares Valkyrie Bitcoin and Ether Strategy ETF",
+        "symbol": "BTF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CoinShares Valkyrie Bitcoin Futures Leveraged Strategy ETF",
+        "symbol": "BTFX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "STKd 100% Bitcoin & 100% Gold ETF",
+        "symbol": "BTGD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bitcoin Depot Inc.",
+        "symbol": "BTM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Biote Corp.",
+        "symbol": "BTMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bitcoin Depot Inc.",
+        "symbol": "BTMWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Armlogi Holding Corp.",
+        "symbol": "BTOC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bit Origin Limited",
+        "symbol": "BTOG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BrightSpring Health Services, Inc.",
+        "symbol": "BTSG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BrightSpring Health Services, Inc.",
+        "symbol": "BTSGU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AB Conservative Buffer ETF",
+        "symbol": "BUFC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AB International Buffer ETF",
+        "symbol": "BUFI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AB Moderate Buffer ETF",
+        "symbol": "BUFM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Cybersecurity ETF",
+        "symbol": "BUG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bukit Jalil Global Acquisition 1 Ltd.",
+        "symbol": "BUJA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bukit Jalil Global Acquisition 1 Ltd.",
+        "symbol": "BUJAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bukit Jalil Global Acquisition 1 Ltd.",
+        "symbol": "BUJAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bukit Jalil Global Acquisition 1 Ltd.",
+        "symbol": "BUJAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacer BlueStar Engineering the Future ETF",
+        "symbol": "BULD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Webull Corporation",
+        "symbol": "BULL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Webull Corporation",
+        "symbol": "BULLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Webull Corporation",
+        "symbol": "BULLZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Busey Corporation",
+        "symbol": "BUSE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BV Financial, Inc.",
+        "symbol": "BVFL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bioventus Inc.",
+        "symbol": "BVS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BrainsWay Ltd.",
+        "symbol": "BWAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bridgewater Bancshares, Inc.",
+        "symbol": "BWB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bridgewater Bancshares, Inc.",
+        "symbol": "BWBBP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Broadwind, Inc.",
+        "symbol": "BWEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bankwell Financial Group, Inc.",
+        "symbol": "BWFG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Baldwin Insurance Group, Inc.",
+        "symbol": "BWIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bowman Consulting Group Ltd.",
+        "symbol": "BWMN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Broadway Financial Corporation",
+        "symbol": "BYFC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Beyond Meat, Inc.",
+        "symbol": "BYND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Byrna Technologies, Inc.",
+        "symbol": "BYRN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BeyondSpring, Inc.",
+        "symbol": "BYSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "KANZHUN LIMITED",
+        "symbol": "BZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Blaize Holdings, Inc.",
+        "symbol": "BZAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Blaize Holdings, Inc.",
+        "symbol": "BZAIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BuzzFeed, Inc.",
+        "symbol": "BZFD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BuzzFeed, Inc.",
+        "symbol": "BZFDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Baozun Inc.",
+        "symbol": "BZUN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xtrackers California Municipal Bonds ETF",
+        "symbol": "CA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "China Automotive Systems, Inc.",
+        "symbol": "CAAS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cabaletta Bio, Inc.",
+        "symbol": "CABA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Camden National Corporation",
+        "symbol": "CAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Credit Acceptance Corporation",
+        "symbol": "CACC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Candel Therapeutics, Inc.",
+        "symbol": "CADL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacer US Small Cap Cash Cows Growth Leaders ETF",
+        "symbol": "CAFG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Cheesecake Factory Incorporated",
+        "symbol": "CAKE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CalciMedica, Inc.",
+        "symbol": "CALC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Short-Term California Muni Active ETF",
+        "symbol": "CALI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cal-Maine Foods, Inc.",
+        "symbol": "CALM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CAMP4 Therapeutics Corporation",
+        "symbol": "CAMP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Camtek Ltd.",
+        "symbol": "CAMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Canaan Inc.",
+        "symbol": "CAN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tema Oncology ETF",
+        "symbol": "CANC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Calamos Alternative Nasdaq & Bond ETF",
+        "symbol": "CANQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cayson Acquisition Corp",
+        "symbol": "CAPN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cayson Acquisition Corp",
+        "symbol": "CAPNR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cayson Acquisition Corp",
+        "symbol": "CAPNU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Capricor Therapeutics, Inc.",
+        "symbol": "CAPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Capstone Holding Corp.",
+        "symbol": "CAPS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Captivision Inc.",
+        "symbol": "CAPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Captivision Inc.",
+        "symbol": "CAPTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Avis Budget Group, Inc.",
+        "symbol": "CAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Carter Bankshares, Inc.",
+        "symbol": "CARE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CarGurus, Inc.",
+        "symbol": "CARG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Carisma Therapeutics, Inc.",
+        "symbol": "CARM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Maplebear Inc.",
+        "symbol": "CART",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Carver Bancorp, Inc.",
+        "symbol": "CARV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Angel Oak Income ETF",
+        "symbol": "CARY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust S-Network Electric & Future Vehicle Ecosystem ETF",
+        "symbol": "CARZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pathward Financial, Inc.",
+        "symbol": "CASH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CASI Pharmaceuticals, Inc.",
+        "symbol": "CASI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Heritage Distilling Holding Company, Inc.",
+        "symbol": "CASK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cass Information Systems, Inc",
+        "symbol": "CASS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Caseys General Stores, Inc.",
+        "symbol": "CASY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X S&P 500 Catholic Values ETF",
+        "symbol": "CATH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cathay General Bancorp",
+        "symbol": "CATY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CBAK Energy Technology, Inc.",
+        "symbol": "CBAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CB Financial Services, Inc.",
+        "symbol": "CBFV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CeriBell, Inc.",
+        "symbol": "CBLL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Capital Bancorp, Inc.",
+        "symbol": "CBNK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cracker Barrel Old Country Store, Inc.",
+        "symbol": "CBRL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Commerce Bancshares, Inc.",
+        "symbol": "CBSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cibus, Inc.",
+        "symbol": "CBUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Crescent Capital BDC, Inc.",
+        "symbol": "CCAP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Coastal Financial Corporation",
+        "symbol": "CCB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Capital City Bank Group",
+        "symbol": "CCBG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "C4 Therapeutics, Inc.",
+        "symbol": "CCCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CCC Intelligent Solutions Holdings Inc.",
+        "symbol": "CCCS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Calamos Dynamic Convertible & Income Fund",
+        "symbol": "CCD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Capital Clean Energy Carriers Corp.",
+        "symbol": "CCEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Coca-Cola Europacific Partners plc",
+        "symbol": "CCEP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cheche Group Inc.",
+        "symbol": "CCG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cheche Group Inc.",
+        "symbol": "CCGWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cohen Circle Acquisition Corp. I",
+        "symbol": "CCIR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cohen Circle Acquisition Corp. I",
+        "symbol": "CCIRU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cohen Circle Acquisition Corp. I",
+        "symbol": "CCIRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Churchill Capital Corp IX",
+        "symbol": "CCIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Churchill Capital Corp IX",
+        "symbol": "CCIXU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Churchill Capital Corp IX",
+        "symbol": "CCIXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CareCloud, Inc.",
+        "symbol": "CCLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CareCloud, Inc.",
+        "symbol": "CCLDO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CNB Financial Corporation",
+        "symbol": "CCNE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CNB Financial Corporation",
+        "symbol": "CCNEP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ALPS/CoreCommodity Natural Resources ETF",
+        "symbol": "CCNR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cogent Communications Holdings, Inc.",
+        "symbol": "CCOI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cross Country Healthcare, Inc.",
+        "symbol": "CCRN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Carbon Collective Short Duration Green Bond ETF",
+        "symbol": "CCSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Consensus Cloud Solutions, Inc.",
+        "symbol": "CCSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Carbon Collective Climate Solutions U.S. Equity ETF",
+        "symbol": "CCSO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CCSC Technology International Holdings Limited",
+        "symbol": "CCTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares US EQ Income Enhanced Volatility Wtd ETF",
+        "symbol": "CDC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cardio Diagnostics Holdings Inc.",
+        "symbol": "CDIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cardio Diagnostics Holdings Inc.",
+        "symbol": "CDIOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares US Large Cap High Div Volatility Wtd ETF",
+        "symbol": "CDL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cardlytics, Inc.",
+        "symbol": "CDLX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CareDx, Inc.",
+        "symbol": "CDNA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cadence Design Systems, Inc.",
+        "symbol": "CDNS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Codere Online Luxembourg, S.A.",
+        "symbol": "CDRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Codere Online Luxembourg, S.A.",
+        "symbol": "CDROW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Conduit Pharmaceuticals Inc.",
+        "symbol": "CDT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CDT Environmental Technology Investment Holdings Limited",
+        "symbol": "CDTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Conduit Pharmaceuticals Inc.",
+        "symbol": "CDTTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cidara Therapeutics, Inc.",
+        "symbol": "CDTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CDW Corporation",
+        "symbol": "CDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Codexis, Inc.",
+        "symbol": "CDXS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cadiz, Inc.",
+        "symbol": "CDZI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cadiz, Inc.",
+        "symbol": "CDZIP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CEA Industries Inc.",
+        "symbol": "CEAD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CEA Industries Inc.",
+        "symbol": "CEADW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CECO Environmental Corp.",
+        "symbol": "CECO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X S&P Catholic Values Developed ex-U.S. ETF",
+        "symbol": "CEFA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Constellation Energy Corporation",
+        "symbol": "CEG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Celcuity Inc.",
+        "symbol": "CELC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Celsius Holdings, Inc.",
+        "symbol": "CELH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Celularity Inc.",
+        "symbol": "CELU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Celularity Inc.",
+        "symbol": "CELUW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Creative Medical Technology Holdings, Inc.",
+        "symbol": "CELZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cenntro Inc.",
+        "symbol": "CENN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Central Garden & Pet Company",
+        "symbol": "CENT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Central Garden & Pet Company",
+        "symbol": "CENTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Century Aluminum Company",
+        "symbol": "CENX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cantor Equity Partners, Inc.",
+        "symbol": "CEP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "REX Crypto Equity Premium Income ETF",
+        "symbol": "CEPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cantor Equity Partners I, Inc.",
+        "symbol": "CEPO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CERo Therapeutics Holdings, Inc.",
+        "symbol": "CERO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CERo Therapeutics Holdings, Inc.",
+        "symbol": "CEROW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cerus Corporation",
+        "symbol": "CERS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Certara, Inc.",
+        "symbol": "CERT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cemtrex Inc.",
+        "symbol": "CETX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Clean Energy Technologies, Inc.",
+        "symbol": "CETY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CEVA, Inc.",
+        "symbol": "CEVA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares US 500 Volatility Wtd ETF",
+        "symbol": "CFA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CF Bankshares Inc.",
+        "symbol": "CFBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "C&F Financial Corporation",
+        "symbol": "CFFI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Capitol Federal Financial, Inc.",
+        "symbol": "CFFN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Confluent, Inc.",
+        "symbol": "CFLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares US 500 Enhanced Volatility Wtd ETF",
+        "symbol": "CFO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CFSB Bancorp, Inc.",
+        "symbol": "CFSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Carlyle Group Inc.",
+        "symbol": "CG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Carlyle Group Inc.",
+        "symbol": "CGABL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Carlyle Secured Lending, Inc.",
+        "symbol": "CGBD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Carlyle Secured Lending, Inc.",
+        "symbol": "CGBDL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Crown LNG Holdings Limited",
+        "symbol": "CGBS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Crown LNG Holdings Limited",
+        "symbol": "CGBSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Canopy Growth Corporation",
+        "symbol": "CGC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cullinan Therapeutics, Inc.",
+        "symbol": "CGEM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Compugen Ltd.",
+        "symbol": "CGEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cognyte Software Ltd.",
+        "symbol": "CGNT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cognex Corporation",
+        "symbol": "CGNX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Calamos Global Total Return Fund",
+        "symbol": "CGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CG Oncology, Inc.",
+        "symbol": "CGON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Creative Global Technology Holdings Limited",
+        "symbol": "CGTL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cognition Therapeutics, Inc.",
+        "symbol": "CGTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Chagee Holdings Limited",
+        "symbol": "CHA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Crane Harbor Acquisition Corp.",
+        "symbol": "CHACU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Charlton Aria Acquisition Corporation",
+        "symbol": "CHAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Charlton Aria Acquisition Corporation",
+        "symbol": "CHARR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Charlton Aria Acquisition Corporation",
+        "symbol": "CHARU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Comstock Holding Companies, Inc.",
+        "symbol": "CHCI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "City Holding Company",
+        "symbol": "CHCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Churchill Downs, Incorporated",
+        "symbol": "CHDN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Chefs' Warehouse, Inc.",
+        "symbol": "CHEF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Check-Cap Ltd.",
+        "symbol": "CHEK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stance Sustainable Beta ETF",
+        "symbol": "CHGX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Calamos Convertible Opportunities and Income Fund",
+        "symbol": "CHI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Check Point Software Technologies Ltd.",
+        "symbol": "CHKP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Chemung Financial Corp",
+        "symbol": "CHMG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "China Natural Resources, Inc.",
+        "symbol": "CHNR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xtrackers Semiconductor Select Equity ETF",
+        "symbol": "CHPS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cheer Holding, Inc.",
+        "symbol": "CHR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Chord Energy Corporation",
+        "symbol": "CHRD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Coherus BioSciences, Inc.",
+        "symbol": "CHRS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "C.H. Robinson Worldwide, Inc.",
+        "symbol": "CHRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CHS Inc",
+        "symbol": "CHSCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CHS Inc",
+        "symbol": "CHSCM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CHS Inc",
+        "symbol": "CHSCN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CHS Inc",
+        "symbol": "CHSCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CHS Inc",
+        "symbol": "CHSCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Chanson International Holding",
+        "symbol": "CHSN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Charter Communications, Inc.",
+        "symbol": "CHTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Calamos Global Dynamic Income Fund",
+        "symbol": "CHW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ChampionX Corporation",
+        "symbol": "CHX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Calamos Convertible and High Income Fund",
+        "symbol": "CHY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust NASDAQ Cybersecurity ETF",
+        "symbol": "CIBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cipher Mining Inc.",
+        "symbol": "CIFR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cipher Mining Inc.",
+        "symbol": "CIFRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Colliers International Group Inc.",
+        "symbol": "CIGI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Concorde International Group Ltd",
+        "symbol": "CIGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tianci International, Inc.",
+        "symbol": "CIIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares International Volatility Wtd ETF",
+        "symbol": "CIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cincinnati Financial Corporation",
+        "symbol": "CINF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cingulate Inc.",
+        "symbol": "CING",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cingulate Inc.",
+        "symbol": "CINGW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CISO Global, Inc.",
+        "symbol": "CISO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "C3is Inc.",
+        "symbol": "CISS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Civista Bancshares, Inc.",
+        "symbol": "CIVB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Chijet Motor Company, Inc.",
+        "symbol": "CJET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Callan JMB Inc.",
+        "symbol": "CJMB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Checkpoint Therapeutics, Inc.",
+        "symbol": "CKPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Clarus Corporation",
+        "symbol": "CLAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Columbia Financial, Inc.",
+        "symbol": "CLBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cellebrite DI Ltd.",
+        "symbol": "CLBT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Celldex Therapeutics, Inc.",
+        "symbol": "CLDX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "China Liberal Education Holdings Limited",
+        "symbol": "CLEU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Clearfield, Inc.",
+        "symbol": "CLFD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CollPlant Biotechnologies Ltd.",
+        "symbol": "CLGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Click Holdings Limited",
+        "symbol": "CLIK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ClearSign Technologies Corporation",
+        "symbol": "CLIR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cellectis S.A.",
+        "symbol": "CLLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Climb Global Solutions, Inc.",
+        "symbol": "CLMB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Calumet, Inc",
+        "symbol": "CLMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Clean Energy Fuels Corp.",
+        "symbol": "CLNE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Clene Inc.",
+        "symbol": "CLNN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Clene Inc.",
+        "symbol": "CLNNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares AAA CLO Active ETF",
+        "symbol": "CLOA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes Cloud Computing ETF",
+        "symbol": "CLOD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Cloud Computing ETF",
+        "symbol": "CLOU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Clover Health Investments, Corp.",
+        "symbol": "CLOV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CLPS Incorporation",
+        "symbol": "CLPS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ClearPoint Neuro Inc.",
+        "symbol": "CLPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cellectar Biosciences, Inc.",
+        "symbol": "CLRB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ClearOne, Inc.",
+        "symbol": "CLRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Clearside Biomedical, Inc.",
+        "symbol": "CLSD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CleanSpark, Inc.",
+        "symbol": "CLSK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CleanSpark, Inc.",
+        "symbol": "CLSKW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cabana Target Leading Sector Moderate ETF",
+        "symbol": "CLSM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Catalyst Bancorp, Inc.",
+        "symbol": "CLST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Euro Tech Holdings Company Limited",
+        "symbol": "CLWT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Climb Bio, Inc.",
+        "symbol": "CLYM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cambium Networks Corporation",
+        "symbol": "CMBM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Columbus McKinnon Corporation",
+        "symbol": "CMCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Comcast Corporation",
+        "symbol": "CMCSA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Creative Media",
+        "symbol": "CMCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CME Group Inc.",
+        "symbol": "CME",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cumulus Media Inc.",
+        "symbol": "CMLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Chemomab Therapeutics Ltd.",
+        "symbol": "CMMB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Clearmind Medicine Inc.",
+        "symbol": "CMND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CompoSecure, Inc.",
+        "symbol": "CMPO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CompoSecure, Inc.",
+        "symbol": "CMPOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cimpress plc",
+        "symbol": "CMPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "COMPASS Pathways Plc",
+        "symbol": "CMPS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Compass Therapeutics, Inc.",
+        "symbol": "CMPX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Comtech Telecommunications Corp.",
+        "symbol": "CMTL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Coincheck Group N.V.",
+        "symbol": "CNCK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Coincheck Group N.V.",
+        "symbol": "CNCKW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Range Cancer Therapeutics ETF",
+        "symbol": "CNCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Conduent Incorporated",
+        "symbol": "CNDT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ZW Data Action Technologies Inc.",
+        "symbol": "CNET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CN Energy Group Inc.",
+        "symbol": "CNEY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Conifer Holdings, Inc.",
+        "symbol": "CNFR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Conifer Holdings, Inc.",
+        "symbol": "CNFRZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ConnectOne Bancorp, Inc.",
+        "symbol": "CNOB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ConnectOne Bancorp, Inc.",
+        "symbol": "CNOBP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CNS Pharmaceuticals, Inc.",
+        "symbol": "CNSP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Centessa Pharmaceuticals plc",
+        "symbol": "CNTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Connect Biopharma Holdings Limited",
+        "symbol": "CNTB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ConnectM Technology Solutions, Inc.",
+        "symbol": "CNTM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Context Therapeutics Inc.",
+        "symbol": "CNTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Century Casinos, Inc.",
+        "symbol": "CNTY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cineverse Corp.",
+        "symbol": "CNVS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Concentrix Corporation",
+        "symbol": "CNXC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PC Connection, Inc.",
+        "symbol": "CNXN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Envoy Medical, Inc.",
+        "symbol": "COCH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Envoy Medical, Inc.",
+        "symbol": "COCHW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Vita Coco Company, Inc.",
+        "symbol": "COCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cocrystal Pharma, Inc.",
+        "symbol": "COCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Coda Octopus Group, Inc.",
+        "symbol": "CODA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Co-Diagnostics, Inc.",
+        "symbol": "CODX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Coeptis Therapeutics Holdings, Inc.",
+        "symbol": "COEP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Coeptis Therapeutics Holdings, Inc.",
+        "symbol": "COEPW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ChoiceOne Financial Services, Inc.",
+        "symbol": "COFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cogent Biosciences, Inc.",
+        "symbol": "COGT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cohu, Inc.",
+        "symbol": "COHU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long COIN Daily ETF",
+        "symbol": "COIG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Coinbase Global, Inc.",
+        "symbol": "COIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Coca-Cola Consolidated, Inc.",
+        "symbol": "COKE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Columbus Acquisition Corp",
+        "symbol": "COLA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Columbus Acquisition Corp",
+        "symbol": "COLAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Columbus Acquisition Corp",
+        "symbol": "COLAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Columbia Banking System, Inc.",
+        "symbol": "COLB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Collegium Pharmaceutical, Inc.",
+        "symbol": "COLL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Columbia Sportswear Company",
+        "symbol": "COLM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CommScope Holding Company, Inc.",
+        "symbol": "COMM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares GSCI Commodity Dynamic Roll Strategy ETF",
+        "symbol": "COMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 1x Short COIN Daily ETF",
+        "symbol": "CONI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long COIN Daily ETF",
+        "symbol": "CONL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Cooper Companies, Inc.",
+        "symbol": "COO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mr. Cooper Group Inc.",
+        "symbol": "COOP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Australian Oilseeds Holdings Limited",
+        "symbol": "COOT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Australian Oilseeds Holdings Limited",
+        "symbol": "COOTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sprott Junior Copper Miners ETF",
+        "symbol": "COPJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sprott Copper Miners ETF",
+        "symbol": "COPP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares International Country Rotation Active ETF",
+        "symbol": "CORO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Corcept Therapeutics Incorporated",
+        "symbol": "CORT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Core Scientific, Inc.",
+        "symbol": "CORZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Core Scientific, Inc.",
+        "symbol": "CORZW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Core Scientific, Inc.",
+        "symbol": "CORZZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cosmos Health Inc.",
+        "symbol": "COSM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Costco Wholesale Corporation",
+        "symbol": "COST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacer US Large Cap Cash Cows Growth Leaders ETF",
+        "symbol": "COWG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amplify Cash Flow Dividend Leaders ETF",
+        "symbol": "COWS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Coya Therapeutics, Inc.",
+        "symbol": "COYA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Campbell's Company",
+        "symbol": "CPB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Central Plains Bancshares, Inc.",
+        "symbol": "CPBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Canterbury Park Holding Corporation",
+        "symbol": "CPHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cumberland Pharmaceuticals Inc.",
+        "symbol": "CPIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AB Core Plus Bond ETF",
+        "symbol": "CPLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pop Culture Group Co., Ltd",
+        "symbol": "CPOP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Copart, Inc.",
+        "symbol": "CPRT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Catalyst Pharmaceuticals, Inc.",
+        "symbol": "CPRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CPS Technologies Corp.",
+        "symbol": "CPSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Consumer Portfolio Services, Inc.",
+        "symbol": "CPSS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Calamos Long/Short Equity & Dynamic Income Trust",
+        "symbol": "CPZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CRA International,Inc.",
+        "symbol": "CRAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Corbus Pharmaceuticals Holdings, Inc.",
+        "symbol": "CRBP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Caribou Biosciences, Inc.",
+        "symbol": "CRBU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cricut, Inc.",
+        "symbol": "CRCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cardiff Oncology, Inc.",
+        "symbol": "CRDF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cardiol Therapeutics Inc.",
+        "symbol": "CRDL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Credo Technology Group Holding Ltd",
+        "symbol": "CRDO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Smart Powerr Corp.",
+        "symbol": "CREG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cresud S.A.C.I.F. y A.",
+        "symbol": "CRESW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cresud S.A.C.I.F. y A.",
+        "symbol": "CRESY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Carbon Revolution Public Limited Company",
+        "symbol": "CREV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Carbon Revolution Public Limited Company",
+        "symbol": "CREVW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Creative Realities, Inc.",
+        "symbol": "CREX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Freightos Limited",
+        "symbol": "CRGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Freightos Limited",
+        "symbol": "CRGOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CARGO Therapeutics, Inc.",
+        "symbol": "CRGX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Curis, Inc.",
+        "symbol": "CRIS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CorMedix Inc.",
+        "symbol": "CRMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long CRM Daily ETF",
+        "symbol": "CRMG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Critical Metals Corp.",
+        "symbol": "CRML",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Critical Metals Corp.",
+        "symbol": "CRMLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "America's Car-Mart, Inc.",
+        "symbol": "CRMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cerence Inc.",
+        "symbol": "CRNC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ceragon Networks Ltd.",
+        "symbol": "CRNT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Crinetics Pharmaceuticals, Inc.",
+        "symbol": "CRNX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cronos Group Inc.",
+        "symbol": "CRON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Crocs, Inc.",
+        "symbol": "CROX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CRISPR Therapeutics AG",
+        "symbol": "CRSP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Corsair Gaming, Inc.",
+        "symbol": "CRSR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Criteo S.A.",
+        "symbol": "CRTO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cirrus Logic, Inc.",
+        "symbol": "CRUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CorVel Corp.",
+        "symbol": "CRVL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CervoMed Inc.",
+        "symbol": "CRVO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Corvus Pharmaceuticals, Inc.",
+        "symbol": "CRVS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CrowdStrike Holdings, Inc.",
+        "symbol": "CRWD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long CRWD Daily ETF",
+        "symbol": "CRWL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Crown Crafts, Inc.",
+        "symbol": "CRWS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CoreWeave, Inc.",
+        "symbol": "CRWV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cloudastructure, Inc.",
+        "symbol": "CSAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares US Small Cap High Div Volatility Wtd ETF",
+        "symbol": "CSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Champions Oncology, Inc.",
+        "symbol": "CSBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "COSCIENS Biopharma Inc.",
+        "symbol": "CSCI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cisco Systems, Inc.",
+        "symbol": "CSCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CoStar Group, Inc.",
+        "symbol": "CSGP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CSG Systems International, Inc.",
+        "symbol": "CSGS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Canadian Solar Inc.",
+        "symbol": "CSIQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CSP Inc.",
+        "symbol": "CSPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Calamos Strategic Total Return Fund",
+        "symbol": "CSQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Caesarstone Ltd.",
+        "symbol": "CSTE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Castle Biosciences, Inc.",
+        "symbol": "CSTL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Capital Southwest Corporation",
+        "symbol": "CSWC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Capital Southwest Corporation",
+        "symbol": "CSWCZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CSW Industrials, Inc.",
+        "symbol": "CSWI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CSX Corporation",
+        "symbol": "CSX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cintas Corporation",
+        "symbol": "CTAS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Community Trust Bancorp, Inc.",
+        "symbol": "CTBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X CleanTech ETF",
+        "symbol": "CTEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cytek Biosciences, Inc.",
+        "symbol": "CTKB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cantaloupe, Inc.",
+        "symbol": "CTLP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CytomX Therapeutics, Inc.",
+        "symbol": "CTMX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Contineum Therapeutics, Inc.",
+        "symbol": "CTNM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cheetah Net Supply Chain Service Inc.",
+        "symbol": "CTNT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Citius Oncology, Inc.",
+        "symbol": "CTOR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Castor Maritime Inc.",
+        "symbol": "CTRM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Citi Trends, Inc.",
+        "symbol": "CTRN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cognizant Technology Solutions Corporation",
+        "symbol": "CTSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cytosorbents Corporation",
+        "symbol": "CTSO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Citius Pharmaceuticals, Inc.",
+        "symbol": "CTXR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lionheart Holdings",
+        "symbol": "CUB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Herzfeld Caribbean Basin Fund, Inc.",
+        "symbol": "CUBA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lionheart Holdings",
+        "symbol": "CUBWU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lionheart Holdings",
+        "symbol": "CUBWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cue Biopharma, Inc.",
+        "symbol": "CUE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cuprina Holdings (Cayman) Limited",
+        "symbol": "CUPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CuriosityStream Inc.",
+        "symbol": "CURI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CuriosityStream Inc.",
+        "symbol": "CURIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Currenc Group Inc.",
+        "symbol": "CURR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CureVac N.V.",
+        "symbol": "CVAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CVB Financial Corporation",
+        "symbol": "CVBF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cavco Industries, Inc.",
+        "symbol": "CVCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Commercial Vehicle Group, Inc.",
+        "symbol": "CVGI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Calavo Growers, Inc.",
+        "symbol": "CVGW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cadrenal Therapeutics, Inc.",
+        "symbol": "CVKD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Commvault Systems, Inc.",
+        "symbol": "CVLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CVRx, Inc.",
+        "symbol": "CVRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CVD Equipment Corporation",
+        "symbol": "CVV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Community West Bancshares",
+        "symbol": "CWBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Consolidated Water Co. Ltd.",
+        "symbol": "CWCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CaliberCos Inc.",
+        "symbol": "CWD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Casella Waste Systems, Inc.",
+        "symbol": "CWST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CXApp Inc.",
+        "symbol": "CXAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CXApp Inc.",
+        "symbol": "CXAIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Crexendo, Inc.",
+        "symbol": "CXDO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree China ex-State-Owned Enterprises Fund",
+        "symbol": "CXSE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CyberArk Software Ltd.",
+        "symbol": "CYBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cyclacel Pharmaceuticals, Inc.",
+        "symbol": "CYCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cyclacel Pharmaceuticals, Inc.",
+        "symbol": "CYCCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cyclerion Therapeutics, Inc.",
+        "symbol": "CYCN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cycurion, Inc.",
+        "symbol": "CYCU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cycurion, Inc.",
+        "symbol": "CYCUW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cyngn Inc.",
+        "symbol": "CYN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CryoPort, Inc.",
+        "symbol": "CYRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cytokinetics, Incorporated",
+        "symbol": "CYTK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes Natural Monopoly ETF",
+        "symbol": "CZAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Citizens Financial Services, Inc.",
+        "symbol": "CZFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Citizens & Northern Corp",
+        "symbol": "CZNC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Caesars Entertainment, Inc.",
+        "symbol": "CZR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Citizens Community Bancorp, Inc.",
+        "symbol": "CZWI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Digital Asset Acquisition Corp.",
+        "symbol": "DAAQU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dada Nexus Limited",
+        "symbol": "DADA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Data I/O Corporation",
+        "symbol": "DAIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Daktronics, Inc.",
+        "symbol": "DAKT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Dorsey Wright DALI Equity ETF",
+        "symbol": "DALI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DallasNews Corporation",
+        "symbol": "DALN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VanEck Digital Transformation ETF",
+        "symbol": "DAPP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dare Bioscience, Inc.",
+        "symbol": "DARE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DoorDash, Inc.",
+        "symbol": "DASH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DatChat, Inc.",
+        "symbol": "DATS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DatChat, Inc.",
+        "symbol": "DATSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dave Inc.",
+        "symbol": "DAVE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dave Inc.",
+        "symbol": "DAVEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Day One Biopharmaceuticals, Inc.",
+        "symbol": "DAWN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X DAX Germany ETF",
+        "symbol": "DAX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DBV Technologies S.A.",
+        "symbol": "DBVT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dropbox, Inc.",
+        "symbol": "DBX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Unity Wealth Partners Dynamic Capital Appreciation & Options ETF",
+        "symbol": "DCAP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Docebo Inc.",
+        "symbol": "DCBO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DocGo Inc.",
+        "symbol": "DCGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dime Community Bancshares, Inc.",
+        "symbol": "DCOM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dime Community Bancshares, Inc.",
+        "symbol": "DCOMG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dime Community Bancshares, Inc.",
+        "symbol": "DCOMP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Delcath Systems, Inc.",
+        "symbol": "DCTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DoubleDown Interactive Co., Ltd.",
+        "symbol": "DDI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Dorsey Wright Momentum & Dividend ETF",
+        "symbol": "DDIV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Datadog, Inc.",
+        "symbol": "DDOG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR Galaxy Digital Asset Ecosystem ETF",
+        "symbol": "DECO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Democratic Large Cap Core ETF",
+        "symbol": "DEMZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Denny's Corporation",
+        "symbol": "DENN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Journey Medical Corporation",
+        "symbol": "DERM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DevvStream Corp.",
+        "symbol": "DEVS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dimensional Global Core Plus Fixed Income ETF",
+        "symbol": "DFGP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dimensional Global ex US Core Fixed Income ETF",
+        "symbol": "DFGX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dragonfly Energy Holdings Corp",
+        "symbol": "DFLI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dragonfly Energy Holdings Corp",
+        "symbol": "DFLIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dimensional Global Credit ETF",
+        "symbol": "DGCB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Donegal Group, Inc.",
+        "symbol": "DGICA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Donegal Group, Inc.",
+        "symbol": "DGICB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Digi International Inc.",
+        "symbol": "DGII",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Digital Ally, Inc.",
+        "symbol": "DGLY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Diginex Limited",
+        "symbol": "DGNX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree Emerging Markets Quality Dividend Growth Fund",
+        "symbol": "DGRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree U.S. SmallCap Quality Dividend Growth Fund",
+        "symbol": "DGRS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree U.S. Quality Dividend Growth Fund",
+        "symbol": "DGRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Digi Power X Inc.",
+        "symbol": "DGXX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Definitive Healthcare Corp.",
+        "symbol": "DH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DIH Holding US, Inc.",
+        "symbol": "DHAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DIH Holding US, Inc.",
+        "symbol": "DHAIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Diversified Healthcare Trust",
+        "symbol": "DHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Diversified Healthcare Trust",
+        "symbol": "DHCNI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Diversified Healthcare Trust",
+        "symbol": "DHCNL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Diamond Hill Investment Group, Inc.",
+        "symbol": "DHIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "1stdibs.com, Inc.",
+        "symbol": "DIBS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Diodes Incorporated",
+        "symbol": "DIOD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Distoken Acquisition Corporation",
+        "symbol": "DIST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Distoken Acquisition Corporation",
+        "symbol": "DISTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Distoken Acquisition Corporation",
+        "symbol": "DISTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Altrius Global Dividend ETF",
+        "symbol": "DIVD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Daily Journal Corp. (S.C.)",
+        "symbol": "DJCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trump Media & Technology Group Corp.",
+        "symbol": "DJT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trump Media & Technology Group Corp.",
+        "symbol": "DJTWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DraftKings Inc.",
+        "symbol": "DKNG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DLH Holdings Corp.",
+        "symbol": "DLHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long DELL Daily ETF",
+        "symbol": "DLLL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DLocal Limited",
+        "symbol": "DLO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dolphin Entertainment, Inc.",
+        "symbol": "DLPN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Duluth Holdings Inc.",
+        "symbol": "DLTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dollar Tree, Inc.",
+        "symbol": "DLTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Drugs Made In America Acquisition Corp.",
+        "symbol": "DMAA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Drugs Made In America Acquisition Corp.",
+        "symbol": "DMAAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Drugs Made In America Acquisition Corp.",
+        "symbol": "DMAAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DiaMedica Therapeutics Inc.",
+        "symbol": "DMAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Disruptive Materials ETF",
+        "symbol": "DMAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dorchester Minerals, L.P.",
+        "symbol": "DMLP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Damon Inc.",
+        "symbol": "DMN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Digimarc Corporation",
+        "symbol": "DMRC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares ESG Advanced MSCI EAFE ETF",
+        "symbol": "DMXF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Denali Therapeutics Inc.",
+        "symbol": "DNLI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dianthus Therapeutics, Inc.",
+        "symbol": "DNTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Krispy Kreme, Inc.",
+        "symbol": "DNUT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DocuSign, Inc.",
+        "symbol": "DOCU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dogness (International) Corporation",
+        "symbol": "DOGZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dominari Holdings Inc.",
+        "symbol": "DOMH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Domo, Inc.",
+        "symbol": "DOMO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BRP Inc.",
+        "symbol": "DOOO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dorman Products, Inc.",
+        "symbol": "DORM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amdocs Limited",
+        "symbol": "DOX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DouYu International Holdings Limited",
+        "symbol": "DOYU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Draganfly Inc.",
+        "symbol": "DPRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Domino's Pizza Inc",
+        "symbol": "DPZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direct Digital Holdings, Inc.",
+        "symbol": "DRCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Roman DBDR Acquisition Corp. II",
+        "symbol": "DRDB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Roman DBDR Acquisition Corp. II",
+        "symbol": "DRDBU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Roman DBDR Acquisition Corp. II",
+        "symbol": "DRDBW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DarioHealth Corp.",
+        "symbol": "DRIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Autonomous & Electric Vehicles ETF",
+        "symbol": "DRIV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dermata Therapeutics, Inc.",
+        "symbol": "DRMA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dermata Therapeutics, Inc.",
+        "symbol": "DRMAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DURECT Corporation",
+        "symbol": "DRRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leonardo DRS, Inc.",
+        "symbol": "DRS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Tau Medical Ltd.",
+        "symbol": "DRTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Tau Medical Ltd.",
+        "symbol": "DRTSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bright Minds Biosciences Inc.",
+        "symbol": "DRUG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Driven Brands Holdings Inc.",
+        "symbol": "DRVN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Design Therapeutics, Inc.",
+        "symbol": "DSGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Distribution Solutions Group, Inc.",
+        "symbol": "DSGR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Descartes Systems Group Inc.",
+        "symbol": "DSGX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Viant Technology Inc.",
+        "symbol": "DSP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Deswell Industries, Inc.",
+        "symbol": "DSWL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Big Tree Cloud Holdings Limited",
+        "symbol": "DSY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Big Tree Cloud Holdings Limited",
+        "symbol": "DSYWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Davis Commodities Limited",
+        "symbol": "DTCK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Data Center & Digital Infrastructure ETF",
+        "symbol": "DTCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Drilling Tools International Corporation",
+        "symbol": "DTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Precision BioSciences, Inc.",
+        "symbol": "DTIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DT Cloud Star Acquisition Corporation",
+        "symbol": "DTSQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DT Cloud Star Acquisition Corporation",
+        "symbol": "DTSQR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DT Cloud Star Acquisition Corporation",
+        "symbol": "DTSQU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Datasea Inc.",
+        "symbol": "DTSS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Data Storage Corporation",
+        "symbol": "DTST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Data Storage Corporation",
+        "symbol": "DTSTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ocean Park High Income ETF",
+        "symbol": "DUKH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ocean Park International ETF",
+        "symbol": "DUKX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fangdd Network Group Ltd.",
+        "symbol": "DUO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Duolingo, Inc.",
+        "symbol": "DUOL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Duos Technologies Group, Inc.",
+        "symbol": "DUOT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BrandywineGLOBAL-Dynamic US Large Cap Value ETF",
+        "symbol": "DVAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dynavax Technologies Corporation",
+        "symbol": "DVAX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Datavault AI Inc.",
+        "symbol": "DVLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Dorsey Wright Momentum & Value ETF",
+        "symbol": "DVLU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Dorsey Wright Momentum & Low Volatility ETF",
+        "symbol": "DVOL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WEBs Defined Volatility QQQ ETF",
+        "symbol": "DVQQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WEBs Defined Volatility SPY ETF",
+        "symbol": "DVSP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Select Dividend ETF",
+        "symbol": "DVY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dorsey Wright SmallCap Momentum ETF",
+        "symbol": "DWAS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AdvisorShares Dorsey Wright FSM All Cap World ETF",
+        "symbol": "DWAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AdvisorShares Dorsey Wright Short ETF",
+        "symbol": "DWSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dawson Geophysical Company",
+        "symbol": "DWSN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dogwood Therapeutics, Inc.",
+        "symbol": "DWTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AdvisorShares Dorsey Wright FSM US Core ETF",
+        "symbol": "DWUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DexCom, Inc.",
+        "symbol": "DXCM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree Japan Hedged SmallCap Equity Fund",
+        "symbol": "DXJS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Destination XL Group, Inc.",
+        "symbol": "DXLG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DXP Enterprises, Inc.",
+        "symbol": "DXPE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Daxor Corporation",
+        "symbol": "DXR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Decent Holding Inc.",
+        "symbol": "DXST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dyadic International, Inc.",
+        "symbol": "DYAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DT Cloud Acquisition Corporation",
+        "symbol": "DYCQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DT Cloud Acquisition Corporation",
+        "symbol": "DYCQR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DT Cloud Acquisition Corporation",
+        "symbol": "DYCQU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IDX Dynamic Fixed Income ETF",
+        "symbol": "DYFI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dyne Therapeutics, Inc.",
+        "symbol": "DYN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IDX Dynamic Innovation ETF",
+        "symbol": "DYNI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dynamix Corporation",
+        "symbol": "DYNX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dynamix Corporation",
+        "symbol": "DYNXU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dynamix Corporation",
+        "symbol": "DYNXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SGI Dynamic Tactical ETF",
+        "symbol": "DYTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Electronic Arts Inc.",
+        "symbol": "EA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "eBay Inc.",
+        "symbol": "EBAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eastern Bankshares, Inc.",
+        "symbol": "EBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Longview Advantage ETF",
+        "symbol": "EBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X E-commerce ETF",
+        "symbol": "EBIZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eagle Bancorp Montana, Inc.",
+        "symbol": "EBMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ebang International Holdings Inc.",
+        "symbol": "EBON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enterprise Bancorp Inc",
+        "symbol": "EBTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ECB Bancorp, Inc.",
+        "symbol": "ECBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ECD Automotive Design, Inc.",
+        "symbol": "ECDA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ECD Automotive Design, Inc.",
+        "symbol": "ECDAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "electroCore, Inc.",
+        "symbol": "ECOR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacer Emerging Markets Cash Cows 100 ETF",
+        "symbol": "ECOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Encore Capital Group Inc",
+        "symbol": "ECPG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ECARX Holdings Inc.",
+        "symbol": "ECX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ECARX Holdings Inc.",
+        "symbol": "ECXWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EDAP TMS S.A.",
+        "symbol": "EDAP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Edible Garden AG Incorporated",
+        "symbol": "EDBL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Edible Garden AG Incorporated",
+        "symbol": "EDBLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Everbright Digital Holding Limited",
+        "symbol": "EDHL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Editas Medicine, Inc.",
+        "symbol": "EDIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EuroDry Ltd.",
+        "symbol": "EDRY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Edesa Biotech, Inc.",
+        "symbol": "EDSA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Skillful Craftsman Education Technology Limited",
+        "symbol": "EDTK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Educational Development Corporation",
+        "symbol": "EDUC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Euronet Worldwide, Inc.",
+        "symbol": "EEFT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EpicQuest Education Group International Limited",
+        "symbol": "EEIQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI Emerging Markets Asia ETF",
+        "symbol": "EEMA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X MSCI SuperDividend EAFE ETF",
+        "symbol": "EFAS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Energy Focus, Inc.",
+        "symbol": "EFOI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Environmental Infrastructure and Industrials ETF",
+        "symbol": "EFRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enterprise Financial Services Corporation",
+        "symbol": "EFSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enterprise Financial Services Corporation",
+        "symbol": "EFSCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eagle Financial Services Inc",
+        "symbol": "EFSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "eGain Corporation",
+        "symbol": "EGAN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eagle Bancorp, Inc.",
+        "symbol": "EGBN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NestYield Visionary ETF",
+        "symbol": "EGGQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "8x8 Inc",
+        "symbol": "EGHT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EHang Holdings Limited",
+        "symbol": "EH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eshallgo Inc.",
+        "symbol": "EHGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Euroholdings Ltd.",
+        "symbol": "EHLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Even Herd Long Short ETF",
+        "symbol": "EHLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "eHealth, Inc.",
+        "symbol": "EHTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "E-Home Household Service Holdings Limited",
+        "symbol": "EJH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Nasdaq Lux Digital Health Solutions ETF",
+        "symbol": "EKG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ekso Bionics Holdings, Inc.",
+        "symbol": "EKSO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PMGC Holdings Inc.",
+        "symbol": "ELAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Electra Battery Materials Corporation",
+        "symbol": "ELBM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eledon Pharmaceuticals, Inc.",
+        "symbol": "ELDN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Elevation Oncology, Inc.",
+        "symbol": "ELEV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ALPS Electrification Infrastructure ETF",
+        "symbol": "ELFY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily LLY Bull 2X Shares",
+        "symbol": "ELIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily LLY Bear 1X Shares",
+        "symbol": "ELIS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Elong Power Holding Limited",
+        "symbol": "ELPW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Electro-Sensors, Inc.",
+        "symbol": "ELSE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eltek Ltd.",
+        "symbol": "ELTK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Elicio Therapeutics, Inc.",
+        "symbol": "ELTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Elutia, Inc.",
+        "symbol": "ELUT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Electrovaya Inc.",
+        "symbol": "ELVA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enliven Therapeutics, Inc.",
+        "symbol": "ELVN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Earlyworks Co., Ltd.",
+        "symbol": "ELWS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Smart Share Global Limited",
+        "symbol": "EM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares J.P. Morgan USD Emerging Markets Bond ETF",
+        "symbol": "EMB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Embecta Corp.",
+        "symbol": "EMBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree Emerging Markets Corporate Bond Fund",
+        "symbol": "EMCB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Embrace Change Acquisition Corp",
+        "symbol": "EMCG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Embrace Change Acquisition Corp",
+        "symbol": "EMCGR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Embrace Change Acquisition Corp",
+        "symbol": "EMCGU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Embrace Change Acquisition Corp",
+        "symbol": "EMCGW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Macquarie Focused Emerging Markets Equity ETF",
+        "symbol": "EMEQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Emerging Markets Infrastructure ETF",
+        "symbol": "EMIF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eastern Company (The)",
+        "symbol": "EML",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI Emerging Markets ex China ETF",
+        "symbol": "EMXC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares ESG Advanced MSCI EM ETF",
+        "symbol": "EMXF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cambria Endowment Style ETF",
+        "symbol": "ENDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "enGene Holdings Inc.",
+        "symbol": "ENGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "enGene Holdings Inc.",
+        "symbol": "ENGNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Energys Group Limited",
+        "symbol": "ENGS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enlight Renewable Energy Ltd.",
+        "symbol": "ENLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enlivex Therapeutics Ltd.",
+        "symbol": "ENLV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enphase Energy, Inc.",
+        "symbol": "ENPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ensysce Biosciences, Inc.",
+        "symbol": "ENSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Ensign Group, Inc.",
+        "symbol": "ENSG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enanta Pharmaceuticals, Inc.",
+        "symbol": "ENTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Entegris, Inc.",
+        "symbol": "ENTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Entero Therapeutics Inc.",
+        "symbol": "ENTO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Entera Bio Ltd.",
+        "symbol": "ENTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enveric Biosciences, Inc.",
+        "symbol": "ENVB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enovix Corporation",
+        "symbol": "ENVX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI New Zealand ETF",
+        "symbol": "ENZL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Evolus, Inc.",
+        "symbol": "EOLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eos Energy Enterprises, Inc.",
+        "symbol": "EOSE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eos Energy Enterprises, Inc.",
+        "symbol": "EOSEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ESSA Pharma Inc.",
+        "symbol": "EPIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sunrise New Energy Co., Ltd",
+        "symbol": "EPOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eupraxia Pharmaceuticals Inc.",
+        "symbol": "EPRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Epsium Enterprise Limited",
+        "symbol": "EPSM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Epsilon Energy Ltd.",
+        "symbol": "EPSN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EPWK Holdings Ltd.",
+        "symbol": "EPWK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Equillium, Inc.",
+        "symbol": "EQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Equinix, Inc.",
+        "symbol": "EQIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProShares Equities for Rising Rates ETF",
+        "symbol": "EQRR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Erasca, Inc.",
+        "symbol": "ERAS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Environmentally Aware Real Estate ETF",
+        "symbol": "ERET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ericsson",
+        "symbol": "ERIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Erie Indemnity Company",
+        "symbol": "ERIE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Energy Recovery, Inc.",
+        "symbol": "ERII",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ernexa Therapeutics Inc.",
+        "symbol": "ERNA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TrueShares Active Yield ETF",
+        "symbol": "ERNZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Escalade, Incorporated",
+        "symbol": "ESCA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Euroseas Ltd.",
+        "symbol": "ESEA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares ESG Aware MSCI EAFE ETF",
+        "symbol": "ESGD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares ESG Aware MSCI EM ETF",
+        "symbol": "ESGE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ESGL Holdings Limited",
+        "symbol": "ESGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ESGL Holdings Limited",
+        "symbol": "ESGLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enstar Group Limited",
+        "symbol": "ESGR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enstar Group Limited",
+        "symbol": "ESGRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Enstar Group Limited",
+        "symbol": "ESGRP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares ESG Aware MSCI USA ETF",
+        "symbol": "ESGU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ESH Acquisition Corp.",
+        "symbol": "ESHA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ESH Acquisition Corp.",
+        "symbol": "ESHAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Estrella Immunopharma, Inc.",
+        "symbol": "ESLA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Estrella Immunopharma, Inc.",
+        "symbol": "ESLAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Elbit Systems Ltd.",
+        "symbol": "ESLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares ESG MSCI USA Min Vol Factor ETF",
+        "symbol": "ESMV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Essential 40 Stock ETF",
+        "symbol": "ESN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Energy Services of America Corporation",
+        "symbol": "ESOA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VanEck Video Gaming and eSports ETF",
+        "symbol": "ESPO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Esperion Therapeutics, Inc.",
+        "symbol": "ESPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Esquire Financial Holdings, Inc.",
+        "symbol": "ESQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ESSA Bancorp, Inc.",
+        "symbol": "ESSA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Establishment Labs Holdings Inc.",
+        "symbol": "ESTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Breakthrough Environmental Solutions ETF",
+        "symbol": "ETEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Ethereum Trust",
+        "symbol": "ETHA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "89bio, Inc.",
+        "symbol": "ETNB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eton Pharmaceuticals, Inc.",
+        "symbol": "ETON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Etsy, Inc.",
+        "symbol": "ETSY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "enCore Energy Corp.",
+        "symbol": "EU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Euda Health Holdings Limited",
+        "symbol": "EUDA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Euda Health Holdings Limited",
+        "symbol": "EUDAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI Europe Financials ETF",
+        "symbol": "EUFN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eureka Acquisition Corp",
+        "symbol": "EURK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eureka Acquisition Corp",
+        "symbol": "EURKR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eureka Acquisition Corp",
+        "symbol": "EURKU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Evaxion Biotech A/S",
+        "symbol": "EVAX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EverCommerce Inc.",
+        "symbol": "EVCM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EverQuote, Inc.",
+        "symbol": "EVER",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Evogene Ltd.",
+        "symbol": "EVGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EVgo Inc.",
+        "symbol": "EVGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EVgo Inc.",
+        "symbol": "EVGOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Evolv Technologies Holdings, Inc.",
+        "symbol": "EVLV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Evolv Technologies Holdings, Inc.",
+        "symbol": "EVLVW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Electric Vehicle Metals Commodity Strategy No K-1 ETF",
+        "symbol": "EVMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Evotec SE",
+        "symbol": "EVO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Evoke Pharma, Inc.",
+        "symbol": "EVOK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Evergy, Inc.",
+        "symbol": "EVRG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eaton Vance Short Duration Income ETF",
+        "symbol": "EVSD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Envirotech Vehicles, Inc.",
+        "symbol": "EVTV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eaton Vance High Income Municipal ETF",
+        "symbol": "EVYM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "East West Bancorp, Inc.",
+        "symbol": "EWBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "European Wax Center, Inc.",
+        "symbol": "EWCZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI Japan Value ETF",
+        "symbol": "EWJV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Edgewise Therapeutics, Inc.",
+        "symbol": "EWTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI Brazil Small-Cap ETF",
+        "symbol": "EWZS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Exact Sciences Corporation",
+        "symbol": "EXAS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Exelon Corporation",
+        "symbol": "EXC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Expand Energy Corporation",
+        "symbol": "EXE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Expand Energy Corporation",
+        "symbol": "EXEEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Expand Energy Corporation",
+        "symbol": "EXEEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Expand Energy Corporation",
+        "symbol": "EXEEZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Exelixis, Inc.",
+        "symbol": "EXEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Expensify, Inc.",
+        "symbol": "EXFY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ExlService Holdings, Inc.",
+        "symbol": "EXLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "eXoZymes Inc.",
+        "symbol": "EXOZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Expedia Group, Inc.",
+        "symbol": "EXPE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "eXp World Holdings, Inc.",
+        "symbol": "EXPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Exponent, Inc.",
+        "symbol": "EXPO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Extreme Networks, Inc.",
+        "symbol": "EXTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "National Vision Holdings, Inc.",
+        "symbol": "EYE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AB Corporate Bond ETF",
+        "symbol": "EYEG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eyenovia, Inc.",
+        "symbol": "EYEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EyePoint Pharmaceuticals, Inc.",
+        "symbol": "EYPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EZGO Technologies Ltd.",
+        "symbol": "EZGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EZCORP, Inc.",
+        "symbol": "EZPW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Advantage Corporation",
+        "symbol": "FA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Alternative Absolute Return Strategy ETF",
+        "symbol": "FAAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DigiAsia Corp.",
+        "symbol": "FAAS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DigiAsia Corp.",
+        "symbol": "FAASW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Multi Cap Value AlphaDEX Fund",
+        "symbol": "FAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FACT II Acquisition Corp.",
+        "symbol": "FACT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FACT II Acquisition Corp.",
+        "symbol": "FACTU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FACT II Acquisition Corp.",
+        "symbol": "FACTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Multi Cap Growth AlphaDEX Fund",
+        "symbol": "FAD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Fallen Angels USD Bond ETF",
+        "symbol": "FALN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Farmmi, INC.",
+        "symbol": "FAMI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Diamondback Energy, Inc.",
+        "symbol": "FANG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Farmer Brothers Company",
+        "symbol": "FARM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FARO Technologies, Inc.",
+        "symbol": "FARO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fastenal Company",
+        "symbol": "FAST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FAT Brands Inc.",
+        "symbol": "FAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FAT Brands Inc.",
+        "symbol": "FATBB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FAT Brands Inc.",
+        "symbol": "FATBP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FAT Brands Inc.",
+        "symbol": "FATBW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fate Therapeutics, Inc.",
+        "symbol": "FATE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FatPipe, Inc.",
+        "symbol": "FATN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FBS Global Limited",
+        "symbol": "FBGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fortress Biotech, Inc.",
+        "symbol": "FBIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fortress Biotech, Inc.",
+        "symbol": "FBIOP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Business Financial Services, Inc.",
+        "symbol": "FBIZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long META Daily ETF",
+        "symbol": "FBL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FB Bancorp, Inc.",
+        "symbol": "FBLA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FibroBiologics, Inc.",
+        "symbol": "FBLG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Bancorp",
+        "symbol": "FBNC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidelity Disruptive Automation ETF",
+        "symbol": "FBOT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Forte Biosciences, Inc.",
+        "symbol": "FBRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Falcon's Beyond Global, Inc.",
+        "symbol": "FBYD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Falcon's Beyond Global, Inc.",
+        "symbol": "FBYDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Brazil AlphaDEX Fund",
+        "symbol": "FBZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust China AlphaDEX Fund",
+        "symbol": "FCA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust California Municipal High income ETF",
+        "symbol": "FCAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Capital, Inc.",
+        "symbol": "FCAP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Community Bankshares, Inc.",
+        "symbol": "FCBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Community Corporation",
+        "symbol": "FCCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Income Opportunities ETF",
+        "symbol": "FCEF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FuelCell Energy, Inc.",
+        "symbol": "FCEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FirstCash Holdings, Inc.",
+        "symbol": "FCFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Citizens BancShares, Inc.",
+        "symbol": "FCNCA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Citizens BancShares, Inc.",
+        "symbol": "FCNCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Citizens BancShares, Inc.",
+        "symbol": "FCNCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SMI 3Fourteen Full-Cycle Trend ETF",
+        "symbol": "FCTE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Focus Universal Inc.",
+        "symbol": "FCUV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust SSI Strategic Convertible Securities ETF",
+        "symbol": "FCVT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidelity D & D Bancorp, Inc.",
+        "symbol": "FDBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidelity Disruptive Communications ETF",
+        "symbol": "FDCF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidelity Disruptive Finance ETF",
+        "symbol": "FDFF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidelity Disruptors ETF",
+        "symbol": "FDIF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidelity Crypto Industry and Digital Payments ETF",
+        "symbol": "FDIG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MarketDesk Focused U.S. Dividend ETF",
+        "symbol": "FDIV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "4D Molecular Therapeutics, Inc.",
+        "symbol": "FDMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Dow Jones International Internet ETF",
+        "symbol": "FDNI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fifth District Bancorp, Inc.",
+        "symbol": "FDSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Developed Markets Ex-US AlphaDEX Fund",
+        "symbol": "FDT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Developed Markets ex-US Small Cap AlphaDEX Fund",
+        "symbol": "FDTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidelity Disruptive Technology ETF",
+        "symbol": "FDTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidus Investment Corporation",
+        "symbol": "FDUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "5E Advanced Materials, Inc.",
+        "symbol": "FEAM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "YieldMax Dorsey Wright Featured 5 Income ETF",
+        "symbol": "FEAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fenbo Holdings Limited",
+        "symbol": "FEBO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Frequency Electronics, Inc.",
+        "symbol": "FEIM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Franklin Electric Co., Inc.",
+        "symbol": "FELE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Emerging Markets AlphaDEX Fund",
+        "symbol": "FEM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Emerging Markets Local Currency Bond ETF",
+        "symbol": "FEMB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Emerging Markets Small Cap AlphaDEX Fund",
+        "symbol": "FEMS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Femasys Inc.",
+        "symbol": "FEMY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fennec Pharmaceuticals Inc.",
+        "symbol": "FENC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Europe AlphaDEX Fund",
+        "symbol": "FEP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "REX FANG & Innovation Equity Premium Income ETF",
+        "symbol": "FEPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ferrovial SE",
+        "symbol": "FER",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fifth Era Acquisition Corp I",
+        "symbol": "FERA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fifth Era Acquisition Corp I",
+        "symbol": "FERAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fifth Era Acquisition Corp I",
+        "symbol": "FERAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Eurozone AlphaDEX ETF",
+        "symbol": "FEUZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Large Cap Core AlphaDEX Fund",
+        "symbol": "FEX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Faraday Future Intelligent Electric Inc.",
+        "symbol": "FFAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Faraday Future Intelligent Electric Inc.",
+        "symbol": "FFAIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Financial Bancorp.",
+        "symbol": "FFBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Flushing Financial Corporation",
+        "symbol": "FFIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Financial Bankshares, Inc.",
+        "symbol": "FFIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "F5, Inc.",
+        "symbol": "FFIV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Guaranty Bancshares, Inc.",
+        "symbol": "FGBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Guaranty Bancshares, Inc.",
+        "symbol": "FGBIP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FibroGen, Inc",
+        "symbol": "FGEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fundamental Global Inc.",
+        "symbol": "FGF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fundamental Global Inc.",
+        "symbol": "FGFPP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FGI Industries Ltd.",
+        "symbol": "FGI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FGI Industries Ltd.",
+        "symbol": "FGIWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Founder Group Limited",
+        "symbol": "FGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Germany AlphaDEX Fund",
+        "symbol": "FGM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FG Merger II Corp.",
+        "symbol": "FGMC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FG Merger II Corp.",
+        "symbol": "FGMCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FG Merger II Corp.",
+        "symbol": "FGMCU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Hawaiian, Inc.",
+        "symbol": "FHB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Foghorn Therapeutics Inc.",
+        "symbol": "FHTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Interstate BancSystem, Inc.",
+        "symbol": "FIBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust International Developed Capital Strength ETF",
+        "symbol": "FICS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust S&P International Dividend Aristocrats ETF",
+        "symbol": "FID",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "null",
+        "symbol": "File Creation Time: 0430202518:01",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes European Luxury ETF",
+        "symbol": "FINE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FinWise Bancorp",
+        "symbol": "FINW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X FinTech ETF",
+        "symbol": "FINX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FTAI Infrastructure Inc.",
+        "symbol": "FIP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Financial Institutions, Inc.",
+        "symbol": "FISI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fifth Third Bancorp",
+        "symbol": "FITB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fifth Third Bancorp",
+        "symbol": "FITBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fifth Third Bancorp",
+        "symbol": "FITBO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fifth Third Bancorp",
+        "symbol": "FITBP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Five Below, Inc.",
+        "symbol": "FIVE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Five9, Inc.",
+        "symbol": "FIVN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "YieldMax Dorsey Wright Hybrid 5 Income ETF",
+        "symbol": "FIVY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust TCW Opportunistic Fixed Income ETF",
+        "symbol": "FIXD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "National Beverage Corp.",
+        "symbol": "FIZZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Japan AlphaDEX Fund",
+        "symbol": "FJP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust United Kingdom AlphaDEX Fund",
+        "symbol": "FKU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Franklin Wireless Corp.",
+        "symbol": "FKWL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fold Holdings, Inc.",
+        "symbol": "FLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidelity Low Duration Bond ETF",
+        "symbol": "FLDB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fold Holdings, Inc.",
+        "symbol": "FLDDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Flex Ltd.",
+        "symbol": "FLEX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Flora Growth Corp.",
+        "symbol": "FLGC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fulgent Genetics, Inc.",
+        "symbol": "FLGT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The First of Long Island Corporation",
+        "symbol": "FLIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Full House Resorts, Inc.",
+        "symbol": "FLL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Latin America AlphaDEX Fund",
+        "symbol": "FLN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fluence Energy, Inc.",
+        "symbol": "FLNC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fluent, Inc.",
+        "symbol": "FLNT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Flux Power Holdings, Inc.",
+        "symbol": "FLUX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "1-800-FLOWERS.COM, Inc.",
+        "symbol": "FLWS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BingEx Limited",
+        "symbol": "FLX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Flexsteel Industries, Inc.",
+        "symbol": "FLXS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fly-E Group, Inc.",
+        "symbol": "FLYE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Flywire Corporation",
+        "symbol": "FLYW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Farmers & Merchants Bancorp, Inc.",
+        "symbol": "FMAO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Managed Municipal ETF",
+        "symbol": "FMB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Mid Bancshares, Inc.",
+        "symbol": "FMBH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidelity Disruptive Medicine ETF",
+        "symbol": "FMED",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidelity Metaverse ETF",
+        "symbol": "FMET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Municipal High Income ETF",
+        "symbol": "FMHI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Farmers National Banc Corp.",
+        "symbol": "FMNB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Foremost Clean Energy Ltd.",
+        "symbol": "FMST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Foremost Clean Energy Ltd.",
+        "symbol": "FMSTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MarketDesk Focused U.S. Momentum ETF",
+        "symbol": "FMTM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Femto Technologies Inc.",
+        "symbol": "FMTO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidelity Municipal Bond Opportunities ETF",
+        "symbol": "FMUB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidelity Systematic Municipal Bond Index ETF",
+        "symbol": "FMUN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FingerMotion, Inc.",
+        "symbol": "FNGR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Mid Cap Value AlphaDEX Fund",
+        "symbol": "FNK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Funko, Inc.",
+        "symbol": "FNKO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Bancorp, Inc (ME)",
+        "symbol": "FNLC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Northwest Bancorp",
+        "symbol": "FNWB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Finward Bancorp",
+        "symbol": "FNWD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Mid Cap Core AlphaDEX Fund",
+        "symbol": "FNX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Mid Cap Growth AlphaDEX Fund",
+        "symbol": "FNY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amicus Therapeutics, Inc.",
+        "symbol": "FOLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fonar Corporation",
+        "symbol": "FONR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Forian Inc.",
+        "symbol": "FORA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Forward Industries, Inc.",
+        "symbol": "FORD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Four Leaf Acquisition Corporation",
+        "symbol": "FORL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Four Leaf Acquisition Corporation",
+        "symbol": "FORLU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Four Leaf Acquisition Corporation",
+        "symbol": "FORLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FormFactor, Inc.",
+        "symbol": "FORM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Forrester Research, Inc.",
+        "symbol": "FORR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Formula Systems (1985) Ltd.",
+        "symbol": "FORTY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fossil Group, Inc.",
+        "symbol": "FOSL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fossil Group, Inc.",
+        "symbol": "FOSLL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fox Corporation",
+        "symbol": "FOX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fox Corporation",
+        "symbol": "FOXA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fox Factory Holding Corp.",
+        "symbol": "FOXF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Foxx Development Holdings Inc.",
+        "symbol": "FOXX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Foxx Development Holdings Inc.",
+        "symbol": "FOXXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Asia Pacific Ex-Japan AlphaDEX Fund",
+        "symbol": "FPA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FlexShopper, Inc.",
+        "symbol": "FPAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust IPOX Europe Equity Opportunities ETF",
+        "symbol": "FPXE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust International Equity Opportunities ETF",
+        "symbol": "FPXI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Franklin Financial Services Corporation",
+        "symbol": "FRAF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Bank",
+        "symbol": "FRBA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Friedman Industries Inc.",
+        "symbol": "FRD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Freight Technologies, Inc.",
+        "symbol": "FRGT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Freedom Holding Corp.",
+        "symbol": "FRHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Merchants Corporation",
+        "symbol": "FRME",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Merchants Corporation",
+        "symbol": "FRMEP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JFrog Ltd.",
+        "symbol": "FROG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FRP Holdings, Inc.",
+        "symbol": "FRPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Freshpet, Inc.",
+        "symbol": "FRPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Freshworks Inc.",
+        "symbol": "FRSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Primis Financial Corp.",
+        "symbol": "FRST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Foresight Autonomous Holdings Ltd.",
+        "symbol": "FRSX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Five Star Bancorp",
+        "symbol": "FSBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FS Bancorp, Inc.",
+        "symbol": "FSBW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust SMID Capital Strength ETF",
+        "symbol": "FSCS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Seacoast Bancorp, Inc.",
+        "symbol": "FSEA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Savings Financial Group, Inc.",
+        "symbol": "FSFG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust SMID Growth Strength ETF",
+        "symbol": "FSGS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Flag Ship Acquisition Corp.",
+        "symbol": "FSHP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Flag Ship Acquisition Corp.",
+        "symbol": "FSHPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Flag Ship Acquisition Corp.",
+        "symbol": "FSHPU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Solar, Inc.",
+        "symbol": "FSLR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "L.B. Foster Company",
+        "symbol": "FSTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FirstSun Capital Bancorp",
+        "symbol": "FSUN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FirstService Corporation",
+        "symbol": "FSV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Switzerland AlphaDEX Fund",
+        "symbol": "FSZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Large Cap Value AlphaDEX Fund",
+        "symbol": "FTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Indxx Global Agriculture ETF",
+        "symbol": "FTAG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FTAI Aviation Ltd.",
+        "symbol": "FTAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FTAI Aviation Ltd.",
+        "symbol": "FTAIM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FTAI Aviation Ltd.",
+        "symbol": "FTAIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Large Cap Growth AlphaDEX Fund",
+        "symbol": "FTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FTC Solar, Inc.",
+        "symbol": "FTCI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Capital Strength ETF",
+        "symbol": "FTCS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Frontdoor, Inc.",
+        "symbol": "FTDR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Dividend Strength ETF",
+        "symbol": "FTDS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fuel Tech, Inc.",
+        "symbol": "FTEK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fitell Corporation",
+        "symbol": "FTEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Future FinTech Group Inc.",
+        "symbol": "FTFT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Global Tactical Commodity Strategy Fund",
+        "symbol": "FTGC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Growth Strength ETF",
+        "symbol": "FTGS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust BuyWrite Income ETF",
+        "symbol": "FTHI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fathom Holdings Inc.",
+        "symbol": "FTHM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FitLife Brands, Inc.",
+        "symbol": "FTLF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fortinet, Inc.",
+        "symbol": "FTNT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Nasdaq BuyWrite Income ETF",
+        "symbol": "FTQI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fortrea Holdings Inc.",
+        "symbol": "FTRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Indxx Global Natural Resources Income ETF",
+        "symbol": "FTRI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Senior Loan Fund",
+        "symbol": "FTSL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Enhanced Short Maturity ETF",
+        "symbol": "FTSM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Nasdaq Food & Beverage ETF",
+        "symbol": "FTXG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Nasdaq Pharmaceuticals ETF",
+        "symbol": "FTXH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Nasdaq Semiconductor ETF",
+        "symbol": "FTXL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Nasdaq Oil & Gas ETF",
+        "symbol": "FTXN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Nasdaq Bank ETF",
+        "symbol": "FTXO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Nasdaq Transportation ETF",
+        "symbol": "FTXR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BitFuFu Inc.",
+        "symbol": "FUFU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BitFuFu Inc.",
+        "symbol": "FUFUW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fulcrum Therapeutics, Inc.",
+        "symbol": "FULC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fulton Financial Corporation",
+        "symbol": "FULT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fulton Financial Corporation",
+        "symbol": "FULTP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First United Corporation",
+        "symbol": "FUNC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sprott Focus Trust, Inc.",
+        "symbol": "FUND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First US Bancshares, Inc.",
+        "symbol": "FUSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Futu Holdings Limited",
+        "symbol": "FUTU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Dorsey Wright Focus 5 ETF",
+        "symbol": "FV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Dorsey Wright Dynamic Focus 5 ETF",
+        "symbol": "FVC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FVCBankcorp, Inc.",
+        "symbol": "FVCB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Future Vision II Acquisition Corporation",
+        "symbol": "FVN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Future Vision II Acquisition Corporation",
+        "symbol": "FVNNR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Future Vision II Acquisition Corporation",
+        "symbol": "FVNNU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liberty Media Corporation",
+        "symbol": "FWONA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liberty Media Corporation",
+        "symbol": "FWONK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Forward Air Corporation",
+        "symbol": "FWRD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Watch Restaurant Group, Inc.",
+        "symbol": "FWRG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First National Corporation",
+        "symbol": "FXNC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Frontier Communications Parent, Inc.",
+        "symbol": "FYBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Small Cap Growth AlphaDEX Fund",
+        "symbol": "FYC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Small Cap Value AlphaDEX Fund",
+        "symbol": "FYT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Small Cap Core AlphaDEX Fund",
+        "symbol": "FYX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "German American Bancorp, Inc.",
+        "symbol": "GABC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gaia, Inc.",
+        "symbol": "GAIA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Investment Corporation",
+        "symbol": "GAIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Investment Corporation",
+        "symbol": "GAINI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Investment Corporation",
+        "symbol": "GAINL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Investment Corporation",
+        "symbol": "GAINN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Investment Corporation",
+        "symbol": "GAINZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Galectin Therapeutics Inc.",
+        "symbol": "GALT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gambling.com Group Limited",
+        "symbol": "GAMB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GameSquare Holdings, Inc.",
+        "symbol": "GAME",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GAN Limited",
+        "symbol": "GAN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gain Therapeutics, Inc.",
+        "symbol": "GANX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "StealthGas, Inc.",
+        "symbol": "GASS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gauzy Ltd.",
+        "symbol": "GAUZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Golub Capital BDC, Inc.",
+        "symbol": "GBDC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GBank Financial Holdings Inc.",
+        "symbol": "GBFH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Generation Bio Co.",
+        "symbol": "GBIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sprott Active Gold & Silver Miners ETF",
+        "symbol": "GBUG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Greene County Bancorp, Inc.",
+        "symbol": "GCBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GCL Global Holdings Ltd",
+        "symbol": "GCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GCL Global Holdings Ltd",
+        "symbol": "GCLWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GCM Grosvenor Inc.",
+        "symbol": "GCMG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GCM Grosvenor Inc.",
+        "symbol": "GCMGW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GigaCloud Technology Inc",
+        "symbol": "GCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GlucoTrack, Inc.",
+        "symbol": "GCTK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GD Culture Group Limited",
+        "symbol": "GDC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Golden Entertainment, Inc.",
+        "symbol": "GDEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GDEV Inc.",
+        "symbol": "GDEV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GDEV Inc.",
+        "symbol": "GDEVW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Golden Heaven Group Holdings Ltd.",
+        "symbol": "GDHG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GoodRx Holdings, Inc.",
+        "symbol": "GDRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GDS Holdings Limited",
+        "symbol": "GDS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CytoMed Therapeutics Limited",
+        "symbol": "GDTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Grid Dynamics Holdings, Inc.",
+        "symbol": "GDYN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Great Elm Capital Corp.",
+        "symbol": "GECC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Great Elm Capital Corp.",
+        "symbol": "GECCH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Great Elm Capital Corp.",
+        "symbol": "GECCI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Great Elm Capital Corp.",
+        "symbol": "GECCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Great Elm Capital Corp.",
+        "symbol": "GECCZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Great Elm Group, Inc.",
+        "symbol": "GEG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Great Elm Group, Inc.",
+        "symbol": "GEGGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GE HealthCare Technologies Inc.",
+        "symbol": "GEHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gelteq Limited",
+        "symbol": "GELS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacific North of South EM Equity Active ETF",
+        "symbol": "GEME",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gen Digital Inc.",
+        "symbol": "GEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GEN Restaurant Group, Inc.",
+        "symbol": "GENK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gen Digital Inc.",
+        "symbol": "GENVR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Geospace Technologies Corporation",
+        "symbol": "GEOS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Geron Corporation",
+        "symbol": "GERN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gevo, Inc.",
+        "symbol": "GEVO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Guardforce AI Co., Limited",
+        "symbol": "GFAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Guardforce AI Co., Limited",
+        "symbol": "GFAIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Guru Favorite Stocks ETF",
+        "symbol": "GFGF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares Free Cash Flow Growth ETF",
+        "symbol": "GFLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GlobalFoundries Inc.",
+        "symbol": "GFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Grupo Financiero Galicia S.A.",
+        "symbol": "GGAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily GOOGL Bull 2X Shares",
+        "symbol": "GGLL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily GOOGL Bear 1X Shares",
+        "symbol": "GGLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gogoro Inc.",
+        "symbol": "GGR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gogoro Inc.",
+        "symbol": "GGROW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Guardant Health, Inc.",
+        "symbol": "GH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GH Research PLC",
+        "symbol": "GHRS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gulf Island Fabrication, Inc.",
+        "symbol": "GIFI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Giftify, Inc.",
+        "symbol": "GIFT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GigCapital7 Corp.",
+        "symbol": "GIG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GigCapital7 Corp.",
+        "symbol": "GIGGU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GigCapital7 Corp.",
+        "symbol": "GIGGW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GigaMedia Limited",
+        "symbol": "GIGM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "G-III Apparel Group, LTD.",
+        "symbol": "GIII",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gilead Sciences, Inc.",
+        "symbol": "GILD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gilat Satellite Networks Ltd.",
+        "symbol": "GILT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Goldman Sachs India Equity ETF",
+        "symbol": "GIND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SGI Enhanced Global Income ETF",
+        "symbol": "GINX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Generation Income Properties Inc.",
+        "symbol": "GIPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Generation Income Properties Inc.",
+        "symbol": "GIPRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global Interactive Technologies, Inc. Common Stock",
+        "symbol": "GITS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Capital Corporation",
+        "symbol": "GLAD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Capital Corporation",
+        "symbol": "GLADZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global-E Online Ltd.",
+        "symbol": "GLBE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Globus Maritime Limited",
+        "symbol": "GLBS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Glen Burnie Bancorp",
+        "symbol": "GLBZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GlacierShares Nasdaq Iceland ETF",
+        "symbol": "GLCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Great Lakes Dredge & Dock Corporation",
+        "symbol": "GLDD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ETRACS Gold Shares Covered Call ETNs due February 2, 2033",
+        "symbol": "GLDI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Gold Enhanced Options Income ETF",
+        "symbol": "GLDY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global Engine Group Holding Limited",
+        "symbol": "GLE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Galmed Pharmaceuticals Ltd.",
+        "symbol": "GLMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Golar LNG Limited",
+        "symbol": "GLNG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares WestEnd Global Equity ETF",
+        "symbol": "GLOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Galapagos NV",
+        "symbol": "GLPG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gaming and Leisure Properties, Inc.",
+        "symbol": "GLPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Greenlight Reinsurance, Ltd.",
+        "symbol": "GLRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Greenwich LifeSciences, Inc.",
+        "symbol": "GLSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Galecto, Inc.",
+        "symbol": "GLTO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Monte Rosa Therapeutics, Inc.",
+        "symbol": "GLUE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Galaxy Payroll Group Limited",
+        "symbol": "GLXG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GlycoMimetics, Inc.",
+        "symbol": "GLYC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Genmab A/S",
+        "symbol": "GMAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Golden Matrix Group, Inc.",
+        "symbol": "GMGI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gamehaus Holdings Inc.",
+        "symbol": "GMHS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global Mofy AI Limited",
+        "symbol": "GMM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GENFIT S.A.",
+        "symbol": "GNFT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Greenlane Holdings, Inc.",
+        "symbol": "GNLN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Genelux Corporation",
+        "symbol": "GNLX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares GNMA Bond ETF",
+        "symbol": "GNMA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Genomics & Biotechnology ETF",
+        "symbol": "GNOM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Genprex, Inc.",
+        "symbol": "GNPX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Genasys Inc.",
+        "symbol": "GNSS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Genenta Science S.p.A.",
+        "symbol": "GNTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gentex Corporation",
+        "symbol": "GNTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Grocery Outlet Holding Corp.",
+        "symbol": "GO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GoHealth, Inc.",
+        "symbol": "GOCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Golden Ocean Group Limited",
+        "symbol": "GOGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gogo Inc.",
+        "symbol": "GOGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Commercial Corporation",
+        "symbol": "GOOD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Commercial Corporation",
+        "symbol": "GOODN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Commercial Corporation",
+        "symbol": "GOODO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alphabet Inc.",
+        "symbol": "GOOG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alphabet Inc.",
+        "symbol": "GOOGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lazydays Holdings, Inc.",
+        "symbol": "GORV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gossamer Bio, Inc.",
+        "symbol": "GOSS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Equal Weight 0-30 Year Treasury ETF",
+        "symbol": "GOVI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GeoVax Labs, Inc.",
+        "symbol": "GOVX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GeoVax Labs, Inc.",
+        "symbol": "GOVXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GreenPower Motor Company Inc.",
+        "symbol": "GP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GP-Act III Acquisition Corp.",
+        "symbol": "GPAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GP-Act III Acquisition Corp.",
+        "symbol": "GPATU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GP-Act III Acquisition Corp.",
+        "symbol": "GPATW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Structure Therapeutics Inc.",
+        "symbol": "GPCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Goldman Sachs Nasdaq-100 Premium Income ETF",
+        "symbol": "GPIQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Goldman Sachs S&P 500 Premium Income ETF",
+        "symbol": "GPIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Green Plains, Inc.",
+        "symbol": "GPRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Goldman Sachs Access U.S. Preferred Stock and Hybrid Securities ETF",
+        "symbol": "GPRF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GoPro, Inc.",
+        "symbol": "GPRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Astoria US Quality Growth Kings ETF",
+        "symbol": "GQQQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Grab Holdings Limited",
+        "symbol": "GRAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Grab Holdings Limited",
+        "symbol": "GRABW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GRAIL, Inc.",
+        "symbol": "GRAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Grace Therapeutics, Inc.",
+        "symbol": "GRCE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Greenidge Generation Holdings Inc.",
+        "symbol": "GREE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Greenidge Generation Holdings Inc.",
+        "symbol": "GREEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Grifols, S.A.",
+        "symbol": "GRFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GRI Bio, Inc.",
+        "symbol": "GRI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust NASDAQ Clean Edge Smart Grid Infrastructure Index Fund",
+        "symbol": "GRID",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Greenpro Capital Corp.",
+        "symbol": "GRNQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "U.S. Global Investors, Inc.",
+        "symbol": "GROW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Groupon, Inc.",
+        "symbol": "GRPN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gorilla Technology Group Inc.",
+        "symbol": "GRRR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gorilla Technology Group Inc.",
+        "symbol": "GRRRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GRAVITY Co., Ltd.",
+        "symbol": "GRVY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GrowGeneration Corp.",
+        "symbol": "GRWG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gryphon Digital Mining, Inc",
+        "symbol": "GRYP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Globalstar, Inc.",
+        "symbol": "GSAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Great Southern Bancorp, Inc.",
+        "symbol": "GSBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Goosehead Insurance, Inc.",
+        "symbol": "GSHD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gesher Acquisition Corp. II",
+        "symbol": "GSHRU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes Global Systemically Important Banks ETF",
+        "symbol": "GSIB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GSI Technology, Inc.",
+        "symbol": "GSIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Garden Stage Limited",
+        "symbol": "GSIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ferroglobe PLC",
+        "symbol": "GSM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GSR III Acquisition Corp.",
+        "symbol": "GSRT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GSR III Acquisition Corp.",
+        "symbol": "GSRTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GSR III Acquisition Corp.",
+        "symbol": "GSRTU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Golden Sun Health Technology Group Limited",
+        "symbol": "GSUN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Goodyear Tire & Rubber Company",
+        "symbol": "GT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GT Biopharma, Inc.",
+        "symbol": "GTBP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Greenland Technologies Holding Corporation",
+        "symbol": "GTEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Graphjet Technology",
+        "symbol": "GTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Good Times Restaurants Inc.",
+        "symbol": "GTIM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GitLab Inc.",
+        "symbol": "GTLB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree Target Range Fund",
+        "symbol": "GTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Garrett Motion Inc.",
+        "symbol": "GTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gulf Resources, Inc.",
+        "symbol": "GURE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fractyl Health, Inc.",
+        "symbol": "GUTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Visionary Holdings Inc.",
+        "symbol": "GV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Globavend Holdings Limited",
+        "symbol": "GVH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Greenwave Technology Solutions, Inc.",
+        "symbol": "GWAV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global Water Resources, Inc.",
+        "symbol": "GWRS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gaxos.ai Inc.",
+        "symbol": "GXAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Dorsey Wright Thematic ETF",
+        "symbol": "GXDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gyre Therapeutics, Inc.",
+        "symbol": "GYRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gyrodyne , LLC",
+        "symbol": "GYRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hanmi Financial Corporation",
+        "symbol": "HAFC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Hain Celestial Group, Inc.",
+        "symbol": "HAIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Halozyme Therapeutics, Inc.",
+        "symbol": "HALO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Haoxi Health Technology Limited",
+        "symbol": "HAO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hasbro, Inc.",
+        "symbol": "HAS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Huntington Bancshares Incorporated",
+        "symbol": "HBAN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Huntington Bancshares Incorporated",
+        "symbol": "HBANL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Huntington Bancshares Incorporated",
+        "symbol": "HBANM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Huntington Bancshares Incorporated",
+        "symbol": "HBANP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Home Bancorp, Inc.",
+        "symbol": "HBCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Harvard Bioscience, Inc.",
+        "symbol": "HBIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Horizon Bancorp, Inc.",
+        "symbol": "HBNC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HBT Financial, Inc.",
+        "symbol": "HBT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Huachen AI Parking Management Technology Holding Co., Ltd.",
+        "symbol": "HCAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Health Catalyst, Inc",
+        "symbol": "HCAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Hackett Group, Inc.",
+        "symbol": "HCKT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HUTCHMED (China) Limited",
+        "symbol": "HCM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Amplify COWS Covered Call ETF",
+        "symbol": "HCOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Healthcare Services Group, Inc.",
+        "symbol": "HCSG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Healthcare Triangle, Inc.",
+        "symbol": "HCTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HCW Biologics Inc.",
+        "symbol": "HCWB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SUPER HI INTERNATIONAL HOLDING LTD.",
+        "symbol": "HDL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hudson Technologies, Inc.",
+        "symbol": "HDSN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X HealthTech ETF",
+        "symbol": "HEAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR Galaxy Hedged Digital Asset Ecosystem ETF",
+        "symbol": "HECO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "H&E Equipment Services, Inc.",
+        "symbol": "HEES",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares Hedged Equity Income ETF",
+        "symbol": "HEJD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Helen of Troy Limited",
+        "symbol": "HELE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hepion Pharmaceuticals, Inc.",
+        "symbol": "HEPA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "D-Market Electronic Services & Trading",
+        "symbol": "HEPS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JPMorgan Nasdaq Hedged Equity Laddered Overlay ETF",
+        "symbol": "HEQQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacer Cash Cows Fund of Funds ETF",
+        "symbol": "HERD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Video Games & Esports ETF",
+        "symbol": "HERO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Home Federal Bancorp, Inc. of Louisiana",
+        "symbol": "HFBL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HF Foods Group Inc.",
+        "symbol": "HFFG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TradersAI Large Cap Equity & Cash ETF",
+        "symbol": "HFSP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Heritage Financial Corporation",
+        "symbol": "HFWA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Heritage Global Inc.",
+        "symbol": "HGBL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Harte Hanks, Inc.",
+        "symbol": "HHS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Architect High Inflation and Deflation ETF",
+        "symbol": "HIDE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hingham Institution for Savings",
+        "symbol": "HIFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Highway Holdings Limited",
+        "symbol": "HIHO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Himax Technologies, Inc.",
+        "symbol": "HIMX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Daily Target 2X Long HIMS ETF",
+        "symbol": "HIMZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust High Income Strategic Focus ETF",
+        "symbol": "HISF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Health In Tech, Inc.",
+        "symbol": "HIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "High Tide Inc.",
+        "symbol": "HITI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HIVE Digital Technologies Ltd",
+        "symbol": "HIVE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hitek Global Inc.",
+        "symbol": "HKIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hong Kong Pharma Digital Technology Holdings Limited",
+        "symbol": "HKPD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wahed FTSE USA Shariah ETF",
+        "symbol": "HLAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Harmonic Inc.",
+        "symbol": "HLIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hillman Solutions Corp.",
+        "symbol": "HLMN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hamilton Lane Incorporated",
+        "symbol": "HLNE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hongli Group Inc.",
+        "symbol": "HLP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HilleVax, Inc.",
+        "symbol": "HLVX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Helix Acquisition Corp. II",
+        "symbol": "HLXB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Heidmar Maritime Holdings Corp.",
+        "symbol": "HMR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HomeStreet, Inc.",
+        "symbol": "HMST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Strategy Shares Nasdaq 7HANDL Index ETF",
+        "symbol": "HNDL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hennessy Advisors, Inc.",
+        "symbol": "HNNA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hennessy Advisors, Inc.",
+        "symbol": "HNNAZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hallador Energy Company",
+        "symbol": "HNRG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Honest Company, Inc.",
+        "symbol": "HNST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hanover Bancorp, Inc.",
+        "symbol": "HNVR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hooker Furnishings Corporation",
+        "symbol": "HOFT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hall of Fame Resort & Entertainment Company",
+        "symbol": "HOFV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hall of Fame Resort & Entertainment Company",
+        "symbol": "HOFVW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MicroCloud Hologram Inc.",
+        "symbol": "HOLO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MicroCloud Hologram Inc.",
+        "symbol": "HOLOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hologic, Inc.",
+        "symbol": "HOLX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Honeywell International Inc.",
+        "symbol": "HON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HCM II Acquisition Corp.",
+        "symbol": "HOND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HCM II Acquisition Corp.",
+        "symbol": "HONDU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HCM II Acquisition Corp.",
+        "symbol": "HONDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HarborOne Bancorp, Inc.",
+        "symbol": "HONE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Robinhood Markets, Inc.",
+        "symbol": "HOOD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long HOOD Daily ETF",
+        "symbol": "HOOG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HOOKIPA Pharma Inc.",
+        "symbol": "HOOK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Daily Target 2X Long HOOD ETF",
+        "symbol": "HOOX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hope Bancorp, Inc.",
+        "symbol": "HOPE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hoth Therapeutics, Inc.",
+        "symbol": "HOTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hour Loop, Inc.",
+        "symbol": "HOUR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hovnanian Enterprises Inc",
+        "symbol": "HOVNP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New Horizon Aircraft Ltd.",
+        "symbol": "HOVR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New Horizon Aircraft Ltd.",
+        "symbol": "HOVRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Werewolf Therapeutics, Inc.",
+        "symbol": "HOWL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Helport AI Limited",
+        "symbol": "HPAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Helport AI Limited",
+        "symbol": "HPAIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Highest Performances Holdings Inc.",
+        "symbol": "HPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HighPeak Energy, Inc.",
+        "symbol": "HPK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HighPeak Energy, Inc.",
+        "symbol": "HPKEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hartford US Quality Growth ETF",
+        "symbol": "HQGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HireQuest, Inc.",
+        "symbol": "HQI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HealthEquity, Inc.",
+        "symbol": "HQY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Harmony Biosciences Holdings, Inc.",
+        "symbol": "HRMY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Harrow, Inc.",
+        "symbol": "HROW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Harrow, Inc.",
+        "symbol": "HROWL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Harrow, Inc.",
+        "symbol": "HROWM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tema GLP-1, Obesity & Cardiometabolic ETF",
+        "symbol": "HRTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Heron Therapeutics, Inc.",
+        "symbol": "HRTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Horizon Technology Finance Corporation",
+        "symbol": "HRZN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hesai Group",
+        "symbol": "HSAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HeartSciences Inc.",
+        "symbol": "HSCS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HeartSciences Inc.",
+        "symbol": "HSCSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Helius Medical Technologies, Inc.",
+        "symbol": "HSDT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Henry Schein, Inc.",
+        "symbol": "HSIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Heidrick & Struggles International, Inc.",
+        "symbol": "HSII",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hudson Global, Inc.",
+        "symbol": "HSON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Horizon Space Acquisition I Corp.",
+        "symbol": "HSPO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Horizon Space Acquisition I Corp.",
+        "symbol": "HSPOR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Horizon Space Acquisition I Corp.",
+        "symbol": "HSPOU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Horizon Space Acquisition I Corp.",
+        "symbol": "HSPOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Horizon Space Acquisition II Corp.",
+        "symbol": "HSPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Horizon Space Acquisition II Corp.",
+        "symbol": "HSPTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Horizon Space Acquisition II Corp.",
+        "symbol": "HSPTU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Host Hotels & Resorts, Inc.",
+        "symbol": "HST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HealthStream, Inc.",
+        "symbol": "HSTM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Heritage Commerce Corp",
+        "symbol": "HTBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "High-Trend International Group",
+        "symbol": "HTCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Heartcore Enterprises, Inc.",
+        "symbol": "HTCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "H World Group Limited",
+        "symbol": "HTHT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Heartland Express, Inc.",
+        "symbol": "HTLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HomesToLife Ltd",
+        "symbol": "HTLM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fusion Fuel Green PLC",
+        "symbol": "HTOO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fusion Fuel Green PLC",
+        "symbol": "HTOOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hertz Global Holdings, Inc",
+        "symbol": "HTZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hertz Global Holdings, Inc",
+        "symbol": "HTZWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hub Cyber Security Ltd.",
+        "symbol": "HUBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hub Cyber Security Ltd.",
+        "symbol": "HUBCW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hub Cyber Security Ltd.",
+        "symbol": "HUBCZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hub Group, Inc.",
+        "symbol": "HUBG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Huadi International Group Co., Ltd.",
+        "symbol": "HUDI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HUHUTECH International Group Inc.",
+        "symbol": "HUHU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Huize Holding Limited",
+        "symbol": "HUIZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Humacyte, Inc.",
+        "symbol": "HUMA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Humacyte, Inc.",
+        "symbol": "HUMAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TuHURA Biosciences, Inc.",
+        "symbol": "HURA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hurco Companies, Inc.",
+        "symbol": "HURC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Huron Consulting Group Inc.",
+        "symbol": "HURN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hut 8 Corp.",
+        "symbol": "HUT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hennessy Capital Investment Corp. VII",
+        "symbol": "HVII",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hennessy Capital Investment Corp. VII",
+        "symbol": "HVIIR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hennessy Capital Investment Corp. VII",
+        "symbol": "HVIIU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes US Infrastructure ETF",
+        "symbol": "HWAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hawthorn Bancshares, Inc.",
+        "symbol": "HWBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hancock Whitney Corporation",
+        "symbol": "HWC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hancock Whitney Corporation",
+        "symbol": "HWCPZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "HWH International Inc.",
+        "symbol": "HWH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hawkins, Inc.",
+        "symbol": "HWKN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hotchkis & Wiley SMID Cap Diversified Value Fund",
+        "symbol": "HWSM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Haoxin Holdings Limited",
+        "symbol": "HXHX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NEOS Enhanced Income Credit Select ETF",
+        "symbol": "HYBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Hydrogen ETF",
+        "symbol": "HYDR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hydrofarm Holdings Group, Inc.",
+        "symbol": "HYFM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Tactical High Yield ETF",
+        "symbol": "HYLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hycroft Mining Holding Corporation",
+        "symbol": "HYMC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hycroft Mining Holding Corporation",
+        "symbol": "HYMCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hycroft Mining Holding Corporation",
+        "symbol": "HYMCW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hyperfine, Inc.",
+        "symbol": "HYPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares ESG Advanced High Yield Corporate Bond ETF",
+        "symbol": "HYXF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree Interest Rate Hedged High Yield Bond Fund",
+        "symbol": "HYZD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IAC Inc.",
+        "symbol": "IAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Integra LifeSciences Holdings Corporation",
+        "symbol": "IART",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Integral Ad Science Holding Corp.",
+        "symbol": "IAS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IB Acquisition Corp.",
+        "symbol": "IBAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IB Acquisition Corp.",
+        "symbol": "IBACR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Energy Storage & Materials ETF",
+        "symbol": "IBAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Biotechnology ETF",
+        "symbol": "IBB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Nasdaq Biotechnology ETF",
+        "symbol": "IBBQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Independent Bank Corporation",
+        "symbol": "IBCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IBEX Limited",
+        "symbol": "IBEX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Innovation Beverage Group Limited",
+        "symbol": "IBG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2044 Term Treasury ETF",
+        "symbol": "IBGA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2045 Term Treasury ETF",
+        "symbol": "IBGB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2054 Term Treasury ETF",
+        "symbol": "IBGK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2055 Term Treasury ETF",
+        "symbol": "IBGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iBio, Inc.",
+        "symbol": "IBIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Bitcoin Trust ETF",
+        "symbol": "IBIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Interactive Brokers Group, Inc.",
+        "symbol": "IBKR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "International Bancshares Corporation",
+        "symbol": "IBOC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VanEck Robotics ETF",
+        "symbol": "IBOT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ImmunityBio, Inc.",
+        "symbol": "IBRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2025 Term Treasury ETF",
+        "symbol": "IBTF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2026 Term Treasury ETF",
+        "symbol": "IBTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2027 Term Treasury ETF",
+        "symbol": "IBTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2028 Term Treasury ETF",
+        "symbol": "IBTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2029 Term Treasury ETF",
+        "symbol": "IBTJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2030 Term Treasury ETF",
+        "symbol": "IBTK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2031 Term Treasury ETF",
+        "symbol": "IBTL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2032 Term Treasury ETF",
+        "symbol": "IBTM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2033 Term Treasury ETF",
+        "symbol": "IBTO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2034 Term Treasury ETF",
+        "symbol": "IBTP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares iBonds Dec 2035 Term Treasury ETF",
+        "symbol": "IBTQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "icad inc.",
+        "symbol": "ICAD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ImmuCell Corporation",
+        "symbol": "ICCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IceCure Medical Ltd.",
+        "symbol": "ICCM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iCoreConnect Inc.",
+        "symbol": "ICCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ICF International, Inc.",
+        "symbol": "ICFI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intchains Group Limited",
+        "symbol": "ICG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ichor Holdings",
+        "symbol": "ICHR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Global Clean Energy ETF",
+        "symbol": "ICLN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ICON plc",
+        "symbol": "ICLR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Investcorp Credit Management BDC, Inc.",
+        "symbol": "ICMB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Icon Energy Corp.",
+        "symbol": "ICON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Copper and Metals Mining ETF",
+        "symbol": "ICOP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SeaStar Medical Holding Corporation",
+        "symbol": "ICU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SeaStar Medical Holding Corporation",
+        "symbol": "ICUCW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ICU Medical, Inc.",
+        "symbol": "ICUI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "T Stamp Inc.",
+        "symbol": "IDAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "InterDigital, Inc.",
+        "symbol": "IDCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intellicheck, Inc.",
+        "symbol": "IDN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IDEXX Laboratories, Inc.",
+        "symbol": "IDXX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IDEAYA Biosciences, Inc.",
+        "symbol": "IDYA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares 7-10 Year Treasury Bond ETF",
+        "symbol": "IEF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares 3-7 Year Treasury Bond ETF",
+        "symbol": "IEI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Icahn Enterprises L.P.",
+        "symbol": "IEP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IES Holdings, Inc.",
+        "symbol": "IESC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI Europe Small-Cap ETF",
+        "symbol": "IEUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Infobird Co., Ltd",
+        "symbol": "IFBD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares International Developed Real Estate ETF",
+        "symbol": "IFGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "InflaRx N.V.",
+        "symbol": "IFRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Dorsey Wright International Focus 5 ETF",
+        "symbol": "IFV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Global Infrastructure ETF",
+        "symbol": "IGF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares 5-10 Year Investment Grade Corporate Bond ETF",
+        "symbol": "IGIB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "International General Insurance Holdings Ltd.",
+        "symbol": "IGIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IGM Biosciences, Inc.",
+        "symbol": "IGMS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares International Treasury Bond ETF",
+        "symbol": "IGOV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares 1-5 Year Investment Grade Corporate Bond ETF",
+        "symbol": "IGSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iHeartMedia, Inc.",
+        "symbol": "IHRT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco High Yield Bond Factor ETF",
+        "symbol": "IHYF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Information Services Group, Inc.",
+        "symbol": "III",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "i3 Verticals, Inc.",
+        "symbol": "IIIV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inspira Technologies Oxy B.H.N. Ltd.",
+        "symbol": "IINN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inspira Technologies Oxy B.H.N. Ltd.",
+        "symbol": "IINNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares S&P SmallCap 600 Growth ETF",
+        "symbol": "IJT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ikena Oncology, Inc.",
+        "symbol": "IKNA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inhibikase Therapeutics, Inc.",
+        "symbol": "IKT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intelligent Living Application Group Inc.",
+        "symbol": "ILAG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Lithium Miners and Producers ETF",
+        "symbol": "ILIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Triller Group Inc.",
+        "symbol": "ILLR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Triller Group Inc.",
+        "symbol": "ILLRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Illumina, Inc.",
+        "symbol": "ILMN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Industrial Logistics Properties Trust",
+        "symbol": "ILPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "I-MAB",
+        "symbol": "IMAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IM Cannabis Corp.",
+        "symbol": "IMCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Immunocore Holdings plc",
+        "symbol": "IMCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Morningstar Mid-Cap Value ETF",
+        "symbol": "IMCV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CIMG Inc.",
+        "symbol": "IMG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ingles Markets, Incorporated",
+        "symbol": "IMKTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Immutep Limited",
+        "symbol": "IMMP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Immersion Corporation",
+        "symbol": "IMMR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Immix Biopharma, Inc.",
+        "symbol": "IMMX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Immunome, Inc.",
+        "symbol": "IMNM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Imunon, Inc.",
+        "symbol": "IMNN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Architect International Quantitative Momentum ETF",
+        "symbol": "IMOM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ChipMOS TECHNOLOGIES INC.",
+        "symbol": "IMOS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Imperial Petroleum Inc.",
+        "symbol": "IMPP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Imperial Petroleum Inc.",
+        "symbol": "IMPPP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Immuron Limited",
+        "symbol": "IMRN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Immuneering Corporation",
+        "symbol": "IMRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Integrated Media Technology Limited",
+        "symbol": "IMTE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Immatics N.V.",
+        "symbol": "IMTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Immatics N.V.",
+        "symbol": "IMTXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Immunic, Inc.",
+        "symbol": "IMUX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Immunovant, Inc.",
+        "symbol": "IMVT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "International Money Express, Inc.",
+        "symbol": "IMXI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IN8bio, Inc.",
+        "symbol": "INAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Internet Bancorp",
+        "symbol": "INBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Internet Bancorp",
+        "symbol": "INBKZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intelligent Bio Solutions Inc.",
+        "symbol": "INBS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inhibrx Biosciences, Inc.",
+        "symbol": "INBX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intercure Ltd.",
+        "symbol": "INCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Incyte Corporation",
+        "symbol": "INCY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Independent Bank Corp.",
+        "symbol": "INDB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree India Hedged Equity Fund",
+        "symbol": "INDH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "indie Semiconductor, Inc.",
+        "symbol": "INDI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Indaptus Therapeutics, Inc.",
+        "symbol": "INDP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Indivior PLC",
+        "symbol": "INDV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares India 50 ETF",
+        "symbol": "INDY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "INNEOVA Holdings Limited",
+        "symbol": "INEO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ClearBridge Sustainable Infrastructure ETF",
+        "symbol": "INFR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inogen, Inc",
+        "symbol": "INGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inno Holdings Inc.",
+        "symbol": "INHD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MiNK Therapeutics, Inc.",
+        "symbol": "INKT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "INLIF LIMITED",
+        "symbol": "INLF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "InMed Pharmaceuticals Inc.",
+        "symbol": "INM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "INmune Bio Inc.",
+        "symbol": "INMB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "InMode Ltd.",
+        "symbol": "INMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "InnovAge Holding Corp.",
+        "symbol": "INNV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inovio Pharmaceuticals, Inc.",
+        "symbol": "INO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Innodata Inc.",
+        "symbol": "INOD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares U.S. Industry Rotation Active ETF",
+        "symbol": "INRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inspired Entertainment, Inc.",
+        "symbol": "INSE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inseego Corp.",
+        "symbol": "INSG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Insmed Incorporated",
+        "symbol": "INSM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intapp, Inc.",
+        "symbol": "INTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intel Corporation",
+        "symbol": "INTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Intergroup Corporation",
+        "symbol": "INTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intelligent Group Limited",
+        "symbol": "INTJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inter & Co. Inc.",
+        "symbol": "INTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intensity Therapeutics, Inc.",
+        "symbol": "INTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intuit Inc.",
+        "symbol": "INTU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long INTC Daily ETF",
+        "symbol": "INTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intrusion Inc.",
+        "symbol": "INTZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Innventure, Inc.",
+        "symbol": "INV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Innoviva, Inc.",
+        "symbol": "INVA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Identiv, Inc.",
+        "symbol": "INVE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Innoviz Technologies Ltd.",
+        "symbol": "INVZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Innoviz Technologies Ltd.",
+        "symbol": "INVZW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inozyme Pharma, Inc.",
+        "symbol": "INZY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IO Biotech, Inc.",
+        "symbol": "IOBT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long IONQ Daily ETF",
+        "symbol": "IONL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ioneer Ltd",
+        "symbol": "IONR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ionis Pharmaceuticals, Inc.",
+        "symbol": "IONS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Daily Target 2X Long IONQ ETF",
+        "symbol": "IONX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Innospec Inc.",
+        "symbol": "IOSP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iOThree Limited",
+        "symbol": "IOTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Iovance Biotherapeutics, Inc.",
+        "symbol": "IOVA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ImmunoPrecise Antibodies Ltd.",
+        "symbol": "IPA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Interparfums, Inc.",
+        "symbol": "IPAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inflection Point Acquisition Corp. III",
+        "symbol": "IPCXU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Professional Diversity Network, Inc.",
+        "symbol": "IPDN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IPG Photonics Corporation",
+        "symbol": "IPGP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Innate Pharma S.A.",
+        "symbol": "IPHA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco International BuyBack Achievers ETF",
+        "symbol": "IPKW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intelligent Protection Management Corp.",
+        "symbol": "IPM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Century Therapeutics, Inc.",
+        "symbol": "IPSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iPower Inc.",
+        "symbol": "IPW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ideal Power Inc.",
+        "symbol": "IPWR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IperionX Limited",
+        "symbol": "IPX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iQIYI, Inc.",
+        "symbol": "IQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProShares Nasdaq-100 High Income ETF",
+        "symbol": "IQQQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iRobot Corporation",
+        "symbol": "IRBT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Opus Genetics, Inc.",
+        "symbol": "IRD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Iridium Communications Inc",
+        "symbol": "IRDM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IREN Limited",
+        "symbol": "IREN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IRIDEX Corporation",
+        "symbol": "IRIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iRadimed Corporation",
+        "symbol": "IRMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Iron Horse Acquisitions Corp.",
+        "symbol": "IROH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Iron Horse Acquisitions Corp.",
+        "symbol": "IROHR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Iron Horse Acquisitions Corp.",
+        "symbol": "IROHU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Iron Horse Acquisitions Corp.",
+        "symbol": "IROHW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Disc Medicine, Inc.",
+        "symbol": "IRON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IF Bancorp, Inc.",
+        "symbol": "IROQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iRhythm Technologies, Inc.",
+        "symbol": "IRTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ironwood Pharmaceuticals, Inc.",
+        "symbol": "IRWD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares 1-3 Year International Treasury Bond ETF",
+        "symbol": "ISHG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust S-Network E-Commerce ETF",
+        "symbol": "ISHP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iSpecimen Inc.",
+        "symbol": "ISPC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inspirato Incorporated",
+        "symbol": "ISPO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inspirato Incorporated",
+        "symbol": "ISPOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ispire Technology Inc.",
+        "symbol": "ISPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intuitive Surgical, Inc.",
+        "symbol": "ISRG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Israel Acquisitions Corp",
+        "symbol": "ISRL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Israel Acquisitions Corp",
+        "symbol": "ISRLU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Israel Acquisitions Corp",
+        "symbol": "ISRLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Innovative Solutions and Support, Inc.",
+        "symbol": "ISSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Core 1-5 Year USD Bond ETF",
+        "symbol": "ISTB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Investar Holding Corporation",
+        "symbol": "ISTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Investors Title Company",
+        "symbol": "ITIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iTeos Therapeutics, Inc.",
+        "symbol": "ITOS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Itron, Inc.",
+        "symbol": "ITRI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Iterum Therapeutics plc",
+        "symbol": "ITRM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ituran Location and Control Ltd.",
+        "symbol": "ITRN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco RAFI Strategic US ETF",
+        "symbol": "IUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Core Total USD Bond Market ETF",
+        "symbol": "IUSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Core S&P U.S. Growth ETF",
+        "symbol": "IUSG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Core S&P U.S. Value ETF",
+        "symbol": "IUSV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inventiva S.A.",
+        "symbol": "IVA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Architect International Quantitative Value ETF",
+        "symbol": "IVAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Investcorp AI Acquisition Corp.",
+        "symbol": "IVCA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Investcorp AI Acquisition Corp.",
+        "symbol": "IVCAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Investcorp AI Acquisition Corp.",
+        "symbol": "IVCAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Iveda Solutions, Inc.",
+        "symbol": "IVDA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Iveda Solutions, Inc.",
+        "symbol": "IVDAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Emergent Food and AgTech Multisector ETF",
+        "symbol": "IVEG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "INVO Fertility, Inc.",
+        "symbol": "IVF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inspire Veterinary Partners, Inc.",
+        "symbol": "IVP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invivyd, Inc.",
+        "symbol": "IVVD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI Water Management Multisector ETF",
+        "symbol": "IWTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Incannex Healthcare Inc.",
+        "symbol": "IXHL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Core MSCI Total International Stock ETF",
+        "symbol": "IXUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "IZEA Worldwide, Inc.",
+        "symbol": "IZEA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ICZOOM Group Inc.",
+        "symbol": "IZM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jack In The Box Inc.",
+        "symbol": "JACK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jaguar Health, Inc.",
+        "symbol": "JAGX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JAKKS Pacific, Inc.",
+        "symbol": "JAKK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jamf Holding Corp.",
+        "symbol": "JAMF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Janux Therapeutics, Inc.",
+        "symbol": "JANX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jazz Pharmaceuticals plc",
+        "symbol": "JAZZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JBDI Holdings Limited",
+        "symbol": "JBDI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "J.B. Hunt Transport Services, Inc.",
+        "symbol": "JBHT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jade Biosciences, Inc.",
+        "symbol": "JBIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JetBlue Airways Corporation",
+        "symbol": "JBLU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "John B. Sanfilippo & Son, Inc.",
+        "symbol": "JBSS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JE Cleantech Holdings Limited",
+        "symbol": "JCSE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jewett-Cameron Trading Company",
+        "symbol": "JCTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JD.com, Inc.",
+        "symbol": "JD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JPMorgan Healthcare Leaders ETF",
+        "symbol": "JDOC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JIADE LIMITED",
+        "symbol": "JDZG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JPMorgan Nasdaq Equity Premium Income ETF",
+        "symbol": "JEPQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JFB Construction Holdings",
+        "symbol": "JFB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jeffs' Brands Ltd",
+        "symbol": "JFBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jeffs' Brands Ltd",
+        "symbol": "JFBRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jiayin Group Inc.",
+        "symbol": "JFIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "9F Inc.",
+        "symbol": "JFU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Aurora Mobile Limited",
+        "symbol": "JG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JPMorgan Global Select Equity ETF",
+        "symbol": "JGLO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JPMorgan International Value ETF",
+        "symbol": "JIVE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "J & J Snack Foods Corp.",
+        "symbol": "JJSF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jack Henry & Associates, Inc.",
+        "symbol": "JKHY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "J-Long Group Limited",
+        "symbol": "JL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Janus Henderson Mid Cap Growth Alpha ETF",
+        "symbol": "JMID",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "John Marshall Bancorp, Inc.",
+        "symbol": "JMSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Janover Inc.",
+        "symbol": "JNVR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Johnson Outdoors Inc.",
+        "symbol": "JOUT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JOYY Inc.",
+        "symbol": "JOYY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JPMorgan Equity Focus ETF",
+        "symbol": "JPEF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lazard Japanese Equity ETF",
+        "symbol": "JPY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jerash Holdings (US), Inc.",
+        "symbol": "JRSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "James River Group Holdings, Ltd.",
+        "symbol": "JRVR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Navient Corporation",
+        "symbol": "JSM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Janus Henderson Small/Mid Cap Growth Alpha ETF",
+        "symbol": "JSMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Janus Henderson Small Cap Growth Alpha ETF",
+        "symbol": "JSML",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jasper Therapeutics, Inc.",
+        "symbol": "JSPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jasper Therapeutics, Inc.",
+        "symbol": "JSPRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jet.AI Inc.",
+        "symbol": "JTAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JPMorgan U.S. Tech Leaders ETF",
+        "symbol": "JTEK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Junee Limited",
+        "symbol": "JUNE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jupiter Neurosciences, Inc.",
+        "symbol": "JUNS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Coffee Holding Co., Inc.",
+        "symbol": "JVA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JVSPAC Acquisition Corp.",
+        "symbol": "JVSA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JVSPAC Acquisition Corp.",
+        "symbol": "JVSAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JVSPAC Acquisition Corp.",
+        "symbol": "JVSAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jowell Global Ltd.",
+        "symbol": "JWEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JX Luxventure Group Inc.",
+        "symbol": "JXG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jayud Global Logistics Limited",
+        "symbol": "JYD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Joint Corp.",
+        "symbol": "JYNT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jianzhi Education Technology Group Company Limited",
+        "symbol": "JZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jiuzi Holdings, Inc.",
+        "symbol": "JZXN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "KALA BIO, Inc.",
+        "symbol": "KALA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kaiser Aluminum Corporation",
+        "symbol": "KALU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "KalVista Pharmaceuticals, Inc.",
+        "symbol": "KALV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Karooooo Ltd.",
+        "symbol": "KARO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kaival Brands Innovations Group, Inc.",
+        "symbol": "KAVL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "KraneShares 2x Long BABA Daily ETF",
+        "symbol": "KBAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FST Corp.",
+        "symbol": "KBSX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco KBW Bank ETF",
+        "symbol": "KBWB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco KBW High Dividend Yield Financial ETF",
+        "symbol": "KBWD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco KBW Property & Casualty Insurance ETF",
+        "symbol": "KBWP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco KBW Regional Banking ETF",
+        "symbol": "KBWR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco KBW Premium Yield Equity REIT ETF",
+        "symbol": "KBWY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kingsoft Cloud Holdings Limited",
+        "symbol": "KC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kindly MD, Inc.",
+        "symbol": "KDLY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kindly MD, Inc.",
+        "symbol": "KDLYW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Keurig Dr Pepper Inc.",
+        "symbol": "KDP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kimball Electronics, Inc.",
+        "symbol": "KE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Keating Active ETF",
+        "symbol": "KEAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kelly Services, Inc.",
+        "symbol": "KELYA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kelly Services, Inc.",
+        "symbol": "KELYB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kewaunee Scientific Corporation",
+        "symbol": "KEQU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kentucky First Federal Bancorp",
+        "symbol": "KFFB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "K&F Growth Acquisition Corp. II",
+        "symbol": "KFII",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "K&F Growth Acquisition Corp. II",
+        "symbol": "KFIIR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "K&F Growth Acquisition Corp. II",
+        "symbol": "KFIIU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kolibri Global Energy Inc.",
+        "symbol": "KGEI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Kraft Heinz Company",
+        "symbol": "KHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OrthoPediatrics Corp.",
+        "symbol": "KIDS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Classover Holdings, Inc.",
+        "symbol": "KIDZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Classover Holdings, Inc.",
+        "symbol": "KIDZW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kingstone Companies, Inc",
+        "symbol": "KINS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kirkland's, Inc.",
+        "symbol": "KIRK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nauticus Robotics, Inc.",
+        "symbol": "KITT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nauticus Robotics, Inc.",
+        "symbol": "KITTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "KLA Corporation",
+        "symbol": "KLAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kulicke and Soffa Industries, Inc.",
+        "symbol": "KLIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kalaris Therapeutics, Inc.",
+        "symbol": "KLRS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Klotho Neurosciences, Inc.",
+        "symbol": "KLTO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Klotho Neurosciences, Inc.",
+        "symbol": "KLTOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kaltura, Inc.",
+        "symbol": "KLTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "KLX Energy Services Holdings, Inc.",
+        "symbol": "KLXE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kamada Ltd.",
+        "symbol": "KMDA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kestra Medical Technologies, Ltd.",
+        "symbol": "KMTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kandi Technologies Group, Inc.",
+        "symbol": "KNDI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust S&P 500 Diversified Dividend Aristocrats ETF",
+        "symbol": "KNGZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kiniksa Pharmaceuticals, Ltd.",
+        "symbol": "KNSA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kodiak Sciences Inc",
+        "symbol": "KOD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kopin Corporation",
+        "symbol": "KOPN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Koss Corporation",
+        "symbol": "KOSS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "KraneShares 2x Long PDD Daily ETF",
+        "symbol": "KPDD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Katapult Holdings, Inc.",
+        "symbol": "KPLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Katapult Holdings, Inc.",
+        "symbol": "KPLTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kiora Pharmaceuticals, Inc.",
+        "symbol": "KPRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Karyopharm Therapeutics Inc.",
+        "symbol": "KPTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kurv Technology Titans Select ETF",
+        "symbol": "KQQQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "36Kr Holdings Inc.",
+        "symbol": "KRKR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Conscious Companies ETF",
+        "symbol": "KRMA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "KORU Medical Systems, Inc.",
+        "symbol": "KRMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kornit Digital Ltd.",
+        "symbol": "KRNT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kearny Financial",
+        "symbol": "KRNY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kronos Bio, Inc.",
+        "symbol": "KRON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X AgTech & Food Innovation ETF",
+        "symbol": "KROP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Keros Therapeutics, Inc.",
+        "symbol": "KROS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Korro Bio, Inc.",
+        "symbol": "KRRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Karat Packaging Inc.",
+        "symbol": "KRT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kura Sushi USA, Inc.",
+        "symbol": "KRUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Krystal Biotech, Inc.",
+        "symbol": "KRYS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Knightscope, Inc.",
+        "symbol": "KSCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Joint Stock Company Kaspi.kz",
+        "symbol": "KSPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Key Tronic Corporation",
+        "symbol": "KTCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kratos Defense & Security Solutions, Inc.",
+        "symbol": "KTOS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pasithea Therapeutics Corp.",
+        "symbol": "KTTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pasithea Therapeutics Corp.",
+        "symbol": "KTTAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kura Oncology, Inc.",
+        "symbol": "KURA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Keen Vision Acquisition Corporation",
+        "symbol": "KVAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Keen Vision Acquisition Corporation",
+        "symbol": "KVACU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Keen Vision Acquisition Corporation",
+        "symbol": "KVACW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "KVH Industries, Inc.",
+        "symbol": "KVHI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "KWESST Micro Systems Inc.",
+        "symbol": "KWE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "KWESST Micro Systems Inc.",
+        "symbol": "KWESW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kaixin Holdings",
+        "symbol": "KXIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kymera Therapeutics, Inc.",
+        "symbol": "KYMR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kyverna Therapeutics, Inc.",
+        "symbol": "KYTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kazia Therapeutics Limited",
+        "symbol": "KZIA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Kezar Life Sciences, Inc.",
+        "symbol": "KZR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Standard BioTools Inc.",
+        "symbol": "LAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SEALSQ Corp",
+        "symbol": "LAES",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lakeland Industries, Inc.",
+        "symbol": "LAKE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lamar Advertising Company",
+        "symbol": "LAMR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lancaster Colony Corporation",
+        "symbol": "LANC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Land Corporation",
+        "symbol": "LAND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Land Corporation",
+        "symbol": "LANDM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Land Corporation",
+        "symbol": "LANDO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gladstone Land Corporation",
+        "symbol": "LANDP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Landmark Bancorp Inc.",
+        "symbol": "LARK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Laser Photonics Corporation",
+        "symbol": "LASE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "nLIGHT, Inc.",
+        "symbol": "LASR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Laureate Education, Inc.",
+        "symbol": "LAUR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "STKd 100% NVDA & 100% AMD ETF",
+        "symbol": "LAYS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Luminar Technologies, Inc.",
+        "symbol": "LAZR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Li Bang International Corporation Inc.",
+        "symbol": "LBGJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liberty Broadband Corporation",
+        "symbol": "LBRDA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liberty Broadband Corporation",
+        "symbol": "LBRDK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liberty Broadband Corporation",
+        "symbol": "LBRDP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liberty Global Ltd.",
+        "symbol": "LBTYA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liberty Global Ltd.",
+        "symbol": "LBTYB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liberty Global Ltd.",
+        "symbol": "LBTYK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lakeshore Acquisition III Corp.",
+        "symbol": "LCCCU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long LCID Daily ETF",
+        "symbol": "LCDL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JPMorgan Fundamental Data Science Large Core ETF",
+        "symbol": "LCDS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Locafy Limited",
+        "symbol": "LCFY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Locafy Limited",
+        "symbol": "LCFYW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lucid Group, Inc.",
+        "symbol": "LCID",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LCNB Corporation",
+        "symbol": "LCNB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lifetime Brands, Inc.",
+        "symbol": "LCUT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares ESG MSCI EM Leaders ETF",
+        "symbol": "LDEM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Low Duration Strategic Focus ETF",
+        "symbol": "LDSF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LeddarTech Holdings Inc.",
+        "symbol": "LDTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LeddarTech Holdings Inc.",
+        "symbol": "LDTCW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lendway, Inc.",
+        "symbol": "LDWY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lands' End, Inc.",
+        "symbol": "LE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lincoln Electric Holdings, Inc.",
+        "symbol": "LECO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SemiLEDS Corporation",
+        "symbol": "LEDS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lee Enterprises, Incorporated",
+        "symbol": "LEE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Legacy Housing Corporation",
+        "symbol": "LEGH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Legend Biotech Corporation",
+        "symbol": "LEGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Indxx Innovative Transaction & Process ETF",
+        "symbol": "LEGR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LENZ Therapeutics, Inc.",
+        "symbol": "LENZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leslie's, Inc.",
+        "symbol": "LESL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alexis Practical Tactical ETF",
+        "symbol": "LEXI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lexaria Bioscience Corp.",
+        "symbol": "LEXX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lexaria Bioscience Corp.",
+        "symbol": "LEXXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lifecore Biomedical, Inc.",
+        "symbol": "LFCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LifeMD, Inc.",
+        "symbol": "LFMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LifeMD, Inc.",
+        "symbol": "LFMDP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "F/m Emerald Life Sciences Innovation ETF",
+        "symbol": "LFSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LifeStance Health Group, Inc.",
+        "symbol": "LFST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Littelfuse, Inc.",
+        "symbol": "LFUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lifevantage Corporation",
+        "symbol": "LFVN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lifeward Ltd.",
+        "symbol": "LFWD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Linkage Global Inc",
+        "symbol": "LGCB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes US Cash Flow Champions ETF",
+        "symbol": "LGCF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lucas GC Limited",
+        "symbol": "LGCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lion Group Holding Ltd.",
+        "symbol": "LGHL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lion Group Holding Ltd.",
+        "symbol": "LGHLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LGI Homes, Inc.",
+        "symbol": "LGIH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LogicMark, Inc.",
+        "symbol": "LGMK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ligand Pharmaceuticals Incorporated",
+        "symbol": "LGND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Largo Inc.",
+        "symbol": "LGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Level Four Large Cap Growth Active ETF",
+        "symbol": "LGRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Longeveron Inc.",
+        "symbol": "LGVN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lianhe Sowell International Group Ltd",
+        "symbol": "LHSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Li Auto Inc.",
+        "symbol": "LI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lichen International Limited",
+        "symbol": "LICN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AEye, Inc.",
+        "symbol": "LIDR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AEye, Inc.",
+        "symbol": "LIDRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Chicago Atlantic BDC, Inc.",
+        "symbol": "LIEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Life360, Inc.",
+        "symbol": "LIF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liberty Latin America Ltd.",
+        "symbol": "LILA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liberty Latin America Ltd.",
+        "symbol": "LILAK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Linde plc",
+        "symbol": "LIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lincoln Educational Services Corporation",
+        "symbol": "LINC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lindblad Expeditions Holdings Inc.",
+        "symbol": "LIND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lineage, Inc.",
+        "symbol": "LINE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Interlink Electronics, Inc.",
+        "symbol": "LINK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lionsgate Studios Corp.",
+        "symbol": "LION",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lipella Pharmaceuticals Inc.",
+        "symbol": "LIPO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LiqTech International, Inc.",
+        "symbol": "LIQT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lumentum Holdings Inc.",
+        "symbol": "LITE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Snow Lake Resources Ltd.",
+        "symbol": "LITM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sprott Lithium Miners ETF",
+        "symbol": "LITP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Live Ventures Incorporated",
+        "symbol": "LIVE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LivaNova PLC",
+        "symbol": "LIVN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intelligent Livermore ETF",
+        "symbol": "LIVR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lixte Biotechnology Holdings, Inc.",
+        "symbol": "LIXT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lixte Biotechnology Holdings, Inc.",
+        "symbol": "LIXTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lakeland Financial Corporation",
+        "symbol": "LKFN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LKQ Corporation",
+        "symbol": "LKQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liberty Media Corporation",
+        "symbol": "LLYVA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liberty Media Corporation",
+        "symbol": "LLYVK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LeMaitre Vascular, Inc.",
+        "symbol": "LMAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Limbach Holdings, Inc.",
+        "symbol": "LMB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Low Duration Opportunities ETF",
+        "symbol": "LMBS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LM Funding America, Inc.",
+        "symbol": "LMFA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Limoneira Co",
+        "symbol": "LMNR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LINKBANCORP, Inc.",
+        "symbol": "LNKB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Linkers Industries Limited",
+        "symbol": "LNKS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LENSAR, Inc.",
+        "symbol": "LNSR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alliant Energy Corporation",
+        "symbol": "LNT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lantheus Holdings, Inc.",
+        "symbol": "LNTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Light & Wonder, Inc.",
+        "symbol": "LNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LanzaTech Global, Inc.",
+        "symbol": "LNZA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LanzaTech Global, Inc.",
+        "symbol": "LNZAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Manhattan Bridge Capital, Inc",
+        "symbol": "LOAN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LOBO EV TECHNOLOGIES LTD.",
+        "symbol": "LOBO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "El Pollo Loco Holdings, Inc.",
+        "symbol": "LOCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ContextLogic Inc.",
+        "symbol": "LOGC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Logitech International S.A.",
+        "symbol": "LOGI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Live Oak Acquisition Corp. V",
+        "symbol": "LOKV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Live Oak Acquisition Corp. V",
+        "symbol": "LOKVU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Live Oak Acquisition Corp. V",
+        "symbol": "LOKVW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Loop Industries, Inc.",
+        "symbol": "LOOP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Grand Canyon Education, Inc.",
+        "symbol": "LOPE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lotus Technology Inc.",
+        "symbol": "LOT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lotus Technology Inc.",
+        "symbol": "LOTWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Lovesac Company",
+        "symbol": "LOVE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Launch One Acquisition Corp.",
+        "symbol": "LPAA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Launch One Acquisition Corp.",
+        "symbol": "LPAAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Launch One Acquisition Corp.",
+        "symbol": "LPAAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Launch Two Acquisition Corp.",
+        "symbol": "LPBB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Launch Two Acquisition Corp.",
+        "symbol": "LPBBU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Launch Two Acquisition Corp.",
+        "symbol": "LPBBW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lipocine Inc.",
+        "symbol": "LPCN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LPL Financial Holdings Inc.",
+        "symbol": "LPLA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Open Lending Corporation",
+        "symbol": "LPRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LivePerson, Inc.",
+        "symbol": "LPSN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LightPath Technologies, Inc.",
+        "symbol": "LPTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leap Therapeutics, Inc.",
+        "symbol": "LPTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liquidia Corporation",
+        "symbol": "LQDA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Liquidity Services, Inc.",
+        "symbol": "LQDT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lam Research Corporation",
+        "symbol": "LRCX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lead Real Estate Co., Ltd",
+        "symbol": "LRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Logan Ridge Finance Corporation",
+        "symbol": "LRFC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ClearBridge Large Cap Growth ESG ETF",
+        "symbol": "LRGE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "La Rosa Holdings Corp.",
+        "symbol": "LRHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Larimar Therapeutics, Inc.",
+        "symbol": "LRMR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NYLI U.S. Large Cap R&D Leaders ETF",
+        "symbol": "LRND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lesaka Technologies, Inc.",
+        "symbol": "LSAK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LakeShore Biopharma Co., Ltd",
+        "symbol": "LSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lake Shore Bancorp, Inc.",
+        "symbol": "LSBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LakeShore Biopharma Co., Ltd",
+        "symbol": "LSBPW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lattice Semiconductor Corporation",
+        "symbol": "LSCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leishen Energy Holding Co., Ltd.",
+        "symbol": "LSE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Landsea Homes Corporation",
+        "symbol": "LSEA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Landsea Homes Corporation",
+        "symbol": "LSEAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lakeside Holding Limited",
+        "symbol": "LSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lisata Therapeutics, Inc.",
+        "symbol": "LSTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Landstar System, Inc.",
+        "symbol": "LSTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lightbridge Corporation",
+        "symbol": "LTBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lantern Pharma Inc.",
+        "symbol": "LTRN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lantronix, Inc.",
+        "symbol": "LTRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lottery.com, Inc.",
+        "symbol": "LTRY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lottery.com, Inc.",
+        "symbol": "LTRYW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lucid Diagnostics Inc.",
+        "symbol": "LUCD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Innovative Eyewear, Inc.",
+        "symbol": "LUCY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Innovative Eyewear, Inc.",
+        "symbol": "LUCYW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "lululemon athletica inc.",
+        "symbol": "LULU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pulmonx Corporation",
+        "symbol": "LUNG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intuitive Machines, Inc.",
+        "symbol": "LUNR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Franklin U.S. Low Volatility High Dividend Index ETF",
+        "symbol": "LVHD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lulu's Fashion Lounge Holdings, Inc.",
+        "symbol": "LVLU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LiveOne, Inc.",
+        "symbol": "LVO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lavoro Limited",
+        "symbol": "LVRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lavoro Limited",
+        "symbol": "LVROW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LAVA Therapeutics N.V.",
+        "symbol": "LVTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lifeway Foods, Inc.",
+        "symbol": "LWAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lightwave Logic, Inc.",
+        "symbol": "LWLG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LexinFintech Holdings Ltd.",
+        "symbol": "LX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lixiang Education Holding Co., Ltd.",
+        "symbol": "LXEH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lexeo Therapeutics, Inc.",
+        "symbol": "LXEO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lexicon Pharmaceuticals, Inc.",
+        "symbol": "LXRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lyell Immunopharma, Inc.",
+        "symbol": "LYEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lyft, Inc.",
+        "symbol": "LYFT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lyra Therapeutics, Inc.",
+        "symbol": "LYRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LSI Industries Inc.",
+        "symbol": "LYTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LegalZoom.com, Inc.",
+        "symbol": "LZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LZ Technology Holdings Limited",
+        "symbol": "LZMH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Melar Acquisition Corp. I",
+        "symbol": "MACI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Melar Acquisition Corp. I",
+        "symbol": "MACIU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Melar Acquisition Corp. I",
+        "symbol": "MACIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mama's Creations, Inc.",
+        "symbol": "MAMA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Massimo Group",
+        "symbol": "MAMO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Manhattan Associates, Inc.",
+        "symbol": "MANH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WM Technology, Inc.",
+        "symbol": "MAPS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WM Technology, Inc.",
+        "symbol": "MAPSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Marriott International",
+        "symbol": "MAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MARA Holdings, Inc.",
+        "symbol": "MARA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Marine Petroleum Trust",
+        "symbol": "MARPS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Masimo Corporation",
+        "symbol": "MASI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "3 E Network Technology Group Ltd",
+        "symbol": "MASK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "908 Devices Inc.",
+        "symbol": "MASS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mattel, Inc.",
+        "symbol": "MAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Metalpha Technology Holding Limited",
+        "symbol": "MATH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Matthews International Corporation",
+        "symbol": "MATW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Simplify Bitcoin Strategy PLUS Income ETF",
+        "symbol": "MAXI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Maxeon Solar Technologies, Ltd.",
+        "symbol": "MAXN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Maywood Acquisition Corp.",
+        "symbol": "MAYA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Maywood Acquisition Corp.",
+        "symbol": "MAYAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Maywood Acquisition Corp.",
+        "symbol": "MAYAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "J. W. Mays, Inc.",
+        "symbol": "MAYS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Maze Therapeutics, Inc.",
+        "symbol": "MAZE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MasterBeef Group",
+        "symbol": "MB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "M3-Brigade Acquisition V Corp.",
+        "symbol": "MBAV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "M3-Brigade Acquisition V Corp.",
+        "symbol": "MBAVU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "M3-Brigade Acquisition V Corp.",
+        "symbol": "MBAVW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MBS ETF",
+        "symbol": "MBB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Marathon Bancorp, Inc.",
+        "symbol": "MBBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Middlefield Banc Corp.",
+        "symbol": "MBCN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Merchants Bancorp",
+        "symbol": "MBIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Merchants Bancorp",
+        "symbol": "MBINL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Merchants Bancorp",
+        "symbol": "MBINM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Merchants Bancorp",
+        "symbol": "MBINN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mustang Bio, Inc.",
+        "symbol": "MBIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mobileye Global Inc.",
+        "symbol": "MBLY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Medallion Bank",
+        "symbol": "MBNKP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Microbot Medical Inc.",
+        "symbol": "MBOT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Moleculin Biotech, Inc.",
+        "symbol": "MBRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Angel Oak Mortgage-Backed Securities ETF",
+        "symbol": "MBS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Malibu Boats, Inc.",
+        "symbol": "MBUU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mercantile Bank Corporation",
+        "symbol": "MBWM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MBX Biosciences, Inc.",
+        "symbol": "MBX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MetroCity Bankshares, Inc.",
+        "symbol": "MCBS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JPMorgan Fundamental Data Science Mid Core ETF",
+        "symbol": "MCDS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MasterCraft Boat Holdings, Inc.",
+        "symbol": "MCFT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI China ETF",
+        "symbol": "MCHI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Microchip Technology Incorporated",
+        "symbol": "MCHP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Microchip Technology Incorporated",
+        "symbol": "MCHPP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Matthews China Discovery Active ETF",
+        "symbol": "MCHS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Marchex, Inc.",
+        "symbol": "MCHX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Seres Therapeutics, Inc.",
+        "symbol": "MCRB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Monarch Casino & Resort, Inc.",
+        "symbol": "MCRI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Martin Currie Sustainable International Equity ETF",
+        "symbol": "MCSE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CTRL Group Limited",
+        "symbol": "MCTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mill City Ventures III, Ltd.",
+        "symbol": "MCVT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mister Car Wash, Inc.",
+        "symbol": "MCW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Spectral AI, Inc.",
+        "symbol": "MDAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Spectral AI, Inc.",
+        "symbol": "MDAIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MongoDB, Inc.",
+        "symbol": "MDB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MDB Capital Holdings, LLC",
+        "symbol": "MDBH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Medicus Pharma Ltd.",
+        "symbol": "MDCX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Medicus Pharma Ltd.",
+        "symbol": "MDCXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Madrigal Pharmaceuticals, Inc.",
+        "symbol": "MDGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mediaco Holding Inc.",
+        "symbol": "MDIA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Multi-Asset Diversified Income Index Fund",
+        "symbol": "MDIV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mondelez International, Inc.",
+        "symbol": "MDLZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Medalist Diversified REIT, Inc.",
+        "symbol": "MDRR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MediWound Ltd.",
+        "symbol": "MDWD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MiMedx Group, Inc",
+        "symbol": "MDXG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MDxHealth SA",
+        "symbol": "MDXH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Medpace Holdings, Inc.",
+        "symbol": "MEDP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Horizon Kinetics Medical ETF",
+        "symbol": "MEDX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Magic Empire Global Limited",
+        "symbol": "MEGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MEI Pharma, Inc.",
+        "symbol": "MEIP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MercadoLibre, Inc.",
+        "symbol": "MELI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Matthews Emerging Markets Discovery Active ETF",
+        "symbol": "MEMS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Methanex Corporation",
+        "symbol": "MEOH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mercer International Inc.",
+        "symbol": "MERC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mesa Air Group, Inc.",
+        "symbol": "MESA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mesoblast Limited",
+        "symbol": "MESO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Meta Platforms, Inc.",
+        "symbol": "META",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ramaco Resources, Inc.",
+        "symbol": "METC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ramaco Resources, Inc.",
+        "symbol": "METCB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ramaco Resources, Inc.",
+        "symbol": "METCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ramaco Resources, Inc.",
+        "symbol": "METCZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily META Bear 1X Shares",
+        "symbol": "METD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily META Bull 2X Shares",
+        "symbol": "METU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mercurity Fintech Holding Inc.",
+        "symbol": "MFH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "mF International Limited",
+        "symbol": "MFI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MidCap Financial Investment Corporation",
+        "symbol": "MFIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MidCap Financial Investment Corporation",
+        "symbol": "MFICL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Medallion Financial Corp.",
+        "symbol": "MFIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Flexible Municipal High Income ETF",
+        "symbol": "MFLX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MGE Energy Inc.",
+        "symbol": "MGEE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Magic Software Enterprises Ltd.",
+        "symbol": "MGIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Millennium Group International Holdings Limited",
+        "symbol": "MGIH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Magnite, Inc.",
+        "symbol": "MGNI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MacroGenics, Inc.",
+        "symbol": "MGNX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MGP Ingredients, Inc.",
+        "symbol": "MGPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "McGrath RentCorp",
+        "symbol": "MGRC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Monogram Technologies Inc.",
+        "symbol": "MGRM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mangoceuticals, Inc.",
+        "symbol": "MGRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MeiraGTx Holdings plc",
+        "symbol": "MGTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Metagenomi, Inc.",
+        "symbol": "MGX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Magyar Bancorp, Inc.",
+        "symbol": "MGYR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Maiden Holdings, Ltd.",
+        "symbol": "MHLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Meihua International Medical Technologies Co., Ltd.",
+        "symbol": "MHUA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Middleby Corporation",
+        "symbol": "MIDD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mawson Infrastructure Group Inc.",
+        "symbol": "MIGI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Millennial Consumer ETF",
+        "symbol": "MILN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mint Incorporation Limited",
+        "symbol": "MIMI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MIND Technology, Inc.",
+        "symbol": "MIND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MIRA Pharmaceuticals, Inc.",
+        "symbol": "MIRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mirum Pharmaceuticals, Inc.",
+        "symbol": "MIRM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Milestone Pharmaceuticals Inc.",
+        "symbol": "MIST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mitek Systems, Inc.",
+        "symbol": "MITK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MKAM ETF",
+        "symbol": "MKAM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MKDWELL Tech Inc.",
+        "symbol": "MKDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MKDWELL Tech Inc.",
+        "symbol": "MKDWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MKS Instruments, Inc.",
+        "symbol": "MKSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MarketWise, Inc.",
+        "symbol": "MKTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MarketAxess Holdings, Inc.",
+        "symbol": "MKTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MacKenzie Realty Capital, Inc.",
+        "symbol": "MKZR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mesa Laboratories, Inc.",
+        "symbol": "MLAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mountain Lake Acquisition Corp.",
+        "symbol": "MLAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mountain Lake Acquisition Corp.",
+        "symbol": "MLACR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mountain Lake Acquisition Corp.",
+        "symbol": "MLACU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Melco Resorts & Entertainment Limited",
+        "symbol": "MLCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Moolec Science SA",
+        "symbol": "MLEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Moolec Science SA",
+        "symbol": "MLECW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MicroAlgo, Inc.",
+        "symbol": "MLGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MillerKnoll, Inc.",
+        "symbol": "MLKN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MoonLake Immunotherapeutics",
+        "symbol": "MLTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mineralys Therapeutics, Inc.",
+        "symbol": "MLYS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Martin Midstream Partners L.P.",
+        "symbol": "MMLP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Merit Medical Systems, Inc.",
+        "symbol": "MMSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MakeMyTrip Limited",
+        "symbol": "MMYT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MIND C.T.I. Ltd.",
+        "symbol": "MNDO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mobile-health Network Solutions",
+        "symbol": "MNDR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "monday.com Ltd.",
+        "symbol": "MNDY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MannKind Corporation",
+        "symbol": "MNKD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mind Medicine (MindMed) Inc.",
+        "symbol": "MNMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MediciNova, Inc.",
+        "symbol": "MNOV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Monopar Therapeutics Inc.",
+        "symbol": "MNPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Monro, Inc.",
+        "symbol": "MNRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MainStreet Bancshares, Inc.",
+        "symbol": "MNSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MainStreet Bancshares, Inc.",
+        "symbol": "MNSBP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Monster Beverage Corporation",
+        "symbol": "MNST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Montauk Renewables, Inc.",
+        "symbol": "MNTK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tema Neuroscience and Mental Health ETF",
+        "symbol": "MNTL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Momentus Inc.",
+        "symbol": "MNTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Momentus Inc.",
+        "symbol": "MNTSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MoneyHero Limited",
+        "symbol": "MNY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MoneyHero Limited",
+        "symbol": "MNYWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mobilicom Limited",
+        "symbol": "MOB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mobilicom Limited",
+        "symbol": "MOBBW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mobix Labs, Inc.",
+        "symbol": "MOBX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mobix Labs, Inc.",
+        "symbol": "MOBXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Modular Medical, Inc.",
+        "symbol": "MODD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares WestEnd U.S. Sector ETF",
+        "symbol": "MODL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ModivCare Inc.",
+        "symbol": "MODV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MidWestOne Financial Group, Inc.",
+        "symbol": "MOFG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mogo Inc.",
+        "symbol": "MOGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Molecular Partners AG",
+        "symbol": "MOLN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hello Group Inc.",
+        "symbol": "MOMO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Relative Sentiment Tactical Allocation ETF",
+        "symbol": "MOOD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Morningstar, Inc.",
+        "symbol": "MORN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Movano Inc.",
+        "symbol": "MOVE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Motorcar Parts of America, Inc.",
+        "symbol": "MPAA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mid Penn Bancorp",
+        "symbol": "MPB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Monolithic Power Systems, Inc.",
+        "symbol": "MPWR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Marqeta, Inc.",
+        "symbol": "MQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tradr 2X Long Triple Q Monthly ETF",
+        "symbol": "MQQQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long MARA Daily ETF",
+        "symbol": "MRAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Everspin Technologies, Inc.",
+        "symbol": "MRAM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Meridian Corporation",
+        "symbol": "MRBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Monroe Capital Corporation",
+        "symbol": "MRCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mercury Systems Inc",
+        "symbol": "MRCY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mereo BioPharma Group plc",
+        "symbol": "MREO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Marin Software Incorporated",
+        "symbol": "MRIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Marker Therapeutics, Inc.",
+        "symbol": "MRKR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MEDIROM Healthcare Technologies Inc.",
+        "symbol": "MRM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Moderna, Inc.",
+        "symbol": "MRNA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Murano Global Investments PLC",
+        "symbol": "MRNO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Murano Global Investments PLC",
+        "symbol": "MRNOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mersana Therapeutics, Inc.",
+        "symbol": "MRSN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Marten Transport, Ltd.",
+        "symbol": "MRTN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Merus N.V.",
+        "symbol": "MRUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Maravai LifeSciences Holdings, Inc.",
+        "symbol": "MRVI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Marvell Technology, Inc.",
+        "symbol": "MRVL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Marex Group plc",
+        "symbol": "MRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MultiSensor AI Holdings, Inc.",
+        "symbol": "MSAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MultiSensor AI Holdings, Inc.",
+        "symbol": "MSAIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Midland States Bancorp, Inc.",
+        "symbol": "MSBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Midland States Bancorp, Inc.",
+        "symbol": "MSBIP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Middlesex Water Company",
+        "symbol": "MSEX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily MSFT Bear 1X Shares",
+        "symbol": "MSFD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long MSFT Daily ETF",
+        "symbol": "MSFL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Microsoft Corporation",
+        "symbol": "MSFT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily MSFT Bull 2X Shares",
+        "symbol": "MSFU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Motorsport Games Inc.",
+        "symbol": "MSGM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MSP Recovery, Inc.",
+        "symbol": "MSPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MSP Recovery, Inc.",
+        "symbol": "MSPRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MSP Recovery, Inc.",
+        "symbol": "MSPRZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Maison Solutions Inc.",
+        "symbol": "MSS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MicroStrategy Incorporated",
+        "symbol": "MSTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Daily Target 2x Long MSTR ETF",
+        "symbol": "MSTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ming Shing Group Holdings Limited",
+        "symbol": "MSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MMTec, Inc.",
+        "symbol": "MTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Match Group, Inc.",
+        "symbol": "MTCH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Maris-Tech Ltd.",
+        "symbol": "MTEK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Maris-Tech Ltd.",
+        "symbol": "MTEKW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mingteng International Corporation Inc.",
+        "symbol": "MTEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mannatech, Incorporated",
+        "symbol": "MTEX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Materialise NV",
+        "symbol": "MTLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Matrix Service Company",
+        "symbol": "MTRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MACOM Technology Solutions Holdings, Inc.",
+        "symbol": "MTSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Metsera, Inc.",
+        "symbol": "MTSR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MetaVia Inc.",
+        "symbol": "MTVA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Micron Technology, Inc.",
+        "symbol": "MU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily MU Bear 1X Shares",
+        "symbol": "MUD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long MU Daily ETF",
+        "symbol": "MULL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mullen Automotive, Inc.",
+        "symbol": "MULN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mural Oncology plc",
+        "symbol": "MURA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily MU Bull 2X Shares",
+        "symbol": "MUU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MVB Financial Corp.",
+        "symbol": "MVBF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MicroVision, Inc.",
+        "symbol": "MVIS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long MRVL Daily ETF",
+        "symbol": "MVLL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Microvast Holdings, Inc.",
+        "symbol": "MVST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Microvast Holdings, Inc.",
+        "symbol": "MVSTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Marwynn Holdings, Inc.",
+        "symbol": "MWYN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MaxCyte, Inc.",
+        "symbol": "MXCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MaxLinear, Inc",
+        "symbol": "MXL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2026 Corporate Bond ETF",
+        "symbol": "MYCF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2027 Corporate Bond ETF",
+        "symbol": "MYCG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2028 Corporate Bond ETF",
+        "symbol": "MYCH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2029 Corporate Bond ETF",
+        "symbol": "MYCI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2030 Corporate Bond ETF",
+        "symbol": "MYCJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2031 Corporate Bond ETF",
+        "symbol": "MYCK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2032 Corporate Bond ETF",
+        "symbol": "MYCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2033 Corporate Bond ETF",
+        "symbol": "MYCM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2034 Corporate Bond ETF",
+        "symbol": "MYCN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Western Financial, Inc.",
+        "symbol": "MYFW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Myriad Genetics, Inc.",
+        "symbol": "MYGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2026 Municipal Bond ETF",
+        "symbol": "MYMF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2027 Municipal Bond ETF",
+        "symbol": "MYMG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2028 Municipal Bond ETF",
+        "symbol": "MYMH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2029 Municipal Bond ETF",
+        "symbol": "MYMI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR SSGA My2030 Municipal Bond ETF",
+        "symbol": "MYMJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mainz Biomed N.V.",
+        "symbol": "MYNZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PLAYSTUDIOS, Inc.",
+        "symbol": "MYPS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PLAYSTUDIOS, Inc.",
+        "symbol": "MYPSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MYR Group, Inc.",
+        "symbol": "MYRG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "My Size, Inc.",
+        "symbol": "MYSZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nano Labs Ltd",
+        "symbol": "NA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NaaS Technology Inc.",
+        "symbol": "NAAS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Niagen Bioscience, Inc.",
+        "symbol": "NAGE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Natural Alternatives International, Inc.",
+        "symbol": "NAII",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Jinxin Technology Holding Company",
+        "symbol": "NAMI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NewAmsterdam Pharma Company N.V.",
+        "symbol": "NAMS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NewAmsterdam Pharma Company N.V.",
+        "symbol": "NAMSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NanoVibronix, Inc.",
+        "symbol": "NAOV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nathan's Famous, Inc.",
+        "symbol": "NATH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes Transatlantic Defense ETF",
+        "symbol": "NATO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nature's Sunshine Products, Inc.",
+        "symbol": "NATR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nautilus Biotechnology, Inc.",
+        "symbol": "NAUT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Navient Corporation",
+        "symbol": "NAVI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NioCorp Developments Ltd.",
+        "symbol": "NB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NB Bancorp, Inc.",
+        "symbol": "NBBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nebius Group N.V.",
+        "symbol": "NBIS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Neurocrine Biosciences, Inc.",
+        "symbol": "NBIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Northeast Bank",
+        "symbol": "NBN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NBT Bancorp Inc.",
+        "symbol": "NBTB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nanobiotix S.A.",
+        "symbol": "NBTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New Century Logistics (BVI) Limited",
+        "symbol": "NCEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Neo-Concept International Group Holdings Limited",
+        "symbol": "NCI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hashdex Nasdaq Crypto Index US ETF",
+        "symbol": "NCIQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "National CineMedia, Inc.",
+        "symbol": "NCMI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NuCana plc",
+        "symbol": "NCNA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "nCino, Inc.",
+        "symbol": "NCNO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nuveen Core Plus Bond ETF",
+        "symbol": "NCPB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Netcapital Inc.",
+        "symbol": "NCPL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Netcapital Inc.",
+        "symbol": "NCPLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nocera, Inc.",
+        "symbol": "NCRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NCS Multistage Holdings, Inc.",
+        "symbol": "NCSM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intercont (Cayman) Limited",
+        "symbol": "NCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The9 Limited",
+        "symbol": "NCTY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ned Davis Research 360 Dynamic Allocation ETF",
+        "symbol": "NDAA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nasdaq, Inc.",
+        "symbol": "NDAQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Noodles & Company",
+        "symbol": "NDLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ENDRA Life Sciences Inc.",
+        "symbol": "NDRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nordson Corporation",
+        "symbol": "NDSN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NorthEast Community Bancorp, Inc.",
+        "symbol": "NECB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Newegg Commerce, Inc.",
+        "symbol": "NEGG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New Era Helium Inc",
+        "symbol": "NEHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New Era Helium Inc",
+        "symbol": "NEHCW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NeoGenomics, Inc.",
+        "symbol": "NEO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Neogen Corporation",
+        "symbol": "NEOG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Neonode Inc.",
+        "symbol": "NEON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NeoVolta Inc.",
+        "symbol": "NEOV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NeoVolta Inc.",
+        "symbol": "NEOVW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nephros, Inc.",
+        "symbol": "NEPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Roundhill Video Games ETF",
+        "symbol": "NERD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Minerva Neurosciences, Inc",
+        "symbol": "NERV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "National Energy Services Reunited Corp",
+        "symbol": "NESR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "National Energy Services Reunited Corp",
+        "symbol": "NESRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nabors Energy Transition Corp. II",
+        "symbol": "NETD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nabors Energy Transition Corp. II",
+        "symbol": "NETDU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nabors Energy Transition Corp. II",
+        "symbol": "NETDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Neuphoria Therapeutics Inc.",
+        "symbol": "NEUP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NewtekOne, Inc.",
+        "symbol": "NEWT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NewtekOne, Inc.",
+        "symbol": "NEWTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NewtekOne, Inc.",
+        "symbol": "NEWTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NewtekOne, Inc.",
+        "symbol": "NEWTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NewtekOne, Inc.",
+        "symbol": "NEWTZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "StockSnips AI-Powered Sentiment US All Cap ETF",
+        "symbol": "NEWZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nexxen International Ltd.",
+        "symbol": "NEXN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NextDecade Corporation",
+        "symbol": "NEXT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Northfield Bancorp, Inc.",
+        "symbol": "NFBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New Fortress Energy Inc.",
+        "symbol": "NFE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Netflix, Inc.",
+        "symbol": "NFLX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust India Nifty 50 Equal Weight ETF",
+        "symbol": "NFTY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily NFLX Bull 2X Shares",
+        "symbol": "NFXL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily NFLX Bear 1X Shares",
+        "symbol": "NFXS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Neurogene Inc.",
+        "symbol": "NGNE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NewHold Investment Corp III",
+        "symbol": "NHIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NewHold Investment Corp III",
+        "symbol": "NHICU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NewHold Investment Corp III",
+        "symbol": "NHICW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "National Healthcare Properties, Inc.",
+        "symbol": "NHPAP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "National Healthcare Properties, Inc.",
+        "symbol": "NHPBP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Natural Health Trends Corp.",
+        "symbol": "NHTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NICE Ltd",
+        "symbol": "NICE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sprott Nickel Miners ETF",
+        "symbol": "NIKL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NioCorp Developments Ltd.",
+        "symbol": "NIOBW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NIP Group Inc.",
+        "symbol": "NIPG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NiSun Intl Enterprise Development Group Co, Ltd",
+        "symbol": "NISN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "N2OFF, Inc.",
+        "symbol": "NITO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Niu Technologies",
+        "symbol": "NIU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NewGenIvf Group Limited",
+        "symbol": "NIVF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NewGenIvf Group Limited",
+        "symbol": "NIVFW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Research Affiliates Deletions ETF",
+        "symbol": "NIXT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nixxy, Inc.",
+        "symbol": "NIXX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nixxy, Inc.",
+        "symbol": "NIXXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "National Bankshares, Inc.",
+        "symbol": "NKSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nektar Therapeutics",
+        "symbol": "NKTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nkarta, Inc.",
+        "symbol": "NKTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NLS Pharmaceutics Ltd.",
+        "symbol": "NLSP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NLS Pharmaceutics Ltd.",
+        "symbol": "NLSPW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New Mountain Finance Corporation",
+        "symbol": "NMFC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New Mountain Finance Corporation",
+        "symbol": "NMFCZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NMI Holdings Inc",
+        "symbol": "NMIH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Neumora Therapeutics, Inc.",
+        "symbol": "NMRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Newmark Group, Inc.",
+        "symbol": "NMRK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NeuroOne Medical Technologies Corporation",
+        "symbol": "NMTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NextNav Inc.",
+        "symbol": "NN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NextNav Inc.",
+        "symbol": "NNAVW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NN, Inc.",
+        "symbol": "NNBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nano Dimension Ltd.",
+        "symbol": "NNDM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nano Nuclear Energy Inc.",
+        "symbol": "NNE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Anbio Biotechnology",
+        "symbol": "NNNN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NANO-X IMAGING LTD",
+        "symbol": "NNOX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NI Holdings, Inc.",
+        "symbol": "NODK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CO2 Energy Transition Corp.",
+        "symbol": "NOEM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CO2 Energy Transition Corp.",
+        "symbol": "NOEMR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CO2 Energy Transition Corp.",
+        "symbol": "NOEMU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CO2 Energy Transition Corp.",
+        "symbol": "NOEMW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Inotiv, Inc.",
+        "symbol": "NOTV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Novanta Inc.",
+        "symbol": "NOVT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New Providence Acquisition Corp. III",
+        "symbol": "NPACU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Neuropace, Inc.",
+        "symbol": "NPCE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nuveen Preferred and Income ETF",
+        "symbol": "NPFI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "National Research Corporation",
+        "symbol": "NRC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NerdWallet, Inc.",
+        "symbol": "NRDS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xtrackers RREEF Global Natural Resources ETF",
+        "symbol": "NRES",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Northrim BanCorp Inc",
+        "symbol": "NRIM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nurix Therapeutics, Inc.",
+        "symbol": "NRIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NeuroSense Therapeutics Ltd.",
+        "symbol": "NRSN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NeuroSense Therapeutics Ltd.",
+        "symbol": "NRSNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NRX Pharmaceuticals, Inc.",
+        "symbol": "NRXP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NRX Pharmaceuticals, Inc.",
+        "symbol": "NRXPW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nuveen Sustainable Core ETF",
+        "symbol": "NSCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "National Security Emerging Markets Index ETF",
+        "symbol": "NSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Insight Enterprises, Inc.",
+        "symbol": "NSIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "InspireMD Inc.",
+        "symbol": "NSPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NAPCO Security Technologies, Inc.",
+        "symbol": "NSSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NSTS Bancorp, Inc.",
+        "symbol": "NSTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nortech Systems Incorporated",
+        "symbol": "NSYS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NetApp, Inc.",
+        "symbol": "NTAP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NETCLASS TECHNOLOGY INC",
+        "symbol": "NTCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NetScout Systems, Inc.",
+        "symbol": "NTCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NetEase, Inc.",
+        "symbol": "NTES",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NETGEAR, Inc.",
+        "symbol": "NTGR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NeOnc Technologies Holdings, Inc.",
+        "symbol": "NTHI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Northern Technologies International Corporation",
+        "symbol": "NTIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intellia Therapeutics, Inc.",
+        "symbol": "NTLA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nutanix, Inc.",
+        "symbol": "NTNX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Natera, Inc.",
+        "symbol": "NTRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nutriband Inc.",
+        "symbol": "NTRB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nutriband Inc.",
+        "symbol": "NTRBW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NextTrip, Inc.",
+        "symbol": "NTRP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Northern Trust Corporation",
+        "symbol": "NTRS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Northern Trust Corporation",
+        "symbol": "NTRSO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NETSOL Technologies Inc.",
+        "symbol": "NTWK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Newbury Street II Acquisition Corp",
+        "symbol": "NTWO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Newbury Street II Acquisition Corp",
+        "symbol": "NTWOU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Newbury Street II Acquisition Corp",
+        "symbol": "NTWOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nukkleus Inc.",
+        "symbol": "NUKK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nukkleus Inc.",
+        "symbol": "NUKKW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NeuroMetrix, Inc.",
+        "symbol": "NURO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nuveen Ultra Short Income ETF",
+        "symbol": "NUSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nutex Health Inc.",
+        "symbol": "NUTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nuvalent, Inc.",
+        "symbol": "NUVL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nuwellis, Inc.",
+        "symbol": "NUWE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nova Minerals Limited",
+        "symbol": "NVA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nova Minerals Limited",
+        "symbol": "NVAWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Novavax, Inc.",
+        "symbol": "NVAX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NovoCure Limited",
+        "symbol": "NVCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nuvectis Pharma, Inc.",
+        "symbol": "NVCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Short NVDA Daily ETF",
+        "symbol": "NVD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NVIDIA Corporation",
+        "symbol": "NVDA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily NVDA Bear 1X Shares",
+        "symbol": "NVDD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long NVDA Daily ETF",
+        "symbol": "NVDG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long NVDA Daily ETF",
+        "symbol": "NVDL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tradr 1.5X Short NVDA Daily ETF",
+        "symbol": "NVDS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily NVDA Bull 2X Shares",
+        "symbol": "NVDU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NVE Corporation",
+        "symbol": "NVEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NV5 Global, Inc.",
+        "symbol": "NVEE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nova Lifestyle, Inc",
+        "symbol": "NVFY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nova Ltd.",
+        "symbol": "NVMI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nvni Group Limited",
+        "symbol": "NVNI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nvni Group Limited",
+        "symbol": "NVNIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "enVVeno Medical Corporation",
+        "symbol": "NVNO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Navitas Semiconductor Corporation",
+        "symbol": "NVTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nuvve Holding Corp.",
+        "symbol": "NVVE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nuvve Holding Corp.",
+        "symbol": "NVVEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NOVONIX Limited",
+        "symbol": "NVX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Northwest Bancshares, Inc.",
+        "symbol": "NWBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NorthWestern Energy Group, Inc.",
+        "symbol": "NWE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Norwood Financial Corp.",
+        "symbol": "NWFL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nature Wood Group Limited",
+        "symbol": "NWGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Newell Brands Inc.",
+        "symbol": "NWL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Northwest Pipe Company",
+        "symbol": "NWPX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "News Corporation",
+        "symbol": "NWS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "News Corporation",
+        "symbol": "NWSA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Newton Golf Company, Inc.",
+        "symbol": "NWTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NWTN Inc.",
+        "symbol": "NWTN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NWTN Inc.",
+        "symbol": "NWTNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NexGel, Inc",
+        "symbol": "NXGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NexGel, Inc",
+        "symbol": "NXGLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nexalin Technology, Inc.",
+        "symbol": "NXL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nexalin Technology, Inc.",
+        "symbol": "NXLIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NXP Semiconductors N.V.",
+        "symbol": "NXPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NextPlat Corp",
+        "symbol": "NXPL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NextPlat Corp",
+        "symbol": "NXPLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nexstar Media Group, Inc.",
+        "symbol": "NXST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nextracker Inc.",
+        "symbol": "NXT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NextCure, Inc.",
+        "symbol": "NXTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Indxx NextG ETF",
+        "symbol": "NXTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Next Technology Holding Inc.",
+        "symbol": "NXTT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NextNRG, Inc.",
+        "symbol": "NXXT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nayax Ltd.",
+        "symbol": "NYAX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New York Mortgage Trust, Inc.",
+        "symbol": "NYMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New York Mortgage Trust, Inc.",
+        "symbol": "NYMTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New York Mortgage Trust, Inc.",
+        "symbol": "NYMTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New York Mortgage Trust, Inc.",
+        "symbol": "NYMTL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New York Mortgage Trust, Inc.",
+        "symbol": "NYMTM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New York Mortgage Trust, Inc.",
+        "symbol": "NYMTN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "New York Mortgage Trust, Inc.",
+        "symbol": "NYMTZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nyxoah SA",
+        "symbol": "NYXH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR MSCI ACWI Climate Paris Aligned ETF",
+        "symbol": "NZAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR MSCI USA Climate Paris Aligned ETF",
+        "symbol": "NZUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OmniAb, Inc.",
+        "symbol": "OABI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OmniAb, Inc.",
+        "symbol": "OABIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oaktree Acquisition Corp. III Life Sciences",
+        "symbol": "OACC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oaktree Acquisition Corp. III Life Sciences",
+        "symbol": "OACCU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oaktree Acquisition Corp. III Life Sciences",
+        "symbol": "OACCW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oak Woods Acquisition Corporation",
+        "symbol": "OAKU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oak Woods Acquisition Corporation",
+        "symbol": "OAKUR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oak Woods Acquisition Corporation",
+        "symbol": "OAKUU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oak Woods Acquisition Corporation",
+        "symbol": "OAKUW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Outbrain Inc.",
+        "symbol": "OB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "US Treasury 12 Month Bill ETF",
+        "symbol": "OBIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Orchestra BioMed Holdings, Inc.",
+        "symbol": "OBIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oblong Inc.",
+        "symbol": "OBLG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Orange County Bancorp, Inc.",
+        "symbol": "OBT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Optical Cable Corporation",
+        "symbol": "OCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OFS Credit Company, Inc.",
+        "symbol": "OCCI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OFS Credit Company, Inc.",
+        "symbol": "OCCIM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OFS Credit Company, Inc.",
+        "symbol": "OCCIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OFS Credit Company, Inc.",
+        "symbol": "OCCIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OceanFirst Financial Corp.",
+        "symbol": "OCFC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OceanFirst Financial Corp.",
+        "symbol": "OCFCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oriental Culture Holding LTD",
+        "symbol": "OCG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ocugen, Inc.",
+        "symbol": "OCGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oculis Holding AG",
+        "symbol": "OCS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oculis Holding AG",
+        "symbol": "OCSAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oaktree Specialty Lending Corporation",
+        "symbol": "OCSL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eightco Holdings Inc.",
+        "symbol": "OCTO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ocular Therapeutix, Inc.",
+        "symbol": "OCUL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oncocyte Corporation",
+        "symbol": "OCX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ODDITY Tech Ltd.",
+        "symbol": "ODD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacer BlueStar Digital Entertainment ETF",
+        "symbol": "ODDS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Old Dominion Freight Line, Inc.",
+        "symbol": "ODFL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The ODP Corporation",
+        "symbol": "ODP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Osisko Development Corp.",
+        "symbol": "ODVWZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Odysight.ai Inc.",
+        "symbol": "ODYS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Orion Energy Systems, Inc.",
+        "symbol": "OESX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Orthofix Medical Inc.",
+        "symbol": "OFIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Omega Flex, Inc.",
+        "symbol": "OFLX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OFS Capital Corporation",
+        "symbol": "OFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OFS Capital Corporation",
+        "symbol": "OFSSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Organigram Global Inc.",
+        "symbol": "OGI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Okta, Inc.",
+        "symbol": "OKTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OnKure Therapeutics, Inc.",
+        "symbol": "OKUR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OKYO Pharma Limited",
+        "symbol": "OKYO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The OLB Group, Inc.",
+        "symbol": "OLB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Universal Display Corporation",
+        "symbol": "OLED",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ollie's Bargain Outlet Holdings, Inc.",
+        "symbol": "OLLI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Olema Pharmaceuticals, Inc.",
+        "symbol": "OLMA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Olaplex Holdings, Inc.",
+        "symbol": "OLPX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Outset Medical, Inc.",
+        "symbol": "OM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Grupo Aeroportuario del Centro Norte S.A.B. de C.V.",
+        "symbol": "OMAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Old Market Capital Corporation",
+        "symbol": "OMCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Omnicell, Inc.",
+        "symbol": "OMCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Omeros Corporation",
+        "symbol": "OMER",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Odyssey Marine Exploration, Inc.",
+        "symbol": "OMEX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ohmyhome Limited",
+        "symbol": "OMH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ON Semiconductor Corporation",
+        "symbol": "ON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Old National Bancorp",
+        "symbol": "ONB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Old National Bancorp",
+        "symbol": "ONBPO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Old National Bancorp",
+        "symbol": "ONBPP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BeiGene, Ltd.",
+        "symbol": "ONC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Onconetix, Inc.",
+        "symbol": "ONCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oncolytics Biotech Inc.",
+        "symbol": "ONCY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ondas Holdings Inc.",
+        "symbol": "ONDS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OneConstruction Group Limited",
+        "symbol": "ONEG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Fidelity Nasdaq Composite Index ETF",
+        "symbol": "ONEQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OneWater Marine Inc.",
+        "symbol": "ONEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Onfolio Holdings Inc.",
+        "symbol": "ONFO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Onfolio Holdings Inc.",
+        "symbol": "ONFOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OneMedNet Corp",
+        "symbol": "ONMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OneMedNet Corp",
+        "symbol": "ONMDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "One One Nasdaq-100 and Bitcoin ETF",
+        "symbol": "OOQB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "One One S&P 500 and Bitcoin ETF",
+        "symbol": "OOSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OceanPal Inc.",
+        "symbol": "OP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OPAL Fuels Inc.",
+        "symbol": "OPAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OP Bancorp",
+        "symbol": "OPBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Option Care Health, Inc.",
+        "symbol": "OPCH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Opendoor Technologies Inc",
+        "symbol": "OPEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Office Properties Income Trust",
+        "symbol": "OPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Office Properties Income Trust",
+        "symbol": "OPINL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Opko Health, Inc.",
+        "symbol": "OPK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Old Point Financial Corporation",
+        "symbol": "OPOF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Opera Limited",
+        "symbol": "OPRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oportun Financial Corporation",
+        "symbol": "OPRT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OptimizeRx Corporation",
+        "symbol": "OPRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Opthea Limited",
+        "symbol": "OPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OptiNose, Inc.",
+        "symbol": "OPTN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Syntec Optics Holdings, Inc.",
+        "symbol": "OPTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Syntec Optics Holdings, Inc.",
+        "symbol": "OPTXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Optimize Strategy Index ETF",
+        "symbol": "OPTZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Optex Systems Holdings, Inc.",
+        "symbol": "OPXS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Daily Target 2X Long ORCL ETF",
+        "symbol": "ORCX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Origin Materials, Inc.",
+        "symbol": "ORGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Origin Materials, Inc.",
+        "symbol": "ORGNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Organogenesis Holdings Inc.",
+        "symbol": "ORGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oric Pharmaceuticals, Inc.",
+        "symbol": "ORIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oriental Rise Holdings Limited",
+        "symbol": "ORIS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oruka Therapeutics, Inc.",
+        "symbol": "ORKA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Orangekloud Technology Inc.",
+        "symbol": "ORKT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "O'Reilly Automotive, Inc.",
+        "symbol": "ORLY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oramed Pharmaceuticals Inc.",
+        "symbol": "ORMP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Militia Long/Short Equity ETF",
+        "symbol": "ORR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Orrstown Financial Services, Inc.",
+        "symbol": "ORRF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OneStream, Inc.",
+        "symbol": "OS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Old Second Bancorp, Inc.",
+        "symbol": "OSBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OSI Systems, Inc.",
+        "symbol": "OSIS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OneSpan Inc.",
+        "symbol": "OSPN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OSR Holdings, Inc.",
+        "symbol": "OSRH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OSR Holdings, Inc.",
+        "symbol": "OSRHW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "One Stop Systems, Inc.",
+        "symbol": "OSS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ostin Technology Group Co., Ltd.",
+        "symbol": "OST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OraSure Technologies, Inc.",
+        "symbol": "OSUR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "OneSpaWorld Holdings Limited",
+        "symbol": "OSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Open Text Corporation",
+        "symbol": "OTEX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Outlook Therapeutics, Inc.",
+        "symbol": "OTLK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oatly Group AB",
+        "symbol": "OTLY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ontrak, Inc.",
+        "symbol": "OTRK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Otter Tail Corporation",
+        "symbol": "OTTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ouster, Inc.",
+        "symbol": "OUST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ouster, Inc.",
+        "symbol": "OUSTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ouster, Inc.",
+        "symbol": "OUSTZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ohio Valley Banc Corp.",
+        "symbol": "OVBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ovid Therapeutics Inc.",
+        "symbol": "OVID",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oak Valley Bancorp (CA)",
+        "symbol": "OVLY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oxbridge Re Holdings Limited",
+        "symbol": "OXBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oxbridge Re Holdings Limited",
+        "symbol": "OXBRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oxford Lane Capital Corp.",
+        "symbol": "OXLC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oxford Lane Capital Corp.",
+        "symbol": "OXLCG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oxford Lane Capital Corp.",
+        "symbol": "OXLCI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oxford Lane Capital Corp.",
+        "symbol": "OXLCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oxford Lane Capital Corp.",
+        "symbol": "OXLCN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oxford Lane Capital Corp.",
+        "symbol": "OXLCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oxford Lane Capital Corp.",
+        "symbol": "OXLCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oxford Lane Capital Corp.",
+        "symbol": "OXLCZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oxford Square Capital Corp.",
+        "symbol": "OXSQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oxford Square Capital Corp.",
+        "symbol": "OXSQG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Oxford Square Capital Corp.",
+        "symbol": "OXSQZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Roundhill GLP-1 & Weight Loss ETF",
+        "symbol": "OZEM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bank OZK",
+        "symbol": "OZK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bank OZK",
+        "symbol": "OZKAP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Plains All American Pipeline, L.P.",
+        "symbol": "PAA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Paris-Aligned Climate MSCI World ex USA ETF",
+        "symbol": "PABD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Paris-Aligned Climate MSCI USA ETF",
+        "symbol": "PABU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacific Biosciences of California, Inc.",
+        "symbol": "PACB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Plains GP Holdings, L.P.",
+        "symbol": "PAGP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Phibro Animal Health Corporation",
+        "symbol": "PAHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Proficient Auto Logistics, Inc.",
+        "symbol": "PAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily PANW Bear 1X Shares",
+        "symbol": "PALD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Palisade Bio, Inc.",
+        "symbol": "PALI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily PANW Bull 2X Shares",
+        "symbol": "PALU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PAMT CORP",
+        "symbol": "PAMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long PANW Daily ETF",
+        "symbol": "PANG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pangaea Logistics Solutions Ltd.",
+        "symbol": "PANL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Palo Alto Networks, Inc.",
+        "symbol": "PANW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Paramount Global",
+        "symbol": "PARA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Paramount Global",
+        "symbol": "PARAA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Passage Bio, Inc.",
+        "symbol": "PASG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Patrick Industries, Inc.",
+        "symbol": "PATK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacer Nasdaq International Patent Leaders ETF",
+        "symbol": "PATN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PAVmed Inc.",
+        "symbol": "PAVM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PAVmed Inc.",
+        "symbol": "PAVMZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Paranovus Entertainment Technology Ltd.",
+        "symbol": "PAVS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Patria Investments Limited",
+        "symbol": "PAX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Payoneer Global Inc.",
+        "symbol": "PAYO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Paysign, Inc.",
+        "symbol": "PAYS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Paychex, Inc.",
+        "symbol": "PAYX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PB Bankshares, Inc.",
+        "symbol": "PBBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pioneer Bancorp, Inc.",
+        "symbol": "PBFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pathfinder Bancorp, Inc.",
+        "symbol": "PBHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Psyence Biomedical Ltd.",
+        "symbol": "PBM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Psyence Biomedical Ltd.",
+        "symbol": "PBMWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Potbelly Corporation",
+        "symbol": "PBPB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PGIM Laddered Nasdaq-100 Buffer 12 ETF",
+        "symbol": "PBQQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Puma Biotechnology Inc",
+        "symbol": "PBYI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Premium Catering (Holdings) Limited",
+        "symbol": "PC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PACCAR Inc.",
+        "symbol": "PCAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PCB Bancorp",
+        "symbol": "PCB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PotlatchDeltic Corporation",
+        "symbol": "PCH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PicoCELA Inc.",
+        "symbol": "PCLA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BondBloxx Private Credit CLO ETF",
+        "symbol": "PCMM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacira BioSciences, Inc.",
+        "symbol": "PCRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Processa Pharmaceuticals, Inc.",
+        "symbol": "PCSA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Perceptive Capital Solutions Corp",
+        "symbol": "PCSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PureCycle Technologies, Inc.",
+        "symbol": "PCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PureCycle Technologies, Inc.",
+        "symbol": "PCTTU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PureCycle Technologies, Inc.",
+        "symbol": "PCTTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Paylocity Holding Corporation",
+        "symbol": "PCTY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vaxcyte, Inc.",
+        "symbol": "PCVX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pure Cycle Corporation",
+        "symbol": "PCYO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Agriculture Commodity Strategy No K-1 ETF",
+        "symbol": "PDBA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Optimum Yield Diversified Commodity Strategy No K-1 ETF",
+        "symbol": "PDBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PDD Holdings Inc.",
+        "symbol": "PDD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pro-Dex, Inc.",
+        "symbol": "PDEX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PDF Solutions, Inc.",
+        "symbol": "PDFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ponce Financial Group, Inc.",
+        "symbol": "PDLB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dorsey Wright Momentum ETF",
+        "symbol": "PDP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PDS Biotechnology Corporation",
+        "symbol": "PDSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Palladyne AI Corp.",
+        "symbol": "PDYN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Palladyne AI Corp.",
+        "symbol": "PDYNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Peoples Bancorp of North Carolina, Inc.",
+        "symbol": "PEBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Peoples Bancorp Inc.",
+        "symbol": "PEBO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Phillips Edison & Company, Inc.",
+        "symbol": "PECO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pegasystems Inc.",
+        "symbol": "PEGA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Penguin Solutions, Inc.",
+        "symbol": "PENG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PENN Entertainment, Inc.",
+        "symbol": "PENN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PepsiCo, Inc.",
+        "symbol": "PEP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PepGen Inc.",
+        "symbol": "PEPG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Parametric Equity Plus ETF",
+        "symbol": "PEPS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Perion Network Ltd",
+        "symbol": "PERI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Perma-Fix Environmental Services, Inc.",
+        "symbol": "PESI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wag! Group Co.",
+        "symbol": "PET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PetMed Express, Inc.",
+        "symbol": "PETS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wag! Group Co.",
+        "symbol": "PETWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TDH Holdings, Inc.",
+        "symbol": "PETZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco High Yield Equity Dividend Achievers ETF",
+        "symbol": "PEY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dorsey Wright Consumer Cyclicals Momentum ETF",
+        "symbol": "PEZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pinnacle Food Group Limited",
+        "symbol": "PFAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Preferred Bank",
+        "symbol": "PFBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Preferred and Income Securities ETF",
+        "symbol": "PFF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Principal Financial Group Inc",
+        "symbol": "PFG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dorsey Wright Financial Momentum ETF",
+        "symbol": "PFI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Peoples Financial Services Corp.",
+        "symbol": "PFIS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dividend Achievers ETF",
+        "symbol": "PFM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PhenixFIN Corporation",
+        "symbol": "PFX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PhenixFIN Corporation",
+        "symbol": "PFXNZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Peapack-Gladstone Financial Corporation",
+        "symbol": "PGC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Precigen, Inc.",
+        "symbol": "PGEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Primega Group Holdings Limited",
+        "symbol": "PGHL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Golden Dragon China ETF",
+        "symbol": "PGJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Progyny, Inc.",
+        "symbol": "PGNY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pagaya Technologies Ltd.",
+        "symbol": "PGY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pagaya Technologies Ltd.",
+        "symbol": "PGYWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pharming Group N.V.",
+        "symbol": "PHAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Phathom Pharmaceuticals, Inc.",
+        "symbol": "PHAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Park Ha Biological Technology Co., Ltd.",
+        "symbol": "PHH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Phio Pharmaceuticals Corp.",
+        "symbol": "PHIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Performant Healthcare, Inc.",
+        "symbol": "PHLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Water Resources ETF",
+        "symbol": "PHO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Phoenix Asia Holdings Limited",
+        "symbol": "PHOE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Phunware, Inc.",
+        "symbol": "PHUN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pharvaris N.V.",
+        "symbol": "PHVS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Impinj, Inc.",
+        "symbol": "PI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco International Dividend Achievers ETF",
+        "symbol": "PID",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dorsey Wright Emerging Markets Momentum ETF",
+        "symbol": "PIE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "P3 Health Partners Inc.",
+        "symbol": "PIII",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "P3 Health Partners Inc.",
+        "symbol": "PIIIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Premier, Inc.",
+        "symbol": "PINC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Global Water ETF",
+        "symbol": "PIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dorsey Wright Developed Markets Momentum ETF",
+        "symbol": "PIZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Parke Bancorp, Inc.",
+        "symbol": "PKBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Park-Ohio Holdings Corp.",
+        "symbol": "PKOH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco BuyBack Achievers ETF",
+        "symbol": "PKW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Photronics, Inc.",
+        "symbol": "PLAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Dave & Buster's Entertainment, Inc.",
+        "symbol": "PLAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Plumas Bancorp",
+        "symbol": "PLBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PLBY Group, Inc.",
+        "symbol": "PLBY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Children's Place, Inc. (The)",
+        "symbol": "PLCE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Piedmont Lithium Inc.",
+        "symbol": "PLL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Plum Acquisition Corp. IV",
+        "symbol": "PLMK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Plum Acquisition Corp. IV",
+        "symbol": "PLMKU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Plum Acquisition Corp. IV",
+        "symbol": "PLMKW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Palomar Holdings, Inc.",
+        "symbol": "PLMR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Preformed Line Products Company",
+        "symbol": "PLPC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pliant Therapeutics, Inc.",
+        "symbol": "PLRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Polyrizon Ltd.",
+        "symbol": "PLRZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pulse Biosciences, Inc",
+        "symbol": "PLSE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily PLTR Bear 1X Shares",
+        "symbol": "PLTD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long PLTR Daily ETF",
+        "symbol": "PLTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Playtika Holding Corp.",
+        "symbol": "PLTK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Palantir Technologies Inc.",
+        "symbol": "PLTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily PLTR Bull 2X Shares",
+        "symbol": "PLTU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Plug Power, Inc.",
+        "symbol": "PLUG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pluri Inc.",
+        "symbol": "PLUR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ePlus inc.",
+        "symbol": "PLUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Plutus Financial Group Limited",
+        "symbol": "PLUT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Plexus Corp.",
+        "symbol": "PLXS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Playa Hotels & Resorts N.V.",
+        "symbol": "PLYA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Powell Max Limited",
+        "symbol": "PMAX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PIMCO Mortgage-Backed Securities Active Exchange-Traded Fund",
+        "symbol": "PMBS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PharmaCyte  Biotech, Inc.",
+        "symbol": "PMCB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Primech Holdings Ltd.",
+        "symbol": "PMEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProMIS Neurosciences Inc.",
+        "symbol": "PMN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CPI Card Group Inc.",
+        "symbol": "PMTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PMV Pharmaceuticals, Inc.",
+        "symbol": "PMVP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Skycorp Solar Group Limited",
+        "symbol": "PN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Patriot National Bancorp Inc.",
+        "symbol": "PNBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pinnacle Financial Partners, Inc.",
+        "symbol": "PNFP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pinnacle Financial Partners, Inc.",
+        "symbol": "PNFPP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Nasdaq Internet ETF",
+        "symbol": "PNQI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PrimeEnergy Resources Corporation",
+        "symbol": "PNRG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Pennant Group, Inc.",
+        "symbol": "PNTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Predictive Oncology Inc.",
+        "symbol": "POAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Precision Optics Corporation, Inc.",
+        "symbol": "POCI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PodcastOne, Inc.",
+        "symbol": "PODC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Insulet Corporation",
+        "symbol": "PODD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "POET Technologies Inc.",
+        "symbol": "POET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Polar Power, Inc.",
+        "symbol": "POLA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Andretti Acquisition Corp. II",
+        "symbol": "POLE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Andretti Acquisition Corp. II",
+        "symbol": "POLEU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Andretti Acquisition Corp. II",
+        "symbol": "POLEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pony AI Inc.",
+        "symbol": "PONY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pool Corporation",
+        "symbol": "POOL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Power Integrations, Inc.",
+        "symbol": "POWI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Powell Industries, Inc.",
+        "symbol": "POWL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AMMO, Inc.",
+        "symbol": "POWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "AMMO, Inc.",
+        "symbol": "POWWP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacific Premier Bancorp Inc",
+        "symbol": "PPBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Purple Biotech Ltd.",
+        "symbol": "PPBT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pilgrim's Pride Corporation",
+        "symbol": "PPC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VanEck Pharmaceutical ETF",
+        "symbol": "PPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Astoria Real Assets ETF",
+        "symbol": "PPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Perma-Pipe International Holdings, Inc.",
+        "symbol": "PPIH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pioneer Power Solutions, Inc.",
+        "symbol": "PPSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Perpetua Resources Corp.",
+        "symbol": "PPTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PGIM Nasdaq-100 Buffer 12 ETF",
+        "symbol": "PQAP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PGIM Nasdaq-100 Buffer 12 ETF",
+        "symbol": "PQJA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PGIM Nasdaq-100 Buffer 12 ETF",
+        "symbol": "PQJL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PGIM Nasdaq-100 Buffer 12 ETF",
+        "symbol": "PQOC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PRA Group, Inc.",
+        "symbol": "PRAA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Praxis Precision Medicines, Inc.",
+        "symbol": "PRAX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Porch Group, Inc.",
+        "symbol": "PRCH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PROCEPT BioRobotics Corporation",
+        "symbol": "PRCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Perdoceo Education Corporation",
+        "symbol": "PRDO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Prenetics Global Limited",
+        "symbol": "PRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Prenetics Global Limited",
+        "symbol": "PRENW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PainReform Ltd.",
+        "symbol": "PRFX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco RAFI US 1500 Small-Mid ETF",
+        "symbol": "PRFZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Progress Software Corporation",
+        "symbol": "PRGS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Prelude Therapeutics Incorporated",
+        "symbol": "PRLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Prime Medicine, Inc.",
+        "symbol": "PRME",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dorsey Wright Industrials Momentum ETF",
+        "symbol": "PRN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Profound Medical Corp.",
+        "symbol": "PROF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProKidney Corp.",
+        "symbol": "PROK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Prairie Operating Co.",
+        "symbol": "PROP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Provident Financial Holdings, Inc.",
+        "symbol": "PROV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProPhase Labs, Inc.",
+        "symbol": "PRPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Purple Innovation, Inc.",
+        "symbol": "PRPL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Precipio, Inc.",
+        "symbol": "PRPO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProQR Therapeutics N.V.",
+        "symbol": "PRQR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Peraso Inc.",
+        "symbol": "PRSO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Prothena Corporation plc",
+        "symbol": "PRTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PureTech Health plc",
+        "symbol": "PRTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Portage Biotech Inc.",
+        "symbol": "PRTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Priority Technology Holdings, Inc.",
+        "symbol": "PRTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CarParts.com, Inc.",
+        "symbol": "PRTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Privia Health Group, Inc.",
+        "symbol": "PRVA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ParaZero Technologies Ltd.",
+        "symbol": "PRZO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Principal U.S. Small-Cap ETF",
+        "symbol": "PSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco S&P SmallCap Consumer Staples ETF",
+        "symbol": "PSCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco S&P SmallCap Consumer Discretionary ETF",
+        "symbol": "PSCD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco S&P SmallCap Energy ETF",
+        "symbol": "PSCE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco S&P SmallCap Financials ETF",
+        "symbol": "PSCF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco S&P SmallCap Health Care ETF",
+        "symbol": "PSCH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco S&P SmallCap Industrials ETF",
+        "symbol": "PSCI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco S&P SmallCap Materials ETF",
+        "symbol": "PSCM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco S&P SmallCap Information Technology ETF",
+        "symbol": "PSCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco S&P SmallCap Utilities & Communication Services ETF",
+        "symbol": "PSCU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Prospect Capital Corporation",
+        "symbol": "PSEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Principal Quality ETF",
+        "symbol": "PSET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Performance Shipping Inc.",
+        "symbol": "PSHG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PS International Group Ltd.",
+        "symbol": "PSIG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Power Solutions International, Inc.",
+        "symbol": "PSIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dorsey Wright Consumer Staples Momentum ETF",
+        "symbol": "PSL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PriceSmart, Inc.",
+        "symbol": "PSMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Personalis, Inc.",
+        "symbol": "PSNL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Polestar Automotive Holding UK Limited",
+        "symbol": "PSNY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Polestar Automotive Holding UK Limited",
+        "symbol": "PSNYW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PeakShares Sector Rotation ETF",
+        "symbol": "PSTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PLUS THERAPEUTICS, Inc.",
+        "symbol": "PSTV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xtrackers Cybersecurity Select Equity ETF",
+        "symbol": "PSWD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pintec Technology Holdings Limited",
+        "symbol": "PT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PTC Inc.",
+        "symbol": "PTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PTC Therapeutics, Inc.",
+        "symbol": "PTCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X PropTech ETF",
+        "symbol": "PTEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Patterson-UTI Energy, Inc.",
+        "symbol": "PTEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dorsey Wright Technology Momentum ETF",
+        "symbol": "PTF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Protagonist Therapeutics, Inc.",
+        "symbol": "PTGX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dorsey Wright Healthcare Momentum ETF",
+        "symbol": "PTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pheton Holdings Ltd",
+        "symbol": "PTHL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long PLTR Daily ETF",
+        "symbol": "PTIR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Protagenic Therapeutics, Inc.",
+        "symbol": "PTIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Protagenic Therapeutics, Inc.",
+        "symbol": "PTIXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PTL LTD",
+        "symbol": "PTLE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Portillo's Inc.",
+        "symbol": "PTLO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Portman Ridge Finance Corporation",
+        "symbol": "PTMN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacer Trendpilot 100 ETF",
+        "symbol": "PTNQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Peloton Interactive, Inc.",
+        "symbol": "PTON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Petros Pharmaceuticals, Inc.",
+        "symbol": "PTPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PubMatic, Inc.",
+        "symbol": "PUBM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dorsey Wright Utilities Momentum ETF",
+        "symbol": "PUI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pulmatrix, Inc.",
+        "symbol": "PULM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Provident Bancorp, Inc.",
+        "symbol": "PVBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Palvella Therapeutics, Inc.",
+        "symbol": "PVLA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Prestige Wealth Inc.",
+        "symbol": "PWM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Penns Woods Bancorp, Inc.",
+        "symbol": "PWOD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Perella Weinberg Partners",
+        "symbol": "PWP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dorsey Wright Energy Momentum ETF",
+        "symbol": "PXI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pixelworks, Inc.",
+        "symbol": "PXLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pyxis Tankers Inc.",
+        "symbol": "PXS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pyxis Tankers Inc.",
+        "symbol": "PXSAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Principal Value ETF",
+        "symbol": "PY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PolyPid Ltd.",
+        "symbol": "PYPD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long PYPL Daily ETF",
+        "symbol": "PYPG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "PayPal Holdings, Inc.",
+        "symbol": "PYPL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pyxis Oncology, Inc.",
+        "symbol": "PYXS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Dorsey Wright Basic Materials Momentum ETF",
+        "symbol": "PYZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Papa John's International, Inc.",
+        "symbol": "PZZA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust NASDAQ ABA Community Bank Index Fund",
+        "symbol": "QABA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI Qatar ETF",
+        "symbol": "QAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Top QQQ ETF",
+        "symbol": "QBIG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Innovator Nasdaq-100 10 Buffer ETF Quarterly",
+        "symbol": "QBUF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust NASDAQ Clean Edge Green Energy Index Fund",
+        "symbol": "QCLN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X NASDAQ 100 Collar 95-110 ETF",
+        "symbol": "QCLR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long QCOM Daily ETF",
+        "symbol": "QCML",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "QUALCOMM Incorporated",
+        "symbol": "QCOM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "QCR Holdings, Inc.",
+        "symbol": "QCRH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "QuidelOrtho Corporation",
+        "symbol": "QDEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "YieldMax Nasdaq 100 0DTE Covered Call Strategy ETF",
+        "symbol": "QDTY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quetta Acquisition Corporation",
+        "symbol": "QETA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quetta Acquisition Corporation",
+        "symbol": "QETAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quetta Acquisition Corporation",
+        "symbol": "QETAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Qifu Technology, Inc",
+        "symbol": "QFIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quhuo Limited",
+        "symbol": "QH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Innovator Hedged Nasdaq-100 ETF",
+        "symbol": "QHDG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quipt Home Medical Corp.",
+        "symbol": "QIPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Qualigen Therapeutics, Inc.",
+        "symbol": "QLGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Qualys, Inc.",
+        "symbol": "QLYS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quantum Corporation",
+        "symbol": "QMCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree U.S. MidCap Quality Growth Fund",
+        "symbol": "QMID",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "QMMM Holdings Limited",
+        "symbol": "QMMM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Architect U.S. Quantitative Momentum ETF",
+        "symbol": "QMOM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quince Therapeutics, Inc.",
+        "symbol": "QNCX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quoin Pharmaceuticals, Ltd.",
+        "symbol": "QNRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "QuinStreet, Inc.",
+        "symbol": "QNST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quantum Biopharma Ltd.",
+        "symbol": "QNTM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Nasdaq-100 ex Top 30 ETF",
+        "symbol": "QNXT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Nasdaq Free Cash Flow Achievers ETF",
+        "symbol": "QOWZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco QQQ Income Advantage ETF",
+        "symbol": "QQA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust NASDAQ-100 Equal Weighted Index Fund",
+        "symbol": "QQEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco ESG NASDAQ Next Gen 100 ETF",
+        "symbol": "QQJG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco QQQ Low Volatility ETF",
+        "symbol": "QQLV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco ESG NASDAQ 100 ETF",
+        "symbol": "QQMG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco QQQ Trust, Series 1",
+        "symbol": "QQQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProShares Nasdaq-100 Dorsey Wright Momentum ETF",
+        "symbol": "QQQA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion NASDAQ-100 Equal Weighted Index Shares",
+        "symbol": "QQQE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacer Nasdaq 100 Top 50 Cash Cows Growth Leaders ETF",
+        "symbol": "QQQG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NEOS Nasdaq-100 Hedged Equity Income ETF",
+        "symbol": "QQQH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NEOS Nasdaq 100 High Income ETF",
+        "symbol": "QQQI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco NASDAQ Next Gen 100 ETF",
+        "symbol": "QQQJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco NASDAQ 100 ETF",
+        "symbol": "QQQM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tradr 2X Long Triple Q Quarterly ETF",
+        "symbol": "QQQP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco NASDAQ Future Gen 200 ETF",
+        "symbol": "QQQS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Nasdaq 100 Income Target ETF",
+        "symbol": "QQQT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nuveen NASDAQ 100 Dynamic Overwrite Fund",
+        "symbol": "QQQX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Nasdaq 100 Enhanced Options & 0DTE Income ETF",
+        "symbol": "QQQY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust NASDAQ-100 Ex-Technology Sector Index Fund",
+        "symbol": "QQXT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quest Resource Holding Corporation",
+        "symbol": "QRHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X NASDAQ 100 Risk Managed Income ETF",
+        "symbol": "QRMI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Qorvo, Inc.",
+        "symbol": "QRVO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quartzsea Acquisition Corporation",
+        "symbol": "QSEAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "QuantaSing Group Limited",
+        "symbol": "QSG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quantum-Si Incorporated",
+        "symbol": "QSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quantum-Si Incorporated",
+        "symbol": "QSIAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Pacer Metaurus Nasdaq 100 Dividend Multiplier 600 ETF",
+        "symbol": "QSIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree U.S. SmallCap Quality Growth Fund",
+        "symbol": "QSML",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust NASDAQ-100-Technology Sector Index Fund",
+        "symbol": "QTEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Nasdaq Top 30 Stocks ETF",
+        "symbol": "QTOP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X NASDAQ 100 Tail Risk ETF",
+        "symbol": "QTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quanterix Corporation",
+        "symbol": "QTRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Q32 Bio Inc.",
+        "symbol": "QTTB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Quantum ETF",
+        "symbol": "QTUM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Quantum Computing Inc.",
+        "symbol": "QUBT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "QuickLogic Corporation",
+        "symbol": "QUIK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "uniQure N.V.",
+        "symbol": "QURE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Architect U.S. Quantitative Value ETF",
+        "symbol": "QVAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "QVC Group, Inc.",
+        "symbol": "QVCGA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "QVC Group, Inc.",
+        "symbol": "QVCGB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "QVC Group, Inc.",
+        "symbol": "QVCGP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SGI Enhanced Nasdaq-100 ETF",
+        "symbol": "QXQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X NASDAQ 100 Covered Call ETF",
+        "symbol": "QYLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Nasdaq 100 Covered Call & Growth ETF",
+        "symbol": "QYLG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SMI 3Fourteen REAL Asset Allocation ETF",
+        "symbol": "RAA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Real Asset Acquisition Corp.",
+        "symbol": "RAAQU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Radiopharm Theranostics Limited",
+        "symbol": "RADX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Freightcar America, Inc.",
+        "symbol": "RAIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rain Enhancement Technologies Holdco, Inc.",
+        "symbol": "RAIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rain Enhancement Technologies Holdco, Inc.",
+        "symbol": "RAINW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rand Capital Corporation",
+        "symbol": "RAND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Range Capital Acquisition Corp.",
+        "symbol": "RANG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Range Capital Acquisition Corp.",
+        "symbol": "RANGR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Range Capital Acquisition Corp.",
+        "symbol": "RANGU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rani Therapeutics Holdings, Inc.",
+        "symbol": "RANI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rapport Therapeutics, Inc.",
+        "symbol": "RAPP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RAPT Therapeutics, Inc.",
+        "symbol": "RAPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ultragenyx Pharmaceutical Inc.",
+        "symbol": "RARE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rave Restaurant Group, Inc.",
+        "symbol": "RAVE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Raytech Holding Limited",
+        "symbol": "RAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Erayak Power Solution Group Inc.",
+        "symbol": "RAYA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Solar ETF",
+        "symbol": "RAYS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RBB Bancorp",
+        "symbol": "RBB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ribbon Communications Inc.",
+        "symbol": "RBBN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Republic Bancorp, Inc.",
+        "symbol": "RBCAA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "F/m Ultrashort Treasury Inflation-Protected Security (TIPS) ETF",
+        "symbol": "RBIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rhinebeck Bancorp, Inc.",
+        "symbol": "RBKB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Robin Energy Ltd.",
+        "symbol": "RBNE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Red Cat Holdings, Inc.",
+        "symbol": "RCAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Avita Medical, Inc.",
+        "symbol": "RCEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RockCreek Global Equality ETF",
+        "symbol": "RCGE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rocket Pharmaceuticals, Inc.",
+        "symbol": "RCKT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rocket Pharmaceuticals, Inc.",
+        "symbol": "RCKTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rocky Brands, Inc.",
+        "symbol": "RCKY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RCM Technologies, Inc.",
+        "symbol": "RCMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Recon Technology, Ltd.",
+        "symbol": "RCON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RedCloud Holdings plc",
+        "symbol": "RCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rising Dragon Acquisition Corp.",
+        "symbol": "RDAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rising Dragon Acquisition Corp.",
+        "symbol": "RDACR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rising Dragon Acquisition Corp.",
+        "symbol": "RDACU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Radcom Ltd.",
+        "symbol": "RDCM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Redfin Corporation",
+        "symbol": "RDFN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ridgetech, Inc.",
+        "symbol": "RDGT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Redhill Biopharma Ltd.",
+        "symbol": "RDHL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Reading International Inc",
+        "symbol": "RDI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Reading International Inc",
+        "symbol": "RDIB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RadNet, Inc.",
+        "symbol": "RDNT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long RDDT Daily ETF",
+        "symbol": "RDTL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "YieldMax R2000 0DTE Covered Strategy ETF",
+        "symbol": "RDTY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Radius Recycling, Inc.",
+        "symbol": "RDUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Red Violet, Inc.",
+        "symbol": "RDVT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Rising Dividend Achievers ETF",
+        "symbol": "RDVY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Radware Ltd.",
+        "symbol": "RDWR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Roadzen, Inc.",
+        "symbol": "RDZN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Roadzen, Inc.",
+        "symbol": "RDZNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intelligent Real Estate ETF",
+        "symbol": "REAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The RealReal, Inc.",
+        "symbol": "REAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Real Brokerage, Inc.",
+        "symbol": "REAX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Reborn Coffee, Inc.",
+        "symbol": "REBN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rectitude Holdings Ltd",
+        "symbol": "RECT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "REE Automotive Ltd.",
+        "symbol": "REE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Chicago Atlantic Real Estate Finance, Inc.",
+        "symbol": "REFI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Research Frontiers Incorporated",
+        "symbol": "REFR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Regency Centers Corporation",
+        "symbol": "REG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Regency Centers Corporation",
+        "symbol": "REGCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Regency Centers Corporation",
+        "symbol": "REGCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Regeneron Pharmaceuticals, Inc.",
+        "symbol": "REGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ALPS Active REIT ETF",
+        "symbol": "REIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rekor Systems, Inc.",
+        "symbol": "REKR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Reliance Global Group, Inc.",
+        "symbol": "RELI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Reliance Global Group, Inc.",
+        "symbol": "RELIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Richardson Electronics, Ltd.",
+        "symbol": "RELL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Remitly Global, Inc.",
+        "symbol": "RELY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Renovaro Inc.",
+        "symbol": "RENB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cartesian Growth Corporation II",
+        "symbol": "RENE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cartesian Growth Corporation II",
+        "symbol": "RENEU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cartesian Growth Corporation II",
+        "symbol": "RENEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rent the Runway, Inc.",
+        "symbol": "RENT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Replimune Group, Inc.",
+        "symbol": "REPL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ReTo Eco-Solutions, Inc.",
+        "symbol": "RETO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Revelation Biosciences, Inc.",
+        "symbol": "REVB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Revelation Biosciences, Inc.",
+        "symbol": "REVBW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Reynolds Consumer Products Inc.",
+        "symbol": "REYN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RF Acquisition Corp II",
+        "symbol": "RFAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RF Acquisition Corp II",
+        "symbol": "RFAIR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RF Acquisition Corp II",
+        "symbol": "RFAIU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust RiverFront Dynamic Developed International ETF",
+        "symbol": "RFDI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust RiverFront Dynamic Emerging Markets ETF",
+        "symbol": "RFEM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust RiverFront Dynamic Europe ETF",
+        "symbol": "RFEU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RF Industries, Ltd.",
+        "symbol": "RFIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Regencell Bioscience Holdings Limited",
+        "symbol": "RGC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RGC Resources Inc.",
+        "symbol": "RGCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Repligen Corporation",
+        "symbol": "RGEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Royal Gold, Inc.",
+        "symbol": "RGLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Regulus Therapeutics Inc.",
+        "symbol": "RGLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "REGENXBIO Inc.",
+        "symbol": "RGNX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Resources Connection, Inc.",
+        "symbol": "RGP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Regis Corporation",
+        "symbol": "RGS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rigetti Computing, Inc.",
+        "symbol": "RGTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rigetti Computing, Inc.",
+        "symbol": "RGTIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Daily Target 2X Long RGTI ETF",
+        "symbol": "RGTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Resolute Holdings Management",
+        "symbol": "RHLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ribbon Acquisition Corp",
+        "symbol": "RIBB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ribbon Acquisition Corp",
+        "symbol": "RIBBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ribbon Acquisition Corp",
+        "symbol": "RIBBU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RCI Hospitality Holdings, Inc.",
+        "symbol": "RICK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rigel Pharmaceuticals, Inc.",
+        "symbol": "RIGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "B. Riley Financial, Inc.",
+        "symbol": "RILY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "B. Riley Financial, Inc.",
+        "symbol": "RILYG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "B. Riley Financial, Inc.",
+        "symbol": "RILYK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "B. Riley Financial, Inc.",
+        "symbol": "RILYL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "B. Riley Financial, Inc.",
+        "symbol": "RILYN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "B. Riley Financial, Inc.",
+        "symbol": "RILYP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "B. Riley Financial, Inc.",
+        "symbol": "RILYT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "B. Riley Financial, Inc.",
+        "symbol": "RILYZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Algorhythm Holdings, Inc.",
+        "symbol": "RIME",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI Global Gold Miners ETF",
+        "symbol": "RING",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Riot Platforms, Inc.",
+        "symbol": "RIOT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Reitar Logtech Holdings Limited",
+        "symbol": "RITR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rivian Automotive, Inc.",
+        "symbol": "RIVN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Arcadia Biosciences, Inc.",
+        "symbol": "RKDA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rocket Lab USA, Inc.",
+        "symbol": "RKLB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Daily Target 2X Long RKLB ETF",
+        "symbol": "RKLX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Relay Therapeutics, Inc.",
+        "symbol": "RLAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Relmada Therapeutics, Inc.",
+        "symbol": "RLMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rallybio Corporation",
+        "symbol": "RLYB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Richmond Mutual Bancorporation, Inc.",
+        "symbol": "RMBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RumbleOn, Inc.",
+        "symbol": "RMBL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rambus, Inc.",
+        "symbol": "RMBS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rocky Mountain Chocolate Factory, Inc.",
+        "symbol": "RMCF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Royalty Management Holding Corporation",
+        "symbol": "RMCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Royalty Management Holding Corporation",
+        "symbol": "RMCOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rimini Street, Inc.",
+        "symbol": "RMNI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The RMR Group Inc.",
+        "symbol": "RMR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Real Messenger Corporation",
+        "symbol": "RMSG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Real Messenger Corporation",
+        "symbol": "RMSGW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rockwell Medical, Inc.",
+        "symbol": "RMTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Avidity Biosciences, Inc.",
+        "symbol": "RNA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cartesian Therapeutics, Inc.",
+        "symbol": "RNAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TransCode Therapeutics, Inc.",
+        "symbol": "RNAZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Emerging Markets Equity Select ETF",
+        "symbol": "RNEM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VanEck Green Infrastructure ETF",
+        "symbol": "RNEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Renewable Energy Producers ETF",
+        "symbol": "RNRG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rein Therapeutics, Inc.",
+        "symbol": "RNTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ReNew Energy Global plc",
+        "symbol": "RNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ReNew Energy Global plc",
+        "symbol": "RNWWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RenovoRx, Inc.",
+        "symbol": "RNXT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Construction Partners, Inc.",
+        "symbol": "ROAD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Nasdaq Artificial Intelligence and Robotics ETF",
+        "symbol": "ROBT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gibraltar Industries, Inc.",
+        "symbol": "ROCK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Astoria US Equal Weight Quality Kings ETF",
+        "symbol": "ROE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Roivant Sciences Ltd.",
+        "symbol": "ROIV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Roku, Inc.",
+        "symbol": "ROKU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Roma Green Finance Limited",
+        "symbol": "ROMA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Root, Inc.",
+        "symbol": "ROOT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Roper Technologies, Inc.",
+        "symbol": "ROP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ross Stores, Inc.",
+        "symbol": "ROST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Repay Holdings Corporation",
+        "symbol": "RPAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rapid7, Inc.",
+        "symbol": "RPD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rapid Micro Biosystems, Inc.",
+        "symbol": "RPID",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Royalty Pharma plc",
+        "symbol": "RPRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Repare Therapeutics Inc.",
+        "symbol": "RPTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Richtech Robotics Inc.",
+        "symbol": "RR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Red River Bancshares, Inc.",
+        "symbol": "RRBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Red Robin Gourmet Burgers, Inc.",
+        "symbol": "RRGB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Red Rock Resorts, Inc.",
+        "symbol": "RRR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ReShape Lifesciences, Inc.",
+        "symbol": "RSLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Research Solutions, Inc",
+        "symbol": "RSSS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Reservoir Media, Inc..",
+        "symbol": "RSVR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Reservoir Media, Inc..",
+        "symbol": "RSVRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Baijiayun Group Ltd",
+        "symbol": "RTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VanEck Retail ETF",
+        "symbol": "RTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rumble Inc.",
+        "symbol": "RUM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rumble Inc.",
+        "symbol": "RUMBW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sunrun Inc.",
+        "symbol": "RUN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Running Oak Efficient Growth ETF",
+        "symbol": "RUNN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rush Enterprises, Inc.",
+        "symbol": "RUSHA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rush Enterprises, Inc.",
+        "symbol": "RUSHB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Revolution Medicines, Inc.",
+        "symbol": "RVMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Revolution Medicines, Inc.",
+        "symbol": "RVMDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long RIVN Daily ETF",
+        "symbol": "RVNL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Reviva Pharmaceuticals Holdings, Inc.",
+        "symbol": "RVPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Reviva Pharmaceuticals Holdings, Inc.",
+        "symbol": "RVPHW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Riverview Bancorp Inc",
+        "symbol": "RVSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rail Vision Ltd.",
+        "symbol": "RVSN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rail Vision Ltd.",
+        "symbol": "RVSNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ryvyl Inc.",
+        "symbol": "RVYL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Runway Growth Finance Corp.",
+        "symbol": "RWAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Runway Growth Finance Corp.",
+        "symbol": "RWAYL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Runway Growth Finance Corp.",
+        "symbol": "RWAYZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Recursion Pharmaceuticals, Inc.",
+        "symbol": "RXRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "RxSight, Inc.",
+        "symbol": "RXST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rackspace Technology, Inc.",
+        "symbol": "RXT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ryanair Holdings plc",
+        "symbol": "RYAAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ruanyun Edai Technology Inc.",
+        "symbol": "RYET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rhythm Pharmaceuticals, Inc.",
+        "symbol": "RYTM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rezolute, Inc.",
+        "symbol": "RZLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rezolve AI PLC",
+        "symbol": "RZLV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Rezolve AI PLC",
+        "symbol": "RZLVW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sabre Corporation",
+        "symbol": "SABR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SAB Biotherapeutics, Inc.",
+        "symbol": "SABS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SAB Biotherapeutics, Inc.",
+        "symbol": "SABSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Safety Insurance Group, Inc.",
+        "symbol": "SAFT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sage Therapeutics, Inc.",
+        "symbol": "SAGE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SAGTEC GLOBAL LIMITED",
+        "symbol": "SAGT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Saia, Inc.",
+        "symbol": "SAIA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Science Applications International Corporation",
+        "symbol": "SAIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SAIHEAT Limited",
+        "symbol": "SAIH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SAIHEAT Limited",
+        "symbol": "SAIHW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SailPoint, Inc.",
+        "symbol": "SAIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Silvercrest Asset Management Group Inc.",
+        "symbol": "SAMG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sana Biotechnology, Inc.",
+        "symbol": "SANA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sangoma Technologies Corporation",
+        "symbol": "SANG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sanmina Corporation",
+        "symbol": "SANM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "S&W Seed Company",
+        "symbol": "SANW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tradr 1X Short Innovation Daily ETF",
+        "symbol": "SARK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Satellogic Inc.",
+        "symbol": "SATL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Satellogic Inc.",
+        "symbol": "SATLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "EchoStar Corporation",
+        "symbol": "SATS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cassava Sciences, Inc.",
+        "symbol": "SAVA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SBA Communications Corporation",
+        "symbol": "SBAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SBC Medical Group Holdings Incorporated",
+        "symbol": "SBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Seacoast Banking Corporation of Florida",
+        "symbol": "SBCF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SBC Medical Group Holdings Incorporated",
+        "symbol": "SBCWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SharpLink Gaming, Inc.",
+        "symbol": "SBET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SB Financial Group, Inc.",
+        "symbol": "SBFG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sunshine Biopharma Inc.",
+        "symbol": "SBFM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sunshine Biopharma Inc.",
+        "symbol": "SBFMW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sinclair, Inc.",
+        "symbol": "SBGI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Star Bulk Carriers Corp.",
+        "symbol": "SBLK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sabra Health Care REIT, Inc.",
+        "symbol": "SBRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Starbucks Corporation",
+        "symbol": "SBUX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JPMorgan Fundamental Data Science Small Core ETF",
+        "symbol": "SCDS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Scholastic Corporation",
+        "symbol": "SCHL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Socket Mobile, Inc.",
+        "symbol": "SCKT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Scilex Holding Company",
+        "symbol": "SCLX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Scilex Holding Company",
+        "symbol": "SCLXW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Scinai Immunotherapeutics Ltd.",
+        "symbol": "SCNI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Scienture Holdings, Inc.",
+        "symbol": "SCNX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "comScore, Inc.",
+        "symbol": "SCOR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "scPharmaceuticals Inc.",
+        "symbol": "SCPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ScanSource, Inc.",
+        "symbol": "SCSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Shoe Carnival, Inc.",
+        "symbol": "SCVL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "374Water Inc.",
+        "symbol": "SCWO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SCYNEXIS, Inc.",
+        "symbol": "SCYX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI EAFE Small-Cap ETF",
+        "symbol": "SCZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SunCar Technology Group Inc.",
+        "symbol": "SDA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SunCar Technology Group Inc.",
+        "symbol": "SDAWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI Global Sustainable Development Goals ETF",
+        "symbol": "SDG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Schrodinger, Inc.",
+        "symbol": "SDGR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Siddhi Acquisition Corp",
+        "symbol": "SDHIU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sadot Group Inc.",
+        "symbol": "SDOT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "American Century Short Duration Strategic Income ETF",
+        "symbol": "SDSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stardust Power Inc.",
+        "symbol": "SDST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stardust Power Inc.",
+        "symbol": "SDSTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "YieldMax S&P 500 0DTE Covered Call Strategy ETF",
+        "symbol": "SDTY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust SMID Cap Rising Dividend Achievers ETF",
+        "symbol": "SDVY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vivid Seats Inc.",
+        "symbol": "SEAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vivid Seats Inc.",
+        "symbol": "SEATW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SolarEdge Technologies, Inc.",
+        "symbol": "SEDG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Origin Agritech Limited",
+        "symbol": "SEED",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SEI Select Emerging Markets Equity ETF",
+        "symbol": "SEEM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Seer, Inc.",
+        "symbol": "SEER",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SEI Investments Company",
+        "symbol": "SEIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SEI Select International Equity ETF",
+        "symbol": "SEIE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SEI Select Small Cap ETF",
+        "symbol": "SEIS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global Self Storage, Inc.",
+        "symbol": "SELF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Semilux International Ltd.",
+        "symbol": "SELX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Seneca Foods Corp.",
+        "symbol": "SENEA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Seneca Foods Corp.",
+        "symbol": "SENEB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Septerna, Inc.",
+        "symbol": "SEPN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sera Prognostics, Inc.",
+        "symbol": "SERA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Serve Robotics Inc.",
+        "symbol": "SERV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sprott Critical Materials ETF",
+        "symbol": "SETM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Seven Hills Realty Trust",
+        "symbol": "SEVN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sezzle Inc.",
+        "symbol": "SEZL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sound Financial Bancorp, Inc.",
+        "symbol": "SFBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Smithfield Foods, Inc.",
+        "symbol": "SFD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Samfine Creation Holdings Group Limited",
+        "symbol": "SFHG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stitch Fix, Inc.",
+        "symbol": "SFIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares Small Cap Free Cash Flow ETF",
+        "symbol": "SFLO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sprouts Farmers Market, Inc.",
+        "symbol": "SFM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Simmons First National Corporation",
+        "symbol": "SFNC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Southern First Bancshares, Inc.",
+        "symbol": "SFST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Shengfeng Development Limited",
+        "symbol": "SFWL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Saga Communications, Inc.",
+        "symbol": "SGA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Safe & Green Holdings Corp.",
+        "symbol": "SGBX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Superior Group of Companies, Inc.",
+        "symbol": "SGC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Safe and Green Development Corporation",
+        "symbol": "SGD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sight Sciences, Inc.",
+        "symbol": "SGHT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Singularity Future Technology Ltd.",
+        "symbol": "SGLY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SigmaTron International, Inc.",
+        "symbol": "SGMA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sigma Lithium Corporation",
+        "symbol": "SGML",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sangamo Therapeutics, Inc.",
+        "symbol": "SGMO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sagimet Biosciences Inc.",
+        "symbol": "SGMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPAR Group, Inc.",
+        "symbol": "SGRP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Surgery Partners, Inc.",
+        "symbol": "SGRY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Shore Bancshares, Inc.",
+        "symbol": "SHBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sotera Health Company",
+        "symbol": "SHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Shenandoah Telecommunications Co",
+        "symbol": "SHEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SHF Holdings, Inc.",
+        "symbol": "SHFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SHF Holdings, Inc.",
+        "symbol": "SHFSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Shimmick Corporation",
+        "symbol": "SHIM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Seanergy Maritime Holdings Corp.",
+        "symbol": "SHIP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Shoals Technologies Group, Inc.",
+        "symbol": "SHLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SCHMID Group N.V.",
+        "symbol": "SHMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SCHMID Group N.V.",
+        "symbol": "SHMDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Steven Madden, Ltd.",
+        "symbol": "SHOO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Shopify Inc.",
+        "symbol": "SHOP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Safety Shot, Inc.",
+        "symbol": "SHOT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Safety Shot, Inc.",
+        "symbol": "SHOTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Shuttle Pharmaceuticals Holdings, Inc.",
+        "symbol": "SHPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Bloomberg Shareholder Yield ETF",
+        "symbol": "SHRY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Short Treasury Bond ETF",
+        "symbol": "SHV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares 1-3 Year Treasury Bond ETF",
+        "symbol": "SHY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Shyft Group, Inc.",
+        "symbol": "SHYF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SI-BONE, Inc.",
+        "symbol": "SIBN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sidus Space, Inc.",
+        "symbol": "SIDU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Siebert Financial Corp.",
+        "symbol": "SIEB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sify Technologies Limited",
+        "symbol": "SIFY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SIGA Technologies Inc.",
+        "symbol": "SIGA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Selective Insurance Group, Inc.",
+        "symbol": "SIGI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Selective Insurance Group, Inc.",
+        "symbol": "SIGIP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Silicom Ltd",
+        "symbol": "SILC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Silo Pharma, Inc.",
+        "symbol": "SILO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SIM Acquisition Corp. I",
+        "symbol": "SIMA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SIM Acquisition Corp. I",
+        "symbol": "SIMAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SIM Acquisition Corp. I",
+        "symbol": "SIMAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Silicon Motion Technology Corporation",
+        "symbol": "SIMO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SiNtx Technologies, Inc.",
+        "symbol": "SINT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sionna Therapeutics, Inc.",
+        "symbol": "SION",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SiriusXM Holdings Inc.",
+        "symbol": "SIRI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Shineco, Inc.",
+        "symbol": "SISI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SiTime Corporation",
+        "symbol": "SITM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Connective Technologies ETF",
+        "symbol": "SIXG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Scienjoy Holding Corporation",
+        "symbol": "SJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SanJac Alpha Core Plus Bond ETF",
+        "symbol": "SJCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SanJac Alpha Low Duration ETF",
+        "symbol": "SJLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SJW Group",
+        "symbol": "SJW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Skyline Builders Group Holding Limited",
+        "symbol": "SKBL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Beauty Health Company",
+        "symbol": "SKIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SKK Holdings Limited",
+        "symbol": "SKK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "FlexShares Credit-Scored US Corporate Bond Index Fund",
+        "symbol": "SKOR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tuttle Capital Daily 2X Inverse Regional Banks ETF",
+        "symbol": "SKRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Skyward Specialty Insurance Group, Inc.",
+        "symbol": "SKWD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Skye Bioscience, Inc.",
+        "symbol": "SKYE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sky Quarry Inc.",
+        "symbol": "SKYQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SkyWater Technology, Inc.",
+        "symbol": "SKYT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProShares Ultra Cloud Computing",
+        "symbol": "SKYU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SkyWest, Inc.",
+        "symbol": "SKYW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SKYX Platforms Corp.",
+        "symbol": "SKYX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust Cloud Computing ETF",
+        "symbol": "SKYY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Silicon Laboratories, Inc.",
+        "symbol": "SLAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Solid Biosciences Inc.",
+        "symbol": "SLDB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Solid Power, Inc.",
+        "symbol": "SLDP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Solid Power, Inc.",
+        "symbol": "SLDPW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Super League Enterprise, Inc.",
+        "symbol": "SLE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sol-Gel Technologies Ltd.",
+        "symbol": "SLGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SLM Corporation",
+        "symbol": "SLM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SLM Corporation",
+        "symbol": "SLMBP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Silence Therapeutics Plc",
+        "symbol": "SLN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stabilis Solutions, Inc.",
+        "symbol": "SLNG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Soluna Holdings, Inc.",
+        "symbol": "SLNH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Soluna Holdings, Inc.",
+        "symbol": "SLNHP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Soleno Therapeutics, Inc.",
+        "symbol": "SLNO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Simulations Plus, Inc.",
+        "symbol": "SLP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares 0-5 Year Investment Grade Corporate Bond ETF",
+        "symbol": "SLQD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SLR Investment Corp.",
+        "symbol": "SLRC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ACELYRIN, INC.",
+        "symbol": "SLRN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Salarius Pharmaceuticals, Inc.",
+        "symbol": "SLRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SELLAS Life Sciences Group, Inc.",
+        "symbol": "SLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Solesence, Inc.",
+        "symbol": "SLSN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ETRACS Silver Shares Covered Call ETNs due April 21, 2033",
+        "symbol": "SLVO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sprott Silver Miners & Physical Silver ETF",
+        "symbol": "SLVR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Silexion Therapeutics Corp",
+        "symbol": "SLXN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Silexion Therapeutics Corp",
+        "symbol": "SLXNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Southern Missouri Bancorp, Inc.",
+        "symbol": "SMBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes US Small Cap Cash Flow Champions ETF",
+        "symbol": "SMCF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Super Micro Computer, Inc.",
+        "symbol": "SMCI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long SMCI Daily ETF",
+        "symbol": "SMCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hilton Small-MidCap Opportunity ETF",
+        "symbol": "SMCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Daily Target 2X Long SMCI ETF",
+        "symbol": "SMCX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Daily Target 2X Short SMCI ETF",
+        "symbol": "SMCZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VanEck Semiconductor ETF",
+        "symbol": "SMH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VanEck Fabless Semiconductor ETF",
+        "symbol": "SMHX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Smith-Midland Corporation",
+        "symbol": "SMID",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Semler Scientific, Inc.",
+        "symbol": "SMLR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Summit Therapeutics Inc.",
+        "symbol": "SMMT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Simply Good Foods Company",
+        "symbol": "SMPL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bushido Capital US Equity ETF",
+        "symbol": "SMRI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Smith Micro Software, Inc.",
+        "symbol": "SMSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Daily Target 2x Short MSTR ETF",
+        "symbol": "SMST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Semtech Corporation",
+        "symbol": "SMTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sanara MedTech Inc.",
+        "symbol": "SMTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SmartKem, Inc.",
+        "symbol": "SMTK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SMX (Security Matters) Public Limited Company",
+        "symbol": "SMX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Solarmax Technology Inc.",
+        "symbol": "SMXT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SMX (Security Matters) Public Limited Company",
+        "symbol": "SMXWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Snail, Inc.",
+        "symbol": "SNAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sleep Number Corporation",
+        "symbol": "SNBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Synchronoss Technologies, Inc.",
+        "symbol": "SNCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Synchronoss Technologies, Inc.",
+        "symbol": "SNCRL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sun Country Airlines Holdings, Inc.",
+        "symbol": "SNCY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Smart Sand, Inc.",
+        "symbol": "SND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sandisk Corporation",
+        "symbol": "SNDK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SNDL Inc.",
+        "symbol": "SNDL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Syndax Pharmaceuticals, Inc.",
+        "symbol": "SNDX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SenesTech, Inc.",
+        "symbol": "SNES",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "StoneX Group Inc.",
+        "symbol": "SNEX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Security National Financial Corporation",
+        "symbol": "SNFCA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Soligenix, Inc.",
+        "symbol": "SNGX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sonoma Pharmaceuticals, Inc.",
+        "symbol": "SNOA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Synopsys, Inc.",
+        "symbol": "SNPS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Synaptogenix, Inc.",
+        "symbol": "SNPX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sunrise Communications AG",
+        "symbol": "SNRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sensei Biotherapeutics, Inc.",
+        "symbol": "SNSE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Internet of Things ETF",
+        "symbol": "SNSR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Senstar Technologies Corporation",
+        "symbol": "SNT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sentage Holdings Inc.",
+        "symbol": "SNTG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Senti Biosciences, Inc.",
+        "symbol": "SNTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SANUWAVE Health, Inc.",
+        "symbol": "SNWV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sanofi",
+        "symbol": "SNY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Synergy CHC Corp.",
+        "symbol": "SNYR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SOBR Safe, Inc.",
+        "symbol": "SOBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Social Media ETF",
+        "symbol": "SOCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SoFi Technologies, Inc.",
+        "symbol": "SOFI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Daily Target 2X Long SOFI ETF",
+        "symbol": "SOFX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sound Group Inc.",
+        "symbol": "SOGP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sotherly Hotels Inc.",
+        "symbol": "SOHO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sotherly Hotels Inc.",
+        "symbol": "SOHOB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sotherly Hotels Inc.",
+        "symbol": "SOHON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sotherly Hotels Inc.",
+        "symbol": "SOHOO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sohu.com Limited",
+        "symbol": "SOHU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "2x Solana ETF",
+        "symbol": "SOLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Solana ETF",
+        "symbol": "SOLZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sonder Holdings Inc.",
+        "symbol": "SOND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sonder Holdings Inc.",
+        "symbol": "SONDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sonim Technologies, Inc.",
+        "symbol": "SONM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sonnet BioTherapeutics Holdings, Inc.",
+        "symbol": "SONN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sonos, Inc.",
+        "symbol": "SONO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Society Pass Incorporated",
+        "symbol": "SOPA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SOPHiA GENETICS SA",
+        "symbol": "SOPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sono-Tek Corporation",
+        "symbol": "SOTK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SoundHound AI, Inc.",
+        "symbol": "SOUN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SoundHound AI, Inc.",
+        "symbol": "SOUNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sow Good Inc.",
+        "symbol": "SOWG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco PHLX Semiconductor ETF",
+        "symbol": "SOXQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Semiconductor ETF",
+        "symbol": "SOXX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Safe Pro Group Inc.",
+        "symbol": "SPAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes Cybersecurity ETF",
+        "symbol": "SPAM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Horizon Kinetics SPAC Active ETF",
+        "symbol": "SPAQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Simplify US Equity PLUS Bitcoin Strategy ETF",
+        "symbol": "SPBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CrossingBridge Pre-Merger SPAC ETF",
+        "symbol": "SPC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SuperCom, Ltd.",
+        "symbol": "SPCB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPAC and New Issue ETF",
+        "symbol": "SPCX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "STKd 100% SMCI & 100% NVDA ETF",
+        "symbol": "SPCY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "South Plains Financial, Inc.",
+        "symbol": "SPFI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Springview Holdings Ltd",
+        "symbol": "SPHL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Spark I Acquisition Corp.",
+        "symbol": "SPKL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Spark I Acquisition Corp.",
+        "symbol": "SPKLU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Spark I Acquisition Corp.",
+        "symbol": "SPKLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sapiens International Corporation N.V.",
+        "symbol": "SPNS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Spok Holdings, Inc.",
+        "symbol": "SPOK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SIMPPLE LTD.",
+        "symbol": "SPPL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SciSparc Ltd.",
+        "symbol": "SPRC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Spero Therapeutics, Inc.",
+        "symbol": "SPRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Spear Alpha ETF",
+        "symbol": "SPRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ARS Pharmaceuticals, Inc.",
+        "symbol": "SPRY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPS Commerce, Inc.",
+        "symbol": "SPSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sprout Social, Inc",
+        "symbol": "SPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SpartanNash Company",
+        "symbol": "SPTN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sportsman's Warehouse Holdings, Inc.",
+        "symbol": "SPWH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Complete Solaria, Inc.",
+        "symbol": "SPWR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Complete Solaria, Inc.",
+        "symbol": "SPWRW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tradr 2X Long SPY Quarterly ETF",
+        "symbol": "SPYQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Presidio Property Trust, Inc.",
+        "symbol": "SQFT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Presidio Property Trust, Inc.",
+        "symbol": "SQFTP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Presidio Property Trust, Inc.",
+        "symbol": "SQFTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Royce Quant Small-Cap Quality Value ETF",
+        "symbol": "SQLV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProShares UltraPro Short QQQ",
+        "symbol": "SQQQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sportradar Group AG",
+        "symbol": "SRAD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SR Bancorp, Inc.",
+        "symbol": "SRBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "1st Source Corporation",
+        "symbol": "SRCE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Surmodics, Inc.",
+        "symbol": "SRDX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X SuperDividend REIT ETF",
+        "symbol": "SRET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SRM Entertainment, Inc.",
+        "symbol": "SRM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sarepta Therapeutics, Inc.",
+        "symbol": "SRPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Scholar Rock Holding Corporation",
+        "symbol": "SRRK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sensus Healthcare, Inc.",
+        "symbol": "SRTS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Surrozen, Inc.",
+        "symbol": "SRZN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Surrozen, Inc.",
+        "symbol": "SRZNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Summit State Bank",
+        "symbol": "SSBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Southern States Bancshares, Inc.",
+        "symbol": "SSBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SS Innovations International Inc.",
+        "symbol": "SSII",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Strata Skin Sciences, Inc.",
+        "symbol": "SSKN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SS&C Technologies Holdings, Inc.",
+        "symbol": "SSNC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "E.W. Scripps Company (The)",
+        "symbol": "SSP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SSR Mining Inc.",
+        "symbol": "SSRM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SuRo Capital Corp.",
+        "symbol": "SSSS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SuRo Capital Corp.",
+        "symbol": "SSSSL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SoundThinking, Inc.",
+        "symbol": "SSTI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stratasys, Ltd.",
+        "symbol": "SSYS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "STAAR Surgical Company",
+        "symbol": "STAA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ScanTech AI Systems Inc.",
+        "symbol": "STAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "STAK Inc.",
+        "symbol": "STAK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "S&T Bancorp, Inc.",
+        "symbol": "STBA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Starbox Group Holdings Ltd.",
+        "symbol": "STBX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Santech Holdings Limited",
+        "symbol": "STEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "StepStone Group Inc.",
+        "symbol": "STEP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Star Fashion Culture Holdings Limited",
+        "symbol": "STFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stagwell Inc.",
+        "symbol": "STGW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Star Holdings",
+        "symbol": "STHO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Solidion Technology, Inc.",
+        "symbol": "STI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Neuronetics, Inc.",
+        "symbol": "STIM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Steakholder Foods Ltd.",
+        "symbol": "STKH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SunOpta, Inc.",
+        "symbol": "STKL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The ONE Group Hospitality, Inc.",
+        "symbol": "STKS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Steel Dynamics, Inc.",
+        "symbol": "STLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Hennessy Stance ESG ETF",
+        "symbol": "STNC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "StoneCo Ltd.",
+        "symbol": "STNE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stoke Therapeutics, Inc.",
+        "symbol": "STOK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Strategic Education, Inc.",
+        "symbol": "STRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MicroStrategy Incorporated",
+        "symbol": "STRF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MicroStrategy Incorporated",
+        "symbol": "STRK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sterling Infrastructure, Inc.",
+        "symbol": "STRL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Streamline Health Solutions, Inc.",
+        "symbol": "STRM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sutro Biopharma, Inc.",
+        "symbol": "STRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Star Equity Holdings, Inc.",
+        "symbol": "STRR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Star Equity Holdings, Inc.",
+        "symbol": "STRRP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stratus Properties Inc.",
+        "symbol": "STRS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "STRATTEC SECURITY CORPORATION",
+        "symbol": "STRT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sharps Technology Inc.",
+        "symbol": "STSS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sharps Technology Inc.",
+        "symbol": "STSSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Shattuck Labs, Inc.",
+        "symbol": "STTK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Seagate Technology Holdings PLC",
+        "symbol": "STX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SU Group Holdings Limited",
+        "symbol": "SUGP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SUNation Energy, Inc.",
+        "symbol": "SUNE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sunrise Realty Trust, Inc.",
+        "symbol": "SUNS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Supernus Pharmaceuticals, Inc.",
+        "symbol": "SUPN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SurgePays, Inc.",
+        "symbol": "SURG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares ESG Aware 1-5 Year USD Corporate Bond ETF",
+        "symbol": "SUSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares ESG Aware USD Corporate Bond ETF",
+        "symbol": "SUSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares ESG MSCI USA Leaders ETF",
+        "symbol": "SUSL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SolarBank Corporation",
+        "symbol": "SUUN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sinovac Biotech, Ltd.",
+        "symbol": "SVA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Service Properties Trust",
+        "symbol": "SVC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stellar V Capital Corp.",
+        "symbol": "SVCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stellar V Capital Corp.",
+        "symbol": "SVCCU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stellar V Capital Corp.",
+        "symbol": "SVCCW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Silvaco Group, Inc.",
+        "symbol": "SVCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Spring Valley Acquisition Corp. II",
+        "symbol": "SVII",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Spring Valley Acquisition Corp. II",
+        "symbol": "SVIIR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Spring Valley Acquisition Corp. II",
+        "symbol": "SVIIU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Spring Valley Acquisition Corp. II",
+        "symbol": "SVIIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Savara, Inc.",
+        "symbol": "SVRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SaverOne 2014 Ltd.",
+        "symbol": "SVRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SaverOne 2014 Ltd.",
+        "symbol": "SVREW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stran & Company, Inc.",
+        "symbol": "SWAG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stran & Company, Inc.",
+        "symbol": "SWAGW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Smith & Wesson Brands, Inc.",
+        "symbol": "SWBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Latham Group, Inc.",
+        "symbol": "SWIM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Solowin Holdings",
+        "symbol": "SWIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SWK Holdings Corporation",
+        "symbol": "SWKH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SWK Holdings Corporation",
+        "symbol": "SWKHL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Skyworks Solutions, Inc.",
+        "symbol": "SWKS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SWP Growth & Income ETF",
+        "symbol": "SWP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SpringWorks Therapeutics, Inc.",
+        "symbol": "SWTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Swvl Holdings Corp",
+        "symbol": "SWVL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Swvl Holdings Corp",
+        "symbol": "SWVLW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "China SXT Pharmaceuticals, Inc.",
+        "symbol": "SXTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "60 Degrees Pharmaceuticals, Inc.",
+        "symbol": "SXTP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "60 Degrees Pharmaceuticals, Inc.",
+        "symbol": "SXTPW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "So-Young International Inc.",
+        "symbol": "SY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Stock Yards Bancorp, Inc.",
+        "symbol": "SYBT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Synlogic, Inc.",
+        "symbol": "SYBX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Symbotic Inc.",
+        "symbol": "SYM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Synaptics Incorporated",
+        "symbol": "SYNA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sypris Solutions, Inc.",
+        "symbol": "SYPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Spyre Therapeutics, Inc.",
+        "symbol": "SYRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SYLA Technologies Co., Ltd.",
+        "symbol": "SYT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Siyata Mobile, Inc.",
+        "symbol": "SYTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Siyata Mobile, Inc.",
+        "symbol": "SYTAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sizzle Acquisition Corp. II",
+        "symbol": "SZZLU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Titan Acquisition Corp.",
+        "symbol": "TACHU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Berto Acquisition Corp.",
+        "symbol": "TACOU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TransAct Technologies Incorporated",
+        "symbol": "TACT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Taitron Components Incorporated",
+        "symbol": "TAIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Talkspace, Inc.",
+        "symbol": "TALK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Talkspace, Inc.",
+        "symbol": "TALKW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tantech Holdings Ltd.",
+        "symbol": "TANH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Taoping Inc.",
+        "symbol": "TAOP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Protara Therapeutics, Inc.",
+        "symbol": "TARA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tradr 2X Long Innovation ETF",
+        "symbol": "TARK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tarsus Pharmaceuticals, Inc.",
+        "symbol": "TARS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TaskUs, Inc.",
+        "symbol": "TASK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TAT Technologies Ltd.",
+        "symbol": "TATT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tavia Acquisition Corp.",
+        "symbol": "TAVI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tavia Acquisition Corp.",
+        "symbol": "TAVIR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tavia Acquisition Corp.",
+        "symbol": "TAVIU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cambria Tax Aware ETF",
+        "symbol": "TAX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Intermediate Municipal Income ETF",
+        "symbol": "TAXE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Taylor Devices, Inc.",
+        "symbol": "TAYD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Bancorp, Inc.",
+        "symbol": "TBBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Turtle Beach Corporation",
+        "symbol": "TBCH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Brag House Holdings, Inc.",
+        "symbol": "TBH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "US Treasury 3 Month Bill ETF",
+        "symbol": "TBIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Taboola.com Ltd.",
+        "symbol": "TBLA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Taboola.com Ltd.",
+        "symbol": "TBLAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Thornburg Income Builder Opportunities Trust",
+        "symbol": "TBLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trailblazer Merger Corporation I",
+        "symbol": "TBMC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trailblazer Merger Corporation I",
+        "symbol": "TBMCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Theravance Biopharma, Inc.",
+        "symbol": "TBPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TruBridge, Inc.",
+        "symbol": "TBRG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Token Cat Limited",
+        "symbol": "TC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Texas Capital Bancshares, Inc.",
+        "symbol": "TCBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Texas Capital Bancshares, Inc.",
+        "symbol": "TCBIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TriCo Bancshares",
+        "symbol": "TCBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Texas Community Bancshares, Inc.",
+        "symbol": "TCBS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Third Coast Bancshares, Inc.",
+        "symbol": "TCBX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI China Multisector Tech ETF",
+        "symbol": "TCHI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tactile Systems Technology, Inc.",
+        "symbol": "TCMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trip.com Group Limited",
+        "symbol": "TCOM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BlackRock TCP Capital Corp.",
+        "symbol": "TCPC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alaunos Therapeutics, Inc.",
+        "symbol": "TCRT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TScan Therapeutics, Inc.",
+        "symbol": "TCRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tucows Inc.",
+        "symbol": "TCX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Translational Development Acquisition Corp.",
+        "symbol": "TDAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Translational Development Acquisition Corp.",
+        "symbol": "TDACU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Translational Development Acquisition Corp.",
+        "symbol": "TDACW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Touchstone Dynamic International ETF",
+        "symbol": "TDI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Trust NASDAQ Technology Dividend Index Fund",
+        "symbol": "TDIV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cabana Target Beta ETF",
+        "symbol": "TDSB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cabana Target Drawdown 10 ETF",
+        "symbol": "TDSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trident Digital Tech Holdings Ltd",
+        "symbol": "TDTH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ThredUp Inc.",
+        "symbol": "TDUP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atlassian Corporation",
+        "symbol": "TEAM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Bio-Techne Corp",
+        "symbol": "TECH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tectonic Financial, Inc.",
+        "symbol": "TECTP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tectonic Therapeutic, Inc.",
+        "symbol": "TECX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR Galaxy Transformative Tech Accelerators ETF",
+        "symbol": "TEKX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lazard Next Gen Technologies ETF",
+        "symbol": "TEKY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TELA Bio, Inc.",
+        "symbol": "TELA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Telomir Pharmaceuticals, Inc.",
+        "symbol": "TELO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tempus AI, Inc.",
+        "symbol": "TEM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tenable Holdings, Inc.",
+        "symbol": "TENB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tenax Therapeutics, Inc.",
+        "symbol": "TENX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Teradyne, Inc.",
+        "symbol": "TER",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Terns Pharmaceuticals, Inc.",
+        "symbol": "TERN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Triumph Financial, Inc.",
+        "symbol": "TFIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Triumph Financial, Inc.",
+        "symbol": "TFINP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TFS Financial Corporation",
+        "symbol": "TFSL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Treasure Global Inc.",
+        "symbol": "TGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TG Therapeutics, Inc.",
+        "symbol": "TGTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Target Hospitality Corp.",
+        "symbol": "TH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tharimmune, Inc.",
+        "symbol": "THAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TH International Limited",
+        "symbol": "THCH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "First Financial Corporation",
+        "symbol": "THFF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Lazard Equity Megatrends ETF",
+        "symbol": "THMZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Third Harmonic Bio, Inc.",
+        "symbol": "THRD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Gentherm Inc",
+        "symbol": "THRM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Thryv Holdings, Inc.",
+        "symbol": "THRY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Theratechnologies Inc.",
+        "symbol": "THTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Millicom International Cellular S.A.",
+        "symbol": "TIGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "UP Fintech Holding Limited",
+        "symbol": "TIGR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Instil Bio, Inc.",
+        "symbol": "TIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Interface, Inc.",
+        "symbol": "TILE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tiptree Inc.",
+        "symbol": "TIPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TIAN RUIXIANG Holdings Ltd",
+        "symbol": "TIRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Titan Machinery Inc.",
+        "symbol": "TITN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tivic Health Systems, Inc.",
+        "symbol": "TIVC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tokyo Lifestyle Co., Ltd.",
+        "symbol": "TKLF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Alpha Teknova, Inc.",
+        "symbol": "TKNO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tandy Leather Factory, Inc.",
+        "symbol": "TLF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Talen Energy Corporation",
+        "symbol": "TLN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Talphera, Inc.",
+        "symbol": "TLPH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tilray Brands, Inc.",
+        "symbol": "TLRY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Telos Corporation",
+        "symbol": "TLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tiziana Life Sciences Ltd",
+        "symbol": "TLSA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TriSalus Life Sciences, Inc.",
+        "symbol": "TLSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TriSalus Life Sciences, Inc.",
+        "symbol": "TLSIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares 20+ Year Treasury Bond ETF",
+        "symbol": "TLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Telix Pharmaceuticals Limited",
+        "symbol": "TLX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Thornburg Multi Sector Bond ETF",
+        "symbol": "TMB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TMC the metals company Inc.",
+        "symbol": "TMC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Treace Medical Concepts, Inc.",
+        "symbol": "TMCI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TMC the metals company Inc.",
+        "symbol": "TMCWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TransMedics Group, Inc.",
+        "symbol": "TMDX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Transition-Enabling Metals ETF",
+        "symbol": "TMET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "T-Mobile US, Inc.",
+        "symbol": "TMUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tandem Diabetes Care, Inc.",
+        "symbol": "TNDM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TNF Pharmaceuticals, Inc.",
+        "symbol": "TNFA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tango Therapeutics, Inc.",
+        "symbol": "TNGX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TNL Mediagene",
+        "symbol": "TNMG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tenon Medical, Inc.",
+        "symbol": "TNON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tenon Medical, Inc.",
+        "symbol": "TNONW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tonix Pharmaceuticals Holding Corp.",
+        "symbol": "TNXP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tenaya Therapeutics, Inc.",
+        "symbol": "TNYA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Oncology Institute, Inc.",
+        "symbol": "TOI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Oncology Institute, Inc.",
+        "symbol": "TOIIW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TOMI Environmental Solutions, Inc.",
+        "symbol": "TOMZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TOP Financial Group Limited",
+        "symbol": "TOP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Top Win International Limited",
+        "symbol": "TOPW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Toro Corp.",
+        "symbol": "TORO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tuniu Corporation",
+        "symbol": "TOUR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Towne Bank",
+        "symbol": "TOWN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TOYO Co., Ltd",
+        "symbol": "TOYO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TechPrecision Corporation",
+        "symbol": "TPCS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TPG Inc.",
+        "symbol": "TPG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TPG Inc.",
+        "symbol": "TPGXL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TPI Composites, Inc.",
+        "symbol": "TPIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Thornburg Core Plus Bond ETF",
+        "symbol": "TPLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tempest Therapeutics, Inc.",
+        "symbol": "TPST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProShares UltraPro QQQ",
+        "symbol": "TQQQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares YieldBOOST QQQ ETF",
+        "symbol": "TQQY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Traws Pharma, Inc.",
+        "symbol": "TRAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Entrada Therapeutics, Inc.",
+        "symbol": "TRDA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LendingTree, Inc.",
+        "symbol": "TREE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Thomson Reuters Corp",
+        "symbol": "TRI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trinity Biotech plc",
+        "symbol": "TRIB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trinity Capital Inc.",
+        "symbol": "TRIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trinity Capital Inc.",
+        "symbol": "TRINI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trinity Capital Inc.",
+        "symbol": "TRINZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TripAdvisor, Inc.",
+        "symbol": "TRIP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trimble Inc.",
+        "symbol": "TRMB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TORM plc",
+        "symbol": "TRMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trustmark Corporation",
+        "symbol": "TRMK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tourmaline Bio, Inc.",
+        "symbol": "TRML",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Interactive Strength Inc.",
+        "symbol": "TRNR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Transcat, Inc.",
+        "symbol": "TRNS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TROOPS, Inc.",
+        "symbol": "TROO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "T. Rowe Price Group, Inc.",
+        "symbol": "TROW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TriMas Corporation",
+        "symbol": "TRS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tungray Technologies Inc",
+        "symbol": "TRSG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TrustCo Bank Corp NY",
+        "symbol": "TRST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TruGolf Holdings, Inc.",
+        "symbol": "TRUG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trupanion, Inc.",
+        "symbol": "TRUP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "trivago N.V.",
+        "symbol": "TRVG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Trevi Therapeutics, Inc.",
+        "symbol": "TRVI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Telesat Corporation",
+        "symbol": "TSAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Timberland Bancorp, Inc.",
+        "symbol": "TSBK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Turnstone Biologics Corp.",
+        "symbol": "TSBX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tractor Supply Company",
+        "symbol": "TSCO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Short TSLA Daily ETF",
+        "symbol": "TSDD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Touchstone Sands Capital US Select Growth ETF",
+        "symbol": "TSEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tower Semiconductor Ltd.",
+        "symbol": "TSEM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Taysha Gene Therapies, Inc.",
+        "symbol": "TSHA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 1.25x Long TSLA Daily ETF",
+        "symbol": "TSL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tesla, Inc.",
+        "symbol": "TSLA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long TSLA Daily ETF",
+        "symbol": "TSLG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily TSLA Bull 2X Shares",
+        "symbol": "TSLL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tradr 2X Short TSLA Daily ETF",
+        "symbol": "TSLQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long TSLA Daily ETF",
+        "symbol": "TSLR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily TSLA Bear 1X Shares",
+        "symbol": "TSLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long TSM Daily ETF",
+        "symbol": "TSMG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long TSM Daily ETF",
+        "symbol": "TSMU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily TSM Bull 2X Shares",
+        "symbol": "TSMX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily TSM Bear 1X Shares",
+        "symbol": "TSMZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TappAlpha SPY Growth & Daily Income ETF",
+        "symbol": "TSPY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TSS, Inc.",
+        "symbol": "TSSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "2seventy bio, Inc.",
+        "symbol": "TSVT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares YieldBOOST TSLA ETF",
+        "symbol": "TSYY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ServiceTitan, Inc.",
+        "symbol": "TTAN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Trade Desk, Inc.",
+        "symbol": "TTD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TTEC Holdings, Inc.",
+        "symbol": "TTEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tetra Tech, Inc.",
+        "symbol": "TTEK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "T. Rowe Price Technology ETF",
+        "symbol": "TTEQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TechTarget, Inc.",
+        "symbol": "TTGT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TTM Technologies, Inc.",
+        "symbol": "TTMI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Titan Pharmaceuticals, Inc.",
+        "symbol": "TTNP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tile Shop Holdings, Inc.",
+        "symbol": "TTSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Take-Two Interactive Software, Inc.",
+        "symbol": "TTWO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "STF Tactical Growth ETF",
+        "symbol": "TUG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "STF Tactical Growth & Income ETF",
+        "symbol": "TUGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI Turkey ETF",
+        "symbol": "TUR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Turbo Energy, S.A.",
+        "symbol": "TURB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "180 Degree Capital Corp.",
+        "symbol": "TURN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Mammoth Energy Services, Inc.",
+        "symbol": "TUSK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Texas Ventures Acquisition III Corp",
+        "symbol": "TVACU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tevogen Bio Holdings Inc.",
+        "symbol": "TVGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tevogen Bio Holdings Inc.",
+        "symbol": "TVGNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tvardi Therapeutics, Inc.",
+        "symbol": "TVRD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Travere Therapeutics, Inc.",
+        "symbol": "TVTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tradeweb Markets Inc.",
+        "symbol": "TW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TWFG, Inc.",
+        "symbol": "TWFG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Top Wealth Group Holding Limited",
+        "symbol": "TWG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Twin Disc, Incorporated",
+        "symbol": "TWIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Twin Hospitality Group Inc.",
+        "symbol": "TWNP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Twist Bioscience Corporation",
+        "symbol": "TWST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "10x Genomics, Inc.",
+        "symbol": "TXG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TherapeuticsMD, Inc.",
+        "symbol": "TXMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Texas Instruments Incorporated",
+        "symbol": "TXN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Texas Roadhouse, Inc.",
+        "symbol": "TXRH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Texas Capital Texas Small Cap Equity Index ETF",
+        "symbol": "TXSS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Thornburg International Equity ETF",
+        "symbol": "TXUE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Thornburg International Growth Fund ETF",
+        "symbol": "TXUG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tigo Energy, Inc.",
+        "symbol": "TYGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tyra Biosciences, Inc.",
+        "symbol": "TYRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Travelzoo",
+        "symbol": "TZOO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Thumzup Media Corporation",
+        "symbol": "TZUP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI UAE ETF",
+        "symbol": "UAE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "United Airlines Holdings, Inc.",
+        "symbol": "UAL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "United Bancorp, Inc.",
+        "symbol": "UBCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "United Security Bancshares",
+        "symbol": "UBFO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares Core Plus Intermediate Bond ETF",
+        "symbol": "UBND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long UBER Daily ETF",
+        "symbol": "UBRL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "United Bankshares, Inc.",
+        "symbol": "UBSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Unity Biotechnology, Inc.",
+        "symbol": "UBX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "U-BX Technology Ltd.",
+        "symbol": "UBXG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "U Power Limited",
+        "symbol": "UCAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "uCloudlink Group Inc.",
+        "symbol": "UCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares Corporate Bond ETF",
+        "symbol": "UCRD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ultra Clean Holdings, Inc.",
+        "symbol": "UCTT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ProShares Ultra Nasdaq Cybersecurity",
+        "symbol": "UCYB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Udemy, Inc.",
+        "symbol": "UDMY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Universal Electronics Inc.",
+        "symbol": "UEIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares Emerging Markets Value Momentum ETF",
+        "symbol": "UEVM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "United Fire Group, Inc",
+        "symbol": "UFCS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Uni-Fuels Holdings Limited",
+        "symbol": "UFG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "US Treasury 5 Year Note ETF",
+        "symbol": "UFIV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Procure Space ETF",
+        "symbol": "UFO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "UFP Industries, Inc.",
+        "symbol": "UFPI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "UFP Technologies, Inc.",
+        "symbol": "UFPT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "United-Guardian, Inc.",
+        "symbol": "UG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "urban-gro, Inc.",
+        "symbol": "UGRO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "United Homes Group, Inc",
+        "symbol": "UHG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "United Homes Group, Inc",
+        "symbol": "UHGWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares Core Intermediate Bond ETF",
+        "symbol": "UITB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares International Value Momentum ETF",
+        "symbol": "UIVM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ucommune International Ltd",
+        "symbol": "UK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ucommune International Ltd",
+        "symbol": "UKOMW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ultralife Corporation",
+        "symbol": "ULBI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Frontier Group Holdings, Inc.",
+        "symbol": "ULCC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Universal Logistics Holdings, Inc.",
+        "symbol": "ULH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ulta Beauty, Inc.",
+        "symbol": "ULTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares US Value Momentum ETF",
+        "symbol": "ULVM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Urgent.ly Inc.",
+        "symbol": "ULY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "UMB Financial Corporation",
+        "symbol": "UMBF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "UMB Financial Corporation",
+        "symbol": "UMBFP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wahed Dow Jones Islamic World ETF",
+        "symbol": "UMMA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Union Bankshares, Inc.",
+        "symbol": "UNB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Unicycive Therapeutics, Inc.",
+        "symbol": "UNCY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Uniti Group Inc.",
+        "symbol": "UNIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree Voya Yield Enhanced USD Universal Bond Fund",
+        "symbol": "UNIY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Unity Bancorp, Inc.",
+        "symbol": "UNTY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MDJM LTD",
+        "symbol": "UOKA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Urban One, Inc.",
+        "symbol": "UONE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Urban One, Inc.",
+        "symbol": "UONEK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Upstream Bio, Inc.",
+        "symbol": "UPB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Upbound Group, Inc.",
+        "symbol": "UPBD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Universe Pharmaceuticals Inc",
+        "symbol": "UPC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xtrackers US Green Infrastructure Select Equity ETF",
+        "symbol": "UPGR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Upland Software, Inc.",
+        "symbol": "UPLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Upstart Holdings, Inc.",
+        "symbol": "UPST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Upwork Inc.",
+        "symbol": "UPWK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Upexi, Inc.",
+        "symbol": "UPXI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Urban Outfitters, Inc.",
+        "symbol": "URBN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "UroGen Pharma Ltd.",
+        "symbol": "URGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Sprott Junior Uranium Miners ETF",
+        "symbol": "URNJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Uranium Royalty Corp.",
+        "symbol": "UROY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Atlas America Fund",
+        "symbol": "USAF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "USA Rare Earth, Inc.",
+        "symbol": "USAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "USA Rare Earth, Inc.",
+        "symbol": "USARW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "U.S. Gold Corp.",
+        "symbol": "USAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "USCB Financial Holdings, Inc.",
+        "symbol": "USCB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Climate Conscious & Transition MSCI USA ETF",
+        "symbol": "USCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SGI Enhanced Core ETF",
+        "symbol": "USDX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "United Maritime Corporation",
+        "symbol": "USEA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "U.S. Energy Corp.",
+        "symbol": "USEG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "BrandywineGLOBAL",
+        "symbol": "USFI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "U.S. GoldMining Inc.",
+        "symbol": "USGO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "U.S. GoldMining Inc.",
+        "symbol": "USGOW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Broad USD Investment Grade Corporate Bond ETF",
+        "symbol": "USIG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree 7-10 Year Laddered Treasury Fund",
+        "symbol": "USIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Usio, Inc.",
+        "symbol": "USIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "United States Lime & Minerals, Inc.",
+        "symbol": "USLM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Principal U.S. Mega-Cap ETF",
+        "symbol": "USMC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ETRACS Crude Oil Shares Covered Call ETNs due April 24, 2037",
+        "symbol": "USOI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Oil Enhanced Options Income ETF",
+        "symbol": "USOY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes US R&D Champions ETF",
+        "symbol": "USRD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree 1-3 Year Laddered Treasury Fund",
+        "symbol": "USSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares Short-Term Bond ETF",
+        "symbol": "USTB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares US Small Mid Cap Value Momentum ETF",
+        "symbol": "USVM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "US Treasury 7 Year Note ETF",
+        "symbol": "USVN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares ESG Advanced MSCI USA ETF",
+        "symbol": "USXF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "US Treasury 10 Year Note ETF",
+        "symbol": "UTEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "United Therapeutics Corporation",
+        "symbol": "UTHR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "US Treasury 30 Year Bond ETF",
+        "symbol": "UTHY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Utah Medical Products, Inc.",
+        "symbol": "UTMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "US Treasury 3 Year Note ETF",
+        "symbol": "UTRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "UTStarcom Holdings Corp",
+        "symbol": "UTSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "US Treasury 2 Year Note ETF",
+        "symbol": "UTWO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "US Treasury 20 Year Bond ETF",
+        "symbol": "UTWY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Univest Financial Corporation",
+        "symbol": "UVSP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Uxin Limited",
+        "symbol": "UXIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Angel Oak UltraShort Income ETF",
+        "symbol": "UYLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "UY Scuti Acquisition Corp.",
+        "symbol": "UYSCU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Virginia National Bankshares Corporation",
+        "symbol": "VABK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Voyager Acquisition Corp",
+        "symbol": "VACH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Voyager Acquisition Corp",
+        "symbol": "VACHU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Voyager Acquisition Corp",
+        "symbol": "VACHW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Valneva SE",
+        "symbol": "VALN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Value Line, Inc.",
+        "symbol": "VALU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vivani Medical, Inc.",
+        "symbol": "VANI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard 0-3 Month Treasury Bill ETF",
+        "symbol": "VBIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VersaBank",
+        "symbol": "VBNK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Veritex Holdings, Inc.",
+        "symbol": "VBTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Visteon Corporation",
+        "symbol": "VC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vericel Corporation",
+        "symbol": "VCEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vine Hill Capital Investment Corp.",
+        "symbol": "VCIC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vine Hill Capital Investment Corp.",
+        "symbol": "VCICU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vine Hill Capital Investment Corp.",
+        "symbol": "VCICW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VCI Global Limited",
+        "symbol": "VCIG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Intermediate-Term Corporate Bond ETF",
+        "symbol": "VCIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Long-Term Corporate Bond ETF",
+        "symbol": "VCLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Core Bond ETF",
+        "symbol": "VCRB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vacasa, Inc.",
+        "symbol": "VCSA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Short-Term Corporate Bond ETF",
+        "symbol": "VCSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Victory Capital Holdings, Inc.",
+        "symbol": "VCTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Veracyte, Inc.",
+        "symbol": "VCYT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Veeco Instruments Inc.",
+        "symbol": "VECO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Veea Inc.",
+        "symbol": "VEEA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Veea Inc.",
+        "symbol": "VEEAW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Twin Vee PowerCats Co.",
+        "symbol": "VEEE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VEON Ltd.",
+        "symbol": "VEON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vera Therapeutics, Inc.",
+        "symbol": "VERA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Verb Technology Company, Inc.",
+        "symbol": "VERB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Veritone, Inc.",
+        "symbol": "VERI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Venus Concept Inc.",
+        "symbol": "VERO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Veru Inc.",
+        "symbol": "VERU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Verve Therapeutics, Inc.",
+        "symbol": "VERV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vertex, Inc.",
+        "symbol": "VERX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Village Farms International, Inc.",
+        "symbol": "VFF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares Free Cash Flow ETF",
+        "symbol": "VFLO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VinFast Auto Ltd.",
+        "symbol": "VFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VinFast Auto Ltd.",
+        "symbol": "VFSWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Verde Clean Fuels, Inc.",
+        "symbol": "VGAS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Verde Clean Fuels, Inc.",
+        "symbol": "VGASW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Intermediate-Term Treasury ETF",
+        "symbol": "VGIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Long-Term Treasury ETF",
+        "symbol": "VGLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Short-Term Treasury ETF",
+        "symbol": "VGSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vert Global Sustainable Real Estate ETF",
+        "symbol": "VGSR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Ultra-Short Treasury ETF",
+        "symbol": "VGUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Via Renewables, Inc.",
+        "symbol": "VIASP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Viavi Solutions Inc.",
+        "symbol": "VIAV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vicor Corporation",
+        "symbol": "VICR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard International Dividend Appreciation ETF",
+        "symbol": "VIGI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vigil Neuroscience, Inc.",
+        "symbol": "VIGL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vinci Partners Investments Ltd.",
+        "symbol": "VINP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Viomi Technology Co., Ltd",
+        "symbol": "VIOT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vir Biotechnology, Inc.",
+        "symbol": "VIR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Virco Manufacturing Corporation",
+        "symbol": "VIRC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Virtu Financial, Inc.",
+        "symbol": "VIRT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vital Farms, Inc.",
+        "symbol": "VITL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vivakor, Inc.",
+        "symbol": "VIVK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VivoSim Labs, Inc.",
+        "symbol": "VIVS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Viking Therapeutics, Inc.",
+        "symbol": "VKTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Volcon, Inc.",
+        "symbol": "VLCN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Village Super Market, Inc.",
+        "symbol": "VLGEA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Valley National Bancorp",
+        "symbol": "VLY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Valley National Bancorp",
+        "symbol": "VLYPN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Valley National Bancorp",
+        "symbol": "VLYPO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Valley National Bancorp",
+        "symbol": "VLYPP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vision Marine Technologies Inc.",
+        "symbol": "VMAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Mortgage-Backed Securities ETF",
+        "symbol": "VMBS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Viemed Healthcare, Inc.",
+        "symbol": "VMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vimeo, Inc.",
+        "symbol": "VMEO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanda Pharmaceuticals Inc.",
+        "symbol": "VNDA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VNET Group, Inc.",
+        "symbol": "VNET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Viper Energy, Inc.",
+        "symbol": "VNOM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Global ex-U.S. Real Estate ETF",
+        "symbol": "VNQI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vodafone Group Plc",
+        "symbol": "VOD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tema Electrification ETF",
+        "symbol": "VOLT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Russell 1000 ETF",
+        "symbol": "VONE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Russell 1000 Growth ETF",
+        "symbol": "VONG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Russell 1000 Value ETF",
+        "symbol": "VONV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vor Biopharma Inc.",
+        "symbol": "VOR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vox Royalty Corp.",
+        "symbol": "VOXR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Core Plus Bond ETF",
+        "symbol": "VPLS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vera Bradley, Inc.",
+        "symbol": "VRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The Glimpse Group, Inc.",
+        "symbol": "VRAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Virax Biolabs Group Limited",
+        "symbol": "VRAX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Verrica Pharmaceuticals Inc.",
+        "symbol": "VRCA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Viridian Therapeutics, Inc.",
+        "symbol": "VRDN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Varex Imaging Corporation",
+        "symbol": "VREX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Invesco Variable Rate Investment Grade ETF",
+        "symbol": "VRIG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vroom, Inc.",
+        "symbol": "VRM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VerifyMe, Inc.",
+        "symbol": "VRME",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VerifyMe, Inc.",
+        "symbol": "VRMEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Verona Pharma plc",
+        "symbol": "VRNA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Varonis Systems, Inc.",
+        "symbol": "VRNS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Verint Systems Inc.",
+        "symbol": "VRNT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Verra Mobility Corporation",
+        "symbol": "VRRM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Verisk Analytics, Inc.",
+        "symbol": "VRSK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VeriSign, Inc.",
+        "symbol": "VRSN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares 2x Long VRT Daily ETF",
+        "symbol": "VRTL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vertex Pharmaceuticals Incorporated",
+        "symbol": "VRTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Versus Systems Inc.",
+        "symbol": "VS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TCTM Kids IT Education Inc.",
+        "symbol": "VSA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ViaSat, Inc.",
+        "symbol": "VSAT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares Dividend Accelerator ETF",
+        "symbol": "VSDA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VSE Corporation",
+        "symbol": "VSEC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VSee Health, Inc.",
+        "symbol": "VSEE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VSee Health, Inc.",
+        "symbol": "VSEEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VS Media Holdings Limited",
+        "symbol": "VSME",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VictoryShares US Multi-Factor Minimum Volatility ETF",
+        "symbol": "VSMV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Versus Systems Inc.",
+        "symbol": "VSSYW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vasta Platform Limited",
+        "symbol": "VSTA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vast Renewables Limited",
+        "symbol": "VSTE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vast Renewables Limited",
+        "symbol": "VSTEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Verastem, Inc.",
+        "symbol": "VSTM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Total Corporate Bond ETF",
+        "symbol": "VTC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vistagen Therapeutics, Inc.",
+        "symbol": "VTGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Russell 3000 ETF",
+        "symbol": "VTHR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Short-Term Inflation-Protected Securities Index Fund ETF Shares",
+        "symbol": "VTIP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Viatris Inc.",
+        "symbol": "VTRS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VirTra, Inc.",
+        "symbol": "VTSI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "vTv Therapeutics Inc.",
+        "symbol": "VTVT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Russell 2000 Growth ETF",
+        "symbol": "VTWG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Russell 2000 ETF",
+        "symbol": "VTWO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Russell 2000 Value ETF",
+        "symbol": "VTWV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ventyx Biosciences, Inc.",
+        "symbol": "VTYX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vuzix Corporation",
+        "symbol": "VUZI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vivos Therapeutics, Inc.",
+        "symbol": "VVOS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VivoPower International PLC",
+        "symbol": "VVPR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Emerging Markets Government Bond ETF",
+        "symbol": "VWOB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vaxart, Inc.",
+        "symbol": "VXRT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard Total International Stock ETF",
+        "symbol": "VXUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Voyager Therapeutics, Inc.",
+        "symbol": "VYGR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Vanguard International High Dividend Yield ETF",
+        "symbol": "VYMI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "VYNE Therapeutics Inc.",
+        "symbol": "VYNE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Westamerica Bancorporation",
+        "symbol": "WABC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Western Asset Bond ETF",
+        "symbol": "WABF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WaFd, Inc.",
+        "symbol": "WAFD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WaFd, Inc.",
+        "symbol": "WAFDP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wah Fu Education Group Limited",
+        "symbol": "WAFU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Top KingWin Ltd",
+        "symbol": "WAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Waldencast plc",
+        "symbol": "WALD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Waldencast plc",
+        "symbol": "WALDW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Washington Trust Bancorp, Inc.",
+        "symbol": "WASH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Energous Corporation",
+        "symbol": "WATT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Eco Wave Power Global AB (publ)",
+        "symbol": "WAVE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Waystar Holding Corp.",
+        "symbol": "WAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Weibo Corporation",
+        "symbol": "WB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Walgreens Boots Alliance, Inc.",
+        "symbol": "WBA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Warner Bros. Discovery, Inc.",
+        "symbol": "WBD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Western Asset Total Return ETF",
+        "symbol": "WBND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WEBTOON Entertainment Inc.",
+        "symbol": "WBTN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree Cybersecurity Fund",
+        "symbol": "WCBR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree Cloud Computing Fund",
+        "symbol": "WCLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wellchange Holdings Company Limited",
+        "symbol": "WCT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Workday, Inc.",
+        "symbol": "WDAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Western Digital Corporation",
+        "symbol": "WDC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WD-40 Company",
+        "symbol": "WDFC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Westwood Salient Enhanced Energy Income ETF",
+        "symbol": "WEEI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wendy's Company (The)",
+        "symbol": "WEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Werner Enterprises, Inc.",
+        "symbol": "WERN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Westrock Coffee Company",
+        "symbol": "WEST",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wetouch Technology Inc.",
+        "symbol": "WETH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Webus International Limited",
+        "symbol": "WETO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Weyco Group, Inc.",
+        "symbol": "WEYS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Where Food Comes From, Inc.",
+        "symbol": "WFCF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WF Holding Limited",
+        "symbol": "WFF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Weatherford International plc",
+        "symbol": "WFRD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "CoinShares Valkyrie Bitcoin Miners ETF",
+        "symbol": "WGMI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wellgistics Health, Inc.",
+        "symbol": "WGRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GeneDx Holdings Corp.",
+        "symbol": "WGS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GeneDx Holdings Corp.",
+        "symbol": "WGSWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WhiteHorse Finance, Inc.",
+        "symbol": "WHF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WhiteHorse Finance, Inc.",
+        "symbol": "WHFCL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wheeler Real Estate Investment Trust, Inc.",
+        "symbol": "WHLR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wheeler Real Estate Investment Trust, Inc.",
+        "symbol": "WHLRD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wheeler Real Estate Investment Trust, Inc.",
+        "symbol": "WHLRL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wheeler Real Estate Investment Trust, Inc.",
+        "symbol": "WHLRP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Whitehawk Therapeutics, Inc.",
+        "symbol": "WHWK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "G. Willi-Food International,  Ltd.",
+        "symbol": "WILC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WiMi Hologram Cloud Inc.",
+        "symbol": "WIMI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Winmark Corporation",
+        "symbol": "WINA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Western Asset Short Duration Income ETF",
+        "symbol": "WINC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wingstop Inc.",
+        "symbol": "WING",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Windtree Therapeutics, Inc.",
+        "symbol": "WINT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Themes Generative Artificial Intelligence ETF",
+        "symbol": "WISE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wix.com Ltd.",
+        "symbol": "WIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WISeKey International Holding Ltd",
+        "symbol": "WKEY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Workhorse Group, Inc.",
+        "symbol": "WKHS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Worksport, Ltd.",
+        "symbol": "WKSP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Willow Lane Acquisition Corp.",
+        "symbol": "WLAC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Willow Lane Acquisition Corp.",
+        "symbol": "WLACU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Willow Lane Acquisition Corp.",
+        "symbol": "WLACW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Willdan Group, Inc.",
+        "symbol": "WLDN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wearable Devices Ltd.",
+        "symbol": "WLDS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wearable Devices Ltd.",
+        "symbol": "WLDSW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Willis Lease Finance Corporation",
+        "symbol": "WLFC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wang & Lee Group, Inc.",
+        "symbol": "WLGS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Warner Music Group Corp.",
+        "symbol": "WMG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "William Penn Bancorporation",
+        "symbol": "WMPN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X Wind Energy ETF",
+        "symbol": "WNDY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Western New England Bancorp, Inc.",
+        "symbol": "WNEB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Meiwu Technology Company Limited",
+        "symbol": "WNW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WORK Medical Technology Group LTD",
+        "symbol": "WOK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Global Timber & Forestry ETF",
+        "symbol": "WOOD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Petco Health and Wellness Company, Inc.",
+        "symbol": "WOOF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SCWorx Corp.",
+        "symbol": "WORX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Westport Fuel Systems Inc",
+        "symbol": "WPRT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wrap Technologies, Inc.",
+        "symbol": "WRAP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WeRide Inc.",
+        "symbol": "WRD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "World Acceptance Corporation",
+        "symbol": "WRLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NYLI Global Equity R&D Leaders ETF",
+        "symbol": "WRND",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WesBanco, Inc.",
+        "symbol": "WSBC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WesBanco, Inc.",
+        "symbol": "WSBCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Waterstone Financial, Inc.",
+        "symbol": "WSBF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WillScot Holdings Corporation",
+        "symbol": "WSC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WSFS Financial Corporation",
+        "symbol": "WSFS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares MSCI World Small-Cap ETF",
+        "symbol": "WSML",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "West Bancorporation",
+        "symbol": "WTBA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree Bianco Total Return Fund",
+        "symbol": "WTBN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Waton Financial Limited",
+        "symbol": "WTF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wintrust Financial Corporation",
+        "symbol": "WTFC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wintrust Financial Corporation",
+        "symbol": "WTFCM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wintrust Financial Corporation",
+        "symbol": "WTFCP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree Core Laddered Municipal Fund",
+        "symbol": "WTMU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WisdomTree High Income Laddered Municipal Fund",
+        "symbol": "WTMY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "UTime Limited",
+        "symbol": "WTO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Willis Towers Watson Public Limited Company",
+        "symbol": "WTW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TeraWulf Inc.",
+        "symbol": "WULF",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wave Life Sciences Ltd.",
+        "symbol": "WVE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Willamette Valley Vineyards, Inc.",
+        "symbol": "WVVI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Willamette Valley Vineyards, Inc.",
+        "symbol": "WVVIP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WW International, Inc.",
+        "symbol": "WW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Woodward, Inc.",
+        "symbol": "WWD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "WF International Limited",
+        "symbol": "WXM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wing Yip Food Holdings Group Limited",
+        "symbol": "WYHG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Wynn Resorts, Limited",
+        "symbol": "WYNN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Longevity Health Holdings, Inc.",
+        "symbol": "XAGE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Longevity Health Holdings, Inc.",
+        "symbol": "XAGEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Beyond Air, Inc.",
+        "symbol": "XAIR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xtrackers Artificial Intelligence and Big Data ETF",
+        "symbol": "XAIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "US Treasury 6 Month Bill ETF",
+        "symbol": "XBIL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xenetic Biosciences, Inc.",
+        "symbol": "XBIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XBiotech Inc.",
+        "symbol": "XBIT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XBP Europe Holdings, Inc.",
+        "symbol": "XBP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XBP Europe Holdings, Inc.",
+        "symbol": "XBPEW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XCHG Limited",
+        "symbol": "XCH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "SPDR S&P Emerging Markets ex-China ETF",
+        "symbol": "XCNY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Exicure, Inc.",
+        "symbol": "XCUR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xcel Energy Inc.",
+        "symbol": "XEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xcel Brands, Inc",
+        "symbol": "XELB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xenon Pharmaceuticals Inc.",
+        "symbol": "XENE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xeris Biopharma Holdings, Inc.",
+        "symbol": "XERS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "F/m Opportunistic Income ETF",
+        "symbol": "XFIX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "X4 Pharmaceuticals, Inc.",
+        "symbol": "XFOR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Exagen Inc.",
+        "symbol": "XGN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XChange TEC.INC",
+        "symbol": "XHG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TEN Holdings, Inc.",
+        "symbol": "XHLD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xilio Therapeutics, Inc.",
+        "symbol": "XLO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Defiance Large Cap ex-Mag 7 ETF",
+        "symbol": "XMAG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xometry, Inc.",
+        "symbol": "XMTR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xencor, Inc.",
+        "symbol": "XNCR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xunlei Limited",
+        "symbol": "XNET",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XOMA Royalty Corporation",
+        "symbol": "XOMA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XOMA Royalty Corporation",
+        "symbol": "XOMAO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XOMA Royalty Corporation",
+        "symbol": "XOMAP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily XOM Bull 2X Shares",
+        "symbol": "XOMX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Direxion Daily XOM Bear 1X Shares",
+        "symbol": "XOMZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xos, Inc.",
+        "symbol": "XOS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xos, Inc.",
+        "symbol": "XOSWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ERShares Private-Public Crossover ETF",
+        "symbol": "XOVR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XP Inc.",
+        "symbol": "XP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XPEL, Inc.",
+        "symbol": "XPEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Expion360 Inc.",
+        "symbol": "XPON",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "DENTSPLY SIRONA Inc.",
+        "symbol": "XRAY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XORTX Therapeutics Inc.",
+        "symbol": "XRTX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xerox Holdings Corporation",
+        "symbol": "XRX",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "iShares Exponential Technologies ETF",
+        "symbol": "XT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XTI Aerospace, Inc. Common Stock",
+        "symbol": "XTIA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "X3 Holdings Co., Ltd.",
+        "symbol": "XTKG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XTL Biopharmaceuticals Ltd.",
+        "symbol": "XTLB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "XWELL, Inc.",
+        "symbol": "XWEL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "22nd Century Group, Inc",
+        "symbol": "XXII",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Xylo Technologies Ltd.",
+        "symbol": "XYLO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Leverage Shares 2X Long XYZ Daily ETF",
+        "symbol": "XYZG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Youxin Technology Ltd",
+        "symbol": "YAAS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Yuanbao Inc.",
+        "symbol": "YB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "MingZhu Logistics Holdings Limited",
+        "symbol": "YGMZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "LQR House Inc.",
+        "symbol": "YHC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Yunhong Green CTI Ltd.",
+        "symbol": "YHGJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "YHN Acquisition I Limited",
+        "symbol": "YHNA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "YHN Acquisition I Limited",
+        "symbol": "YHNAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "YHN Acquisition I Limited",
+        "symbol": "YHNAU",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "111, Inc.",
+        "symbol": "YI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Planet Image International Limited",
+        "symbol": "YIBO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Yunji Inc.",
+        "symbol": "YJ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Franklin ClearBridge Enhanced Income ETF",
+        "symbol": "YLDE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Y-mAbs Therapeutics, Inc.",
+        "symbol": "YMAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "YOKE Core ETF",
+        "symbol": "YOKE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "The York Water Company",
+        "symbol": "YORW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Yoshiharu Global Co.",
+        "symbol": "YOSH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "17 Education & Technology Group Inc.",
+        "symbol": "YQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "YieldMax Short N100 Option Income Strategy ETF",
+        "symbol": "YQQQ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "GraniteShares YieldBOOST SPY ETF",
+        "symbol": "YSPY",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "YSX Tech. Co., Ltd",
+        "symbol": "YSXT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Yatra Online, Inc.",
+        "symbol": "YTRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "YXT.COM GROUP HOLDING LIMITED",
+        "symbol": "YXT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Connexa Sports Technologies Inc.",
+        "symbol": "YYAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "YY Group Holding Limited",
+        "symbol": "YYGH",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zillow Group, Inc.",
+        "symbol": "Z",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Global X U.S. Electrification ETF",
+        "symbol": "ZAP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zapp Electric Vehicles Group Limited",
+        "symbol": "ZAPP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zapp Electric Vehicles Group Limited",
+        "symbol": "ZAPPW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tick Pilot Test Stock Class A Common Stock",
+        "symbol": "ZAZZT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ATIF Holdings Limited",
+        "symbol": "ZBAI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zhibao Technology Inc.",
+        "symbol": "ZBAO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zenas BioPharma, Inc.",
+        "symbol": "ZBIO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zebra Technologies Corporation",
+        "symbol": "ZBRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Test Pilot Test Stock Class B Common Stock",
+        "symbol": "ZBZZT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zoomcar Holdings, Inc.",
+        "symbol": "ZCAR",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zoomcar Holdings, Inc.",
+        "symbol": "ZCARW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zhongchao Inc.",
+        "symbol": "ZCMD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Tick Pilot Test Stock Class C",
+        "symbol": "ZCZZT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Ziff Davis, Inc.",
+        "symbol": "ZD",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ZenaTech, Inc.",
+        "symbol": "ZENA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zenvia Inc.",
+        "symbol": "ZENV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zeo Energy Corporation",
+        "symbol": "ZEO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zeo Energy Corporation",
+        "symbol": "ZEOWW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Olympic Steel, Inc.",
+        "symbol": "ZEUS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zillow Group, Inc.",
+        "symbol": "ZG",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ZoomInfo Technologies Inc.",
+        "symbol": "ZI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ZimVie Inc.",
+        "symbol": "ZIMV",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zions Bancorporation N.A.",
+        "symbol": "ZION",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zions Bancorporation N.A.",
+        "symbol": "ZIONP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "STKd 100% UBER & 100% TSLA ETF",
+        "symbol": "ZIPP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ZJK Industrial Co., Ltd.",
+        "symbol": "ZJK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "JIN MEDICAL INTERNATIONAL LTD.",
+        "symbol": "ZJYL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NASDAQ TEST STOCK",
+        "symbol": "ZJZZT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ZK International Group Co., Ltd",
+        "symbol": "ZKIN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zai Lab Limited",
+        "symbol": "ZLAB",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zoom Communications, Inc.",
+        "symbol": "ZM",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zentalis Pharmaceuticals, Inc.",
+        "symbol": "ZNTL",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ZOOZ Power Ltd.",
+        "symbol": "ZOOZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ZOOZ Power Ltd.",
+        "symbol": "ZOOZW",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zscaler, Inc.",
+        "symbol": "ZS",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "zSpace, Inc.",
+        "symbol": "ZSPC",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zentek Ltd.",
+        "symbol": "ZTEK",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "F/m 10-Year Investment Grade Corporate Bond ETF",
+        "symbol": "ZTEN",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "F/m High Yield 100 ETF",
+        "symbol": "ZTOP",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "F/m 3-Year Investment Grade Corporate Bond ETF",
+        "symbol": "ZTRE",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "F/m 2-Year Investment Grade Corporate Bond ETF",
+        "symbol": "ZTWO",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zumiez Inc.",
+        "symbol": "ZUMZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zura Bio Limited",
+        "symbol": "ZURA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zevra Therapeutics, Inc.",
+        "symbol": "ZVRA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "ZyVersa Therapeutics, Inc.",
+        "symbol": "ZVSA",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NASDAQ TEST STOCK",
+        "symbol": "ZVZZT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NASDAQ TEST STOCK",
+        "symbol": "ZWZZT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Nasdaq Symbology Test Common Stock",
+        "symbol": "ZXYZ.A",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "NASDAQ TEST STOCK",
+        "symbol": "ZXZZT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zhengye Biotechnology Holding Limited",
+        "symbol": "ZYBT",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zymeworks Inc.",
+        "symbol": "ZYME",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Zynex, Inc.",
+        "symbol": "ZYXI",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "Cyber Hornet S&P 500 and Bitcoin 75/25 Strategy ETF",
+        "symbol": "ZZZ",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "TrueCar, Inc.",
+        "symbol": "true",
+        "exchange": "NASDAQ"
+    },
+    {
+        "name": "null",
+        "symbol": "null",
+        "exchange": "NASDAQ"
+    },
+
 
   // NYSE Companies
   { name: "JPMorgan Chase & Co.", symbol: "JPM", exchange: "NYSE" },
@@ -28,4965 +24249,6 @@ export const COMPANIES: Company[] = [
   { name: "PepsiCo Inc.", symbol: "PEP", exchange: "NYSE" },
   { name: "AT&T Inc.", symbol: "T", exchange: "NYSE" },
   { name: "Verizon Communications Inc.", symbol: "VZ", exchange: "NYSE" },
-  { name: "3D Systems Corporation", symbol: "DDD", exchange: "NYSE" },
-{ name: "3M Company", symbol: "MMM", exchange: "NYSE" },
-{ name: "500.com Limited", symbol: "WBAI", exchange: "NYSE" },
-{ name: "8x8 Inc", symbol: "EGHT", exchange: "NYSE" },
-{ name: "A.H. Belo Corporation", symbol: "AHC", exchange: "NYSE" },
-{ name: "A.O Smith Corporation", symbol: "AOS", exchange: "NYSE" },
-{ name: "A10 Networks, Inc.", symbol: "ATEN", exchange: "NYSE" },
-{ name: "AAR Corp.", symbol: "AIR", exchange: "NYSE" },
-{ name: "ABB Ltd", symbol: "ABB", exchange: "NYSE" },
-{ name: "Abbott Laboratories", symbol: "ABT", exchange: "NYSE" },
-{ name: "AbbVie Inc.", symbol: "ABBV", exchange: "NYSE" },
-{ name: "Abercrombie & Fitch Company", symbol: "ANF", exchange: "NYSE" },
-{ name: "Aberdeen Global Dynamic Dividend Fund", symbol: "AGD", exchange: "NYSE" },
-{ name: "Aberdeen Global Premier Properties Fund", symbol: "AWP", exchange: "NYSE" },
-{ name: "Aberdeen Income Credit Strategies Fund", symbol: "ACP", exchange: "NYSE" },
-{ name: "Aberdeen Japan Equity Fund, Inc.", symbol: "JEQ", exchange: "NYSE" },
-{ name: "Aberdeen Standard Global Infrastructure Income Fund", symbol: "ASGI", exchange: "NYSE" },
-{ name: "Aberdeen Total Dynamic Dividend Fund", symbol: "AOD", exchange: "NYSE" },
-{ name: "ABM Industries Incorporated", symbol: "ABM", exchange: "NYSE" },
-{ name: "Acadia Realty Trust", symbol: "AKR", exchange: "NYSE" },
-{ name: "Accel Entertainment, Inc.", symbol: "ACEL", exchange: "NYSE" },
-{ name: "Accenture plc", symbol: "ACN", exchange: "NYSE" },
-{ name: "Acco Brands Corporation", symbol: "ACCO", exchange: "NYSE" },
-{ name: "Acorn International, Inc.", symbol: "ATV", exchange: "NYSE" },
-{ name: "Acuity Brands, Inc.", symbol: "AYI", exchange: "NYSE" },
-{ name: "Acushnet Holdings Corp.", symbol: "GOLF", exchange: "NYSE" },
-{ name: "Adams Diversified Equity Fund, Inc.", symbol: "ADX", exchange: "NYSE" },
-{ name: "Adams Natural Resources Fund, Inc.", symbol: "PEO", exchange: "NYSE" },
-{ name: "ADC Therapeutics SA", symbol: "ADCT", exchange: "NYSE" },
-{ name: "Adecoagro S.A.", symbol: "AGRO", exchange: "NYSE" },
-{ name: "Adient plc", symbol: "ADNT", exchange: "NYSE" },
-{ name: "Adit EdTech Acquisition Corp.", symbol: "ADEX.U", exchange: "NYSE" },
-{ name: "ADT Inc.", symbol: "ADT", exchange: "NYSE" },
-{ name: "Adtalem Global Education Inc.", symbol: "ATGE", exchange: "NYSE" },
-{ name: "Advance Auto Parts Inc", symbol: "AAP", exchange: "NYSE" },
-{ name: "Advanced Drainage Systems, Inc.", symbol: "WMS", exchange: "NYSE" },
-{ name: "AdvanSix Inc.", symbol: "ASIX", exchange: "NYSE" },
-{ name: "Advent Convertible and Income Fund", symbol: "AVK", exchange: "NYSE" },
-{ name: "AEA-Bridges Impact Corp.", symbol: "IMPX", exchange: "NYSE" },
-{ name: "AEA-Bridges Impact Corp.", symbol: "IMPX.U", exchange: "NYSE" },
-{ name: "AEA-Bridges Impact Corp.", symbol: "IMPX.WS", exchange: "NYSE" },
-{ name: "AECOM", symbol: "ACM", exchange: "NYSE" },
-{ name: "Aegon Funding Company LLC", symbol: "AEFC", exchange: "NYSE" },
-{ name: "Aegon NV", symbol: "AEB", exchange: "NYSE" },
-{ name: "Aegon NV", symbol: "AEG", exchange: "NYSE" },
-{ name: "Aenza S.A.A.", symbol: "AENZ", exchange: "NYSE" },
-{ name: "Aercap Holdings N.V.", symbol: "AER", exchange: "NYSE" },
-{ name: "Aerojet Rocketdyne Holdings, Inc.", symbol: "AJRD", exchange: "NYSE" },
-{ name: "Affiliated Managers Group, Inc.", symbol: "AMG", exchange: "NYSE" },
-{ name: "Affiliated Managers Group, Inc.", symbol: "MGR", exchange: "NYSE" },
-{ name: "Affiliated Managers Group, Inc.", symbol: "MGRB", exchange: "NYSE" },
-{ name: "Aflac Incorporated", symbol: "AFL", exchange: "NYSE" },
-{ name: "AG Mortgage Investment Trust, Inc.", symbol: "MITT", exchange: "NYSE" },
-{ name: "AG Mortgage Investment Trust, Inc.", symbol: "MITT^A", exchange: "NYSE" },
-{ name: "AG Mortgage Investment Trust, Inc.", symbol: "MITT^B", exchange: "NYSE" },
-{ name: "AG Mortgage Investment Trust, Inc.", symbol: "MITT^C", exchange: "NYSE" },
-{ name: "AGCO Corporation", symbol: "AGCO", exchange: "NYSE" },
-{ name: "Agilent Technologies, Inc.", symbol: "A", exchange: "NYSE" },
-{ name: "Agnico Eagle Mines Limited", symbol: "AEM", exchange: "NYSE" },
-{ name: "Agree Realty Corporation", symbol: "ADC", exchange: "NYSE" },
-{ name: "Air Lease Corporation", symbol: "AL", exchange: "NYSE" },
-{ name: "Air Lease Corporation", symbol: "AL^A", exchange: "NYSE" },
-{ name: "Air Products and Chemicals, Inc.", symbol: "APD", exchange: "NYSE" },
-{ name: "Ajax I", symbol: "AJAX", exchange: "NYSE" },
-{ name: "Ajax I", symbol: "AJAX.U", exchange: "NYSE" },
-{ name: "Ajax I", symbol: "AJAX.WS", exchange: "NYSE" },
-{ name: "Alabama Power Company", symbol: "ALP^Q", exchange: "NYSE" },
-{ name: "Alamo Group, Inc.", symbol: "ALG", exchange: "NYSE" },
-{ name: "Alamos Gold Inc.", symbol: "AGI", exchange: "NYSE" },
-{ name: "Alaska Air Group, Inc.", symbol: "ALK", exchange: "NYSE" },
-{ name: "Albany International Corporation", symbol: "AIN", exchange: "NYSE" },
-{ name: "Albemarle Corporation", symbol: "ALB", exchange: "NYSE" },
-{ name: "Albertsons Companies, Inc.", symbol: "ACI", exchange: "NYSE" },
-{ name: "Alcoa Corporation", symbol: "AA", exchange: "NYSE" },
-{ name: "Alcon Inc.", symbol: "ALC", exchange: "NYSE" },
-{ name: "Alexander & Baldwin, Inc.", symbol: "ALEX", exchange: "NYSE" },
-{ name: "Alexander&#39;s, Inc.", symbol: "ALX", exchange: "NYSE" },
-{ name: "Alexandria Real Estate Equities, Inc.", symbol: "ARE", exchange: "NYSE" },
-{ name: "Algonquin Power & Utilities Corp.", symbol: "AQN", exchange: "NYSE" },
-{ name: "Algonquin Power & Utilities Corp.", symbol: "AQNA", exchange: "NYSE" },
-{ name: "Algonquin Power & Utilities Corp.", symbol: "AQNB", exchange: "NYSE" },
-{ name: "Alibaba Group Holding Limited", symbol: "BABA", exchange: "NYSE" },
-{ name: "Alleghany Corporation", symbol: "Y", exchange: "NYSE" },
-{ name: "Allegheny Technologies Incorporated", symbol: "ATI", exchange: "NYSE" },
-{ name: "Allegion plc", symbol: "ALLE", exchange: "NYSE" },
-{ name: "Allete, Inc.", symbol: "ALE", exchange: "NYSE" },
-{ name: "Alliance Data Systems Corporation", symbol: "ADS", exchange: "NYSE" },
-{ name: "Alliance National Municipal Income Fund Inc", symbol: "AFB", exchange: "NYSE" },
-{ name: "Alliance World Dollar Government Fund II", symbol: "AWF", exchange: "NYSE" },
-{ name: "AllianceBernstein Holding L.P.", symbol: "AB", exchange: "NYSE" },
-{ name: "AllianzGI Artificial Intelligence & Tech Opp Fd", symbol: "AIO", exchange: "NYSE" },
-{ name: "AllianzGI Convertible & Income 2024 Target Term Fund", symbol: "CBH", exchange: "NYSE" },
-{ name: "AllianzGI Convertible & Income Fund", symbol: "NCV", exchange: "NYSE" },
-{ name: "AllianzGI Convertible & Income Fund", symbol: "NCV^A", exchange: "NYSE" },
-{ name: "AllianzGI Convertible & Income Fund II", symbol: "NCZ", exchange: "NYSE" },
-{ name: "AllianzGI Convertible & Income Fund II", symbol: "NCZ^A", exchange: "NYSE" },
-{ name: "AllianzGI Diversified Income & Convertible Fund", symbol: "ACV", exchange: "NYSE" },
-{ name: "AllianzGI Dividend, Interest & Premium Strategy Fu", symbol: "NFJ", exchange: "NYSE" },
-{ name: "AllianzGI Equity & Convertible Income Fund", symbol: "NIE", exchange: "NYSE" },
-{ name: "Allison Transmission Holdings, Inc.", symbol: "ALSN", exchange: "NYSE" },
-{ name: "Allstate Corporation (The)", symbol: "ALL", exchange: "NYSE" },
-{ name: "Allstate Corporation (The)", symbol: "ALL^B", exchange: "NYSE" },
-{ name: "Allstate Corporation (The)", symbol: "ALL^G", exchange: "NYSE" },
-{ name: "Allstate Corporation (The)", symbol: "ALL^H", exchange: "NYSE" },
-{ name: "Allstate Corporation (The)", symbol: "ALL^I", exchange: "NYSE" },
-{ name: "Ally Financial Inc.", symbol: "ALLY", exchange: "NYSE" },
-{ name: "Ally Financial Inc.", symbol: "ALLY^A", exchange: "NYSE" },
-{ name: "Alpine Income Property Trust, Inc.", symbol: "PINE", exchange: "NYSE" },
-{ name: "Alta Equipment Group Inc.", symbol: "ALTG", exchange: "NYSE" },
-{ name: "Alta Equipment Group Inc.", symbol: "ALTG.WS", exchange: "NYSE" },
-{ name: "Altera Infrastructure L.P.", symbol: "ALIN^A", exchange: "NYSE" },
-{ name: "Altera Infrastructure L.P.", symbol: "ALIN^B", exchange: "NYSE" },
-{ name: "Altera Infrastructure L.P.", symbol: "ALIN^E", exchange: "NYSE" },
-{ name: "Alteryx, Inc.", symbol: "AYX", exchange: "NYSE" },
-{ name: "Altice USA, Inc.", symbol: "ATUS", exchange: "NYSE" },
-{ name: "Altimar Acquisition Corporation", symbol: "ATAC", exchange: "NYSE" },
-{ name: "Altimar Acquisition Corporation", symbol: "ATAC.U", exchange: "NYSE" },
-{ name: "Altimar Acquisition Corporation", symbol: "ATAC.WS", exchange: "NYSE" },
-{ name: "Altimeter Growth Corp. 2", symbol: "AGCB", exchange: "NYSE" },
-{ name: "Altria Group", symbol: "MO", exchange: "NYSE" },
-{ name: "Aluminum Corporation of China Limited", symbol: "ACH", exchange: "NYSE" },
-{ name: "Alussa Energy Acquisition Corp.", symbol: "ALUS", exchange: "NYSE" },
-{ name: "Alussa Energy Acquisition Corp.", symbol: "ALUS.U", exchange: "NYSE" },
-{ name: "Alussa Energy Acquisition Corp.", symbol: "ALUS.WS", exchange: "NYSE" },
-{ name: "Ambac Financial Group, Inc.", symbol: "AMBC", exchange: "NYSE" },
-{ name: "Ambac Financial Group, Inc.", symbol: "AMBC.WS", exchange: "NYSE" },
-{ name: "Ambev S.A.", symbol: "ABEV", exchange: "NYSE" },
-{ name: "AMC Entertainment Holdings, Inc.", symbol: "AMC", exchange: "NYSE" },
-{ name: "Amcor plc", symbol: "AMCR", exchange: "NYSE" },
-{ name: "Ameren Corporation", symbol: "AEE", exchange: "NYSE" },
-{ name: "Ameresco, Inc.", symbol: "AMRC", exchange: "NYSE" },
-{ name: "America Movil, S.A.B. de C.V.", symbol: "AMOV", exchange: "NYSE" },
-{ name: "America Movil, S.A.B. de C.V.", symbol: "AMX", exchange: "NYSE" },
-{ name: "American Assets Trust, Inc.", symbol: "AAT", exchange: "NYSE" },
-{ name: "American Axle & Manufacturing Holdings, Inc.", symbol: "AXL", exchange: "NYSE" },
-{ name: "American Campus Communities Inc", symbol: "ACC", exchange: "NYSE" },
-{ name: "American Eagle Outfitters, Inc.", symbol: "AEO", exchange: "NYSE" },
-{ name: "American Equity Investment Life Holding Company", symbol: "AEL", exchange: "NYSE" },
-{ name: "American Equity Investment Life Holding Company", symbol: "AEL^A", exchange: "NYSE" },
-{ name: "American Equity Investment Life Holding Company", symbol: "AEL^B", exchange: "NYSE" },
-{ name: "American Express Company", symbol: "AXP", exchange: "NYSE" },
-{ name: "American Financial Group, Inc.", symbol: "AFG", exchange: "NYSE" },
-{ name: "American Financial Group, Inc.", symbol: "AFGB", exchange: "NYSE" },
-{ name: "American Financial Group, Inc.", symbol: "AFGC", exchange: "NYSE" },
-{ name: "American Financial Group, Inc.", symbol: "AFGD", exchange: "NYSE" },
-{ name: "American Financial Group, Inc.", symbol: "AFGE", exchange: "NYSE" },
-{ name: "American Homes 4 Rent", symbol: "AMH", exchange: "NYSE" },
-{ name: "American Homes 4 Rent", symbol: "AMH^D", exchange: "NYSE" },
-{ name: "American Homes 4 Rent", symbol: "AMH^E", exchange: "NYSE" },
-{ name: "American Homes 4 Rent", symbol: "AMH^F", exchange: "NYSE" },
-{ name: "American Homes 4 Rent", symbol: "AMH^G", exchange: "NYSE" },
-{ name: "American Homes 4 Rent", symbol: "AMH^H", exchange: "NYSE" },
-{ name: "American International Group, Inc.", symbol: "AIG", exchange: "NYSE" },
-{ name: "American International Group, Inc.", symbol: "AIG^A", exchange: "NYSE" },
-{ name: "American Realty Investors, Inc.", symbol: "ARL", exchange: "NYSE" },
-{ name: "American Renal Associates Holdings, Inc", symbol: "ARA", exchange: "NYSE" },
-{ name: "American States Water Company", symbol: "AWR", exchange: "NYSE" },
-{ name: "American Tower Corporation (REIT)", symbol: "AMT", exchange: "NYSE" },
-{ name: "American Vanguard Corporation", symbol: "AVD", exchange: "NYSE" },
-{ name: "American Water Works", symbol: "AWK", exchange: "NYSE" },
-{ name: "American Well Corporation", symbol: "AMWL", exchange: "NYSE" },
-{ name: "Americas Technology Acquisition Corp.", symbol: "ATA.U", exchange: "NYSE" },
-{ name: "Americold Realty Trust", symbol: "COLD", exchange: "NYSE" },
-{ name: "AMERIPRISE FINANCIAL SERVICES, LLC", symbol: "AMP", exchange: "NYSE" },
-{ name: "AmerisourceBergen Corporation (Holding Co)", symbol: "ABC", exchange: "NYSE" },
-{ name: "AMN Healthcare Services Inc", symbol: "AMN", exchange: "NYSE" },
-{ name: "Amneal Pharmaceuticals, Inc.", symbol: "AMRX", exchange: "NYSE" },
-{ name: "Ampco-Pittsburgh Corporation", symbol: "AP", exchange: "NYSE" },
-{ name: "Amphenol Corporation", symbol: "APH", exchange: "NYSE" },
-{ name: "AMREP Corporation", symbol: "AXR", exchange: "NYSE" },
-{ name: "AMTD International Inc.", symbol: "HKIB", exchange: "NYSE" },
-{ name: "AMTEK, Inc.", symbol: "AME", exchange: "NYSE" },
-{ name: "Anaplan, Inc.", symbol: "PLAN", exchange: "NYSE" },
-{ name: "Angel Oak Dynamic Financial Strategies Income Term Trust", symbol: "DYFN", exchange: "NYSE" },
-{ name: "Angel Oak Financial Strategies Income Term Trust", symbol: "FINS", exchange: "NYSE" },
-{ name: "AngloGold Ashanti Limited", symbol: "AU", exchange: "NYSE" },
-{ name: "Anheuser-Busch Inbev SA", symbol: "BUD", exchange: "NYSE" },
-{ name: "Annaly Capital Management Inc", symbol: "NLY", exchange: "NYSE" },
-{ name: "Annaly Capital Management Inc", symbol: "NLY^F", exchange: "NYSE" },
-{ name: "Annaly Capital Management Inc", symbol: "NLY^G", exchange: "NYSE" },
-{ name: "Annaly Capital Management Inc", symbol: "NLY^I", exchange: "NYSE" },
-{ name: "Antero Midstream Corporation", symbol: "AM", exchange: "NYSE" },
-{ name: "Antero Resources Corporation", symbol: "AR", exchange: "NYSE" },
-{ name: "Anthem, Inc.", symbol: "ANTM", exchange: "NYSE" },
-{ name: "Anworth Mortgage Asset  Corporation", symbol: "ANH", exchange: "NYSE" },
-{ name: "Anworth Mortgage Asset  Corporation", symbol: "ANH^A", exchange: "NYSE" },
-{ name: "Anworth Mortgage Asset  Corporation", symbol: "ANH^B", exchange: "NYSE" },
-{ name: "Anworth Mortgage Asset  Corporation", symbol: "ANH^C", exchange: "NYSE" },
-{ name: "Aon plc", symbol: "AON", exchange: "NYSE" },
-{ name: "Apartment Income REIT Corp.", symbol: "AIRC", exchange: "NYSE" },
-{ name: "Apartment Investment and Management Company", symbol: "AIV", exchange: "NYSE" },
-{ name: "APi Group Corporation", symbol: "APG", exchange: "NYSE" },
-{ name: "Apollo Commercial Real Estate Finance", symbol: "ARI", exchange: "NYSE" },
-{ name: "Apollo Global Management, Inc", symbol: "APO", exchange: "NYSE" },
-{ name: "Apollo Global Management, Inc", symbol: "APO^A", exchange: "NYSE" },
-{ name: "Apollo Global Management, Inc", symbol: "APO^B", exchange: "NYSE" },
-{ name: "Apollo Senior Floating Rate Fund Inc.", symbol: "AFT", exchange: "NYSE" },
-{ name: "Apollo Strategic Growth Capital", symbol: "APSG", exchange: "NYSE" },
-{ name: "Apollo Strategic Growth Capital", symbol: "APSG.U", exchange: "NYSE" },
-{ name: "Apollo Strategic Growth Capital", symbol: "APSG.WS", exchange: "NYSE" },
-{ name: "Apollo Tactical Income Fund Inc.", symbol: "AIF", exchange: "NYSE" },
-{ name: "Apple Hospitality REIT, Inc.", symbol: "APLE", exchange: "NYSE" },
-{ name: "Applied Industrial Technologies, Inc.", symbol: "AIT", exchange: "NYSE" },
-{ name: "AptarGroup, Inc.", symbol: "ATR", exchange: "NYSE" },
-{ name: "Aptiv PLC", symbol: "APTV", exchange: "NYSE" },
-{ name: "Aptiv PLC", symbol: "APTV^A", exchange: "NYSE" },
-{ name: "Aramark", symbol: "ARMK", exchange: "NYSE" },
-{ name: "Arbor Realty Trust", symbol: "ABR", exchange: "NYSE" },
-{ name: "Arbor Realty Trust", symbol: "ABR^A", exchange: "NYSE" },
-{ name: "Arbor Realty Trust", symbol: "ABR^B", exchange: "NYSE" },
-{ name: "Arbor Realty Trust", symbol: "ABR^C", exchange: "NYSE" },
-{ name: "ARC Document Solutions, Inc.", symbol: "ARC", exchange: "NYSE" },
-{ name: "ArcelorMittal", symbol: "MT", exchange: "NYSE" },
-{ name: "ArcelorMittal", symbol: "MTCN", exchange: "NYSE" },
-{ name: "Arch Resources, Inc.", symbol: "ARCH", exchange: "NYSE" },
-{ name: "Archer-Daniels-Midland Company", symbol: "ADM", exchange: "NYSE" },
-{ name: "Archrock, Inc.", symbol: "AROC", exchange: "NYSE" },
-{ name: "Arconic Corporation", symbol: "ARNC", exchange: "NYSE" },
-{ name: "Arcos Dorados Holdings Inc.", symbol: "ARCO", exchange: "NYSE" },
-{ name: "Arcosa, Inc.", symbol: "ACA", exchange: "NYSE" },
-{ name: "Arcus Biosciences, Inc.", symbol: "RCUS", exchange: "NYSE" },
-{ name: "Ardagh Group S.A.", symbol: "ARD", exchange: "NYSE" },
-{ name: "Ardmore Shipping Corporation", symbol: "ASC", exchange: "NYSE" },
-{ name: "Ares Capital Corporation", symbol: "AFC", exchange: "NYSE" },
-{ name: "Ares Commercial Real Estate Corporation", symbol: "ACRE", exchange: "NYSE" },
-{ name: "Ares Dynamic Credit Allocation Fund, Inc.", symbol: "ARDC", exchange: "NYSE" },
-{ name: "Ares Management Corporation", symbol: "ARES", exchange: "NYSE" },
-{ name: "Ares Management Corporation", symbol: "ARES^A", exchange: "NYSE" },
-{ name: "Argan, Inc.", symbol: "AGX", exchange: "NYSE" },
-{ name: "Argo Group International Holdings, Ltd.", symbol: "ARGD", exchange: "NYSE" },
-{ name: "Argo Group International Holdings, Ltd.", symbol: "ARGO", exchange: "NYSE" },
-{ name: "Argo Group International Holdings, Ltd.", symbol: "ARGO^A", exchange: "NYSE" },
-{ name: "Arista Networks, Inc.", symbol: "ANET", exchange: "NYSE" },
-{ name: "Arlington Asset Investment Corp", symbol: "AAIC", exchange: "NYSE" },
-{ name: "Arlington Asset Investment Corp", symbol: "AAIC^B", exchange: "NYSE" },
-{ name: "Arlington Asset Investment Corp", symbol: "AAIC^C", exchange: "NYSE" },
-{ name: "Arlington Asset Investment Corp", symbol: "AIC", exchange: "NYSE" },
-{ name: "Arlington Asset Investment Corp", symbol: "AIW", exchange: "NYSE" },
-{ name: "Arlo Technologies, Inc.", symbol: "ARLO", exchange: "NYSE" },
-{ name: "Armada Hoffler Properties, Inc.", symbol: "AHH", exchange: "NYSE" },
-{ name: "Armada Hoffler Properties, Inc.", symbol: "AHH^A", exchange: "NYSE" },
-{ name: "ARMOUR Residential REIT, Inc.", symbol: "ARR", exchange: "NYSE" },
-{ name: "ARMOUR Residential REIT, Inc.", symbol: "ARR^C", exchange: "NYSE" },
-{ name: "Armstrong Flooring, Inc.", symbol: "AFI", exchange: "NYSE" },
-{ name: "Armstrong World Industries Inc", symbol: "AWI", exchange: "NYSE" },
-{ name: "Arrow Electronics, Inc.", symbol: "ARW", exchange: "NYSE" },
-{ name: "Arthur J. Gallagher & Co.", symbol: "AJG", exchange: "NYSE" },
-{ name: "Artisan Partners Asset Management Inc.", symbol: "APAM", exchange: "NYSE" },
-{ name: "ASA Gold and Precious Metals Limited", symbol: "ASA", exchange: "NYSE" },
-{ name: "Asana, Inc.", symbol: "ASAN", exchange: "NYSE" },
-{ name: "Asbury Automotive Group Inc", symbol: "ABG", exchange: "NYSE" },
-{ name: "Ascendant Digital Acquisition Corp.", symbol: "ACND", exchange: "NYSE" },
-{ name: "Ascendant Digital Acquisition Corp.", symbol: "ACND.U", exchange: "NYSE" },
-{ name: "Ascendant Digital Acquisition Corp.", symbol: "ACND.WS", exchange: "NYSE" },
-{ name: "ASE Technology Holding Co., Ltd.", symbol: "ASX", exchange: "NYSE" },
-{ name: "ASGN Incorporated", symbol: "ASGN", exchange: "NYSE" },
-{ name: "Ashford Hospitality Trust Inc", symbol: "AHT", exchange: "NYSE" },
-{ name: "Ashford Hospitality Trust Inc", symbol: "AHT^D", exchange: "NYSE" },
-{ name: "Ashford Hospitality Trust Inc", symbol: "AHT^F", exchange: "NYSE" },
-{ name: "Ashford Hospitality Trust Inc", symbol: "AHT^G", exchange: "NYSE" },
-{ name: "Ashford Hospitality Trust Inc", symbol: "AHT^H", exchange: "NYSE" },
-{ name: "Ashford Hospitality Trust Inc", symbol: "AHT^I", exchange: "NYSE" },
-{ name: "Ashland Global Holdings Inc.", symbol: "ASH", exchange: "NYSE" },
-{ name: "Aspen Aerogels, Inc.", symbol: "ASPN", exchange: "NYSE" },
-{ name: "Aspen Insurance Holdings Limited", symbol: "AHL^C", exchange: "NYSE" },
-{ name: "Aspen Insurance Holdings Limited", symbol: "AHL^D", exchange: "NYSE" },
-{ name: "Aspen Insurance Holdings Limited", symbol: "AHL^E", exchange: "NYSE" },
-{ name: "Aspirational Consumer Lifestyle Corp.", symbol: "ASPL", exchange: "NYSE" },
-{ name: "Aspirational Consumer Lifestyle Corp.", symbol: "ASPL.U", exchange: "NYSE" },
-{ name: "Aspirational Consumer Lifestyle Corp.", symbol: "ASPL.WS", exchange: "NYSE" },
-{ name: "AssetMark Financial Holdings, Inc.", symbol: "AMK", exchange: "NYSE" },
-{ name: "Associated Banc-Corp", symbol: "ASB", exchange: "NYSE" },
-{ name: "Associated Banc-Corp", symbol: "ASB^C", exchange: "NYSE" },
-{ name: "Associated Banc-Corp", symbol: "ASB^D", exchange: "NYSE" },
-{ name: "Associated Banc-Corp", symbol: "ASB^E", exchange: "NYSE" },
-{ name: "Associated Banc-Corp", symbol: "ASB^F", exchange: "NYSE" },
-{ name: "Associated Capital Group, Inc.", symbol: "AC", exchange: "NYSE" },
-{ name: "Assurant, Inc.", symbol: "AIZ", exchange: "NYSE" },
-{ name: "Assurant, Inc.", symbol: "AIZN", exchange: "NYSE" },
-{ name: "Assurant, Inc.", symbol: "AIZP", exchange: "NYSE" },
-{ name: "Assured Guaranty Ltd.", symbol: "AGO", exchange: "NYSE" },
-{ name: "Assured Guaranty Ltd.", symbol: "AGO^B", exchange: "NYSE" },
-{ name: "Assured Guaranty Ltd.", symbol: "AGO^E", exchange: "NYSE" },
-{ name: "Assured Guaranty Ltd.", symbol: "AGO^F", exchange: "NYSE" },
-{ name: "At Home Group Inc.", symbol: "HOME", exchange: "NYSE" },
-{ name: "AT&T Inc.", symbol: "T", exchange: "NYSE" },
-{ name: "AT&T Inc.", symbol: "T^A", exchange: "NYSE" },
-{ name: "AT&T Inc.", symbol: "T^C", exchange: "NYSE" },
-{ name: "AT&T Inc.", symbol: "TBB", exchange: "NYSE" },
-{ name: "AT&T Inc.", symbol: "TBC", exchange: "NYSE" },
-{ name: "Atento S.A.", symbol: "ATTO", exchange: "NYSE" },
-{ name: "Athene Holding Ltd.", symbol: "ATH", exchange: "NYSE" },
-{ name: "Athene Holding Ltd.", symbol: "ATH^A", exchange: "NYSE" },
-{ name: "Athene Holding Ltd.", symbol: "ATH^B", exchange: "NYSE" },
-{ name: "Athene Holding Ltd.", symbol: "ATH^C", exchange: "NYSE" },
-{ name: "Athene Holding Ltd.", symbol: "ATH^D", exchange: "NYSE" },
-{ name: "Atkore International Group Inc.", symbol: "ATKR", exchange: "NYSE" },
-{ name: "Atlantic Power Corporation", symbol: "AT", exchange: "NYSE" },
-{ name: "Atlantic Street Acquisition Corp", symbol: "ASAQ", exchange: "NYSE" },
-{ name: "Atlantic Street Acquisition Corp", symbol: "ASAQ.U", exchange: "NYSE" },
-{ name: "Atlantic Street Acquisition Corp", symbol: "ASAQ.WS", exchange: "NYSE" },
-{ name: "Atlas Corp.", symbol: "ATCO", exchange: "NYSE" },
-{ name: "Atlas Corp.", symbol: "ATCO^D", exchange: "NYSE" },
-{ name: "Atlas Corp.", symbol: "ATCO^E", exchange: "NYSE" },
-{ name: "Atlas Corp.", symbol: "ATCO^G", exchange: "NYSE" },
-{ name: "Atlas Corp.", symbol: "ATCO^H", exchange: "NYSE" },
-{ name: "Atlas Corp.", symbol: "ATCO^I", exchange: "NYSE" },
-{ name: "Atlas Crest Investment Corp.", symbol: "ACIC", exchange: "NYSE" },
-{ name: "Atlas Crest Investment Corp.", symbol: "ACIC.U", exchange: "NYSE" },
-{ name: "Atlas Crest Investment Corp.", symbol: "ACIC.WS", exchange: "NYSE" },
-{ name: "Atmos Energy Corporation", symbol: "ATO", exchange: "NYSE" },
-{ name: "Aurora Cannabis Inc.", symbol: "ACB", exchange: "NYSE" },
-{ name: "Autohome Inc.", symbol: "ATHM", exchange: "NYSE" },
-{ name: "Autoliv, Inc.", symbol: "ALV", exchange: "NYSE" },
-{ name: "AutoNation, Inc.", symbol: "AN", exchange: "NYSE" },
-{ name: "AutoZone, Inc.", symbol: "AZO", exchange: "NYSE" },
-{ name: "Avalara, Inc.", symbol: "AVLR", exchange: "NYSE" },
-{ name: "AvalonBay Communities, Inc.", symbol: "AVB", exchange: "NYSE" },
-{ name: "Avangrid, Inc.", symbol: "AGR", exchange: "NYSE" },
-{ name: "Avanos Medical, Inc.", symbol: "AVNS", exchange: "NYSE" },
-{ name: "Avanti Acquisition Corp.", symbol: "AVAN", exchange: "NYSE" },
-{ name: "Avanti Acquisition Corp.", symbol: "AVAN.U", exchange: "NYSE" },
-{ name: "Avanti Acquisition Corp.", symbol: "AVAN.WS", exchange: "NYSE" },
-{ name: "Avantor, Inc.", symbol: "AVTR", exchange: "NYSE" },
-{ name: "Avantor, Inc.", symbol: "AVTR^A", exchange: "NYSE" },
-{ name: "Avaya Holdings Corp.", symbol: "AVYA", exchange: "NYSE" },
-{ name: "Avery Dennison Corporation", symbol: "AVY", exchange: "NYSE" },
-{ name: "Avient Corporation", symbol: "AVNT", exchange: "NYSE" },
-{ name: "Avista Corporation", symbol: "AVA", exchange: "NYSE" },
-{ name: "Axalta Coating Systems Ltd.", symbol: "AXTA", exchange: "NYSE" },
-{ name: "Axis Capital Holdings Limited", symbol: "AXS", exchange: "NYSE" },
-{ name: "Axis Capital Holdings Limited", symbol: "AXS^E", exchange: "NYSE" },
-{ name: "Axos Financial, Inc.", symbol: "AX", exchange: "NYSE" },
-{ name: "Axos Financial, Inc.", symbol: "AXO", exchange: "NYSE" },
-{ name: "Azul S.A.", symbol: "AZUL", exchange: "NYSE" },
-{ name: "Azure Power Global Limited", symbol: "AZRE", exchange: "NYSE" },
-{ name: "AZZ Inc.", symbol: "AZZ", exchange: "NYSE" },
-{ name: "B&G Foods, Inc.", symbol: "BGS", exchange: "NYSE" },
-{ name: "Babcock", symbol: "BW", exchange: "NYSE" },
-{ name: "Babson Global Short Duration High Yield Fund", symbol: "BGH", exchange: "NYSE" },
-{ name: "Badger Meter, Inc.", symbol: "BMI", exchange: "NYSE" },
-{ name: "Bain Capital Specialty Finance, Inc.", symbol: "BCSF", exchange: "NYSE" },
-{ name: "Baker Hughes Company", symbol: "BKR", exchange: "NYSE" },
-{ name: "BalckRock Taxable Municipal Bond Trust", symbol: "BBN", exchange: "NYSE" },
-{ name: "Ball Corporation", symbol: "BLL", exchange: "NYSE" },
-{ name: "Bally&#39;s Corporation", symbol: "BALY", exchange: "NYSE" },
-{ name: "Banc of California, Inc.", symbol: "BANC", exchange: "NYSE" },
-{ name: "Banc of California, Inc.", symbol: "BANC^D", exchange: "NYSE" },
-{ name: "Banc of California, Inc.", symbol: "BANC^E", exchange: "NYSE" },
-{ name: "Banco BBVA Argentina S.A.", symbol: "BBAR", exchange: "NYSE" },
-{ name: "Banco Bilbao Viscaya Argentaria S.A.", symbol: "BBVA", exchange: "NYSE" },
-{ name: "Banco Bradesco Sa", symbol: "BBD", exchange: "NYSE" },
-{ name: "Banco Bradesco Sa", symbol: "BBDO", exchange: "NYSE" },
-{ name: "Banco De Chile", symbol: "BCH", exchange: "NYSE" },
-{ name: "Banco Latinoamericano de Comercio Exterior, S.A.", symbol: "BLX", exchange: "NYSE" },
-{ name: "Banco Santander Brasil SA", symbol: "BSBR", exchange: "NYSE" },
-{ name: "Banco Santander Chile", symbol: "BSAC", exchange: "NYSE" },
-{ name: "Banco Santander Mexico, S.A., Institucion de Ban", symbol: "BSMX", exchange: "NYSE" },
-{ name: "Banco Santander, S.A.", symbol: "SAN", exchange: "NYSE" },
-{ name: "BanColombia S.A.", symbol: "CIB", exchange: "NYSE" },
-{ name: "BancorpSouth Bank", symbol: "BXS", exchange: "NYSE" },
-{ name: "BancorpSouth Bank", symbol: "BXS^A", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BAC", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BAC^A", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BAC^B", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BAC^C", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BAC^E", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BAC^K", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BAC^L", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BAC^M", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BAC^N", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BAC^O", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BML^G", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BML^H", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BML^J", exchange: "NYSE" },
-{ name: "Bank of America Corporation", symbol: "BML^L", exchange: "NYSE" },
-{ name: "Bank of Hawaii Corporation", symbol: "BOH", exchange: "NYSE" },
-{ name: "Bank Of Montreal", symbol: "BMO", exchange: "NYSE" },
-{ name: "Bank of N.T. Butterfield & Son Limited (The)", symbol: "NTB", exchange: "NYSE" },
-{ name: "Bank of Nova Scotia (The)", symbol: "BNS", exchange: "NYSE" },
-{ name: "BankUnited, Inc.", symbol: "BKU", exchange: "NYSE" },
-{ name: "Barclays PLC", symbol: "BCS", exchange: "NYSE" },
-{ name: "Barings BDC, Inc.", symbol: "BBDC", exchange: "NYSE" },
-{ name: "Barings Corporate Investors", symbol: "MCI", exchange: "NYSE" },
-{ name: "Barings Participation Investors", symbol: "MPV", exchange: "NYSE" },
-{ name: "Barnes & Noble Education, Inc", symbol: "BNED", exchange: "NYSE" },
-{ name: "Barnes Group, Inc.", symbol: "B", exchange: "NYSE" },
-{ name: "Barrick Gold Corporation", symbol: "GOLD", exchange: "NYSE" },
-{ name: "Bausch Health Companies Inc.", symbol: "BHC", exchange: "NYSE" },
-{ name: "Baxter International Inc.", symbol: "BAX", exchange: "NYSE" },
-{ name: "BCE, Inc.", symbol: "BCE", exchange: "NYSE" },
-{ name: "Beazer Homes USA, Inc.", symbol: "BZH", exchange: "NYSE" },
-{ name: "Becton, Dickinson and Company", symbol: "BDX", exchange: "NYSE" },
-{ name: "Becton, Dickinson and Company", symbol: "BDXB", exchange: "NYSE" },
-{ name: "Belden Inc", symbol: "BDC", exchange: "NYSE" },
-{ name: "BellRing Brands, Inc.", symbol: "BRBR", exchange: "NYSE" },
-{ name: "Benchmark Electronics, Inc.", symbol: "BHE", exchange: "NYSE" },
-{ name: "Berkshire Hathaway Inc.", symbol: "BRK.A", exchange: "NYSE" },
-{ name: "Berkshire Hathaway Inc.", symbol: "BRK.B", exchange: "NYSE" },
-{ name: "Berkshire Hills Bancorp, Inc.", symbol: "BHLB", exchange: "NYSE" },
-{ name: "Berry Global Group, Inc.", symbol: "BERY", exchange: "NYSE" },
-{ name: "Best Buy Co., Inc.", symbol: "BBY", exchange: "NYSE" },
-{ name: "BEST Inc.", symbol: "BEST", exchange: "NYSE" },
-{ name: "BG Staffing Inc", symbol: "BGSF", exchange: "NYSE" },
-{ name: "BHP Group Limited", symbol: "BHP", exchange: "NYSE" },
-{ name: "BHP Group Plc", symbol: "BBL", exchange: "NYSE" },
-{ name: "Big Lots, Inc.", symbol: "BIG", exchange: "NYSE" },
-{ name: "Biglari Holdings Inc.", symbol: "BH", exchange: "NYSE" },
-{ name: "Biglari Holdings Inc.", symbol: "BH.A", exchange: "NYSE" },
-{ name: "Bill.com Holdings, Inc.", symbol: "BILL", exchange: "NYSE" },
-{ name: "Biohaven Pharmaceutical Holding Company Ltd.", symbol: "BHVN", exchange: "NYSE" },
-{ name: "Bio-Rad Laboratories, Inc.", symbol: "BIO", exchange: "NYSE" },
-{ name: "Bio-Rad Laboratories, Inc.", symbol: "BIO.B", exchange: "NYSE" },
-{ name: "BJ&#39;s Wholesale Club Holdings, Inc.", symbol: "BJ", exchange: "NYSE" },
-{ name: "Black Hills Corporation", symbol: "BKH", exchange: "NYSE" },
-{ name: "Black Knight, Inc.", symbol: "BKI", exchange: "NYSE" },
-{ name: "Black Stone Minerals, L.P.", symbol: "BSM", exchange: "NYSE" },
-{ name: "BlackBerry Limited", symbol: "BB", exchange: "NYSE" },
-{ name: "BlackRock 2022 Global Income Opportunity Trust", symbol: "BGIO", exchange: "NYSE" },
-{ name: "BlackRock California Municipal Income Trust", symbol: "BFZ", exchange: "NYSE" },
-{ name: "BlackRock Capital Allocation Trust", symbol: "BCAT", exchange: "NYSE" },
-{ name: "Blackrock Capital and Income Strategies Fund Inc", symbol: "CII", exchange: "NYSE" },
-{ name: "Blackrock Core Bond Trust", symbol: "BHK", exchange: "NYSE" },
-{ name: "Blackrock Corporate High Yield Fund, Inc.", symbol: "HYT", exchange: "NYSE" },
-{ name: "BlackRock Credit Allocation Income Trust", symbol: "BTZ", exchange: "NYSE" },
-{ name: "Blackrock Debt Strategies Fund, Inc.", symbol: "DSU", exchange: "NYSE" },
-{ name: "BlackRock Energy and Resources Trust", symbol: "BGR", exchange: "NYSE" },
-{ name: "Blackrock Enhanced Equity Dividend Trust", symbol: "BDJ", exchange: "NYSE" },
-{ name: "Blackrock Enhanced Government Fund, Inc", symbol: "EGF", exchange: "NYSE" },
-{ name: "Blackrock Floating Rate Income Strategies Fund Inc", symbol: "FRA", exchange: "NYSE" },
-{ name: "Blackrock Global", symbol: "BGT", exchange: "NYSE" },
-{ name: "Blackrock Global", symbol: "BOE", exchange: "NYSE" },
-{ name: "Blackrock Health Sciences Trust", symbol: "BME", exchange: "NYSE" },
-{ name: "BlackRock Health Sciences Trust II", symbol: "BMEZ", exchange: "NYSE" },
-{ name: "BlackRock Income Investment Quality Trust", symbol: "BAF", exchange: "NYSE" },
-{ name: "BlackRock Income Trust Inc. (The)", symbol: "BKT", exchange: "NYSE" },
-{ name: "BLACKROCK INTERNATIONAL, LTD.", symbol: "BGY", exchange: "NYSE" },
-{ name: "BlackRock Investment Quality Municipal Trust Inc. (The)", symbol: "BKN", exchange: "NYSE" },
-{ name: "BlackRock Long-Term Municipal Advantage Trust", symbol: "BTA", exchange: "NYSE" },
-{ name: "BlackRock Maryland Municipal Bond Trust", symbol: "BZM", exchange: "NYSE" },
-{ name: "BlackRock Massachusetts Tax-Exempt Trust", symbol: "MHE", exchange: "NYSE" },
-{ name: "BlackRock Multi-Sector Income Trust", symbol: "BIT", exchange: "NYSE" },
-{ name: "Blackrock Muni Intermediate Duration Fund Inc", symbol: "MUI", exchange: "NYSE" },
-{ name: "Blackrock MuniAssets Fund, Inc.", symbol: "MUA", exchange: "NYSE" },
-{ name: "Blackrock Municipal Bond Trust", symbol: "BBK", exchange: "NYSE" },
-{ name: "BlackRock Municipal Income Investment Trust", symbol: "BBF", exchange: "NYSE" },
-{ name: "Blackrock Municipal Income Quality Trust", symbol: "BYM", exchange: "NYSE" },
-{ name: "BlackRock Municipal Income Trust", symbol: "BFK", exchange: "NYSE" },
-{ name: "BlackRock Municipal Income Trust II", symbol: "BLE", exchange: "NYSE" },
-{ name: "BlackRock Municipal Target Term Trust Inc. (The)", symbol: "BTT", exchange: "NYSE" },
-{ name: "Blackrock MuniEnhanced Fund, Inc.", symbol: "MEN", exchange: "NYSE" },
-{ name: "Blackrock MuniHoldings California Quality Fund,  Inc.", symbol: "MUC", exchange: "NYSE" },
-{ name: "Blackrock MuniHoldings Fund II, Inc.", symbol: "MUH", exchange: "NYSE" },
-{ name: "Blackrock MuniHoldings Fund, Inc.", symbol: "MHD", exchange: "NYSE" },
-{ name: "Blackrock MuniHoldings Investment Quality Fund", symbol: "MFL", exchange: "NYSE" },
-{ name: "Blackrock MuniHoldings New Jersey Insured Fund, Inc.", symbol: "MUJ", exchange: "NYSE" },
-{ name: "Blackrock MuniHoldings New York Quality Fund, Inc.", symbol: "MHN", exchange: "NYSE" },
-{ name: "Blackrock MuniHoldings Quality Fund II, Inc.", symbol: "MUE", exchange: "NYSE" },
-{ name: "Blackrock MuniHoldings Quality Fund, Inc.", symbol: "MUS", exchange: "NYSE" },
-{ name: "Blackrock MuniVest Fund II, Inc.", symbol: "MVT", exchange: "NYSE" },
-{ name: "Blackrock MuniYield California Fund, Inc.", symbol: "MYC", exchange: "NYSE" },
-{ name: "Blackrock MuniYield California Insured Fund, Inc.", symbol: "MCA", exchange: "NYSE" },
-{ name: "Blackrock MuniYield Fund, Inc.", symbol: "MYD", exchange: "NYSE" },
-{ name: "Blackrock MuniYield Investment Fund", symbol: "MYF", exchange: "NYSE" },
-{ name: "Blackrock MuniYield Investment QualityFund", symbol: "MFT", exchange: "NYSE" },
-{ name: "Blackrock MuniYield Michigan Quality Fund, Inc.", symbol: "MIY", exchange: "NYSE" },
-{ name: "Blackrock MuniYield New Jersey Fund, Inc.", symbol: "MYJ", exchange: "NYSE" },
-{ name: "Blackrock MuniYield New York Quality Fund, Inc.", symbol: "MYN", exchange: "NYSE" },
-{ name: "Blackrock MuniYield Pennsylvania Quality Fund", symbol: "MPA", exchange: "NYSE" },
-{ name: "Blackrock MuniYield Quality Fund II, Inc.", symbol: "MQT", exchange: "NYSE" },
-{ name: "Blackrock MuniYield Quality Fund III, Inc.", symbol: "MYI", exchange: "NYSE" },
-{ name: "Blackrock MuniYield Quality Fund, Inc.", symbol: "MQY", exchange: "NYSE" },
-{ name: "BlackRock New York Investment Quality Municipal Trust Inc. (Th", symbol: "BNY", exchange: "NYSE" },
-{ name: "Blackrock New York Municipal Income Quality Trust", symbol: "BSE", exchange: "NYSE" },
-{ name: "BlackRock New York Municipal Income Trust II", symbol: "BFY", exchange: "NYSE" },
-{ name: "BlackRock Resources", symbol: "BCX", exchange: "NYSE" },
-{ name: "BlackRock Science and Technology Trust", symbol: "BST", exchange: "NYSE" },
-{ name: "BlackRock Science and Technology Trust II", symbol: "BSTZ", exchange: "NYSE" },
-{ name: "BlackRock Strategic Municipal Trust Inc. (The)", symbol: "BSD", exchange: "NYSE" },
-{ name: "BlackRock Utility, Infrastructure & Power Opportun", symbol: "BUI", exchange: "NYSE" },
-{ name: "BlackRock Virginia Municipal Bond Trust", symbol: "BHV", exchange: "NYSE" },
-{ name: "BlackRock, Inc.", symbol: "BLK", exchange: "NYSE" },
-{ name: "Blackstone Long Short Credit Income Fund", symbol: "BGX", exchange: "NYSE" },
-{ name: "Blackstone Senior Floating Rate Term Fund", symbol: "BSL", exchange: "NYSE" },
-{ name: "Blackstone Strategic Credit Fund", symbol: "BGB", exchange: "NYSE" },
-{ name: "Bloom Energy Corporation", symbol: "BE", exchange: "NYSE" },
-{ name: "Blue Apron Holdings, Inc.", symbol: "APRN", exchange: "NYSE" },
-{ name: "Bluegreen Vacations Corporation", symbol: "BXG", exchange: "NYSE" },
-{ name: "Bluegreen Vacations Holding Corporation", symbol: "BVH", exchange: "NYSE" },
-{ name: "BlueLinx Holdings Inc.", symbol: "BXC", exchange: "NYSE" },
-{ name: "Bluescape Opportunities Acquisition Corp.", symbol: "BOAC", exchange: "NYSE" },
-{ name: "Bluescape Opportunities Acquisition Corp.", symbol: "BOAC.U", exchange: "NYSE" },
-{ name: "Bluescape Opportunities Acquisition Corp.", symbol: "BOAC.WS", exchange: "NYSE" },
-{ name: "BNY Mellon Alcentra Global Credit Income 2024 Target Term Fund", symbol: "DCF", exchange: "NYSE" },
-{ name: "BNY Mellon High Yield Strategies Fund", symbol: "DHF", exchange: "NYSE" },
-{ name: "BNY Mellon Municipal Bond Infrastructure Fund, Inc", symbol: "DMB", exchange: "NYSE" },
-{ name: "BNY Mellon Strategic Municipal Bond Fund, Inc.", symbol: "DSM", exchange: "NYSE" },
-{ name: "BNY Mellon Strategic Municipals, Inc.", symbol: "LEO", exchange: "NYSE" },
-{ name: "Boeing Company (The)", symbol: "BA", exchange: "NYSE" },
-{ name: "Boise Cascade, L.L.C.", symbol: "BCC", exchange: "NYSE" },
-{ name: "Bonanza Creek Energy, Inc.", symbol: "BCEI", exchange: "NYSE" },
-{ name: "Boot Barn Holdings, Inc.", symbol: "BOOT", exchange: "NYSE" },
-{ name: "Booz Allen Hamilton Holding Corporation", symbol: "BAH", exchange: "NYSE" },
-{ name: "Boqii Holding Limited", symbol: "BQ", exchange: "NYSE" },
-{ name: "BorgWarner Inc.", symbol: "BWA", exchange: "NYSE" },
-{ name: "Borr Drilling Limited", symbol: "BORR", exchange: "NYSE" },
-{ name: "Boston Beer Company, Inc. (The)", symbol: "SAM", exchange: "NYSE" },
-{ name: "Boston Properties, Inc.", symbol: "BXP", exchange: "NYSE" },
-{ name: "Boston Properties, Inc.", symbol: "BXP^B", exchange: "NYSE" },
-{ name: "Boston Scientific Corporation", symbol: "BSX", exchange: "NYSE" },
-{ name: "Boston Scientific Corporation", symbol: "BSX^A", exchange: "NYSE" },
-{ name: "Box, Inc.", symbol: "BOX", exchange: "NYSE" },
-{ name: "Boyd Gaming Corporation", symbol: "BYD", exchange: "NYSE" },
-{ name: "BP Midstream Partners LP", symbol: "BPMP", exchange: "NYSE" },
-{ name: "BP p.l.c.", symbol: "BP", exchange: "NYSE" },
-{ name: "BP Prudhoe Bay Royalty Trust", symbol: "BPT", exchange: "NYSE" },
-{ name: "Brady Corporation", symbol: "BRC", exchange: "NYSE" },
-{ name: "Braemar Hotels & Resorts Inc.", symbol: "BHR", exchange: "NYSE" },
-{ name: "Braemar Hotels & Resorts Inc.", symbol: "BHR^B", exchange: "NYSE" },
-{ name: "Braemar Hotels & Resorts Inc.", symbol: "BHR^D", exchange: "NYSE" },
-{ name: "Brandywine Realty Trust", symbol: "BDN", exchange: "NYSE" },
-{ name: "BrandywineGLOBAL Global Income Opportunities Fund", symbol: "BWG", exchange: "NYSE" },
-{ name: "Brasilagro Cia Brasileira De Propriedades Agricolas", symbol: "LND", exchange: "NYSE" },
-{ name: "Braskem S.A.", symbol: "BAK", exchange: "NYSE" },
-{ name: "BRF S.A.", symbol: "BRFS", exchange: "NYSE" },
-{ name: "Brigham Minerals, Inc.", symbol: "MNRL", exchange: "NYSE" },
-{ name: "Bright Horizons Family Solutions Inc.", symbol: "BFAM", exchange: "NYSE" },
-{ name: "Bright Scholar Education Holdings Limited", symbol: "BEDU", exchange: "NYSE" },
-{ name: "BrightSphere Investment Group Inc.", symbol: "BSA", exchange: "NYSE" },
-{ name: "BrightSphere Investment Group Inc.", symbol: "BSIG", exchange: "NYSE" },
-{ name: "BrightView Holdings, Inc.", symbol: "BV", exchange: "NYSE" },
-{ name: "Brinker International, Inc.", symbol: "EAT", exchange: "NYSE" },
-{ name: "Brink&#39;s Company (The)", symbol: "BCO", exchange: "NYSE" },
-{ name: "Bristol-Myers Squibb Company", symbol: "BMY", exchange: "NYSE" },
-{ name: "Bristow Group, Inc.", symbol: "VTOL", exchange: "NYSE" },
-{ name: "British American Tobacco p.l.c.", symbol: "BTI", exchange: "NYSE" },
-{ name: "Brixmor Property Group Inc.", symbol: "BRX", exchange: "NYSE" },
-{ name: "Broadmark Realty Capital Inc.", symbol: "BRMK", exchange: "NYSE" },
-{ name: "Broadridge Financial Solutions, Inc.", symbol: "BR", exchange: "NYSE" },
-{ name: "Broadstone Acquisition Corp.", symbol: "BSN", exchange: "NYSE" },
-{ name: "Broadstone Acquisition Corp.", symbol: "BSN.U", exchange: "NYSE" },
-{ name: "Broadstone Acquisition Corp.", symbol: "BSN.WS", exchange: "NYSE" },
-{ name: "Broadstone Net Lease, Inc.", symbol: "BNL", exchange: "NYSE" },
-{ name: "Brookdale Senior Living Inc.", symbol: "BKD", exchange: "NYSE" },
-{ name: "Brookfield Asset Management Inc", symbol: "BAM", exchange: "NYSE" },
-{ name: "Brookfield Business Partners L.P.", symbol: "BBU", exchange: "NYSE" },
-{ name: "Brookfield DTLA Inc.", symbol: "DTLA^", exchange: "NYSE" },
-{ name: "Brookfield Finance Inc.", symbol: "BAMH", exchange: "NYSE" },
-{ name: "Brookfield Finance Inc.", symbol: "BAMI", exchange: "NYSE" },
-{ name: "Brookfield Infrastructure Corporation", symbol: "BIPC", exchange: "NYSE" },
-{ name: "Brookfield Infrastructure Partners LP", symbol: "BIP", exchange: "NYSE" },
-{ name: "Brookfield Infrastructure Partners LP", symbol: "BIP^A", exchange: "NYSE" },
-{ name: "Brookfield Real Assets Income Fund Inc.", symbol: "RA", exchange: "NYSE" },
-{ name: "Brookfield Renewable Corporation", symbol: "BEPC", exchange: "NYSE" },
-{ name: "Brookfield Renewable Partners L.P.", symbol: "BEP", exchange: "NYSE" },
-{ name: "Brookfield Renewable Partners L.P.", symbol: "BEP^A", exchange: "NYSE" },
-{ name: "Brown & Brown, Inc.", symbol: "BRO", exchange: "NYSE" },
-{ name: "Brown Forman Corporation", symbol: "BF.A", exchange: "NYSE" },
-{ name: "Brown Forman Corporation", symbol: "BF.B", exchange: "NYSE" },
-{ name: "BRT Apartments Corp.", symbol: "BRT", exchange: "NYSE" },
-{ name: "Brunswick Corporation", symbol: "BC", exchange: "NYSE" },
-{ name: "Brunswick Corporation", symbol: "BC^A", exchange: "NYSE" },
-{ name: "Brunswick Corporation", symbol: "BC^B", exchange: "NYSE" },
-{ name: "Brunswick Corporation", symbol: "BC^C", exchange: "NYSE" },
-{ name: "Buckle, Inc. (The)", symbol: "BKE", exchange: "NYSE" },
-{ name: "Buenaventura Mining Company Inc.", symbol: "BVN", exchange: "NYSE" },
-{ name: "Build-A-Bear Workshop, Inc.", symbol: "BBW", exchange: "NYSE" },
-{ name: "Bunge Limited", symbol: "BG", exchange: "NYSE" },
-{ name: "Burford Capital Limited", symbol: "BUR", exchange: "NYSE" },
-{ name: "Burlington Stores, Inc.", symbol: "BURL", exchange: "NYSE" },
-{ name: "BWX Technologies, Inc.", symbol: "BWXT", exchange: "NYSE" },
-{ name: "Byline Bancorp, Inc.", symbol: "BY", exchange: "NYSE" },
-{ name: "C3.ai, Inc.", symbol: "AI", exchange: "NYSE" },
-{ name: "Cable One, Inc.", symbol: "CABO", exchange: "NYSE" },
-{ name: "Cabot Corporation", symbol: "CBT", exchange: "NYSE" },
-{ name: "Cabot Oil & Gas Corporation", symbol: "COG", exchange: "NYSE" },
-{ name: "CACI International, Inc.", symbol: "CACI", exchange: "NYSE" },
-{ name: "Cactus, Inc.", symbol: "WHD", exchange: "NYSE" },
-{ name: "Cadence Bancorporation", symbol: "CADE", exchange: "NYSE" },
-{ name: "CAE Inc", symbol: "CAE", exchange: "NYSE" },
-{ name: "CAI International, Inc.", symbol: "CAI", exchange: "NYSE" },
-{ name: "CAI International, Inc.", symbol: "CAI^A", exchange: "NYSE" },
-{ name: "CAI International, Inc.", symbol: "CAI^B", exchange: "NYSE" },
-{ name: "Caleres, Inc.", symbol: "CAL", exchange: "NYSE" },
-{ name: "California Resources Corporation", symbol: "CRC", exchange: "NYSE" },
-{ name: "California Water  Service Group Holding", symbol: "CWT", exchange: "NYSE" },
-{ name: "Calix, Inc", symbol: "CALX", exchange: "NYSE" },
-{ name: "Callaway Golf Company", symbol: "ELY", exchange: "NYSE" },
-{ name: "Callon Petroleum Company", symbol: "CPE", exchange: "NYSE" },
-{ name: "Camden Property Trust", symbol: "CPT", exchange: "NYSE" },
-{ name: "Cameco Corporation", symbol: "CCJ", exchange: "NYSE" },
-{ name: "Campbell Soup Company", symbol: "CPB", exchange: "NYSE" },
-{ name: "Camping World Holdings, Inc.", symbol: "CWH", exchange: "NYSE" },
-{ name: "Canada Goose Holdings Inc.", symbol: "GOOS", exchange: "NYSE" },
-{ name: "Canadian Imperial Bank of Commerce", symbol: "CM", exchange: "NYSE" },
-{ name: "Canadian National Railway Company", symbol: "CNI", exchange: "NYSE" },
-{ name: "Canadian Natural Resources Limited", symbol: "CNQ", exchange: "NYSE" },
-{ name: "Canadian Pacific Railway Limited", symbol: "CP", exchange: "NYSE" },
-{ name: "Cango Inc.", symbol: "CANG", exchange: "NYSE" },
-{ name: "Cannae Holdings, Inc.", symbol: "CNNE", exchange: "NYSE" },
-{ name: "Canon, Inc.", symbol: "CAJ", exchange: "NYSE" },
-{ name: "Cantel Medical Corp.", symbol: "CMD", exchange: "NYSE" },
-{ name: "Capital One Financial Corporation", symbol: "COF", exchange: "NYSE" },
-{ name: "Capital One Financial Corporation", symbol: "COF^G", exchange: "NYSE" },
-{ name: "Capital One Financial Corporation", symbol: "COF^H", exchange: "NYSE" },
-{ name: "Capital One Financial Corporation", symbol: "COF^I", exchange: "NYSE" },
-{ name: "Capital One Financial Corporation", symbol: "COF^J", exchange: "NYSE" },
-{ name: "Capital One Financial Corporation", symbol: "COF^K", exchange: "NYSE" },
-{ name: "Capital Senior Living Corporation", symbol: "CSU", exchange: "NYSE" },
-{ name: "Capital Trust, Inc.", symbol: "BXMT", exchange: "NYSE" },
-{ name: "Capitol Investment Corp. V", symbol: "CAP.U", exchange: "NYSE" },
-{ name: "Capri Holdings Limited", symbol: "CPRI", exchange: "NYSE" },
-{ name: "Capstar Special Purpose Acquisition Corp.", symbol: "CPSR", exchange: "NYSE" },
-{ name: "Capstar Special Purpose Acquisition Corp.", symbol: "CPSR.U", exchange: "NYSE" },
-{ name: "Capstar Special Purpose Acquisition Corp.", symbol: "CPSR.WS", exchange: "NYSE" },
-{ name: "Capstead Mortgage Corporation", symbol: "CMO", exchange: "NYSE" },
-{ name: "Capstead Mortgage Corporation", symbol: "CMO^E", exchange: "NYSE" },
-{ name: "Cardinal Health, Inc.", symbol: "CAH", exchange: "NYSE" },
-{ name: "Carlisle Companies Incorporated", symbol: "CSL", exchange: "NYSE" },
-{ name: "CarMax Inc", symbol: "KMX", exchange: "NYSE" },
-{ name: "Carnival Corporation", symbol: "CCL", exchange: "NYSE" },
-{ name: "Carnival Corporation", symbol: "CUK", exchange: "NYSE" },
-{ name: "Carpenter Technology Corporation", symbol: "CRS", exchange: "NYSE" },
-{ name: "Carriage Services, Inc.", symbol: "CSV", exchange: "NYSE" },
-{ name: "Carrier Global Corporation", symbol: "CARR", exchange: "NYSE" },
-{ name: "Cars.com Inc.", symbol: "CARS", exchange: "NYSE" },
-{ name: "Carter&#39;s, Inc.", symbol: "CRI", exchange: "NYSE" },
-{ name: "Carvana Co.", symbol: "CVNA", exchange: "NYSE" },
-{ name: "Cascade Acquisition Corp.", symbol: "CAS", exchange: "NYSE" },
-{ name: "Cascade Acquisition Corp.", symbol: "CAS.U", exchange: "NYSE" },
-{ name: "Cascade Acquisition Corp.", symbol: "CAS.WS", exchange: "NYSE" },
-{ name: "Casper Sleep Inc.", symbol: "CSPR", exchange: "NYSE" },
-{ name: "Castlight Health, inc.", symbol: "CSLT", exchange: "NYSE" },
-{ name: "Catalent, Inc.", symbol: "CTLT", exchange: "NYSE" },
-{ name: "CatchMark Timber Trust, Inc.", symbol: "CTT", exchange: "NYSE" },
-{ name: "Caterpillar, Inc.", symbol: "CAT", exchange: "NYSE" },
-{ name: "Cato Corporation (The)", symbol: "CATO", exchange: "NYSE" },
-{ name: "CBIZ, Inc.", symbol: "CBZ", exchange: "NYSE" },
-{ name: "CBO (Listing Market - NYSE - Networks A/E)", symbol: "CBO", exchange: "NYSE" },
-{ name: "CBRE Acquisition Holdings, Inc.", symbol: "CBAH.U", exchange: "NYSE" },
-{ name: "CBRE Clarion Global Real Estate Income Fund", symbol: "IGR", exchange: "NYSE" },
-{ name: "CBRE Group, Inc.", symbol: "CBRE", exchange: "NYSE" },
-{ name: "CBX (Listing Market NYSE Networks AE", symbol: "CBX", exchange: "NYSE" },
-{ name: "CC Neuberger Principal Holdings I", symbol: "PCPL", exchange: "NYSE" },
-{ name: "CC Neuberger Principal Holdings I", symbol: "PCPL.U", exchange: "NYSE" },
-{ name: "CC Neuberger Principal Holdings I", symbol: "PCPL.WS", exchange: "NYSE" },
-{ name: "CC Neuberger Principal Holdings II", symbol: "PRPB", exchange: "NYSE" },
-{ name: "CC Neuberger Principal Holdings II", symbol: "PRPB.U", exchange: "NYSE" },
-{ name: "CC Neuberger Principal Holdings II", symbol: "PRPB.WS", exchange: "NYSE" },
-{ name: "Cedar Fair, L.P.", symbol: "FUN", exchange: "NYSE" },
-{ name: "Cedar Realty Trust, Inc.", symbol: "CDR", exchange: "NYSE" },
-{ name: "Cedar Realty Trust, Inc.", symbol: "CDR^B", exchange: "NYSE" },
-{ name: "Cedar Realty Trust, Inc.", symbol: "CDR^C", exchange: "NYSE" },
-{ name: "Celanese Corporation", symbol: "CE", exchange: "NYSE" },
-{ name: "Celestica, Inc.", symbol: "CLS", exchange: "NYSE" },
-{ name: "Celgene Corporation", symbol: "CELG~", exchange: "NYSE" },
-{ name: "Cellcom Israel, Ltd.", symbol: "CEL", exchange: "NYSE" },
-{ name: "Cementos Pacasmayo S.A.A.", symbol: "CPAC", exchange: "NYSE" },
-{ name: "Cemex S.A.B. de C.V.", symbol: "CX", exchange: "NYSE" },
-{ name: "Cenovus Energy Inc", symbol: "CVE", exchange: "NYSE" },
-{ name: "Cenovus Energy Inc", symbol: "CVE.WS", exchange: "NYSE" },
-{ name: "Centene Corporation", symbol: "CNC", exchange: "NYSE" },
-{ name: "Center Coast Brookfield MLP & Energy Infrastructur", symbol: "CEN", exchange: "NYSE" },
-{ name: "CenterPoint Energy, Inc.", symbol: "CNP", exchange: "NYSE" },
-{ name: "CenterPoint Energy, Inc.", symbol: "CNP^B", exchange: "NYSE" },
-{ name: "Centrais Electricas Brasileiras S.A.- Eletrobras", symbol: "EBR", exchange: "NYSE" },
-{ name: "Centrais Electricas Brasileiras S.A.- Eletrobras", symbol: "EBR.B", exchange: "NYSE" },
-{ name: "Central Puerto S.A.", symbol: "CEPU", exchange: "NYSE" },
-{ name: "Century Communities, Inc.", symbol: "CCS", exchange: "NYSE" },
-{ name: "Cerberus Telecom Acquisition Corp.", symbol: "CTAC", exchange: "NYSE" },
-{ name: "Cerberus Telecom Acquisition Corp.", symbol: "CTAC.U", exchange: "NYSE" },
-{ name: "Cerberus Telecom Acquisition Corp.", symbol: "CTAC.WS", exchange: "NYSE" },
-{ name: "Ceridian HCM Holding Inc.", symbol: "CDAY", exchange: "NYSE" },
-{ name: "CF Industries Holdings, Inc.", symbol: "CF", exchange: "NYSE" },
-{ name: "CGI Inc.", symbol: "GIB", exchange: "NYSE" },
-{ name: "ChannelAdvisor Corporation", symbol: "ECOM", exchange: "NYSE" },
-{ name: "Charah Solutions, Inc.", symbol: "CHRA", exchange: "NYSE" },
-{ name: "Charles River Laboratories International, Inc.", symbol: "CRL", exchange: "NYSE" },
-{ name: "Chatham Lodging Trust (REIT)", symbol: "CLDT", exchange: "NYSE" },
-{ name: "Cheetah Mobile Inc.", symbol: "CMCM", exchange: "NYSE" },
-{ name: "Chegg, Inc.", symbol: "CHGG", exchange: "NYSE" },
-{ name: "Chemed Corp.", symbol: "CHE", exchange: "NYSE" },
-{ name: "Chemours Company (The)", symbol: "CC", exchange: "NYSE" },
-{ name: "Cherry Hill Mortgage Investment Corporation", symbol: "CHMI", exchange: "NYSE" },
-{ name: "Cherry Hill Mortgage Investment Corporation", symbol: "CHMI^A", exchange: "NYSE" },
-{ name: "Cherry Hill Mortgage Investment Corporation", symbol: "CHMI^B", exchange: "NYSE" },
-{ name: "Chesapeake Utilities Corporation", symbol: "CPK", exchange: "NYSE" },
-{ name: "Chevron Corporation", symbol: "CVX", exchange: "NYSE" },
-{ name: "Chewy, Inc.", symbol: "CHWY", exchange: "NYSE" },
-{ name: "Chico&#39;s FAS, Inc.", symbol: "CHS", exchange: "NYSE" },
-{ name: "Chimera Investment Corporation", symbol: "CIM", exchange: "NYSE" },
-{ name: "Chimera Investment Corporation", symbol: "CIM^A", exchange: "NYSE" },
-{ name: "Chimera Investment Corporation", symbol: "CIM^B", exchange: "NYSE" },
-{ name: "Chimera Investment Corporation", symbol: "CIM^C", exchange: "NYSE" },
-{ name: "Chimera Investment Corporation", symbol: "CIM^D", exchange: "NYSE" },
-{ name: "China Distance Education Holdings Limited", symbol: "DL", exchange: "NYSE" },
-{ name: "China Eastern Airlines Corporation Ltd.", symbol: "CEA", exchange: "NYSE" },
-{ name: "China Fund, Inc. (The)", symbol: "CHN", exchange: "NYSE" },
-{ name: "China Green Agriculture, Inc.", symbol: "CGA", exchange: "NYSE" },
-{ name: "China Life Insurance Company Limited", symbol: "LFC", exchange: "NYSE" },
-{ name: "China Online Education Group", symbol: "COE", exchange: "NYSE" },
-{ name: "China Petroleum & Chemical Corporation", symbol: "SNP", exchange: "NYSE" },
-{ name: "China Southern Airlines Company Limited", symbol: "ZNH", exchange: "NYSE" },
-{ name: "China Yuchai International Limited", symbol: "CYD", exchange: "NYSE" },
-{ name: "Chipotle Mexican Grill, Inc.", symbol: "CMG", exchange: "NYSE" },
-{ name: "Choice Hotels International, Inc.", symbol: "CHH", exchange: "NYSE" },
-{ name: "Chubb Limited", symbol: "CB", exchange: "NYSE" },
-{ name: "Chunghwa Telecom Co., Ltd.", symbol: "CHT", exchange: "NYSE" },
-{ name: "Church & Dwight Company, Inc.", symbol: "CHD", exchange: "NYSE" },
-{ name: "Churchill Capital Corp II", symbol: "CCX", exchange: "NYSE" },
-{ name: "Churchill Capital Corp II", symbol: "CCX.U", exchange: "NYSE" },
-{ name: "Churchill Capital Corp II", symbol: "CCX.WS", exchange: "NYSE" },
-{ name: "Churchill Capital Corp IV", symbol: "CCIV", exchange: "NYSE" },
-{ name: "Churchill Capital Corp IV", symbol: "CCIV.U", exchange: "NYSE" },
-{ name: "Churchill Capital Corp IV", symbol: "CCIV.WS", exchange: "NYSE" },
-{ name: "Churchill Capital Corp V", symbol: "CCV.U", exchange: "NYSE" },
-{ name: "CI Financial Corp.", symbol: "CIXX", exchange: "NYSE" },
-{ name: "Ciena Corporation", symbol: "CIEN", exchange: "NYSE" },
-{ name: "Cigna Corporation", symbol: "CI", exchange: "NYSE" },
-{ name: "Cimarex Energy Co", symbol: "XEC", exchange: "NYSE" },
-{ name: "Cincinnati Bell Inc", symbol: "CBB", exchange: "NYSE" },
-{ name: "Cincinnati Bell Inc", symbol: "CBB^B", exchange: "NYSE" },
-{ name: "Cinemark Holdings Inc", symbol: "CNK", exchange: "NYSE" },
-{ name: "Ciner Resources LP", symbol: "CINR", exchange: "NYSE" },
-{ name: "CIRCOR International, Inc.", symbol: "CIR", exchange: "NYSE" },
-{ name: "CIT Group Inc (DEL)", symbol: "CIT", exchange: "NYSE" },
-{ name: "CIT Group Inc (DEL)", symbol: "CIT^B", exchange: "NYSE" },
-{ name: "CITIC Capital Acquisition Corp.", symbol: "CCAC", exchange: "NYSE" },
-{ name: "CITIC Capital Acquisition Corp.", symbol: "CCAC.U", exchange: "NYSE" },
-{ name: "CITIC Capital Acquisition Corp.", symbol: "CCAC.WS", exchange: "NYSE" },
-{ name: "Citigroup Inc.", symbol: "BLW", exchange: "NYSE" },
-{ name: "Citigroup Inc.", symbol: "C", exchange: "NYSE" },
-{ name: "Citigroup Inc.", symbol: "C^J", exchange: "NYSE" },
-{ name: "Citigroup Inc.", symbol: "C^K", exchange: "NYSE" },
-{ name: "Citigroup Inc.", symbol: "C^N", exchange: "NYSE" },
-{ name: "Citigroup Inc.", symbol: "C^S", exchange: "NYSE" },
-{ name: "Citizens Financial Group, Inc.", symbol: "CFG", exchange: "NYSE" },
-{ name: "Citizens Financial Group, Inc.", symbol: "CFG^D", exchange: "NYSE" },
-{ name: "Citizens Financial Group, Inc.", symbol: "CFG^E", exchange: "NYSE" },
-{ name: "Citizens, Inc.", symbol: "CIA", exchange: "NYSE" },
-{ name: "City Office REIT, Inc.", symbol: "CIO", exchange: "NYSE" },
-{ name: "City Office REIT, Inc.", symbol: "CIO^A", exchange: "NYSE" },
-{ name: "Civeo Corporation", symbol: "CVEO", exchange: "NYSE" },
-{ name: "Clarivate Plc", symbol: "CCC", exchange: "NYSE" },
-{ name: "Class Acceleration Corp.", symbol: "CLAS.U", exchange: "NYSE" },
-{ name: "Clean Harbors, Inc.", symbol: "CLH", exchange: "NYSE" },
-{ name: "Clear Channel Outdoor Holdings, Inc.", symbol: "CCO", exchange: "NYSE" },
-{ name: "ClearBridge Energy Midstream Opportunity Fund Inc.", symbol: "EMO", exchange: "NYSE" },
-{ name: "ClearBridge MLP and Midstream Fund Inc.", symbol: "CEM", exchange: "NYSE" },
-{ name: "ClearBridge MLP and Midstream Total Return Fund In", symbol: "CTR", exchange: "NYSE" },
-{ name: "Clearwater Paper Corporation", symbol: "CLW", exchange: "NYSE" },
-{ name: "Clearway Energy, Inc.", symbol: "CWEN", exchange: "NYSE" },
-{ name: "Clearway Energy, Inc.", symbol: "CWEN.A", exchange: "NYSE" },
-{ name: "Cleveland-Cliffs Inc.", symbol: "CLF", exchange: "NYSE" },
-{ name: "Climate Change Crisis Real Impact I Acquisition Corporation", symbol: "CLII", exchange: "NYSE" },
-{ name: "Climate Change Crisis Real Impact I Acquisition Corporation", symbol: "CLII.U", exchange: "NYSE" },
-{ name: "Climate Change Crisis Real Impact I Acquisition Corporation", symbol: "CLII.WS", exchange: "NYSE" },
-{ name: "Clipper Realty Inc.", symbol: "CLPR", exchange: "NYSE" },
-{ name: "Clorox Company (The)", symbol: "CLX", exchange: "NYSE" },
-{ name: "Cloudera, Inc.", symbol: "CLDR", exchange: "NYSE" },
-{ name: "Cloudflare, Inc.", symbol: "NET", exchange: "NYSE" },
-{ name: "CMS Energy Corporation", symbol: "CMS", exchange: "NYSE" },
-{ name: "CMS Energy Corporation", symbol: "CMS^B", exchange: "NYSE" },
-{ name: "CMS Energy Corporation", symbol: "CMSA", exchange: "NYSE" },
-{ name: "CMS Energy Corporation", symbol: "CMSC", exchange: "NYSE" },
-{ name: "CMS Energy Corporation", symbol: "CMSD", exchange: "NYSE" },
-{ name: "CNA Financial Corporation", symbol: "CNA", exchange: "NYSE" },
-{ name: "CNFinance Holdings Limited", symbol: "CNF", exchange: "NYSE" },
-{ name: "CNH Industrial N.V.", symbol: "CNHI", exchange: "NYSE" },
-{ name: "CNO Financial Group, Inc.", symbol: "CNO", exchange: "NYSE" },
-{ name: "CNO Financial Group, Inc.", symbol: "CNO^A", exchange: "NYSE" },
-{ name: "CNOOC Limited", symbol: "CEO", exchange: "NYSE" },
-{ name: "CNX Resources Corporation", symbol: "CNX", exchange: "NYSE" },
-{ name: "Coca Cola Femsa S.A.B. de C.V.", symbol: "KOF", exchange: "NYSE" },
-{ name: "Coca-Cola Company (The)", symbol: "KO", exchange: "NYSE" },
-{ name: "Coca-Cola European Partners plc", symbol: "CCEP", exchange: "NYSE" },
-{ name: "Coeur Mining, Inc.", symbol: "CDE", exchange: "NYSE" },
-{ name: "Cohen & Steers Closed-End Opportunity Fund, Inc.", symbol: "FOF", exchange: "NYSE" },
-{ name: "Cohen & Steers Inc", symbol: "CNS", exchange: "NYSE" },
-{ name: "Cohen & Steers Infrastructure Fund, Inc", symbol: "UTF", exchange: "NYSE" },
-{ name: "Cohen & Steers Limited Duration Preferred and Income Fund, Inc", symbol: "LDP", exchange: "NYSE" },
-{ name: "Cohen & Steers MLP Income and Energy Opportunity Fund, Inc.", symbol: "MIE", exchange: "NYSE" },
-{ name: "Cohen & Steers Quality Income Realty Fund Inc.", symbol: "RQI", exchange: "NYSE" },
-{ name: "Cohen & Steers REIT and Preferred and Income Fund,", symbol: "RNP", exchange: "NYSE" },
-{ name: "Cohen & Steers Select Preferred and Income Fund, Inc.", symbol: "PSF", exchange: "NYSE" },
-{ name: "Cohen & Steers Tax-Advantaged Preferred Securities", symbol: "PTA", exchange: "NYSE" },
-{ name: "Cohen & Steers Total Return Realty Fund, Inc.", symbol: "RFI", exchange: "NYSE" },
-{ name: "Cohn Robbins Holdings Corp.", symbol: "CRHC", exchange: "NYSE" },
-{ name: "Cohn Robbins Holdings Corp.", symbol: "CRHC.U", exchange: "NYSE" },
-{ name: "Cohn Robbins Holdings Corp.", symbol: "CRHC.WS", exchange: "NYSE" },
-{ name: "Colfax Corporation", symbol: "CFX", exchange: "NYSE" },
-{ name: "Colfax Corporation", symbol: "CFXA", exchange: "NYSE" },
-{ name: "Colgate-Palmolive Company", symbol: "CL", exchange: "NYSE" },
-{ name: "Colonial High Income Municipal Trust", symbol: "CXE", exchange: "NYSE" },
-{ name: "Colonial Intermediate High Income Fund", symbol: "CIF", exchange: "NYSE" },
-{ name: "Colonial Investment Grade Municipal Trust", symbol: "CXH", exchange: "NYSE" },
-{ name: "Colonial Municipal Income Trust", symbol: "CMU", exchange: "NYSE" },
-{ name: "Colonnade Acquisition Corp.", symbol: "CLA", exchange: "NYSE" },
-{ name: "Colonnade Acquisition Corp.", symbol: "CLA.U", exchange: "NYSE" },
-{ name: "Colonnade Acquisition Corp.", symbol: "CLA.WS", exchange: "NYSE" },
-{ name: "Colony Capital, Inc.", symbol: "CLNY", exchange: "NYSE" },
-{ name: "Colony Capital, Inc.", symbol: "CLNY^G", exchange: "NYSE" },
-{ name: "Colony Capital, Inc.", symbol: "CLNY^H", exchange: "NYSE" },
-{ name: "Colony Capital, Inc.", symbol: "CLNY^I", exchange: "NYSE" },
-{ name: "Colony Capital, Inc.", symbol: "CLNY^J", exchange: "NYSE" },
-{ name: "Colony Credit Real Estate, Inc.", symbol: "CLNC", exchange: "NYSE" },
-{ name: "Columbia Property Trust, Inc.", symbol: "CXP", exchange: "NYSE" },
-{ name: "Columbia Seligman Premium Technology Growth Fund, Inc", symbol: "STK", exchange: "NYSE" },
-{ name: "Comcast Corporation", symbol: "CCZ", exchange: "NYSE" },
-{ name: "Comerica Incorporated", symbol: "CMA", exchange: "NYSE" },
-{ name: "Comfort Systems USA, Inc.", symbol: "FIX", exchange: "NYSE" },
-{ name: "Commercial Metals Company", symbol: "CMC", exchange: "NYSE" },
-{ name: "Community Bank System, Inc.", symbol: "CBU", exchange: "NYSE" },
-{ name: "Community Health Systems, Inc.", symbol: "CYH", exchange: "NYSE" },
-{ name: "Community Healthcare Trust Incorporated", symbol: "CHCT", exchange: "NYSE" },
-{ name: "Comp En De Mn Cemig ADS", symbol: "CIG", exchange: "NYSE" },
-{ name: "Comp En De Mn Cemig ADS", symbol: "CIG.C", exchange: "NYSE" },
-{ name: "Companhia Brasileira de Distribuicao", symbol: "CBD", exchange: "NYSE" },
-{ name: "Companhia de saneamento Basico Do Estado De Sao Paulo - Sabesp", symbol: "SBS", exchange: "NYSE" },
-{ name: "Companhia Paranaense de Energia (COPEL)", symbol: "ELP", exchange: "NYSE" },
-{ name: "Compania Cervecerias Unidas, S.A.", symbol: "CCU", exchange: "NYSE" },
-{ name: "Compass Diversified", symbol: "CODI", exchange: "NYSE" },
-{ name: "Compass Diversified", symbol: "CODI^A", exchange: "NYSE" },
-{ name: "Compass Diversified", symbol: "CODI^B", exchange: "NYSE" },
-{ name: "Compass Diversified", symbol: "CODI^C", exchange: "NYSE" },
-{ name: "Compass Minerals International, Inc.", symbol: "CMP", exchange: "NYSE" },
-{ name: "Comstock Resources, Inc.", symbol: "CRK", exchange: "NYSE" },
-{ name: "ConAgra Brands, Inc.", symbol: "CAG", exchange: "NYSE" },
-{ name: "Concord Acquisition Corp.", symbol: "CND.U", exchange: "NYSE" },
-{ name: "Concord Medical Services Holdings Limited", symbol: "CCM", exchange: "NYSE" },
-{ name: "CONMED Corporation", symbol: "CNMD", exchange: "NYSE" },
-{ name: "ConocoPhillips", symbol: "COP", exchange: "NYSE" },
-{ name: "CONSOL Energy Inc.", symbol: "CEIX", exchange: "NYSE" },
-{ name: "Consolidated Edison Inc", symbol: "ED", exchange: "NYSE" },
-{ name: "Constellation Brands Inc", symbol: "STZ", exchange: "NYSE" },
-{ name: "Constellation Brands Inc", symbol: "STZ.B", exchange: "NYSE" },
-{ name: "Constellium SE", symbol: "CSTM", exchange: "NYSE" },
-{ name: "Container Store (The)", symbol: "TCS", exchange: "NYSE" },
-{ name: "Continental Resources, Inc.", symbol: "CLR", exchange: "NYSE" },
-{ name: "Controladora Vuela Compania de Aviacion, S.A.B. de C.V.", symbol: "VLRS", exchange: "NYSE" },
-{ name: "Contura Energy, Inc.", symbol: "CTRA", exchange: "NYSE" },
-{ name: "Cooper Tire & Rubber Company", symbol: "CTB", exchange: "NYSE" },
-{ name: "Cooper-Standard Holdings Inc.", symbol: "CPS", exchange: "NYSE" },
-{ name: "CooTek (Cayman) Inc.", symbol: "CTK", exchange: "NYSE" },
-{ name: "Copa Holdings, S.A.", symbol: "CPA", exchange: "NYSE" },
-{ name: "Core Laboratories N.V.", symbol: "CLB", exchange: "NYSE" },
-{ name: "CoreCivic, Inc.", symbol: "CXW", exchange: "NYSE" },
-{ name: "CoreLogic, Inc.", symbol: "CLGX", exchange: "NYSE" },
-{ name: "CorEnergy Infrastructure Trust, Inc.", symbol: "CORR", exchange: "NYSE" },
-{ name: "CorEnergy Infrastructure Trust, Inc.", symbol: "CORR^A", exchange: "NYSE" },
-{ name: "CorePoint Lodging Inc.", symbol: "CPLG", exchange: "NYSE" },
-{ name: "CoreSite Realty Corporation", symbol: "COR", exchange: "NYSE" },
-{ name: "Cornerstone Building Brands, Inc.", symbol: "CNR", exchange: "NYSE" },
-{ name: "Corning Incorporated", symbol: "GLW", exchange: "NYSE" },
-{ name: "Corporacion America Airports SA", symbol: "CAAP", exchange: "NYSE" },
-{ name: "Corporate Asset Backed Corp CABCO", symbol: "GYC", exchange: "NYSE" },
-{ name: "Corporate Office Properties Trust", symbol: "OFC", exchange: "NYSE" },
-{ name: "Corteva, Inc.", symbol: "CTVA", exchange: "NYSE" },
-{ name: "Cosan Limited", symbol: "CZZ", exchange: "NYSE" },
-{ name: "Costamare Inc.", symbol: "CMRE", exchange: "NYSE" },
-{ name: "Costamare Inc.", symbol: "CMRE^B", exchange: "NYSE" },
-{ name: "Costamare Inc.", symbol: "CMRE^C", exchange: "NYSE" },
-{ name: "Costamare Inc.", symbol: "CMRE^D", exchange: "NYSE" },
-{ name: "Costamare Inc.", symbol: "CMRE^E", exchange: "NYSE" },
-{ name: "Coty Inc.", symbol: "COTY", exchange: "NYSE" },
-{ name: "Cousins Properties Incorporated", symbol: "CUZ", exchange: "NYSE" },
-{ name: "Covanta Holding Corporation", symbol: "CVA", exchange: "NYSE" },
-{ name: "CPB Inc.", symbol: "CPF", exchange: "NYSE" },
-{ name: "Crane Co.", symbol: "CR", exchange: "NYSE" },
-{ name: "Crawford & Company", symbol: "CRD.A", exchange: "NYSE" },
-{ name: "Crawford & Company", symbol: "CRD.B", exchange: "NYSE" },
-{ name: "Credicorp Ltd.", symbol: "BAP", exchange: "NYSE" },
-{ name: "Credit Suisse Group", symbol: "CS", exchange: "NYSE" },
-{ name: "Crescent Point Energy Corporation", symbol: "CPG", exchange: "NYSE" },
-{ name: "Crestwood Equity Partners LP", symbol: "CEQP", exchange: "NYSE" },
-{ name: "Crestwood Equity Partners LP", symbol: "CEQP^", exchange: "NYSE" },
-{ name: "CRH PLC", symbol: "CRH", exchange: "NYSE" },
-{ name: "Cross Timbers Royalty Trust", symbol: "CRT", exchange: "NYSE" },
-{ name: "CrossAmerica Partners LP", symbol: "CAPL", exchange: "NYSE" },
-{ name: "Crown Castle International Corporation", symbol: "CCI", exchange: "NYSE" },
-{ name: "Crown Holdings, Inc.", symbol: "CCK", exchange: "NYSE" },
-{ name: "Crucible Acquisition Corporation", symbol: "CRU.U", exchange: "NYSE" },
-{ name: "CryoLife, Inc.", symbol: "CRY", exchange: "NYSE" },
-{ name: "CTS Corporation", symbol: "CTS", exchange: "NYSE" },
-{ name: "CubeSmart", symbol: "CUBE", exchange: "NYSE" },
-{ name: "Cubic Corporation", symbol: "CUB", exchange: "NYSE" },
-{ name: "Cullen/Frost Bankers, Inc.", symbol: "CFR", exchange: "NYSE" },
-{ name: "Cullen/Frost Bankers, Inc.", symbol: "CFR^B", exchange: "NYSE" },
-{ name: "Culp, Inc.", symbol: "CULP", exchange: "NYSE" },
-{ name: "Cummins Inc.", symbol: "CMI", exchange: "NYSE" },
-{ name: "CURO Group Holdings Corp.", symbol: "CURO", exchange: "NYSE" },
-{ name: "Curtiss-Wright Corporation", symbol: "CW", exchange: "NYSE" },
-{ name: "Cushing MLP & Infrastructure Total Return Fund", symbol: "SRV", exchange: "NYSE" },
-{ name: "Cushing NextGen Infrastructure Income Fund", symbol: "SZC", exchange: "NYSE" },
-{ name: "Cushman & Wakefield plc", symbol: "CWK", exchange: "NYSE" },
-{ name: "Customers Bancorp, Inc", symbol: "CUBB", exchange: "NYSE" },
-{ name: "Customers Bancorp, Inc", symbol: "CUBI", exchange: "NYSE" },
-{ name: "Customers Bancorp, Inc", symbol: "CUBI^C", exchange: "NYSE" },
-{ name: "Customers Bancorp, Inc", symbol: "CUBI^D", exchange: "NYSE" },
-{ name: "Customers Bancorp, Inc", symbol: "CUBI^E", exchange: "NYSE" },
-{ name: "Customers Bancorp, Inc", symbol: "CUBI^F", exchange: "NYSE" },
-{ name: "CVR Energy Inc.", symbol: "CVI", exchange: "NYSE" },
-{ name: "CVR Partners, LP", symbol: "UAN", exchange: "NYSE" },
-{ name: "CVS Health Corporation", symbol: "CVS", exchange: "NYSE" },
-{ name: "Cypress Environmental Partners, L.P.", symbol: "CELP", exchange: "NYSE" },
-{ name: "D.R. Horton, Inc.", symbol: "DHI", exchange: "NYSE" },
-{ name: "D/B/A Centerspace", symbol: "CSR", exchange: "NYSE" },
-{ name: "D/B/A Centerspace", symbol: "CSR^C", exchange: "NYSE" },
-{ name: "D8 Holdings Corp.", symbol: "DEH", exchange: "NYSE" },
-{ name: "D8 Holdings Corp.", symbol: "DEH.U", exchange: "NYSE" },
-{ name: "D8 Holdings Corp.", symbol: "DEH.WS", exchange: "NYSE" },
-{ name: "Dana Incorporated", symbol: "DAN", exchange: "NYSE" },
-{ name: "Danaher Corporation", symbol: "DHR", exchange: "NYSE" },
-{ name: "Danaher Corporation", symbol: "DHR^A", exchange: "NYSE" },
-{ name: "Danaher Corporation", symbol: "DHR^B", exchange: "NYSE" },
-{ name: "Danaos Corporation", symbol: "DAC", exchange: "NYSE" },
-{ name: "Danimer Scientific, Inc.", symbol: "DNMR", exchange: "NYSE" },
-{ name: "Danimer Scientific, Inc.", symbol: "DNMR.WS", exchange: "NYSE" },
-{ name: "DAQO New Energy Corp.", symbol: "DQ", exchange: "NYSE" },
-{ name: "Darden Restaurants, Inc.", symbol: "DRI", exchange: "NYSE" },
-{ name: "Darling Ingredients Inc.", symbol: "DAR", exchange: "NYSE" },
-{ name: "Datto Holding Corp.", symbol: "MSP", exchange: "NYSE" },
-{ name: "DaVita Inc.", symbol: "DVA", exchange: "NYSE" },
-{ name: "DCP Midstream LP", symbol: "DCP", exchange: "NYSE" },
-{ name: "DCP Midstream LP", symbol: "DCP^B", exchange: "NYSE" },
-{ name: "DCP Midstream LP", symbol: "DCP^C", exchange: "NYSE" },
-{ name: "Deckers Outdoor Corporation", symbol: "DECK", exchange: "NYSE" },
-{ name: "Deere & Company", symbol: "DE", exchange: "NYSE" },
-{ name: "Delaware Enhanced Global Dividend", symbol: "DEX", exchange: "NYSE" },
-{ name: "Delaware Investments Dividend & Income Fund, Inc.", symbol: "DDF", exchange: "NYSE" },
-{ name: "Delek Logistics Partners, L.P.", symbol: "DKL", exchange: "NYSE" },
-{ name: "Delek US Holdings, Inc.", symbol: "DK", exchange: "NYSE" },
-{ name: "Dell Technologies Inc.", symbol: "DELL", exchange: "NYSE" },
-{ name: "Delta Air Lines, Inc.", symbol: "DAL", exchange: "NYSE" },
-{ name: "Deluxe Corporation", symbol: "DLX", exchange: "NYSE" },
-{ name: "Delwinds Insurance Acquisition Corp.", symbol: "DWIN.U", exchange: "NYSE" },
-{ name: "Denbury Inc.", symbol: "DEN", exchange: "NYSE" },
-{ name: "Designer Brands Inc.", symbol: "DBI", exchange: "NYSE" },
-{ name: "Desktop Metal, Inc.", symbol: "DM", exchange: "NYSE" },
-{ name: "Desktop Metal, Inc.", symbol: "DM.WS", exchange: "NYSE" },
-{ name: "Despegar.com, Corp.", symbol: "DESP", exchange: "NYSE" },
-{ name: "Deutsche Bank AG", symbol: "DB", exchange: "NYSE" },
-{ name: "Devon Energy Corporation", symbol: "DVN", exchange: "NYSE" },
-{ name: "DHI Group, Inc.", symbol: "DHX", exchange: "NYSE" },
-{ name: "DHT Holdings, Inc.", symbol: "DHT", exchange: "NYSE" },
-{ name: "Diageo plc", symbol: "DEO", exchange: "NYSE" },
-{ name: "Diamond S Shipping Inc.", symbol: "DSSI", exchange: "NYSE" },
-{ name: "Diamondrock Hospitality Company", symbol: "DRH", exchange: "NYSE" },
-{ name: "Diamondrock Hospitality Company", symbol: "DRH^A", exchange: "NYSE" },
-{ name: "Diana Shipping inc.", symbol: "DSX", exchange: "NYSE" },
-{ name: "Diana Shipping inc.", symbol: "DSX^B", exchange: "NYSE" },
-{ name: "Dick&#39;s Sporting Goods Inc", symbol: "DKS", exchange: "NYSE" },
-{ name: "Diebold Nixdorf Incorporated", symbol: "DBD", exchange: "NYSE" },
-{ name: "Digital Media Solutions, Inc.", symbol: "DMS", exchange: "NYSE" },
-{ name: "Digital Media Solutions, Inc.", symbol: "DMS.WS", exchange: "NYSE" },
-{ name: "Digital Realty Trust, Inc.", symbol: "DLR", exchange: "NYSE" },
-{ name: "Digital Realty Trust, Inc.", symbol: "DLR^C", exchange: "NYSE" },
-{ name: "Digital Realty Trust, Inc.", symbol: "DLR^J", exchange: "NYSE" },
-{ name: "Digital Realty Trust, Inc.", symbol: "DLR^K", exchange: "NYSE" },
-{ name: "Digital Realty Trust, Inc.", symbol: "DLR^L", exchange: "NYSE" },
-{ name: "Dillard&#39;s, Inc.", symbol: "DDS", exchange: "NYSE" },
-{ name: "Dillard&#39;s, Inc.", symbol: "DDT", exchange: "NYSE" },
-{ name: "Dine Brands Global, Inc.", symbol: "DIN", exchange: "NYSE" },
-{ name: "Discover Financial Services", symbol: "DFS", exchange: "NYSE" },
-{ name: "dMY Technology Group, Inc. II", symbol: "DMYD", exchange: "NYSE" },
-{ name: "dMY Technology Group, Inc. II", symbol: "DMYD.U", exchange: "NYSE" },
-{ name: "dMY Technology Group, Inc. II", symbol: "DMYD.WS", exchange: "NYSE" },
-{ name: "dMY Technology Group, Inc. III", symbol: "DMYI", exchange: "NYSE" },
-{ name: "dMY Technology Group, Inc. III", symbol: "DMYI.U", exchange: "NYSE" },
-{ name: "dMY Technology Group, Inc. III", symbol: "DMYI.WS", exchange: "NYSE" },
-{ name: "Dolby Laboratories", symbol: "DLB", exchange: "NYSE" },
-{ name: "Dollar General Corporation", symbol: "DG", exchange: "NYSE" },
-{ name: "Dominion Energy, Inc.", symbol: "D", exchange: "NYSE" },
-{ name: "Dominion Energy, Inc.", symbol: "DCUE", exchange: "NYSE" },
-{ name: "Dominion Energy, Inc.", symbol: "DRUA", exchange: "NYSE" },
-{ name: "Domino&#39;s Pizza Inc", symbol: "DPZ", exchange: "NYSE" },
-{ name: "Domtar Corporation", symbol: "UFS", exchange: "NYSE" },
-{ name: "Donaldson Company, Inc.", symbol: "DCI", exchange: "NYSE" },
-{ name: "Donnelley Financial Solutions, Inc.", symbol: "DFIN", exchange: "NYSE" },
-{ name: "DoorDash, Inc.", symbol: "DASH", exchange: "NYSE" },
-{ name: "Dorian LPG Ltd.", symbol: "LPG", exchange: "NYSE" },
-{ name: "DoubleLine Income Solutions Fund", symbol: "DSL", exchange: "NYSE" },
-{ name: "DoubleLine Opportunistic Credit Fund", symbol: "DBL", exchange: "NYSE" },
-{ name: "DoubleLine Yield Opportunities Fund", symbol: "DLY", exchange: "NYSE" },
-{ name: "Douglas Dynamics, Inc.", symbol: "PLOW", exchange: "NYSE" },
-{ name: "Douglas Emmett, Inc.", symbol: "DEI", exchange: "NYSE" },
-{ name: "Dover Corporation", symbol: "DOV", exchange: "NYSE" },
-{ name: "Dover Motorsports, Inc.", symbol: "DVD", exchange: "NYSE" },
-{ name: "Dow Inc.", symbol: "DOW", exchange: "NYSE" },
-{ name: "DPCM Capital, Inc.", symbol: "XPOA", exchange: "NYSE" },
-{ name: "DPCM Capital, Inc.", symbol: "XPOA.U", exchange: "NYSE" },
-{ name: "DPCM Capital, Inc.", symbol: "XPOA.WS", exchange: "NYSE" },
-{ name: "Dr. Reddy&#39;s Laboratories Ltd", symbol: "RDY", exchange: "NYSE" },
-{ name: "Dragoneer Growth Opportunities Corp.", symbol: "DGNR", exchange: "NYSE" },
-{ name: "Dragoneer Growth Opportunities Corp.", symbol: "DGNR.U", exchange: "NYSE" },
-{ name: "Dragoneer Growth Opportunities Corp.", symbol: "DGNR.WS", exchange: "NYSE" },
-{ name: "DRDGOLD Limited", symbol: "DRD", exchange: "NYSE" },
-{ name: "Dril-Quip, Inc.", symbol: "DRQ", exchange: "NYSE" },
-{ name: "Drive Shack Inc.", symbol: "DS", exchange: "NYSE" },
-{ name: "Drive Shack Inc.", symbol: "DS^B", exchange: "NYSE" },
-{ name: "Drive Shack Inc.", symbol: "DS^C", exchange: "NYSE" },
-{ name: "Drive Shack Inc.", symbol: "DS^D", exchange: "NYSE" },
-{ name: "DTE Energy Company", symbol: "DTB", exchange: "NYSE" },
-{ name: "DTE Energy Company", symbol: "DTE", exchange: "NYSE" },
-{ name: "DTE Energy Company", symbol: "DTJ", exchange: "NYSE" },
-{ name: "DTE Energy Company", symbol: "DTP", exchange: "NYSE" },
-{ name: "DTE Energy Company", symbol: "DTW", exchange: "NYSE" },
-{ name: "DTE Energy Company", symbol: "DTY", exchange: "NYSE" },
-{ name: "Ducommun Incorporated", symbol: "DCO", exchange: "NYSE" },
-{ name: "Duff & Phelps Select MLP and Midstream Energy Fund", symbol: "DSE", exchange: "NYSE" },
-{ name: "Duff & Phelps Utilities Income, Inc.", symbol: "DNP", exchange: "NYSE" },
-{ name: "Duff & Phelps Utilities Tax-Free Income, Inc.", symbol: "DTF", exchange: "NYSE" },
-{ name: "Duff & Phelps Utility & Corporate Bond Trust, Inc.", symbol: "DUC", exchange: "NYSE" },
-{ name: "Duff & Phelps Utility and Infrastructure Fund Inc.", symbol: "DPG", exchange: "NYSE" },
-{ name: "Duke Energy Corporation", symbol: "DUK", exchange: "NYSE" },
-{ name: "Duke Energy Corporation", symbol: "DUK^A", exchange: "NYSE" },
-{ name: "Duke Energy Corporation", symbol: "DUKB", exchange: "NYSE" },
-{ name: "Duke Energy Corporation", symbol: "DUKH", exchange: "NYSE" },
-{ name: "Duke Realty Corporation", symbol: "DRE", exchange: "NYSE" },
-{ name: "Dun & Bradstreet Holdings, Inc.", symbol: "DNB", exchange: "NYSE" },
-{ name: "DuPont de Nemours, Inc.", symbol: "DD", exchange: "NYSE" },
-{ name: "DXC Technology Company", symbol: "DXC", exchange: "NYSE" },
-{ name: "Dycom Industries, Inc.", symbol: "DY", exchange: "NYSE" },
-{ name: "Dynagas LNG Partners LP", symbol: "DLNG", exchange: "NYSE" },
-{ name: "Dynagas LNG Partners LP", symbol: "DLNG^A", exchange: "NYSE" },
-{ name: "Dynagas LNG Partners LP", symbol: "DLNG^B", exchange: "NYSE" },
-{ name: "Dynatrace, Inc.", symbol: "DT", exchange: "NYSE" },
-{ name: "Dynex Capital, Inc.", symbol: "DX", exchange: "NYSE" },
-{ name: "Dynex Capital, Inc.", symbol: "DX^B", exchange: "NYSE" },
-{ name: "Dynex Capital, Inc.", symbol: "DX^C", exchange: "NYSE" },
-{ name: "E.I. du Pont de Nemours and Company", symbol: "CTA^A", exchange: "NYSE" },
-{ name: "E.I. du Pont de Nemours and Company", symbol: "CTA^B", exchange: "NYSE" },
-{ name: "e.l.f. Beauty, Inc.", symbol: "ELF", exchange: "NYSE" },
-{ name: "Eagle Materials Inc", symbol: "EXP", exchange: "NYSE" },
-{ name: "Eagle Point Credit Company Inc.", symbol: "ECC", exchange: "NYSE" },
-{ name: "Eagle Point Credit Company Inc.", symbol: "ECCB", exchange: "NYSE" },
-{ name: "Eagle Point Credit Company Inc.", symbol: "ECCX", exchange: "NYSE" },
-{ name: "Eagle Point Credit Company Inc.", symbol: "ECCY", exchange: "NYSE" },
-{ name: "Eagle Point Income Company Inc.", symbol: "EIC", exchange: "NYSE" },
-{ name: "Earthstone Energy, Inc.", symbol: "ESTE", exchange: "NYSE" },
-{ name: "Easterly Government Properties, Inc.", symbol: "DEA", exchange: "NYSE" },
-{ name: "EastGroup Properties, Inc.", symbol: "EGP", exchange: "NYSE" },
-{ name: "Eastman Chemical Company", symbol: "EMN", exchange: "NYSE" },
-{ name: "Eastman Kodak Company", symbol: "KODK", exchange: "NYSE" },
-{ name: "Eaton Corporation, PLC", symbol: "ETN", exchange: "NYSE" },
-{ name: "Eaton Vance 2021 Target Term Trust", symbol: "EHT", exchange: "NYSE" },
-{ name: "Eaton Vance Corporation", symbol: "ETV", exchange: "NYSE" },
-{ name: "Eaton Vance Corporation", symbol: "ETW", exchange: "NYSE" },
-{ name: "Eaton Vance Corporation", symbol: "EV", exchange: "NYSE" },
-{ name: "Eaton Vance Enhance Equity Income Fund", symbol: "EOI", exchange: "NYSE" },
-{ name: "Eaton Vance Enhanced Equity Income Fund II", symbol: "EOS", exchange: "NYSE" },
-{ name: "Eaton Vance Floating Rate Income Trust", symbol: "EFT", exchange: "NYSE" },
-{ name: "Eaton Vance Floating-Rate 2022 Target Term Trust", symbol: "EFL", exchange: "NYSE" },
-{ name: "Eaton vance Floating-Rate Income Plus Fund", symbol: "EFF", exchange: "NYSE" },
-{ name: "Eaton Vance Municipal Income 2028 Term Trust", symbol: "ETX", exchange: "NYSE" },
-{ name: "Eaton Vance Municipal Income Trust", symbol: "EOT", exchange: "NYSE" },
-{ name: "Eaton Vance Municipal Income Trust", symbol: "EVN", exchange: "NYSE" },
-{ name: "Eaton Vance Risk-Managed Diversified Equity Income Fund", symbol: "ETJ", exchange: "NYSE" },
-{ name: "Eaton Vance Senior Floating-Rate Fund", symbol: "EFR", exchange: "NYSE" },
-{ name: "Eaton Vance Senior Income Trust", symbol: "EVF", exchange: "NYSE" },
-{ name: "Eaton Vance Short Diversified Income Fund", symbol: "EVG", exchange: "NYSE" },
-{ name: "Eaton Vance Tax Advantaged Dividend Income Fund", symbol: "EVT", exchange: "NYSE" },
-{ name: "Eaton Vance Tax-Advantage Global Dividend Opp", symbol: "ETO", exchange: "NYSE" },
-{ name: "Eaton Vance Tax-Advantaged Global Dividend Income Fund", symbol: "ETG", exchange: "NYSE" },
-{ name: "Eaton Vance Tax-Managed Buy-Write Income Fund", symbol: "ETB", exchange: "NYSE" },
-{ name: "Eaton Vance Tax-Managed Buy-Write Strategy Fund", symbol: "EXD", exchange: "NYSE" },
-{ name: "Eaton Vance Tax-Managed Diversified Equity Income Fund", symbol: "ETY", exchange: "NYSE" },
-{ name: "Eaton Vance Tax-Managed Global Diversified Equity Income Fund", symbol: "EXG", exchange: "NYSE" },
-{ name: "Ecolab Inc.", symbol: "ECL", exchange: "NYSE" },
-{ name: "Ecopetrol S.A.", symbol: "EC", exchange: "NYSE" },
-{ name: "Edgewell Personal Care", symbol: "EPC", exchange: "NYSE" },
-{ name: "Edison International", symbol: "EIX", exchange: "NYSE" },
-{ name: "Edwards Lifesciences Corporation", symbol: "EW", exchange: "NYSE" },
-{ name: "El Paso Corporation", symbol: "EP^C", exchange: "NYSE" },
-{ name: "Elanco Animal Health Incorporated", symbol: "ELAN", exchange: "NYSE" },
-{ name: "Elanco Animal Health Incorporated", symbol: "ELAT", exchange: "NYSE" },
-{ name: "Elastic N.V.", symbol: "ESTC", exchange: "NYSE" },
-{ name: "Eldorado Gold Corporation", symbol: "EGO", exchange: "NYSE" },
-{ name: "Element Solutions Inc.", symbol: "ESI", exchange: "NYSE" },
-{ name: "Elevate Credit, Inc.", symbol: "ELVT", exchange: "NYSE" },
-{ name: "Eli Lilly and Company", symbol: "LLY", exchange: "NYSE" },
-{ name: "Ellington Financial Inc.", symbol: "EFC", exchange: "NYSE" },
-{ name: "Ellington Financial Inc.", symbol: "EFC^A", exchange: "NYSE" },
-{ name: "Ellington Residential Mortgage REIT", symbol: "EARN", exchange: "NYSE" },
-{ name: "Embotelladora Andina S.A.", symbol: "AKO.A", exchange: "NYSE" },
-{ name: "Embotelladora Andina S.A.", symbol: "AKO.B", exchange: "NYSE" },
-{ name: "Embraer S.A.", symbol: "ERJ", exchange: "NYSE" },
-{ name: "EMCOR Group, Inc.", symbol: "EME", exchange: "NYSE" },
-{ name: "Emerald Holding, Inc.", symbol: "EEX", exchange: "NYSE" },
-{ name: "Emergent Biosolutions, Inc.", symbol: "EBS", exchange: "NYSE" },
-{ name: "Emerson Electric Company", symbol: "EMR", exchange: "NYSE" },
-{ name: "Empire State Realty Trust, Inc.", symbol: "ESRT", exchange: "NYSE" },
-{ name: "Employers Holdings Inc", symbol: "EIG", exchange: "NYSE" },
-{ name: "Empower Ltd.", symbol: "EMPW", exchange: "NYSE" },
-{ name: "Empower Ltd.", symbol: "EMPW.U", exchange: "NYSE" },
-{ name: "Empower Ltd.", symbol: "EMPW.WS", exchange: "NYSE" },
-{ name: "Empowerment & Inclusion Capital I Corp.", symbol: "EPWR.U", exchange: "NYSE" },
-{ name: "Empresa Distribuidora Y Comercializadora Norte S.A. (Edenor)", symbol: "EDN", exchange: "NYSE" },
-{ name: "Enable Midstream Partners, LP", symbol: "ENBL", exchange: "NYSE" },
-{ name: "Enbridge Inc", symbol: "ENB", exchange: "NYSE" },
-{ name: "Enbridge Inc", symbol: "ENBA", exchange: "NYSE" },
-{ name: "Encompass Health Corporation", symbol: "EHC", exchange: "NYSE" },
-{ name: "Endava plc", symbol: "DAVA", exchange: "NYSE" },
-{ name: "Endeavour Silver Corporation", symbol: "EXK", exchange: "NYSE" },
-{ name: "Enel Americas S.A.", symbol: "ENIA", exchange: "NYSE" },
-{ name: "Enel Chile S.A.", symbol: "ENIC", exchange: "NYSE" },
-{ name: "Energizer Holdings, Inc.", symbol: "ENR", exchange: "NYSE" },
-{ name: "Energizer Holdings, Inc.", symbol: "ENR^A", exchange: "NYSE" },
-{ name: "Energy Transfer L.P.", symbol: "ET", exchange: "NYSE" },
-{ name: "Energy Transfer Operating, L.P.", symbol: "ETP^C", exchange: "NYSE" },
-{ name: "Energy Transfer Operating, L.P.", symbol: "ETP^D", exchange: "NYSE" },
-{ name: "Energy Transfer Operating, L.P.", symbol: "ETP^E", exchange: "NYSE" },
-{ name: "Enerpac Tool Group Corp.", symbol: "EPAC", exchange: "NYSE" },
-{ name: "Enerplus Corporation", symbol: "ERF", exchange: "NYSE" },
-{ name: "Enersys", symbol: "ENS", exchange: "NYSE" },
-{ name: "ENI S.p.A.", symbol: "E", exchange: "NYSE" },
-{ name: "EnLink Midstream, LLC", symbol: "ENLC", exchange: "NYSE" },
-{ name: "Ennis, Inc.", symbol: "EBF", exchange: "NYSE" },
-{ name: "Enova International, Inc.", symbol: "ENVA", exchange: "NYSE" },
-{ name: "EnPro Industries", symbol: "NPO", exchange: "NYSE" },
-{ name: "Entercom Communications Corp.", symbol: "ETM", exchange: "NYSE" },
-{ name: "Entergy Arkansas, LLC", symbol: "EAI", exchange: "NYSE" },
-{ name: "Entergy Corporation", symbol: "ETR", exchange: "NYSE" },
-{ name: "Entergy Louisiana, Inc.", symbol: "ELC", exchange: "NYSE" },
-{ name: "Entergy Mississippi, LLC", symbol: "EMP", exchange: "NYSE" },
-{ name: "Entergy New Orleans, LLC", symbol: "ENJ", exchange: "NYSE" },
-{ name: "Entergy New Orleans, LLC", symbol: "ENO", exchange: "NYSE" },
-{ name: "Entergy Texas Inc", symbol: "ETI^", exchange: "NYSE" },
-{ name: "Enterprise Products Partners L.P.", symbol: "EPD", exchange: "NYSE" },
-{ name: "Entravision Communications Corporation", symbol: "EVC", exchange: "NYSE" },
-{ name: "Envestnet, Inc", symbol: "ENV", exchange: "NYSE" },
-{ name: "Envista Holdings Corporation", symbol: "NVST", exchange: "NYSE" },
-{ name: "Enviva Partners, LP", symbol: "EVA", exchange: "NYSE" },
-{ name: "Enzo Biochem, Inc.", symbol: "ENZ", exchange: "NYSE" },
-{ name: "EOG Resources, Inc.", symbol: "EOG", exchange: "NYSE" },
-{ name: "EPAM Systems, Inc.", symbol: "EPAM", exchange: "NYSE" },
-{ name: "EPR Properties", symbol: "EPR", exchange: "NYSE" },
-{ name: "EPR Properties", symbol: "EPR^C", exchange: "NYSE" },
-{ name: "EPR Properties", symbol: "EPR^E", exchange: "NYSE" },
-{ name: "EPR Properties", symbol: "EPR^G", exchange: "NYSE" },
-{ name: "EQT Corporation", symbol: "EQT", exchange: "NYSE" },
-{ name: "Equifax, Inc.", symbol: "EFX", exchange: "NYSE" },
-{ name: "Equinor ASA", symbol: "EQNR", exchange: "NYSE" },
-{ name: "Equitable Holdings, Inc.", symbol: "EQH", exchange: "NYSE" },
-{ name: "Equitable Holdings, Inc.", symbol: "EQH^A", exchange: "NYSE" },
-{ name: "Equitrans Midstream Corporation", symbol: "ETRN", exchange: "NYSE" },
-{ name: "Equity Commonwealth", symbol: "EQC", exchange: "NYSE" },
-{ name: "Equity Commonwealth", symbol: "EQC^D", exchange: "NYSE" },
-{ name: "Equity Distribution Acquisition Corp.", symbol: "EQD", exchange: "NYSE" },
-{ name: "Equity Distribution Acquisition Corp.", symbol: "EQD.U", exchange: "NYSE" },
-{ name: "Equity Distribution Acquisition Corp.", symbol: "EQD.WS", exchange: "NYSE" },
-{ name: "Equity Lifestyle Properties, Inc.", symbol: "ELS", exchange: "NYSE" },
-{ name: "Equity Residential", symbol: "EQR", exchange: "NYSE" },
-{ name: "Equus Total Return, Inc.", symbol: "EQS", exchange: "NYSE" },
-{ name: "Eros STX Global Corporation", symbol: "ESGC", exchange: "NYSE" },
-{ name: "ESCO Technologies Inc.", symbol: "ESE", exchange: "NYSE" },
-{ name: "Essent Group Ltd.", symbol: "ESNT", exchange: "NYSE" },
-{ name: "Essential Properties Realty Trust, Inc.", symbol: "EPRT", exchange: "NYSE" },
-{ name: "Essential Utilities, Inc.", symbol: "WTRG", exchange: "NYSE" },
-{ name: "Essential Utilities, Inc.", symbol: "WTRU", exchange: "NYSE" },
-{ name: "Essex Property Trust, Inc.", symbol: "ESS", exchange: "NYSE" },
-{ name: "Estee Lauder Companies, Inc. (The)", symbol: "EL", exchange: "NYSE" },
-{ name: "Ethan Allen Interiors Inc.", symbol: "ETH", exchange: "NYSE" },
-{ name: "Euronav NV", symbol: "EURN", exchange: "NYSE" },
-{ name: "European Equity Fund, Inc. (The)", symbol: "EEA", exchange: "NYSE" },
-{ name: "Eventbrite, Inc.", symbol: "EB", exchange: "NYSE" },
-{ name: "Evercore Inc.", symbol: "EVR", exchange: "NYSE" },
-{ name: "Everest Re Group, Ltd.", symbol: "RE", exchange: "NYSE" },
-{ name: "Evergy, Inc.", symbol: "EVRG", exchange: "NYSE" },
-{ name: "Everi Holdings Inc.", symbol: "EVRI", exchange: "NYSE" },
-{ name: "Eversource Energy", symbol: "ES", exchange: "NYSE" },
-{ name: "Evertec, Inc.", symbol: "EVTC", exchange: "NYSE" },
-{ name: "Evolent Health, Inc", symbol: "EVH", exchange: "NYSE" },
-{ name: "Evoqua Water Technologies Corp.", symbol: "AQUA", exchange: "NYSE" },
-{ name: "Exantas Capital Corp.", symbol: "XAN", exchange: "NYSE" },
-{ name: "Exantas Capital Corp.", symbol: "XAN^C", exchange: "NYSE" },
-{ name: "Executive Network Partnering Corporation", symbol: "ENPC", exchange: "NYSE" },
-{ name: "Executive Network Partnering Corporation", symbol: "ENPC.U", exchange: "NYSE" },
-{ name: "Executive Network Partnering Corporation", symbol: "ENPC.WS", exchange: "NYSE" },
-{ name: "Express, Inc.", symbol: "EXPR", exchange: "NYSE" },
-{ name: "Exterran Corporation", symbol: "EXTN", exchange: "NYSE" },
-{ name: "Extra Space Storage Inc", symbol: "EXR", exchange: "NYSE" },
-{ name: "Exxon Mobil Corporation", symbol: "XOM", exchange: "NYSE" },
-{ name: "F.N.B. Corporation", symbol: "FNB", exchange: "NYSE" },
-{ name: "F.N.B. Corporation", symbol: "FNB^E", exchange: "NYSE" },
-{ name: "Fabrinet", symbol: "FN", exchange: "NYSE" },
-{ name: "FactSet Research Systems Inc.", symbol: "FDS", exchange: "NYSE" },
-{ name: "Fair Isaac Corporation", symbol: "FICO", exchange: "NYSE" },
-{ name: "Fang Holdings Limited", symbol: "SFUN", exchange: "NYSE" },
-{ name: "Far Peak Acquisition Corporation", symbol: "FPAC", exchange: "NYSE" },
-{ name: "Far Peak Acquisition Corporation", symbol: "FPAC.U", exchange: "NYSE" },
-{ name: "Far Peak Acquisition Corporation", symbol: "FPAC.WS", exchange: "NYSE" },
-{ name: "Farfetch Limited", symbol: "FTCH", exchange: "NYSE" },
-{ name: "Farmland Partners Inc.", symbol: "FPI", exchange: "NYSE" },
-{ name: "Farmland Partners Inc.", symbol: "FPI^B", exchange: "NYSE" },
-{ name: "FAST Acquisition Corp.", symbol: "FST", exchange: "NYSE" },
-{ name: "FAST Acquisition Corp.", symbol: "FST.U", exchange: "NYSE" },
-{ name: "FAST Acquisition Corp.", symbol: "FST.WS", exchange: "NYSE" },
-{ name: "Fastly, Inc.", symbol: "FSLY", exchange: "NYSE" },
-{ name: "FB Financial Corporation", symbol: "FBK", exchange: "NYSE" },
-{ name: "FBL Financial Group, Inc.", symbol: "FFG", exchange: "NYSE" },
-{ name: "Federal Agricultural Mortgage Corporation", symbol: "AGM", exchange: "NYSE" },
-{ name: "Federal Agricultural Mortgage Corporation", symbol: "AGM.A", exchange: "NYSE" },
-{ name: "Federal Agricultural Mortgage Corporation", symbol: "AGM^C", exchange: "NYSE" },
-{ name: "Federal Agricultural Mortgage Corporation", symbol: "AGM^D", exchange: "NYSE" },
-{ name: "Federal Agricultural Mortgage Corporation", symbol: "AGM^E", exchange: "NYSE" },
-{ name: "Federal Agricultural Mortgage Corporation", symbol: "AGM^F", exchange: "NYSE" },
-{ name: "Federal Realty Investment Trust", symbol: "FRT", exchange: "NYSE" },
-{ name: "Federal Realty Investment Trust", symbol: "FRT^C", exchange: "NYSE" },
-{ name: "Federal Signal Corporation", symbol: "FSS", exchange: "NYSE" },
-{ name: "Federated Hermes Premier Municipal Income Fund", symbol: "FMN", exchange: "NYSE" },
-{ name: "Federated Hermes, Inc.", symbol: "FHI", exchange: "NYSE" },
-{ name: "FedEx Corporation", symbol: "FDX", exchange: "NYSE" },
-{ name: "Ferrari N.V.", symbol: "RACE", exchange: "NYSE" },
-{ name: "Ferro Corporation", symbol: "FOE", exchange: "NYSE" },
-{ name: "FG New America Acquisition Corp.", symbol: "FGNA", exchange: "NYSE" },
-{ name: "FG New America Acquisition Corp.", symbol: "FGNA.U", exchange: "NYSE" },
-{ name: "FG New America Acquisition Corp.", symbol: "FGNA.WS", exchange: "NYSE" },
-{ name: "Fidelity National Financial, Inc.", symbol: "FNF", exchange: "NYSE" },
-{ name: "Fidelity National Information Services, Inc.", symbol: "FIS", exchange: "NYSE" },
-{ name: "Fiduciary/Claymore Energy Infrastructure Fund", symbol: "FMO", exchange: "NYSE" },
-{ name: "FinVolution Group", symbol: "FINV", exchange: "NYSE" },
-{ name: "First American Corporation (The)", symbol: "FAF", exchange: "NYSE" },
-{ name: "First BanCorp.", symbol: "FBP", exchange: "NYSE" },
-{ name: "First Commonwealth Financial Corporation", symbol: "FCF", exchange: "NYSE" },
-{ name: "First Eagle Alternative Capital BDC, Inc.", symbol: "FCRW", exchange: "NYSE" },
-{ name: "First Eagle Alternative Capital BDC, Inc.", symbol: "FCRZ", exchange: "NYSE" },
-{ name: "First Eagle Senior Loan Fund", symbol: "FSLF", exchange: "NYSE" },
-{ name: "First Horizon Corporation", symbol: "FHN", exchange: "NYSE" },
-{ name: "First Horizon Corporation", symbol: "FHN^A", exchange: "NYSE" },
-{ name: "First Horizon Corporation", symbol: "FHN^B", exchange: "NYSE" },
-{ name: "First Horizon Corporation", symbol: "FHN^C", exchange: "NYSE" },
-{ name: "First Horizon Corporation", symbol: "FHN^D", exchange: "NYSE" },
-{ name: "First Horizon Corporation", symbol: "FHN^E", exchange: "NYSE" },
-{ name: "First Industrial Realty Trust, Inc.", symbol: "FR", exchange: "NYSE" },
-{ name: "First Majestic Silver Corp.", symbol: "AG", exchange: "NYSE" },
-{ name: "FIRST REPUBLIC BANK", symbol: "FRC", exchange: "NYSE" },
-{ name: "FIRST REPUBLIC BANK", symbol: "FRC^G", exchange: "NYSE" },
-{ name: "FIRST REPUBLIC BANK", symbol: "FRC^H", exchange: "NYSE" },
-{ name: "FIRST REPUBLIC BANK", symbol: "FRC^I", exchange: "NYSE" },
-{ name: "FIRST REPUBLIC BANK", symbol: "FRC^J", exchange: "NYSE" },
-{ name: "FIRST REPUBLIC BANK", symbol: "FRC^K", exchange: "NYSE" },
-{ name: "First Trust", symbol: "FFA", exchange: "NYSE" },
-{ name: "First Trust", symbol: "FMY", exchange: "NYSE" },
-{ name: "First Trust Dynamic Europe Equity Income Fund", symbol: "FDEU", exchange: "NYSE" },
-{ name: "First Trust Energy Infrastructure Fund", symbol: "FIF", exchange: "NYSE" },
-{ name: "First Trust High Income Long Short Fund", symbol: "FSD", exchange: "NYSE" },
-{ name: "First Trust High Yield Opportunities 2027 Term Fund", symbol: "FTHY", exchange: "NYSE" },
-{ name: "First Trust Intermediate Duration Preferred & Income Fund", symbol: "FPF", exchange: "NYSE" },
-{ name: "First Trust MLP and Energy Income Fund", symbol: "FEI", exchange: "NYSE" },
-{ name: "First Trust New Opportunities MLP & Energy Fund", symbol: "FPL", exchange: "NYSE" },
-{ name: "First Trust Senior Floating Rate 2022 Target Term Fund", symbol: "FIV", exchange: "NYSE" },
-{ name: "First Trust Senior Floating Rate Income Fund II", symbol: "FCT", exchange: "NYSE" },
-{ name: "First Trust Specialty Finance and Financial Opportunities Fund", symbol: "FGB", exchange: "NYSE" },
-{ name: "First Trust/Aberdeen Emerging Opportunity Fund", symbol: "FEO", exchange: "NYSE" },
-{ name: "First Trust/Aberdeen Global Opportunity Income Fund", symbol: "FAM", exchange: "NYSE" },
-{ name: "FirstEnergy Corp.", symbol: "FE", exchange: "NYSE" },
-{ name: "FirstMark Horizon Acquisition Corp.", symbol: "FMAC", exchange: "NYSE" },
-{ name: "FirstMark Horizon Acquisition Corp.", symbol: "FMAC.U", exchange: "NYSE" },
-{ name: "FirstMark Horizon Acquisition Corp.", symbol: "FMAC.WS", exchange: "NYSE" },
-{ name: "Fisker Inc.", symbol: "FSR", exchange: "NYSE" },
-{ name: "Fisker Inc.", symbol: "FSR.WS", exchange: "NYSE" },
-{ name: "Five Point Holdings, LLC", symbol: "FPH", exchange: "NYSE" },
-{ name: "Fiverr International Ltd.", symbol: "FVRR", exchange: "NYSE" },
-{ name: "Flagstar Bancorp, Inc.", symbol: "FBC", exchange: "NYSE" },
-{ name: "Flaherty & Crumrine Dynamic Preferred and Income Fund Inc.", symbol: "DFP", exchange: "NYSE" },
-{ name: "Flaherty & Crumrine Preferred and Income Fund Inco", symbol: "PFD", exchange: "NYSE" },
-{ name: "Flaherty & Crumrine Preferred and Income Opportuni", symbol: "PFO", exchange: "NYSE" },
-{ name: "Flaherty & Crumrine Preferred and Income Securitie", symbol: "FFC", exchange: "NYSE" },
-{ name: "Flaherty & Crumrine Total Return Fund Inc", symbol: "FLC", exchange: "NYSE" },
-{ name: "FleetCor Technologies, Inc.", symbol: "FLT", exchange: "NYSE" },
-{ name: "FLEX LNG Ltd.", symbol: "FLNG", exchange: "NYSE" },
-{ name: "Floor & Decor Holdings, Inc.", symbol: "FND", exchange: "NYSE" },
-{ name: "Flotek Industries, Inc.", symbol: "FTK", exchange: "NYSE" },
-{ name: "Flowers Foods, Inc.", symbol: "FLO", exchange: "NYSE" },
-{ name: "Flowserve Corporation", symbol: "FLS", exchange: "NYSE" },
-{ name: "Fluor Corporation", symbol: "FLR", exchange: "NYSE" },
-{ name: "Fly Leasing Limited", symbol: "FLY", exchange: "NYSE" },
-{ name: "FMC Corporation", symbol: "FMC", exchange: "NYSE" },
-{ name: "Foley Trasimene Acquisition Corp.", symbol: "WPF", exchange: "NYSE" },
-{ name: "Foley Trasimene Acquisition Corp.", symbol: "WPF.U", exchange: "NYSE" },
-{ name: "Foley Trasimene Acquisition Corp.", symbol: "WPF.WS", exchange: "NYSE" },
-{ name: "Foley Trasimene Acquisition Corp. II", symbol: "BFT", exchange: "NYSE" },
-{ name: "Foley Trasimene Acquisition Corp. II", symbol: "BFT.U", exchange: "NYSE" },
-{ name: "Foley Trasimene Acquisition Corp. II", symbol: "BFT.WS", exchange: "NYSE" },
-{ name: "Fomento Economico Mexicano S.A.B. de C.V.", symbol: "FMX", exchange: "NYSE" },
-{ name: "Foot Locker, Inc.", symbol: "FL", exchange: "NYSE" },
-{ name: "Ford Motor Company", symbol: "F", exchange: "NYSE" },
-{ name: "Ford Motor Company", symbol: "F^B", exchange: "NYSE" },
-{ name: "Ford Motor Company", symbol: "F^C", exchange: "NYSE" },
-{ name: "Forest Road Acquisition Corp.", symbol: "FRX", exchange: "NYSE" },
-{ name: "Forest Road Acquisition Corp.", symbol: "FRX.U", exchange: "NYSE" },
-{ name: "Forest Road Acquisition Corp.", symbol: "FRX.WS", exchange: "NYSE" },
-{ name: "Forestar Group Inc", symbol: "FOR", exchange: "NYSE" },
-{ name: "Fortis Inc.", symbol: "FTS", exchange: "NYSE" },
-{ name: "Fortive Corporation", symbol: "FTV", exchange: "NYSE" },
-{ name: "Fortive Corporation", symbol: "FTV^A", exchange: "NYSE" },
-{ name: "Fortress Capital Acquisition Corp.", symbol: "FCAX.U", exchange: "NYSE" },
-{ name: "Fortress Transportation and Infrastructure Investors LLC", symbol: "FTAI", exchange: "NYSE" },
-{ name: "Fortress Transportation and Infrastructure Investors LLC", symbol: "FTAI^A", exchange: "NYSE" },
-{ name: "Fortress Transportation and Infrastructure Investors LLC", symbol: "FTAI^B", exchange: "NYSE" },
-{ name: "Fortress Value Acquisition Corp. II", symbol: "FAII", exchange: "NYSE" },
-{ name: "Fortress Value Acquisition Corp. II", symbol: "FAII.U", exchange: "NYSE" },
-{ name: "Fortress Value Acquisition Corp. II", symbol: "FAII.WS", exchange: "NYSE" },
-{ name: "Fortress Value Acquisition Corp. III", symbol: "FVT.U", exchange: "NYSE" },
-{ name: "Fortuna Silver Mines Inc.", symbol: "FSM", exchange: "NYSE" },
-{ name: "Fortune Brands Home & Security, Inc.", symbol: "FBHS", exchange: "NYSE" },
-{ name: "Forum Energy Technologies, Inc.", symbol: "FET", exchange: "NYSE" },
-{ name: "Foundation Building Materials, Inc.", symbol: "FBM", exchange: "NYSE" },
-{ name: "Four Corners Property Trust, Inc.", symbol: "FCPT", exchange: "NYSE" },
-{ name: "Four Seasons Education (Cayman) Inc.", symbol: "FEDU", exchange: "NYSE" },
-{ name: "Franco-Nevada Corporation", symbol: "FNV", exchange: "NYSE" },
-{ name: "Franklin Covey Company", symbol: "FC", exchange: "NYSE" },
-{ name: "Franklin Resources, Inc.", symbol: "BEN", exchange: "NYSE" },
-{ name: "Franklin Universal Trust", symbol: "FT", exchange: "NYSE" },
-{ name: "Frank&#39;s International N.V.", symbol: "FI", exchange: "NYSE" },
-{ name: "Freeport-McMoran, Inc.", symbol: "FCX", exchange: "NYSE" },
-{ name: "Fresenius Medical Care Corporation", symbol: "FMS", exchange: "NYSE" },
-{ name: "Fresh Del Monte Produce, Inc.", symbol: "FDP", exchange: "NYSE" },
-{ name: "Frontline Ltd.", symbol: "FRO", exchange: "NYSE" },
-{ name: "FS KKR Capital Corp.", symbol: "FSK", exchange: "NYSE" },
-{ name: "FS KKR Capital Corp. II", symbol: "FSKR", exchange: "NYSE" },
-{ name: "FTI Consulting, Inc.", symbol: "FCN", exchange: "NYSE" },
-{ name: "fuboTV Inc.", symbol: "FUBO", exchange: "NYSE" },
-{ name: "Fusion Acquisition Corp.", symbol: "FUSE", exchange: "NYSE" },
-{ name: "Fusion Acquisition Corp.", symbol: "FUSE.U", exchange: "NYSE" },
-{ name: "Fusion Acquisition Corp.", symbol: "FUSE.WS", exchange: "NYSE" },
-{ name: "FutureFuel Corp.", symbol: "FF", exchange: "NYSE" },
-{ name: "Gabelli Convertible and Income Securities Fund, Inc. (The)", symbol: "GCV", exchange: "NYSE" },
-{ name: "Gabelli Equity Trust, Inc. (The)", symbol: "GAB", exchange: "NYSE" },
-{ name: "Gabelli Equity Trust, Inc. (The)", symbol: "GAB^G", exchange: "NYSE" },
-{ name: "Gabelli Equity Trust, Inc. (The)", symbol: "GAB^H", exchange: "NYSE" },
-{ name: "Gabelli Equity Trust, Inc. (The)", symbol: "GAB^J", exchange: "NYSE" },
-{ name: "Gabelli Equity Trust, Inc. (The)", symbol: "GAB^K", exchange: "NYSE" },
-{ name: "Gabelli Global Small and Mid Cap Value Trust (The)", symbol: "GGZ", exchange: "NYSE" },
-{ name: "Gabelli Global Small and Mid Cap Value Trust (The)", symbol: "GGZ^A", exchange: "NYSE" },
-{ name: "Gabelli Multi-Media Trust Inc. (The)", symbol: "GGT", exchange: "NYSE" },
-{ name: "Gabelli Multi-Media Trust Inc. (The)", symbol: "GGT^E", exchange: "NYSE" },
-{ name: "Gabelli Multi-Media Trust Inc. (The)", symbol: "GGT^G", exchange: "NYSE" },
-{ name: "Gabelli Utility Trust (The)", symbol: "GUT", exchange: "NYSE" },
-{ name: "Gabelli Utility Trust (The)", symbol: "GUT^A", exchange: "NYSE" },
-{ name: "Gabelli Utility Trust (The)", symbol: "GUT^C", exchange: "NYSE" },
-{ name: "Galileo Acquisition Corp.", symbol: "GLEO", exchange: "NYSE" },
-{ name: "Galileo Acquisition Corp.", symbol: "GLEO.U", exchange: "NYSE" },
-{ name: "Galileo Acquisition Corp.", symbol: "GLEO.WS", exchange: "NYSE" },
-{ name: "Gamco Investors, Inc.", symbol: "GBL", exchange: "NYSE" },
-{ name: "GAMCO Natural Resources, Gold & Income Tust", symbol: "GNT", exchange: "NYSE" },
-{ name: "GAMCO Natural Resources, Gold & Income Tust", symbol: "GNT^A", exchange: "NYSE" },
-{ name: "Gamestop Corporation", symbol: "GME", exchange: "NYSE" },
-{ name: "Gannett Co., Inc.", symbol: "GCI", exchange: "NYSE" },
-{ name: "Gap, Inc. (The)", symbol: "GPS", exchange: "NYSE" },
-{ name: "Gartner, Inc.", symbol: "IT", exchange: "NYSE" },
-{ name: "GasLog LP.", symbol: "GLOG", exchange: "NYSE" },
-{ name: "GasLog LP.", symbol: "GLOG^A", exchange: "NYSE" },
-{ name: "GasLog Partners LP", symbol: "GLOP", exchange: "NYSE" },
-{ name: "GasLog Partners LP", symbol: "GLOP^A", exchange: "NYSE" },
-{ name: "GasLog Partners LP", symbol: "GLOP^B", exchange: "NYSE" },
-{ name: "GasLog Partners LP", symbol: "GLOP^C", exchange: "NYSE" },
-{ name: "Gates Industrial Corporation plc", symbol: "GTES", exchange: "NYSE" },
-{ name: "Gatos Silver, Inc.", symbol: "GATO", exchange: "NYSE" },
-{ name: "GATX Corporation", symbol: "GATX", exchange: "NYSE" },
-{ name: "GATX Corporation", symbol: "GMTA", exchange: "NYSE" },
-{ name: "GCP Applied Technologies Inc.", symbol: "GCP", exchange: "NYSE" },
-{ name: "Genco Shipping & Trading Limited", symbol: "GNK", exchange: "NYSE" },
-{ name: "Generac Holdlings Inc.", symbol: "GNRC", exchange: "NYSE" },
-{ name: "General American Investors, Inc.", symbol: "GAM", exchange: "NYSE" },
-{ name: "General American Investors, Inc.", symbol: "GAM^B", exchange: "NYSE" },
-{ name: "General Dynamics Corporation", symbol: "GD", exchange: "NYSE" },
-{ name: "General Electric Company", symbol: "GE", exchange: "NYSE" },
-{ name: "General Mills, Inc.", symbol: "GIS", exchange: "NYSE" },
-{ name: "General Motors Company", symbol: "GM", exchange: "NYSE" },
-{ name: "Genesco Inc.", symbol: "GCO", exchange: "NYSE" },
-{ name: "Genesis Energy, L.P.", symbol: "GEL", exchange: "NYSE" },
-{ name: "Genesis Healthcare, Inc.", symbol: "GEN", exchange: "NYSE" },
-{ name: "Genesis Park Acquisition Corp.", symbol: "GNPK", exchange: "NYSE" },
-{ name: "Genesis Park Acquisition Corp.", symbol: "GNPK.U", exchange: "NYSE" },
-{ name: "Genesis Park Acquisition Corp.", symbol: "GNPK.WS", exchange: "NYSE" },
-{ name: "Genie Energy Ltd.", symbol: "GNE", exchange: "NYSE" },
-{ name: "Genie Energy Ltd.", symbol: "GNE^A", exchange: "NYSE" },
-{ name: "Genpact Limited", symbol: "G", exchange: "NYSE" },
-{ name: "Genuine Parts Company", symbol: "GPC", exchange: "NYSE" },
-{ name: "Genworth Financial Inc", symbol: "GNW", exchange: "NYSE" },
-{ name: "Geo Group Inc (The)", symbol: "GEO", exchange: "NYSE" },
-{ name: "Geopark Ltd", symbol: "GPRK", exchange: "NYSE" },
-{ name: "Georgia Power Company", symbol: "GPJA", exchange: "NYSE" },
-{ name: "Gerdau S.A.", symbol: "GGB", exchange: "NYSE" },
-{ name: "Getty Realty Corporation", symbol: "GTY", exchange: "NYSE" },
-{ name: "GFL Environmental Inc.", symbol: "GFL", exchange: "NYSE" },
-{ name: "GFL Environmental Inc.", symbol: "GFLU", exchange: "NYSE" },
-{ name: "GigCapital2, Inc.", symbol: "GIX", exchange: "NYSE" },
-{ name: "GigCapital2, Inc.", symbol: "GIX.U", exchange: "NYSE" },
-{ name: "GigCapital2, Inc.", symbol: "GIX.WS", exchange: "NYSE" },
-{ name: "GigCapital2, Inc.", symbol: "GIX~", exchange: "NYSE" },
-{ name: "GigCapital3, Inc.", symbol: "GIK", exchange: "NYSE" },
-{ name: "GigCapital3, Inc.", symbol: "GIK.U", exchange: "NYSE" },
-{ name: "GigCapital3, Inc.", symbol: "GIK.WS", exchange: "NYSE" },
-{ name: "Gildan Activewear, Inc.", symbol: "GIL", exchange: "NYSE" },
-{ name: "Glatfelter Corporation", symbol: "GLT", exchange: "NYSE" },
-{ name: "Glaukos Corporation", symbol: "GKOS", exchange: "NYSE" },
-{ name: "GlaxoSmithKline PLC", symbol: "GSK", exchange: "NYSE" },
-{ name: "Global Blue Group Holding AG", symbol: "GB", exchange: "NYSE" },
-{ name: "Global Blue Group Holding AG", symbol: "GB.WS", exchange: "NYSE" },
-{ name: "Global Cord Blood Corporation", symbol: "CO", exchange: "NYSE" },
-{ name: "Global Medical REIT Inc.", symbol: "GMRE", exchange: "NYSE" },
-{ name: "Global Medical REIT Inc.", symbol: "GMRE^A", exchange: "NYSE" },
-{ name: "Global Net Lease, Inc.", symbol: "GNL", exchange: "NYSE" },
-{ name: "Global Net Lease, Inc.", symbol: "GNL^A", exchange: "NYSE" },
-{ name: "Global Net Lease, Inc.", symbol: "GNL^B", exchange: "NYSE" },
-{ name: "Global Partners LP", symbol: "GLP", exchange: "NYSE" },
-{ name: "Global Partners LP", symbol: "GLP^A", exchange: "NYSE" },
-{ name: "Global Payments Inc.", symbol: "GPN", exchange: "NYSE" },
-{ name: "Global Ship Lease, Inc.", symbol: "GSL", exchange: "NYSE" },
-{ name: "Global Ship Lease, Inc.", symbol: "GSL^B", exchange: "NYSE" },
-{ name: "Global Ship Lease, Inc.", symbol: "GSLD", exchange: "NYSE" },
-{ name: "Globant S.A.", symbol: "GLOB", exchange: "NYSE" },
-{ name: "Globe Life Inc.", symbol: "GL", exchange: "NYSE" },
-{ name: "Globe Life Inc.", symbol: "GL^C", exchange: "NYSE" },
-{ name: "Globus Medical, Inc.", symbol: "GMED", exchange: "NYSE" },
-{ name: "GMS Inc.", symbol: "GMS", exchange: "NYSE" },
-{ name: "GO Acquisition Corp.", symbol: "GOAC", exchange: "NYSE" },
-{ name: "GO Acquisition Corp.", symbol: "GOAC.U", exchange: "NYSE" },
-{ name: "GO Acquisition Corp.", symbol: "GOAC.WS", exchange: "NYSE" },
-{ name: "GoDaddy Inc.", symbol: "GDDY", exchange: "NYSE" },
-{ name: "Gol Linhas Aereas Inteligentes S.A.", symbol: "GOL", exchange: "NYSE" },
-{ name: "Gold Fields Limited", symbol: "GFI", exchange: "NYSE" },
-{ name: "Golden Falcon Acquisition Corp.", symbol: "GFX.U", exchange: "NYSE" },
-{ name: "Goldman Sachs BDC, Inc.", symbol: "GSBD", exchange: "NYSE" },
-{ name: "Goldman Sachs Group, Inc. (The)", symbol: "GS", exchange: "NYSE" },
-{ name: "Goldman Sachs Group, Inc. (The)", symbol: "GS^A", exchange: "NYSE" },
-{ name: "Goldman Sachs Group, Inc. (The)", symbol: "GS^C", exchange: "NYSE" },
-{ name: "Goldman Sachs Group, Inc. (The)", symbol: "GS^D", exchange: "NYSE" },
-{ name: "Goldman Sachs Group, Inc. (The)", symbol: "GS^J", exchange: "NYSE" },
-{ name: "Goldman Sachs Group, Inc. (The)", symbol: "GS^K", exchange: "NYSE" },
-{ name: "Goldman Sachs Group, Inc. (The)", symbol: "GS^N", exchange: "NYSE" },
-{ name: "Goldman Sachs MLP Energy Renaissance Fund", symbol: "GER", exchange: "NYSE" },
-{ name: "Gorman-Rupp Company (The)", symbol: "GRC", exchange: "NYSE" },
-{ name: "GP Strategies Corporation", symbol: "GPX", exchange: "NYSE" },
-{ name: "Graco Inc.", symbol: "GGG", exchange: "NYSE" },
-{ name: "GrafTech International Ltd.", symbol: "EAF", exchange: "NYSE" },
-{ name: "Graham Corporation", symbol: "GHM", exchange: "NYSE" },
-{ name: "Graham Holdings Company", symbol: "GHC", exchange: "NYSE" },
-{ name: "Granite Construction Incorporated", symbol: "GVA", exchange: "NYSE" },
-{ name: "Granite Point Mortgage Trust Inc.", symbol: "GPMT", exchange: "NYSE" },
-{ name: "Granite Real Estate Inc.", symbol: "GRP.U", exchange: "NYSE" },
-{ name: "Graphic Packaging Holding Company", symbol: "GPK", exchange: "NYSE" },
-{ name: "Gray Television, Inc.", symbol: "GTN", exchange: "NYSE" },
-{ name: "Gray Television, Inc.", symbol: "GTN.A", exchange: "NYSE" },
-{ name: "Great Ajax Corp.", symbol: "AJX", exchange: "NYSE" },
-{ name: "Great Ajax Corp.", symbol: "AJXA", exchange: "NYSE" },
-{ name: "Great Western Bancorp, Inc.", symbol: "GWB", exchange: "NYSE" },
-{ name: "Green Dot Corporation", symbol: "GDOT", exchange: "NYSE" },
-{ name: "Greenbrier Companies, Inc. (The)", symbol: "GBX", exchange: "NYSE" },
-{ name: "Greenhill & Co., Inc.", symbol: "GHL", exchange: "NYSE" },
-{ name: "GreenTree Hospitality Group Ltd.", symbol: "GHG", exchange: "NYSE" },
-{ name: "Greif, Inc.", symbol: "GEF", exchange: "NYSE" },
-{ name: "Greif, Inc.", symbol: "GEF.B", exchange: "NYSE" },
-{ name: "Griffon Corporation", symbol: "GFF", exchange: "NYSE" },
-{ name: "Group 1 Automotive, Inc.", symbol: "GPI", exchange: "NYSE" },
-{ name: "GrubHub Inc.", symbol: "GRUB", exchange: "NYSE" },
-{ name: "Grupo Aeroportuario Del Pacifico, S.A. de C.V.", symbol: "PAC", exchange: "NYSE" },
-{ name: "Grupo Aeroportuario del Sureste, S.A. de C.V.", symbol: "ASR", exchange: "NYSE" },
-{ name: "Grupo Aval Acciones y Valores S.A.", symbol: "AVAL", exchange: "NYSE" },
-{ name: "Grupo Supervielle S.A.", symbol: "SUPV", exchange: "NYSE" },
-{ name: "Grupo Televisa S.A.", symbol: "TV", exchange: "NYSE" },
-{ name: "GS Acquisition Holdings Corp II", symbol: "GSAH", exchange: "NYSE" },
-{ name: "GS Acquisition Holdings Corp II", symbol: "GSAH.U", exchange: "NYSE" },
-{ name: "GS Acquisition Holdings Corp II", symbol: "GSAH.WS", exchange: "NYSE" },
-{ name: "GSX Techedu Inc.", symbol: "GSX", exchange: "NYSE" },
-{ name: "GTT Communications, Inc.", symbol: "GTT", exchange: "NYSE" },
-{ name: "Guess?, Inc.", symbol: "GES", exchange: "NYSE" },
-{ name: "Guggenheim Credit Allocation Fund", symbol: "GGM", exchange: "NYSE" },
-{ name: "Guggenheim Enhanced Equity Income Fund", symbol: "GPM", exchange: "NYSE" },
-{ name: "Guggenheim Strategic Opportunities Fund", symbol: "GOF", exchange: "NYSE" },
-{ name: "Guggenheim Taxable Municipal Managed Duration Trst", symbol: "GBAB", exchange: "NYSE" },
-{ name: "Guidewire Software, Inc.", symbol: "GWRE", exchange: "NYSE" },
-{ name: "Guild Holdings Company", symbol: "GHLD", exchange: "NYSE" },
-{ name: "H&R Block, Inc.", symbol: "HRB", exchange: "NYSE" },
-{ name: "H. B. Fuller Company", symbol: "FUL", exchange: "NYSE" },
-{ name: "H.I.G. Acquisition Corp.", symbol: "HIGA", exchange: "NYSE" },
-{ name: "H.I.G. Acquisition Corp.", symbol: "HIGA.U", exchange: "NYSE" },
-{ name: "H.I.G. Acquisition Corp.", symbol: "HIGA.WS", exchange: "NYSE" },
-{ name: "Haemonetics Corporation", symbol: "HAE", exchange: "NYSE" },
-{ name: "Halliburton Company", symbol: "HAL", exchange: "NYSE" },
-{ name: "Hamilton Beach Brands Holding Company", symbol: "HBB", exchange: "NYSE" },
-{ name: "Hanesbrands Inc.", symbol: "HBI", exchange: "NYSE" },
-{ name: "Hanger, Inc.", symbol: "HNGR", exchange: "NYSE" },
-{ name: "Hannon Armstrong Sustainable Infrastructure Capital, Inc.", symbol: "HASI", exchange: "NYSE" },
-{ name: "Harley-Davidson, Inc.", symbol: "HOG", exchange: "NYSE" },
-{ name: "Harmony Gold Mining Company Limited", symbol: "HMY", exchange: "NYSE" },
-{ name: "Harsco Corporation", symbol: "HSC", exchange: "NYSE" },
-{ name: "Hartford Financial Services Group, Inc. (The)", symbol: "HGH", exchange: "NYSE" },
-{ name: "Hartford Financial Services Group, Inc. (The)", symbol: "HIG", exchange: "NYSE" },
-{ name: "Hartford Financial Services Group, Inc. (The)", symbol: "HIG^G", exchange: "NYSE" },
-{ name: "Haverty Furniture Companies, Inc.", symbol: "HVT", exchange: "NYSE" },
-{ name: "Haverty Furniture Companies, Inc.", symbol: "HVT.A", exchange: "NYSE" },
-{ name: "Hawaiian Electric Industries, Inc.", symbol: "HE", exchange: "NYSE" },
-{ name: "HC2 Holdings, Inc.", symbol: "HCHC", exchange: "NYSE" },
-{ name: "HCA Healthcare, Inc.", symbol: "HCA", exchange: "NYSE" },
-{ name: "HCI Group, Inc.", symbol: "HCI", exchange: "NYSE" },
-{ name: "HDFC Bank Limited", symbol: "HDB", exchange: "NYSE" },
-{ name: "Healthcare Realty Trust Incorporated", symbol: "HR", exchange: "NYSE" },
-{ name: "Healthcare Trust of America, Inc.", symbol: "HTA", exchange: "NYSE" },
-{ name: "Healthpeak Properties, Inc.", symbol: "PEAK", exchange: "NYSE" },
-{ name: "Hecla Mining Company", symbol: "HL", exchange: "NYSE" },
-{ name: "Hecla Mining Company", symbol: "HL^B", exchange: "NYSE" },
-{ name: "Heico Corporation", symbol: "HEI", exchange: "NYSE" },
-{ name: "Heico Corporation", symbol: "HEI.A", exchange: "NYSE" },
-{ name: "Helix Energy Solutions Group, Inc.", symbol: "HLX", exchange: "NYSE" },
-{ name: "Helmerich & Payne, Inc.", symbol: "HP", exchange: "NYSE" },
-{ name: "Herbalife Nutrition Ltd.", symbol: "HLF", exchange: "NYSE" },
-{ name: "Herc Holdings Inc.", symbol: "HRI", exchange: "NYSE" },
-{ name: "Hercules Capital, Inc.", symbol: "HCXY", exchange: "NYSE" },
-{ name: "Hercules Capital, Inc.", symbol: "HCXZ", exchange: "NYSE" },
-{ name: "Hercules Capital, Inc.", symbol: "HTGC", exchange: "NYSE" },
-{ name: "Heritage Insurance Holdings, Inc.", symbol: "HRTG", exchange: "NYSE" },
-{ name: "Hersha Hospitality Trust", symbol: "HT", exchange: "NYSE" },
-{ name: "Hersha Hospitality Trust", symbol: "HT^C", exchange: "NYSE" },
-{ name: "Hersha Hospitality Trust", symbol: "HT^D", exchange: "NYSE" },
-{ name: "Hersha Hospitality Trust", symbol: "HT^E", exchange: "NYSE" },
-{ name: "Hershey Company (The)", symbol: "HSY", exchange: "NYSE" },
-{ name: "Hess Corporation", symbol: "HES", exchange: "NYSE" },
-{ name: "Hess Midstream LP", symbol: "HESM", exchange: "NYSE" },
-{ name: "Hewlett Packard Enterprise Company", symbol: "HPE", exchange: "NYSE" },
-{ name: "Hexcel Corporation", symbol: "HXL", exchange: "NYSE" },
-{ name: "HEXO Corp.", symbol: "HEXO", exchange: "NYSE" },
-{ name: "High Income Securities Fund", symbol: "PCF", exchange: "NYSE" },
-{ name: "Highland Global Allocation Fund", symbol: "HGLB", exchange: "NYSE" },
-{ name: "Highland Income Fund", symbol: "HFRO", exchange: "NYSE" },
-{ name: "Highland Income Fund", symbol: "HFRO^A", exchange: "NYSE" },
-{ name: "Highland Transcend Partners I Corp.", symbol: "HTPA.U", exchange: "NYSE" },
-{ name: "HighPoint Resources Corporation", symbol: "HPR", exchange: "NYSE" },
-{ name: "Highwoods Properties, Inc.", symbol: "HIW", exchange: "NYSE" },
-{ name: "Hill International, Inc.", symbol: "HIL", exchange: "NYSE" },
-{ name: "Hillenbrand Inc", symbol: "HI", exchange: "NYSE" },
-{ name: "Hill-Rom Holdings Inc", symbol: "HRC", exchange: "NYSE" },
-{ name: "Hilltop Holdings Inc.", symbol: "HTH", exchange: "NYSE" },
-{ name: "Hilton Grand Vacations Inc.", symbol: "HGV", exchange: "NYSE" },
-{ name: "Hilton Worldwide Holdings Inc.", symbol: "HLT", exchange: "NYSE" },
-{ name: "Hims & Hers Health, Inc.", symbol: "HIMS", exchange: "NYSE" },
-{ name: "Hims & Hers Health, Inc.", symbol: "HIMS.WS", exchange: "NYSE" },
-{ name: "HNI Corporation", symbol: "HNI", exchange: "NYSE" },
-{ name: "Hoegh LNG Partners LP", symbol: "HMLP", exchange: "NYSE" },
-{ name: "Hoegh LNG Partners LP", symbol: "HMLP^A", exchange: "NYSE" },
-{ name: "Holly Energy Partners, L.P.", symbol: "HEP", exchange: "NYSE" },
-{ name: "HollyFrontier Corporation", symbol: "HFC", exchange: "NYSE" },
-{ name: "Home Depot, Inc. (The)", symbol: "HD", exchange: "NYSE" },
-{ name: "Honda Motor Company, Ltd.", symbol: "HMC", exchange: "NYSE" },
-{ name: "Honeywell International Inc.", symbol: "HON", exchange: "NYSE" },
-{ name: "Horace Mann Educators Corporation", symbol: "HMN", exchange: "NYSE" },
-{ name: "Horizon Acquisition Corporation", symbol: "HZAC", exchange: "NYSE" },
-{ name: "Horizon Acquisition Corporation", symbol: "HZAC.U", exchange: "NYSE" },
-{ name: "Horizon Acquisition Corporation", symbol: "HZAC.WS", exchange: "NYSE" },
-{ name: "Horizon Acquisition Corporation II", symbol: "HZON", exchange: "NYSE" },
-{ name: "Horizon Acquisition Corporation II", symbol: "HZON.U", exchange: "NYSE" },
-{ name: "Horizon Acquisition Corporation II", symbol: "HZON.WS", exchange: "NYSE" },
-{ name: "Horizon Global Corporation", symbol: "HZN", exchange: "NYSE" },
-{ name: "Horizon Technology Finance Corporation", symbol: "HTFA", exchange: "NYSE" },
-{ name: "Hormel Foods Corporation", symbol: "HRL", exchange: "NYSE" },
-{ name: "Houlihan Lokey, Inc.", symbol: "HLI", exchange: "NYSE" },
-{ name: "Hovnanian Enterprises Inc", symbol: "HOV", exchange: "NYSE" },
-{ name: "Howard Hughes Corporation (The)", symbol: "HHC", exchange: "NYSE" },
-{ name: "Howmet Aerospace Inc.", symbol: "HWM", exchange: "NYSE" },
-{ name: "HP Inc.", symbol: "HPQ", exchange: "NYSE" },
-{ name: "HPX Corp.", symbol: "HPX", exchange: "NYSE" },
-{ name: "HPX Corp.", symbol: "HPX.U", exchange: "NYSE" },
-{ name: "HPX Corp.", symbol: "HPX.WS", exchange: "NYSE" },
-{ name: "HSBC Holdings plc", symbol: "HSBC", exchange: "NYSE" },
-{ name: "Huami Corporation", symbol: "HMI", exchange: "NYSE" },
-{ name: "Huaneng Power International, Inc.", symbol: "HNP", exchange: "NYSE" },
-{ name: "Hubbell Inc", symbol: "HUBB", exchange: "NYSE" },
-{ name: "HubSpot, Inc.", symbol: "HUBS", exchange: "NYSE" },
-{ name: "Hudbay Minerals Inc.", symbol: "HBM", exchange: "NYSE" },
-{ name: "Hudson Pacific Properties, Inc.", symbol: "HPP", exchange: "NYSE" },
-{ name: "Humana Inc.", symbol: "HUM", exchange: "NYSE" },
-{ name: "Huntington Ingalls Industries, Inc.", symbol: "HII", exchange: "NYSE" },
-{ name: "Huntsman Corporation", symbol: "HUN", exchange: "NYSE" },
-{ name: "HUYA Inc.", symbol: "HUYA", exchange: "NYSE" },
-{ name: "Hyatt Hotels Corporation", symbol: "H", exchange: "NYSE" },
-{ name: "Hyliion Holdings Corp.", symbol: "HYLN", exchange: "NYSE" },
-{ name: "Hyster-Yale Materials Handling, Inc.", symbol: "HY", exchange: "NYSE" },
-{ name: "IAA, Inc.", symbol: "IAA", exchange: "NYSE" },
-{ name: "Iamgold Corporation", symbol: "IAG", exchange: "NYSE" },
-{ name: "ICICI Bank Limited", symbol: "IBN", exchange: "NYSE" },
-{ name: "ICL Group Ltd.", symbol: "ICL", exchange: "NYSE" },
-{ name: "IDACORP, Inc.", symbol: "IDA", exchange: "NYSE" },
-{ name: "IDEX Corporation", symbol: "IEX", exchange: "NYSE" },
-{ name: "IDT Corporation", symbol: "IDT", exchange: "NYSE" },
-{ name: "IHS Markit Ltd.", symbol: "INFO", exchange: "NYSE" },
-{ name: "iHuman Inc.", symbol: "IH", exchange: "NYSE" },
-{ name: "Illinois Tool Works Inc.", symbol: "ITW", exchange: "NYSE" },
-{ name: "Imax Corporation", symbol: "IMAX", exchange: "NYSE" },
-{ name: "Independence Contract Drilling, Inc.", symbol: "ICD", exchange: "NYSE" },
-{ name: "Independence Holding Company", symbol: "IHC", exchange: "NYSE" },
-{ name: "Independence Realty Trust, Inc.", symbol: "IRT", exchange: "NYSE" },
-{ name: "India Fund, Inc. (The)", symbol: "IFN", exchange: "NYSE" },
-{ name: "Industrias Bachoco, S.A. de C.V.", symbol: "IBA", exchange: "NYSE" },
-{ name: "Infosys Limited", symbol: "INFY", exchange: "NYSE" },
-{ name: "ING Group, N.V.", symbol: "ING", exchange: "NYSE" },
-{ name: "Ingersoll Rand Inc.", symbol: "IR", exchange: "NYSE" },
-{ name: "Ingevity Corporation", symbol: "NGVT", exchange: "NYSE" },
-{ name: "Ingredion Incorporated", symbol: "INGR", exchange: "NYSE" },
-{ name: "Innovative Industrial Properties, Inc.", symbol: "IIPR", exchange: "NYSE" },
-{ name: "Innovative Industrial Properties, Inc.", symbol: "IIPR^A", exchange: "NYSE" },
-{ name: "Insight Select Income Fund", symbol: "INSI", exchange: "NYSE" },
-{ name: "Insperity, Inc.", symbol: "NSP", exchange: "NYSE" },
-{ name: "Inspire Medical Systems, Inc.", symbol: "INSP", exchange: "NYSE" },
-{ name: "Installed Building Products, Inc.", symbol: "IBP", exchange: "NYSE" },
-{ name: "Integer Holdings Corporation", symbol: "ITGR", exchange: "NYSE" },
-{ name: "Intercontinental Exchange Inc.", symbol: "ICE", exchange: "NYSE" },
-{ name: "Intercontinental Hotels Group", symbol: "IHG", exchange: "NYSE" },
-{ name: "Intercorp Financial Services Inc.", symbol: "IFS", exchange: "NYSE" },
-{ name: "International Business Machines Corporation", symbol: "IBM", exchange: "NYSE" },
-{ name: "International Flavors & Fragrances, Inc.", symbol: "IFF", exchange: "NYSE" },
-{ name: "International Flavors & Fragrances, Inc.", symbol: "IFFT", exchange: "NYSE" },
-{ name: "International Game Technology", symbol: "IGT", exchange: "NYSE" },
-{ name: "International Paper Company", symbol: "IP", exchange: "NYSE" },
-{ name: "International Seaways, Inc.", symbol: "INSW", exchange: "NYSE" },
-{ name: "International Seaways, Inc.", symbol: "INSW^A", exchange: "NYSE" },
-{ name: "InterPrivate Acquisition Corp.", symbol: "IPV", exchange: "NYSE" },
-{ name: "InterPrivate Acquisition Corp.", symbol: "IPV.U", exchange: "NYSE" },
-{ name: "InterPrivate Acquisition Corp.", symbol: "IPV.WS", exchange: "NYSE" },
-{ name: "Interpublic Group of Companies, Inc. (The)", symbol: "IPG", exchange: "NYSE" },
-{ name: "Intrepid Potash, Inc", symbol: "IPI", exchange: "NYSE" },
-{ name: "Invacare Corporation", symbol: "IVC", exchange: "NYSE" },
-{ name: "Invesco Bond Fund", symbol: "VBF", exchange: "NYSE" },
-{ name: "Invesco California Value Municipal Income Trust", symbol: "VCV", exchange: "NYSE" },
-{ name: "Invesco Credit Opportunities Fund", symbol: "VTA", exchange: "NYSE" },
-{ name: "Invesco High Income 2023 Target Term Fund", symbol: "IHIT", exchange: "NYSE" },
-{ name: "Invesco High Income 2024 Target Term Fund", symbol: "IHTA", exchange: "NYSE" },
-{ name: "Invesco High Income Trust II", symbol: "VLT", exchange: "NYSE" },
-{ name: "INVESCO MORTGAGE CAPITAL INC", symbol: "IVR", exchange: "NYSE" },
-{ name: "INVESCO MORTGAGE CAPITAL INC", symbol: "IVR^B", exchange: "NYSE" },
-{ name: "INVESCO MORTGAGE CAPITAL INC", symbol: "IVR^C", exchange: "NYSE" },
-{ name: "Invesco Mortgage Capital Inc.", symbol: "IVR^A", exchange: "NYSE" },
-{ name: "Invesco Municipal Income Opportunities Trust", symbol: "OIA", exchange: "NYSE" },
-{ name: "Invesco Municipal Opportunity Trust", symbol: "VMO", exchange: "NYSE" },
-{ name: "Invesco Municipal Trust", symbol: "VKQ", exchange: "NYSE" },
-{ name: "Invesco Pennsylvania Value Municipal Income Trust", symbol: "VPV", exchange: "NYSE" },
-{ name: "Invesco Plc", symbol: "IVZ", exchange: "NYSE" },
-{ name: "Invesco Quality Municipal Income Trust", symbol: "IQI", exchange: "NYSE" },
-{ name: "Invesco Senior Income Trust", symbol: "VVR", exchange: "NYSE" },
-{ name: "Invesco Trust  for Investment Grade New York Municipal", symbol: "VTN", exchange: "NYSE" },
-{ name: "Invesco Trust for Investment Grade Municipals", symbol: "VGM", exchange: "NYSE" },
-{ name: "Invesco Value Municipal Income Trust", symbol: "IIM", exchange: "NYSE" },
-{ name: "Investindustrial Acquisition Corp.", symbol: "IIAC", exchange: "NYSE" },
-{ name: "Investindustrial Acquisition Corp.", symbol: "IIAC.U", exchange: "NYSE" },
-{ name: "Investindustrial Acquisition Corp.", symbol: "IIAC.WS", exchange: "NYSE" },
-{ name: "Invitae Corporation", symbol: "NVTA", exchange: "NYSE" },
-{ name: "Invitation Homes Inc.", symbol: "INVH", exchange: "NYSE" },
-{ name: "ION Acquisition Corp 1 Ltd.", symbol: "IACA", exchange: "NYSE" },
-{ name: "ION Acquisition Corp 1 Ltd.", symbol: "IACA.U", exchange: "NYSE" },
-{ name: "ION Acquisition Corp 1 Ltd.", symbol: "IACA.WS", exchange: "NYSE" },
-{ name: "Ion Geophysical Corporation", symbol: "IO", exchange: "NYSE" },
-{ name: "IQVIA Holdings, Inc.", symbol: "IQV", exchange: "NYSE" },
-{ name: "Iron Mountain Incorporated", symbol: "IRM", exchange: "NYSE" },
-{ name: "IRSA Inversiones Y Representaciones S.A.", symbol: "IRS", exchange: "NYSE" },
-{ name: "iStar Inc.", symbol: "STAR", exchange: "NYSE" },
-{ name: "iStar Inc.", symbol: "STAR^D", exchange: "NYSE" },
-{ name: "iStar Inc.", symbol: "STAR^G", exchange: "NYSE" },
-{ name: "iStar Inc.", symbol: "STAR^I", exchange: "NYSE" },
-{ name: "Ita? CorpBanca", symbol: "ITCB", exchange: "NYSE" },
-{ name: "Itau Unibanco Banco Holding SA", symbol: "ITUB", exchange: "NYSE" },
-{ name: "ITT Inc.", symbol: "ITT", exchange: "NYSE" },
-{ name: "Ivanhoe Capital Acquisition Corp.", symbol: "IVAN.U", exchange: "NYSE" },
-{ name: "Ivy High Income Opportunities Fund", symbol: "IVH", exchange: "NYSE" },
-{ name: "J P Morgan Chase & Co", symbol: "JPM", exchange: "NYSE" },
-{ name: "J P Morgan Chase & Co", symbol: "JPM^C", exchange: "NYSE" },
-{ name: "J P Morgan Chase & Co", symbol: "JPM^D", exchange: "NYSE" },
-{ name: "J P Morgan Chase & Co", symbol: "JPM^G", exchange: "NYSE" },
-{ name: "J P Morgan Chase & Co", symbol: "JPM^H", exchange: "NYSE" },
-{ name: "J P Morgan Chase & Co", symbol: "JPM^J", exchange: "NYSE" },
-{ name: "J. Alexander&#39;s Holdings, Inc.", symbol: "JAX", exchange: "NYSE" },
-{ name: "J. Jill, Inc.", symbol: "JILL", exchange: "NYSE" },
-{ name: "J.M. Smucker Company (The)", symbol: "SJM", exchange: "NYSE" },
-{ name: "Jabil Inc.", symbol: "JBL", exchange: "NYSE" },
-{ name: "Jacobs Engineering Group Inc.", symbol: "J", exchange: "NYSE" },
-{ name: "James Hardie Industries plc.", symbol: "JHX", exchange: "NYSE" },
-{ name: "Janus Henderson Group plc", symbol: "JHG", exchange: "NYSE" },
-{ name: "Japan Smaller Capitalization Fund Inc", symbol: "JOF", exchange: "NYSE" },
-{ name: "Jaws Acquisition Corp.", symbol: "JWS", exchange: "NYSE" },
-{ name: "Jaws Acquisition Corp.", symbol: "JWS.U", exchange: "NYSE" },
-{ name: "Jaws Acquisition Corp.", symbol: "JWS.WS", exchange: "NYSE" },
-{ name: "Jaws Spitfire Acquisition Corporation", symbol: "SPFR.U", exchange: "NYSE" },
-{ name: "JBG SMITH Properties", symbol: "JBGS", exchange: "NYSE" },
-{ name: "Jefferies Financial Group Inc.", symbol: "JEF", exchange: "NYSE" },
-{ name: "JELD-WEN Holding, Inc.", symbol: "JELD", exchange: "NYSE" },
-{ name: "Jianpu Technology Inc.", symbol: "JT", exchange: "NYSE" },
-{ name: "JinkoSolar Holding Company Limited", symbol: "JKS", exchange: "NYSE" },
-{ name: "JMP Group LLC", symbol: "JMP", exchange: "NYSE" },
-{ name: "John Bean Technologies Corporation", symbol: "JBT", exchange: "NYSE" },
-{ name: "John Hancock Financial Opportunities Fund", symbol: "BTO", exchange: "NYSE" },
-{ name: "John Hancock Hedged Equity & Income Fund", symbol: "HEQ", exchange: "NYSE" },
-{ name: "John Hancock Income Securities Trust", symbol: "JHS", exchange: "NYSE" },
-{ name: "John Hancock Investors Trust", symbol: "JHI", exchange: "NYSE" },
-{ name: "John Hancock Pfd Income Fund II", symbol: "HPF", exchange: "NYSE" },
-{ name: "John Hancock Preferred Income Fund", symbol: "HPI", exchange: "NYSE" },
-{ name: "John Hancock Preferred Income Fund III", symbol: "HPS", exchange: "NYSE" },
-{ name: "John Hancock Premium Dividend Fund", symbol: "PDT", exchange: "NYSE" },
-{ name: "John Hancock Tax Advantaged Dividend Income Fund", symbol: "HTD", exchange: "NYSE" },
-{ name: "John Hancock Tax-Advantaged Global Shareholder Yield Fund", symbol: "HTY", exchange: "NYSE" },
-{ name: "John Wiley & Sons, Inc.", symbol: "JW.A", exchange: "NYSE" },
-{ name: "John Wiley & Sons, Inc.", symbol: "JW.B", exchange: "NYSE" },
-{ name: "Johnson & Johnson", symbol: "JNJ", exchange: "NYSE" },
-{ name: "Johnson Controls International plc", symbol: "JCI", exchange: "NYSE" },
-{ name: "Jones Lang LaSalle Incorporated", symbol: "JLL", exchange: "NYSE" },
-{ name: "Jumia Technologies AG", symbol: "JMIA", exchange: "NYSE" },
-{ name: "Juniper Industrial Holdings, Inc.", symbol: "JIH", exchange: "NYSE" },
-{ name: "Juniper Industrial Holdings, Inc.", symbol: "JIH.U", exchange: "NYSE" },
-{ name: "Juniper Industrial Holdings, Inc.", symbol: "JIH.WS", exchange: "NYSE" },
-{ name: "Juniper Networks, Inc.", symbol: "JNPR", exchange: "NYSE" },
-{ name: "Jupai Holdings Limited", symbol: "JP", exchange: "NYSE" },
-{ name: "Just Energy Group, Inc.", symbol: "JE", exchange: "NYSE" },
-{ name: "Kadant Inc", symbol: "KAI", exchange: "NYSE" },
-{ name: "Kaman Corporation", symbol: "KAMN", exchange: "NYSE" },
-{ name: "Kansas City Southern", symbol: "KSU", exchange: "NYSE" },
-{ name: "Kansas City Southern", symbol: "KSU^", exchange: "NYSE" },
-{ name: "KAR Auction Services, Inc", symbol: "KAR", exchange: "NYSE" },
-{ name: "Kayne Anderson Energy Infrastructure Fund, Inc.", symbol: "KYN", exchange: "NYSE" },
-{ name: "Kayne Anderson NextGen Energy & Infrastructure, In", symbol: "KMF", exchange: "NYSE" },
-{ name: "KB Financial Group Inc", symbol: "KB", exchange: "NYSE" },
-{ name: "KB Home", symbol: "KBH", exchange: "NYSE" },
-{ name: "KBR, Inc.", symbol: "KBR", exchange: "NYSE" },
-{ name: "KE Holdings Inc", symbol: "BEKE", exchange: "NYSE" },
-{ name: "Kellogg Company", symbol: "K", exchange: "NYSE" },
-{ name: "Kemper Corporation", symbol: "KMPR", exchange: "NYSE" },
-{ name: "Kennametal Inc.", symbol: "KMT", exchange: "NYSE" },
-{ name: "Kennedy-Wilson Holdings Inc.", symbol: "KW", exchange: "NYSE" },
-{ name: "Kenon Holdings Ltd.", symbol: "KEN", exchange: "NYSE" },
-{ name: "KeyCorp", symbol: "KEY", exchange: "NYSE" },
-{ name: "KeyCorp", symbol: "KEY^I", exchange: "NYSE" },
-{ name: "KeyCorp", symbol: "KEY^J", exchange: "NYSE" },
-{ name: "KeyCorp", symbol: "KEY^K", exchange: "NYSE" },
-{ name: "Keysight Technologies Inc.", symbol: "KEYS", exchange: "NYSE" },
-{ name: "Kilroy Realty Corporation", symbol: "KRC", exchange: "NYSE" },
-{ name: "Kimbell Royalty Partners", symbol: "KRP", exchange: "NYSE" },
-{ name: "Kimberly-Clark Corporation", symbol: "KMB", exchange: "NYSE" },
-{ name: "Kimco Realty Corporation", symbol: "KIM", exchange: "NYSE" },
-{ name: "Kimco Realty Corporation", symbol: "KIM^L", exchange: "NYSE" },
-{ name: "Kimco Realty Corporation", symbol: "KIM^M", exchange: "NYSE" },
-{ name: "Kinder Morgan, Inc.", symbol: "KMI", exchange: "NYSE" },
-{ name: "Kingsway Financial Services, Inc.", symbol: "KFS", exchange: "NYSE" },
-{ name: "Kingswood Acquisition Corp.", symbol: "KWAC.U", exchange: "NYSE" },
-{ name: "Kinross Gold Corporation", symbol: "KGC", exchange: "NYSE" },
-{ name: "Kirby Corporation", symbol: "KEX", exchange: "NYSE" },
-{ name: "Kirkland Lake Gold Ltd.", symbol: "KL", exchange: "NYSE" },
-{ name: "Kite Realty Group Trust", symbol: "KRG", exchange: "NYSE" },
-{ name: "KKR & Co. Inc.", symbol: "KKR", exchange: "NYSE" },
-{ name: "KKR & Co. Inc.", symbol: "KKR^A", exchange: "NYSE" },
-{ name: "KKR & Co. Inc.", symbol: "KKR^B", exchange: "NYSE" },
-{ name: "KKR & Co. Inc.", symbol: "KKR^C", exchange: "NYSE" },
-{ name: "KKR Income Opportunities Fund", symbol: "KIO", exchange: "NYSE" },
-{ name: "KKR Real Estate Finance Trust Inc.", symbol: "KREF", exchange: "NYSE" },
-{ name: "Knight Transportation, Inc.", symbol: "KNX", exchange: "NYSE" },
-{ name: "Knoll, Inc.", symbol: "KNL", exchange: "NYSE" },
-{ name: "KNOT Offshore Partners LP", symbol: "KNOP", exchange: "NYSE" },
-{ name: "Knowles Corporation", symbol: "KN", exchange: "NYSE" },
-{ name: "Kohl&#39;s Corporation", symbol: "KSS", exchange: "NYSE" },
-{ name: "Koninklijke Philips N.V.", symbol: "PHG", exchange: "NYSE" },
-{ name: "Kontoor Brands, Inc.", symbol: "KTB", exchange: "NYSE" },
-{ name: "Koppers Holdings Inc.", symbol: "KOP", exchange: "NYSE" },
-{ name: "Korea Electric Power Corporation", symbol: "KEP", exchange: "NYSE" },
-{ name: "Korea Fund, Inc. (The)", symbol: "KF", exchange: "NYSE" },
-{ name: "Korn Ferry", symbol: "KFY", exchange: "NYSE" },
-{ name: "Kosmos Energy Ltd.", symbol: "KOS", exchange: "NYSE" },
-{ name: "Kraton Corporation", symbol: "KRA", exchange: "NYSE" },
-{ name: "Kroger Company (The)", symbol: "KR", exchange: "NYSE" },
-{ name: "Kronos Worldwide Inc", symbol: "KRO", exchange: "NYSE" },
-{ name: "KT Corporation", symbol: "KT", exchange: "NYSE" },
-{ name: "Kuke Music Holding Limited", symbol: "KUKE", exchange: "NYSE" },
-{ name: "L Brands, Inc.", symbol: "LB", exchange: "NYSE" },
-{ name: "L&amp;F Acquisition Corp.", symbol: "LNFA", exchange: "NYSE" },
-{ name: "L&amp;F Acquisition Corp.", symbol: "LNFA.U", exchange: "NYSE" },
-{ name: "L&amp;F Acquisition Corp.", symbol: "LNFA.WS", exchange: "NYSE" },
-{ name: "L.S. Starrett Company (The)", symbol: "SCX", exchange: "NYSE" },
-{ name: "L3Harris Technologies, Inc.", symbol: "LHX", exchange: "NYSE" },
-{ name: "Laboratory Corporation of America Holdings", symbol: "LH", exchange: "NYSE" },
-{ name: "Ladder Capital Corp", symbol: "LADR", exchange: "NYSE" },
-{ name: "LAIX Inc.", symbol: "LAIX", exchange: "NYSE" },
-{ name: "Lamb Weston Holdings, Inc.", symbol: "LW", exchange: "NYSE" },
-{ name: "Lannett Co Inc", symbol: "LCI", exchange: "NYSE" },
-{ name: "Laredo Petroleum, Inc.", symbol: "LPI", exchange: "NYSE" },
-{ name: "Las Vegas Sands Corp.", symbol: "LVS", exchange: "NYSE" },
-{ name: "Lazard Global Total Return and Income Fund", symbol: "LGI", exchange: "NYSE" },
-{ name: "Lazard Ltd.", symbol: "LAZ", exchange: "NYSE" },
-{ name: "La-Z-Boy Incorporated", symbol: "LZB", exchange: "NYSE" },
-{ name: "LCI Industries", symbol: "LCII", exchange: "NYSE" },
-{ name: "Leaf Group Ltd.", symbol: "LEAF", exchange: "NYSE" },
-{ name: "Lear Corporation", symbol: "LEA", exchange: "NYSE" },
-{ name: "Lee Enterprises, Incorporated", symbol: "LEE", exchange: "NYSE" },
-{ name: "Leggett & Platt, Incorporated", symbol: "LEG", exchange: "NYSE" },
-{ name: "Lehman ABS Corporation", symbol: "JBK", exchange: "NYSE" },
-{ name: "Lehman ABS Corporation", symbol: "KTH", exchange: "NYSE" },
-{ name: "Lehman ABS Corporation", symbol: "KTN", exchange: "NYSE" },
-{ name: "Leidos Holdings, Inc.", symbol: "LDOS", exchange: "NYSE" },
-{ name: "Leju Holdings Limited", symbol: "LEJU", exchange: "NYSE" },
-{ name: "Lemonade, Inc.", symbol: "LMND", exchange: "NYSE" },
-{ name: "LendingClub Corporation", symbol: "LC", exchange: "NYSE" },
-{ name: "Lennar Corporation", symbol: "LEN", exchange: "NYSE" },
-{ name: "Lennar Corporation", symbol: "LEN.B", exchange: "NYSE" },
-{ name: "Lennox International, Inc.", symbol: "LII", exchange: "NYSE" },
-{ name: "Leo Holdings Corp. II", symbol: "LHC.U", exchange: "NYSE" },
-{ name: "Levi Strauss & Co", symbol: "LEVI", exchange: "NYSE" },
-{ name: "Lexington Realty Trust", symbol: "LXP", exchange: "NYSE" },
-{ name: "Lexington Realty Trust", symbol: "LXP^C", exchange: "NYSE" },
-{ name: "LG Display Co., Ltd.", symbol: "LPL", exchange: "NYSE" },
-{ name: "LGL Systems Acquisition Corp.", symbol: "DFNS", exchange: "NYSE" },
-{ name: "LGL Systems Acquisition Corp.", symbol: "DFNS.U", exchange: "NYSE" },
-{ name: "LGL Systems Acquisition Corp.", symbol: "DFNS.WS", exchange: "NYSE" },
-{ name: "Liberty All-Star Equity Fund", symbol: "USA", exchange: "NYSE" },
-{ name: "Liberty All-Star Growth Fund, Inc.", symbol: "ASG", exchange: "NYSE" },
-{ name: "Liberty Oilfield Services Inc.", symbol: "LBRT", exchange: "NYSE" },
-{ name: "Life Storage, Inc.", symbol: "LSI", exchange: "NYSE" },
-{ name: "LightInTheBox Holding Co., Ltd.", symbol: "LITB", exchange: "NYSE" },
-{ name: "Lightspeed POS Inc.", symbol: "LSPD", exchange: "NYSE" },
-{ name: "Lincoln National Corporation", symbol: "LNC", exchange: "NYSE" },
-{ name: "Linde plc", symbol: "LIN", exchange: "NYSE" },
-{ name: "Lindsay Corporation", symbol: "LNN", exchange: "NYSE" },
-{ name: "Linx S.A.", symbol: "LINX", exchange: "NYSE" },
-{ name: "Lions Gate Entertainment Corporation", symbol: "LGF.A", exchange: "NYSE" },
-{ name: "Lions Gate Entertainment Corporation", symbol: "LGF.B", exchange: "NYSE" },
-{ name: "Lithia Motors, Inc.", symbol: "LAD", exchange: "NYSE" },
-{ name: "Lithium Americas Corp.", symbol: "LAC", exchange: "NYSE" },
-{ name: "Live Nation Entertainment, Inc.", symbol: "LYV", exchange: "NYSE" },
-{ name: "Live Oak Acquisition Corp. II", symbol: "LOKB.U", exchange: "NYSE" },
-{ name: "Livent Corporation", symbol: "LTHM", exchange: "NYSE" },
-{ name: "LiveRamp Holdings, Inc.", symbol: "RAMP", exchange: "NYSE" },
-{ name: "Lloyds Banking Group Plc", symbol: "LYG", exchange: "NYSE" },
-{ name: "LMP Capital and Income Fund Inc.", symbol: "SCD", exchange: "NYSE" },
-{ name: "Lockheed Martin Corporation", symbol: "LMT", exchange: "NYSE" },
-{ name: "Loews Corporation", symbol: "L", exchange: "NYSE" },
-{ name: "Loma Negra Compania Industrial Argentina Sociedad Anonima", symbol: "LOMA", exchange: "NYSE" },
-{ name: "Longview Acquisition Corp.", symbol: "LGVW", exchange: "NYSE" },
-{ name: "Longview Acquisition Corp.", symbol: "LGVW.U", exchange: "NYSE" },
-{ name: "Longview Acquisition Corp.", symbol: "LGVW.WS", exchange: "NYSE" },
-{ name: "Louisiana-Pacific Corporation", symbol: "LPX", exchange: "NYSE" },
-{ name: "Lowe&#39;s Companies, Inc.", symbol: "LOW", exchange: "NYSE" },
-{ name: "Lsb Industries Inc.", symbol: "LXU", exchange: "NYSE" },
-{ name: "LTC Properties, Inc.", symbol: "LTC", exchange: "NYSE" },
-{ name: "Luby&#39;s, Inc.", symbol: "LUB", exchange: "NYSE" },
-{ name: "Lufax Holding Ltd", symbol: "LU", exchange: "NYSE" },
-{ name: "Lumber Liquidators Holdings, Inc", symbol: "LL", exchange: "NYSE" },
-{ name: "Lumen Technologies, Inc.", symbol: "LUMN", exchange: "NYSE" },
-{ name: "Lument Finance Trust, Inc.", symbol: "LFT", exchange: "NYSE" },
-{ name: "Luxfer Holdings PLC", symbol: "LXFR", exchange: "NYSE" },
-{ name: "Lydall, Inc.", symbol: "LDL", exchange: "NYSE" },
-{ name: "LyondellBasell Industries NV", symbol: "LYB", exchange: "NYSE" },
-{ name: "M&T Bank Corporation", symbol: "MTB", exchange: "NYSE" },
-{ name: "M.D.C. Holdings, Inc.", symbol: "MDC", exchange: "NYSE" },
-{ name: "M/I Homes, Inc.", symbol: "MHO", exchange: "NYSE" },
-{ name: "Macerich Company (The)", symbol: "MAC", exchange: "NYSE" },
-{ name: "Mack-Cali Realty Corporation", symbol: "CLI", exchange: "NYSE" },
-{ name: "Macquarie First Trust Global", symbol: "MFD", exchange: "NYSE" },
-{ name: "Macquarie Global Infrastructure Total Return Fund Inc.", symbol: "MGU", exchange: "NYSE" },
-{ name: "Macquarie Infrastructure Corporation", symbol: "MIC", exchange: "NYSE" },
-{ name: "Macro Bank Inc.", symbol: "BMA", exchange: "NYSE" },
-{ name: "Macy&#39;s Inc", symbol: "M", exchange: "NYSE" },
-{ name: "Madison Covered Call & Equity Strategy Fund", symbol: "MCN", exchange: "NYSE" },
-{ name: "Madison Square Garden Entertainment Corp.", symbol: "MSGE", exchange: "NYSE" },
-{ name: "Madison Square Garden Sports Corp.", symbol: "MSGS", exchange: "NYSE" },
-{ name: "Magellan Midstream Partners L.P.", symbol: "MMP", exchange: "NYSE" },
-{ name: "Magna International, Inc.", symbol: "MGA", exchange: "NYSE" },
-{ name: "MagnaChip Semiconductor Corporation", symbol: "MX", exchange: "NYSE" },
-{ name: "Magnolia Oil & Gas Corporation", symbol: "MGY", exchange: "NYSE" },
-{ name: "Maiden Holdings, Ltd.", symbol: "MH^A", exchange: "NYSE" },
-{ name: "Maiden Holdings, Ltd.", symbol: "MH^C", exchange: "NYSE" },
-{ name: "Maiden Holdings, Ltd.", symbol: "MH^D", exchange: "NYSE" },
-{ name: "Maiden Holdings, Ltd.", symbol: "MHLA", exchange: "NYSE" },
-{ name: "Maiden Holdings, Ltd.", symbol: "MHNC", exchange: "NYSE" },
-{ name: "Main Street Capital Corporation", symbol: "MAIN", exchange: "NYSE" },
-{ name: "MainStay MacKay DefinedTerm Municipal Opportunitie", symbol: "MMD", exchange: "NYSE" },
-{ name: "Manchester United Ltd.", symbol: "MANU", exchange: "NYSE" },
-{ name: "Manitowoc Company, Inc. (The)", symbol: "MTW", exchange: "NYSE" },
-{ name: "Manning & Napier, Inc.", symbol: "MN", exchange: "NYSE" },
-{ name: "ManpowerGroup", symbol: "MAN", exchange: "NYSE" },
-{ name: "Manulife Financial Corp", symbol: "MFC", exchange: "NYSE" },
-{ name: "Marathon Oil Corporation", symbol: "MRO", exchange: "NYSE" },
-{ name: "Marathon Petroleum Corporation", symbol: "MPC", exchange: "NYSE" },
-{ name: "Marcus & Millichap, Inc.", symbol: "MMI", exchange: "NYSE" },
-{ name: "Marcus Corporation (The)", symbol: "MCS", exchange: "NYSE" },
-{ name: "Marine Products Corporation", symbol: "MPX", exchange: "NYSE" },
-{ name: "MarineMax, Inc.", symbol: "HZO", exchange: "NYSE" },
-{ name: "Markel Corporation", symbol: "MKL", exchange: "NYSE" },
-{ name: "Marriott Vacations Worldwide Corporation", symbol: "VAC", exchange: "NYSE" },
-{ name: "Marsh & McLennan Companies, Inc.", symbol: "MMC", exchange: "NYSE" },
-{ name: "Martin Marietta Materials, Inc.", symbol: "MLM", exchange: "NYSE" },
-{ name: "Masco Corporation", symbol: "MAS", exchange: "NYSE" },
-{ name: "Masonite International Corporation", symbol: "DOOR", exchange: "NYSE" },
-{ name: "MasTec, Inc.", symbol: "MTZ", exchange: "NYSE" },
-{ name: "Mastercard Incorporated", symbol: "MA", exchange: "NYSE" },
-{ name: "Matador Resources Company", symbol: "MTDR", exchange: "NYSE" },
-{ name: "Materion Corporation", symbol: "MTRN", exchange: "NYSE" },
-{ name: "Matson, Inc.", symbol: "MATX", exchange: "NYSE" },
-{ name: "Maui Land & Pineapple Company, Inc.", symbol: "MLP", exchange: "NYSE" },
-{ name: "Maxar Technologies Inc.", symbol: "MAXR", exchange: "NYSE" },
-{ name: "Maximus, Inc.", symbol: "MMS", exchange: "NYSE" },
-{ name: "MaxLinear, Inc", symbol: "MXL", exchange: "NYSE" },
-{ name: "Mayville Engineering Company, Inc.", symbol: "MEC", exchange: "NYSE" },
-{ name: "MBIA, Inc.", symbol: "MBI", exchange: "NYSE" },
-{ name: "McCormick & Company, Incorporated", symbol: "MKC", exchange: "NYSE" },
-{ name: "McCormick & Company, Incorporated", symbol: "MKC.V", exchange: "NYSE" },
-{ name: "McDonald&#39;s Corporation", symbol: "MCD", exchange: "NYSE" },
-{ name: "McEwen Mining Inc.", symbol: "MUX", exchange: "NYSE" },
-{ name: "McKesson Corporation", symbol: "MCK", exchange: "NYSE" },
-{ name: "MDU Resources Group, Inc.", symbol: "MDU", exchange: "NYSE" },
-{ name: "Mechel PAO", symbol: "MTL", exchange: "NYSE" },
-{ name: "Mechel PAO", symbol: "MTL^", exchange: "NYSE" },
-{ name: "Medallia, Inc.", symbol: "MDLA", exchange: "NYSE" },
-{ name: "MediaAlpha, Inc.", symbol: "MAX", exchange: "NYSE" },
-{ name: "Medical Properties Trust, Inc.", symbol: "MPW", exchange: "NYSE" },
-{ name: "MEDIFAST INC", symbol: "MED", exchange: "NYSE" },
-{ name: "Medley LLC", symbol: "MDLQ", exchange: "NYSE" },
-{ name: "Medley LLC", symbol: "MDLX", exchange: "NYSE" },
-{ name: "Medley Management Inc.", symbol: "MDLY", exchange: "NYSE" },
-{ name: "Mednax, Inc", symbol: "MD", exchange: "NYSE" },
-{ name: "Medtronic plc", symbol: "MDT", exchange: "NYSE" },
-{ name: "Merck & Company, Inc.", symbol: "MRK", exchange: "NYSE" },
-{ name: "Mercury General Corporation", symbol: "MCY", exchange: "NYSE" },
-{ name: "Meredith Corporation", symbol: "MDP", exchange: "NYSE" },
-{ name: "Meritage Corporation", symbol: "MTH", exchange: "NYSE" },
-{ name: "Meritor, Inc.", symbol: "MTOR", exchange: "NYSE" },
-{ name: "Merrill Lynch & Co., Inc.", symbol: "MER^K", exchange: "NYSE" },
-{ name: "Mesa Royalty Trust", symbol: "MTR", exchange: "NYSE" },
-{ name: "Mesabi Trust", symbol: "MSB", exchange: "NYSE" },
-{ name: "Methode Electronics, Inc.", symbol: "MEI", exchange: "NYSE" },
-{ name: "MetLife, Inc.", symbol: "MET", exchange: "NYSE" },
-{ name: "MetLife, Inc.", symbol: "MET^A", exchange: "NYSE" },
-{ name: "MetLife, Inc.", symbol: "MET^E", exchange: "NYSE" },
-{ name: "MetLife, Inc.", symbol: "MET^F", exchange: "NYSE" },
-{ name: "Metropolitan Bank Holding Corp.", symbol: "MCB", exchange: "NYSE" },
-{ name: "Mettler-Toledo International, Inc.", symbol: "MTD", exchange: "NYSE" },
-{ name: "Mexico Equity and Income Fund, Inc. (The)", symbol: "MXE", exchange: "NYSE" },
-{ name: "Mexico Fund, Inc. (The)", symbol: "MXF", exchange: "NYSE" },
-{ name: "MFA Financial, Inc.", symbol: "MFA", exchange: "NYSE" },
-{ name: "MFA Financial, Inc.", symbol: "MFA^B", exchange: "NYSE" },
-{ name: "MFA Financial, Inc.", symbol: "MFA^C", exchange: "NYSE" },
-{ name: "MFS Charter Income Trust", symbol: "MCR", exchange: "NYSE" },
-{ name: "MFS Government Markets Income Trust", symbol: "MGF", exchange: "NYSE" },
-{ name: "MFS Intermediate Income Trust", symbol: "MIN", exchange: "NYSE" },
-{ name: "MFS Multimarket Income Trust", symbol: "MMT", exchange: "NYSE" },
-{ name: "MFS Municipal Income Trust", symbol: "MFM", exchange: "NYSE" },
-{ name: "MFS Special Value Trust", symbol: "MFV", exchange: "NYSE" },
-{ name: "MGIC Investment Corporation", symbol: "MTG", exchange: "NYSE" },
-{ name: "MGM Growth Properties LLC", symbol: "MGP", exchange: "NYSE" },
-{ name: "MGM Resorts International", symbol: "MGM", exchange: "NYSE" },
-{ name: "Micro Focus Intl PLC", symbol: "MFGP", exchange: "NYSE" },
-{ name: "Mid-America Apartment Communities, Inc.", symbol: "MAA", exchange: "NYSE" },
-{ name: "Mid-America Apartment Communities, Inc.", symbol: "MAA^I", exchange: "NYSE" },
-{ name: "MIDSTATES PETROLEUM COMPANY, INC.", symbol: "AMPY", exchange: "NYSE" },
-{ name: "Miller Industries, Inc.", symbol: "MLR", exchange: "NYSE" },
-{ name: "Miller/Howard High Income Equity Fund", symbol: "HIE", exchange: "NYSE" },
-{ name: "Minerals Technologies Inc.", symbol: "MTX", exchange: "NYSE" },
-{ name: "MINISO Group Holding Limited", symbol: "MNSO", exchange: "NYSE" },
-{ name: "Mistras Group Inc", symbol: "MG", exchange: "NYSE" },
-{ name: "Mitsubishi UFJ Financial Group Inc", symbol: "MUFG", exchange: "NYSE" },
-{ name: "MiX Telematics Limited", symbol: "MIXT", exchange: "NYSE" },
-{ name: "Mizuho Financial Group, Inc.", symbol: "MFG", exchange: "NYSE" },
-{ name: "Mobile TeleSystems OJSC", symbol: "MBT", exchange: "NYSE" },
-{ name: "Model N, Inc.", symbol: "MODN", exchange: "NYSE" },
-{ name: "Modine Manufacturing Company", symbol: "MOD", exchange: "NYSE" },
-{ name: "Moelis & Company", symbol: "MC", exchange: "NYSE" },
-{ name: "MOGU Inc.", symbol: "MOGU", exchange: "NYSE" },
-{ name: "Mohawk Industries, Inc.", symbol: "MHK", exchange: "NYSE" },
-{ name: "Molina Healthcare Inc", symbol: "MOH", exchange: "NYSE" },
-{ name: "Molson Coors Beverage Company", symbol: "TAP", exchange: "NYSE" },
-{ name: "Molson Coors Beverage Company", symbol: "TAP.A", exchange: "NYSE" },
-{ name: "Monmouth Real Estate Investment Corporation", symbol: "MNR", exchange: "NYSE" },
-{ name: "Monmouth Real Estate Investment Corporation", symbol: "MNR^C", exchange: "NYSE" },
-{ name: "Montrose Environmental Group, Inc.", symbol: "MEG", exchange: "NYSE" },
-{ name: "Moody&#39;s Corporation", symbol: "MCO", exchange: "NYSE" },
-{ name: "Moog Inc.", symbol: "MOG.A", exchange: "NYSE" },
-{ name: "Moog Inc.", symbol: "MOG.B", exchange: "NYSE" },
-{ name: "Morgan Stanley", symbol: "MS", exchange: "NYSE" },
-{ name: "Morgan Stanley", symbol: "MS^A", exchange: "NYSE" },
-{ name: "Morgan Stanley", symbol: "MS^E", exchange: "NYSE" },
-{ name: "Morgan Stanley", symbol: "MS^F", exchange: "NYSE" },
-{ name: "Morgan Stanley", symbol: "MS^I", exchange: "NYSE" },
-{ name: "Morgan Stanley", symbol: "MS^K", exchange: "NYSE" },
-{ name: "Morgan Stanley", symbol: "MS^L", exchange: "NYSE" },
-{ name: "Morgan Stanley China A Share Fund Inc.", symbol: "CAF", exchange: "NYSE" },
-{ name: "Morgan Stanley Emerging Markets Debt Fund, Inc.", symbol: "MSD", exchange: "NYSE" },
-{ name: "Morgan Stanley Emerging Markets Domestic Debt Fund, Inc.", symbol: "EDD", exchange: "NYSE" },
-{ name: "Morgan Stanley India Investment Fund, Inc.", symbol: "IIF", exchange: "NYSE" },
-{ name: "Mosaic Company (The)", symbol: "MOS", exchange: "NYSE" },
-{ name: "Motive Capital Corp", symbol: "MOTV.U", exchange: "NYSE" },
-{ name: "Motorola Solutions, Inc.", symbol: "MSI", exchange: "NYSE" },
-{ name: "Movado Group Inc.", symbol: "MOV", exchange: "NYSE" },
-{ name: "MP Materials Corp.", symbol: "MP", exchange: "NYSE" },
-{ name: "MP Materials Corp.", symbol: "MP.WS", exchange: "NYSE" },
-{ name: "MPLX LP", symbol: "MPLX", exchange: "NYSE" },
-{ name: "MRC Global Inc.", symbol: "MRC", exchange: "NYSE" },
-{ name: "MSA Safety Incorporporated", symbol: "MSA", exchange: "NYSE" },
-{ name: "MSC Industrial Direct Company, Inc.", symbol: "MSM", exchange: "NYSE" },
-{ name: "MSCI Inc", symbol: "MSCI", exchange: "NYSE" },
-{ name: "MSG Networks Inc.", symbol: "MSGN", exchange: "NYSE" },
-{ name: "Mueller Industries, Inc.", symbol: "MLI", exchange: "NYSE" },
-{ name: "Mueller Water Products Inc", symbol: "MWA", exchange: "NYSE" },
-{ name: "MultiPlan Corporation", symbol: "MPLN", exchange: "NYSE" },
-{ name: "MultiPlan Corporation", symbol: "MPLN.WS", exchange: "NYSE" },
-{ name: "MuniVest Fund, Inc.", symbol: "MVF", exchange: "NYSE" },
-{ name: "MuniYield Arizona Fund, Inc.", symbol: "MZA", exchange: "NYSE" },
-{ name: "Murphy Oil Corporation", symbol: "MUR", exchange: "NYSE" },
-{ name: "Murphy USA Inc.", symbol: "MUSA", exchange: "NYSE" },
-{ name: "MV Oil Trust", symbol: "MVO", exchange: "NYSE" },
-{ name: "Myers Industries, Inc.", symbol: "MYE", exchange: "NYSE" },
-{ name: "Myovant Sciences Ltd.", symbol: "MYOV", exchange: "NYSE" },
-{ name: "MYT Netherlands Parent B.V.", symbol: "MYTE", exchange: "NYSE" },
-{ name: "Nabors Industries Ltd.", symbol: "NBR", exchange: "NYSE" },
-{ name: "Nabors Industries Ltd.", symbol: "NBR^A", exchange: "NYSE" },
-{ name: "NACCO Industries, Inc.", symbol: "NC", exchange: "NYSE" },
-{ name: "Nam Tai Property Inc.", symbol: "NTP", exchange: "NYSE" },
-{ name: "NASDAQ TEST STOCK", symbol: "NTEST", exchange: "NYSE" },
-{ name: "NASDAQ TEST STOCK", symbol: "NTEST.A", exchange: "NYSE" },
-{ name: "NASDAQ TEST STOCK", symbol: "NTEST.B", exchange: "NYSE" },
-{ name: "NASDAQ TEST STOCK", symbol: "NTEST.C", exchange: "NYSE" },
-{ name: "National Bank Holdings Corporation", symbol: "NBHC", exchange: "NYSE" },
-{ name: "National Fuel Gas Company", symbol: "NFG", exchange: "NYSE" },
-{ name: "National Grid Transco, PLC", symbol: "NGG", exchange: "NYSE" },
-{ name: "National Health Investors, Inc.", symbol: "NHI", exchange: "NYSE" },
-{ name: "National Presto Industries, Inc.", symbol: "NPK", exchange: "NYSE" },
-{ name: "National Retail Properties", symbol: "NNN", exchange: "NYSE" },
-{ name: "National Retail Properties", symbol: "NNN^F", exchange: "NYSE" },
-{ name: "National Rural Utilities Cooperative Finance Corporation", symbol: "NRUC", exchange: "NYSE" },
-{ name: "National Steel Company", symbol: "SID", exchange: "NYSE" },
-{ name: "National Storage Affiliates Trust", symbol: "NSA", exchange: "NYSE" },
-{ name: "National Storage Affiliates Trust", symbol: "NSA^A", exchange: "NYSE" },
-{ name: "Natura &Co Holding S.A.", symbol: "NTCO", exchange: "NYSE" },
-{ name: "Natural Gas Services Group, Inc.", symbol: "NGS", exchange: "NYSE" },
-{ name: "Natural Grocers by Vitamin Cottage, Inc.", symbol: "NGVC", exchange: "NYSE" },
-{ name: "Natural Resource Partners LP", symbol: "NRP", exchange: "NYSE" },
-{ name: "Natuzzi, S.p.A.", symbol: "NTZ", exchange: "NYSE" },
-{ name: "NatWest Group plc", symbol: "NWG", exchange: "NYSE" },
-{ name: "Nautilus Group, Inc. (The)", symbol: "NLS", exchange: "NYSE" },
-{ name: "Navigator Holdings Ltd.", symbol: "NVGS", exchange: "NYSE" },
-{ name: "Navios Maritime Acquisition Corporation", symbol: "NNA", exchange: "NYSE" },
-{ name: "Navios Maritime Holdings Inc.", symbol: "NM", exchange: "NYSE" },
-{ name: "Navios Maritime Holdings Inc.", symbol: "NM^G", exchange: "NYSE" },
-{ name: "Navios Maritime Holdings Inc.", symbol: "NM^H", exchange: "NYSE" },
-{ name: "Navios Maritime Partners LP", symbol: "NMM", exchange: "NYSE" },
-{ name: "Navistar International Corporation", symbol: "NAV", exchange: "NYSE" },
-{ name: "Navistar International Corporation", symbol: "NAV^D", exchange: "NYSE" },
-{ name: "NavSight Holdings, Inc.", symbol: "NSH", exchange: "NYSE" },
-{ name: "NavSight Holdings, Inc.", symbol: "NSH.U", exchange: "NYSE" },
-{ name: "NavSight Holdings, Inc.", symbol: "NSH.WS", exchange: "NYSE" },
-{ name: "NCR Corporation", symbol: "NCR", exchange: "NYSE" },
-{ name: "Neenah, Inc.", symbol: "NP", exchange: "NYSE" },
-{ name: "Nelnet, Inc.", symbol: "NNI", exchange: "NYSE" },
-{ name: "NeoPhotonics Corporation", symbol: "NPTN", exchange: "NYSE" },
-{ name: "Nesco Holdings, Inc.", symbol: "NSCO", exchange: "NYSE" },
-{ name: "Nesco Holdings, Inc.", symbol: "NSCO.WS", exchange: "NYSE" },
-{ name: "NetSTREIT Corp.", symbol: "NTST", exchange: "NYSE" },
-{ name: "Nevro Corp.", symbol: "NVRO", exchange: "NYSE" },
-{ name: "New America High Income Fund, Inc. (The)", symbol: "HYB", exchange: "NYSE" },
-{ name: "New Frontier Health Corporation", symbol: "NFH", exchange: "NYSE" },
-{ name: "New Frontier Health Corporation", symbol: "NFH.WS", exchange: "NYSE" },
-{ name: "New Germany Fund, Inc. (The)", symbol: "GF", exchange: "NYSE" },
-{ name: "New Home Company Inc. (The)", symbol: "NWHM", exchange: "NYSE" },
-{ name: "New Ireland Fund, Inc. (The)", symbol: "IRL", exchange: "NYSE" },
-{ name: "New Oriental Education & Technology Group, Inc.", symbol: "EDU", exchange: "NYSE" },
-{ name: "New Relic, Inc.", symbol: "NEWR", exchange: "NYSE" },
-{ name: "New Residential Investment Corp.", symbol: "NRZ", exchange: "NYSE" },
-{ name: "New Residential Investment Corp.", symbol: "NRZ^A", exchange: "NYSE" },
-{ name: "New Residential Investment Corp.", symbol: "NRZ^B", exchange: "NYSE" },
-{ name: "New Residential Investment Corp.", symbol: "NRZ^C", exchange: "NYSE" },
-{ name: "New Senior Investment Group Inc.", symbol: "SNR", exchange: "NYSE" },
-{ name: "New York City REIT, Inc.", symbol: "NYC", exchange: "NYSE" },
-{ name: "New York Community Bancorp, Inc.", symbol: "NYCB", exchange: "NYSE" },
-{ name: "New York Community Bancorp, Inc.", symbol: "NYCB^A", exchange: "NYSE" },
-{ name: "New York Community Bancorp, Inc.", symbol: "NYCB^U", exchange: "NYSE" },
-{ name: "New York Times Company (The)", symbol: "NYT", exchange: "NYSE" },
-{ name: "NewJersey Resources Corporation", symbol: "NJR", exchange: "NYSE" },
-{ name: "NewMarket Corporation", symbol: "NEU", exchange: "NYSE" },
-{ name: "Newmont Corporation", symbol: "NEM", exchange: "NYSE" },
-{ name: "Newpark Resources, Inc.", symbol: "NR", exchange: "NYSE" },
-{ name: "Nexa Resources S.A.", symbol: "NEXA", exchange: "NYSE" },
-{ name: "NexPoint Real Estate Finance, Inc.", symbol: "NREF", exchange: "NYSE" },
-{ name: "NexPoint Real Estate Finance, Inc.", symbol: "NREF^A", exchange: "NYSE" },
-{ name: "NexPoint Residential Trust, Inc.", symbol: "NXRT", exchange: "NYSE" },
-{ name: "NexPoint Strategic Opportunities Fund", symbol: "NHF", exchange: "NYSE" },
-{ name: "NextEra Energy Partners, LP", symbol: "NEP", exchange: "NYSE" },
-{ name: "NextEra Energy, Inc.", symbol: "NEE", exchange: "NYSE" },
-{ name: "NextEra Energy, Inc.", symbol: "NEE^K", exchange: "NYSE" },
-{ name: "NextEra Energy, Inc.", symbol: "NEE^N", exchange: "NYSE" },
-{ name: "NextEra Energy, Inc.", symbol: "NEE^O", exchange: "NYSE" },
-{ name: "NextEra Energy, Inc.", symbol: "NEE^P", exchange: "NYSE" },
-{ name: "NextEra Energy, Inc.", symbol: "NEE^Q", exchange: "NYSE" },
-{ name: "NexTier Oilfield Solutions Inc.", symbol: "NEX", exchange: "NYSE" },
-{ name: "NGL ENERGY PARTNERS LP", symbol: "NGL", exchange: "NYSE" },
-{ name: "NGL ENERGY PARTNERS LP", symbol: "NGL^B", exchange: "NYSE" },
-{ name: "NGL ENERGY PARTNERS LP", symbol: "NGL^C", exchange: "NYSE" },
-{ name: "Niagara Mohawk Holdings, Inc.", symbol: "NMK^B", exchange: "NYSE" },
-{ name: "Niagara Mohawk Holdings, Inc.", symbol: "NMK^C", exchange: "NYSE" },
-{ name: "Nielsen N.V.", symbol: "NLSN", exchange: "NYSE" },
-{ name: "Nike, Inc.", symbol: "NKE", exchange: "NYSE" },
-{ name: "Nine Energy Service, Inc.", symbol: "NINE", exchange: "NYSE" },
-{ name: "NIO Inc.", symbol: "NIO", exchange: "NYSE" },
-{ name: "NiSource, Inc", symbol: "NI", exchange: "NYSE" },
-{ name: "NiSource, Inc", symbol: "NI^B", exchange: "NYSE" },
-{ name: "NL Industries, Inc.", symbol: "NL", exchange: "NYSE" },
-{ name: "Noah Holdings Ltd.", symbol: "NOAH", exchange: "NYSE" },
-{ name: "Nokia Corporation", symbol: "NOK", exchange: "NYSE" },
-{ name: "Nomad Foods Limited", symbol: "NOMD", exchange: "NYSE" },
-{ name: "Nomura Holdings Inc ADR", symbol: "NMR", exchange: "NYSE" },
-{ name: "Norbord Inc.", symbol: "OSB", exchange: "NYSE" },
-{ name: "Nordic American Tankers Limited", symbol: "NAT", exchange: "NYSE" },
-{ name: "Nordstrom, Inc.", symbol: "JWN", exchange: "NYSE" },
-{ name: "Norfolk Southern Corporation", symbol: "NSC", exchange: "NYSE" },
-{ name: "North American Construction Group Ltd.", symbol: "NOA", exchange: "NYSE" },
-{ name: "North European Oil Royality Trust", symbol: "NRT", exchange: "NYSE" },
-{ name: "Northern Genesis Acquisition Corp.", symbol: "NGA", exchange: "NYSE" },
-{ name: "Northern Genesis Acquisition Corp.", symbol: "NGA.U", exchange: "NYSE" },
-{ name: "Northern Genesis Acquisition Corp.", symbol: "NGA.WS", exchange: "NYSE" },
-{ name: "Northern Genesis Acquisition Corp. II", symbol: "NGAB.U", exchange: "NYSE" },
-{ name: "Northern Star Acquisition Corp.", symbol: "STIC", exchange: "NYSE" },
-{ name: "Northern Star Acquisition Corp.", symbol: "STIC.U", exchange: "NYSE" },
-{ name: "Northern Star Acquisition Corp.", symbol: "STIC.WS", exchange: "NYSE" },
-{ name: "Northrop Grumman Corporation", symbol: "NOC", exchange: "NYSE" },
-{ name: "Northwest Natural Holding Company", symbol: "NWN", exchange: "NYSE" },
-{ name: "Norwegian Cruise Line Holdings Ltd.", symbol: "NCLH", exchange: "NYSE" },
-{ name: "NOV Inc.", symbol: "NOV", exchange: "NYSE" },
-{ name: "Novartis AG", symbol: "NVS", exchange: "NYSE" },
-{ name: "Novo Nordisk A/S", symbol: "NVO", exchange: "NYSE" },
-{ name: "NOW Inc.", symbol: "DNOW", exchange: "NYSE" },
-{ name: "NRG Energy, Inc.", symbol: "NRG", exchange: "NYSE" },
-{ name: "Nu Skin Enterprises, Inc.", symbol: "NUS", exchange: "NYSE" },
-{ name: "Nucor Corporation", symbol: "NUE", exchange: "NYSE" },
-{ name: "Nustar Energy L.P.", symbol: "NS", exchange: "NYSE" },
-{ name: "Nustar Energy L.P.", symbol: "NS^A", exchange: "NYSE" },
-{ name: "Nustar Energy L.P.", symbol: "NS^B", exchange: "NYSE" },
-{ name: "Nustar Energy L.P.", symbol: "NS^C", exchange: "NYSE" },
-{ name: "NuStar Logistics, L.P.", symbol: "NSS", exchange: "NYSE" },
-{ name: "Nutrien Ltd.", symbol: "NTR", exchange: "NYSE" },
-{ name: "Nuveen AMT-Free Municipal Credit Income Fund", symbol: "NVG", exchange: "NYSE" },
-{ name: "Nuveen AMT-Free Municipal Value Fund", symbol: "NUV", exchange: "NYSE" },
-{ name: "Nuveen AMT-Free Municipal Value Fund", symbol: "NUW", exchange: "NYSE" },
-{ name: "Nuveen AMT-Free Quality Municipal Income Fund", symbol: "NEA", exchange: "NYSE" },
-{ name: "Nuveen Arizona Quality Municipal Income Fund", symbol: "NAZ", exchange: "NYSE" },
-{ name: "Nuveen California AMT-Free Quality Municipal Income Fund", symbol: "NKX", exchange: "NYSE" },
-{ name: "Nuveen California Municipal Value Fund 2", symbol: "NCB", exchange: "NYSE" },
-{ name: "Nuveen California Municipal Value Fund, Inc.", symbol: "NCA", exchange: "NYSE" },
-{ name: "Nuveen California Quality Municipal Income Fund", symbol: "NAC", exchange: "NYSE" },
-{ name: "Nuveen Core Equity Alpha Fund", symbol: "JCE", exchange: "NYSE" },
-{ name: "Nuveen Corporate Income 2023 Target Term Fund", symbol: "JHAA", exchange: "NYSE" },
-{ name: "Nuveen Corporate Income November 2021 Target Term", symbol: "JHB", exchange: "NYSE" },
-{ name: "Nuveen Credit Opportunities 2022 Target Term Fund", symbol: "JCO", exchange: "NYSE" },
-{ name: "Nuveen Credit Strategies Income Fund", symbol: "JQC", exchange: "NYSE" },
-{ name: "Nuveen Diversified Dividend and Income Fund", symbol: "JDD", exchange: "NYSE" },
-{ name: "Nuveen Dow 30SM Dynamic Overwrite Fund", symbol: "DIAX", exchange: "NYSE" },
-{ name: "Nuveen Dynamic Municipal Opportunities Fund", symbol: "NDMO", exchange: "NYSE" },
-{ name: "Nuveen Emerging Markets Debt 2022 Target Term Fund", symbol: "JEMD", exchange: "NYSE" },
-{ name: "Nuveen Enhanced Municipal Value Fund", symbol: "NEV", exchange: "NYSE" },
-{ name: "Nuveen Floating Rate Income Fund", symbol: "JFR", exchange: "NYSE" },
-{ name: "Nuveen Floating Rate Income Opportuntiy Fund", symbol: "JRO", exchange: "NYSE" },
-{ name: "Nuveen Georgia Quality Municipal Income Fund", symbol: "NKG", exchange: "NYSE" },
-{ name: "Nuveen Global High Income Fund", symbol: "JGH", exchange: "NYSE" },
-{ name: "Nuveen Insured California Select Tax-Free Income Portfolio", symbol: "NXC", exchange: "NYSE" },
-{ name: "Nuveen Insured New York Select Tax-Free Income Portfolio", symbol: "NXN", exchange: "NYSE" },
-{ name: "Nuveen Intermediate Duration Municipal Term Fund", symbol: "NID", exchange: "NYSE" },
-{ name: "Nuveen Maryland Quality Municipal Income Fund", symbol: "NMY", exchange: "NYSE" },
-{ name: "Nuveen Massachusetts Municipal Income Fund", symbol: "NMT", exchange: "NYSE" },
-{ name: "Nuveen Michigan Quality Municipal Income Fund", symbol: "NUM", exchange: "NYSE" },
-{ name: "Nuveen Minnesota Quality Municipal Income Fund", symbol: "NMS", exchange: "NYSE" },
-{ name: "Nuveen Missouri Quality Municipal Income Fund", symbol: "NOM", exchange: "NYSE" },
-{ name: "Nuveen Mortgage and Income Fund", symbol: "JLS", exchange: "NYSE" },
-{ name: "Nuveen Multi-Market Income Fund", symbol: "JMM", exchange: "NYSE" },
-{ name: "Nuveen Municipal 2021 Target Term Fund", symbol: "NHA", exchange: "NYSE" },
-{ name: "Nuveen Municipal Credit Income Fund", symbol: "NZF", exchange: "NYSE" },
-{ name: "Nuveen Municipal Credit Opportunities Fund", symbol: "NMCO", exchange: "NYSE" },
-{ name: "Nuveen Municipal High Income Opportunity Fund", symbol: "NMZ", exchange: "NYSE" },
-{ name: "Nuveen Municipal Income Fund, Inc.", symbol: "NMI", exchange: "NYSE" },
-{ name: "Nuveen New Jersey Municipal Value Fund", symbol: "NJV", exchange: "NYSE" },
-{ name: "Nuveen New Jersey Quality Municipal Income Fund", symbol: "NXJ", exchange: "NYSE" },
-{ name: "Nuveen New York AMT-Free Quality Municipal", symbol: "NRK", exchange: "NYSE" },
-{ name: "Nuveen New York Municipal Value Fund 2", symbol: "NYV", exchange: "NYSE" },
-{ name: "Nuveen New York Municipal Value Fund, Inc.", symbol: "NNY", exchange: "NYSE" },
-{ name: "Nuveen New York Quality Municipal Income Fund", symbol: "NAN", exchange: "NYSE" },
-{ name: "Nuveen Ohio Quality Municipal Income Fund", symbol: "NUO", exchange: "NYSE" },
-{ name: "Nuveen Pennsylvania Municipal Value Fund", symbol: "NPN", exchange: "NYSE" },
-{ name: "Nuveen Pennsylvania Quality Municipal Income Fund", symbol: "NQP", exchange: "NYSE" },
-{ name: "Nuveen Preferred & Income Opportunities Fund", symbol: "JPC", exchange: "NYSE" },
-{ name: "Nuveen Preferred & Income Securities Fund", symbol: "JPS", exchange: "NYSE" },
-{ name: "Nuveen Preferred and Income 2022 Term Fund", symbol: "JPT", exchange: "NYSE" },
-{ name: "Nuveen Preferred and Income Term Fund", symbol: "JPI", exchange: "NYSE" },
-{ name: "Nuveen Quality Municipal Income Fund", symbol: "NAD", exchange: "NYSE" },
-{ name: "Nuveen Real Asset Income and Growth Fund", symbol: "JRI", exchange: "NYSE" },
-{ name: "Nuveen Real Estate Fund", symbol: "JRS", exchange: "NYSE" },
-{ name: "Nuveen S&P 500 Buy-Write Income Fund", symbol: "BXMX", exchange: "NYSE" },
-{ name: "Nuveen S&P 500 Dynamic Overwrite Fund", symbol: "SPXX", exchange: "NYSE" },
-{ name: "Nuveen Select Maturities Municipal Fund", symbol: "NIM", exchange: "NYSE" },
-{ name: "Nuveen Select Tax Free Income Portfolio", symbol: "NXP", exchange: "NYSE" },
-{ name: "Nuveen Select Tax Free Income Portfolio II", symbol: "NXQ", exchange: "NYSE" },
-{ name: "Nuveen Select Tax Free Income Portfolio III", symbol: "NXR", exchange: "NYSE" },
-{ name: "Nuveen Senior Income Fund", symbol: "NSL", exchange: "NYSE" },
-{ name: "Nuveen Short Duration Credit Opportunities Fund", symbol: "JSD", exchange: "NYSE" },
-{ name: "Nuveen Taxable Municipal Income Fund", symbol: "NBB", exchange: "NYSE" },
-{ name: "Nuveen Tax-Advantaged Dividend Growth Fund", symbol: "JTD", exchange: "NYSE" },
-{ name: "Nuveen Tax-Advantaged Total Return Strategy Fund", symbol: "JTA", exchange: "NYSE" },
-{ name: "Nuveen Virginia Quality Municipal Income Fund", symbol: "NPV", exchange: "NYSE" },
-{ name: "Nuveenn Intermediate Duration Quality Municipal Term Fund", symbol: "NIQ", exchange: "NYSE" },
-{ name: "nVent Electric plc", symbol: "NVT", exchange: "NYSE" },
-{ name: "NVR, Inc.", symbol: "NVR", exchange: "NYSE" },
-{ name: "NYSE Test One", symbol: "CTEST", exchange: "NYSE" },
-{ name: "NYSE Test One", symbol: "CTEST.E", exchange: "NYSE" },
-{ name: "NYSE Test One", symbol: "CTEST.G", exchange: "NYSE" },
-{ name: "NYSE Test One", symbol: "CTEST.L", exchange: "NYSE" },
-{ name: "NYSE Test One", symbol: "CTEST.O", exchange: "NYSE" },
-{ name: "NYSE Test One", symbol: "CTEST.S", exchange: "NYSE" },
-{ name: "NYSE Test One", symbol: "CTEST.V", exchange: "NYSE" },
-{ name: "Oak Street Health, Inc.", symbol: "OSH", exchange: "NYSE" },
-{ name: "Oaktree Acquisition Corp. II", symbol: "OACB", exchange: "NYSE" },
-{ name: "Oaktree Acquisition Corp. II", symbol: "OACB.U", exchange: "NYSE" },
-{ name: "Oaktree Acquisition Corp. II", symbol: "OACB.WS", exchange: "NYSE" },
-{ name: "Oaktree Capital Group, LLC", symbol: "OAK^A", exchange: "NYSE" },
-{ name: "Oaktree Capital Group, LLC", symbol: "OAK^B", exchange: "NYSE" },
-{ name: "Occidental Petroleum Corporation", symbol: "OXY", exchange: "NYSE" },
-{ name: "Occidental Petroleum Corporation", symbol: "OXY.WS", exchange: "NYSE" },
-{ name: "Oceaneering International, Inc.", symbol: "OII", exchange: "NYSE" },
-{ name: "Ocwen Financial Corporation", symbol: "OCN", exchange: "NYSE" },
-{ name: "OFG Bancorp", symbol: "OFG", exchange: "NYSE" },
-{ name: "OFG Bancorp", symbol: "OFG^A", exchange: "NYSE" },
-{ name: "OFG Bancorp", symbol: "OFG^B", exchange: "NYSE" },
-{ name: "OFG Bancorp", symbol: "OFG^D", exchange: "NYSE" },
-{ name: "OGE Energy Corp", symbol: "OGE", exchange: "NYSE" },
-{ name: "O-I Glass, Inc.", symbol: "OI", exchange: "NYSE" },
-{ name: "Oi S.A.", symbol: "OIBR.C", exchange: "NYSE" },
-{ name: "Oil States International, Inc.", symbol: "OIS", exchange: "NYSE" },
-{ name: "Oil-Dri Corporation Of America", symbol: "ODC", exchange: "NYSE" },
-{ name: "Old Republic International Corporation", symbol: "ORI", exchange: "NYSE" },
-{ name: "Olin Corporation", symbol: "OLN", exchange: "NYSE" },
-{ name: "Omega Healthcare Investors, Inc.", symbol: "OHI", exchange: "NYSE" },
-{ name: "Omnichannel Acquisition Corp.", symbol: "OCA", exchange: "NYSE" },
-{ name: "Omnichannel Acquisition Corp.", symbol: "OCA.U", exchange: "NYSE" },
-{ name: "Omnichannel Acquisition Corp.", symbol: "OCA.WS", exchange: "NYSE" },
-{ name: "Omnicom Group Inc.", symbol: "OMC", exchange: "NYSE" },
-{ name: "one", symbol: "AONE", exchange: "NYSE" },
-{ name: "one", symbol: "AONE.U", exchange: "NYSE" },
-{ name: "one", symbol: "AONE.WS", exchange: "NYSE" },
-{ name: "ONE Gas, Inc.", symbol: "OGS", exchange: "NYSE" },
-{ name: "One Liberty Properties, Inc.", symbol: "OLP", exchange: "NYSE" },
-{ name: "OneConnect Financial Technology Co., Ltd.", symbol: "OCFT", exchange: "NYSE" },
-{ name: "OneMain Holdings, Inc.", symbol: "OMF", exchange: "NYSE" },
-{ name: "ONEOK, Inc.", symbol: "OKE", exchange: "NYSE" },
-{ name: "OneSmart International Education Group Limited", symbol: "ONE", exchange: "NYSE" },
-{ name: "Onto Innovation Inc.", symbol: "ONTO", exchange: "NYSE" },
-{ name: "Ooma, Inc.", symbol: "OOMA", exchange: "NYSE" },
-{ name: "Oppenheimer Holdings, Inc.", symbol: "OPY", exchange: "NYSE" },
-{ name: "Oracle Corporation", symbol: "ORCL", exchange: "NYSE" },
-{ name: "Orange", symbol: "ORAN", exchange: "NYSE" },
-{ name: "Orchid Island Capital, Inc.", symbol: "ORC", exchange: "NYSE" },
-{ name: "Orion Engineered Carbons S.A", symbol: "OEC", exchange: "NYSE" },
-{ name: "Orion Group Holdings, Inc.", symbol: "ORN", exchange: "NYSE" },
-{ name: "Orix Corp Ads", symbol: "IX", exchange: "NYSE" },
-{ name: "Ormat Technologies, Inc.", symbol: "ORA", exchange: "NYSE" },
-{ name: "Oshkosh Corporation", symbol: "OSK", exchange: "NYSE" },
-{ name: "Osisko Gold Royalties Ltd.", symbol: "OR", exchange: "NYSE" },
-{ name: "Osprey Technology Acquisition Corp.", symbol: "SFTW", exchange: "NYSE" },
-{ name: "Osprey Technology Acquisition Corp.", symbol: "SFTW.U", exchange: "NYSE" },
-{ name: "Osprey Technology Acquisition Corp.", symbol: "SFTW.WS", exchange: "NYSE" },
-{ name: "Otis Worldwide Corporation", symbol: "OTIS", exchange: "NYSE" },
-{ name: "OUTFRONT Media Inc.", symbol: "OUT", exchange: "NYSE" },
-{ name: "Overseas Shipholding Group, Inc.", symbol: "OSG", exchange: "NYSE" },
-{ name: "Ovintiv Inc.", symbol: "OVV", exchange: "NYSE" },
-{ name: "Owens & Minor, Inc.", symbol: "OMI", exchange: "NYSE" },
-{ name: "Owens Corning Inc", symbol: "OC", exchange: "NYSE" },
-{ name: "Owl Rock Capital Corporation", symbol: "ORCC", exchange: "NYSE" },
-{ name: "Oxford Industries, Inc.", symbol: "OXM", exchange: "NYSE" },
-{ name: "Pacific Gas & Electric Co.", symbol: "PCG", exchange: "NYSE" },
-{ name: "Pacific Gas & Electric Co.", symbol: "PCGU", exchange: "NYSE" },
-{ name: "Packaging Corporation of America", symbol: "PKG", exchange: "NYSE" },
-{ name: "PagerDuty, Inc.", symbol: "PD", exchange: "NYSE" },
-{ name: "PagSeguro Digital Ltd.", symbol: "PAGS", exchange: "NYSE" },
-{ name: "Palantir Technologies Inc.", symbol: "PLTR", exchange: "NYSE" },
-{ name: "Palo Alto Networks, Inc.", symbol: "PANW", exchange: "NYSE" },
-{ name: "Pampa Energia S.A.", symbol: "PAM", exchange: "NYSE" },
-{ name: "Panacea Acquisition Corp.", symbol: "PANA", exchange: "NYSE" },
-{ name: "Panacea Acquisition Corp.", symbol: "PANA.U", exchange: "NYSE" },
-{ name: "Panacea Acquisition Corp.", symbol: "PANA.WS", exchange: "NYSE" },
-{ name: "Par Pacific Holdings, Inc.", symbol: "PARR", exchange: "NYSE" },
-{ name: "PAR Technology Corporation", symbol: "PAR", exchange: "NYSE" },
-{ name: "Paramount Group, Inc.", symbol: "PGRE", exchange: "NYSE" },
-{ name: "Park Aerospace Corp.", symbol: "PKE", exchange: "NYSE" },
-{ name: "Park Hotels & Resorts Inc.", symbol: "PK", exchange: "NYSE" },
-{ name: "Parker-Hannifin Corporation", symbol: "PH", exchange: "NYSE" },
-{ name: "Parsons Corporation", symbol: "PSN", exchange: "NYSE" },
-{ name: "PartnerRe Ltd.", symbol: "PRE^G", exchange: "NYSE" },
-{ name: "PartnerRe Ltd.", symbol: "PRE^H", exchange: "NYSE" },
-{ name: "PartnerRe Ltd.", symbol: "PRE^I", exchange: "NYSE" },
-{ name: "Party City Holdco Inc.", symbol: "PRTY", exchange: "NYSE" },
-{ name: "Paycom Software, Inc.", symbol: "PAYC", exchange: "NYSE" },
-{ name: "PBF Energy Inc.", symbol: "PBF", exchange: "NYSE" },
-{ name: "PBF Logistics LP", symbol: "PBFX", exchange: "NYSE" },
-{ name: "Peabody Energy Corporation", symbol: "BTU", exchange: "NYSE" },
-{ name: "Pearson, Plc", symbol: "PSO", exchange: "NYSE" },
-{ name: "Pebblebrook Hotel Trust", symbol: "PEB", exchange: "NYSE" },
-{ name: "Pebblebrook Hotel Trust", symbol: "PEB^C", exchange: "NYSE" },
-{ name: "Pebblebrook Hotel Trust", symbol: "PEB^D", exchange: "NYSE" },
-{ name: "Pebblebrook Hotel Trust", symbol: "PEB^E", exchange: "NYSE" },
-{ name: "Pebblebrook Hotel Trust", symbol: "PEB^F", exchange: "NYSE" },
-{ name: "Pembina Pipeline Corp.", symbol: "PBA", exchange: "NYSE" },
-{ name: "Pennsylvania Real Estate Investment Trust", symbol: "PEI", exchange: "NYSE" },
-{ name: "Pennsylvania Real Estate Investment Trust", symbol: "PEI^B", exchange: "NYSE" },
-{ name: "Pennsylvania Real Estate Investment Trust", symbol: "PEI^C", exchange: "NYSE" },
-{ name: "Pennsylvania Real Estate Investment Trust", symbol: "PEI^D", exchange: "NYSE" },
-{ name: "PennyMac Financial Services, Inc.", symbol: "PFSI", exchange: "NYSE" },
-{ name: "PennyMac Mortgage Investment Trust", symbol: "PMT", exchange: "NYSE" },
-{ name: "PennyMac Mortgage Investment Trust", symbol: "PMT^A", exchange: "NYSE" },
-{ name: "PennyMac Mortgage Investment Trust", symbol: "PMT^B", exchange: "NYSE" },
-{ name: "Penske Automotive Group, Inc.", symbol: "PAG", exchange: "NYSE" },
-{ name: "Pentair plc.", symbol: "PNR", exchange: "NYSE" },
-{ name: "Penumbra, Inc.", symbol: "PEN", exchange: "NYSE" },
-{ name: "Performance Food Group Company", symbol: "PFGC", exchange: "NYSE" },
-{ name: "Peridot Acquisition Corp.", symbol: "PDAC", exchange: "NYSE" },
-{ name: "Peridot Acquisition Corp.", symbol: "PDAC.U", exchange: "NYSE" },
-{ name: "Peridot Acquisition Corp.", symbol: "PDAC.WS", exchange: "NYSE" },
-{ name: "Periphas Capital Partnering Corporation", symbol: "PCPC.U", exchange: "NYSE" },
-{ name: "PerkinElmer, Inc.", symbol: "PKI", exchange: "NYSE" },
-{ name: "Permian Basin Royalty Trust", symbol: "PBT", exchange: "NYSE" },
-{ name: "Permianville Royalty Trust", symbol: "PVL", exchange: "NYSE" },
-{ name: "PermRock Royalty Trust", symbol: "PRT", exchange: "NYSE" },
-{ name: "Perrigo Company", symbol: "PRGO", exchange: "NYSE" },
-{ name: "Pershing Square Tontine Holdings, Ltd.", symbol: "PSTH", exchange: "NYSE" },
-{ name: "Pershing Square Tontine Holdings, Ltd.", symbol: "PSTH.WS", exchange: "NYSE" },
-{ name: "Perspecta Inc.", symbol: "PRSP", exchange: "NYSE" },
-{ name: "PetroChina Company Limited", symbol: "PTR", exchange: "NYSE" },
-{ name: "Petroleo Brasileiro S.A.- Petrobras", symbol: "PBR", exchange: "NYSE" },
-{ name: "Petroleo Brasileiro S.A.- Petrobras", symbol: "PBR.A", exchange: "NYSE" },
-{ name: "Pfizer, Inc.", symbol: "PFE", exchange: "NYSE" },
-{ name: "PGIM Global High Yield Fund, Inc.", symbol: "GHY", exchange: "NYSE" },
-{ name: "PGIM High Yield Bond Fund, Inc.", symbol: "ISD", exchange: "NYSE" },
-{ name: "PGIM Short Duration High Yield Opportunities Fund", symbol: "SDHY", exchange: "NYSE" },
-{ name: "PGT Innovations, Inc.", symbol: "PGTI", exchange: "NYSE" },
-{ name: "Philip Morris International Inc", symbol: "PM", exchange: "NYSE" },
-{ name: "Phillips 66", symbol: "PSX", exchange: "NYSE" },
-{ name: "Phillips 66 Partners LP", symbol: "PSXP", exchange: "NYSE" },
-{ name: "Phoenix New Media Limited", symbol: "FENG", exchange: "NYSE" },
-{ name: "Phoenix Tree Holdings Limited", symbol: "DNK", exchange: "NYSE" },
-{ name: "Phreesia, Inc.", symbol: "PHR", exchange: "NYSE" },
-{ name: "PHX Minerals Inc.", symbol: "PHX", exchange: "NYSE" },
-{ name: "Physicians Realty Trust", symbol: "DOC", exchange: "NYSE" },
-{ name: "Piedmont Office Realty Trust, Inc.", symbol: "PDM", exchange: "NYSE" },
-{ name: "PIMCO California Municipal Income Fund", symbol: "PCQ", exchange: "NYSE" },
-{ name: "Pimco California Municipal Income Fund II", symbol: "PCK", exchange: "NYSE" },
-{ name: "PIMCO California Municipal Income Fund III", symbol: "PZC", exchange: "NYSE" },
-{ name: "PIMCO Commercial Mortgage Securities Trust, Inc.", symbol: "PCM", exchange: "NYSE" },
-{ name: "Pimco Corporate & Income Opportunity Fund", symbol: "PTY", exchange: "NYSE" },
-{ name: "Pimco Corporate & Income Stategy Fund", symbol: "PCN", exchange: "NYSE" },
-{ name: "PIMCO Dynamic Credit and Mortgage Income Fund", symbol: "PCI", exchange: "NYSE" },
-{ name: "PIMCO Dynamic Income Fund", symbol: "PDI", exchange: "NYSE" },
-{ name: "PIMCO Energy and Tactical Credit Opportunities Fund", symbol: "NRGX", exchange: "NYSE" },
-{ name: "Pimco Global Stocksplus & Income Fund", symbol: "PGP", exchange: "NYSE" },
-{ name: "Pimco High Income Fund", symbol: "PHK", exchange: "NYSE" },
-{ name: "Pimco Income Opportunity Fund", symbol: "PKO", exchange: "NYSE" },
-{ name: "PIMCO Income Strategy Fund", symbol: "PFL", exchange: "NYSE" },
-{ name: "PIMCO Income Strategy Fund II", symbol: "PFN", exchange: "NYSE" },
-{ name: "PIMCO Municipal Income Fund", symbol: "PMF", exchange: "NYSE" },
-{ name: "Pimco Municipal Income Fund II", symbol: "PML", exchange: "NYSE" },
-{ name: "PIMCO Municipal Income Fund III", symbol: "PMX", exchange: "NYSE" },
-{ name: "PIMCO New York Municipal Income Fund", symbol: "PNF", exchange: "NYSE" },
-{ name: "Pimco New York Municipal Income Fund II", symbol: "PNI", exchange: "NYSE" },
-{ name: "PIMCO New York Municipal Income Fund III", symbol: "PYN", exchange: "NYSE" },
-{ name: "PIMCO Strategic Income Fund, Inc.", symbol: "RCS", exchange: "NYSE" },
-{ name: "Pine Island Acquisition Corp.", symbol: "PIPP", exchange: "NYSE" },
-{ name: "Pine Island Acquisition Corp.", symbol: "PIPP.U", exchange: "NYSE" },
-{ name: "Pine Island Acquisition Corp.", symbol: "PIPP.WS", exchange: "NYSE" },
-{ name: "Ping Identity Holding Corp.", symbol: "PING", exchange: "NYSE" },
-{ name: "Pinnacle West Capital Corporation", symbol: "PNW", exchange: "NYSE" },
-{ name: "Pinterest, Inc.", symbol: "PINS", exchange: "NYSE" },
-{ name: "Pioneer Floating Rate Trust", symbol: "PHD", exchange: "NYSE" },
-{ name: "Pioneer High Income Trust", symbol: "PHT", exchange: "NYSE" },
-{ name: "Pioneer Municipal High Income Advantage Trust", symbol: "MAV", exchange: "NYSE" },
-{ name: "Pioneer Municipal High Income Trust", symbol: "MHI", exchange: "NYSE" },
-{ name: "Pioneer Natural Resources Company", symbol: "PXD", exchange: "NYSE" },
-{ name: "Piper Sandler Companies", symbol: "PIPR", exchange: "NYSE" },
-{ name: "Pitney Bowes Inc.", symbol: "PBI", exchange: "NYSE" },
-{ name: "Pitney Bowes Inc.", symbol: "PBI^B", exchange: "NYSE" },
-{ name: "PJT Partners Inc.", symbol: "PJT", exchange: "NYSE" },
-{ name: "Planet Fitness, Inc.", symbol: "PLNT", exchange: "NYSE" },
-{ name: "Plantronics, Inc.", symbol: "PLT", exchange: "NYSE" },
-{ name: "PlayAGS, Inc.", symbol: "AGS", exchange: "NYSE" },
-{ name: "PLDT Inc.", symbol: "PHI", exchange: "NYSE" },
-{ name: "Plymouth Industrial REIT, Inc.", symbol: "PLYM", exchange: "NYSE" },
-{ name: "PMV Consumer Acquisition Corp.", symbol: "PMVC", exchange: "NYSE" },
-{ name: "PMV Consumer Acquisition Corp.", symbol: "PMVC.U", exchange: "NYSE" },
-{ name: "PMV Consumer Acquisition Corp.", symbol: "PMVC.WS", exchange: "NYSE" },
-{ name: "PNC Financial Services Group, Inc. (The)", symbol: "PNC", exchange: "NYSE" },
-{ name: "PNC Financial Services Group, Inc. (The)", symbol: "PNC^P", exchange: "NYSE" },
-{ name: "PNM Resources, Inc. (Holding Co.)", symbol: "PNM", exchange: "NYSE" },
-{ name: "Polaris Inc.", symbol: "PII", exchange: "NYSE" },
-{ name: "Pontem Corporation", symbol: "PNTM.U", exchange: "NYSE" },
-{ name: "Portland General Electric Company", symbol: "POR", exchange: "NYSE" },
-{ name: "POSCO", symbol: "PKX", exchange: "NYSE" },
-{ name: "Post Holdings, Inc.", symbol: "POST", exchange: "NYSE" },
-{ name: "Postal Realty Trust, Inc.", symbol: "PSTL", exchange: "NYSE" },
-{ name: "PPG Industries, Inc.", symbol: "PPG", exchange: "NYSE" },
-{ name: "PPL Capital Funding, Inc.", symbol: "PPX", exchange: "NYSE" },
-{ name: "PPL Corporation", symbol: "PPL", exchange: "NYSE" },
-{ name: "PPlus Trust", symbol: "PYS", exchange: "NYSE" },
-{ name: "PPlus Trust", symbol: "PYT", exchange: "NYSE" },
-{ name: "PQ Group Holdings Inc.", symbol: "PQG", exchange: "NYSE" },
-{ name: "Precision Drilling Corporation", symbol: "PDS", exchange: "NYSE" },
-{ name: "Preferred Apartment Communities, Inc.", symbol: "APTS", exchange: "NYSE" },
-{ name: "Prestige Consumer Healthcare Inc.", symbol: "PBH", exchange: "NYSE" },
-{ name: "Pretium Resources, Inc.", symbol: "PVG", exchange: "NYSE" },
-{ name: "Prime Impact Acquisition I", symbol: "PIAI", exchange: "NYSE" },
-{ name: "Prime Impact Acquisition I", symbol: "PIAI.U", exchange: "NYSE" },
-{ name: "Prime Impact Acquisition I", symbol: "PIAI.WS", exchange: "NYSE" },
-{ name: "Primerica, Inc.", symbol: "PRI", exchange: "NYSE" },
-{ name: "Primo Water Corporation", symbol: "PRMW", exchange: "NYSE" },
-{ name: "Principal Real Estate Income Fund", symbol: "PGZ", exchange: "NYSE" },
-{ name: "Priority Income Fund, Inc.", symbol: "PRIF^A", exchange: "NYSE" },
-{ name: "Priority Income Fund, Inc.", symbol: "PRIF^B", exchange: "NYSE" },
-{ name: "Priority Income Fund, Inc.", symbol: "PRIF^C", exchange: "NYSE" },
-{ name: "Priority Income Fund, Inc.", symbol: "PRIF^D", exchange: "NYSE" },
-{ name: "Priority Income Fund, Inc.", symbol: "PRIF^E", exchange: "NYSE" },
-{ name: "Priority Income Fund, Inc.", symbol: "PRIF^F", exchange: "NYSE" },
-{ name: "ProAssurance Corporation", symbol: "PRA", exchange: "NYSE" },
-{ name: "Procter & Gamble Company (The)", symbol: "PG", exchange: "NYSE" },
-{ name: "PROG Holdings, Inc.", symbol: "AAN", exchange: "NYSE" },
-{ name: "PROG Holdings, Inc.", symbol: "PRG", exchange: "NYSE" },
-{ name: "Progressive Corporation (The)", symbol: "PGR", exchange: "NYSE" },
-{ name: "Prologis, Inc.", symbol: "PLD", exchange: "NYSE" },
-{ name: "ProPetro Holding Corp.", symbol: "PUMP", exchange: "NYSE" },
-{ name: "PROS Holdings, Inc.", symbol: "PRO", exchange: "NYSE" },
-{ name: "ProSight Global, Inc.", symbol: "PROS", exchange: "NYSE" },
-{ name: "Prospect Capital Corporation", symbol: "PBB", exchange: "NYSE" },
-{ name: "Prospect Capital Corporation", symbol: "PBC", exchange: "NYSE" },
-{ name: "Prospect Capital Corporation", symbol: "PBY", exchange: "NYSE" },
-{ name: "Prosperity Bancshares, Inc.", symbol: "PB", exchange: "NYSE" },
-{ name: "Proto Labs, Inc.", symbol: "PRLB", exchange: "NYSE" },
-{ name: "Provident Financial Services, Inc", symbol: "PFS", exchange: "NYSE" },
-{ name: "Prudential Financial, Inc.", symbol: "PFH", exchange: "NYSE" },
-{ name: "Prudential Financial, Inc.", symbol: "PRS", exchange: "NYSE" },
-{ name: "Prudential Financial, Inc.", symbol: "PRU", exchange: "NYSE" },
-{ name: "Prudential Public Limited Company", symbol: "PUK", exchange: "NYSE" },
-{ name: "Prudential Public Limited Company", symbol: "PUK^", exchange: "NYSE" },
-{ name: "Prudential Public Limited Company", symbol: "PUK^A", exchange: "NYSE" },
-{ name: "PS Business Parks, Inc.", symbol: "PSB", exchange: "NYSE" },
-{ name: "PS Business Parks, Inc.", symbol: "PSB^W", exchange: "NYSE" },
-{ name: "PS Business Parks, Inc.", symbol: "PSB^X", exchange: "NYSE" },
-{ name: "PS Business Parks, Inc.", symbol: "PSB^Y", exchange: "NYSE" },
-{ name: "PS Business Parks, Inc.", symbol: "PSB^Z", exchange: "NYSE" },
-{ name: "PT Telekomunikasi Indonesia, Tbk", symbol: "TLK", exchange: "NYSE" },
-{ name: "Public Service Enterprise Group Incorporated", symbol: "PEG", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA^C", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA^D", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA^E", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA^F", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA^G", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA^H", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA^I", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA^J", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA^K", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA^L", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA^M", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA^N", exchange: "NYSE" },
-{ name: "Public Storage", symbol: "PSA^O", exchange: "NYSE" },
-{ name: "PulteGroup, Inc.", symbol: "PHM", exchange: "NYSE" },
-{ name: "Pure Storage, Inc.", symbol: "PSTG", exchange: "NYSE" },
-{ name: "Putnam Managed Municipal Income Trust", symbol: "PMM", exchange: "NYSE" },
-{ name: "Putnam Master Intermediate Income Trust", symbol: "PIM", exchange: "NYSE" },
-{ name: "Putnam Municipal Opportunities Trust", symbol: "PMO", exchange: "NYSE" },
-{ name: "Putnam Premier Income Trust", symbol: "PPT", exchange: "NYSE" },
-{ name: "Puxin Limited", symbol: "NEW", exchange: "NYSE" },
-{ name: "PVH Corp.", symbol: "PVH", exchange: "NYSE" },
-{ name: "Pzena Investment Management Inc", symbol: "PZN", exchange: "NYSE" },
-{ name: "Q2 Holdings, Inc.", symbol: "QTWO", exchange: "NYSE" },
-{ name: "QEP Resources, Inc.", symbol: "QEP", exchange: "NYSE" },
-{ name: "Qiagen N.V.", symbol: "QGEN", exchange: "NYSE" },
-{ name: "QTS Realty Trust, Inc.", symbol: "QTS", exchange: "NYSE" },
-{ name: "QTS Realty Trust, Inc.", symbol: "QTS^A", exchange: "NYSE" },
-{ name: "QTS Realty Trust, Inc.", symbol: "QTS^B", exchange: "NYSE" },
-{ name: "Quad Graphics, Inc", symbol: "QUAD", exchange: "NYSE" },
-{ name: "Quaker Chemical Corporation", symbol: "KWR", exchange: "NYSE" },
-{ name: "Quanex Building Products Corporation", symbol: "NX", exchange: "NYSE" },
-{ name: "Quanta Services, Inc.", symbol: "PWR", exchange: "NYSE" },
-{ name: "QuantumScape Corporation", symbol: "QS", exchange: "NYSE" },
-{ name: "QuantumScape Corporation", symbol: "QS.WS", exchange: "NYSE" },
-{ name: "Qudian Inc.", symbol: "QD", exchange: "NYSE" },
-{ name: "Quest Diagnostics Incorporated", symbol: "DGX", exchange: "NYSE" },
-{ name: "Quotient Technology Inc.", symbol: "QUOT", exchange: "NYSE" },
-{ name: "QVC, Inc.", symbol: "QVCC", exchange: "NYSE" },
-{ name: "QVC, Inc.", symbol: "QVCD", exchange: "NYSE" },
-{ name: "Qwest Corporation", symbol: "CTAA", exchange: "NYSE" },
-{ name: "Qwest Corporation", symbol: "CTBB", exchange: "NYSE" },
-{ name: "Qwest Corporation", symbol: "CTDD", exchange: "NYSE" },
-{ name: "R.R. Donnelley & Sons Company", symbol: "RRD", exchange: "NYSE" },
-{ name: "Radian Group Inc.", symbol: "RDN", exchange: "NYSE" },
-{ name: "Rafael Holdings, Inc.", symbol: "RFL", exchange: "NYSE" },
-{ name: "Ralph Lauren Corporation", symbol: "RL", exchange: "NYSE" },
-{ name: "Range Resources Corporation", symbol: "RRC", exchange: "NYSE" },
-{ name: "Ranger Energy Services, Inc.", symbol: "RNGR", exchange: "NYSE" },
-{ name: "Ranpak Holdings Corp", symbol: "PACK", exchange: "NYSE" },
-{ name: "Raymond James Financial, Inc.", symbol: "RJF", exchange: "NYSE" },
-{ name: "Rayonier Advanced Materials Inc.", symbol: "RYAM", exchange: "NYSE" },
-{ name: "Rayonier Inc.", symbol: "RYN", exchange: "NYSE" },
-{ name: "Raytheon Technologies Corporation", symbol: "RTX", exchange: "NYSE" },
-{ name: "RE/MAX Holdings, Inc.", symbol: "RMAX", exchange: "NYSE" },
-{ name: "Ready Capital Corporation", symbol: "RC", exchange: "NYSE" },
-{ name: "Ready Capital Corporation", symbol: "RCA", exchange: "NYSE" },
-{ name: "Ready Capital Corporation", symbol: "RCB", exchange: "NYSE" },
-{ name: "Ready Capital Corporation", symbol: "RCP", exchange: "NYSE" },
-{ name: "Realogy Holdings Corp.", symbol: "RLGY", exchange: "NYSE" },
-{ name: "Realty Income Corporation", symbol: "O", exchange: "NYSE" },
-{ name: "Red Lion Hotels Corporation", symbol: "RLH", exchange: "NYSE" },
-{ name: "RedBall Acquisition Corp.", symbol: "RBAC", exchange: "NYSE" },
-{ name: "RedBall Acquisition Corp.", symbol: "RBAC.U", exchange: "NYSE" },
-{ name: "RedBall Acquisition Corp.", symbol: "RBAC.WS", exchange: "NYSE" },
-{ name: "Redwood Trust, Inc.", symbol: "RWT", exchange: "NYSE" },
-{ name: "Regal Beloit Corporation", symbol: "RBC", exchange: "NYSE" },
-{ name: "Regional Management Corp.", symbol: "RM", exchange: "NYSE" },
-{ name: "Regions Financial Corporation", symbol: "RF", exchange: "NYSE" },
-{ name: "Regions Financial Corporation", symbol: "RF^A", exchange: "NYSE" },
-{ name: "Regions Financial Corporation", symbol: "RF^B", exchange: "NYSE" },
-{ name: "Regions Financial Corporation", symbol: "RF^C", exchange: "NYSE" },
-{ name: "Regis Corporation", symbol: "RGS", exchange: "NYSE" },
-{ name: "Reinsurance Group of America, Incorporated", symbol: "RGA", exchange: "NYSE" },
-{ name: "Reinsurance Group of America, Incorporated", symbol: "RZA", exchange: "NYSE" },
-{ name: "Reinsurance Group of America, Incorporated", symbol: "RZB", exchange: "NYSE" },
-{ name: "Reinvent Technology Partners", symbol: "RTP", exchange: "NYSE" },
-{ name: "Reinvent Technology Partners", symbol: "RTP.U", exchange: "NYSE" },
-{ name: "Reinvent Technology Partners", symbol: "RTP.WS", exchange: "NYSE" },
-{ name: "Reinvent Technology Partners Z", symbol: "RTPZ", exchange: "NYSE" },
-{ name: "Reinvent Technology Partners Z", symbol: "RTPZ.U", exchange: "NYSE" },
-{ name: "Reinvent Technology Partners Z", symbol: "RTPZ.WS", exchange: "NYSE" },
-{ name: "Reliance Steel & Aluminum Co.", symbol: "RS", exchange: "NYSE" },
-{ name: "RELX PLC", symbol: "RELX", exchange: "NYSE" },
-{ name: "RenaissanceRe Holdings Ltd.", symbol: "RNR", exchange: "NYSE" },
-{ name: "RenaissanceRe Holdings Ltd.", symbol: "RNR^E", exchange: "NYSE" },
-{ name: "RenaissanceRe Holdings Ltd.", symbol: "RNR^F", exchange: "NYSE" },
-{ name: "Renesola Ltd.", symbol: "SOL", exchange: "NYSE" },
-{ name: "Renren Inc.", symbol: "RENN", exchange: "NYSE" },
-{ name: "Replay Acquisition Corp.", symbol: "RPLA", exchange: "NYSE" },
-{ name: "Replay Acquisition Corp.", symbol: "RPLA.U", exchange: "NYSE" },
-{ name: "Replay Acquisition Corp.", symbol: "RPLA.WS", exchange: "NYSE" },
-{ name: "Republic Services, Inc.", symbol: "RSG", exchange: "NYSE" },
-{ name: "Resideo Technologies, Inc.", symbol: "REZI", exchange: "NYSE" },
-{ name: "ResMed Inc.", symbol: "RMD", exchange: "NYSE" },
-{ name: "Resolute Forest Products Inc.", symbol: "RFP", exchange: "NYSE" },
-{ name: "Restaurant Brands International Inc.", symbol: "QSR", exchange: "NYSE" },
-{ name: "Retail Properties of America, Inc.", symbol: "RPAI", exchange: "NYSE" },
-{ name: "Retail Value Inc.", symbol: "RVI", exchange: "NYSE" },
-{ name: "REV Group, Inc.", symbol: "REVG", exchange: "NYSE" },
-{ name: "Revlon, Inc.", symbol: "REV", exchange: "NYSE" },
-{ name: "Revolve Group, Inc.", symbol: "RVLV", exchange: "NYSE" },
-{ name: "REX American Resources Corporation", symbol: "REX", exchange: "NYSE" },
-{ name: "Rexford Industrial Realty, Inc.", symbol: "REXR", exchange: "NYSE" },
-{ name: "Rexford Industrial Realty, Inc.", symbol: "REXR^A", exchange: "NYSE" },
-{ name: "Rexford Industrial Realty, Inc.", symbol: "REXR^B", exchange: "NYSE" },
-{ name: "Rexford Industrial Realty, Inc.", symbol: "REXR^C", exchange: "NYSE" },
-{ name: "Rexnord Corporation", symbol: "RXN", exchange: "NYSE" },
-{ name: "RH", symbol: "RH", exchange: "NYSE" },
-{ name: "Ribbit LEAP, Ltd.", symbol: "LEAP", exchange: "NYSE" },
-{ name: "Ribbit LEAP, Ltd.", symbol: "LEAP.U", exchange: "NYSE" },
-{ name: "Ribbit LEAP, Ltd.", symbol: "LEAP.WS", exchange: "NYSE" },
-{ name: "Rice Acquisition Corp.", symbol: "RICE", exchange: "NYSE" },
-{ name: "Rice Acquisition Corp.", symbol: "RICE.U", exchange: "NYSE" },
-{ name: "Rice Acquisition Corp.", symbol: "RICE.WS", exchange: "NYSE" },
-{ name: "Ringcentral, Inc.", symbol: "RNG", exchange: "NYSE" },
-{ name: "Rio Tinto Plc", symbol: "RIO", exchange: "NYSE" },
-{ name: "Ritchie Bros. Auctioneers Incorporated", symbol: "RBA", exchange: "NYSE" },
-{ name: "Rite Aid Corporation", symbol: "RAD", exchange: "NYSE" },
-{ name: "RiverNorth Flexible Municipal Income Fund, Inc.", symbol: "RFM", exchange: "NYSE" },
-{ name: "RiverNorth Managed Duration Municipal Income Fund, Inc.", symbol: "RMM", exchange: "NYSE" },
-{ name: "RiverNorth Opportunistic Municipal Income Fund, Inc.", symbol: "RMI", exchange: "NYSE" },
-{ name: "RiverNorth Opportunities Fund, Inc.", symbol: "RIV", exchange: "NYSE" },
-{ name: "RiverNorth Specialty Finance Corporation", symbol: "RMPL^", exchange: "NYSE" },
-{ name: "RiverNorth Specialty Finance Corporation", symbol: "RSF", exchange: "NYSE" },
-{ name: "RiverNorth/DoubleLine Strategic Opportunity Fund, Inc.", symbol: "OPP", exchange: "NYSE" },
-{ name: "RiverNorth/DoubleLine Strategic Opportunity Fund, Inc.", symbol: "OPP^A", exchange: "NYSE" },
-{ name: "RLI Corp.", symbol: "RLI", exchange: "NYSE" },
-{ name: "RLJ Lodging Trust", symbol: "RLJ", exchange: "NYSE" },
-{ name: "RLJ Lodging Trust", symbol: "RLJ^A", exchange: "NYSE" },
-{ name: "Robert Half International Inc.", symbol: "RHI", exchange: "NYSE" },
-{ name: "Rocket Companies, Inc.", symbol: "RKT", exchange: "NYSE" },
-{ name: "Rockwell Automation, Inc.", symbol: "ROK", exchange: "NYSE" },
-{ name: "Rogers Communication, Inc.", symbol: "RCI", exchange: "NYSE" },
-{ name: "Rogers Corporation", symbol: "ROG", exchange: "NYSE" },
-{ name: "Rollins, Inc.", symbol: "ROL", exchange: "NYSE" },
-{ name: "Romeo Power, Inc.", symbol: "RMO", exchange: "NYSE" },
-{ name: "Romeo Power, Inc.", symbol: "RMO.WS", exchange: "NYSE" },
-{ name: "Roper Technologies, Inc.", symbol: "ROP", exchange: "NYSE" },
-{ name: "Rotor Acquisition Corp.", symbol: "ROT.U", exchange: "NYSE" },
-{ name: "Royal Bank Of Canada", symbol: "RY", exchange: "NYSE" },
-{ name: "Royal Bank Of Canada", symbol: "RY^T", exchange: "NYSE" },
-{ name: "Royal Caribbean Group", symbol: "RCL", exchange: "NYSE" },
-{ name: "Royal Dutch Shell PLC", symbol: "RDS.A", exchange: "NYSE" },
-{ name: "Royal Dutch Shell PLC", symbol: "RDS.B", exchange: "NYSE" },
-{ name: "Royce Global Value Trust, Inc.", symbol: "RGT", exchange: "NYSE" },
-{ name: "Royce Micro-Cap Trust, Inc.", symbol: "RMT", exchange: "NYSE" },
-{ name: "Royce Value Trust, Inc.", symbol: "RVT", exchange: "NYSE" },
-{ name: "RPC, Inc.", symbol: "RES", exchange: "NYSE" },
-{ name: "RPM International Inc.", symbol: "RPM", exchange: "NYSE" },
-{ name: "RPT Realty", symbol: "RPT", exchange: "NYSE" },
-{ name: "RPT Realty", symbol: "RPT^D", exchange: "NYSE" },
-{ name: "Rush Street Interactive, Inc.", symbol: "RSI", exchange: "NYSE" },
-{ name: "Rush Street Interactive, Inc.", symbol: "RSI.WS", exchange: "NYSE" },
-{ name: "RYB Education, Inc.", symbol: "RYB", exchange: "NYSE" },
-{ name: "Ryder System, Inc.", symbol: "R", exchange: "NYSE" },
-{ name: "Ryerson Holding Corporation", symbol: "RYI", exchange: "NYSE" },
-{ name: "Ryman Hospitality Properties, Inc.", symbol: "RHP", exchange: "NYSE" },
-{ name: "S&P Global Inc.", symbol: "SPGI", exchange: "NYSE" },
-{ name: "Sabine Royalty Trust", symbol: "SBR", exchange: "NYSE" },
-{ name: "Safe Bulkers, Inc", symbol: "SB", exchange: "NYSE" },
-{ name: "Safe Bulkers, Inc", symbol: "SB^C", exchange: "NYSE" },
-{ name: "Safe Bulkers, Inc", symbol: "SB^D", exchange: "NYSE" },
-{ name: "Safeguard Scientifics, Inc.", symbol: "SFE", exchange: "NYSE" },
-{ name: "Safehold Inc.", symbol: "SAFE", exchange: "NYSE" },
-{ name: "SailPoint Technologies Holdings, Inc.", symbol: "SAIL", exchange: "NYSE" },
-{ name: "Salesforce.com Inc", symbol: "CRM", exchange: "NYSE" },
-{ name: "Salient Midstream & MLP Fund", symbol: "SMM", exchange: "NYSE" },
-{ name: "Sally Beauty Holdings, Inc.", symbol: "SBH", exchange: "NYSE" },
-{ name: "San Juan Basin Royalty Trust", symbol: "SJT", exchange: "NYSE" },
-{ name: "Sandbridge Acquisition Corporation", symbol: "SBG", exchange: "NYSE" },
-{ name: "Sandbridge Acquisition Corporation", symbol: "SBG.U", exchange: "NYSE" },
-{ name: "Sandbridge Acquisition Corporation", symbol: "SBG.WS", exchange: "NYSE" },
-{ name: "SandRidge Energy, Inc.", symbol: "SD", exchange: "NYSE" },
-{ name: "Sandstorm Gold Ltd", symbol: "SAND", exchange: "NYSE" },
-{ name: "Santander Consumer USA Holdings Inc.", symbol: "SC", exchange: "NYSE" },
-{ name: "SAP SE", symbol: "SAP", exchange: "NYSE" },
-{ name: "Saratoga Investment Corp", symbol: "SAF", exchange: "NYSE" },
-{ name: "Saratoga Investment Corp", symbol: "SAK", exchange: "NYSE" },
-{ name: "Saratoga Investment Corp", symbol: "SAR", exchange: "NYSE" },
-{ name: "Sasol Ltd.", symbol: "SSL", exchange: "NYSE" },
-{ name: "Saul Centers, Inc.", symbol: "BFS", exchange: "NYSE" },
-{ name: "Saul Centers, Inc.", symbol: "BFS^D", exchange: "NYSE" },
-{ name: "Saul Centers, Inc.", symbol: "BFS^E", exchange: "NYSE" },
-{ name: "SC Health Corporation", symbol: "SCPE", exchange: "NYSE" },
-{ name: "SC Health Corporation", symbol: "SCPE.U", exchange: "NYSE" },
-{ name: "SC Health Corporation", symbol: "SCPE.WS", exchange: "NYSE" },
-{ name: "Schlumberger N.V.", symbol: "SLB", exchange: "NYSE" },
-{ name: "Schneider National, Inc.", symbol: "SNDR", exchange: "NYSE" },
-{ name: "Schweitzer-Mauduit International, Inc.", symbol: "SWM", exchange: "NYSE" },
-{ name: "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION", symbol: "SAIC", exchange: "NYSE" },
-{ name: "Scorpio Bulkers Inc.", symbol: "SALT", exchange: "NYSE" },
-{ name: "Scorpio Tankers Inc.", symbol: "SBBA", exchange: "NYSE" },
-{ name: "Scorpio Tankers Inc.", symbol: "STNG", exchange: "NYSE" },
-{ name: "Scotts Miracle-Gro Company (The)", symbol: "SMG", exchange: "NYSE" },
-{ name: "Scudder Municiple Income Trust", symbol: "KTF", exchange: "NYSE" },
-{ name: "Scudder Strategic Municiple Income Trust", symbol: "KSM", exchange: "NYSE" },
-{ name: "Scully Royalty Ltd.", symbol: "SRL", exchange: "NYSE" },
-{ name: "Sculptor Capital Management, Inc.", symbol: "SCU", exchange: "NYSE" },
-{ name: "SCVX Corp.", symbol: "SCVX", exchange: "NYSE" },
-{ name: "SCVX Corp.", symbol: "SCVX.U", exchange: "NYSE" },
-{ name: "SCVX Corp.", symbol: "SCVX.WS", exchange: "NYSE" },
-{ name: "Sea Limited", symbol: "SE", exchange: "NYSE" },
-{ name: "Seabridge Gold, Inc.", symbol: "SA", exchange: "NYSE" },
-{ name: "SEACOR Holdings, Inc.", symbol: "CKH", exchange: "NYSE" },
-{ name: "SEACOR Marine Holdings Inc.", symbol: "SMHI", exchange: "NYSE" },
-{ name: "Sealed Air Corporation", symbol: "SEE", exchange: "NYSE" },
-{ name: "SeaWorld Entertainment, Inc.", symbol: "SEAS", exchange: "NYSE" },
-{ name: "Select Energy Services, Inc.", symbol: "WTTR", exchange: "NYSE" },
-{ name: "Select Medical Holdings Corporation", symbol: "SEM", exchange: "NYSE" },
-{ name: "SelectQuote, Inc.", symbol: "SLQT", exchange: "NYSE" },
-{ name: "Sempra Energy", symbol: "SRE", exchange: "NYSE" },
-{ name: "Sempra Energy", symbol: "SRE^B", exchange: "NYSE" },
-{ name: "Sempra Energy", symbol: "SREA", exchange: "NYSE" },
-{ name: "Sensata Technologies Holding plc", symbol: "ST", exchange: "NYSE" },
-{ name: "Sensient Technologies Corporation", symbol: "SXT", exchange: "NYSE" },
-{ name: "Sequans Communications S.A.", symbol: "SQNS", exchange: "NYSE" },
-{ name: "Seritage Growth Properties", symbol: "SRG", exchange: "NYSE" },
-{ name: "Seritage Growth Properties", symbol: "SRG^A", exchange: "NYSE" },
-{ name: "Service Corporation International", symbol: "SCI", exchange: "NYSE" },
-{ name: "ServiceNow, Inc.", symbol: "NOW", exchange: "NYSE" },
-{ name: "SFL Corporation Ltd", symbol: "SFL", exchange: "NYSE" },
-{ name: "Shake Shack, Inc.", symbol: "SHAK", exchange: "NYSE" },
-{ name: "Shaw Communications Inc.", symbol: "SJR", exchange: "NYSE" },
-{ name: "Shell Midstream Partners, L.P.", symbol: "SHLX", exchange: "NYSE" },
-{ name: "Sherwin-Williams Company (The)", symbol: "SHW", exchange: "NYSE" },
-{ name: "Shift4 Payments, Inc.", symbol: "FOUR", exchange: "NYSE" },
-{ name: "Shinhan Financial Group Co Ltd", symbol: "SHG", exchange: "NYSE" },
-{ name: "Shopify Inc.", symbol: "SHOP", exchange: "NYSE" },
-{ name: "Shutterstock, Inc.", symbol: "SSTK", exchange: "NYSE" },
-{ name: "Sibanye Stillwater Limited", symbol: "SBSW", exchange: "NYSE" },
-{ name: "Signet Jewelers Limited", symbol: "SIG", exchange: "NYSE" },
-{ name: "SilverBow Resorces, Inc.", symbol: "SBOW", exchange: "NYSE" },
-{ name: "Silvergate Capital Corporation", symbol: "SI", exchange: "NYSE" },
-{ name: "Simon Property Group, Inc.", symbol: "SPG", exchange: "NYSE" },
-{ name: "Simon Property Group, Inc.", symbol: "SPG^J", exchange: "NYSE" },
-{ name: "Simpson Manufacturing Company, Inc.", symbol: "SSD", exchange: "NYSE" },
-{ name: "SINOPEC Shangai Petrochemical Company, Ltd.", symbol: "SHI", exchange: "NYSE" },
-{ name: "SITE Centers Corp.", symbol: "SITC", exchange: "NYSE" },
-{ name: "SITE Centers Corp.", symbol: "SITC^A", exchange: "NYSE" },
-{ name: "SITE Centers Corp.", symbol: "SITC^K", exchange: "NYSE" },
-{ name: "SiteOne Landscape Supply, Inc.", symbol: "SITE", exchange: "NYSE" },
-{ name: "Six Flags Entertainment Corporation New", symbol: "SIX", exchange: "NYSE" },
-{ name: "Sixth Street Specialty Lending, Inc.", symbol: "TSLX", exchange: "NYSE" },
-{ name: "SJW Group", symbol: "SJW", exchange: "NYSE" },
-{ name: "SK Telecom Co., Ltd.", symbol: "SKM", exchange: "NYSE" },
-{ name: "Skechers U.S.A., Inc.", symbol: "SKX", exchange: "NYSE" },
-{ name: "Skillz Inc.", symbol: "SKLZ", exchange: "NYSE" },
-{ name: "Skillz Inc.", symbol: "SKLZ.WS", exchange: "NYSE" },
-{ name: "Skyline Champion Corporation", symbol: "SKY", exchange: "NYSE" },
-{ name: "SL Green Realty Corp", symbol: "SLG", exchange: "NYSE" },
-{ name: "SL Green Realty Corp", symbol: "SLG^I", exchange: "NYSE" },
-{ name: "Slack Technologies, Inc.", symbol: "WORK", exchange: "NYSE" },
-{ name: "SM Energy Company", symbol: "SM", exchange: "NYSE" },
-{ name: "Smartsheet Inc.", symbol: "SMAR", exchange: "NYSE" },
-{ name: "Smith & Nephew SNATS, Inc.", symbol: "SNN", exchange: "NYSE" },
-{ name: "Snap Inc.", symbol: "SNAP", exchange: "NYSE" },
-{ name: "Snap-On Incorporated", symbol: "SNA", exchange: "NYSE" },
-{ name: "Snowflake Inc.", symbol: "SNOW", exchange: "NYSE" },
-{ name: "Social Capital Hedosophia Holdings Corp. IV", symbol: "IPOD", exchange: "NYSE" },
-{ name: "Social Capital Hedosophia Holdings Corp. IV", symbol: "IPOD.U", exchange: "NYSE" },
-{ name: "Social Capital Hedosophia Holdings Corp. IV", symbol: "IPOD.WS", exchange: "NYSE" },
-{ name: "Social Capital Hedosophia Holdings Corp. V", symbol: "IPOE", exchange: "NYSE" },
-{ name: "Social Capital Hedosophia Holdings Corp. V", symbol: "IPOE.U", exchange: "NYSE" },
-{ name: "Social Capital Hedosophia Holdings Corp. V", symbol: "IPOE.WS", exchange: "NYSE" },
-{ name: "Social Capital Hedosophia Holdings Corp. VI", symbol: "IPOF", exchange: "NYSE" },
-{ name: "Social Capital Hedosophia Holdings Corp. VI", symbol: "IPOF.U", exchange: "NYSE" },
-{ name: "Social Capital Hedosophia Holdings Corp. VI", symbol: "IPOF.WS", exchange: "NYSE" },
-{ name: "Sociedad Quimica y Minera S.A.", symbol: "SQM", exchange: "NYSE" },
-{ name: "Sogou Inc.", symbol: "SOGO", exchange: "NYSE" },
-{ name: "Solaris Oilfield Infrastructure, Inc.", symbol: "SOI", exchange: "NYSE" },
-{ name: "SolarWinds Corporation", symbol: "SWI", exchange: "NYSE" },
-{ name: "Sonic Automotive, Inc.", symbol: "SAH", exchange: "NYSE" },
-{ name: "Sonoco Products Company", symbol: "SON", exchange: "NYSE" },
-{ name: "Sony Corp Ord", symbol: "SNE", exchange: "NYSE" },
-{ name: "SOS Limited", symbol: "SOS", exchange: "NYSE" },
-{ name: "Source Capital, Inc.", symbol: "SOR", exchange: "NYSE" },
-{ name: "South Jersey Industries, Inc.", symbol: "SJI", exchange: "NYSE" },
-{ name: "South Jersey Industries, Inc.", symbol: "SJIJ", exchange: "NYSE" },
-{ name: "South Jersey Industries, Inc.", symbol: "SJIU", exchange: "NYSE" },
-{ name: "Southern California Edison Company", symbol: "SCE^G", exchange: "NYSE" },
-{ name: "Southern California Edison Company", symbol: "SCE^H", exchange: "NYSE" },
-{ name: "Southern California Edison Company", symbol: "SCE^J", exchange: "NYSE" },
-{ name: "Southern California Edison Company", symbol: "SCE^K", exchange: "NYSE" },
-{ name: "Southern California Edison Company", symbol: "SCE^L", exchange: "NYSE" },
-{ name: "Southern Company (The)", symbol: "SO", exchange: "NYSE" },
-{ name: "Southern Company (The)", symbol: "SOJB", exchange: "NYSE" },
-{ name: "Southern Company (The)", symbol: "SOJC", exchange: "NYSE" },
-{ name: "Southern Company (The)", symbol: "SOJD", exchange: "NYSE" },
-{ name: "Southern Company (The)", symbol: "SOJE", exchange: "NYSE" },
-{ name: "Southern Company (The)", symbol: "SOLN", exchange: "NYSE" },
-{ name: "Southern Copper Corporation", symbol: "SCCO", exchange: "NYSE" },
-{ name: "Southwest Airlines Company", symbol: "LUV", exchange: "NYSE" },
-{ name: "Southwest Gas Holdings, Inc.", symbol: "SWX", exchange: "NYSE" },
-{ name: "Southwestern Energy Company", symbol: "SWN", exchange: "NYSE" },
-{ name: "Spartan Acquisition Corp. II", symbol: "SPRQ", exchange: "NYSE" },
-{ name: "Spartan Acquisition Corp. II", symbol: "SPRQ.U", exchange: "NYSE" },
-{ name: "Spartan Acquisition Corp. II", symbol: "SPRQ.WS", exchange: "NYSE" },
-{ name: "Special Opportunities Fund Inc.", symbol: "SPE", exchange: "NYSE" },
-{ name: "Special Opportunities Fund Inc.", symbol: "SPE^B", exchange: "NYSE" },
-{ name: "Spectrum Brands Holdings, Inc.", symbol: "SPB", exchange: "NYSE" },
-{ name: "Spire Inc.", symbol: "SR", exchange: "NYSE" },
-{ name: "Spire Inc.", symbol: "SR^A", exchange: "NYSE" },
-{ name: "Spirit Aerosystems Holdings, Inc.", symbol: "SPR", exchange: "NYSE" },
-{ name: "Spirit Airlines, Inc.", symbol: "SAVE", exchange: "NYSE" },
-{ name: "Spirit Realty Capital, Inc.", symbol: "SRC", exchange: "NYSE" },
-{ name: "Spirit Realty Capital, Inc.", symbol: "SRC^A", exchange: "NYSE" },
-{ name: "Sports Entertainment Acquisition Corp.", symbol: "SEAH", exchange: "NYSE" },
-{ name: "Sports Entertainment Acquisition Corp.", symbol: "SEAH.U", exchange: "NYSE" },
-{ name: "Sports Entertainment Acquisition Corp.", symbol: "SEAH.WS", exchange: "NYSE" },
-{ name: "Spotify Technology S.A.", symbol: "SPOT", exchange: "NYSE" },
-{ name: "Sprague Resources LP", symbol: "SRLP", exchange: "NYSE" },
-{ name: "Sprott Inc.", symbol: "SII", exchange: "NYSE" },
-{ name: "SPX Corporation", symbol: "SPXC", exchange: "NYSE" },
-{ name: "SPX FLOW, Inc.", symbol: "FLOW", exchange: "NYSE" },
-{ name: "Square, Inc.", symbol: "SQ", exchange: "NYSE" },
-{ name: "SQZ Biotechnologies Company", symbol: "SQZ", exchange: "NYSE" },
-{ name: "St. Joe Company (The)", symbol: "JOE", exchange: "NYSE" },
-{ name: "Stag Industrial, Inc.", symbol: "STAG", exchange: "NYSE" },
-{ name: "Stag Industrial, Inc.", symbol: "STAG^C", exchange: "NYSE" },
-{ name: "Standard Motor Products, Inc.", symbol: "SMP", exchange: "NYSE" },
-{ name: "Standex International Corporation", symbol: "SXI", exchange: "NYSE" },
-{ name: "Stanley Black & Decker, Inc.", symbol: "SWK", exchange: "NYSE" },
-{ name: "Stanley Black & Decker, Inc.", symbol: "SWT", exchange: "NYSE" },
-{ name: "Stantec Inc", symbol: "STN", exchange: "NYSE" },
-{ name: "Star Group, L.P.", symbol: "SGU", exchange: "NYSE" },
-{ name: "Star Peak Corp II", symbol: "STPC.U", exchange: "NYSE" },
-{ name: "Star Peak Energy Transition Corp.", symbol: "STPK", exchange: "NYSE" },
-{ name: "Star Peak Energy Transition Corp.", symbol: "STPK.U", exchange: "NYSE" },
-{ name: "Star Peak Energy Transition Corp.", symbol: "STPK.WS", exchange: "NYSE" },
-{ name: "StarTek, Inc.", symbol: "SRT", exchange: "NYSE" },
-{ name: "STARWOOD PROPERTY TRUST, INC.", symbol: "STWD", exchange: "NYSE" },
-{ name: "State Street Corporation", symbol: "STT", exchange: "NYSE" },
-{ name: "State Street Corporation", symbol: "STT^D", exchange: "NYSE" },
-{ name: "State Street Corporation", symbol: "STT^G", exchange: "NYSE" },
-{ name: "Steel Partners Holdings LP", symbol: "SPLP", exchange: "NYSE" },
-{ name: "Steel Partners Holdings LP", symbol: "SPLP^A", exchange: "NYSE" },
-{ name: "Steelcase Inc.", symbol: "SCS", exchange: "NYSE" },
-{ name: "Stellantis N.V.", symbol: "STLA", exchange: "NYSE" },
-{ name: "Stellus Capital Investment Corporation", symbol: "SCA", exchange: "NYSE" },
-{ name: "Stellus Capital Investment Corporation", symbol: "SCM", exchange: "NYSE" },
-{ name: "Stepan Company", symbol: "SCL", exchange: "NYSE" },
-{ name: "STERIS plc", symbol: "STE", exchange: "NYSE" },
-{ name: "Sterling Bancorp", symbol: "STL", exchange: "NYSE" },
-{ name: "Sterling Bancorp", symbol: "STL^A", exchange: "NYSE" },
-{ name: "Stewart Information Services Corporation", symbol: "STC", exchange: "NYSE" },
-{ name: "Stifel Financial Corporation", symbol: "SF", exchange: "NYSE" },
-{ name: "Stifel Financial Corporation", symbol: "SF^A", exchange: "NYSE" },
-{ name: "Stifel Financial Corporation", symbol: "SF^B", exchange: "NYSE" },
-{ name: "Stifel Financial Corporation", symbol: "SF^C", exchange: "NYSE" },
-{ name: "Stifel Financial Corporation", symbol: "SFB", exchange: "NYSE" },
-{ name: "STMicroelectronics N.V.", symbol: "STM", exchange: "NYSE" },
-{ name: "Stone Harbor Emerging Markets Income Fund", symbol: "EDF", exchange: "NYSE" },
-{ name: "Stone Harbor Emerging Markets Total Income Fund", symbol: "EDI", exchange: "NYSE" },
-{ name: "StoneMor Inc.", symbol: "STON", exchange: "NYSE" },
-{ name: "Stoneridge, Inc.", symbol: "SRI", exchange: "NYSE" },
-{ name: "STORE Capital Corporation", symbol: "STOR", exchange: "NYSE" },
-{ name: "STRATS Trust", symbol: "GJH", exchange: "NYSE" },
-{ name: "STRATS Trust", symbol: "GJO", exchange: "NYSE" },
-{ name: "STRATS Trust", symbol: "GJS", exchange: "NYSE" },
-{ name: "Stride, Inc.", symbol: "LRN", exchange: "NYSE" },
-{ name: "Stryker Corporation", symbol: "SYK", exchange: "NYSE" },
-{ name: "Studio City International Holdings Limited", symbol: "MSC", exchange: "NYSE" },
-{ name: "Sturm, Ruger & Company, Inc.", symbol: "RGR", exchange: "NYSE" },
-{ name: "Suburban Propane Partners, L.P.", symbol: "SPH", exchange: "NYSE" },
-{ name: "Sumitomo Mitsui Financial Group Inc", symbol: "SMFG", exchange: "NYSE" },
-{ name: "Summit Hotel Properties, Inc.", symbol: "INN", exchange: "NYSE" },
-{ name: "Summit Hotel Properties, Inc.", symbol: "INN^D", exchange: "NYSE" },
-{ name: "Summit Hotel Properties, Inc.", symbol: "INN^E", exchange: "NYSE" },
-{ name: "Summit Materials, Inc.", symbol: "SUM", exchange: "NYSE" },
-{ name: "Summit Midstream Partners, LP", symbol: "SMLP", exchange: "NYSE" },
-{ name: "Sun Communities, Inc.", symbol: "SUI", exchange: "NYSE" },
-{ name: "Sun Life Financial Inc.", symbol: "SLF", exchange: "NYSE" },
-{ name: "SunCoke Energy, Inc.", symbol: "SXC", exchange: "NYSE" },
-{ name: "Suncor Energy  Inc.", symbol: "SU", exchange: "NYSE" },
-{ name: "Sunlands Technology Group", symbol: "STG", exchange: "NYSE" },
-{ name: "Sunnova Energy International Inc.", symbol: "NOVA", exchange: "NYSE" },
-{ name: "Sunoco LP", symbol: "SUN", exchange: "NYSE" },
-{ name: "Sunstone Hotel Investors, Inc.", symbol: "SHO", exchange: "NYSE" },
-{ name: "Sunstone Hotel Investors, Inc.", symbol: "SHO^E", exchange: "NYSE" },
-{ name: "Sunstone Hotel Investors, Inc.", symbol: "SHO^F", exchange: "NYSE" },
-{ name: "Superior Industries International, Inc.", symbol: "SUP", exchange: "NYSE" },
-{ name: "Supernova Partners Acquisition Company, Inc.", symbol: "SPNV", exchange: "NYSE" },
-{ name: "Supernova Partners Acquisition Company, Inc.", symbol: "SPNV.U", exchange: "NYSE" },
-{ name: "Supernova Partners Acquisition Company, Inc.", symbol: "SPNV.WS", exchange: "NYSE" },
-{ name: "Sustainable Opportunities Acquisition Corp.", symbol: "SOAC", exchange: "NYSE" },
-{ name: "Sustainable Opportunities Acquisition Corp.", symbol: "SOAC.U", exchange: "NYSE" },
-{ name: "Sustainable Opportunities Acquisition Corp.", symbol: "SOAC.WS", exchange: "NYSE" },
-{ name: "Suzano S.A.", symbol: "SUZ", exchange: "NYSE" },
-{ name: "Swiss Helvetia Fund, Inc. (The)", symbol: "SWZ", exchange: "NYSE" },
-{ name: "Switch, Inc.", symbol: "SWCH", exchange: "NYSE" },
-{ name: "Switchback Energy Acquisition Corporation", symbol: "SBE", exchange: "NYSE" },
-{ name: "Switchback Energy Acquisition Corporation", symbol: "SBE.U", exchange: "NYSE" },
-{ name: "Switchback Energy Acquisition Corporation", symbol: "SBE.WS", exchange: "NYSE" },
-{ name: "Switchback II Corporation", symbol: "SWBK.U", exchange: "NYSE" },
-{ name: "Synchrony Financial", symbol: "SYF", exchange: "NYSE" },
-{ name: "Synchrony Financial", symbol: "SYF^A", exchange: "NYSE" },
-{ name: "Synnex Corporation", symbol: "SNX", exchange: "NYSE" },
-{ name: "Synovus Financial Corp.", symbol: "SNV", exchange: "NYSE" },
-{ name: "Synovus Financial Corp.", symbol: "SNV^D", exchange: "NYSE" },
-{ name: "Synovus Financial Corp.", symbol: "SNV^E", exchange: "NYSE" },
-{ name: "Synthetic Fixed-Income Securities, Inc.", symbol: "GJP", exchange: "NYSE" },
-{ name: "Synthetic Fixed-Income Securities, Inc.", symbol: "GJR", exchange: "NYSE" },
-{ name: "Synthetic Fixed-Income Securities, Inc.", symbol: "GJT", exchange: "NYSE" },
-{ name: "Sysco Corporation", symbol: "SYY", exchange: "NYSE" },
-{ name: "Systemax Inc.", symbol: "SYX", exchange: "NYSE" },
-{ name: "Tailwind Acquisition Corp.", symbol: "TWND", exchange: "NYSE" },
-{ name: "Tailwind Acquisition Corp.", symbol: "TWND.U", exchange: "NYSE" },
-{ name: "Tailwind Acquisition Corp.", symbol: "TWND.WS", exchange: "NYSE" },
-{ name: "Taiwan Fund, Inc. (The)", symbol: "TWN", exchange: "NYSE" },
-{ name: "Taiwan Semiconductor Manufacturing Company Ltd.", symbol: "TSM", exchange: "NYSE" },
-{ name: "Takeda Pharmaceutical Company Limited", symbol: "TAK", exchange: "NYSE" },
-{ name: "TAL Education Group", symbol: "TAL", exchange: "NYSE" },
-{ name: "Talos Energy, Inc.", symbol: "TALO", exchange: "NYSE" },
-{ name: "Tanger Factory Outlet Centers, Inc.", symbol: "SKT", exchange: "NYSE" },
-{ name: "Tapestry, Inc.", symbol: "TPR", exchange: "NYSE" },
-{ name: "Targa Resources, Inc.", symbol: "TRGP", exchange: "NYSE" },
-{ name: "Target Corporation", symbol: "TGT", exchange: "NYSE" },
-{ name: "Taro Pharmaceutical Industries Ltd.", symbol: "TARO", exchange: "NYSE" },
-{ name: "Tata Motors Ltd", symbol: "TTM", exchange: "NYSE" },
-{ name: "Taylor Morrison Home Corporation", symbol: "TMHC", exchange: "NYSE" },
-{ name: "TC Energy Corporation", symbol: "TRP", exchange: "NYSE" },
-{ name: "TC PipeLines, LP", symbol: "TCP", exchange: "NYSE" },
-{ name: "TCW Strategic Income Fund, Inc.", symbol: "TSI", exchange: "NYSE" },
-{ name: "TE Connectivity Ltd.", symbol: "TEL", exchange: "NYSE" },
-{ name: "Team, Inc.", symbol: "TISI", exchange: "NYSE" },
-{ name: "TechnipFMC plc", symbol: "FTI", exchange: "NYSE" },
-{ name: "Teck Resources Ltd", symbol: "TECK", exchange: "NYSE" },
-{ name: "Teekay Corporation", symbol: "TK", exchange: "NYSE" },
-{ name: "Teekay LNG Partners L.P.", symbol: "TGP", exchange: "NYSE" },
-{ name: "Teekay LNG Partners L.P.", symbol: "TGP^A", exchange: "NYSE" },
-{ name: "Teekay LNG Partners L.P.", symbol: "TGP^B", exchange: "NYSE" },
-{ name: "Teekay Tankers Ltd.", symbol: "TNK", exchange: "NYSE" },
-{ name: "TEGNA Inc.", symbol: "TGNA", exchange: "NYSE" },
-{ name: "Tejon Ranch Co", symbol: "TRC", exchange: "NYSE" },
-{ name: "Tekla Healthcare Investors", symbol: "HQH", exchange: "NYSE" },
-{ name: "Tekla Healthcare Opportunies Fund", symbol: "THQ", exchange: "NYSE" },
-{ name: "Tekla Life Sciences Investors", symbol: "HQL", exchange: "NYSE" },
-{ name: "Tekla World Healthcare Fund", symbol: "THW", exchange: "NYSE" },
-{ name: "Teladoc Health, Inc.", symbol: "TDOC", exchange: "NYSE" },
-{ name: "Telecom Argentina Stet - France Telecom S.A.", symbol: "TEO", exchange: "NYSE" },
-{ name: "Teledyne Technologies Incorporated", symbol: "TDY", exchange: "NYSE" },
-{ name: "Teleflex Incorporated", symbol: "TFX", exchange: "NYSE" },
-{ name: "Telefonica Brasil S.A.", symbol: "VIV", exchange: "NYSE" },
-{ name: "Telefonica SA", symbol: "TEF", exchange: "NYSE" },
-{ name: "Telephone and Data Systems, Inc.", symbol: "TDA", exchange: "NYSE" },
-{ name: "Telephone and Data Systems, Inc.", symbol: "TDE", exchange: "NYSE" },
-{ name: "Telephone and Data Systems, Inc.", symbol: "TDI", exchange: "NYSE" },
-{ name: "Telephone and Data Systems, Inc.", symbol: "TDJ", exchange: "NYSE" },
-{ name: "Telephone and Data Systems, Inc.", symbol: "TDS", exchange: "NYSE" },
-{ name: "TELUS Corporation", symbol: "TU", exchange: "NYSE" },
-{ name: "Templeton Dragon Fund, Inc.", symbol: "TDF", exchange: "NYSE" },
-{ name: "Templeton Emerging Markets Fund", symbol: "EMF", exchange: "NYSE" },
-{ name: "Templeton Emerging Markets Income Fund, Inc.", symbol: "TEI", exchange: "NYSE" },
-{ name: "Templeton Global Income Fund, Inc.", symbol: "GIM", exchange: "NYSE" },
-{ name: "Tempur Sealy International, Inc.", symbol: "TPX", exchange: "NYSE" },
-{ name: "Tenaris S.A.", symbol: "TS", exchange: "NYSE" },
-{ name: "Tencent Music Entertainment Group", symbol: "TME", exchange: "NYSE" },
-{ name: "Tenet Healthcare Corporation", symbol: "THC", exchange: "NYSE" },
-{ name: "Tennant Company", symbol: "TNC", exchange: "NYSE" },
-{ name: "Tenneco Inc.", symbol: "TEN", exchange: "NYSE" },
-{ name: "Tennessee Valley Authority", symbol: "TVC", exchange: "NYSE" },
-{ name: "Tennessee Valley Authority", symbol: "TVE", exchange: "NYSE" },
-{ name: "Teradata Corporation", symbol: "TDC", exchange: "NYSE" },
-{ name: "Terex Corporation", symbol: "TEX", exchange: "NYSE" },
-{ name: "Terminix Global Holdings, Inc.", symbol: "TMX", exchange: "NYSE" },
-{ name: "Ternium S.A.", symbol: "TX", exchange: "NYSE" },
-{ name: "Terreno Realty Corporation", symbol: "TRNO", exchange: "NYSE" },
-{ name: "Tetra Technologies, Inc.", symbol: "TTI", exchange: "NYSE" },
-{ name: "Teva Pharmaceutical Industries Limited", symbol: "TEVA", exchange: "NYSE" },
-{ name: "Texas Pacific Land Corporation", symbol: "TPL", exchange: "NYSE" },
-{ name: "Textainer Group Holdings Limited", symbol: "TGH", exchange: "NYSE" },
-{ name: "Textron Inc.", symbol: "TXT", exchange: "NYSE" },
-{ name: "TFI International Inc.", symbol: "TFII", exchange: "NYSE" },
-{ name: "The AES Corporation", symbol: "AES", exchange: "NYSE" },
-{ name: "The AZEK Company Inc.", symbol: "AZEK", exchange: "NYSE" },
-{ name: "The Bank Of New York Mellon Corporation", symbol: "BK", exchange: "NYSE" },
-{ name: "The Blackstone Group Inc.", symbol: "BX", exchange: "NYSE" },
-{ name: "The Central and Eastern Europe Fund, Inc.", symbol: "CEE", exchange: "NYSE" },
-{ name: "The Charles Schwab Corporation", symbol: "SCHW", exchange: "NYSE" },
-{ name: "The Charles Schwab Corporation", symbol: "SCHW^C", exchange: "NYSE" },
-{ name: "The Charles Schwab Corporation", symbol: "SCHW^D", exchange: "NYSE" },
-{ name: "The Cooper Companies, Inc.", symbol: "COO", exchange: "NYSE" },
-{ name: "The Gabelli Dividend & Income Trust", symbol: "GDV", exchange: "NYSE" },
-{ name: "The Gabelli Dividend & Income Trust", symbol: "GDV^G", exchange: "NYSE" },
-{ name: "The Gabelli Dividend & Income Trust", symbol: "GDV^H", exchange: "NYSE" },
-{ name: "The Gabelli Healthcare & Wellness Trust", symbol: "GRX", exchange: "NYSE" },
-{ name: "The GDL Fund", symbol: "GDL", exchange: "NYSE" },
-{ name: "The GDL Fund", symbol: "GDL^C", exchange: "NYSE" },
-{ name: "The Hanover Insurance Group, Inc.", symbol: "THG", exchange: "NYSE" },
-{ name: "The Travelers Companies, Inc.", symbol: "TRV", exchange: "NYSE" },
-{ name: "Thermo Fisher Scientific Inc", symbol: "TMO", exchange: "NYSE" },
-{ name: "Thermon Group Holdings, Inc.", symbol: "THR", exchange: "NYSE" },
-{ name: "Third Point Reinsurance Ltd.", symbol: "TPRE", exchange: "NYSE" },
-{ name: "Thoma Bravo Advantage", symbol: "TBA", exchange: "NYSE" },
-{ name: "Thomson Reuters Corp", symbol: "TRI", exchange: "NYSE" },
-{ name: "Thor Industries, Inc.", symbol: "THO", exchange: "NYSE" },
-{ name: "Tidewater Inc.", symbol: "TDW", exchange: "NYSE" },
-{ name: "Tidewater Inc.", symbol: "TDW.WS.A", exchange: "NYSE" },
-{ name: "Tidewater Inc.", symbol: "TDW.WS.B", exchange: "NYSE" },
-{ name: "Tiga Acquisition Corp.", symbol: "TINV", exchange: "NYSE" },
-{ name: "Tiga Acquisition Corp.", symbol: "TINV.U", exchange: "NYSE" },
-{ name: "Tiga Acquisition Corp.", symbol: "TINV.WS", exchange: "NYSE" },
-{ name: "Tilly&#39;s, Inc.", symbol: "TLYS", exchange: "NYSE" },
-{ name: "TIM S.A.", symbol: "TIMB", exchange: "NYSE" },
-{ name: "Timken Company (The)", symbol: "TKR", exchange: "NYSE" },
-{ name: "TimkenSteel Corporation", symbol: "TMST", exchange: "NYSE" },
-{ name: "Titan International, Inc.", symbol: "TWI", exchange: "NYSE" },
-{ name: "TJX Companies, Inc. (The)", symbol: "TJX", exchange: "NYSE" },
-{ name: "Toll Brothers, Inc.", symbol: "TOL", exchange: "NYSE" },
-{ name: "Tootsie Roll Industries, Inc.", symbol: "TR", exchange: "NYSE" },
-{ name: "TopBuild Corp.", symbol: "BLD", exchange: "NYSE" },
-{ name: "Toro Company (The)", symbol: "TTC", exchange: "NYSE" },
-{ name: "Toronto Dominion Bank (The)", symbol: "TD", exchange: "NYSE" },
-{ name: "Tortoise Acquisition Corp. II", symbol: "SNPR", exchange: "NYSE" },
-{ name: "Tortoise Acquisition Corp. II", symbol: "SNPR.U", exchange: "NYSE" },
-{ name: "Tortoise Acquisition Corp. II", symbol: "SNPR.WS", exchange: "NYSE" },
-{ name: "Tortoise Energy Independence Fund, Inc.", symbol: "NDP", exchange: "NYSE" },
-{ name: "Tortoise Energy Infrastructure Corporation", symbol: "TYG", exchange: "NYSE" },
-{ name: "Tortoise Essential Assets Income Term Fund", symbol: "TEAF", exchange: "NYSE" },
-{ name: "Tortoise Midstream Energy Fund, Inc.", symbol: "NTG", exchange: "NYSE" },
-{ name: "Tortoise Pipeline & Energy Fund, Inc.", symbol: "TTP", exchange: "NYSE" },
-{ name: "Tortoise Power and Energy Infrastructure Fund, Inc", symbol: "TPZ", exchange: "NYSE" },
-{ name: "Total SE", symbol: "TOT", exchange: "NYSE" },
-{ name: "Townsquare Media, Inc.", symbol: "TSQ", exchange: "NYSE" },
-{ name: "Toyota Motor Corp Ltd Ord", symbol: "TM", exchange: "NYSE" },
-{ name: "TPG Pace Beneficial Finance Corp.", symbol: "TPGY", exchange: "NYSE" },
-{ name: "TPG Pace Beneficial Finance Corp.", symbol: "TPGY.U", exchange: "NYSE" },
-{ name: "TPG Pace Beneficial Finance Corp.", symbol: "TPGY.WS", exchange: "NYSE" },
-{ name: "TPG Pace Tech Opportunities Corp.", symbol: "PACE", exchange: "NYSE" },
-{ name: "TPG Pace Tech Opportunities Corp.", symbol: "PACE.U", exchange: "NYSE" },
-{ name: "TPG Pace Tech Opportunities Corp.", symbol: "PACE.WS", exchange: "NYSE" },
-{ name: "TPG RE Finance Trust, Inc.", symbol: "TRTX", exchange: "NYSE" },
-{ name: "Trane Technologies plc", symbol: "TT", exchange: "NYSE" },
-{ name: "TransAlta Corporation", symbol: "TAC", exchange: "NYSE" },
-{ name: "Transcontinental Realty Investors, Inc.", symbol: "TCI", exchange: "NYSE" },
-{ name: "Transdigm Group Incorporated", symbol: "TDG", exchange: "NYSE" },
-{ name: "Transocean Ltd.", symbol: "RIG", exchange: "NYSE" },
-{ name: "Transportadora De Gas Sa Ord B", symbol: "TGS", exchange: "NYSE" },
-{ name: "TransUnion", symbol: "TRU", exchange: "NYSE" },
-{ name: "Trebia Acquisition Corp.", symbol: "TREB", exchange: "NYSE" },
-{ name: "Trebia Acquisition Corp.", symbol: "TREB.U", exchange: "NYSE" },
-{ name: "Trebia Acquisition Corp.", symbol: "TREB.WS", exchange: "NYSE" },
-{ name: "Trecora Resources", symbol: "TREC", exchange: "NYSE" },
-{ name: "Tredegar Corporation", symbol: "TG", exchange: "NYSE" },
-{ name: "Treehouse Foods, Inc.", symbol: "THS", exchange: "NYSE" },
-{ name: "Trepont Acquisition Corp I", symbol: "TACA.U", exchange: "NYSE" },
-{ name: "Trex Company, Inc.", symbol: "TREX", exchange: "NYSE" },
-{ name: "Tri Continental Corporation", symbol: "TY", exchange: "NYSE" },
-{ name: "Tri Continental Corporation", symbol: "TY^", exchange: "NYSE" },
-{ name: "TRI Pointe Homes, Inc.", symbol: "TPH", exchange: "NYSE" },
-{ name: "TriNet Group, Inc.", symbol: "TNET", exchange: "NYSE" },
-{ name: "Trinity Industries, Inc.", symbol: "TRN", exchange: "NYSE" },
-{ name: "Trinseo S.A.", symbol: "TSE", exchange: "NYSE" },
-{ name: "TriplePoint Venture Growth BDC Corp.", symbol: "TPVG", exchange: "NYSE" },
-{ name: "TriplePoint Venture Growth BDC Corp.", symbol: "TPVY", exchange: "NYSE" },
-{ name: "Triple-S Management Corporation", symbol: "GTS", exchange: "NYSE" },
-{ name: "Triton International Limited", symbol: "TRTN", exchange: "NYSE" },
-{ name: "Triton International Limited", symbol: "TRTN^A", exchange: "NYSE" },
-{ name: "Triton International Limited", symbol: "TRTN^B", exchange: "NYSE" },
-{ name: "Triton International Limited", symbol: "TRTN^C", exchange: "NYSE" },
-{ name: "Triton International Limited", symbol: "TRTN^D", exchange: "NYSE" },
-{ name: "Triumph Group, Inc.", symbol: "TGI", exchange: "NYSE" },
-{ name: "Tronox Holdings plc", symbol: "TROX", exchange: "NYSE" },
-{ name: "TrueBlue, Inc.", symbol: "TBI", exchange: "NYSE" },
-{ name: "Truist Financial Corporation", symbol: "TFC", exchange: "NYSE" },
-{ name: "Truist Financial Corporation", symbol: "TFC^F", exchange: "NYSE" },
-{ name: "Truist Financial Corporation", symbol: "TFC^G", exchange: "NYSE" },
-{ name: "Truist Financial Corporation", symbol: "TFC^H", exchange: "NYSE" },
-{ name: "Truist Financial Corporation", symbol: "TFC^I", exchange: "NYSE" },
-{ name: "Truist Financial Corporation", symbol: "TFC^O", exchange: "NYSE" },
-{ name: "Truist Financial Corporation", symbol: "TFC^R", exchange: "NYSE" },
-{ name: "Tsakos Energy Navigation Ltd", symbol: "TNP", exchange: "NYSE" },
-{ name: "Tsakos Energy Navigation Ltd", symbol: "TNP^D", exchange: "NYSE" },
-{ name: "Tsakos Energy Navigation Ltd", symbol: "TNP^E", exchange: "NYSE" },
-{ name: "Tsakos Energy Navigation Ltd", symbol: "TNP^F", exchange: "NYSE" },
-{ name: "Tufin Software Technologies Ltd.", symbol: "TUFN", exchange: "NYSE" },
-{ name: "Tupperware Brands Corporation", symbol: "TUP", exchange: "NYSE" },
-{ name: "Turkcell Iletisim Hizmetleri AS", symbol: "TKC", exchange: "NYSE" },
-{ name: "Turning Point Brands, Inc.", symbol: "TPB", exchange: "NYSE" },
-{ name: "Turquoise Hill Resources Ltd.", symbol: "TRQ", exchange: "NYSE" },
-{ name: "Tutor Perini Corporation", symbol: "TPC", exchange: "NYSE" },
-{ name: "Twilio Inc.", symbol: "TWLO", exchange: "NYSE" },
-{ name: "Twitter, Inc.", symbol: "TWTR", exchange: "NYSE" },
-{ name: "Two Harbors Investments Corp", symbol: "TWO", exchange: "NYSE" },
-{ name: "Two Harbors Investments Corp", symbol: "TWO^A", exchange: "NYSE" },
-{ name: "Two Harbors Investments Corp", symbol: "TWO^B", exchange: "NYSE" },
-{ name: "Two Harbors Investments Corp", symbol: "TWO^C", exchange: "NYSE" },
-{ name: "Two Harbors Investments Corp", symbol: "TWO^D", exchange: "NYSE" },
-{ name: "Two Harbors Investments Corp", symbol: "TWO^E", exchange: "NYSE" },
-{ name: "Tyler Technologies, Inc.", symbol: "TYL", exchange: "NYSE" },
-{ name: "Tyson Foods, Inc.", symbol: "TSN", exchange: "NYSE" },
-{ name: "U.S. Bancorp", symbol: "USB", exchange: "NYSE" },
-{ name: "U.S. Bancorp", symbol: "USB^A", exchange: "NYSE" },
-{ name: "U.S. Bancorp", symbol: "USB^H", exchange: "NYSE" },
-{ name: "U.S. Bancorp", symbol: "USB^M", exchange: "NYSE" },
-{ name: "U.S. Bancorp", symbol: "USB^P", exchange: "NYSE" },
-{ name: "U.S. Bancorp", symbol: "USB^Q", exchange: "NYSE" },
-{ name: "U.S. Physical Therapy, Inc.", symbol: "USPH", exchange: "NYSE" },
-{ name: "U.S. Silica Holdings, Inc.", symbol: "SLCA", exchange: "NYSE" },
-{ name: "U.S. Xpress Enterprises, Inc.", symbol: "USX", exchange: "NYSE" },
-{ name: "Uber Technologies, Inc.", symbol: "UBER", exchange: "NYSE" },
-{ name: "Ubiquiti Inc.", symbol: "UI", exchange: "NYSE" },
-{ name: "UBS AG", symbol: "UBS", exchange: "NYSE" },
-{ name: "UDR, Inc.", symbol: "UDR", exchange: "NYSE" },
-{ name: "UGI Corporation", symbol: "UGI", exchange: "NYSE" },
-{ name: "Ultrapar Participacoes S.A.", symbol: "UGP", exchange: "NYSE" },
-{ name: "UMH Properties, Inc.", symbol: "UMH", exchange: "NYSE" },
-{ name: "UMH Properties, Inc.", symbol: "UMH^C", exchange: "NYSE" },
-{ name: "UMH Properties, Inc.", symbol: "UMH^D", exchange: "NYSE" },
-{ name: "Under Armour, Inc.", symbol: "UA", exchange: "NYSE" },
-{ name: "Under Armour, Inc.", symbol: "UAA", exchange: "NYSE" },
-{ name: "Unifi, Inc.", symbol: "UFI", exchange: "NYSE" },
-{ name: "Unifirst Corporation", symbol: "UNF", exchange: "NYSE" },
-{ name: "Unilever PLC", symbol: "UL", exchange: "NYSE" },
-{ name: "Union Pacific Corporation", symbol: "UNP", exchange: "NYSE" },
-{ name: "Unisys Corporation", symbol: "UIS", exchange: "NYSE" },
-{ name: "United Microelectronics Corporation", symbol: "UMC", exchange: "NYSE" },
-{ name: "United Natural Foods, Inc.", symbol: "UNFI", exchange: "NYSE" },
-{ name: "United Parcel Service, Inc.", symbol: "UPS", exchange: "NYSE" },
-{ name: "United Rentals, Inc.", symbol: "URI", exchange: "NYSE" },
-{ name: "United States Cellular Corporation", symbol: "USM", exchange: "NYSE" },
-{ name: "United States Cellular Corporation", symbol: "UZA", exchange: "NYSE" },
-{ name: "United States Cellular Corporation", symbol: "UZB", exchange: "NYSE" },
-{ name: "United States Cellular Corporation", symbol: "UZC", exchange: "NYSE" },
-{ name: "United States Cellular Corporation", symbol: "UZD", exchange: "NYSE" },
-{ name: "United States Cellular Corporation", symbol: "UZE", exchange: "NYSE" },
-{ name: "United States Steel Corporation", symbol: "X", exchange: "NYSE" },
-{ name: "UnitedHealth Group Incorporated", symbol: "UNH", exchange: "NYSE" },
-{ name: "UNITIL Corporation", symbol: "UTL", exchange: "NYSE" },
-{ name: "Unity Software Inc.", symbol: "U", exchange: "NYSE" },
-{ name: "Univar Solutions Inc.", symbol: "UNVR", exchange: "NYSE" },
-{ name: "Universal Corporation", symbol: "UVV", exchange: "NYSE" },
-{ name: "Universal Health Realty Income Trust", symbol: "UHT", exchange: "NYSE" },
-{ name: "Universal Health Services, Inc.", symbol: "UHS", exchange: "NYSE" },
-{ name: "UNIVERSAL INSURANCE HOLDINGS INC", symbol: "UVE", exchange: "NYSE" },
-{ name: "Universal Technical Institute Inc", symbol: "UTI", exchange: "NYSE" },
-{ name: "Unum Group", symbol: "UNM", exchange: "NYSE" },
-{ name: "Unum Group", symbol: "UNMA", exchange: "NYSE" },
-{ name: "Urban Edge Properties", symbol: "UE", exchange: "NYSE" },
-{ name: "Urstadt Biddle Properties Inc.", symbol: "UBA", exchange: "NYSE" },
-{ name: "Urstadt Biddle Properties Inc.", symbol: "UBP", exchange: "NYSE" },
-{ name: "Urstadt Biddle Properties Inc.", symbol: "UBP^H", exchange: "NYSE" },
-{ name: "Urstadt Biddle Properties Inc.", symbol: "UBP^K", exchange: "NYSE" },
-{ name: "US Foods Holding Corp.", symbol: "USFD", exchange: "NYSE" },
-{ name: "USA Compression Partners, LP", symbol: "USAC", exchange: "NYSE" },
-{ name: "USANA Health Sciences, Inc.", symbol: "USNA", exchange: "NYSE" },
-{ name: "USD Partners LP", symbol: "USDP", exchange: "NYSE" },
-{ name: "USLIFE Income Fund, Inc.", symbol: "BIF", exchange: "NYSE" },
-{ name: "Utz Brands Inc", symbol: "UTZ", exchange: "NYSE" },
-{ name: "V.F. Corporation", symbol: "VFC", exchange: "NYSE" },
-{ name: "VAALCO Energy, Inc.", symbol: "EGY", exchange: "NYSE" },
-{ name: "Vail Resorts, Inc.", symbol: "MTN", exchange: "NYSE" },
-{ name: "VALE S.A.", symbol: "VALE", exchange: "NYSE" },
-{ name: "Valero Energy Corporation", symbol: "VLO", exchange: "NYSE" },
-{ name: "Valhi, Inc.", symbol: "VHI", exchange: "NYSE" },
-{ name: "Valmont Industries, Inc.", symbol: "VMI", exchange: "NYSE" },
-{ name: "Valvoline Inc.", symbol: "VVV", exchange: "NYSE" },
-{ name: "Vapotherm, Inc.", symbol: "VAPO", exchange: "NYSE" },
-{ name: "Varian Medical Systems, Inc.", symbol: "VAR", exchange: "NYSE" },
-{ name: "Vector Group Ltd.", symbol: "VGR", exchange: "NYSE" },
-{ name: "Vectrus, Inc.", symbol: "VEC", exchange: "NYSE" },
-{ name: "Vedanta  Limited", symbol: "VEDL", exchange: "NYSE" },
-{ name: "Veeva Systems Inc.", symbol: "VEEV", exchange: "NYSE" },
-{ name: "Velocity Financial, Inc.", symbol: "VEL", exchange: "NYSE" },
-{ name: "Venator Materials PLC", symbol: "VNTR", exchange: "NYSE" },
-{ name: "Ventas, Inc.", symbol: "VTR", exchange: "NYSE" },
-{ name: "Veoneer, Inc.", symbol: "VNE", exchange: "NYSE" },
-{ name: "VEREIT Inc.", symbol: "VER", exchange: "NYSE" },
-{ name: "VEREIT Inc.", symbol: "VER^F", exchange: "NYSE" },
-{ name: "Veritiv Corporation", symbol: "VRTV", exchange: "NYSE" },
-{ name: "Verizon Communications Inc.", symbol: "VZ", exchange: "NYSE" },
-{ name: "Vermilion Energy Inc.", symbol: "VET", exchange: "NYSE" },
-{ name: "Verso Corporation", symbol: "VRS", exchange: "NYSE" },
-{ name: "Vertical Capital Income Fund", symbol: "VCIF", exchange: "NYSE" },
-{ name: "Vertiv Holdings, LLC", symbol: "VRT", exchange: "NYSE" },
-{ name: "VG Acquisition Corp.", symbol: "VGAC", exchange: "NYSE" },
-{ name: "VG Acquisition Corp.", symbol: "VGAC.U", exchange: "NYSE" },
-{ name: "VG Acquisition Corp.", symbol: "VGAC.WS", exchange: "NYSE" },
-{ name: "VIA optronics AG", symbol: "VIAO", exchange: "NYSE" },
-{ name: "Viad Corp", symbol: "VVI", exchange: "NYSE" },
-{ name: "VICI Properties Inc.", symbol: "VICI", exchange: "NYSE" },
-{ name: "Vince Holding Corp.", symbol: "VNCE", exchange: "NYSE" },
-{ name: "Vipshop Holdings Limited", symbol: "VIPS", exchange: "NYSE" },
-{ name: "Virgin Galactic Holdings, Inc.", symbol: "SPCE", exchange: "NYSE" },
-{ name: "VirnetX Holding Corp", symbol: "VHC", exchange: "NYSE" },
-{ name: "Virtus Global Multi-Sector Income Fund", symbol: "VGI", exchange: "NYSE" },
-{ name: "Virtus Total Return Fund Inc.", symbol: "ZTR", exchange: "NYSE" },
-{ name: "Visa Inc.", symbol: "V", exchange: "NYSE" },
-{ name: "Vishay Intertechnology, Inc.", symbol: "VSH", exchange: "NYSE" },
-{ name: "Vishay Precision Group, Inc.", symbol: "VPG", exchange: "NYSE" },
-{ name: "Vista Oil & Gas, S.A.B. de C.V.", symbol: "VIST", exchange: "NYSE" },
-{ name: "Vista Outdoor Inc.", symbol: "VSTO", exchange: "NYSE" },
-{ name: "Vistra Corp.", symbol: "VST", exchange: "NYSE" },
-{ name: "Vistra Energy Corp.", symbol: "VST.WS.A", exchange: "NYSE" },
-{ name: "Vivint Smart Home, Inc.", symbol: "VVNT", exchange: "NYSE" },
-{ name: "Vmware, Inc.", symbol: "VMW", exchange: "NYSE" },
-{ name: "VOC Energy Trust", symbol: "VOC", exchange: "NYSE" },
-{ name: "Vocera Communications, Inc.", symbol: "VCRA", exchange: "NYSE" },
-{ name: "Vontier Corporation", symbol: "VNT", exchange: "NYSE" },
-{ name: "Vornado Realty Trust", symbol: "VNO", exchange: "NYSE" },
-{ name: "Vornado Realty Trust", symbol: "VNO^K", exchange: "NYSE" },
-{ name: "Vornado Realty Trust", symbol: "VNO^L", exchange: "NYSE" },
-{ name: "Vornado Realty Trust", symbol: "VNO^M", exchange: "NYSE" },
-{ name: "Vornado Realty Trust", symbol: "VNO^N", exchange: "NYSE" },
-{ name: "Voya Asia Pacific High Dividend Equity Income Fund", symbol: "IAE", exchange: "NYSE" },
-{ name: "Voya Emerging Markets High Income Dividend Equity Fund", symbol: "IHD", exchange: "NYSE" },
-{ name: "Voya Financial, Inc.", symbol: "VOYA", exchange: "NYSE" },
-{ name: "Voya Financial, Inc.", symbol: "VOYA^B", exchange: "NYSE" },
-{ name: "Voya Global Advantage and Premium Opportunity Fund", symbol: "IGA", exchange: "NYSE" },
-{ name: "Voya Global Equity Dividend and Premium Opportunity Fund", symbol: "IGD", exchange: "NYSE" },
-{ name: "Voya Infrastructure, Industrials and Materials Fund", symbol: "IDE", exchange: "NYSE" },
-{ name: "Voya International High Dividend Equity Income Fund", symbol: "IID", exchange: "NYSE" },
-{ name: "Voya Natural Resources Equity Income Fund", symbol: "IRR", exchange: "NYSE" },
-{ name: "Voya Prime Rate Trust", symbol: "PPR", exchange: "NYSE" },
-{ name: "Vulcan Materials Company", symbol: "VMC", exchange: "NYSE" },
-{ name: "Vy Global Growth", symbol: "VYGG", exchange: "NYSE" },
-{ name: "Vy Global Growth", symbol: "VYGG.U", exchange: "NYSE" },
-{ name: "Vy Global Growth", symbol: "VYGG.WS", exchange: "NYSE" },
-{ name: "W&T Offshore, Inc.", symbol: "WTI", exchange: "NYSE" },
-{ name: "W. P. Carey Inc.", symbol: "WPC", exchange: "NYSE" },
-{ name: "W.R. Berkley Corporation", symbol: "WRB", exchange: "NYSE" },
-{ name: "W.R. Berkley Corporation", symbol: "WRB^C", exchange: "NYSE" },
-{ name: "W.R. Berkley Corporation", symbol: "WRB^D", exchange: "NYSE" },
-{ name: "W.R. Berkley Corporation", symbol: "WRB^E", exchange: "NYSE" },
-{ name: "W.R. Berkley Corporation", symbol: "WRB^F", exchange: "NYSE" },
-{ name: "W.R. Berkley Corporation", symbol: "WRB^G", exchange: "NYSE" },
-{ name: "W.R. Grace & Co.", symbol: "GRA", exchange: "NYSE" },
-{ name: "W.W. Grainger, Inc.", symbol: "GWW", exchange: "NYSE" },
-{ name: "Wabash National Corporation", symbol: "WNC", exchange: "NYSE" },
-{ name: "Waddell & Reed Financial, Inc.", symbol: "WDR", exchange: "NYSE" },
-{ name: "Walker & Dunlop, Inc.", symbol: "WD", exchange: "NYSE" },
-{ name: "Walmart Inc.", symbol: "WMT", exchange: "NYSE" },
-{ name: "Walt Disney Company (The)", symbol: "DIS", exchange: "NYSE" },
-{ name: "Warrior Met Coal, Inc.", symbol: "HCC", exchange: "NYSE" },
-{ name: "Washington Prime Group Inc.", symbol: "WPG", exchange: "NYSE" },
-{ name: "Washington Prime Group Inc.", symbol: "WPG^H", exchange: "NYSE" },
-{ name: "Washington Prime Group Inc.", symbol: "WPG^I", exchange: "NYSE" },
-{ name: "Washington Real Estate Investment Trust", symbol: "WRE", exchange: "NYSE" },
-{ name: "Waste Connections, Inc.", symbol: "WCN", exchange: "NYSE" },
-{ name: "Waste Management, Inc.", symbol: "WM", exchange: "NYSE" },
-{ name: "Waters Corporation", symbol: "WAT", exchange: "NYSE" },
-{ name: "Watsco, Inc.", symbol: "WSO", exchange: "NYSE" },
-{ name: "Watsco, Inc.", symbol: "WSO.B", exchange: "NYSE" },
-{ name: "Watts Water Technologies, Inc.", symbol: "WTS", exchange: "NYSE" },
-{ name: "Wayfair Inc.", symbol: "W", exchange: "NYSE" },
-{ name: "Webster Financial Corporation", symbol: "WBS", exchange: "NYSE" },
-{ name: "Webster Financial Corporation", symbol: "WBS^F", exchange: "NYSE" },
-{ name: "WEC Energy Group, Inc.", symbol: "WEC", exchange: "NYSE" },
-{ name: "Weidai Ltd.", symbol: "WEI", exchange: "NYSE" },
-{ name: "Weingarten Realty Investors", symbol: "WRI", exchange: "NYSE" },
-{ name: "Weis Markets, Inc.", symbol: "WMK", exchange: "NYSE" },
-{ name: "Welbilt, Inc.", symbol: "WBT", exchange: "NYSE" },
-{ name: "Wells Fargo & Company", symbol: "WFC", exchange: "NYSE" },
-{ name: "Wells Fargo & Company", symbol: "WFC^A", exchange: "NYSE" },
-{ name: "Wells Fargo & Company", symbol: "WFC^L", exchange: "NYSE" },
-{ name: "Wells Fargo & Company", symbol: "WFC^N", exchange: "NYSE" },
-{ name: "Wells Fargo & Company", symbol: "WFC^O", exchange: "NYSE" },
-{ name: "Wells Fargo & Company", symbol: "WFC^P", exchange: "NYSE" },
-{ name: "Wells Fargo & Company", symbol: "WFC^Q", exchange: "NYSE" },
-{ name: "Wells Fargo & Company", symbol: "WFC^R", exchange: "NYSE" },
-{ name: "Wells Fargo & Company", symbol: "WFC^W", exchange: "NYSE" },
-{ name: "Wells Fargo & Company", symbol: "WFC^X", exchange: "NYSE" },
-{ name: "Wells Fargo & Company", symbol: "WFC^Y", exchange: "NYSE" },
-{ name: "Wells Fargo & Company", symbol: "WFC^Z", exchange: "NYSE" },
-{ name: "Wells Fargo Global Dividend Opportunity Fund", symbol: "EOD", exchange: "NYSE" },
-{ name: "Welltower Inc.", symbol: "WELL", exchange: "NYSE" },
-{ name: "WESCO International, Inc.", symbol: "WCC", exchange: "NYSE" },
-{ name: "WESCO International, Inc.", symbol: "WCC^A", exchange: "NYSE" },
-{ name: "West Pharmaceutical Services, Inc.", symbol: "WST", exchange: "NYSE" },
-{ name: "Western Alliance Bancorporation", symbol: "WAL", exchange: "NYSE" },
-{ name: "Western Alliance Bancorporation", symbol: "WALA", exchange: "NYSE" },
-{ name: "Western Asset Bond Fund", symbol: "WEA", exchange: "NYSE" },
-{ name: "Western Asset Emerging Markets Debt Fund Inc", symbol: "EMD", exchange: "NYSE" },
-{ name: "Western Asset Global Corporate Defined Opportunity Fund Inc.", symbol: "GDO", exchange: "NYSE" },
-{ name: "Western Asset Global High Income Fund Inc", symbol: "EHI", exchange: "NYSE" },
-{ name: "Western Asset High Income Fund II Inc.", symbol: "HIX", exchange: "NYSE" },
-{ name: "Western Asset High Income Opportunity Fund, Inc.", symbol: "HIO", exchange: "NYSE" },
-{ name: "Western Asset High Yield Defined Opportunity Fund Inc.", symbol: "HYI", exchange: "NYSE" },
-{ name: "Western Asset Intermediate Muni Fund Inc", symbol: "SBI", exchange: "NYSE" },
-{ name: "Western Asset Investment Grade Defined Opportunity Trust Inc.", symbol: "IGI", exchange: "NYSE" },
-{ name: "Western Asset Investment Grade Income Fund Inc.", symbol: "PAI", exchange: "NYSE" },
-{ name: "Western Asset Managed Municipals Fund, Inc.", symbol: "MMU", exchange: "NYSE" },
-{ name: "Western Asset Mortgage Capital Corporation", symbol: "WMC", exchange: "NYSE" },
-{ name: "Western Asset Mortgage Opportunity Fund Inc.", symbol: "DMO", exchange: "NYSE" },
-{ name: "Western Asset Municipal Defined Opportunity Trust Inc", symbol: "MTT", exchange: "NYSE" },
-{ name: "Western Asset Municipal High Income Fund, Inc.", symbol: "MHF", exchange: "NYSE" },
-{ name: "Western Asset Municipal Partners Fund, Inc.", symbol: "MNP", exchange: "NYSE" },
-{ name: "Western Asset/Claymore U.S Treasury Inflation Prot Secs Fd 2", symbol: "WIW", exchange: "NYSE" },
-{ name: "Western Asset/Claymore U.S. Treasury Inflation Prot Secs Fd", symbol: "WIA", exchange: "NYSE" },
-{ name: "Western Midstream Partners, LP", symbol: "WES", exchange: "NYSE" },
-{ name: "Western Union Company (The)", symbol: "WU", exchange: "NYSE" },
-{ name: "Westinghouse Air Brake Technologies Corporation", symbol: "WAB", exchange: "NYSE" },
-{ name: "Westlake Chemical Corporation", symbol: "WLK", exchange: "NYSE" },
-{ name: "Westlake Chemical Partners LP", symbol: "WLKP", exchange: "NYSE" },
-{ name: "Westpac Banking Corporation", symbol: "WBK", exchange: "NYSE" },
-{ name: "Westrock Company", symbol: "WRK", exchange: "NYSE" },
-{ name: "Westwood Holdings Group Inc", symbol: "WHG", exchange: "NYSE" },
-{ name: "WEX Inc.", symbol: "WEX", exchange: "NYSE" },
-{ name: "Weyerhaeuser Company", symbol: "WY", exchange: "NYSE" },
-{ name: "Wheaton Precious Metals Corp.", symbol: "WPM", exchange: "NYSE" },
-{ name: "Whirlpool Corporation", symbol: "WHR", exchange: "NYSE" },
-{ name: "White Mountains Insurance Group, Ltd.", symbol: "WTM", exchange: "NYSE" },
-{ name: "Whitestone REIT", symbol: "WSR", exchange: "NYSE" },
-{ name: "Whiting Petroleum Corporation", symbol: "WLL", exchange: "NYSE" },
-{ name: "WideOpenWest, Inc.", symbol: "WOW", exchange: "NYSE" },
-{ name: "Williams Companies, Inc. (The)", symbol: "WMB", exchange: "NYSE" },
-{ name: "Williams-Sonoma, Inc.", symbol: "WSM", exchange: "NYSE" },
-{ name: "Winnebago Industries, Inc.", symbol: "WGO", exchange: "NYSE" },
-{ name: "Wipro Limited", symbol: "WIT", exchange: "NYSE" },
-{ name: "WNS (Holdings) Limited", symbol: "WNS", exchange: "NYSE" },
-{ name: "Wolverine World Wide, Inc.", symbol: "WWW", exchange: "NYSE" },
-{ name: "Woori Bank", symbol: "WF", exchange: "NYSE" },
-{ name: "Workiva Inc.", symbol: "WK", exchange: "NYSE" },
-{ name: "World Fuel Services Corporation", symbol: "INT", exchange: "NYSE" },
-{ name: "World Wrestling Entertainment, Inc.", symbol: "WWE", exchange: "NYSE" },
-{ name: "Worthington Industries, Inc.", symbol: "WOR", exchange: "NYSE" },
-{ name: "WPP plc", symbol: "WPP", exchange: "NYSE" },
-{ name: "Wyndham Destinations, Inc.", symbol: "WYND", exchange: "NYSE" },
-{ name: "Wyndham Hotels & Resorts, Inc.", symbol: "WH", exchange: "NYSE" },
-{ name: "X Financial", symbol: "XYF", exchange: "NYSE" },
-{ name: "XAI Octagon Floating Rate & Alternative Income Term Trust", symbol: "XFLT", exchange: "NYSE" },
-{ name: "Xenia Hotels & Resorts, Inc.", symbol: "XHR", exchange: "NYSE" },
-{ name: "Xerox Holdings Corporation", symbol: "XRX", exchange: "NYSE" },
-{ name: "Xinyuan Real Estate Co Ltd", symbol: "XIN", exchange: "NYSE" },
-{ name: "XL Fleet Corp.", symbol: "XL", exchange: "NYSE" },
-{ name: "XL Fleet Corp.", symbol: "XL.WS", exchange: "NYSE" },
-{ name: "XPeng Inc.", symbol: "XPEV", exchange: "NYSE" },
-{ name: "XPO Logistics, Inc.", symbol: "XPO", exchange: "NYSE" },
-{ name: "Xylem Inc.", symbol: "XYL", exchange: "NYSE" },
-{ name: "Yalla Group Limited", symbol: "YALA", exchange: "NYSE" },
-{ name: "Yamana Gold Inc.", symbol: "AUY", exchange: "NYSE" },
-{ name: "Yatsen Holding Limited", symbol: "YSG", exchange: "NYSE" },
-{ name: "Yelp Inc.", symbol: "YELP", exchange: "NYSE" },
-{ name: "YETI Holdings, Inc.", symbol: "YETI", exchange: "NYSE" },
-{ name: "Yext, Inc.", symbol: "YEXT", exchange: "NYSE" },
-{ name: "Yiren Digital Ltd.", symbol: "YRD", exchange: "NYSE" },
-{ name: "Youdao, Inc.", symbol: "DAO", exchange: "NYSE" },
-{ name: "YPF Sociedad Anonima", symbol: "YPF", exchange: "NYSE" },
-{ name: "Yucaipa Acquisition Corporation", symbol: "YAC", exchange: "NYSE" },
-{ name: "Yucaipa Acquisition Corporation", symbol: "YAC.U", exchange: "NYSE" },
-{ name: "Yucaipa Acquisition Corporation", symbol: "YAC.WS", exchange: "NYSE" },
-{ name: "Yum China Holdings, Inc.", symbol: "YUMC", exchange: "NYSE" },
-{ name: "Yum! Brands, Inc.", symbol: "YUM", exchange: "NYSE" },
-{ name: "Zendesk, Inc.", symbol: "ZEN", exchange: "NYSE" },
-{ name: "Zimmer Biomet Holdings, Inc.", symbol: "ZBH", exchange: "NYSE" },
-{ name: "Zoetis Inc.", symbol: "ZTS", exchange: "NYSE" },
-{ name: "ZTO Express (Cayman) Inc.", symbol: "ZTO", exchange: "NYSE" },
-{ name: "Zuora, Inc.", symbol: "ZUO", exchange: "NYSE" },
-{ name: "Zymeworks Inc.", symbol: "ZYME", exchange: "NYSE" },
-
-// NSE stocks
-{ name: "20 Microns Limited", symbol: "20MICRONS", exchange: "NSE" },
-{ name: "21st Century Management Services Limited", symbol: "21STCENMGM", exchange: "NSE" },
-{ name: "3i Infotech Limited", symbol: "3IINFOTECH", exchange: "NSE" },
-{ name: "3M India Limited", symbol: "3MINDIA", exchange: "NSE" },
-{ name: "3P Land Holdings Limited", symbol: "3PLAND", exchange: "NSE" },
-{ name: "5Paisa Capital Limited", symbol: "5PAISA", exchange: "NSE" },
-{ name: "63 moons technologies limited", symbol: "63MOONS", exchange: "NSE" },
-{ name: "8K Miles Software Services Limited", symbol: "8KMILES", exchange: "NSE" },
-{ name: "A2Z Infra Engineering Limited", symbol: "A2ZINFRA", exchange: "NSE" },
-{ name: "Aakash Exploration Services Limited", symbol: "AAKASH", exchange: "NSE" },
-{ name: "Aaron Industries Limited", symbol: "AARON", exchange: "NSE" },
-{ name: "Aarti Drugs Limited", symbol: "AARTIDRUGS", exchange: "NSE" },
-{ name: "Aarti Industries Limited", symbol: "AARTIIND", exchange: "NSE" },
-{ name: "Aarti Surfactants Limited", symbol: "AARTISURF", exchange: "NSE" },
-{ name: "Aarvee Denims & Exports Limited", symbol: "AARVEEDEN", exchange: "NSE" },
-{ name: "Aarvi Encon Limited", symbol: "AARVI", exchange: "NSE" },
-{ name: "Aavas Financiers Limited", symbol: "AAVAS", exchange: "NSE" },
-{ name: "Aban Offshore Limited", symbol: "ABAN", exchange: "NSE" },
-{ name: "ABB India Limited", symbol: "ABB", exchange: "NSE" },
-{ name: "Abbott India Limited", symbol: "ABBOTINDIA", exchange: "NSE" },
-{ name: "Aditya Birla Capital Limited", symbol: "ABCAPITAL", exchange: "NSE" },
-{ name: "Aditya Birla Fashion and Retail Limited", symbol: "ABFRL", exchange: "NSE" },
-{ name: "ABM International Limited", symbol: "ABMINTLTD", exchange: "NSE" },
-{ name: "ACC Limited", symbol: "ACC", exchange: "NSE" },
-{ name: "Accelya Solutions India Limited", symbol: "ACCELYA", exchange: "NSE" },
-{ name: "Accuracy Shipping Limited", symbol: "ACCURACY", exchange: "NSE" },
-{ name: "Action Construction Equipment Limited", symbol: "ACE", exchange: "NSE" },
-{ name: "Acrysil Limited", symbol: "ACRYSIL", exchange: "NSE" },
-{ name: "Adani Enterprises Limited", symbol: "ADANIENT", exchange: "NSE" },
-{ name: "Adani Green Energy Limited", symbol: "ADANIGREEN", exchange: "NSE" },
-{ name: "Adani Ports and Special Economic Zone Limited", symbol: "ADANIPORTS", exchange: "NSE" },
-{ name: "Adani Power Limited", symbol: "ADANIPOWER", exchange: "NSE" },
-{ name: "Adani Transmission Limited", symbol: "ADANITRANS", exchange: "NSE" },
-{ name: "ADF Foods Limited", symbol: "ADFFOODS", exchange: "NSE" },
-{ name: "Adhunik Industries Limited", symbol: "ADHUNIKIND", exchange: "NSE" },
-{ name: "Archidply Decor Limited", symbol: "ADL", exchange: "NSE" },
-{ name: "Ador Welding Limited", symbol: "ADORWELD", exchange: "NSE" },
-{ name: "Adroit Infotech Limited", symbol: "ADROITINFO", exchange: "NSE" },
-{ name: "Allied Digital Services Limited", symbol: "ADSL", exchange: "NSE" },
-{ name: "Advani Hotels & Resorts (India) Limited", symbol: "ADVANIHOTR", exchange: "NSE" },
-{ name: "Advanced Enzyme Technologies Limited", symbol: "ADVENZYMES", exchange: "NSE" },
-{ name: "Aegis Logistics Limited", symbol: "AEGISCHEM", exchange: "NSE" },
-{ name: "Affle (India) Limited", symbol: "AFFLE", exchange: "NSE" },
-{ name: "Agarwal Industrial Corporation Limited", symbol: "AGARIND", exchange: "NSE" },
-{ name: "AGC Networks Limited", symbol: "AGCNET", exchange: "NSE" },
-{ name: "Agri-Tech (India) Limited", symbol: "AGRITECH", exchange: "NSE" },
-{ name: "Agro Phos India Limited", symbol: "AGROPHOS", exchange: "NSE" },
-{ name: "Asian Hotels (East) Limited", symbol: "AHLEAST", exchange: "NSE" },
-{ name: "Ahluwalia Contracts (India) Limited", symbol: "AHLUCONT", exchange: "NSE" },
-{ name: "Asian Hotels (West) Limited", symbol: "AHLWEST", exchange: "NSE" },
-{ name: "AIA Engineering Limited", symbol: "AIAENG", exchange: "NSE" },
-{ name: "Airan Limited", symbol: "AIRAN", exchange: "NSE" },
-{ name: "Ajanta Pharma Limited", symbol: "AJANTPHARM", exchange: "NSE" },
-{ name: "Ajmera Realty & Infra India Limited", symbol: "AJMERA", exchange: "NSE" },
-{ name: "Akash Infra-Projects Limited", symbol: "AKASH", exchange: "NSE" },
-{ name: "AksharChem India Limited", symbol: "AKSHARCHEM", exchange: "NSE" },
-{ name: "Aksh Optifibre Limited", symbol: "AKSHOPTFBR", exchange: "NSE" },
-{ name: "Akzo Nobel India Limited", symbol: "AKZOINDIA", exchange: "NSE" },
-{ name: "Alankit Limited", symbol: "ALANKIT", exchange: "NSE" },
-{ name: "Albert David Limited", symbol: "ALBERTDAVD", exchange: "NSE" },
-{ name: "Alchemist Limited", symbol: "ALCHEM", exchange: "NSE" },
-{ name: "Alembic Limited", symbol: "ALEMBICLTD", exchange: "NSE" },
-{ name: "Alicon Castalloy Limited", symbol: "ALICON", exchange: "NSE" },
-{ name: "Alkali Metals Limited", symbol: "ALKALI", exchange: "NSE" },
-{ name: "Alkem Laboratories Limited", symbol: "ALKEM", exchange: "NSE" },
-{ name: "Alkyl Amines Chemicals Limited", symbol: "ALKYLAMINE", exchange: "NSE" },
-{ name: "Allcargo Logistics Limited", symbol: "ALLCARGO", exchange: "NSE" },
-{ name: "Allsec Technologies Limited", symbol: "ALLSEC", exchange: "NSE" },
-{ name: "Almondz Global Securities Limited", symbol: "ALMONDZ", exchange: "NSE" },
-{ name: "Alok Industries Limited", symbol: "ALOKINDS", exchange: "NSE" },
-{ name: "Alpa Laboratories Limited", symbol: "ALPA", exchange: "NSE" },
-{ name: "Alphageo (India) Limited", symbol: "ALPHAGEO", exchange: "NSE" },
-{ name: "Alps Industries Limited", symbol: "ALPSINDUS", exchange: "NSE" },
-{ name: "Amara Raja Batteries Limited", symbol: "AMARAJABAT", exchange: "NSE" },
-{ name: "Amber Enterprises India Limited", symbol: "AMBER", exchange: "NSE" },
-{ name: "Ambika Cotton Mills Limited", symbol: "AMBIKCO", exchange: "NSE" },
-{ name: "Ambuja Cements Limited", symbol: "AMBUJACEM", exchange: "NSE" },
-{ name: "AMD Industries Limited", symbol: "AMDIND", exchange: "NSE" },
-{ name: "Amj Land Holdings Limited", symbol: "AMJLAND", exchange: "NSE" },
-{ name: "Amrutanjan Health Care Limited", symbol: "AMRUTANJAN", exchange: "NSE" },
-{ name: "Anant Raj Limited", symbol: "ANANTRAJ", exchange: "NSE" },
-{ name: "Andhra Cements Limited", symbol: "ANDHRACEMT", exchange: "NSE" },
-{ name: "ANDHRA PAPER LIMITED", symbol: "ANDHRAPAP", exchange: "NSE" },
-{ name: "The Andhra Sugars Limited", symbol: "ANDHRSUGAR", exchange: "NSE" },
-{ name: "Angel Broking Limited", symbol: "ANGELBRKG", exchange: "NSE" },
-{ name: "Anik Industries Limited", symbol: "ANIKINDS", exchange: "NSE" },
-{ name: "Ankit Metal & Power Limited", symbol: "ANKITMETAL", exchange: "NSE" },
-{ name: "Ansal Properties & Infrastructure Limited", symbol: "ANSALAPI", exchange: "NSE" },
-{ name: "Ansal Housing Limited", symbol: "ANSALHSG", exchange: "NSE" },
-{ name: "The Anup Engineering Limited", symbol: "ANUP", exchange: "NSE" },
-{ name: "Apar Industries Limited", symbol: "APARINDS", exchange: "NSE" },
-{ name: "Anjani Portland Cement Limited", symbol: "APCL", exchange: "NSE" },
-{ name: "Apcotex Industries Limited", symbol: "APCOTEXIND", exchange: "NSE" },
-{ name: "Apex Frozen Foods Limited", symbol: "APEX", exchange: "NSE" },
-{ name: "APL Apollo Tubes Limited", symbol: "APLAPOLLO", exchange: "NSE" },
-{ name: "Alembic Pharmaceuticals Limited", symbol: "APLLTD", exchange: "NSE" },
-{ name: "Apollo Micro Systems Limited", symbol: "APOLLO", exchange: "NSE" },
-{ name: "Apollo Hospitals Enterprise Limited", symbol: "APOLLOHOSP", exchange: "NSE" },
-{ name: "Apollo Pipes Limited", symbol: "APOLLOPIPE", exchange: "NSE" },
-{ name: "Apollo Tyres Limited", symbol: "APOLLOTYRE", exchange: "NSE" },
-{ name: "Apollo Sindoori Hotels Limited", symbol: "APOLSINHOT", exchange: "NSE" },
-{ name: "Aptech Limited", symbol: "APTECHT", exchange: "NSE" },
-{ name: "Archidply Industries Limited", symbol: "ARCHIDPLY", exchange: "NSE" },
-{ name: "Archies Limited", symbol: "ARCHIES", exchange: "NSE" },
-{ name: "Arcotech Limited", symbol: "ARCOTECH", exchange: "NSE" },
-{ name: "Rajdarshan Industries Limited", symbol: "ARENTERP", exchange: "NSE" },
-{ name: "Aries Agro Limited", symbol: "ARIES", exchange: "NSE" },
-{ name: "Arihant Foundations & Housing Limited", symbol: "ARIHANT", exchange: "NSE" },
-{ name: "Arihant Superstructures Limited", symbol: "ARIHANTSUP", exchange: "NSE" },
-{ name: "Arman Financial Services Limited", symbol: "ARMANFIN", exchange: "NSE" },
-{ name: "Aro Granite Industries Limited", symbol: "AROGRANITE", exchange: "NSE" },
-{ name: "Arrow Greentech Limited", symbol: "ARROWGREEN", exchange: "NSE" },
-{ name: "Arshiya Limited", symbol: "ARSHIYA", exchange: "NSE" },
-{ name: "ARSS Infrastructure Projects Limited", symbol: "ARSSINFRA", exchange: "NSE" },
-{ name: "Artemis Medicare Services Limited", symbol: "ARTEMISMED", exchange: "NSE" },
-{ name: "Arvind Limited", symbol: "ARVIND", exchange: "NSE" },
-{ name: "Arvind Fashions Limited", symbol: "ARVINDFASN", exchange: "NSE" },
-{ name: "Arvind SmartSpaces Limited", symbol: "ARVSMART", exchange: "NSE" },
-{ name: "Asahi India Glass Limited", symbol: "ASAHIINDIA", exchange: "NSE" },
-{ name: "Asahi Songwon Colors Limited", symbol: "ASAHISONG", exchange: "NSE" },
-{ name: "Automotive Stampings and Assemblies Limited", symbol: "ASAL", exchange: "NSE" },
-{ name: "Associated Alcohols & Breweries Ltd.", symbol: "ASALCBR", exchange: "NSE" },
-{ name: "Ashapura Minechem Limited", symbol: "ASHAPURMIN", exchange: "NSE" },
-{ name: "Ashiana Housing Limited", symbol: "ASHIANA", exchange: "NSE" },
-{ name: "Ashima Limited", symbol: "ASHIMASYN", exchange: "NSE" },
-{ name: "Ashoka Buildcon Limited", symbol: "ASHOKA", exchange: "NSE" },
-{ name: "Ashok Leyland Limited", symbol: "ASHOKLEY", exchange: "NSE" },
-{ name: "Asian Hotels (North) Limited", symbol: "ASIANHOTNR", exchange: "NSE" },
-{ name: "Asian Paints Limited", symbol: "ASIANPAINT", exchange: "NSE" },
-{ name: "Asian Granito India Limited", symbol: "ASIANTILES", exchange: "NSE" },
-{ name: "Aspinwall and Company Limited", symbol: "ASPINWALL", exchange: "NSE" },
-{ name: "Astec LifeSciences Limited", symbol: "ASTEC", exchange: "NSE" },
-{ name: "Aster DM Healthcare Limited", symbol: "ASTERDM", exchange: "NSE" },
-{ name: "Astral Poly Technik Limited", symbol: "ASTRAL", exchange: "NSE" },
-{ name: "Astra Microwave Products Limited", symbol: "ASTRAMICRO", exchange: "NSE" },
-{ name: "AstraZeneca Pharma India Limited", symbol: "ASTRAZEN", exchange: "NSE" },
-{ name: "Astron Paper & Board Mill Limited", symbol: "ASTRON", exchange: "NSE" },
-{ name: "Agro Tech Foods Limited", symbol: "ATFL", exchange: "NSE" },
-{ name: "Adani Total Gas Limited", symbol: "ATGL", exchange: "NSE" },
-{ name: "Atlanta  Limited", symbol: "ATLANTA", exchange: "NSE" },
-{ name: "Atlas Cycles (Haryana) Limited", symbol: "ATLASCYCLE", exchange: "NSE" },
-{ name: "Atul Limited", symbol: "ATUL", exchange: "NSE" },
-{ name: "Atul Auto Limited", symbol: "ATULAUTO", exchange: "NSE" },
-{ name: "AU Small Finance Bank Limited", symbol: "AUBANK", exchange: "NSE" },
-{ name: "Aurionpro Solutions Limited", symbol: "AURIONPRO", exchange: "NSE" },
-{ name: "Aurobindo Pharma Limited", symbol: "AUROPHARMA", exchange: "NSE" },
-{ name: "Ausom Enterprise Limited", symbol: "AUSOMENT", exchange: "NSE" },
-{ name: "Automotive Axles Limited", symbol: "AUTOAXLES", exchange: "NSE" },
-{ name: "Autoline Industries Limited", symbol: "AUTOIND", exchange: "NSE" },
-{ name: "Autolite (India) Limited", symbol: "AUTOLITIND", exchange: "NSE" },
-{ name: "Avadh Sugar & Energy Limited", symbol: "AVADHSUGAR", exchange: "NSE" },
-{ name: "Avanti Feeds Limited", symbol: "AVANTIFEED", exchange: "NSE" },
-{ name: "AVT Natural Products Limited", symbol: "AVTNPL", exchange: "NSE" },
-{ name: "Antony Waste Handling Cell Limited", symbol: "AWHCL", exchange: "NSE" },
-{ name: "Axis Bank Limited", symbol: "AXISBANK", exchange: "NSE" },
-{ name: "AXISCADES Technologies Limited", symbol: "AXISCADES", exchange: "NSE" },
-{ name: "AYM Syntex Limited", symbol: "AYMSYNTEX", exchange: "NSE" },
-{ name: "Bafna Pharmaceuticals Limited", symbol: "BAFNAPH", exchange: "NSE" },
-{ name: "B.A.G Films and Media Limited", symbol: "BAGFILMS", exchange: "NSE" },
-{ name: "Bajaj Auto Limited", symbol: "BAJAJ-AUTO", exchange: "NSE" },
-{ name: "Bajaj Consumer Care Limited", symbol: "BAJAJCON", exchange: "NSE" },
-{ name: "Bajaj Electricals Limited", symbol: "BAJAJELEC", exchange: "NSE" },
-{ name: "Bajaj Finserv Limited", symbol: "BAJAJFINSV", exchange: "NSE" },
-{ name: "Bajaj Hindusthan Sugar Limited", symbol: "BAJAJHIND", exchange: "NSE" },
-{ name: "Bajaj Holdings & Investment Limited", symbol: "BAJAJHLDNG", exchange: "NSE" },
-{ name: "Bajaj Finance Limited", symbol: "BAJFINANCE", exchange: "NSE" },
-{ name: "Balaji Telefilms Limited", symbol: "BALAJITELE", exchange: "NSE" },
-{ name: "Balaji Amines Limited", symbol: "BALAMINES", exchange: "NSE" },
-{ name: "BALAXI PHARMACEUTICALS LIMITED", symbol: "BALAXI", exchange: "NSE" },
-{ name: "Balkrishna Paper Mills Limited", symbol: "BALKRISHNA", exchange: "NSE" },
-{ name: "Balkrishna Industries Limited", symbol: "BALKRISIND", exchange: "NSE" },
-{ name: "Ballarpur Industries Limited", symbol: "BALLARPUR", exchange: "NSE" },
-{ name: "Balmer Lawrie & Company Limited", symbol: "BALMLAWRIE", exchange: "NSE" },
-{ name: "Bal Pharma Limited", symbol: "BALPHARMA", exchange: "NSE" },
-{ name: "Balrampur Chini Mills Limited", symbol: "BALRAMCHIN", exchange: "NSE" },
-{ name: "Banaras Beads Limited", symbol: "BANARBEADS", exchange: "NSE" },
-{ name: "Bannari Amman Sugars Limited", symbol: "BANARISUG", exchange: "NSE" },
-{ name: "Banco Products (I) Limited", symbol: "BANCOINDIA", exchange: "NSE" },
-{ name: "Bandhan Bank Limited", symbol: "BANDHANBNK", exchange: "NSE" },
-{ name: "Bang Overseas Limited", symbol: "BANG", exchange: "NSE" },
-{ name: "Banka BioLoo Limited", symbol: "BANKA", exchange: "NSE" },
-{ name: "Bank of Baroda", symbol: "BANKBARODA", exchange: "NSE" },
-{ name: "Bank of India", symbol: "BANKINDIA", exchange: "NSE" },
-{ name: "Banswara Syntex Limited", symbol: "BANSWRAS", exchange: "NSE" },
-{ name: "Bartronics India Limited", symbol: "BARTRONICS", exchange: "NSE" },
-{ name: "BASF India Limited", symbol: "BASF", exchange: "NSE" },
-{ name: "Bannari Amman Spinning Mills Limited", symbol: "BASML", exchange: "NSE" },
-{ name: "Bata India Limited", symbol: "BATAINDIA", exchange: "NSE" },
-{ name: "Bayer Cropscience Limited", symbol: "BAYERCROP", exchange: "NSE" },
-{ name: "Bharat Bijlee Limited", symbol: "BBL", exchange: "NSE" },
-{ name: "Bombay Burmah Trading Corporation Limited", symbol: "BBTC", exchange: "NSE" },
-{ name: "Brightcom Group Limited", symbol: "BCG", exchange: "NSE" },
-{ name: "B.C. Power Controls Ltd", symbol: "BCP", exchange: "NSE" },
-{ name: "Bharat Dynamics Limited", symbol: "BDL", exchange: "NSE" },
-{ name: "Beardsell Limited", symbol: "BEARDSELL", exchange: "NSE" },
-{ name: "Mrs. Bectors Food Specialities Limited", symbol: "BECTORFOOD", exchange: "NSE" },
-{ name: "Bedmutha Industries Limited", symbol: "BEDMUTHA", exchange: "NSE" },
-{ name: "Bharat Electronics Limited", symbol: "BEL", exchange: "NSE" },
-{ name: "BEML Limited", symbol: "BEML", exchange: "NSE" },
-{ name: "Bhansali Engineering Polymers Limited", symbol: "BEPL", exchange: "NSE" },
-{ name: "Berger Paints (I) Limited", symbol: "BERGEPAINT", exchange: "NSE" },
-{ name: "BF Investment Limited", symbol: "BFINVEST", exchange: "NSE" },
-{ name: "BF Utilities Limited", symbol: "BFUTILITIE", exchange: "NSE" },
-{ name: "BGR Energy Systems Limited", symbol: "BGRENERGY", exchange: "NSE" },
-{ name: "Bhageria Industries Limited", symbol: "BHAGERIA", exchange: "NSE" },
-{ name: "Bhagyanagar India Limited", symbol: "BHAGYANGR", exchange: "NSE" },
-{ name: "Bhagyanagar Properties Limited", symbol: "BHAGYAPROP", exchange: "NSE" },
-{ name: "Bhandari Hosiery Exports Limited", symbol: "BHANDARI", exchange: "NSE" },
-{ name: "Bharat Forge Limited", symbol: "BHARATFORG", exchange: "NSE" },
-{ name: "Bharat Gears Limited", symbol: "BHARATGEAR", exchange: "NSE" },
-{ name: "Bharat Rasayan Limited", symbol: "BHARATRAS", exchange: "NSE" },
-{ name: "Bharat Wire Ropes Limited", symbol: "BHARATWIRE", exchange: "NSE" },
-{ name: "Bharti Airtel Limited", symbol: "BHARTIARTL", exchange: "NSE" },
-{ name: "Bharat Heavy Electricals Limited", symbol: "BHEL", exchange: "NSE" },
-{ name: "Bigbloc Construction Limited", symbol: "BIGBLOC", exchange: "NSE" },
-{ name: "Bhartiya International Limited", symbol: "BIL", exchange: "NSE" },
-{ name: "Bil Energy Systems Limited", symbol: "BILENERGY", exchange: "NSE" },
-{ name: "Oswal Chemicals & Fertilizers Limited", symbol: "BINDALAGRO", exchange: "NSE" },
-{ name: "Biocon Limited", symbol: "BIOCON", exchange: "NSE" },
-{ name: "Biofil Chemicals & Pharmaceuticals Limited", symbol: "BIOFILCHEM", exchange: "NSE" },
-{ name: "Birla Cable Limited", symbol: "BIRLACABLE", exchange: "NSE" },
-{ name: "Birla Corporation Limited", symbol: "BIRLACORPN", exchange: "NSE" },
-{ name: "Aditya Birla Money Limited", symbol: "BIRLAMONEY", exchange: "NSE" },
-{ name: "Birla Tyres Limited", symbol: "BIRLATYRE", exchange: "NSE" },
-{ name: "Bkm Industries Limited", symbol: "BKMINDST", exchange: "NSE" },
-{ name: "BLB Limited", symbol: "BLBLIMITED", exchange: "NSE" },
-{ name: "Bliss GVS Pharma Limited", symbol: "BLISSGVS", exchange: "NSE" },
-{ name: "B. L. Kashyap and Sons Limited", symbol: "BLKASHYAP", exchange: "NSE" },
-{ name: "BLS International Services Limited", symbol: "BLS", exchange: "NSE" },
-{ name: "Blue Coast Hotels Limited", symbol: "BLUECOAST", exchange: "NSE" },
-{ name: "Blue Dart Express Limited", symbol: "BLUEDART", exchange: "NSE" },
-{ name: "Blue Star Limited", symbol: "BLUESTARCO", exchange: "NSE" },
-{ name: "Bodal Chemicals Limited", symbol: "BODALCHEM", exchange: "NSE" },
-{ name: "Bombay Dyeing & Mfg Company Limited", symbol: "BOMDYEING", exchange: "NSE" },
-{ name: "Borosil Limited", symbol: "BOROLTD", exchange: "NSE" },
-{ name: "BOROSIL RENEWABLES LIMITED", symbol: "BORORENEW", exchange: "NSE" },
-{ name: "Bosch Limited", symbol: "BOSCHLTD", exchange: "NSE" },
-{ name: "Bharat Petroleum Corporation Limited", symbol: "BPCL", exchange: "NSE" },
-{ name: "BPL Limited", symbol: "BPL", exchange: "NSE" },
-{ name: "Bombay Rayon Fashions Limited", symbol: "BRFL", exchange: "NSE" },
-{ name: "Brigade Enterprises Limited", symbol: "BRIGADE", exchange: "NSE" },
-{ name: "Britannia Industries Limited", symbol: "BRITANNIA", exchange: "NSE" },
-{ name: "Bharat Road Network Limited", symbol: "BRNL", exchange: "NSE" },
-{ name: "Brooks Laboratories Limited", symbol: "BROOKS", exchange: "NSE" },
-{ name: "BSE Limited", symbol: "BSE", exchange: "NSE" },
-{ name: "BSEL Infrastructure Realty Limited", symbol: "BSELINFRA", exchange: "NSE" },
-{ name: "Bombay Super Hybrid Seeds Limited", symbol: "BSHSL", exchange: "NSE" },
-{ name: "BSL Limited", symbol: "BSL", exchange: "NSE" },
-{ name: "BIRLASOFT LIMITED", symbol: "BSOFT", exchange: "NSE" },
-{ name: "Burger King India Limited", symbol: "BURGERKING", exchange: "NSE" },
-{ name: "Burnpur Cement Limited", symbol: "BURNPUR", exchange: "NSE" },
-{ name: "Butterfly Gandhimathi Appliances Limited", symbol: "BUTTERFLY", exchange: "NSE" },
-{ name: "Barak Valley Cements Limited", symbol: "BVCL", exchange: "NSE" },
-{ name: "The Byke Hospitality Ltd", symbol: "BYKE", exchange: "NSE" },
-{ name: "Cadila Healthcare Limited", symbol: "CADILAHC", exchange: "NSE" },
-{ name: "California Software Company Limited", symbol: "CALSOFT", exchange: "NSE" },
-{ name: "Camlin Fine Sciences Limited", symbol: "CAMLINFINE", exchange: "NSE" },
-{ name: "Computer Age Management Services Limited", symbol: "CAMS", exchange: "NSE" },
-{ name: "Canara Bank", symbol: "CANBK", exchange: "NSE" },
-{ name: "C & C Constructions Limited", symbol: "CANDC", exchange: "NSE" },
-{ name: "Can Fin Homes Limited", symbol: "CANFINHOME", exchange: "NSE" },
-{ name: "Cantabil Retail India Limited", symbol: "CANTABIL", exchange: "NSE" },
-{ name: "Capacit'e Infraprojects Limited", symbol: "CAPACITE", exchange: "NSE" },
-{ name: "Caplin Point Laboratories Limited", symbol: "CAPLIPOINT", exchange: "NSE" },
-{ name: "Capital Trust Limited", symbol: "CAPTRUST", exchange: "NSE" },
-{ name: "Carborundum Universal Limited", symbol: "CARBORUNIV", exchange: "NSE" },
-{ name: "Career Point Limited", symbol: "CAREERP", exchange: "NSE" },
-{ name: "CARE Ratings Limited", symbol: "CARERATING", exchange: "NSE" },
-{ name: "Castrol India Limited", symbol: "CASTROLIND", exchange: "NSE" },
-{ name: "Country Club Hospitality & Holidays Limited", symbol: "CCHHL", exchange: "NSE" },
-{ name: "CCL Products (India) Limited", symbol: "CCL", exchange: "NSE" },
-{ name: "Central Depository Services (India) Limited", symbol: "CDSL", exchange: "NSE" },
-{ name: "CEAT Limited", symbol: "CEATLTD", exchange: "NSE" },
-{ name: "Commercial Engineers & Body Builders Co Limited", symbol: "CEBBCO", exchange: "NSE" },
-{ name: "Celebrity Fashions Limited", symbol: "CELEBRITY", exchange: "NSE" },
-{ name: "Century Enka Limited", symbol: "CENTENKA", exchange: "NSE" },
-{ name: "Century Extrusions Limited", symbol: "CENTEXT", exchange: "NSE" },
-{ name: "Central Bank of India", symbol: "CENTRALBK", exchange: "NSE" },
-{ name: "Centrum Capital Limited", symbol: "CENTRUM", exchange: "NSE" },
-{ name: "Centum Electronics Limited", symbol: "CENTUM", exchange: "NSE" },
-{ name: "Century Plyboards (India) Limited", symbol: "CENTURYPLY", exchange: "NSE" },
-{ name: "Century Textiles & Industries Limited", symbol: "CENTURYTEX", exchange: "NSE" },
-{ name: "Cera Sanitaryware Limited", symbol: "CERA", exchange: "NSE" },
-{ name: "Cerebra Integrated Technologies Limited", symbol: "CEREBRAINT", exchange: "NSE" },
-{ name: "CESC Limited", symbol: "CESC", exchange: "NSE" },
-{ name: "CESC Ventures Limited", symbol: "CESCVENT", exchange: "NSE" },
-{ name: "Capri Global Capital Limited", symbol: "CGCL", exchange: "NSE" },
-{ name: "CG Power and Industrial Solutions Limited", symbol: "CGPOWER", exchange: "NSE" },
-{ name: "Chalet Hotels Limited", symbol: "CHALET", exchange: "NSE" },
-{ name: "Chambal Fertilizers & Chemicals Limited", symbol: "CHAMBLFERT", exchange: "NSE" },
-{ name: "Chembond Chemicals Ltd", symbol: "CHEMBOND", exchange: "NSE" },
-{ name: "Chemcon Speciality Chemicals Limited", symbol: "CHEMCON", exchange: "NSE" },
-{ name: "Chemfab Alkalis Limited", symbol: "CHEMFAB", exchange: "NSE" },
-{ name: "Chennai Petroleum Corporation Limited", symbol: "CHENNPETRO", exchange: "NSE" },
-{ name: "Cholamandalam Investment and Finance Company Limited", symbol: "CHOLAFIN", exchange: "NSE" },
-{ name: "Cholamandalam Financial Holdings Limited", symbol: "CHOLAHLDNG", exchange: "NSE" },
-{ name: "Chromatic India Limited", symbol: "CHROMATIC", exchange: "NSE" },
-{ name: "Cigniti Technologies Limited", symbol: "CIGNITITEC", exchange: "NSE" },
-{ name: "Cineline India Limited", symbol: "CINELINE", exchange: "NSE" },
-{ name: "Cinevista Limited", symbol: "CINEVISTA", exchange: "NSE" },
-{ name: "Cipla Limited", symbol: "CIPLA", exchange: "NSE" },
-{ name: "CL Educate Limited", symbol: "CLEDUCATE", exchange: "NSE" },
-{ name: "Clariant Chemicals (India) Limited", symbol: "CLNINDIA", exchange: "NSE" },
-{ name: "CMI Limited", symbol: "CMICABLES", exchange: "NSE" },
-{ name: "CIL Nova Petrochemicals Limited", symbol: "CNOVAPETRO", exchange: "NSE" },
-{ name: "Coal India Limited", symbol: "COALINDIA", exchange: "NSE" },
-{ name: "Cochin Shipyard Limited", symbol: "COCHINSHIP", exchange: "NSE" },
-{ name: "Coforge Limited", symbol: "COFORGE", exchange: "NSE" },
-{ name: "Colgate Palmolive (India) Limited", symbol: "COLPAL", exchange: "NSE" },
-{ name: "Compuage Infocom Limited", symbol: "COMPINFO", exchange: "NSE" },
-{ name: "Compucom Software Limited", symbol: "COMPUSOFT", exchange: "NSE" },
-{ name: "Container Corporation of India Limited", symbol: "CONCOR", exchange: "NSE" },
-{ name: "Confidence Petroleum India Limited", symbol: "CONFIPET", exchange: "NSE" },
-{ name: "Consolidated Finvest & Holdings Limited", symbol: "CONSOFINVT", exchange: "NSE" },
-{ name: "Control Print Limited", symbol: "CONTROLPR", exchange: "NSE" },
-{ name: "Coral India Finance & Housing Limited", symbol: "CORALFINAC", exchange: "NSE" },
-{ name: "Cords Cable Industries Limited", symbol: "CORDSCABLE", exchange: "NSE" },
-{ name: "Coromandel International Limited", symbol: "COROMANDEL", exchange: "NSE" },
-{ name: "Cosmo Films Limited", symbol: "COSMOFILMS", exchange: "NSE" },
-{ name: "Country Condo's Limited", symbol: "COUNCODOS", exchange: "NSE" },
-{ name: "Cox & Kings Limited", symbol: "COX&KINGS", exchange: "NSE" },
-{ name: "Creative Peripherals and Distribution Limited", symbol: "CREATIVE", exchange: "NSE" },
-{ name: "Creative Eye Limited", symbol: "CREATIVEYE", exchange: "NSE" },
-{ name: "CREDITACCESS GRAMEEN LIMITED", symbol: "CREDITACC", exchange: "NSE" },
-{ name: "Crest Ventures Limited", symbol: "CREST", exchange: "NSE" },
-{ name: "CRISIL Limited", symbol: "CRISIL", exchange: "NSE" },
-{ name: "Crompton Greaves Consumer Electricals Limited", symbol: "CROMPTON", exchange: "NSE" },
-{ name: "CSB Bank Limited", symbol: "CSBBANK", exchange: "NSE" },
-{ name: "Cambridge Technology Enterprises Limited", symbol: "CTE", exchange: "NSE" },
-{ name: "City Union Bank Limited", symbol: "CUB", exchange: "NSE" },
-{ name: "Cubex Tubings Limited", symbol: "CUBEXTUB", exchange: "NSE" },
-{ name: "Cummins India Limited", symbol: "CUMMINSIND", exchange: "NSE" },
-{ name: "Cupid Limited", symbol: "CUPID", exchange: "NSE" },
-{ name: "Cyber Media (India) Limited", symbol: "CYBERMEDIA", exchange: "NSE" },
-{ name: "Cybertech Systems And Software Limited", symbol: "CYBERTECH", exchange: "NSE" },
-{ name: "Cyient Limited", symbol: "CYIENT", exchange: "NSE" },
-{ name: "LT Foods Limited", symbol: "DAAWAT", exchange: "NSE" },
-{ name: "Dabur India Limited", symbol: "DABUR", exchange: "NSE" },
-{ name: "Dalmia Bharat Limited", symbol: "DALBHARAT", exchange: "NSE" },
-{ name: "Dalmia Bharat Sugar and Industries Limited", symbol: "DALMIASUG", exchange: "NSE" },
-{ name: "Damodar Industries Limited", symbol: "DAMODARIND", exchange: "NSE" },
-{ name: "Dangee Dums Limited", symbol: "DANGEE", exchange: "NSE" },
-{ name: "Datamatics Global Services Limited", symbol: "DATAMATICS", exchange: "NSE" },
-{ name: "D.B.Corp Limited", symbol: "DBCORP", exchange: "NSE" },
-{ name: "Dilip Buildcon Limited", symbol: "DBL", exchange: "NSE" },
-{ name: "D B Realty Limited", symbol: "DBREALTY", exchange: "NSE" },
-{ name: "DB (International) Stock Brokers Limited", symbol: "DBSTOCKBRO", exchange: "NSE" },
-{ name: "Dishman Carbogen Amcis Limited", symbol: "DCAL", exchange: "NSE" },
-{ name: "DCB Bank Limited", symbol: "DCBBANK", exchange: "NSE" },
-{ name: "DCM  Limited", symbol: "DCM", exchange: "NSE" },
-{ name: "DCM Financial Services Limited", symbol: "DCMFINSERV", exchange: "NSE" },
-{ name: "DCM Nouvelle Limited", symbol: "DCMNVL", exchange: "NSE" },
-{ name: "DCM Shriram Limited", symbol: "DCMSHRIRAM", exchange: "NSE" },
-{ name: "DCW Limited", symbol: "DCW", exchange: "NSE" },
-{ name: "Deccan Cements Limited", symbol: "DECCANCE", exchange: "NSE" },
-{ name: "Deepak Fertilizers and Petrochemicals Corporation Limited", symbol: "DEEPAKFERT", exchange: "NSE" },
-{ name: "Deepak Nitrite Limited", symbol: "DEEPAKNTR", exchange: "NSE" },
-{ name: "DEEP ENERGY RESOURCES LIMITED", symbol: "DEEPENR", exchange: "NSE" },
-{ name: "Delta Corp Limited", symbol: "DELTACORP", exchange: "NSE" },
-{ name: "Delta Manufacturing Limited", symbol: "DELTAMAGNT", exchange: "NSE" },
-{ name: "Den Networks Limited", symbol: "DEN", exchange: "NSE" },
-{ name: "De Nora India Limited", symbol: "DENORA", exchange: "NSE" },
-{ name: "DFM Foods Limited", symbol: "DFMFOODS", exchange: "NSE" },
-{ name: "Digicontent Limited", symbol: "DGCONTENT", exchange: "NSE" },
-{ name: "Dhampur Sugar Mills Limited", symbol: "DHAMPURSUG", exchange: "NSE" },
-{ name: "Dhanlaxmi Bank Limited", symbol: "DHANBANK", exchange: "NSE" },
-{ name: "Dhani Services Limited", symbol: "DHANI", exchange: "NSE" },
-{ name: "Dhanuka Agritech Limited", symbol: "DHANUKA", exchange: "NSE" },
-{ name: "Dharani Sugars & Chemicals Limited", symbol: "DHARSUGAR", exchange: "NSE" },
-{ name: "Dewan Housing Finance Corporation Limited", symbol: "DHFL", exchange: "NSE" },
-{ name: "Dhunseri Investments Limited", symbol: "DHUNINV", exchange: "NSE" },
-{ name: "Prataap Snacks Limited", symbol: "DIAMONDYD", exchange: "NSE" },
-{ name: "Diamond Power Infra Ltd", symbol: "DIAPOWER", exchange: "NSE" },
-{ name: "DIC India Limited", symbol: "DICIND", exchange: "NSE" },
-{ name: "DiGiSPICE Technologies Limited", symbol: "DIGISPICE", exchange: "NSE" },
-{ name: "Digjam Limited", symbol: "DIGJAMLTD", exchange: "NSE" },
-{ name: "Dish TV India Limited", symbol: "DISHTV", exchange: "NSE" },
-{ name: "Divi's Laboratories Limited", symbol: "DIVISLAB", exchange: "NSE" },
-{ name: "Dixon Technologies (India) Limited", symbol: "DIXON", exchange: "NSE" },
-{ name: "DLF Limited", symbol: "DLF", exchange: "NSE" },
-{ name: "D-Link (India) Limited", symbol: "DLINKINDIA", exchange: "NSE" },
-{ name: "Avenue Supermarts Limited", symbol: "DMART", exchange: "NSE" },
-{ name: "Diligent Media Corporation Limited", symbol: "DNAMEDIA", exchange: "NSE" },
-{ name: "Dolat Investments Limited", symbol: "DOLAT", exchange: "NSE" },
-{ name: "Dollar Industries Limited", symbol: "DOLLAR", exchange: "NSE" },
-{ name: "Donear Industries Limited", symbol: "DONEAR", exchange: "NSE" },
-{ name: "D. P. Abhushan Limited", symbol: "DPABHUSHAN", exchange: "NSE" },
-{ name: "DPSC Limited", symbol: "DPSCLTD", exchange: "NSE" },
-{ name: "D P Wires Limited", symbol: "DPWIRES", exchange: "NSE" },
-{ name: "DQ Entertainment (International) Limited", symbol: "DQE", exchange: "NSE" },
-{ name: "Dredging Corporation of India Limited", symbol: "DREDGECORP", exchange: "NSE" },
-{ name: "Dr. Reddy's Laboratories Limited", symbol: "DRREDDY", exchange: "NSE" },
-{ name: "Dynacons Systems & Solutions Limited", symbol: "DSSL", exchange: "NSE" },
-{ name: "Dhunseri Tea & Industries Limited", symbol: "DTIL", exchange: "NSE" },
-{ name: "Ducon Infratechnologies Limited", symbol: "DUCON", exchange: "NSE" },
-{ name: "Dhunseri Ventures Limited", symbol: "DVL", exchange: "NSE" },
-{ name: "Dwarikesh Sugar Industries Limited", symbol: "DWARKESH", exchange: "NSE" },
-{ name: "Dynamatic Technologies Limited", symbol: "DYNAMATECH", exchange: "NSE" },
-{ name: "Dynemic Products Limited", symbol: "DYNPRO", exchange: "NSE" },
-{ name: "Eastern Silk Industries Limited", symbol: "EASTSILK", exchange: "NSE" },
-{ name: "Easun Reyrolle Limited", symbol: "EASUNREYRL", exchange: "NSE" },
-{ name: "EBIXCASH WORLD MONEY INDIA LIMITED", symbol: "EBIXFOREX", exchange: "NSE" },
-{ name: "eClerx Services Limited", symbol: "ECLERX", exchange: "NSE" },
-{ name: "Edelweiss Financial Services Limited", symbol: "EDELWEISS", exchange: "NSE" },
-{ name: "Educomp Solutions Limited", symbol: "EDUCOMP", exchange: "NSE" },
-{ name: "Eicher Motors Limited", symbol: "EICHERMOT", exchange: "NSE" },
-{ name: "EID Parry India Limited", symbol: "EIDPARRY", exchange: "NSE" },
-{ name: "EIH Associated Hotels Limited", symbol: "EIHAHOTELS", exchange: "NSE" },
-{ name: "EIH Limited", symbol: "EIHOTEL", exchange: "NSE" },
-{ name: "Eimco Elecon (India) Limited", symbol: "EIMCOELECO", exchange: "NSE" },
-{ name: "Everest Kanto Cylinder Limited", symbol: "EKC", exchange: "NSE" },
-{ name: "Elecon Engineering Company Limited", symbol: "ELECON", exchange: "NSE" },
-{ name: "Electrosteel Castings Limited", symbol: "ELECTCAST", exchange: "NSE" },
-{ name: "Electrotherm (India) Limited", symbol: "ELECTHERM", exchange: "NSE" },
-{ name: "Elgi Equipments Limited", symbol: "ELGIEQUIP", exchange: "NSE" },
-{ name: "Elgi Rubber Company Limited", symbol: "ELGIRUBCO", exchange: "NSE" },
-{ name: "Emami Limited", symbol: "EMAMILTD", exchange: "NSE" },
-{ name: "Emami Paper Mills Limited", symbol: "EMAMIPAP", exchange: "NSE" },
-{ name: "Emami Realty Limited", symbol: "EMAMIREAL", exchange: "NSE" },
-{ name: "Emco Limited", symbol: "EMCO", exchange: "NSE" },
-{ name: "Emkay Global Financial Services Limited", symbol: "EMKAY", exchange: "NSE" },
-{ name: "Emmbi Industries Limited", symbol: "EMMBI", exchange: "NSE" },
-{ name: "Endurance Technologies Limited", symbol: "ENDURANCE", exchange: "NSE" },
-{ name: "Energy Development Company Limited", symbol: "ENERGYDEV", exchange: "NSE" },
-{ name: "Engineers India Limited", symbol: "ENGINERSIN", exchange: "NSE" },
-{ name: "Entertainment Network (India) Limited", symbol: "ENIL", exchange: "NSE" },
-{ name: "EPL Limited", symbol: "EPL", exchange: "NSE" },
-{ name: "Equitas Holdings Limited", symbol: "EQUITAS", exchange: "NSE" },
-{ name: "Equitas Small Finance Bank Limited", symbol: "EQUITASBNK", exchange: "NSE" },
-{ name: "Eris Lifesciences Limited", symbol: "ERIS", exchange: "NSE" },
-{ name: "Eros International Media Limited", symbol: "EROSMEDIA", exchange: "NSE" },
-{ name: "Esab India Limited", symbol: "ESABINDIA", exchange: "NSE" },
-{ name: "Escorts Limited", symbol: "ESCORTS", exchange: "NSE" },
-{ name: "Essar Shipping Limited", symbol: "ESSARSHPNG", exchange: "NSE" },
-{ name: "Ester Industries Limited", symbol: "ESTER", exchange: "NSE" },
-{ name: "Euro Multivision Limited", symbol: "EUROMULTI", exchange: "NSE" },
-{ name: "Eurotex Industries and Exports Limited", symbol: "EUROTEXIND", exchange: "NSE" },
-{ name: "Eveready Industries India Limited", symbol: "EVEREADY", exchange: "NSE" },
-{ name: "Everest Industries Limited", symbol: "EVERESTIND", exchange: "NSE" },
-{ name: "Excel Realty N Infra Limited", symbol: "EXCEL", exchange: "NSE" },
-{ name: "Excel Industries Limited", symbol: "EXCELINDUS", exchange: "NSE" },
-{ name: "Exide Industries Limited", symbol: "EXIDEIND", exchange: "NSE" },
-{ name: "Expleo Solutions Limited", symbol: "EXPLEOSOL", exchange: "NSE" },
-{ name: "Fertilizers and Chemicals Travancore Limited", symbol: "FACT", exchange: "NSE" },
-{ name: "Fairchem Organics Limited", symbol: "FAIRCHEMOR", exchange: "NSE" },
-{ name: "Fineotex Chemical Limited", symbol: "FCL", exchange: "NSE" },
-{ name: "Future Consumer Limited", symbol: "FCONSUMER", exchange: "NSE" },
-{ name: "FCS Software Solutions Limited", symbol: "FCSSOFT", exchange: "NSE" },
-{ name: "FDC Limited", symbol: "FDC", exchange: "NSE" },
-{ name: "The Federal Bank  Limited", symbol: "FEDERALBNK", exchange: "NSE" },
-{ name: "Future Enterprises Limited", symbol: "FEL", exchange: "NSE" },
-{ name: "Future Enterprises Limited", symbol: "FELDVR", exchange: "NSE" },
-{ name: "Fiem Industries Limited", symbol: "FIEMIND", exchange: "NSE" },
-{ name: "Filatex India Limited", symbol: "FILATEX", exchange: "NSE" },
-{ name: "Finolex Cables Limited", symbol: "FINCABLES", exchange: "NSE" },
-{ name: "Fine Organic Industries Limited", symbol: "FINEORG", exchange: "NSE" },
-{ name: "Finolex Industries Limited", symbol: "FINPIPE", exchange: "NSE" },
-{ name: "Flexituff Ventures International Limited", symbol: "FLEXITUFF", exchange: "NSE" },
-{ name: "Future Lifestyle Fashions Limited", symbol: "FLFL", exchange: "NSE" },
-{ name: "Gujarat Fluorochemicals Limited", symbol: "FLUOROCHEM", exchange: "NSE" },
-{ name: "Federal-Mogul Goetze (India) Limited.", symbol: "FMGOETZE", exchange: "NSE" },
-{ name: "Future Market Networks Limited", symbol: "FMNL", exchange: "NSE" },
-{ name: "FORCE MOTORS LTD", symbol: "FORCEMOT", exchange: "NSE" },
-{ name: "Fortis Healthcare Limited", symbol: "FORTIS", exchange: "NSE" },
-{ name: "Foseco India Limited", symbol: "FOSECOIND", exchange: "NSE" },
-{ name: "Future Retail Limited", symbol: "FRETAIL", exchange: "NSE" },
-{ name: "Future Supply Chain Solutions Limited", symbol: "FSC", exchange: "NSE" },
-{ name: "Firstsource Solutions Limited", symbol: "FSL", exchange: "NSE" },
-{ name: "Gabriel India Limited", symbol: "GABRIEL", exchange: "NSE" },
-{ name: "Gujarat Ambuja Exports Limited", symbol: "GAEL", exchange: "NSE" },
-{ name: "GAIL (India) Limited", symbol: "GAIL", exchange: "NSE" },
-{ name: "Gyscoal Alloys Limited", symbol: "GAL", exchange: "NSE" },
-{ name: "Galaxy Surfactants Limited", symbol: "GALAXYSURF", exchange: "NSE" },
-{ name: "Gallantt Metal Limited", symbol: "GALLANTT", exchange: "NSE" },
-{ name: "Gallantt Ispat Limited", symbol: "GALLISPAT", exchange: "NSE" },
-{ name: "Gammon Infrastructure Projects Limited", symbol: "GAMMNINFRA", exchange: "NSE" },
-{ name: "Gandhi Special Tubes Limited", symbol: "GANDHITUBE", exchange: "NSE" },
-{ name: "Ganesha Ecosphere Limited", symbol: "GANECOS", exchange: "NSE" },
-{ name: "Ganesh Housing Corporation Limited", symbol: "GANESHHOUC", exchange: "NSE" },
-{ name: "Ganges Securities Limited", symbol: "GANGESSECU", exchange: "NSE" },
-{ name: "Garden Silk Mills Limited", symbol: "GARDENSILK", exchange: "NSE" },
-{ name: "Garware Technical Fibres Limited", symbol: "GARFIBRES", exchange: "NSE" },
-{ name: "GATI Limited", symbol: "GATI", exchange: "NSE" },
-{ name: "Gayatri Highways Limited", symbol: "GAYAHWS", exchange: "NSE" },
-{ name: "Gayatri Projects Limited", symbol: "GAYAPROJ", exchange: "NSE" },
-{ name: "GB Global Limited", symbol: "GBGLOBAL", exchange: "NSE" },
-{ name: "Gateway Distriparks Limited", symbol: "GDL", exchange: "NSE" },
-{ name: "GeeCee Ventures Limited", symbol: "GEECEE", exchange: "NSE" },
-{ name: "Geekay Wires Limited", symbol: "GEEKAYWIRE", exchange: "NSE" },
-{ name: "Genesys International Corporation Limited", symbol: "GENESYS", exchange: "NSE" },
-{ name: "Genus Paper & Boards Limited", symbol: "GENUSPAPER", exchange: "NSE" },
-{ name: "Genus Power Infrastructures Limited", symbol: "GENUSPOWER", exchange: "NSE" },
-{ name: "Geojit Financial Services Limited", symbol: "GEOJITFSL", exchange: "NSE" },
-{ name: "GE Power India Limited", symbol: "GEPIL", exchange: "NSE" },
-{ name: "The Great Eastern Shipping Company Limited", symbol: "GESHIP", exchange: "NSE" },
-{ name: "GE T&D India Limited", symbol: "GET&D", exchange: "NSE" },
-{ name: "GFL Limited", symbol: "GFLLIMITED", exchange: "NSE" },
-{ name: "Grand Foundry Limited", symbol: "GFSTEELS", exchange: "NSE" },
-{ name: "GHCL Limited", symbol: "GHCL", exchange: "NSE" },
-{ name: "GIC Housing Finance Limited", symbol: "GICHSGFIN", exchange: "NSE" },
-{ name: "General Insurance Corporation of India", symbol: "GICRE", exchange: "NSE" },
-{ name: "Gillanders Arbuthnot & Company Limited", symbol: "GILLANDERS", exchange: "NSE" },
-{ name: "Gillette India Limited", symbol: "GILLETTE", exchange: "NSE" },
-{ name: "Ginni Filaments Limited", symbol: "GINNIFILA", exchange: "NSE" },
-{ name: "Gujarat Industries Power Company Limited", symbol: "GIPCL", exchange: "NSE" },
-{ name: "GI Engineering Solutions Limited", symbol: "GISOLUTION", exchange: "NSE" },
-{ name: "GKW Limited", symbol: "GKWLIMITED", exchange: "NSE" },
-{ name: "Gland Pharma Limited", symbol: "GLAND", exchange: "NSE" },
-{ name: "GlaxoSmithKline Pharmaceuticals Limited", symbol: "GLAXO", exchange: "NSE" },
-{ name: "Glenmark Pharmaceuticals Limited", symbol: "GLENMARK", exchange: "NSE" },
-{ name: "Gujarat Lease Financing Limited", symbol: "GLFL", exchange: "NSE" },
-{ name: "Global Education Limited", symbol: "GLOBAL", exchange: "NSE" },
-{ name: "Global Vectra Helicorp Limited", symbol: "GLOBALVECT", exchange: "NSE" },
-{ name: "Globe Textiles (India) Limited", symbol: "GLOBE", exchange: "NSE" },
-{ name: "Global Offshore Services Limited", symbol: "GLOBOFFS", exchange: "NSE" },
-{ name: "Globus Spirits Limited", symbol: "GLOBUSSPR", exchange: "NSE" },
-{ name: "GM Breweries Limited", symbol: "GMBREW", exchange: "NSE" },
-{ name: "Gujarat Mineral Development Corporation Limited", symbol: "GMDCLTD", exchange: "NSE" },
-{ name: "GMM Pfaudler Limited", symbol: "GMMPFAUDLR", exchange: "NSE" },
-{ name: "GMR Infrastructure Limited", symbol: "GMRINFRA", exchange: "NSE" },
-{ name: "GNA Axles Limited", symbol: "GNA", exchange: "NSE" },
-{ name: "Gujarat Narmada Valley Fertilizers and Chemicals Limited", symbol: "GNFC", exchange: "NSE" },
-{ name: "Goa Carbon Limited", symbol: "GOACARBON", exchange: "NSE" },
-{ name: "GOCL Corporation Limited", symbol: "GOCLCORP", exchange: "NSE" },
-{ name: "Godfrey Phillips India Limited", symbol: "GODFRYPHLP", exchange: "NSE" },
-{ name: "Godha Cabcon & Insulation Limited", symbol: "GODHA", exchange: "NSE" },
-{ name: "Godrej Agrovet Limited", symbol: "GODREJAGRO", exchange: "NSE" },
-{ name: "Godrej Consumer Products Limited", symbol: "GODREJCP", exchange: "NSE" },
-{ name: "Godrej Industries Limited", symbol: "GODREJIND", exchange: "NSE" },
-{ name: "Godrej Properties Limited", symbol: "GODREJPROP", exchange: "NSE" },
-{ name: "Goenka Diamond and Jewels Limited", symbol: "GOENKA", exchange: "NSE" },
-{ name: "Gokaldas Exports Limited", symbol: "GOKEX", exchange: "NSE" },
-{ name: "Gokul Refoils and Solvent Limited", symbol: "GOKUL", exchange: "NSE" },
-{ name: "Gokul Agro Resources Limited", symbol: "GOKULAGRO", exchange: "NSE" },
-{ name: "Golden Tobacco Limited", symbol: "GOLDENTOBC", exchange: "NSE" },
-{ name: "Goldiam International Limited", symbol: "GOLDIAM", exchange: "NSE" },
-{ name: "Goldstone Technologies Limited", symbol: "GOLDTECH", exchange: "NSE" },
-{ name: "Goodluck India Limited", symbol: "GOODLUCK", exchange: "NSE" },
-{ name: "Goodyear India Limited", symbol: "GOODYEAR", exchange: "NSE" },
-{ name: "Godawari Power And Ispat limited", symbol: "GPIL", exchange: "NSE" },
-{ name: "Gujarat Pipavav Port Limited", symbol: "GPPL", exchange: "NSE" },
-{ name: "GPT Infraprojects Limited", symbol: "GPTINFRA", exchange: "NSE" },
-{ name: "Granules India Limited", symbol: "GRANULES", exchange: "NSE" },
-{ name: "Graphite India Limited", symbol: "GRAPHITE", exchange: "NSE" },
-{ name: "Grasim Industries Limited", symbol: "GRASIM", exchange: "NSE" },
-{ name: "Gravita India Limited", symbol: "GRAVITA", exchange: "NSE" },
-{ name: "Greaves Cotton Limited", symbol: "GREAVESCOT", exchange: "NSE" },
-{ name: "Greenlam Industries Limited", symbol: "GREENLAM", exchange: "NSE" },
-{ name: "Greenpanel Industries Limited", symbol: "GREENPANEL", exchange: "NSE" },
-{ name: "Greenply Industries Limited", symbol: "GREENPLY", exchange: "NSE" },
-{ name: "Orient Green Power Company Limited", symbol: "GREENPOWER", exchange: "NSE" },
-{ name: "Grindwell Norton Limited", symbol: "GRINDWELL", exchange: "NSE" },
-{ name: "The Grob Tea Company Limited", symbol: "GROBTEA", exchange: "NSE" },
-{ name: "GRP Limited", symbol: "GRPLTD", exchange: "NSE" },
-{ name: "Garden Reach Shipbuilders & Engineers Limited", symbol: "GRSE", exchange: "NSE" },
-{ name: "Gujarat Sidhee Cement Limited", symbol: "GSCLCEMENT", exchange: "NSE" },
-{ name: "Gujarat State Fertilizers & Chemicals Limited", symbol: "GSFC", exchange: "NSE" },
-{ name: "Gujarat State Petronet Limited", symbol: "GSPL", exchange: "NSE" },
-{ name: "GSS Infotech Limited", symbol: "GSS", exchange: "NSE" },
-{ name: "GTL Limited", symbol: "GTL", exchange: "NSE" },
-{ name: "GTL Infrastructure Limited", symbol: "GTLINFRA", exchange: "NSE" },
-{ name: "GTN Industries Limited", symbol: "GTNIND", exchange: "NSE" },
-{ name: "GTN Textiles Limited", symbol: "GTNTEX", exchange: "NSE" },
-{ name: "GTPL Hathway Limited", symbol: "GTPL", exchange: "NSE" },
-{ name: "Gufic Biosciences Limited", symbol: "GUFICBIO", exchange: "NSE" },
-{ name: "Gujarat Alkalies and Chemicals Limited", symbol: "GUJALKALI", exchange: "NSE" },
-{ name: "Gujarat Apollo Industries Limited", symbol: "GUJAPOLLO", exchange: "NSE" },
-{ name: "Gujarat Gas Limited", symbol: "GUJGASLTD", exchange: "NSE" },
-{ name: "Gujarat Raffia Industries Limited", symbol: "GUJRAFFIA", exchange: "NSE" },
-{ name: "Gulf Oil Lubricants India Limited", symbol: "GULFOILLUB", exchange: "NSE" },
-{ name: "GP Petroleums Limited", symbol: "GULFPETRO", exchange: "NSE" },
-{ name: "Gulshan Polyols Limited", symbol: "GULPOLY", exchange: "NSE" },
-{ name: "GVK Power  Limited", symbol: "GVKPIL", exchange: "NSE" },
-{ name: "Hindustan Aeronautics Limited", symbol: "HAL", exchange: "NSE" },
-{ name: "Happiest Minds Technologies Limited", symbol: "HAPPSTMNDS", exchange: "NSE" },
-{ name: "Harita Seating Systems Limited", symbol: "HARITASEAT", exchange: "NSE" },
-{ name: "Harrisons  Malayalam Limited", symbol: "HARRMALAYA", exchange: "NSE" },
-{ name: "Hathway Cable & Datacom Limited", symbol: "HATHWAY", exchange: "NSE" },
-{ name: "Hatsun Agro Product Limited", symbol: "HATSUN", exchange: "NSE" },
-{ name: "Havells India Limited", symbol: "HAVELLS", exchange: "NSE" },
-{ name: "Sri Havisha Hospitality and Infrastructure Limited", symbol: "HAVISHA", exchange: "NSE" },
-{ name: "HBL Power Systems Limited", symbol: "HBLPOWER", exchange: "NSE" },
-{ name: "HB Stockholdings Limited", symbol: "HBSL", exchange: "NSE" },
-{ name: "Hindustan Construction Company Limited", symbol: "HCC", exchange: "NSE" },
-{ name: "Healthcare Global Enterprises Limited", symbol: "HCG", exchange: "NSE" },
-{ name: "HCL Infosystems Limited", symbol: "HCL-INSYS", exchange: "NSE" },
-{ name: "HCL Technologies Limited", symbol: "HCLTECH", exchange: "NSE" },
-{ name: "Housing Development Finance Corporation Limited", symbol: "HDFC", exchange: "NSE" },
-{ name: "HDFC Asset Management Company Limited", symbol: "HDFCAMC", exchange: "NSE" },
-{ name: "HDFC Bank Limited", symbol: "HDFCBANK", exchange: "NSE" },
-{ name: "HDFC Life Insurance Company Limited", symbol: "HDFCLIFE", exchange: "NSE" },
-{ name: "Housing Development and Infrastructure Limited", symbol: "HDIL", exchange: "NSE" },
-{ name: "HEG Limited", symbol: "HEG", exchange: "NSE" },
-{ name: "HeidelbergCement India Limited", symbol: "HEIDELBERG", exchange: "NSE" },
-{ name: "Hemisphere Properties India Limited", symbol: "HEMIPROP", exchange: "NSE" },
-{ name: "Hercules Hoists Limited", symbol: "HERCULES", exchange: "NSE" },
-{ name: "Heritage Foods Limited", symbol: "HERITGFOOD", exchange: "NSE" },
-{ name: "Hero MotoCorp Limited", symbol: "HEROMOTOCO", exchange: "NSE" },
-{ name: "Hester Biosciences Limited", symbol: "HESTERBIO", exchange: "NSE" },
-{ name: "Hexa Tradex Limited", symbol: "HEXATRADEX", exchange: "NSE" },
-{ name: "HFCL Limited", symbol: "HFCL", exchange: "NSE" },
-{ name: "H.G. Infra Engineering Limited", symbol: "HGINFRA", exchange: "NSE" },
-{ name: "Hinduja Global Solutions Limited", symbol: "HGS", exchange: "NSE" },
-{ name: "Hikal Limited", symbol: "HIKAL", exchange: "NSE" },
-{ name: "HIL Limited", symbol: "HIL", exchange: "NSE" },
-{ name: "Hilton Metal Forging Limited", symbol: "HILTON", exchange: "NSE" },
-{ name: "Himatsingka Seide Limited", symbol: "HIMATSEIDE", exchange: "NSE" },
-{ name: "Hindalco Industries Limited", symbol: "HINDALCO", exchange: "NSE" },
-{ name: "Hindustan Composites Limited", symbol: "HINDCOMPOS", exchange: "NSE" },
-{ name: "Hindustan Copper Limited", symbol: "HINDCOPPER", exchange: "NSE" },
-{ name: "Hindustan Motors Limited", symbol: "HINDMOTORS", exchange: "NSE" },
-{ name: "Hindusthan National Glass & Industries Limited", symbol: "HINDNATGLS", exchange: "NSE" },
-{ name: "Hindustan Oil Exploration Company Limited", symbol: "HINDOILEXP", exchange: "NSE" },
-{ name: "Hindustan Petroleum Corporation Limited", symbol: "HINDPETRO", exchange: "NSE" },
-{ name: "Hindustan Unilever Limited", symbol: "HINDUNILVR", exchange: "NSE" },
-{ name: "Hindustan Zinc Limited", symbol: "HINDZINC", exchange: "NSE" },
-{ name: "Hind Rectifiers Limited", symbol: "HIRECT", exchange: "NSE" },
-{ name: "Hisar Metal Industries Limited", symbol: "HISARMETAL", exchange: "NSE" },
-{ name: "Hi-Tech Pipes Limited", symbol: "HITECH", exchange: "NSE" },
-{ name: "Hitech Corporation Limited", symbol: "HITECHCORP", exchange: "NSE" },
-{ name: "The Hi-Tech Gears Limited", symbol: "HITECHGEAR", exchange: "NSE" },
-{ name: "HLV LIMITED", symbol: "HLVLTD", exchange: "NSE" },
-{ name: "HMT Limited", symbol: "HMT", exchange: "NSE" },
-{ name: "Hindustan Media Ventures Limited", symbol: "HMVL", exchange: "NSE" },
-{ name: "Hindustan Foods Limited", symbol: "HNDFDS", exchange: "NSE" },
-{ name: "Honeywell Automation India Limited", symbol: "HONAUT", exchange: "NSE" },
-{ name: "Honda India Power Products Limited", symbol: "HONDAPOWER", exchange: "NSE" },
-{ name: "Hotel Rugby Limited", symbol: "HOTELRUGBY", exchange: "NSE" },
-{ name: "HOV Services Limited", symbol: "HOVS", exchange: "NSE" },
-{ name: "HPL Electric & Power Limited", symbol: "HPL", exchange: "NSE" },
-{ name: "Himadri Speciality Chemical Limited", symbol: "HSCL", exchange: "NSE" },
-{ name: "HSIL Limited", symbol: "HSIL", exchange: "NSE" },
-{ name: "HT Media Limited", symbol: "HTMEDIA", exchange: "NSE" },
-{ name: "Hubtown Limited", symbol: "HUBTOWN", exchange: "NSE" },
-{ name: "Housing & Urban Development Corporation Limited", symbol: "HUDCO", exchange: "NSE" },
-{ name: "Huhtamaki India Limited", symbol: "HUHTAMAKI", exchange: "NSE" },
-{ name: "Indiabulls Real Estate Limited", symbol: "IBREALEST", exchange: "NSE" },
-{ name: "Indiabulls Housing Finance Limited", symbol: "IBULHSGFIN", exchange: "NSE" },
-{ name: "Ice Make Refrigeration Limited", symbol: "ICEMAKE", exchange: "NSE" },
-{ name: "ICICI Bank Limited", symbol: "ICICIBANK", exchange: "NSE" },
-{ name: "ICICI Lombard General Insurance Company Limited", symbol: "ICICIGI", exchange: "NSE" },
-{ name: "ICICI Prudential Life Insurance Company Limited", symbol: "ICICIPRULI", exchange: "NSE" },
-{ name: "Indo Count Industries Limited", symbol: "ICIL", exchange: "NSE" },
-{ name: "ICRA Limited", symbol: "ICRA", exchange: "NSE" },
-{ name: "IDBI Bank Limited", symbol: "IDBI", exchange: "NSE" },
-{ name: "Vodafone Idea Limited", symbol: "IDEA", exchange: "NSE" },
-{ name: "IDFC Limited", symbol: "IDFC", exchange: "NSE" },
-{ name: "IDFC First Bank Limited", symbol: "IDFCFIRSTB", exchange: "NSE" },
-{ name: "Indian Energy Exchange Limited", symbol: "IEX", exchange: "NSE" },
-{ name: "IFB Agro Industries Limited", symbol: "IFBAGRO", exchange: "NSE" },
-{ name: "IFB Industries Limited", symbol: "IFBIND", exchange: "NSE" },
-{ name: "IFCI Limited", symbol: "IFCI", exchange: "NSE" },
-{ name: "IFGL Refractories Limited", symbol: "IFGLEXPOR", exchange: "NSE" },
-{ name: "Igarashi Motors India Limited", symbol: "IGARASHI", exchange: "NSE" },
-{ name: "Indraprastha Gas Limited", symbol: "IGL", exchange: "NSE" },
-{ name: "IG Petrochemicals Limited", symbol: "IGPL", exchange: "NSE" },
-{ name: "IIFL Finance Limited", symbol: "IIFL", exchange: "NSE" },
-{ name: "IIFL Securities Limited", symbol: "IIFLSEC", exchange: "NSE" },
-{ name: "Iifl Wealth Management Limited", symbol: "IIFLWAM", exchange: "NSE" },
-{ name: "Industrial Investment Trust Limited", symbol: "IITL", exchange: "NSE" },
-{ name: "IL&FS Engineering and Construction Company Limited", symbol: "IL&FSENGG", exchange: "NSE" },
-{ name: "IL&FS Transportation Networks Limited", symbol: "IL&FSTRANS", exchange: "NSE" },
-{ name: "Imagicaaworld Entertainment Limited", symbol: "IMAGICAA", exchange: "NSE" },
-{ name: "Indian Metals & Ferro Alloys Limited", symbol: "IMFA", exchange: "NSE" },
-{ name: "India Motor Parts and Accessories Limited", symbol: "IMPAL", exchange: "NSE" },
-{ name: "Indbank Merchant Banking Services Limited", symbol: "INDBANK", exchange: "NSE" },
-{ name: "The Indian Hotels Company Limited", symbol: "INDHOTEL", exchange: "NSE" },
-{ name: "The India Cements Limited", symbol: "INDIACEM", exchange: "NSE" },
-{ name: "India Glycols Limited", symbol: "INDIAGLYCO", exchange: "NSE" },
-{ name: "Indiamart Intermesh Limited", symbol: "INDIAMART", exchange: "NSE" },
-{ name: "Indian Bank", symbol: "INDIANB", exchange: "NSE" },
-{ name: "Indian Card Clothing Company Limited", symbol: "INDIANCARD", exchange: "NSE" },
-{ name: "Indian Hume Pipe Company Limited", symbol: "INDIANHUME", exchange: "NSE" },
-{ name: "InterGlobe Aviation Limited", symbol: "INDIGO", exchange: "NSE" },
-{ name: "IMP Powers Limited", symbol: "INDLMETER", exchange: "NSE" },
-{ name: "India Nippon Electricals Limited", symbol: "INDNIPPON", exchange: "NSE" },
-{ name: "Indoco Remedies Limited", symbol: "INDOCO", exchange: "NSE" },
-{ name: "Indo Rama Synthetics (India) Limited", symbol: "INDORAMA", exchange: "NSE" },
-{ name: "Indosolar Limited", symbol: "INDOSOLAR", exchange: "NSE" },
-{ name: "IndoStar Capital Finance Limited", symbol: "INDOSTAR", exchange: "NSE" },
-{ name: "Indo Tech Transformers Limited", symbol: "INDOTECH", exchange: "NSE" },
-{ name: "Indo Thai Securities Limited", symbol: "INDOTHAI", exchange: "NSE" },
-{ name: "Indowind Energy Limited", symbol: "INDOWIND", exchange: "NSE" },
-{ name: "Indraprastha Medical Corporation Limited", symbol: "INDRAMEDCO", exchange: "NSE" },
-{ name: "Ind-Swift Laboratories Limited", symbol: "INDSWFTLAB", exchange: "NSE" },
-{ name: "Ind-Swift Limited", symbol: "INDSWFTLTD", exchange: "NSE" },
-{ name: "Indian Terrain Fashions Limited", symbol: "INDTERRAIN", exchange: "NSE" },
-{ name: "IndusInd Bank Limited", symbol: "INDUSINDBK", exchange: "NSE" },
-{ name: "Indus Towers Limited", symbol: "INDUSTOWER", exchange: "NSE" },
-{ name: "INEOS Styrolution India Limited", symbol: "INEOSSTYRO", exchange: "NSE" },
-{ name: "Infibeam Avenues Limited", symbol: "INFIBEAM", exchange: "NSE" },
-{ name: "InfoBeans Technologies Limited", symbol: "INFOBEAN", exchange: "NSE" },
-{ name: "Infomedia Press Limited", symbol: "INFOMEDIA", exchange: "NSE" },
-{ name: "Infosys Limited", symbol: "INFY", exchange: "NSE" },
-{ name: "Ingersoll Rand (India) Limited", symbol: "INGERRAND", exchange: "NSE" },
-{ name: "INOX Leisure Limited", symbol: "INOXLEISUR", exchange: "NSE" },
-{ name: "Inox Wind Limited", symbol: "INOXWIND", exchange: "NSE" },
-{ name: "Insecticides (India) Limited", symbol: "INSECTICID", exchange: "NSE" },
-{ name: "Inspirisys Solutions Limited", symbol: "INSPIRISYS", exchange: "NSE" },
-{ name: "Integra Garments and Textiles Limited", symbol: "INTEGRA", exchange: "NSE" },
-{ name: "Intellect Design Arena Limited", symbol: "INTELLECT", exchange: "NSE" },
-{ name: "Intense Technologies Limited", symbol: "INTENTECH", exchange: "NSE" },
-{ name: "Inventure Growth & Securities Limited", symbol: "INVENTURE", exchange: "NSE" },
-{ name: "Indian Overseas Bank", symbol: "IOB", exchange: "NSE" },
-{ name: "Indian Oil Corporation Limited", symbol: "IOC", exchange: "NSE" },
-{ name: "IOL Chemicals and Pharmaceuticals Limited", symbol: "IOLCP", exchange: "NSE" },
-{ name: "IPCA Laboratories Limited", symbol: "IPCALAB", exchange: "NSE" },
-{ name: "IRB Infrastructure Developers Limited", symbol: "IRB", exchange: "NSE" },
-{ name: "Ircon International Limited", symbol: "IRCON", exchange: "NSE" },
-{ name: "Indian Railway Catering And Tourism Corporation Limited", symbol: "IRCTC", exchange: "NSE" },
-{ name: "ICICI Securities Limited", symbol: "ISEC", exchange: "NSE" },
-{ name: "Intrasoft Technologies Limited", symbol: "ISFT", exchange: "NSE" },
-{ name: "ISMT Limited", symbol: "ISMTLTD", exchange: "NSE" },
-{ name: "ITC Limited", symbol: "ITC", exchange: "NSE" },
-{ name: "India Tourism Development Corporation Limited", symbol: "ITDC", exchange: "NSE" },
-{ name: "ITD Cementation India Limited", symbol: "ITDCEM", exchange: "NSE" },
-{ name: "ITI Limited", symbol: "ITI", exchange: "NSE" },
-{ name: "IL&FS Investment Managers Limited", symbol: "IVC", exchange: "NSE" },
-{ name: "IVP Limited", symbol: "IVP", exchange: "NSE" },
-{ name: "IZMO Limited", symbol: "IZMO", exchange: "NSE" },
-{ name: "The Jammu & Kashmir Bank Limited", symbol: "J&KBANK", exchange: "NSE" },
-{ name: "Jagran Prakashan Limited", symbol: "JAGRAN", exchange: "NSE" },
-{ name: "Jagsonpal Pharmaceuticals Limited", symbol: "JAGSNPHARM", exchange: "NSE" },
-{ name: "Jai Balaji Industries Limited", symbol: "JAIBALAJI", exchange: "NSE" },
-{ name: "Jai Corp Limited", symbol: "JAICORPLTD", exchange: "NSE" },
-{ name: "Jaihind Projects Limited", symbol: "JAIHINDPRO", exchange: "NSE" },
-{ name: "Jain Studios Limited", symbol: "JAINSTUDIO", exchange: "NSE" },
-{ name: "Jamna Auto Industries Limited", symbol: "JAMNAAUTO", exchange: "NSE" },
-{ name: "Jash Engineering Limited", symbol: "JASH", exchange: "NSE" },
-{ name: "Jayant Agro Organics Limited", symbol: "JAYAGROGN", exchange: "NSE" },
-{ name: "Jay Bharat Maruti Limited", symbol: "JAYBARMARU", exchange: "NSE" },
-{ name: "Jayaswal Neco Industries Limited", symbol: "JAYNECOIND", exchange: "NSE" },
-{ name: "Jayshree Tea & Industries Limited", symbol: "JAYSREETEA", exchange: "NSE" },
-{ name: "JB Chemicals & Pharmaceuticals Limited", symbol: "JBCHEPHARM", exchange: "NSE" },
-{ name: "JBF Industries Limited", symbol: "JBFIND", exchange: "NSE" },
-{ name: "JBM Auto Limited", symbol: "JBMA", exchange: "NSE" },
-{ name: "Johnson Controls - Hitachi Air Conditioning India Limited", symbol: "JCHAC", exchange: "NSE" },
-{ name: "Jet Airways (India) Limited", symbol: "JETAIRWAYS", exchange: "NSE" },
-{ name: "JHS Svendgaard Laboratories Limited", symbol: "JHS", exchange: "NSE" },
-{ name: "Jindal Photo Limited", symbol: "JINDALPHOT", exchange: "NSE" },
-{ name: "Jindal Poly Films Limited", symbol: "JINDALPOLY", exchange: "NSE" },
-{ name: "Jindal Saw Limited", symbol: "JINDALSAW", exchange: "NSE" },
-{ name: "Jindal Steel & Power Limited", symbol: "JINDALSTEL", exchange: "NSE" },
-{ name: "Jindal Drilling And Industries Limited", symbol: "JINDRILL", exchange: "NSE" },
-{ name: "Jindal Worldwide Limited", symbol: "JINDWORLD", exchange: "NSE" },
-{ name: "Jain Irrigation Systems Limited", symbol: "JISLDVREQS", exchange: "NSE" },
-{ name: "Jain Irrigation Systems Limited", symbol: "JISLJALEQS", exchange: "NSE" },
-{ name: "JITF Infralogistics Limited", symbol: "JITFINFRA", exchange: "NSE" },
-{ name: "Jiya Eco-Products Limited", symbol: "JIYAECO", exchange: "NSE" },
-{ name: "JK Cement Limited", symbol: "JKCEMENT", exchange: "NSE" },
-{ name: "J.Kumar Infraprojects Limited", symbol: "JKIL", exchange: "NSE" },
-{ name: "JK Lakshmi Cement Limited", symbol: "JKLAKSHMI", exchange: "NSE" },
-{ name: "JK Paper Limited", symbol: "JKPAPER", exchange: "NSE" },
-{ name: "JK Tyre & Industries Limited", symbol: "JKTYRE", exchange: "NSE" },
-{ name: "Jullundur Motor Agency (Delhi) Limited", symbol: "JMA", exchange: "NSE" },
-{ name: "JMC Projects (India)  Limited", symbol: "JMCPROJECT", exchange: "NSE" },
-{ name: "JM Financial Limited", symbol: "JMFINANCIL", exchange: "NSE" },
-{ name: "JMT Auto Limited", symbol: "JMTAUTOLTD", exchange: "NSE" },
-{ name: "Jocil Limited", symbol: "JOCIL", exchange: "NSE" },
-{ name: "Jaiprakash Associates Limited", symbol: "JPASSOCIAT", exchange: "NSE" },
-{ name: "Jaypee Infratech Limited", symbol: "JPINFRATEC", exchange: "NSE" },
-{ name: "Jindal Poly Investment and Finance Company Limited", symbol: "JPOLYINVST", exchange: "NSE" },
-{ name: "Jaiprakash Power Ventures Limited", symbol: "JPPOWER", exchange: "NSE" },
-{ name: "Jindal Stainless Limited", symbol: "JSL", exchange: "NSE" },
-{ name: "Jindal Stainless (Hisar) Limited", symbol: "JSLHISAR", exchange: "NSE" },
-{ name: "JSW Energy Limited", symbol: "JSWENERGY", exchange: "NSE" },
-{ name: "JSW Holdings Limited", symbol: "JSWHL", exchange: "NSE" },
-{ name: "JSW Ispat Special Products Limited", symbol: "JSWISPL", exchange: "NSE" },
-{ name: "JSW Steel Limited", symbol: "JSWSTEEL", exchange: "NSE" },
-{ name: "Jtekt India Limited", symbol: "JTEKTINDIA", exchange: "NSE" },
-{ name: "Jubilant Life Sciences Limited", symbol: "JUBILANT", exchange: "NSE" },
-{ name: "Jubilant Foodworks Limited", symbol: "JUBLFOOD", exchange: "NSE" },
-{ name: "Jubilant Industries Limited", symbol: "JUBLINDS", exchange: "NSE" },
-{ name: "Jump Networks Limited", symbol: "JUMPNET", exchange: "NSE" },
-{ name: "Just Dial Limited", symbol: "JUSTDIAL", exchange: "NSE" },
-{ name: "Jyothy Labs Limited", symbol: "JYOTHYLAB", exchange: "NSE" },
-{ name: "Jyoti Structures Limited", symbol: "JYOTISTRUC", exchange: "NSE" },
-{ name: "Kabra Extrusion Technik Limited", symbol: "KABRAEXTRU", exchange: "NSE" },
-{ name: "Kajaria Ceramics Limited", symbol: "KAJARIACER", exchange: "NSE" },
-{ name: "Kakatiya Cement Sugar & Industries Limited", symbol: "KAKATCEM", exchange: "NSE" },
-{ name: "Kalpataru Power Transmission Limited", symbol: "KALPATPOWR", exchange: "NSE" },
-{ name: "Kalyani Commercials Limited", symbol: "KALYANI", exchange: "NSE" },
-{ name: "Kalyani Forge Limited", symbol: "KALYANIFRG", exchange: "NSE" },
-{ name: "Kamat Hotels (I) Limited", symbol: "KAMATHOTEL", exchange: "NSE" },
-{ name: "Kamdhenu Limited", symbol: "KAMDHENU", exchange: "NSE" },
-{ name: "Kanani Industries Limited", symbol: "KANANIIND", exchange: "NSE" },
-{ name: "Kanoria Chemicals & Industries Limited", symbol: "KANORICHEM", exchange: "NSE" },
-{ name: "Kanpur Plastipack Limited", symbol: "KANPRPLA", exchange: "NSE" },
-{ name: "Kansai Nerolac Paints Limited", symbol: "KANSAINER", exchange: "NSE" },
-{ name: "Kapston Facilities Management Limited", symbol: "KAPSTON", exchange: "NSE" },
-{ name: "Karda Constructions Limited", symbol: "KARDA", exchange: "NSE" },
-{ name: "Karma Energy Limited", symbol: "KARMAENG", exchange: "NSE" },
-{ name: "Karur Vysya Bank Limited", symbol: "KARURVYSYA", exchange: "NSE" },
-{ name: "Kaushalya Infrastructure Development Corporation Limited", symbol: "KAUSHALYA", exchange: "NSE" },
-{ name: "Kaya Limited", symbol: "KAYA", exchange: "NSE" },
-{ name: "KCP Limited", symbol: "KCP", exchange: "NSE" },
-{ name: "KCP Sugar and Industries Corporation Limited", symbol: "KCPSUGIND", exchange: "NSE" },
-{ name: "KDDL Limited", symbol: "KDDL", exchange: "NSE" },
-{ name: "KEC International Limited", symbol: "KEC", exchange: "NSE" },
-{ name: "Kirloskar Electric Company Limited", symbol: "KECL", exchange: "NSE" },
-{ name: "Keerti Knowledge and Skills Limited", symbol: "KEERTI", exchange: "NSE" },
-{ name: "KEI Industries Limited", symbol: "KEI", exchange: "NSE" },
-{ name: "Kellton Tech Solutions Limited", symbol: "KELLTONTEC", exchange: "NSE" },
-{ name: "Kennametal India Limited", symbol: "KENNAMET", exchange: "NSE" },
-{ name: "Kernex Microsystems (India) Limited", symbol: "KERNEX", exchange: "NSE" },
-{ name: "Kesoram Industries Limited", symbol: "KESORAMIND", exchange: "NSE" },
-{ name: "Keynote Financial Services Limited", symbol: "KEYFINSERV", exchange: "NSE" },
-{ name: "Karuturi Global Limited", symbol: "KGL", exchange: "NSE" },
-{ name: "Khadim India Limited", symbol: "KHADIM", exchange: "NSE" },
-{ name: "Khaitan Chemicals & Fertilizers Limited", symbol: "KHAICHEM", exchange: "NSE" },
-{ name: "Khandwala Securities Limited", symbol: "KHANDSE", exchange: "NSE" },
-{ name: "Kalyani Investment Company Limited", symbol: "KICL", exchange: "NSE" },
-{ name: "Kilitch Drugs (India) Limited", symbol: "KILITCH", exchange: "NSE" },
-{ name: "Kingfa Science & Technology (India) Limited", symbol: "KINGFA", exchange: "NSE" },
-{ name: "KIOCL Limited", symbol: "KIOCL", exchange: "NSE" },
-{ name: "Kiri Industries Limited", symbol: "KIRIINDUS", exchange: "NSE" },
-{ name: "Kirloskar Ferrous Industries Ltd", symbol: "KIRLFER", exchange: "NSE" },
-{ name: "Kirloskar Brothers Limited", symbol: "KIRLOSBROS", exchange: "NSE" },
-{ name: "Kirloskar Oil Engines Limited", symbol: "KIRLOSENG", exchange: "NSE" },
-{ name: "Kirloskar Industries Limited", symbol: "KIRLOSIND", exchange: "NSE" },
-{ name: "Kitex Garments Limited", symbol: "KITEX", exchange: "NSE" },
-{ name: "Kewal Kiran Clothing Limited", symbol: "KKCL", exchange: "NSE" },
-{ name: "K.M.Sugar Mills Limited", symbol: "KMSUGAR", exchange: "NSE" },
-{ name: "KNR Constructions Limited", symbol: "KNRCON", exchange: "NSE" },
-{ name: "Kokuyo Camlin Limited", symbol: "KOKUYOCMLN", exchange: "NSE" },
-{ name: "Kolte - Patil Developers Limited", symbol: "KOLTEPATIL", exchange: "NSE" },
-{ name: "Kopran Limited", symbol: "KOPRAN", exchange: "NSE" },
-{ name: "Kotak Mahindra Bank Limited", symbol: "KOTAKBANK", exchange: "NSE" },
-{ name: "Kothari Sugars And Chemicals Limited", symbol: "KOTARISUG", exchange: "NSE" },
-{ name: "Kothari Petrochemicals Limited", symbol: "KOTHARIPET", exchange: "NSE" },
-{ name: "Kothari Products Limited", symbol: "KOTHARIPRO", exchange: "NSE" },
-{ name: "KPIT Technologies Limited", symbol: "KPITTECH", exchange: "NSE" },
-{ name: "K.P.R. Mill Limited", symbol: "KPRMILL", exchange: "NSE" },
-{ name: "KRBL Limited", symbol: "KRBL", exchange: "NSE" },
-{ name: "Krebs Biochemicals and Industries Limited", symbol: "KREBSBIO", exchange: "NSE" },
-{ name: "Kridhan Infra Limited", symbol: "KRIDHANINF", exchange: "NSE" },
-{ name: "Krishana Phoschem Limited", symbol: "KRISHANA", exchange: "NSE" },
-{ name: "Ksb Limited", symbol: "KSB", exchange: "NSE" },
-{ name: "Kaveri Seed Company Limited", symbol: "KSCL", exchange: "NSE" },
-{ name: "KSK Energy Ventures Limited", symbol: "KSK", exchange: "NSE" },
-{ name: "Kalyani Steels Limited", symbol: "KSL", exchange: "NSE" },
-{ name: "The Karnataka Bank Limited", symbol: "KTKBANK", exchange: "NSE" },
-{ name: "Kuantum Papers Limited", symbol: "KUANTUM", exchange: "NSE" },
-{ name: "kwality limited", symbol: "KWALITY", exchange: "NSE" },
-{ name: "L&T Finance Holdings Limited", symbol: "L&TFH", exchange: "NSE" },
-{ name: "Lakshmi Precision Screws Limited", symbol: "LAKPRE", exchange: "NSE" },
-{ name: "Dr. Lal Path Labs Ltd.", symbol: "LALPATHLAB", exchange: "NSE" },
-{ name: "Lambodhara Textiles Limited", symbol: "LAMBODHARA", exchange: "NSE" },
-{ name: "La Opala RG Limited", symbol: "LAOPALA", exchange: "NSE" },
-{ name: "Lasa Supergenerics Limited", symbol: "LASA", exchange: "NSE" },
-{ name: "Laurus Labs Limited", symbol: "LAURUSLABS", exchange: "NSE" },
-{ name: "Lakshmi Machine Works Limited", symbol: "LAXMIMACH", exchange: "NSE" },
-{ name: "Lemon Tree Hotels Limited", symbol: "LEMONTREE", exchange: "NSE" },
-{ name: "Lakshmi Finance & Industrial Corporation Limited", symbol: "LFIC", exchange: "NSE" },
-{ name: "LG Balakrishnan & Bros Limited", symbol: "LGBBROSLTD", exchange: "NSE" },
-{ name: "LGB Forge Limited", symbol: "LGBFORGE", exchange: "NSE" },
-{ name: "Libas Consumer Products Limited", symbol: "LIBAS", exchange: "NSE" },
-{ name: "Liberty Shoes Limited", symbol: "LIBERTSHOE", exchange: "NSE" },
-{ name: "LIC Housing Finance Limited", symbol: "LICHSGFIN", exchange: "NSE" },
-{ name: "Likhitha Infrastructure Limited", symbol: "LIKHITHA", exchange: "NSE" },
-{ name: "Lincoln Pharmaceuticals Limited", symbol: "LINCOLN", exchange: "NSE" },
-{ name: "Linc Pen & Plastics Limited", symbol: "LINCPEN", exchange: "NSE" },
-{ name: "Linde India Limited", symbol: "LINDEINDIA", exchange: "NSE" },
-{ name: "Lokesh Machines Limited", symbol: "LOKESHMACH", exchange: "NSE" },
-{ name: "Lotus Eye Hospital and Institute Limited", symbol: "LOTUSEYE", exchange: "NSE" },
-{ name: "Lovable Lingerie Limited", symbol: "LOVABLE", exchange: "NSE" },
-{ name: "Landmark Property Development Company Limited", symbol: "LPDC", exchange: "NSE" },
-{ name: "Lloyds Steels Industries Limited", symbol: "LSIL", exchange: "NSE" },
-{ name: "Larsen & Toubro Limited", symbol: "LT", exchange: "NSE" },
-{ name: "Larsen & Toubro Infotech Limited", symbol: "LTI", exchange: "NSE" },
-{ name: "L&T Technology Services Limited", symbol: "LTTS", exchange: "NSE" },
-{ name: "Lumax Industries Limited", symbol: "LUMAXIND", exchange: "NSE" },
-{ name: "Lumax Auto Technologies Limited", symbol: "LUMAXTECH", exchange: "NSE" },
-{ name: "Lupin Limited", symbol: "LUPIN", exchange: "NSE" },
-{ name: "Lux Industries Limited", symbol: "LUXIND", exchange: "NSE" },
-{ name: "Lyka Labs Limited", symbol: "LYKALABS", exchange: "NSE" },
-{ name: "Lypsa Gems & Jewellery Limited", symbol: "LYPSAGEMS", exchange: "NSE" },
-{ name: "Mahindra & Mahindra Limited", symbol: "M&M", exchange: "NSE" },
-{ name: "Mahindra & Mahindra Financial Services Limited", symbol: "M&MFIN", exchange: "NSE" },
-{ name: "Maan Aluminium Limited", symbol: "MAANALU", exchange: "NSE" },
-{ name: "Macpower CNC Machines Limited", symbol: "MACPOWER", exchange: "NSE" },
-{ name: "Madhav Marbles and Granites Limited", symbol: "MADHAV", exchange: "NSE" },
-{ name: "Madhucon Projects Limited", symbol: "MADHUCON", exchange: "NSE" },
-{ name: "Madras Fertilizers Limited", symbol: "MADRASFERT", exchange: "NSE" },
-{ name: "Magadh Sugar & Energy Limited", symbol: "MAGADSUGAR", exchange: "NSE" },
-{ name: "Magma Fincorp Limited", symbol: "MAGMA", exchange: "NSE" },
-{ name: "Magnum Ventures Limited", symbol: "MAGNUM", exchange: "NSE" },
-{ name: "Bank of Maharashtra", symbol: "MAHABANK", exchange: "NSE" },
-{ name: "Maha Rashtra Apex Corporation Limited", symbol: "MAHAPEXLTD", exchange: "NSE" },
-{ name: "Mahamaya Steel Industries Limited", symbol: "MAHASTEEL", exchange: "NSE" },
-{ name: "Mahindra EPC Irrigation Limited", symbol: "MAHEPC", exchange: "NSE" },
-{ name: "Maheshwari Logistics Limited", symbol: "MAHESHWARI", exchange: "NSE" },
-{ name: "Mahindra CIE Automotive Limited", symbol: "MAHINDCIE", exchange: "NSE" },
-{ name: "Mahindra Lifespace Developers Limited", symbol: "MAHLIFE", exchange: "NSE" },
-{ name: "Mahindra Logistics Limited", symbol: "MAHLOG", exchange: "NSE" },
-{ name: "Maharashtra Scooters Limited", symbol: "MAHSCOOTER", exchange: "NSE" },
-{ name: "Maharashtra Seamless Limited", symbol: "MAHSEAMLES", exchange: "NSE" },
-{ name: "Maithan Alloys Limited", symbol: "MAITHANALL", exchange: "NSE" },
-{ name: "Majesco Limited", symbol: "MAJESCO", exchange: "NSE" },
-{ name: "Malu Paper Mills Limited", symbol: "MALUPAPER", exchange: "NSE" },
-{ name: "Manaksia Aluminium Company Limited", symbol: "MANAKALUCO", exchange: "NSE" },
-{ name: "Manaksia Coated Metals & Industries Limited", symbol: "MANAKCOAT", exchange: "NSE" },
-{ name: "Manaksia Limited", symbol: "MANAKSIA", exchange: "NSE" },
-{ name: "Manaksia Steels Limited", symbol: "MANAKSTEEL", exchange: "NSE" },
-{ name: "Manali Petrochemicals Limited", symbol: "MANALIPETC", exchange: "NSE" },
-{ name: "Manappuram Finance Limited", symbol: "MANAPPURAM", exchange: "NSE" },
-{ name: "Mangalam Drugs And Organics Limited", symbol: "MANGALAM", exchange: "NSE" },
-{ name: "Mangalore Chemicals & Fertilizers Limited", symbol: "MANGCHEFER", exchange: "NSE" },
-{ name: "Mangalam Cement Limited", symbol: "MANGLMCEM", exchange: "NSE" },
-{ name: "Mangalam Timber Products Limited", symbol: "MANGTIMBER", exchange: "NSE" },
-{ name: "Man Industries (India) Limited", symbol: "MANINDS", exchange: "NSE" },
-{ name: "Man Infraconstruction Limited", symbol: "MANINFRA", exchange: "NSE" },
-{ name: "Manugraph India Limited", symbol: "MANUGRAPH", exchange: "NSE" },
-{ name: "Maral Overseas Limited", symbol: "MARALOVER", exchange: "NSE" },
-{ name: "Marathon Nextgen Realty Limited", symbol: "MARATHON", exchange: "NSE" },
-{ name: "Marico Limited", symbol: "MARICO", exchange: "NSE" },
-{ name: "Marine Electricals (India) Limited", symbol: "MARINE", exchange: "NSE" },
-{ name: "Marksans Pharma Limited", symbol: "MARKSANS", exchange: "NSE" },
-{ name: "Maruti Suzuki India Limited", symbol: "MARUTI", exchange: "NSE" },
-{ name: "MAS Financial Services Limited", symbol: "MASFIN", exchange: "NSE" },
-{ name: "Mask Investments Limited", symbol: "MASKINVEST", exchange: "NSE" },
-{ name: "Mastek Limited", symbol: "MASTEK", exchange: "NSE" },
-{ name: "Matrimony.Com Limited", symbol: "MATRIMONY", exchange: "NSE" },
-{ name: "Mawana Sugars Limited", symbol: "MAWANASUG", exchange: "NSE" },
-{ name: "Max Healthcare Institute Limited", symbol: "MAXHEALTH", exchange: "NSE" },
-{ name: "Max India Limited", symbol: "MAXIND", exchange: "NSE" },
-{ name: "Max Ventures and Industries Limited", symbol: "MAXVIL", exchange: "NSE" },
-{ name: "Mayur Uniquoters Ltd", symbol: "MAYURUNIQ", exchange: "NSE" },
-{ name: "Mazda Limited", symbol: "MAZDA", exchange: "NSE" },
-{ name: "Mazagon Dock Shipbuilders Limited", symbol: "MAZDOCK", exchange: "NSE" },
-{ name: "Madhya Bharat Agro Products Limited", symbol: "MBAPL", exchange: "NSE" },
-{ name: "Mcnally Bharat Engineering Company Limited", symbol: "MBECL", exchange: "NSE" },
-{ name: "MBL Infrastructures Limited", symbol: "MBLINFRA", exchange: "NSE" },
-{ name: "McDowell Holdings Limited", symbol: "MCDHOLDING", exchange: "NSE" },
-{ name: "United Spirits Limited", symbol: "MCDOWELL-N", exchange: "NSE" },
-{ name: "Madhav Copper Limited", symbol: "MCL", exchange: "NSE" },
-{ name: "Mcleod Russel India Limited", symbol: "MCLEODRUSS", exchange: "NSE" },
-{ name: "Multi Commodity Exchange of India Limited", symbol: "MCX", exchange: "NSE" },
-{ name: "Megasoft Limited", symbol: "MEGASOFT", exchange: "NSE" },
-{ name: "Meghmani Organics Limited", symbol: "MEGH", exchange: "NSE" },
-{ name: "Melstar Information Technologies Limited", symbol: "MELSTAR", exchange: "NSE" },
-{ name: "Menon Bearings Limited", symbol: "MENONBE", exchange: "NSE" },
-{ name: "MEP Infrastructure Developers Limited", symbol: "MEP", exchange: "NSE" },
-{ name: "Mercator Limited", symbol: "MERCATOR", exchange: "NSE" },
-{ name: "Metalyst Forgings Limited", symbol: "METALFORGE", exchange: "NSE" },
-{ name: "Metkore Alloys & Industries Limited", symbol: "METKORE", exchange: "NSE" },
-{ name: "Metropolis Healthcare Limited", symbol: "METROPOLIS", exchange: "NSE" },
-{ name: "Max Financial Services Limited", symbol: "MFSL", exchange: "NSE" },
-{ name: "Mangalam Global Enterprise Limited", symbol: "MGEL", exchange: "NSE" },
-{ name: "Mahanagar Gas Limited", symbol: "MGL", exchange: "NSE" },
-{ name: "Mahindra Holidays & Resorts India Limited", symbol: "MHRIL", exchange: "NSE" },
-{ name: "MIC Electronics Limited", symbol: "MIC", exchange: "NSE" },
-{ name: "Mishra Dhatu Nigam Limited", symbol: "MIDHANI", exchange: "NSE" },
-{ name: "Minda Corporation Limited", symbol: "MINDACORP", exchange: "NSE" },
-{ name: "Minda Industries Limited", symbol: "MINDAIND", exchange: "NSE" },
-{ name: "Mindteck (India) Limited", symbol: "MINDTECK", exchange: "NSE" },
-{ name: "MindTree Limited", symbol: "MINDTREE", exchange: "NSE" },
-{ name: "MIRC Electronics Limited", symbol: "MIRCELECTR", exchange: "NSE" },
-{ name: "Mirza International Limited", symbol: "MIRZAINT", exchange: "NSE" },
-{ name: "Mittal Life Style Limited", symbol: "MITTAL", exchange: "NSE" },
-{ name: "MM Forgings Limited", symbol: "MMFL", exchange: "NSE" },
-{ name: "MMP Industries Limited", symbol: "MMP", exchange: "NSE" },
-{ name: "MMTC Limited", symbol: "MMTC", exchange: "NSE" },
-{ name: "Modi Rubber Limited", symbol: "MODIRUBBER", exchange: "NSE" },
-{ name: "Mohit Industries Limited", symbol: "MOHITIND", exchange: "NSE" },
-{ name: "Mohota Industries Limited", symbol: "MOHOTAIND", exchange: "NSE" },
-{ name: "MOIL Limited", symbol: "MOIL", exchange: "NSE" },
-{ name: "Mold-Tek Technologies Limited", symbol: "MOLDTECH", exchange: "NSE" },
-{ name: "Mold-Tek Packaging Limited", symbol: "MOLDTKPAC", exchange: "NSE" },
-{ name: "Monte Carlo Fashions Limited", symbol: "MONTECARLO", exchange: "NSE" },
-{ name: "Morarjee Textiles Limited", symbol: "MORARJEE", exchange: "NSE" },
-{ name: "Morepen Laboratories Limited", symbol: "MOREPENLAB", exchange: "NSE" },
-{ name: "Motherson Sumi Systems Limited", symbol: "MOTHERSUMI", exchange: "NSE" },
-{ name: "Motilal Oswal Financial Services Limited", symbol: "MOTILALOFS", exchange: "NSE" },
-{ name: "The Motor & General Finance Limited", symbol: "MOTOGENFIN", exchange: "NSE" },
-{ name: "MphasiS Limited", symbol: "MPHASIS", exchange: "NSE" },
-{ name: "MPS Limited", symbol: "MPSLTD", exchange: "NSE" },
-{ name: "MRF Limited", symbol: "MRF", exchange: "NSE" },
-{ name: "MRO-TEK Realty Limited", symbol: "MRO-TEK", exchange: "NSE" },
-{ name: "Mangalore Refinery and Petrochemicals Limited", symbol: "MRPL", exchange: "NSE" },
-{ name: "MSP Steel & Power Limited", symbol: "MSPL", exchange: "NSE" },
-{ name: "Mstc Limited", symbol: "MSTCLTD", exchange: "NSE" },
-{ name: "MT Educare Limited", symbol: "MTEDUCARE", exchange: "NSE" },
-{ name: "Mahanagar Telephone Nigam Limited", symbol: "MTNL", exchange: "NSE" },
-{ name: "Mukand Engineers Limited", symbol: "MUKANDENGG", exchange: "NSE" },
-{ name: "Mukand Limited", symbol: "MUKANDLTD", exchange: "NSE" },
-{ name: "Mukta Arts Limited", symbol: "MUKTAARTS", exchange: "NSE" },
-{ name: "Munjal Auto Industries Limited", symbol: "MUNJALAU", exchange: "NSE" },
-{ name: "Munjal Showa Limited", symbol: "MUNJALSHOW", exchange: "NSE" },
-{ name: "Murudeshwar Ceramics Limited", symbol: "MURUDCERA", exchange: "NSE" },
-{ name: "Muthoot Capital Services Limited", symbol: "MUTHOOTCAP", exchange: "NSE" },
-{ name: "Muthoot Finance Limited", symbol: "MUTHOOTFIN", exchange: "NSE" },
-{ name: "NACL Industries Limited", symbol: "NACLIND", exchange: "NSE" },
-{ name: "Nagarjuna Fertilizers and Chemicals Limited", symbol: "NAGAFERT", exchange: "NSE" },
-{ name: "Nagreeka Capital & Infrastructure Limited", symbol: "NAGREEKCAP", exchange: "NSE" },
-{ name: "Nagreeka Exports Limited", symbol: "NAGREEKEXP", exchange: "NSE" },
-{ name: "Nahar Capital and Financial Services Limited", symbol: "NAHARCAP", exchange: "NSE" },
-{ name: "Nahar Industrial Enterprises Limited", symbol: "NAHARINDUS", exchange: "NSE" },
-{ name: "Nahar Poly Films Limited", symbol: "NAHARPOLY", exchange: "NSE" },
-{ name: "Nahar Spinning Mills Limited", symbol: "NAHARSPING", exchange: "NSE" },
-{ name: "Nippon Life India Asset Management Limited", symbol: "NAM-INDIA", exchange: "NSE" },
-{ name: "Natco Pharma Limited", symbol: "NATCOPHARM", exchange: "NSE" },
-{ name: "Nath Bio-Genes (India) Limited", symbol: "NATHBIOGEN", exchange: "NSE" },
-{ name: "National Aluminium Company Limited", symbol: "NATIONALUM", exchange: "NSE" },
-{ name: "National Steel And Agro Industries Limited", symbol: "NATNLSTEEL", exchange: "NSE" },
-{ name: "Info Edge (India) Limited", symbol: "NAUKRI", exchange: "NSE" },
-{ name: "Navin Fluorine International Limited", symbol: "NAVINFLUOR", exchange: "NSE" },
-{ name: "Navkar Corporation Limited", symbol: "NAVKARCORP", exchange: "NSE" },
-{ name: "Navneet Education Limited", symbol: "NAVNETEDUL", exchange: "NSE" },
-{ name: "NBCC (India) Limited", symbol: "NBCC", exchange: "NSE" },
-{ name: "N. B. I. Industrial Finance Company Limited", symbol: "NBIFIN", exchange: "NSE" },
-{ name: "Nava Bharat Ventures Limited", symbol: "NBVENTURES", exchange: "NSE" },
-{ name: "NCC Limited", symbol: "NCC", exchange: "NSE" },
-{ name: "NCL Industries Limited", symbol: "NCLIND", exchange: "NSE" },
-{ name: "Naga Dhunseri Group Limited", symbol: "NDGL", exchange: "NSE" },
-{ name: "Nandan Denim Limited", symbol: "NDL", exchange: "NSE" },
-{ name: "Ndr Auto Components Limited", symbol: "NDRAUTO", exchange: "NSE" },
-{ name: "New Delhi Television Limited", symbol: "NDTV", exchange: "NSE" },
-{ name: "North Eastern Carrying Corporation Limited", symbol: "NECCLTD", exchange: "NSE" },
-{ name: "Nectar Lifesciences Limited", symbol: "NECLIFE", exchange: "NSE" },
-{ name: "Nelcast Limited", symbol: "NELCAST", exchange: "NSE" },
-{ name: "NELCO Limited", symbol: "NELCO", exchange: "NSE" },
-{ name: "Neogen Chemicals Limited", symbol: "NEOGEN", exchange: "NSE" },
-{ name: "Nesco Limited", symbol: "NESCO", exchange: "NSE" },
-{ name: "Nestle India Limited", symbol: "NESTLEIND", exchange: "NSE" },
-{ name: "Network18 Media & Investments Limited", symbol: "NETWORK18", exchange: "NSE" },
-{ name: "Neuland Laboratories Limited", symbol: "NEULANDLAB", exchange: "NSE" },
-{ name: "Newgen Software Technologies Limited", symbol: "NEWGEN", exchange: "NSE" },
-{ name: "Next Mediaworks Limited", symbol: "NEXTMEDIA", exchange: "NSE" },
-{ name: "National Fertilizers Limited", symbol: "NFL", exchange: "NSE" },
-{ name: "Narayana Hrudayalaya Ltd.", symbol: "NH", exchange: "NSE" },
-{ name: "NHPC Limited", symbol: "NHPC", exchange: "NSE" },
-{ name: "The New India Assurance Company Limited", symbol: "NIACL", exchange: "NSE" },
-{ name: "NIIT Limited", symbol: "NIITLTD", exchange: "NSE" },
-{ name: "Nila Infrastructures Limited", symbol: "NILAINFRA", exchange: "NSE" },
-{ name: "Nila Spaces Limited", symbol: "NILASPACES", exchange: "NSE" },
-{ name: "Nilkamal Limited", symbol: "NILKAMAL", exchange: "NSE" },
-{ name: "Indo-National Limited", symbol: "NIPPOBATRY", exchange: "NSE" },
-{ name: "Niraj Cement Structurals Limited", symbol: "NIRAJ", exchange: "NSE" },
-{ name: "Niraj Ispat Industries Limited", symbol: "NIRAJISPAT", exchange: "NSE" },
-{ name: "Nitco Limited", symbol: "NITCO", exchange: "NSE" },
-{ name: "Nitin Fire Protection Industries Limited", symbol: "NITINFIRE", exchange: "NSE" },
-{ name: "Nitin Spinners Limited", symbol: "NITINSPIN", exchange: "NSE" },
-{ name: "NK Industries Limited", symbol: "NKIND", exchange: "NSE" },
-{ name: "NLC India Limited", symbol: "NLCINDIA", exchange: "NSE" },
-{ name: "NMDC Limited", symbol: "NMDC", exchange: "NSE" },
-{ name: "NOCIL Limited", symbol: "NOCIL", exchange: "NSE" },
-{ name: "Noida Toll Bridge Company Limited", symbol: "NOIDATOLL", exchange: "NSE" },
-{ name: "Norben Tea & Exports Limited", symbol: "NORBTEAEXP", exchange: "NSE" },
-{ name: "Novartis India Limited", symbol: "NOVARTIND", exchange: "NSE" },
-{ name: "N R Agarwal Industries Limited", symbol: "NRAIL", exchange: "NSE" },
-{ name: "NRB Bearing Limited", symbol: "NRBBEARING", exchange: "NSE" },
-{ name: "Nalwa Sons Investments Limited", symbol: "NSIL", exchange: "NSE" },
-{ name: "Neueon Towers Limited", symbol: "NTL", exchange: "NSE" },
-{ name: "NTPC Limited", symbol: "NTPC", exchange: "NSE" },
-{ name: "Nucleus Software Exports Limited", symbol: "NUCLEUS", exchange: "NSE" },
-{ name: "NXTDIGITAL LIMITED", symbol: "NXTDIGITAL", exchange: "NSE" },
-{ name: "Oriental Aromatics Limited", symbol: "OAL", exchange: "NSE" },
-{ name: "Oberoi Realty Limited", symbol: "OBEROIRLTY", exchange: "NSE" },
-{ name: "Oriental Carbon & Chemicals Limited", symbol: "OCCL", exchange: "NSE" },
-{ name: "Oracle Financial Services Software Limited", symbol: "OFSS", exchange: "NSE" },
-{ name: "Oil India Limited", symbol: "OIL", exchange: "NSE" },
-{ name: "OCL Iron and Steel Limited", symbol: "OISL", exchange: "NSE" },
-{ name: "Olectra Greentech Limited", symbol: "OLECTRA", exchange: "NSE" },
-{ name: "Omax Autos Limited", symbol: "OMAXAUTO", exchange: "NSE" },
-{ name: "Omaxe Limited", symbol: "OMAXE", exchange: "NSE" },
-{ name: "OM Metals Infraprojects Limited", symbol: "OMMETALS", exchange: "NSE" },
-{ name: "Onelife Capital Advisors Limited", symbol: "ONELIFECAP", exchange: "NSE" },
-{ name: "One Point One Solutions Limited", symbol: "ONEPOINT", exchange: "NSE" },
-{ name: "Oil & Natural Gas Corporation Limited", symbol: "ONGC", exchange: "NSE" },
-{ name: "OnMobile Global Limited", symbol: "ONMOBILE", exchange: "NSE" },
-{ name: "Onward Technologies Limited", symbol: "ONWARDTEC", exchange: "NSE" },
-{ name: "Optiemus Infracom Limited", symbol: "OPTIEMUS", exchange: "NSE" },
-{ name: "Opto Circuits (India) Limited", symbol: "OPTOCIRCUI", exchange: "NSE" },
-{ name: "Orbit Exports Limited", symbol: "ORBTEXP", exchange: "NSE" },
-{ name: "Orchid Pharma Limited", symbol: "ORCHPHARMA", exchange: "NSE" },
-{ name: "Oricon Enterprises Limited", symbol: "ORICONENT", exchange: "NSE" },
-{ name: "Orient Abrasives Limited", symbol: "ORIENTABRA", exchange: "NSE" },
-{ name: "Oriental Trimex Limited", symbol: "ORIENTALTL", exchange: "NSE" },
-{ name: "Orient Bell Limited", symbol: "ORIENTBELL", exchange: "NSE" },
-{ name: "Orient Cement Limited", symbol: "ORIENTCEM", exchange: "NSE" },
-{ name: "Orient Electric Limited", symbol: "ORIENTELEC", exchange: "NSE" },
-{ name: "Oriental Hotels Limited", symbol: "ORIENTHOT", exchange: "NSE" },
-{ name: "Orient Press Limited", symbol: "ORIENTLTD", exchange: "NSE" },
-{ name: "Orient Paper & Industries Limited", symbol: "ORIENTPPR", exchange: "NSE" },
-{ name: "Orient Refractories Limited", symbol: "ORIENTREF", exchange: "NSE" },
-{ name: "The Orissa Minerals Development Company Limited", symbol: "ORISSAMINE", exchange: "NSE" },
-{ name: "Ortel Communications Limited", symbol: "ORTEL", exchange: "NSE" },
-{ name: "Oswal Agro Mills Limited", symbol: "OSWALAGRO", exchange: "NSE" },
-{ name: "PAE Limited", symbol: "PAEL", exchange: "NSE" },
-{ name: "Page Industries Limited", symbol: "PAGEIND", exchange: "NSE" },
-{ name: "Paisalo Digital Limited", symbol: "PAISALO", exchange: "NSE" },
-{ name: "Palash Securities Limited", symbol: "PALASHSECU", exchange: "NSE" },
-{ name: "Palred Technologies Limited", symbol: "PALREDTEC", exchange: "NSE" },
-{ name: "Panacea Biotec Limited", symbol: "PANACEABIO", exchange: "NSE" },
-{ name: "Panache Digilife Limited", symbol: "PANACHE", exchange: "NSE" },
-{ name: "Panama Petrochem Limited", symbol: "PANAMAPET", exchange: "NSE" },
-{ name: "Parabolic Drugs Limited", symbol: "PARABDRUGS", exchange: "NSE" },
-{ name: "Paramount Communications Limited", symbol: "PARACABLES", exchange: "NSE" },
-{ name: "Parag Milk Foods Limited", symbol: "PARAGMILK", exchange: "NSE" },
-{ name: "Parsvnath Developers Limited", symbol: "PARSVNATH", exchange: "NSE" },
-{ name: "Patel Engineering Limited", symbol: "PATELENG", exchange: "NSE" },
-{ name: "Patel Integrated Logistics Limited", symbol: "PATINTLOG", exchange: "NSE" },
-{ name: "Patspin India Limited", symbol: "PATSPINLTD", exchange: "NSE" },
-{ name: "PC Jeweller Limited", symbol: "PCJEWELLER", exchange: "NSE" },
-{ name: "Pudumjee Paper Products Limited", symbol: "PDMJEPAPER", exchange: "NSE" },
-{ name: "PDS Multinational Fashions Limited", symbol: "PDSMFL", exchange: "NSE" },
-{ name: "Pearl Polymers Limited", symbol: "PEARLPOLY", exchange: "NSE" },
-{ name: "Piramal Enterprises Limited", symbol: "PEL", exchange: "NSE" },
-{ name: "Pennar Industries Limited", symbol: "PENIND", exchange: "NSE" },
-{ name: "Peninsula Land Limited", symbol: "PENINLAND", exchange: "NSE" },
-{ name: "Persistent Systems Limited", symbol: "PERSISTENT", exchange: "NSE" },
-{ name: "Petronet LNG Limited", symbol: "PETRONET", exchange: "NSE" },
-{ name: "Power Finance Corporation Limited", symbol: "PFC", exchange: "NSE" },
-{ name: "Pfizer Limited", symbol: "PFIZER", exchange: "NSE" },
-{ name: "Prime Focus Limited", symbol: "PFOCUS", exchange: "NSE" },
-{ name: "PTC India Financial Services Limited", symbol: "PFS", exchange: "NSE" },
-{ name: "PG Electroplast Limited", symbol: "PGEL", exchange: "NSE" },
-{ name: "Procter & Gamble Hygiene and Health Care Limited", symbol: "PGHH", exchange: "NSE" },
-{ name: "Procter & Gamble Health Limited", symbol: "PGHL", exchange: "NSE" },
-{ name: "Pearl Global Industries Limited", symbol: "PGIL", exchange: "NSE" },
-{ name: "Phillips Carbon Black Limited", symbol: "PHILIPCARB", exchange: "NSE" },
-{ name: "The Phoenix Mills Limited", symbol: "PHOENIXLTD", exchange: "NSE" },
-{ name: "Pidilite Industries Limited", symbol: "PIDILITIND", exchange: "NSE" },
-{ name: "PI Industries Limited", symbol: "PIIND", exchange: "NSE" },
-{ name: "Pilani Investment and Industries Corporation Limited", symbol: "PILANIINVS", exchange: "NSE" },
-{ name: "PIL ITALICA LIFESTYLE LIMITED", symbol: "PILITA", exchange: "NSE" },
-{ name: "Pioneer Distilleries Limited", symbol: "PIONDIST", exchange: "NSE" },
-{ name: "Pioneer Embroideries Limited", symbol: "PIONEEREMB", exchange: "NSE" },
-{ name: "Pitti Engineering Limited", symbol: "PITTIENG", exchange: "NSE" },
-{ name: "The Peria Karamalai Tea & Produce Company Limited", symbol: "PKTEA", exchange: "NSE" },
-{ name: "Plastiblends India Limited", symbol: "PLASTIBLEN", exchange: "NSE" },
-{ name: "Punjab National Bank", symbol: "PNB", exchange: "NSE" },
-{ name: "PNB Gilts Limited", symbol: "PNBGILTS", exchange: "NSE" },
-{ name: "PNB Housing Finance Limited", symbol: "PNBHOUSING", exchange: "NSE" },
-{ name: "Pritish Nandy Communications Limited", symbol: "PNC", exchange: "NSE" },
-{ name: "PNC Infratech Limited", symbol: "PNCINFRA", exchange: "NSE" },
-{ name: "Poddar Housing and Development Limited", symbol: "PODDARHOUS", exchange: "NSE" },
-{ name: "Poddar Pigments Limited", symbol: "PODDARMENT", exchange: "NSE" },
-{ name: "Pokarna Limited", symbol: "POKARNA", exchange: "NSE" },
-{ name: "Polycab India Limited", symbol: "POLYCAB", exchange: "NSE" },
-{ name: "Poly Medicure Limited", symbol: "POLYMED", exchange: "NSE" },
-{ name: "Polyplex Corporation Limited", symbol: "POLYPLEX", exchange: "NSE" },
-{ name: "Ponni Sugars (Erode) Limited", symbol: "PONNIERODE", exchange: "NSE" },
-{ name: "Power Grid Corporation of India Limited", symbol: "POWERGRID", exchange: "NSE" },
-{ name: "ABB Power Products and Systems India Limited", symbol: "POWERINDIA", exchange: "NSE" },
-{ name: "Power Mech Projects Limited", symbol: "POWERMECH", exchange: "NSE" },
-{ name: "PPAP Automotive Limited", symbol: "PPAP", exchange: "NSE" },
-{ name: "Prakash Pipes Limited", symbol: "PPL", exchange: "NSE" },
-{ name: "Prabhat Dairy Limited", symbol: "PRABHAT", exchange: "NSE" },
-{ name: "Prajay Engineers Syndicate Limited", symbol: "PRAENG", exchange: "NSE" },
-{ name: "Praj Industries Limited", symbol: "PRAJIND", exchange: "NSE" },
-{ name: "Prakash Industries Limited", symbol: "PRAKASH", exchange: "NSE" },
-{ name: "Prakash Steelage Limited", symbol: "PRAKASHSTL", exchange: "NSE" },
-{ name: "Praxis Home Retail Limited", symbol: "PRAXIS", exchange: "NSE" },
-{ name: "Precision Camshafts Limited", symbol: "PRECAM", exchange: "NSE" },
-{ name: "Precot Limited", symbol: "PRECOT", exchange: "NSE" },
-{ name: "Precision Wires India Limited", symbol: "PRECWIRE", exchange: "NSE" },
-{ name: "Premier Explosives Limited", symbol: "PREMEXPLN", exchange: "NSE" },
-{ name: "Premier Limited", symbol: "PREMIER", exchange: "NSE" },
-{ name: "Premier Polyfilm Limited", symbol: "PREMIERPOL", exchange: "NSE" },
-{ name: "Pressman Advertising Limited", symbol: "PRESSMN", exchange: "NSE" },
-{ name: "Prestige Estates Projects Limited", symbol: "PRESTIGE", exchange: "NSE" },
-{ name: "Pricol Limited", symbol: "PRICOLLTD", exchange: "NSE" },
-{ name: "Prime Securities Limited", symbol: "PRIMESECU", exchange: "NSE" },
-{ name: "Prince Pipes And Fittings Limited", symbol: "PRINCEPIPE", exchange: "NSE" },
-{ name: "Privi Speciality Chemicals Limited", symbol: "PRIVISCL", exchange: "NSE" },
-{ name: "Prozone Intu Properties Limited", symbol: "PROZONINTU", exchange: "NSE" },
-{ name: "Prism Johnson Limited", symbol: "PRSMJOHNSN", exchange: "NSE" },
-{ name: "Punjab & Sind Bank", symbol: "PSB", exchange: "NSE" },
-{ name: "PSP Projects Limited", symbol: "PSPPROJECT", exchange: "NSE" },
-{ name: "PTC India Limited", symbol: "PTC", exchange: "NSE" },
-{ name: "PTL Enterprises Limited", symbol: "PTL", exchange: "NSE" },
-{ name: "Punjab Chemicals & Crop Protection Limited", symbol: "PUNJABCHEM", exchange: "NSE" },
-{ name: "Punj Lloyd Limited", symbol: "PUNJLLOYD", exchange: "NSE" },
-{ name: "Puravankara Limited", symbol: "PURVA", exchange: "NSE" },
-{ name: "PVR Limited", symbol: "PVR", exchange: "NSE" },
-{ name: "Quess Corp Limited", symbol: "QUESS", exchange: "NSE" },
-{ name: "Quick Heal Technologies Limited", symbol: "QUICKHEAL", exchange: "NSE" },
-{ name: "Radaan Mediaworks India Limited", symbol: "RADAAN", exchange: "NSE" },
-{ name: "Radico Khaitan Limited", symbol: "RADICO", exchange: "NSE" },
-{ name: "Music Broadcast Limited", symbol: "RADIOCITY", exchange: "NSE" },
-{ name: "Rain Industries Limited", symbol: "RAIN", exchange: "NSE" },
-{ name: "Rajesh Exports Limited", symbol: "RAJESHEXPO", exchange: "NSE" },
-{ name: "Rajratan Global Wire Limited", symbol: "RAJRATAN", exchange: "NSE" },
-{ name: "Raj Rayon Industries Limited", symbol: "RAJRAYON", exchange: "NSE" },
-{ name: "Rajshree Sugars & Chemicals Limited", symbol: "RAJSREESUG", exchange: "NSE" },
-{ name: "Raj Television Network Limited", symbol: "RAJTV", exchange: "NSE" },
-{ name: "Rallis India Limited", symbol: "RALLIS", exchange: "NSE" },
-{ name: "Shree Rama Newsprint Limited", symbol: "RAMANEWS", exchange: "NSE" },
-{ name: "Rama Steel Tubes Limited", symbol: "RAMASTEEL", exchange: "NSE" },
-{ name: "The Ramco Cements Limited", symbol: "RAMCOCEM", exchange: "NSE" },
-{ name: "Ramco Industries Limited", symbol: "RAMCOIND", exchange: "NSE" },
-{ name: "Ramco Systems Limited", symbol: "RAMCOSYS", exchange: "NSE" },
-{ name: "Ramky Infrastructure Limited", symbol: "RAMKY", exchange: "NSE" },
-{ name: "Ramsarup Industries Limited", symbol: "RAMSARUP", exchange: "NSE" },
-{ name: "Rana Sugars Limited", symbol: "RANASUG", exchange: "NSE" },
-{ name: "Rane Engine Valve Limited", symbol: "RANEENGINE", exchange: "NSE" },
-{ name: "Rane Holdings Limited", symbol: "RANEHOLDIN", exchange: "NSE" },
-{ name: "Ratnamani Metals & Tubes Limited", symbol: "RATNAMANI", exchange: "NSE" },
-{ name: "Raymond Limited", symbol: "RAYMOND", exchange: "NSE" },
-{ name: "Rane Brake Lining Limited", symbol: "RBL", exchange: "NSE" },
-{ name: "RBL Bank Limited", symbol: "RBLBANK", exchange: "NSE" },
-{ name: "Rashtriya Chemicals and Fertilizers Limited", symbol: "RCF", exchange: "NSE" },
-{ name: "Reliance Communications Limited", symbol: "RCOM", exchange: "NSE" },
-{ name: "REC Limited", symbol: "RECLTD", exchange: "NSE" },
-{ name: "Redington (India) Limited", symbol: "REDINGTON", exchange: "NSE" },
-{ name: "Refex Industries Limited", symbol: "REFEX", exchange: "NSE" },
-{ name: "Relaxo Footwears Limited", symbol: "RELAXO", exchange: "NSE" },
-{ name: "Reliance Capital Limited", symbol: "RELCAPITAL", exchange: "NSE" },
-{ name: "Reliance Industries Limited", symbol: "RELIANCE", exchange: "NSE" },
-{ name: "Religare Enterprises Limited", symbol: "RELIGARE", exchange: "NSE" },
-{ name: "Reliance Infrastructure Limited", symbol: "RELINFRA", exchange: "NSE" },
-{ name: "Remsons Industries Limited", symbol: "REMSONSIND", exchange: "NSE" },
-{ name: "Shree Renuka Sugars Limited", symbol: "RENUKA", exchange: "NSE" },
-{ name: "Repco Home Finance Limited", symbol: "REPCOHOME", exchange: "NSE" },
-{ name: "Rudrabhishek Enterprises Limited", symbol: "REPL", exchange: "NSE" },
-{ name: "Repro India Limited", symbol: "REPRO", exchange: "NSE" },
-{ name: "Responsive Industries Limited", symbol: "RESPONIND", exchange: "NSE" },
-{ name: "Revathi Equipment Limited", symbol: "REVATHI", exchange: "NSE" },
-{ name: "Renaissance Global Limited", symbol: "RGL", exchange: "NSE" },
-{ name: "Reliance Home Finance Limited", symbol: "RHFL", exchange: "NSE" },
-{ name: "Rico Auto Industries Limited", symbol: "RICOAUTO", exchange: "NSE" },
-{ name: "Reliance Industrial Infrastructure Limited", symbol: "RIIL", exchange: "NSE" },
-{ name: "RITES Limited", symbol: "RITES", exchange: "NSE" },
-{ name: "Ravi Kumar Distilleries Limited", symbol: "RKDL", exchange: "NSE" },
-{ name: "RKEC Projects Limited", symbol: "RKEC", exchange: "NSE" },
-{ name: "Ramkrishna Forgings Limited", symbol: "RKFORGE", exchange: "NSE" },
-{ name: "Radha Madhav Corporation Limited", symbol: "RMCL", exchange: "NSE" },
-{ name: "Rane (Madras) Limited", symbol: "RML", exchange: "NSE" },
-{ name: "Reliance Naval and Engineering Limited", symbol: "RNAVAL", exchange: "NSE" },
-{ name: "Rohit Ferro-Tech Limited", symbol: "ROHITFERRO", exchange: "NSE" },
-{ name: "Royal Orchid Hotels Limited", symbol: "ROHLTD", exchange: "NSE" },
-{ name: "Rollatainers Limited", symbol: "ROLLT", exchange: "NSE" },
-{ name: "Rolta India Limited", symbol: "ROLTA", exchange: "NSE" },
-{ name: "Raj Oil Mills Limited", symbol: "ROML", exchange: "NSE" },
-{ name: "Rossari Biotech Limited", symbol: "ROSSARI", exchange: "NSE" },
-{ name: "Rossell India Limited", symbol: "ROSSELLIND", exchange: "NSE" },
-{ name: "ROUTE MOBILE LIMITED", symbol: "ROUTE", exchange: "NSE" },
-{ name: "RPG Life Sciences Limited", symbol: "RPGLIFE", exchange: "NSE" },
-{ name: "Reliance Power Limited", symbol: "RPOWER", exchange: "NSE" },
-{ name: "R.P.P. Infra Projects Limited", symbol: "RPPINFRA", exchange: "NSE" },
-{ name: "R. S. Software (India) Limited", symbol: "RSSOFTWARE", exchange: "NSE" },
-{ name: "RSWM Limited", symbol: "RSWM", exchange: "NSE" },
-{ name: "R Systems International Limited", symbol: "RSYSTEMS", exchange: "NSE" },
-{ name: "RattanIndia Infrastructure Limited", symbol: "RTNINFRA", exchange: "NSE" },
-{ name: "RattanIndia Power Limited", symbol: "RTNPOWER", exchange: "NSE" },
-{ name: "The Ruby Mills Limited", symbol: "RUBYMILLS", exchange: "NSE" },
-{ name: "Ruchi Soya Industries Limited", symbol: "RUCHI", exchange: "NSE" },
-{ name: "Ruchi Infrastructure Limited", symbol: "RUCHINFRA", exchange: "NSE" },
-{ name: "Ruchira Papers Limited", symbol: "RUCHIRA", exchange: "NSE" },
-{ name: "Rupa & Company Limited", symbol: "RUPA", exchange: "NSE" },
-{ name: "Rushil Decor Limited", symbol: "RUSHIL", exchange: "NSE" },
-{ name: "Ravinder Heights Limited", symbol: "RVHL", exchange: "NSE" },
-{ name: "Rail Vikas Nigam Limited", symbol: "RVNL", exchange: "NSE" },
-{ name: "S&S Power Switchgears Limited", symbol: "S&SPOWER", exchange: "NSE" },
-{ name: "Sab Events & Governance Now Media Limited", symbol: "SABEVENTS", exchange: "NSE" },
-{ name: "Sadbhav Engineering Limited", symbol: "SADBHAV", exchange: "NSE" },
-{ name: "Sadbhav Infrastructure Project Limited", symbol: "SADBHIN", exchange: "NSE" },
-{ name: "Safari Industries (India) Limited", symbol: "SAFARI", exchange: "NSE" },
-{ name: "Sagardeep Alloys Limited", symbol: "SAGARDEEP", exchange: "NSE" },
-{ name: "Sagar Cements Limited", symbol: "SAGCEM", exchange: "NSE" },
-{ name: "Steel Authority of India Limited", symbol: "SAIL", exchange: "NSE" },
-{ name: "Sakar Healthcare Limited", symbol: "SAKAR", exchange: "NSE" },
-{ name: "Sakthi Sugars Limited", symbol: "SAKHTISUG", exchange: "NSE" },
-{ name: "Saksoft Limited", symbol: "SAKSOFT", exchange: "NSE" },
-{ name: "Sakuma Exports Limited", symbol: "SAKUMA", exchange: "NSE" },
-{ name: "Salasar Techno Engineering Limited", symbol: "SALASAR", exchange: "NSE" },
-{ name: "Salona Cotspin Limited", symbol: "SALONA", exchange: "NSE" },
-{ name: "S.A.L. Steel Limited", symbol: "SALSTEEL", exchange: "NSE" },
-{ name: "Salzer Electronics Limited", symbol: "SALZERELEC", exchange: "NSE" },
-{ name: "Sambhaav Media Limited", symbol: "SAMBHAAV", exchange: "NSE" },
-{ name: "Sanco Industries Limited", symbol: "SANCO", exchange: "NSE" },
-{ name: "The Sandesh Limited", symbol: "SANDESH", exchange: "NSE" },
-{ name: "Sandhar Technologies Limited", symbol: "SANDHAR", exchange: "NSE" },
-{ name: "Sangam (India) Limited", symbol: "SANGAMIND", exchange: "NSE" },
-{ name: "Sanghi Industries Limited", symbol: "SANGHIIND", exchange: "NSE" },
-{ name: "Sanghvi Forging and Engineering Limited", symbol: "SANGHVIFOR", exchange: "NSE" },
-{ name: "Sanghvi Movers Limited", symbol: "SANGHVIMOV", exchange: "NSE" },
-{ name: "Sanginita Chemicals Limited", symbol: "SANGINITA", exchange: "NSE" },
-{ name: "Sanofi India Limited", symbol: "SANOFI", exchange: "NSE" },
-{ name: "Sanwaria Consumer Limited", symbol: "SANWARIA", exchange: "NSE" },
-{ name: "Sarda Energy & Minerals Limited", symbol: "SARDAEN", exchange: "NSE" },
-{ name: "Saregama India Limited", symbol: "SAREGAMA", exchange: "NSE" },
-{ name: "Sarla Performance Fibers Limited", symbol: "SARLAPOLY", exchange: "NSE" },
-{ name: "Sasken Technologies Limited", symbol: "SASKEN", exchange: "NSE" },
-{ name: "Sastasundar Ventures Limited", symbol: "SASTASUNDR", exchange: "NSE" },
-{ name: "Satia Industries Limited", symbol: "SATIA", exchange: "NSE" },
-{ name: "Satin Creditcare Network Limited", symbol: "SATIN", exchange: "NSE" },
-{ name: "SBI Cards and Payment Services Limited", symbol: "SBICARD", exchange: "NSE" },
-{ name: "SBI Life Insurance Company Limited", symbol: "SBILIFE", exchange: "NSE" },
-{ name: "State Bank of India", symbol: "SBIN", exchange: "NSE" },
-{ name: "Stampede Capital Limited", symbol: "SCAPDVR", exchange: "NSE" },
-{ name: "Schaeffler India Limited", symbol: "SCHAEFFLER", exchange: "NSE" },
-{ name: "S Chand And Company Limited", symbol: "SCHAND", exchange: "NSE" },
-{ name: "Schneider Electric Infrastructure Limited", symbol: "SCHNEIDER", exchange: "NSE" },
-{ name: "Shipping Corporation Of India Limited", symbol: "SCI", exchange: "NSE" },
-{ name: "Som Distilleries & Breweries Limited", symbol: "SDBL", exchange: "NSE" },
-{ name: "Seamec Limited", symbol: "SEAMECLTD", exchange: "NSE" },
-{ name: "Selan Exploration Technology Limited", symbol: "SELAN", exchange: "NSE" },
-{ name: "SEL Manufacturing Company Limited", symbol: "SELMCL", exchange: "NSE" },
-{ name: "S.E. Power Limited", symbol: "SEPOWER", exchange: "NSE" },
-{ name: "Sequent Scientific Limited", symbol: "SEQUENT", exchange: "NSE" },
-{ name: "Seshasayee Paper and Boards Limited", symbol: "SESHAPAPER", exchange: "NSE" },
-{ name: "Setco Automotive Limited", symbol: "SETCO", exchange: "NSE" },
-{ name: "Setubandhan Infrastructure Limited", symbol: "SETUINFRA", exchange: "NSE" },
-{ name: "Seya Industries Limited", symbol: "SEYAIND", exchange: "NSE" },
-{ name: "Sezal Glass Limited", symbol: "SEZAL", exchange: "NSE" },
-{ name: "Sheela Foam Limited", symbol: "SFL", exchange: "NSE" },
-{ name: "STL Global Limited", symbol: "SGL", exchange: "NSE" },
-{ name: "Shah Alloys Limited", symbol: "SHAHALLOYS", exchange: "NSE" },
-{ name: "Shakti Pumps (India) Limited", symbol: "SHAKTIPUMP", exchange: "NSE" },
-{ name: "Shalby Limited", symbol: "SHALBY", exchange: "NSE" },
-{ name: "Shalimar Paints Limited", symbol: "SHALPAINTS", exchange: "NSE" },
-{ name: "Shankara Building Products Limited", symbol: "SHANKARA", exchange: "NSE" },
-{ name: "Shanthi Gears Limited", symbol: "SHANTIGEAR", exchange: "NSE" },
-{ name: "Sharda Cropchem Limited", symbol: "SHARDACROP", exchange: "NSE" },
-{ name: "Sharda Motor Industries Limited", symbol: "SHARDAMOTR", exchange: "NSE" },
-{ name: "Share India Securities Limited", symbol: "SHAREINDIA", exchange: "NSE" },
-{ name: "Shemaroo Entertainment Limited", symbol: "SHEMAROO", exchange: "NSE" },
-{ name: "Somany Home Innovation Limited", symbol: "SHIL", exchange: "NSE" },
-{ name: "Shilpa Medicare Limited", symbol: "SHILPAMED", exchange: "NSE" },
-{ name: "Shirpur Gold Refinery Limited", symbol: "SHIRPUR-G", exchange: "NSE" },
-{ name: "Shivam Autotech Limited", symbol: "SHIVAMAUTO", exchange: "NSE" },
-{ name: "Shiva Mills Limited", symbol: "SHIVAMILLS", exchange: "NSE" },
-{ name: "Shiva Texyarn Limited", symbol: "SHIVATEX", exchange: "NSE" },
-{ name: "S H Kelkar and Company Limited", symbol: "SHK", exchange: "NSE" },
-{ name: "Shoppers Stop Limited", symbol: "SHOPERSTOP", exchange: "NSE" },
-{ name: "Shradha Infraprojects Limited", symbol: "SHRADHA", exchange: "NSE" },
-{ name: "Shree Digvijay Cement Co.Ltd", symbol: "SHREDIGCEM", exchange: "NSE" },
-{ name: "SHREE CEMENT LIMITED", symbol: "SHREECEM", exchange: "NSE" },
-{ name: "Shree Pushkar Chemicals & Fertilisers Limited", symbol: "SHREEPUSHK", exchange: "NSE" },
-{ name: "Shree Rama Multi-Tech Limited", symbol: "SHREERAMA", exchange: "NSE" },
-{ name: "Shrenik Limited", symbol: "SHRENIK", exchange: "NSE" },
-{ name: "Shreyans Industries Limited", symbol: "SHREYANIND", exchange: "NSE" },
-{ name: "Shreyas Shipping & Logistics Limited", symbol: "SHREYAS", exchange: "NSE" },
-{ name: "Shriram Pistons & Rings Limited", symbol: "SHRIPISTON", exchange: "NSE" },
-{ name: "Shriram City Union Finance Limited", symbol: "SHRIRAMCIT", exchange: "NSE" },
-{ name: "Shriram EPC Limited", symbol: "SHRIRAMEPC", exchange: "NSE" },
-{ name: "Shyam Century Ferrous Limited", symbol: "SHYAMCENT", exchange: "NSE" },
-{ name: "Shyam Telecom Limited", symbol: "SHYAMTEL", exchange: "NSE" },
-{ name: "Sicagen India Limited", symbol: "SICAGEN", exchange: "NSE" },
-{ name: "Sical Logistics Limited", symbol: "SICAL", exchange: "NSE" },
-{ name: "Siemens Limited", symbol: "SIEMENS", exchange: "NSE" },
-{ name: "Signet Industries Limited", symbol: "SIGIND", exchange: "NSE" },
-{ name: "Standard Industries Limited", symbol: "SIL", exchange: "NSE" },
-{ name: "SIL Investments Limited", symbol: "SILINV", exchange: "NSE" },
-{ name: "Silly Monks Entertainment Limited", symbol: "SILLYMONKS", exchange: "NSE" },
-{ name: "Simbhaoli Sugars Limited", symbol: "SIMBHALS", exchange: "NSE" },
-{ name: "Simplex Infrastructures Limited", symbol: "SIMPLEXINF", exchange: "NSE" },
-{ name: "Sintercom India Limited", symbol: "SINTERCOM", exchange: "NSE" },
-{ name: "Sintex Industries Limited", symbol: "SINTEX", exchange: "NSE" },
-{ name: "Sirca Paints India Limited", symbol: "SIRCA", exchange: "NSE" },
-{ name: "Security and Intelligence Services (India) Limited", symbol: "SIS", exchange: "NSE" },
-{ name: "Siti Networks Limited", symbol: "SITINET", exchange: "NSE" },
-{ name: "Siyaram Silk Mills Limited", symbol: "SIYSIL", exchange: "NSE" },
-{ name: "SJVN Limited", symbol: "SJVN", exchange: "NSE" },
-{ name: "SKF India Limited", symbol: "SKFINDIA", exchange: "NSE" },
-{ name: "SKIL Infrastructure Limited", symbol: "SKIL", exchange: "NSE" },
-{ name: "Skipper Limited", symbol: "SKIPPER", exchange: "NSE" },
-{ name: "SKM Egg Products Export (India) Limited", symbol: "SKMEGGPROD", exchange: "NSE" },
-{ name: "Smartlink Holdings Limited", symbol: "SMARTLINK", exchange: "NSE" },
-{ name: "SML Isuzu Limited", symbol: "SMLISUZU", exchange: "NSE" },
-{ name: "Splendid Metal Products Limited", symbol: "SMPL", exchange: "NSE" },
-{ name: "SMS Lifesciences India Limited", symbol: "SMSLIFE", exchange: "NSE" },
-{ name: "SMS Pharmaceuticals Limited", symbol: "SMSPHARMA", exchange: "NSE" },
-{ name: "Snowman Logistics Limited", symbol: "SNOWMAN", exchange: "NSE" },
-{ name: "Sobha Limited", symbol: "SOBHA", exchange: "NSE" },
-{ name: "Solara Active Pharma Sciences Limited", symbol: "SOLARA", exchange: "NSE" },
-{ name: "Solar Industries India Limited", symbol: "SOLARINDS", exchange: "NSE" },
-{ name: "Somany Ceramics Limited", symbol: "SOMANYCERA", exchange: "NSE" },
-{ name: "Soma Textiles & Industries Limited", symbol: "SOMATEX", exchange: "NSE" },
-{ name: "Somi Conveyor Beltings Limited", symbol: "SOMICONVEY", exchange: "NSE" },
-{ name: "Sonata Software Limited", symbol: "SONATSOFTW", exchange: "NSE" },
-{ name: "SORIL Infra Resources Limited", symbol: "SORILINFRA", exchange: "NSE" },
-{ name: "Savita Oil Technologies Limited", symbol: "SOTL", exchange: "NSE" },
-{ name: "The South Indian Bank Limited", symbol: "SOUTHBANK", exchange: "NSE" },
-{ name: "South West Pinnacle Exploration Limited", symbol: "SOUTHWEST", exchange: "NSE" },
-{ name: "S. P. Apparels Limited", symbol: "SPAL", exchange: "NSE" },
-{ name: "Spandana Sphoorty Financial Limited", symbol: "SPANDANA", exchange: "NSE" },
-{ name: "Sun Pharma Advanced Research Company Limited", symbol: "SPARC", exchange: "NSE" },
-{ name: "Speciality Restaurants Limited", symbol: "SPECIALITY", exchange: "NSE" },
-{ name: "Spencer's Retail Limited", symbol: "SPENCERS", exchange: "NSE" },
-{ name: "Spentex Industries Limited", symbol: "SPENTEX", exchange: "NSE" },
-{ name: "Southern Petrochemicals Industries Corporation  Limited", symbol: "SPIC", exchange: "NSE" },
-{ name: "SPICEJET LTD", symbol: "SPICEJET", exchange: "NSE" },
-{ name: "SPL Industries Limited", symbol: "SPLIL", exchange: "NSE" },
-{ name: "SPML Infra Limited", symbol: "SPMLINFRA", exchange: "NSE" },
-{ name: "Sintex Plastics Technology Limited", symbol: "SPTL", exchange: "NSE" },
-{ name: "Sreeleathers Limited", symbol: "SREEL", exchange: "NSE" },
-{ name: "SREI Infrastructure Finance Limited", symbol: "SREINFRA", exchange: "NSE" },
-{ name: "SRF Limited", symbol: "SRF", exchange: "NSE" },
-{ name: "Sree Rayalaseema Hi-Strength Hypo Limited", symbol: "SRHHYPOLTD", exchange: "NSE" },
-{ name: "Srikalahasthi Pipes Limited", symbol: "SRIPIPES", exchange: "NSE" },
-{ name: "Shree Ram Proteins Limited", symbol: "SRPL", exchange: "NSE" },
-{ name: "Shriram Transport Finance Company Limited", symbol: "SRTRANSFIN", exchange: "NSE" },
-{ name: "Steel Strips Wheels Limited", symbol: "SSWL", exchange: "NSE" },
-{ name: "Strides Pharma Science Limited", symbol: "STAR", exchange: "NSE" },
-{ name: "Star Cement Limited", symbol: "STARCEMENT", exchange: "NSE" },
-{ name: "Star Paper Mills Limited", symbol: "STARPAPER", exchange: "NSE" },
-{ name: "The State Trading Corporation of India Limited", symbol: "STCINDIA", exchange: "NSE" },
-{ name: "Steel City Securities Limited", symbol: "STEELCITY", exchange: "NSE" },
-{ name: "STEEL EXCHANGE INDIA LIMITED", symbol: "STEELXIND", exchange: "NSE" },
-{ name: "Stel Holdings Limited", symbol: "STEL", exchange: "NSE" },
-{ name: "Sterling Tools Limited", symbol: "STERTOOLS", exchange: "NSE" },
-{ name: "Sterlite Technologies Limited", symbol: "STLTECH", exchange: "NSE" },
-{ name: "International Constructions Limited", symbol: "SUBCAPCITY", exchange: "NSE" },
-{ name: "Subex Limited", symbol: "SUBEXLTD", exchange: "NSE" },
-{ name: "Subros Limited", symbol: "SUBROS", exchange: "NSE" },
-{ name: "Sudarshan Chemical Industries Limited", symbol: "SUDARSCHEM", exchange: "NSE" },
-{ name: "Sujana Universal Industries Limited", symbol: "SUJANAUNI", exchange: "NSE" },
-{ name: "Sumitomo Chemical India Limited", symbol: "SUMICHEM", exchange: "NSE" },
-{ name: "Sumit Woods Limited", symbol: "SUMIT", exchange: "NSE" },
-{ name: "Summit Securities Limited", symbol: "SUMMITSEC", exchange: "NSE" },
-{ name: "Sundaram Clayton Limited", symbol: "SUNCLAYLTD", exchange: "NSE" },
-{ name: "Sundaram Multi Pap Limited", symbol: "SUNDARAM", exchange: "NSE" },
-{ name: "Sundaram Finance Limited", symbol: "SUNDARMFIN", exchange: "NSE" },
-{ name: "Sundaram Finance Holdings Limited", symbol: "SUNDARMHLD", exchange: "NSE" },
-{ name: "Sundaram Brake Linings Limited", symbol: "SUNDRMBRAK", exchange: "NSE" },
-{ name: "Sundram Fasteners Limited", symbol: "SUNDRMFAST", exchange: "NSE" },
-{ name: "Sunflag Iron And Steel Company Limited", symbol: "SUNFLAG", exchange: "NSE" },
-{ name: "Sun Pharmaceutical Industries Limited", symbol: "SUNPHARMA", exchange: "NSE" },
-{ name: "Sunteck Realty Limited", symbol: "SUNTECK", exchange: "NSE" },
-{ name: "Sun TV Network Limited", symbol: "SUNTV", exchange: "NSE" },
-{ name: "Superhouse Limited", symbol: "SUPERHOUSE", exchange: "NSE" },
-{ name: "Super Spinning Mills Limited", symbol: "SUPERSPIN", exchange: "NSE" },
-{ name: "Supreme Petrochem Limited", symbol: "SUPPETRO", exchange: "NSE" },
-{ name: "Suprajit Engineering Limited", symbol: "SUPRAJIT", exchange: "NSE" },
-{ name: "Supreme Engineering Limited", symbol: "SUPREMEENG", exchange: "NSE" },
-{ name: "Supreme Industries Limited", symbol: "SUPREMEIND", exchange: "NSE" },
-{ name: "Supreme Infrastructure India Limited", symbol: "SUPREMEINF", exchange: "NSE" },
-{ name: "Surana Solar Limited", symbol: "SURANASOL", exchange: "NSE" },
-{ name: "Surana Telecom and Power Limited", symbol: "SURANAT&P", exchange: "NSE" },
-{ name: "Suryalakshmi Cotton Mills Limited", symbol: "SURYALAXMI", exchange: "NSE" },
-{ name: "Surya Roshni Limited", symbol: "SURYAROSNI", exchange: "NSE" },
-{ name: "Sutlej Textiles and Industries Limited", symbol: "SUTLEJTEX", exchange: "NSE" },
-{ name: "Suumaya Lifestyle Limited", symbol: "SUULD", exchange: "NSE" },
-{ name: "Suven Life Sciences Limited", symbol: "SUVEN", exchange: "NSE" },
-{ name: "Suven Pharmaceuticals Limited", symbol: "SUVENPHAR", exchange: "NSE" },
-{ name: "Suzlon Energy Limited", symbol: "SUZLON", exchange: "NSE" },
-{ name: "Swan Energy Limited", symbol: "SWANENERGY", exchange: "NSE" },
-{ name: "Swaraj Engines Limited", symbol: "SWARAJENG", exchange: "NSE" },
-{ name: "Swelect Energy Systems Limited", symbol: "SWELECTES", exchange: "NSE" },
-{ name: "Sterling And Wilson Solar Limited", symbol: "SWSOLAR", exchange: "NSE" },
-{ name: "Symphony Limited", symbol: "SYMPHONY", exchange: "NSE" },
-{ name: "Syncom Healthcare Limited", symbol: "SYNCOM", exchange: "NSE" },
-{ name: "Syngene International Limited", symbol: "SYNGENE", exchange: "NSE" },
-{ name: "Tainwala Chemical and Plastic (I) Limited", symbol: "TAINWALCHM", exchange: "NSE" },
-{ name: "Taj GVK Hotels & Resorts Limited", symbol: "TAJGVK", exchange: "NSE" },
-{ name: "Take Solutions Limited", symbol: "TAKE", exchange: "NSE" },
-{ name: "Talbros Automotive Components Limited", symbol: "TALBROAUTO", exchange: "NSE" },
-{ name: "Tanla Platforms Limited", symbol: "TANLA", exchange: "NSE" },
-{ name: "Tantia Constructions Limited", symbol: "TANTIACONS", exchange: "NSE" },
-{ name: "Anant Raj Global Limited", symbol: "TARC", exchange: "NSE" },
-{ name: "Tarmat Limited", symbol: "TARMAT", exchange: "NSE" },
-{ name: "Tasty Bite Eatables Limited", symbol: "TASTYBITE", exchange: "NSE" },
-{ name: "Tata Chemicals Limited", symbol: "TATACHEM", exchange: "NSE" },
-{ name: "Tata Coffee Limited", symbol: "TATACOFFEE", exchange: "NSE" },
-{ name: "Tata Communications Limited", symbol: "TATACOMM", exchange: "NSE" },
-{ name: "TATA CONSUMER PRODUCTS LIMITED", symbol: "TATACONSUM", exchange: "NSE" },
-{ name: "Tata Elxsi Limited", symbol: "TATAELXSI", exchange: "NSE" },
-{ name: "Tata Investment Corporation Limited", symbol: "TATAINVEST", exchange: "NSE" },
-{ name: "Tata Metaliks Limited", symbol: "TATAMETALI", exchange: "NSE" },
-{ name: "Tata Motors Limited", symbol: "TATAMOTORS", exchange: "NSE" },
-{ name: "Tata Motors Limited", symbol: "TATAMTRDVR", exchange: "NSE" },
-{ name: "Tata Power Company Limited", symbol: "TATAPOWER", exchange: "NSE" },
-{ name: "Tata Steel Limited", symbol: "TATASTEEL", exchange: "NSE" },
-{ name: "Tata Steel Bsl Limited", symbol: "TATASTLBSL", exchange: "NSE" },
-{ name: "Tata Steel Long Products Limited", symbol: "TATASTLLP", exchange: "NSE" },
-{ name: "Tribhovandas Bhimji Zaveri Limited", symbol: "TBZ", exchange: "NSE" },
-{ name: "Transport Corporation of India Limited", symbol: "TCI", exchange: "NSE" },
-{ name: "TCI Developers Limited", symbol: "TCIDEVELOP", exchange: "NSE" },
-{ name: "TCI Express Limited", symbol: "TCIEXP", exchange: "NSE" },
-{ name: "TCI Finance Limited", symbol: "TCIFINANCE", exchange: "NSE" },
-{ name: "TCNS Clothing Co. Limited", symbol: "TCNSBRANDS", exchange: "NSE" },
-{ name: "TCPL Packaging Limited", symbol: "TCPLPACK", exchange: "NSE" },
-{ name: "Tata Consultancy Services Limited", symbol: "TCS", exchange: "NSE" },
-{ name: "TD Power Systems Limited", symbol: "TDPOWERSYS", exchange: "NSE" },
-{ name: "Teamlease Services Limited", symbol: "TEAMLEASE", exchange: "NSE" },
-{ name: "Techindia Nirman Limited", symbol: "TECHIN", exchange: "NSE" },
-{ name: "Tech Mahindra Limited", symbol: "TECHM", exchange: "NSE" },
-{ name: "Techno Electric & Engineering Company Limited", symbol: "TECHNOE", exchange: "NSE" },
-{ name: "Technofab Engineering Limited", symbol: "TECHNOFAB", exchange: "NSE" },
-{ name: "Tejas Networks Limited", symbol: "TEJASNET", exchange: "NSE" },
-{ name: "Tera Software Limited", symbol: "TERASOFT", exchange: "NSE" },
-{ name: "Texmaco Infrastructure & Holdings Limited", symbol: "TEXINFRA", exchange: "NSE" },
-{ name: "Texmo Pipes and Products Limited", symbol: "TEXMOPIPES", exchange: "NSE" },
-{ name: "Texmaco Rail & Engineering Limited", symbol: "TEXRAIL", exchange: "NSE" },
-{ name: "Tourism Finance Corporation of India Limited", symbol: "TFCILTD", exchange: "NSE" },
-{ name: "Transwarranty Finance Limited", symbol: "TFL", exchange: "NSE" },
-{ name: "TGB Banquets And Hotels Limited", symbol: "TGBHOTELS", exchange: "NSE" },
-{ name: "Thangamayil Jewellery Limited", symbol: "THANGAMAYL", exchange: "NSE" },
-{ name: "The Investment Trust Of India Limited", symbol: "THEINVEST", exchange: "NSE" },
-{ name: "Themis Medicare Limited", symbol: "THEMISMED", exchange: "NSE" },
-{ name: "Thermax Limited", symbol: "THERMAX", exchange: "NSE" },
-{ name: "Thiru Arooran Sugars Limited", symbol: "THIRUSUGAR", exchange: "NSE" },
-{ name: "Thomas Cook  (India)  Limited", symbol: "THOMASCOOK", exchange: "NSE" },
-{ name: "Thomas Scott (India) Limited", symbol: "THOMASCOTT", exchange: "NSE" },
-{ name: "Thyrocare Technologies Limited", symbol: "THYROCARE", exchange: "NSE" },
-{ name: "Tilaknagar Industries Limited", symbol: "TI", exchange: "NSE" },
-{ name: "Tide Water Oil Company (India) Limited", symbol: "TIDEWATER", exchange: "NSE" },
-{ name: "Technocraft Industries (India) Limited", symbol: "TIIL", exchange: "NSE" },
-{ name: "Tube Investments of India Limited", symbol: "TIINDIA", exchange: "NSE" },
-{ name: "Tijaria Polypipes Limited", symbol: "TIJARIA", exchange: "NSE" },
-{ name: "TIL Limited", symbol: "TIL", exchange: "NSE" },
-{ name: "Times Guaranty Limited", symbol: "TIMESGTY", exchange: "NSE" },
-{ name: "Time Technoplast Limited", symbol: "TIMETECHNO", exchange: "NSE" },
-{ name: "Timken India Limited", symbol: "TIMKEN", exchange: "NSE" },
-{ name: "The Tinplate Company of India Limited", symbol: "TINPLATE", exchange: "NSE" },
-{ name: "TIPS Industries Limited", symbol: "TIPSINDLTD", exchange: "NSE" },
-{ name: "Thirumalai Chemicals Limited", symbol: "TIRUMALCHM", exchange: "NSE" },
-{ name: "Tirupati Forge Limited", symbol: "TIRUPATIFL", exchange: "NSE" },
-{ name: "Titan Company Limited", symbol: "TITAN", exchange: "NSE" },
-{ name: "The Mandhana Retail Ventures Limited", symbol: "TMRVL", exchange: "NSE" },
-{ name: "Tamilnadu PetroProducts Limited", symbol: "TNPETRO", exchange: "NSE" },
-{ name: "Tamil Nadu Newsprint & Papers Limited", symbol: "TNPL", exchange: "NSE" },
-{ name: "Tamilnadu Telecommunication Limited", symbol: "TNTELE", exchange: "NSE" },
-{ name: "Tokyo Plast International Limited", symbol: "TOKYOPLAST", exchange: "NSE" },
-{ name: "Torrent Pharmaceuticals Limited", symbol: "TORNTPHARM", exchange: "NSE" },
-{ name: "Torrent Power Limited", symbol: "TORNTPOWER", exchange: "NSE" },
-{ name: "Total Transport Systems Limited", symbol: "TOTAL", exchange: "NSE" },
-{ name: "Touchwood Entertainment Limited", symbol: "TOUCHWOOD", exchange: "NSE" },
-{ name: "TPL Plastech Limited", symbol: "TPLPLASTEH", exchange: "NSE" },
-{ name: "Tree House Education & Accessories Limited", symbol: "TREEHOUSE", exchange: "NSE" },
-{ name: "TREJHARA SOLUTIONS LIMITED", symbol: "TREJHARA", exchange: "NSE" },
-{ name: "Trent Limited", symbol: "TRENT", exchange: "NSE" },
-{ name: "TRF Limited", symbol: "TRF", exchange: "NSE" },
-{ name: "Trident Limited", symbol: "TRIDENT", exchange: "NSE" },
-{ name: "Trigyn Technologies Limited", symbol: "TRIGYN", exchange: "NSE" },
-{ name: "Transformers And Rectifiers (India) Limited", symbol: "TRIL", exchange: "NSE" },
-{ name: "Triveni Turbine Limited", symbol: "TRITURBINE", exchange: "NSE" },
-{ name: "Triveni Engineering & Industries Limited", symbol: "TRIVENI", exchange: "NSE" },
-{ name: "TTK Healthcare Limited", symbol: "TTKHLTCARE", exchange: "NSE" },
-{ name: "TTK Prestige Limited", symbol: "TTKPRESTIG", exchange: "NSE" },
-{ name: "T T Limited", symbol: "TTL", exchange: "NSE" },
-{ name: "Tata Teleservices (Maharashtra) Limited", symbol: "TTML", exchange: "NSE" },
-{ name: "TV18 Broadcast Limited", symbol: "TV18BRDCST", exchange: "NSE" },
-{ name: "TVS Electronics Limited", symbol: "TVSELECT", exchange: "NSE" },
-{ name: "TVS Motor Company Limited", symbol: "TVSMOTOR", exchange: "NSE" },
-{ name: "TVS Srichakra Limited", symbol: "TVSSRICHAK", exchange: "NSE" },
-{ name: "TV Today Network Limited", symbol: "TVTODAY", exchange: "NSE" },
-{ name: "TV Vision Limited", symbol: "TVVISION", exchange: "NSE" },
-{ name: "Titagarh Wagons Limited", symbol: "TWL", exchange: "NSE" },
-{ name: "United Breweries Limited", symbol: "UBL", exchange: "NSE" },
-{ name: "Ucal Fuel Systems Limited", symbol: "UCALFUEL", exchange: "NSE" },
-{ name: "UCO Bank", symbol: "UCOBANK", exchange: "NSE" },
-{ name: "UFLEX Limited", symbol: "UFLEX", exchange: "NSE" },
-{ name: "UFO Moviez India Limited", symbol: "UFO", exchange: "NSE" },
-{ name: "The Ugar Sugar Works Limited", symbol: "UGARSUGAR", exchange: "NSE" },
-{ name: "Ujaas Energy Limited", symbol: "UJAAS", exchange: "NSE" },
-{ name: "Ujjivan Financial Services Limited", symbol: "UJJIVAN", exchange: "NSE" },
-{ name: "Ujjivan Small Finance Bank Limited", symbol: "UJJIVANSFB", exchange: "NSE" },
-{ name: "UltraTech Cement Limited", symbol: "ULTRACEMCO", exchange: "NSE" },
-{ name: "Umang Dairies Limited", symbol: "UMANGDAIRY", exchange: "NSE" },
-{ name: "Usha Martin Education & Solutions Limited", symbol: "UMESLTD", exchange: "NSE" },
-{ name: "Unichem Laboratories Limited", symbol: "UNICHEMLAB", exchange: "NSE" },
-{ name: "United Drilling Tools Limited", symbol: "UNIDT", exchange: "NSE" },
-{ name: "Uniphos Enterprises Limited", symbol: "UNIENTER", exchange: "NSE" },
-{ name: "Union Bank of India", symbol: "UNIONBANK", exchange: "NSE" },
-{ name: "Unitech Limited", symbol: "UNITECH", exchange: "NSE" },
-{ name: "The United Nilgiri Tea Estates Company Limited", symbol: "UNITEDTEA", exchange: "NSE" },
-{ name: "Unity Infraprojects Limited", symbol: "UNITY", exchange: "NSE" },
-{ name: "Univastu India Limited", symbol: "UNIVASTU", exchange: "NSE" },
-{ name: "Universal Cables Limited", symbol: "UNIVCABLES", exchange: "NSE" },
-{ name: "Universus Photo Imagings Limited", symbol: "UNIVPHOTO", exchange: "NSE" },
-{ name: "UPL Limited", symbol: "UPL", exchange: "NSE" },
-{ name: "Urja Global Limited", symbol: "URJA", exchange: "NSE" },
-{ name: "Usha Martin Limited", symbol: "USHAMART", exchange: "NSE" },
-{ name: "UTI Asset Management Company Limited", symbol: "UTIAMC", exchange: "NSE" },
-{ name: "Uttam Galva Steels Limited", symbol: "UTTAMSTL", exchange: "NSE" },
-{ name: "Uttam Sugar Mills Limited", symbol: "UTTAMSUGAR", exchange: "NSE" },
-{ name: "V2 Retail Limited", symbol: "V2RETAIL", exchange: "NSE" },
-{ name: "Vadilal Industries Limited", symbol: "VADILALIND", exchange: "NSE" },
-{ name: "Vaibhav Global Limited", symbol: "VAIBHAVGBL", exchange: "NSE" },
-{ name: "Vaishali Pharma Limited", symbol: "VAISHALI", exchange: "NSE" },
-{ name: "Vakrangee Limited", symbol: "VAKRANGEE", exchange: "NSE" },
-{ name: "Valiant Organics Limited", symbol: "VALIANTORG", exchange: "NSE" },
-{ name: "Vardhman Acrylics Limited", symbol: "VARDHACRLC", exchange: "NSE" },
-{ name: "Vardhman Polytex Limited", symbol: "VARDMNPOLY", exchange: "NSE" },
-{ name: "Varroc Engineering Limited", symbol: "VARROC", exchange: "NSE" },
-{ name: "Vascon Engineers Limited", symbol: "VASCONEQ", exchange: "NSE" },
-{ name: "Vaswani Industries Limited", symbol: "VASWANI", exchange: "NSE" },
-{ name: "Varun Beverages Limited", symbol: "VBL", exchange: "NSE" },
-{ name: "Vedanta Limited", symbol: "VEDL", exchange: "NSE" },
-{ name: "Venky's (India) Limited", symbol: "VENKEYS", exchange: "NSE" },
-{ name: "Venus Remedies Limited", symbol: "VENUSREM", exchange: "NSE" },
-{ name: "Vertoz Advertising Limited", symbol: "VERTOZ", exchange: "NSE" },
-{ name: "Vesuvius India Limited", symbol: "VESUVIUS", exchange: "NSE" },
-{ name: "Veto Switchgears And Cables Limited", symbol: "VETO", exchange: "NSE" },
-{ name: "V-Guard Industries Limited", symbol: "VGUARD", exchange: "NSE" },
-{ name: "Vardhman Holdings Limited", symbol: "VHL", exchange: "NSE" },
-{ name: "Viceroy Hotels Limited", symbol: "VICEROY", exchange: "NSE" },
-{ name: "Videocon Industries Limited", symbol: "VIDEOIND", exchange: "NSE" },
-{ name: "Vidhi Specialty Food Ingredients Limited", symbol: "VIDHIING", exchange: "NSE" },
-{ name: "Viji Finance Limited", symbol: "VIJIFIN", exchange: "NSE" },
-{ name: "Vikas EcoTech Limited", symbol: "VIKASECO", exchange: "NSE" },
-{ name: "Vikas Multicorp Limited", symbol: "VIKASMCORP", exchange: "NSE" },
-{ name: "Vikas Proppant & Granite Limited", symbol: "VIKASPROP", exchange: "NSE" },
-{ name: "Vikas WSP Limited", symbol: "VIKASWSP", exchange: "NSE" },
-{ name: "Vimta Labs Limited", symbol: "VIMTALABS", exchange: "NSE" },
-{ name: "Vinati Organics Limited", symbol: "VINATIORGA", exchange: "NSE" },
-{ name: "Vindhya Telelinks Limited", symbol: "VINDHYATEL", exchange: "NSE" },
-{ name: "Vinyl Chemicals (India) Limited", symbol: "VINYLINDIA", exchange: "NSE" },
-{ name: "VIP Clothing Limited", symbol: "VIPCLOTHNG", exchange: "NSE" },
-{ name: "VIP Industries Limited", symbol: "VIPIND", exchange: "NSE" },
-{ name: "Vipul Limited", symbol: "VIPULLTD", exchange: "NSE" },
-{ name: "Visaka Industries Limited", symbol: "VISAKAIND", exchange: "NSE" },
-{ name: "Visa Steel Limited", symbol: "VISASTEEL", exchange: "NSE" },
-{ name: "Vishal Fabrics Limited", symbol: "VISHAL", exchange: "NSE" },
-{ name: "Vishnu Chemicals Limited", symbol: "VISHNU", exchange: "NSE" },
-{ name: "Vishwaraj Sugar Industries Limited", symbol: "VISHWARAJ", exchange: "NSE" },
-{ name: "Visagar Polytex Limited", symbol: "VIVIDHA", exchange: "NSE" },
-{ name: "Vivimed Labs Limited", symbol: "VIVIMEDLAB", exchange: "NSE" },
-{ name: "VLS Finance Limited", symbol: "VLSFINANCE", exchange: "NSE" },
-{ name: "V-Mart Retail Limited", symbol: "VMART", exchange: "NSE" },
-{ name: "Voltamp Transformers Limited", symbol: "VOLTAMP", exchange: "NSE" },
-{ name: "Voltas Limited", symbol: "VOLTAS", exchange: "NSE" },
-{ name: "VRL Logistics Limited", symbol: "VRLLOG", exchange: "NSE" },
-{ name: "Vardhman Special Steels Limited", symbol: "VSSL", exchange: "NSE" },
-{ name: "VST Industries Limited", symbol: "VSTIND", exchange: "NSE" },
-{ name: "V.S.T Tillers Tractors Limited", symbol: "VSTTILLERS", exchange: "NSE" },
-{ name: "Vardhman Textiles Limited", symbol: "VTL", exchange: "NSE" },
-{ name: "VA Tech Wabag Limited", symbol: "WABAG", exchange: "NSE" },
-{ name: "WABCO India Limited", symbol: "WABCOINDIA", exchange: "NSE" },
-{ name: "Walchandnagar Industries Limited", symbol: "WALCHANNAG", exchange: "NSE" },
-{ name: "Wanbury Limited", symbol: "WANBURY", exchange: "NSE" },
-{ name: "Waterbase Limited", symbol: "WATERBASE", exchange: "NSE" },
-{ name: "Websol Energy System Limited", symbol: "WEBELSOLAR", exchange: "NSE" },
-{ name: "Weizmann Limited", symbol: "WEIZMANIND", exchange: "NSE" },
-{ name: "Welspun Corp Limited", symbol: "WELCORP", exchange: "NSE" },
-{ name: "Welspun Enterprises Limited", symbol: "WELENT", exchange: "NSE" },
-{ name: "Welspun Investments and Commercials Limited", symbol: "WELINV", exchange: "NSE" },
-{ name: "Welspun India Limited", symbol: "WELSPUNIND", exchange: "NSE" },
-{ name: "Wendt (India) Limited", symbol: "WENDT", exchange: "NSE" },
-{ name: "Westlife Development Ltd", symbol: "WESTLIFE", exchange: "NSE" },
-{ name: "Wheels India Limited", symbol: "WHEELS", exchange: "NSE" },
-{ name: "Whirlpool of India Limited", symbol: "WHIRLPOOL", exchange: "NSE" },
-{ name: "Williamson Magor & Company Limited", symbol: "WILLAMAGOR", exchange: "NSE" },
-{ name: "Windsor Machines Limited", symbol: "WINDMACHIN", exchange: "NSE" },
-{ name: "The Western India Plywoods Limited", symbol: "WIPL", exchange: "NSE" },
-{ name: "Wipro Limited", symbol: "WIPRO", exchange: "NSE" },
-{ name: "Wockhardt Limited", symbol: "WOCKPHARMA", exchange: "NSE" },
-{ name: "Wonderla Holidays Limited", symbol: "WONDERLA", exchange: "NSE" },
-{ name: "Worth Peripherals Limited", symbol: "WORTH", exchange: "NSE" },
-{ name: "W S Industries (I) Limited", symbol: "WSI", exchange: "NSE" },
-{ name: "West Coast Paper Mills Limited", symbol: "WSTCSTPAPR", exchange: "NSE" },
-{ name: "Xchanging Solutions Limited", symbol: "XCHANGING", exchange: "NSE" },
-{ name: "Xelpmoc Design And Tech Limited", symbol: "XELPMOC", exchange: "NSE" },
-{ name: "Xpro India Limited", symbol: "XPROINDIA", exchange: "NSE" },
-{ name: "Yaarii Digital Integrated Services Limited", symbol: "YAARII", exchange: "NSE" },
-{ name: "Yes Bank Limited", symbol: "YESBANK", exchange: "NSE" },
-{ name: "Zee Entertainment Enterprises Limited", symbol: "ZEEL", exchange: "NSE" },
-{ name: "Zee Learn Limited", symbol: "ZEELEARN", exchange: "NSE" },
-{ name: "Zee Media Corporation Limited", symbol: "ZEEMEDIA", exchange: "NSE" },
-{ name: "Zenith Exports Limited", symbol: "ZENITHEXPO", exchange: "NSE" },
-{ name: "Zenith Steel Pipes & Industries Limited", symbol: "ZENITHSTL", exchange: "NSE" },
-{ name: "Zensar Technologies Limited", symbol: "ZENSARTECH", exchange: "NSE" },
-{ name: "Zen Technologies Limited", symbol: "ZENTEC", exchange: "NSE" },
-{ name: "Zicom Electronic Security Systems Limited", symbol: "ZICOM", exchange: "NSE" },
-{ name: "Zodiac Clothing Company Limited", symbol: "ZODIACLOTH", exchange: "NSE" },
-{ name: "Zodiac JRD- MKJ Limited", symbol: "ZODJRDMKJ", exchange: "NSE" },
-{ name: "Zota Health Care LImited", symbol: "ZOTA", exchange: "NSE" },
-{ name: "Zuari Agro Chemicals Limited", symbol: "ZUARI", exchange: "NSE" },
-{ name: "Zuari Global Limited", symbol: "ZUARIGLOB", exchange: "NSE" },
-{ name: "Zydus Wellness Limited", symbol: "ZYDUSWELL", exchange: "NSE" },
 
   // Indices
   { name: "NASDAQ Composite", symbol: "IXIC", exchange: "NASDAQ" },
