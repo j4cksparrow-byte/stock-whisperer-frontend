@@ -1,8 +1,12 @@
-
 export type StockAnalysisResponse = {
   url: string;
   text: string;
   symbol: string;
+};
+
+// Function to clean the analysis text by replacing <br> tags with newlines
+const cleanAnalysisText = (text: string): string => {
+  return text.replace(/<br\s*\/?>/gi, '\n');
 };
 
 const API_BASE_URL = import.meta.env.PROD
@@ -67,7 +71,10 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
         const extractedJson = extractJsonFromText(text);
         if (extractedJson) {
           console.log("Extracted JSON from non-JSON response:", extractedJson);
-          return extractedJson;
+          return {
+            ...extractedJson,
+            text: cleanAnalysisText(extractedJson.text)
+          };
         }
       } catch (parseError) {
         console.error("Failed to extract JSON from response:", parseError);
@@ -78,7 +85,10 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
 
     const data = await response.json();
     console.log("API Response:", data);
-    return data;
+    return {
+      ...data,
+      text: cleanAnalysisText(data.text)
+    };
   } catch (error) {
     console.error('Error in fetchStockAnalysis:', error);
     

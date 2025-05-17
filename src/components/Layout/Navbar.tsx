@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
@@ -22,12 +21,9 @@ export function Navbar() {
       <div className="container flex h-16 items-center justify-between py-4">
         <div className="flex items-center gap-6 md:gap-10">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="font-bold text-xl inline-block text-foreground">StockApp</span>
+            <span className="font-bold text-xl inline-block text-foreground">StockViz</span>
           </Link>
           <nav className="hidden md:flex gap-6">
-            <Link to="/" className="text-sm font-medium text-foreground transition-colors hover:text-primary">
-              Home
-            </Link>
             {/* Add additional navbar links here as needed */}
           </nav>
         </div>
