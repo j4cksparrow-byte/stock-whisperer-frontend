@@ -6,15 +6,15 @@ import NewsFeed from "@/components/NewsFeed";
 import { useState } from "react";
 
 const NASDAQ_INDICES = [
-  { symbol: "IXIC", name: "NASDAQ Composite" },
-  { symbol: "NDX", name: "NASDAQ-100" },
-  { symbol: "AAPL", name: "Apple Inc." },
-  { symbol: "MSFT", name: "Microsoft" },
-  { symbol: "GOOGL", name: "Alphabet" },
-  { symbol: "AMZN", name: "Amazon" },
-  { symbol: "META", name: "Meta" },
-  { symbol: "NVDA", name: "NVIDIA" },
-  { symbol: "TSLA", name: "Tesla" }
+  { symbol: "IXIC", name: "NASDAQ Composite", exchange: "NASDAQ" },
+  { symbol: "NDX", name: "NASDAQ-100", exchange: "NASDAQ" },
+  { symbol: "AAPL", name: "Apple Inc.", exchange: "NASDAQ" },
+  { symbol: "MSFT", name: "Microsoft", exchange: "NASDAQ" },
+  { symbol: "GOOGL", name: "Alphabet", exchange: "NASDAQ" },
+  { symbol: "AMZN", name: "Amazon", exchange: "NASDAQ" },
+  { symbol: "META", name: "Meta", exchange: "NASDAQ" },
+  { symbol: "NVDA", name: "NVIDIA", exchange: "NASDAQ" },
+  { symbol: "TSLA", name: "Tesla", exchange: "NASDAQ" }
 ];
 
 const Index = () => {
@@ -43,7 +43,7 @@ const Index = () => {
 
         <StockAnalysis onAnalysisComplete={handleAnalysisComplete} />
         
-        {/* NASDAQ Indices Section - Added even more top margin */}
+        {/* NASDAQ Indices Section */}
         <div className="mt-48">
           <h2 className="text-2xl font-bold text-gray-200 mb-6">NASDAQ Market Overview</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -51,9 +51,13 @@ const Index = () => {
               <div key={index.symbol} className="glass-card rounded-lg overflow-hidden hover-lift">
                 <div className="p-4 border-b border-gray-700">
                   <h3 className="text-lg font-semibold text-gray-200">{index.name}</h3>
-                  <p className="text-sm text-gray-400">{index.symbol}</p>
+                  <p className="text-sm text-gray-400">{index.exchange}:{index.symbol}</p>
                 </div>
-                <TradingViewChart symbol={index.symbol} height={250} />
+                <TradingViewChart 
+                  symbol={index.symbol} 
+                  exchange={index.exchange}
+                  height={250} 
+                />
               </div>
             ))}
           </div>

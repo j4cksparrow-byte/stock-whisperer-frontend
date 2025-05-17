@@ -9,10 +9,11 @@ declare global {
 
 interface TradingViewChartProps {
   symbol: string;
+  exchange?: string;
   height?: number;
 }
 
-const TradingViewChart = ({ symbol, height = 300 }: TradingViewChartProps) => {
+const TradingViewChart = ({ symbol, exchange = 'NASDAQ', height = 300 }: TradingViewChartProps) => {
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -22,10 +23,15 @@ const TradingViewChart = ({ symbol, height = 300 }: TradingViewChartProps) => {
     script.async = true;
     script.onload = () => {
       if (container.current && window.TradingView) {
+        // Format the symbol correctly with exchange
+        const formattedSymbol = symbol.includes(':') ? symbol : `${exchange}:${symbol}`;
+        
+        console.log('TradingView Widget initializing with symbol:', formattedSymbol);
+        
         new window.TradingView.widget({
           width: '100%',
           height: height,
-          symbol: symbol.includes(':') ? symbol : `NASDAQ:${symbol}`,
+          symbol: formattedSymbol,
           interval: 'D',
           timezone: 'Etc/UTC',
           theme: 'dark',
@@ -49,7 +55,7 @@ const TradingViewChart = ({ symbol, height = 300 }: TradingViewChartProps) => {
         document.head.removeChild(script);
       }
     };
-  }, [symbol, height]);
+  }, [symbol, exchange, height]);
 
   return (
     <div 

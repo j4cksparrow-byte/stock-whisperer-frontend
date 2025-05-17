@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -185,9 +184,13 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
                 Technical Analysis for <span className="font-bold">{selectedCompany.exchange}:{selectedCompany.symbol}</span>
               </h2>
               
-              {/* Live TradingView Chart - added this component */}
+              {/* Live TradingView Chart - passing the exchange */}
               <div className="border border-gray-700 rounded-lg overflow-hidden shadow-sm bg-gray-800/50 p-2">
-                <TradingViewChart symbol={selectedCompany.symbol} height={400} />
+                <TradingViewChart 
+                  symbol={selectedCompany.symbol} 
+                  exchange={selectedCompany.exchange}
+                  height={400} 
+                />
               </div>
               
               {/* Static chart image - only show if not mock data and no live chart is available */}
