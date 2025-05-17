@@ -4,7 +4,7 @@ export interface Company {
   exchange: string;
 }
 
-export const COMPANIES: Company[] = [
+export const NYSE_COMPANIES: Company[] = [
   // NYSE Companies
   { name: "JPMorgan Chase & Co.", symbol: "JPM", exchange: "NYSE" },
   { name: "Bank of America Corporation", symbol: "BAC", exchange: "NYSE" },
