@@ -1,13 +1,26 @@
 import { useState, useEffect, useRef } from 'react';
-import { COMPANIES, Company } from '@/data/companies';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
 import { Search, Building2 } from 'lucide-react';
+import { ASX_COMPANIES } from '@/data/asxCompanies';
+import { BSE_COMPANIES } from '@/data/bseCompanies';
+import { NSE_COMPANIES } from '@/data/nseCompanies';
+import { NYSE_COMPANIES } from '@/data/nyseCompanies';
+import { NASDAQ_COMPANIES } from '@/data/companies';
+import { Company } from '@/data/companies';
 
 interface CompanySearchProps {
   onSelect: (company: Company) => void;
   placeholder?: string;
 }
+
+const ALL_COMPANIES = [
+  ...NASDAQ_COMPANIES,
+  ...ASX_COMPANIES,
+  ...BSE_COMPANIES,
+  ...NSE_COMPANIES,
+  ...NYSE_COMPANIES
+];
 
 const CompanySearch = ({ onSelect, placeholder = "Search for a company..." }: CompanySearchProps) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -33,7 +46,7 @@ const CompanySearch = ({ onSelect, placeholder = "Search for a company..." }: Co
       return;
     }
 
-    const filteredCompanies = COMPANIES.filter(company => 
+    const filteredCompanies = ALL_COMPANIES.filter(company => 
       company.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       company.symbol.toLowerCase().includes(searchTerm.toLowerCase())
     ).slice(0, 5); // Limit to 5 suggestions
@@ -52,8 +65,8 @@ const CompanySearch = ({ onSelect, placeholder = "Search for a company..." }: Co
   };
 
   return (
-    <div className="relative w-full" ref={searchRef}>
-      <div className="relative">
+    <div className="relative w-full" ref={searchRef} style={{ position: 'relative', zIndex: 9999 }}>
+      <div className="relative" style={{ position: 'relative' }}>
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
         <Input
           type="text"
@@ -66,27 +79,27 @@ const CompanySearch = ({ onSelect, placeholder = "Search for a company..." }: Co
           placeholder={placeholder}
           className="pl-10 w-full"
         />
-      </div>
 
-      {showSuggestions && suggestions.length > 0 && (
-        <div className="absolute z-10 w-full mt-1 bg-white rounded-md shadow-lg border border-gray-200 max-h-60 overflow-auto">
-          {suggestions.map((company) => (
-            <div
-              key={`${company.exchange}:${company.symbol}`}
-              className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
-              onClick={() => handleSelect(company)}
-            >
-              <Building2 className="h-4 w-4 text-gray-500" />
-              <div>
-                <div className="font-medium text-black">{company.name}</div>
-                <div className="text-sm text-gray-600">
-                  {company.exchange}:{company.symbol}
+        {showSuggestions && suggestions.length > 0 && (
+          <div className="absolute left-0 right-0 mt-1 bg-white rounded-md shadow-lg border border-gray-200 max-h-[80vh] overflow-y-auto" style={{ zIndex: 9999 }}>
+            {suggestions.map((company) => (
+              <div
+                key={`${company.exchange}:${company.symbol}`}
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
+                onClick={() => handleSelect(company)}
+              >
+                <Building2 className="h-4 w-4 text-gray-500" />
+                <div>
+                  <div className="font-medium text-black">{company.name}</div>
+                  <div className="text-sm text-gray-600">
+                    {company.exchange}:{company.symbol}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
