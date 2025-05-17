@@ -4,7 +4,7 @@ export interface Company {
   exchange: string;
 }
 
-export const COMPANIES: Company[] = [
+export const BSE_COMPANIES: Company[] = [
   // BSE Companies
   { name: "Reliance Industries Limited", symbol: "RELIANCE", exchange: "BSE" },
   { name: "Tata Consultancy Services Limited", symbol: "TCS", exchange: "BSE" },

@@ -4,7 +4,7 @@ export interface Company {
   exchange: string;
 }
 
-export const COMPANIES: Company[] = [
+export const ASX_COMPANIES: Company[] = [
   // ASX Companies
   { name: "Commonwealth Bank of Australia", symbol: "CBA", exchange: "ASX" },
   { name: "CSL Limited", symbol: "CSL", exchange: "ASX" },
