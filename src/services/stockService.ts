@@ -1,5 +1,6 @@
+
 export type StockAnalysisResponse = {
-  url: string;
+  url?: string;
   text: string;
   symbol: string;
 };
@@ -114,7 +115,7 @@ const extractJsonFromText = (text: string): StockAnalysisResponse | null => {
       const parsed = JSON.parse(jsonStr);
       
       // Validate that the parsed object has the required properties
-      if (parsed.url && parsed.text && parsed.symbol) {
+      if (parsed.text && parsed.symbol) {
         return parsed as StockAnalysisResponse;
       }
     }
