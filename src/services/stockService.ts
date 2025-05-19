@@ -1,5 +1,6 @@
+
 export type StockAnalysisResponse = {
-  url: string;
+  url?: string; // Make URL optional
   text: string;
   symbol: string;
 };
@@ -114,7 +115,7 @@ const extractJsonFromText = (text: string): StockAnalysisResponse | null => {
       const parsed = JSON.parse(jsonStr);
       
       // Validate that the parsed object has the required properties
-      if (parsed.url && parsed.text && parsed.symbol) {
+      if (parsed.text && parsed.symbol) {
         return parsed as StockAnalysisResponse;
       }
     }
@@ -128,8 +129,8 @@ const extractJsonFromText = (text: string): StockAnalysisResponse | null => {
 // Provide mock analysis data for better user experience when the API fails
 const provideMockAnalysis = (symbol: string): StockAnalysisResponse => {
   return {
-    url: "https://placeholder-chart.com/error",
     text: `# Mock Analysis for ${symbol}\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes`,
     symbol: symbol
   };
 };
+
