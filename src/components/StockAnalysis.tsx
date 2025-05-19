@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -64,10 +63,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
       const data = await fetchStockAnalysis(sanitizedSymbol, selectedCompany.exchange);
       console.log("Response received:", data);
       
-      // Check if URL exists in the response - some API responses might not include it
-      const hasErrorUrl = data.url && data.url.includes("placeholder-chart.com/error");
-      
-      if (hasErrorUrl) {
+      if (data.url.includes("placeholder-chart.com/error")) {
         // This is our error fallback
         setErrorMessage("");  // Clear any previous error
         setAnalysisText(data.text);  // Show the mock analysis as markdown
@@ -78,23 +74,25 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
           description: "Using mock analysis due to connection issues. Please try again later.",
           variant: "destructive",
         });
+        
+        // Notify parent component of the new symbol even with mock data
+        if (onAnalysisComplete) {
+          onAnalysisComplete(sanitizedSymbol);
+        }
       } else {
         setAnalysisText(data.text);
-        // Only set chartImageUrl if it exists in the response
-        if (data.url) {
-          setChartImageUrl(data.url);
-        }
+        setChartImageUrl(data.url);
         setIsMockData(false);
+        
+        // Notify parent component of the new symbol
+        if (onAnalysisComplete) {
+          onAnalysisComplete(sanitizedSymbol);
+        }
         
         toast({
           title: "Success",
           description: `Analysis for ${selectedCompany.exchange}:${sanitizedSymbol} loaded successfully`,
         });
-      }
-      
-      // Notify parent component of the new symbol
-      if (onAnalysisComplete) {
-        onAnalysisComplete(sanitizedSymbol);
       }
     } catch (error) {
       const errorMsg = error instanceof Error ? error.message : 'Failed to fetch analysis';
@@ -195,7 +193,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
                 />
               </div>
               
-              {/* Static chart image - only show if not mock data and url exists */}
+              {/* Static chart image - only show if not mock data and no live chart is available */}
               {chartImageUrl && !isMockData && (
                 <div className="border border-gray-700 rounded-lg overflow-hidden shadow-sm bg-gray-800/50 p-2">
                   <img 
