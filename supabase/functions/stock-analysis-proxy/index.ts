@@ -51,7 +51,7 @@ serve(async (req) => {
       );
     }
 
-    // Forward to actual API
+    // Forward to actual API - using the correct API endpoint
     const apiUrl = "https://raichen.app.n8n.cloud/webhook/stock-chart-analysis";
     
     console.log(`Fetching from ${apiUrl} for symbol ${symbol}, exchange ${exchange}`);
@@ -64,12 +64,20 @@ serve(async (req) => {
       });
 
       if (!apiResponse.ok) {
+        console.error(`API responded with status: ${apiResponse.status}`);
         throw new Error(`API responded with status: ${apiResponse.status}`);
       }
 
-      const data = await apiResponse.json();
+      let data;
+      try {
+        data = await apiResponse.json();
+      } catch (parseError) {
+        console.error("Failed to parse API response:", parseError);
+        throw new Error("Invalid JSON response from API");
+      }
       
       if (!data || !data.text) {
+        console.error("Invalid response format:", data);
         throw new Error("Invalid response format from API");
       }
       

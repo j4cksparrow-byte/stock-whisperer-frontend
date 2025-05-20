@@ -41,8 +41,8 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
         'Accept': 'application/json'
       },
       body: payload,
-      // Increase timeout to 30 seconds to give the API more time to respond
-      signal: AbortSignal.timeout(30000)
+      // Increase timeout to 45 seconds to give the API more time to respond
+      signal: AbortSignal.timeout(45000)
     });
 
     console.log('Response status:', response.status);
