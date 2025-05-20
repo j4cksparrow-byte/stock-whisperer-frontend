@@ -33,6 +33,42 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     
     console.log('Sending payload:', payload);
     
+    // Try direct connection to n8n webhook first (bypass proxy for testing)
+    const directApiUrl = "https://raichen.app.n8n.cloud/webhook/stock-chart-analysis";
+
+    // First attempt with direct connection
+    try {
+      console.log('Trying direct API connection to:', directApiUrl);
+      const directResponse = await fetch(directApiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: payload,
+        signal: AbortSignal.timeout(30000)
+      });
+      
+      console.log('Direct API response status:', directResponse.status);
+      
+      if (directResponse.ok) {
+        const data = await directResponse.json();
+        console.log("Direct API Response:", data);
+        
+        if (data && data.text) {
+          return {
+            text: cleanAnalysisText(data.text),
+            symbol: sanitizedSymbol
+          };
+        }
+      } else {
+        console.log('Direct connection failed, trying proxy...');
+      }
+    } catch (directError) {
+      console.error('Error with direct API connection:', directError);
+      console.log('Falling back to proxy...');
+    }
+    
     // Configure request with optimal settings for cross-origin requests
     const response = await fetch(API_BASE_URL, {
       method: 'POST',
@@ -41,11 +77,11 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
         'Accept': 'application/json'
       },
       body: payload,
-      // Increase timeout to 45 seconds to give the API more time to respond
-      signal: AbortSignal.timeout(45000)
+      // Increase timeout to 60 seconds to give the API more time to respond
+      signal: AbortSignal.timeout(60000)
     });
 
-    console.log('Response status:', response.status);
+    console.log('Proxy response status:', response.status);
     
     // More robust error handling
     if (!response.ok) {

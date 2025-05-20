@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
       '/api/stock-analysis': {
         target: 'https://raichen.app.n8n.cloud',
         changeOrigin: true,
-        secure: false,
+        secure: true,
         rewrite: (path) => path.replace(/^\/api\/stock-analysis/, '/webhook/stock-chart-analysis'),
         configure: (proxy, _options) => {
           proxy.on('error', (err, _req, _res) => {
@@ -31,8 +31,10 @@ export default defineConfig(({ mode }) => ({
           'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
           'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization, Accept',
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        }
+          'Accept': 'application/json',
+          'User-Agent': 'StockAnalysisApp/1.0'
+        },
+        timeout: 60000
       }
     }
   },

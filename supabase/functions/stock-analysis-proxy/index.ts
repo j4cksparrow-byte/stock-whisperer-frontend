@@ -51,29 +51,59 @@ serve(async (req) => {
       );
     }
 
-    // Forward to actual API - using the correct API endpoint
+    // Forward to the n8n webhook API
     const apiUrl = "https://raichen.app.n8n.cloud/webhook/stock-chart-analysis";
     
     console.log(`Fetching from ${apiUrl} for symbol ${symbol}, exchange ${exchange}`);
     
     try {
+      // Set up fetch with increased timeout and detailed logging
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 30000);
+      
       const apiResponse = await fetch(apiUrl, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+          "User-Agent": "StockAnalysisApp/1.0"
+        },
         body: JSON.stringify({ symbol, exchange }),
+        signal: controller.signal
       });
+      
+      clearTimeout(timeoutId);
 
+      console.log(`API responded with status: ${apiResponse.status}`);
+      
       if (!apiResponse.ok) {
-        console.error(`API responded with status: ${apiResponse.status}`);
-        throw new Error(`API responded with status: ${apiResponse.status}`);
+        // Try to read the error response
+        let errorText = "Unknown error";
+        try {
+          errorText = await apiResponse.text();
+        } catch (e) {
+          console.error("Couldn't read error response:", e);
+        }
+        
+        console.error(`API error (${apiResponse.status}): ${errorText}`);
+        throw new Error(`API responded with status: ${apiResponse.status}. Details: ${errorText}`);
       }
 
+      let responseText;
+      try {
+        responseText = await apiResponse.text();
+        console.log("Raw API response:", responseText.substring(0, 200) + "...");
+      } catch (textError) {
+        console.error("Failed to get response text:", textError);
+        throw new Error("Failed to read API response");
+      }
+      
       let data;
       try {
-        data = await apiResponse.json();
+        data = JSON.parse(responseText);
       } catch (parseError) {
         console.error("Failed to parse API response:", parseError);
-        throw new Error("Invalid JSON response from API");
+        throw new Error("Invalid JSON response from API: " + responseText.substring(0, 100));
       }
       
       if (!data || !data.text) {
@@ -88,12 +118,13 @@ serve(async (req) => {
         analysis_text: data.text,
       });
 
-      return new Response(JSON.stringify({
-        text: data.text,
-        symbol: symbol
-      }), { 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      });
+      return new Response(
+        JSON.stringify({
+          text: data.text,
+          symbol: symbol
+        }), 
+        { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
     } catch (apiError) {
       console.error("API Error:", apiError.message);
       throw apiError; // Rethrow to be caught by outer try/catch
@@ -101,10 +132,10 @@ serve(async (req) => {
   } catch (error) {
     console.error("Error:", error.message);
     
-    // Return mock data on error
+    // Return mock data on error with more informative message
     return new Response(
       JSON.stringify({
-        text: `# Mock Analysis\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes`,
+        text: `# Mock Analysis\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.\n\n### Technical Details\n\nError: ${error.message}\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes`,
         symbol: "error"
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 200 }
