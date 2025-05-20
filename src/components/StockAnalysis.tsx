@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,7 +19,6 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
   const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [analysisText, setAnalysisText] = useState<string>("");
-  const [chartImageUrl, setChartImageUrl] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [isMockData, setIsMockData] = useState<boolean>(false);
   const [loadingMessage, setLoadingMessage] = useState<string>("");
@@ -39,7 +39,6 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
     // Reset states
     setIsLoading(true);
     setAnalysisText("");
-    setChartImageUrl("");
     setErrorMessage("");
     setIsMockData(false);
     setLoadingMessage("Analyzing stock data...");
@@ -63,7 +62,8 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
       const data = await fetchStockAnalysis(sanitizedSymbol, selectedCompany.exchange);
       console.log("Response received:", data);
       
-      if (data.url.includes("placeholder-chart.com/error")) {
+      // Check if the response is our mock data fallback
+      if (data.symbol === "error") {
         // This is our error fallback
         setErrorMessage("");  // Clear any previous error
         setAnalysisText(data.text);  // Show the mock analysis as markdown
@@ -74,25 +74,19 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
           description: "Using mock analysis due to connection issues. Please try again later.",
           variant: "destructive",
         });
-        
-        // Notify parent component of the new symbol even with mock data
-        if (onAnalysisComplete) {
-          onAnalysisComplete(sanitizedSymbol);
-        }
       } else {
         setAnalysisText(data.text);
-        setChartImageUrl(data.url);
         setIsMockData(false);
-        
-        // Notify parent component of the new symbol
-        if (onAnalysisComplete) {
-          onAnalysisComplete(sanitizedSymbol);
-        }
         
         toast({
           title: "Success",
           description: `Analysis for ${selectedCompany.exchange}:${sanitizedSymbol} loaded successfully`,
         });
+      }
+      
+      // Notify parent component of the new symbol even with mock data
+      if (onAnalysisComplete) {
+        onAnalysisComplete(sanitizedSymbol);
       }
     } catch (error) {
       const errorMsg = error instanceof Error ? error.message : 'Failed to fetch analysis';
@@ -184,7 +178,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
                 Technical Analysis for <span className="font-bold">{selectedCompany.exchange}:{selectedCompany.symbol}</span>
               </h2>
               
-              {/* Live TradingView Chart - passing the exchange */}
+              {/* Live TradingView Chart */}
               <div className="border border-gray-700 rounded-lg overflow-hidden shadow-sm bg-gray-800/50 p-2">
                 <TradingViewChart 
                   symbol={selectedCompany.symbol} 
@@ -192,17 +186,6 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
                   height={400} 
                 />
               </div>
-              
-              {/* Static chart image - only show if not mock data and no live chart is available */}
-              {chartImageUrl && !isMockData && (
-                <div className="border border-gray-700 rounded-lg overflow-hidden shadow-sm bg-gray-800/50 p-2">
-                  <img 
-                    src={chartImageUrl} 
-                    alt={`${selectedCompany.symbol} Stock Chart`} 
-                    className="w-full max-w-[600px] h-auto rounded mx-auto" 
-                  />
-                </div>
-              )}
               
               {/* Analysis text with markdown rendering */}
               {analysisText && (
