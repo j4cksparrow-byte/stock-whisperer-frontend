@@ -44,6 +44,7 @@ serve(async (req) => {
       console.log("Serving cached analysis for", symbol);
       return new Response(
         JSON.stringify({
+          url: cachedData.chart_url,
           text: cachedData.analysis_text,
           symbol: symbol
         }),
@@ -51,8 +52,8 @@ serve(async (req) => {
       );
     }
 
-    // Forward to the new API endpoint
-    const apiUrl = "https://raichen.app.n8n.cloud/webhook/stock-chart-analysis";
+    // Forward to actual API
+    const apiUrl = "https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis";
     const apiResponse = await fetch(apiUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -69,23 +70,20 @@ serve(async (req) => {
     await supabaseAdmin.from('stock_analysis_cache').insert({
       symbol: symbol,
       exchange: exchange,
-      chart_url: data.url, // Keep storing this in case we need it later
+      chart_url: data.url,
       analysis_text: data.text,
     });
 
-    // But return only text and symbol to the client
-    return new Response(JSON.stringify({
-      text: data.text,
-      symbol: symbol
-    }), { 
+    return new Response(JSON.stringify(data), { 
       headers: { ...corsHeaders, "Content-Type": "application/json" } 
     });
   } catch (error) {
     console.error("Error:", error.message);
     
-    // Return mock data on error, without url
+    // Return mock data on error
     return new Response(
       JSON.stringify({
+        url: "https://placeholder-chart.com/error",
         text: `# Mock Analysis\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes`,
         symbol: "error"
       }),

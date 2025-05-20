@@ -1,4 +1,3 @@
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -11,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     proxy: {
       '/api/stock-analysis': {
-        target: 'https://raichen.app.n8n.cloud',
+        target: 'https://kashrollin.app.n8n.cloud',
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api\/stock-analysis/, '/webhook/stock-chart-analysis'),
