@@ -53,31 +53,43 @@ serve(async (req) => {
 
     // Forward to actual API
     const apiUrl = "https://raichen.app.n8n.cloud/webhook/stock-chart-analysis";
-    const apiResponse = await fetch(apiUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ symbol, exchange }),
-    });
-
-    if (!apiResponse.ok) {
-      throw new Error(`API responded with status: ${apiResponse.status}`);
-    }
-
-    const data = await apiResponse.json();
     
-    // Cache the result in Supabase (note: no url property anymore)
-    await supabaseAdmin.from('stock_analysis_cache').insert({
-      symbol: symbol,
-      exchange: exchange,
-      analysis_text: data.text,
-    });
+    console.log(`Fetching from ${apiUrl} for symbol ${symbol}, exchange ${exchange}`);
+    
+    try {
+      const apiResponse = await fetch(apiUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ symbol, exchange }),
+      });
 
-    return new Response(JSON.stringify({
-      text: data.text,
-      symbol: symbol
-    }), { 
-      headers: { ...corsHeaders, "Content-Type": "application/json" } 
-    });
+      if (!apiResponse.ok) {
+        throw new Error(`API responded with status: ${apiResponse.status}`);
+      }
+
+      const data = await apiResponse.json();
+      
+      if (!data || !data.text) {
+        throw new Error("Invalid response format from API");
+      }
+      
+      // Cache the result in Supabase
+      await supabaseAdmin.from('stock_analysis_cache').insert({
+        symbol: symbol,
+        exchange: exchange,
+        analysis_text: data.text,
+      });
+
+      return new Response(JSON.stringify({
+        text: data.text,
+        symbol: symbol
+      }), { 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+      });
+    } catch (apiError) {
+      console.error("API Error:", apiError.message);
+      throw apiError; // Rethrow to be caught by outer try/catch
+    }
   } catch (error) {
     console.error("Error:", error.message);
     
