@@ -52,7 +52,7 @@ serve(async (req) => {
     }
 
     // Forward to actual API
-    const apiUrl = "https://raichen.app.n8n.cloud/webhook-test/stock-chart-analysis";
+    const apiUrl = "https://raichen.app.n8n.cloud/webhook/stock-chart-analysis";
     const apiResponse = await fetch(apiUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

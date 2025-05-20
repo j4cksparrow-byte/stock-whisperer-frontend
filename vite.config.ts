@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
         target: 'https://raichen.app.n8n.cloud',
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api\/stock-analysis/, '/webhook-test/stock-chart-analysis'),
+        rewrite: (path) => path.replace(/^\/api\/stock-analysis/, '/webhook/stock-chart-analysis'),
         configure: (proxy, _options) => {
           proxy.on('error', (err, _req, _res) => {
             console.log('proxy error', err);
