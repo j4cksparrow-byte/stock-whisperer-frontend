@@ -9,6 +9,7 @@ const cleanAnalysisText = (text: string): string => {
   return text.replace(/<br\s*\/?>/gi, '\n');
 };
 
+// Define the API endpoint
 const API_BASE_URL = import.meta.env.PROD
   ? 'https://egiiqbgumgltatfljbcs.supabase.co/functions/v1/stock-analysis-proxy'
   : '/api/stock-analysis';
@@ -22,6 +23,8 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     // Further sanitize and format the values to prevent issues
     const sanitizedSymbol = symbol.trim().replace(/[^\w.-]/g, '');
     const sanitizedExchange = exchange.trim().replace(/[^\w.-]/g, '');
+    
+    console.log('Using sanitized symbol:', sanitizedSymbol);
     
     const payload = JSON.stringify({
       symbol: sanitizedSymbol,
