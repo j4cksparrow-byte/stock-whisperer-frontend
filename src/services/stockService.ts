@@ -1,3 +1,4 @@
+
 export type StockAnalysisResponse = {
   url: string;
   text: string;
@@ -9,9 +10,13 @@ const cleanAnalysisText = (text: string): string => {
   return text.replace(/<br\s*\/?>/gi, '\n');
 };
 
+// API configuration - Use kashrollin.app.n8n.cloud as the endpoint
 const API_BASE_URL = import.meta.env.PROD
   ? 'https://egiiqbgumgltatfljbcs.supabase.co/functions/v1/stock-analysis-proxy'
   : '/api/stock-analysis';
+
+// Direct API URL as fallback if the proxy fails
+const DIRECT_API_URL = 'https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis';
 
 export const fetchStockAnalysis = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {
   try {
@@ -37,13 +42,14 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         // Explicitly specify origin to help with CORS
-        'Origin': window.location.origin
+        'Origin': window.location.origin,
+        'User-Agent': 'StockAnalysisClient/1.0'
       },
       body: payload,
       // Don't send credentials in production as it may trigger preflight complexity
       credentials: import.meta.env.PROD ? 'omit' : 'include',
-      // Increase timeout to 30 seconds to give the API more time to respond
-      signal: AbortSignal.timeout(30000)
+      // Increase timeout to 45 seconds to give the API more time to respond
+      signal: AbortSignal.timeout(45000)
     });
 
     console.log('Response status:', response.status);
@@ -51,14 +57,10 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     if (!response.ok) {
       const errorText = await response.text();
       console.error('API Error Response:', errorText);
+      console.warn('Primary API request failed. Attempting direct API call as fallback.');
       
-      // Check for specific error patterns
-      if (errorText.includes('regex') || errorText.includes('invalid character')) {
-        console.warn('Detected regex or special character issue in response. Providing mock data.');
-        return provideMockAnalysis(sanitizedSymbol);
-      }
-      
-      throw new Error(errorText || `Failed to fetch analysis (Status: ${response.status})`);
+      // Try direct API call as fallback
+      return await tryDirectApiCall(sanitizedSymbol, sanitizedExchange);
     }
 
     const contentType = response.headers.get('content-type');
@@ -80,7 +82,8 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
         console.error("Failed to extract JSON from response:", parseError);
       }
       
-      throw new Error('Invalid response format from server');
+      // Try direct API call as fallback if parsing failed
+      return await tryDirectApiCall(sanitizedSymbol, sanitizedExchange);
     }
 
     const data = await response.json();
@@ -95,12 +98,61 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     // Special handling for network errors that might happen in production
     if (error instanceof TypeError && error.message.includes('Failed to fetch')) {
       console.error('Network error occurred. This often happens with CORS issues in production.');
+      
+      // Try direct API call as fallback
+      try {
+        return await tryDirectApiCall(symbol, exchange);
+      } catch (directError) {
+        console.error('Direct API call also failed:', directError);
+      }
     } else if (error instanceof DOMException && error.name === 'TimeoutError') {
-      console.error('Request timed out after 30 seconds. Consider using a more responsive API endpoint.');
+      console.error('Request timed out. Trying direct API call as fallback.');
+      
+      try {
+        return await tryDirectApiCall(symbol, exchange);
+      } catch (directError) {
+        console.error('Direct API call also failed:', directError);
+      }
     }
     
     // Always provide a fallback for any error
     return provideMockAnalysis(symbol);
+  }
+};
+
+// Try a direct API call as a fallback mechanism
+const tryDirectApiCall = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {
+  console.log('Attempting direct API call to:', DIRECT_API_URL);
+  
+  try {
+    const directResponse = await fetch(DIRECT_API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'User-Agent': 'StockAnalysisClient/1.0'
+      },
+      body: JSON.stringify({ symbol, exchange }),
+      // Increase timeout but not too much
+      signal: AbortSignal.timeout(30000)
+    });
+    
+    console.log('Direct API response status:', directResponse.status);
+    
+    if (!directResponse.ok) {
+      throw new Error(`Direct API call failed with status ${directResponse.status}`);
+    }
+    
+    const directData = await directResponse.json();
+    console.log('Direct API response data:', directData);
+    
+    return {
+      ...directData,
+      text: cleanAnalysisText(directData.text)
+    };
+  } catch (error) {
+    console.error('Error in direct API call:', error);
+    throw error; // Let the calling function handle this error
   }
 };
 

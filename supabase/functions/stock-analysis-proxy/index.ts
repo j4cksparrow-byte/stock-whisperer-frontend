@@ -23,6 +23,8 @@ serve(async (req) => {
       );
     }
 
+    console.log(`Processing request for symbol: ${symbol}, exchange: ${exchange}`);
+
     // Create Supabase client with the project URL and service_role key
     const supabaseAdmin = createClient(
       Deno.env.get("SUPABASE_URL") || "",
@@ -30,7 +32,7 @@ serve(async (req) => {
     );
 
     // Check if we have a cached result (less than 1 hour old)
-    const { data: cachedData } = await supabaseAdmin
+    const { data: cachedData, error: cacheError } = await supabaseAdmin
       .from('stock_analysis_cache')
       .select('*')
       .eq('symbol', symbol)
@@ -39,6 +41,10 @@ serve(async (req) => {
       .order('created_at', { ascending: false })
       .limit(1)
       .single();
+
+    if (cacheError) {
+      console.log("Cache error:", cacheError.message);
+    }
 
     if (cachedData) {
       console.log("Serving cached analysis for", symbol);
@@ -54,37 +60,51 @@ serve(async (req) => {
 
     // Forward to actual API
     const apiUrl = "https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis";
+    console.log(`Forwarding request to API: ${apiUrl}`);
+    
     const apiResponse = await fetch(apiUrl, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { 
+        "Content-Type": "application/json",
+        "User-Agent": "StockAnalysisClient/1.0" 
+      },
       body: JSON.stringify({ symbol, exchange }),
     });
 
+    console.log(`API response status: ${apiResponse.status}`);
+    
     if (!apiResponse.ok) {
+      const errorText = await apiResponse.text();
+      console.error(`API error: ${apiResponse.status}, Response: ${errorText}`);
       throw new Error(`API responded with status: ${apiResponse.status}`);
     }
 
     const data = await apiResponse.json();
+    console.log("Received valid response from API");
     
     // Cache the result in Supabase
-    await supabaseAdmin.from('stock_analysis_cache').insert({
+    const { error: insertError } = await supabaseAdmin.from('stock_analysis_cache').insert({
       symbol: symbol,
       exchange: exchange,
       chart_url: data.url,
       analysis_text: data.text,
     });
 
+    if (insertError) {
+      console.error("Error caching result:", insertError.message);
+    }
+
     return new Response(JSON.stringify(data), { 
       headers: { ...corsHeaders, "Content-Type": "application/json" } 
     });
   } catch (error) {
-    console.error("Error:", error.message);
+    console.error("Error in edge function:", error.message);
     
     // Return mock data on error
     return new Response(
       JSON.stringify({
         url: "https://placeholder-chart.com/error",
-        text: `# Mock Analysis\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes`,
+        text: `# Mock Analysis\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes\n\nError details: ${error.message}`,
         symbol: "error"
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 200 }
