@@ -59,7 +59,7 @@ serve(async (req) => {
     }
 
     // Forward to actual API
-    const apiUrl = "https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis";
+    const apiUrl = "https://raichen.app.n8n.cloud/webhook/stock-chart-analysis";
     console.log(`Forwarding request to API: ${apiUrl}`);
     
     const apiResponse = await fetch(apiUrl, {

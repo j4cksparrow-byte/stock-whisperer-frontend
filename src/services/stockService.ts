@@ -10,13 +10,13 @@ const cleanAnalysisText = (text: string): string => {
   return text.replace(/<br\s*\/?>/gi, '\n');
 };
 
-// API configuration - Use kashrollin.app.n8n.cloud as the endpoint
+// API configuration - Use raichen.app.n8n.cloud as the endpoint
 const API_BASE_URL = import.meta.env.PROD
   ? 'https://egiiqbgumgltatfljbcs.supabase.co/functions/v1/stock-analysis-proxy'
   : '/api/stock-analysis';
 
 // Direct API URL as fallback if the proxy fails
-const DIRECT_API_URL = 'https://kashrollin.app.n8n.cloud/webhook/stock-chart-analysis';
+const DIRECT_API_URL = 'https://raichen.app.n8n.cloud/webhook/stock-chart-analysis';
 
 export const fetchStockAnalysis = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {
   try {
