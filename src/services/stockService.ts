@@ -1,3 +1,4 @@
+
 export type StockAnalysisResponse = {
   url: string;
   text: string;
@@ -37,7 +38,9 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         // Explicitly specify origin to help with CORS
-        'Origin': window.location.origin
+        'Origin': window.location.origin,
+        // Add a user agent to help identify the request
+        'User-Agent': 'StockAnalysisDashboard/1.0'
       },
       body: payload,
       // Don't send credentials in production as it may trigger preflight complexity
@@ -56,6 +59,12 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
       if (errorText.includes('regex') || errorText.includes('invalid character')) {
         console.warn('Detected regex or special character issue in response. Providing mock data.');
         return provideMockAnalysis(sanitizedSymbol);
+      }
+      
+      // If we're in development mode and the proxy failed, try direct API call as fallback
+      if (!import.meta.env.PROD && (response.status === 502 || response.status === 504)) {
+        console.log('Proxy failed. Attempting direct API call as fallback...');
+        return await directApiCall(sanitizedSymbol, sanitizedExchange);
       }
       
       throw new Error(errorText || `Failed to fetch analysis (Status: ${response.status})`);
@@ -100,6 +109,41 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     }
     
     // Always provide a fallback for any error
+    return provideMockAnalysis(symbol);
+  }
+};
+
+// Direct API call as a fallback when proxy fails (for development only)
+const directApiCall = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {
+  try {
+    console.log('Making direct API call to:', 'https://raichen.app.n8n.cloud/webhook/stock-chart-analysis');
+    
+    const response = await fetch('https://raichen.app.n8n.cloud/webhook/stock-chart-analysis', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Origin': window.location.origin,
+        'User-Agent': 'StockAnalysisDashboard/1.0 (Direct API Call)'
+      },
+      body: JSON.stringify({ symbol, exchange }),
+      // Don't include credentials for cross-origin requests to avoid CORS issues
+      credentials: 'omit',
+      // Increase timeout for direct API call
+      signal: AbortSignal.timeout(45000)
+    });
+    
+    if (!response.ok) {
+      throw new Error(`Direct API call failed with status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    return {
+      ...data,
+      text: cleanAnalysisText(data.text)
+    };
+  } catch (error) {
+    console.error('Error in direct API call:', error);
     return provideMockAnalysis(symbol);
   }
 };
