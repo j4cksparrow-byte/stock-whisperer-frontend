@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -64,9 +63,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
       const data = await fetchStockAnalysis(sanitizedSymbol, selectedCompany.exchange);
       console.log("Response received:", data);
       
-      // Fix: Check if data.url exists and then check if it includes the error string
-      // This prevents the "Cannot read properties of undefined (reading 'includes')" error
-      if (data.url && data.url.includes("placeholder-chart.com/error")) {
+      if (data.url.includes("placeholder-chart.com/error")) {
         // This is our error fallback
         setErrorMessage("");  // Clear any previous error
         setAnalysisText(data.text);  // Show the mock analysis as markdown
@@ -84,7 +81,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
         }
       } else {
         setAnalysisText(data.text);
-        setChartImageUrl(data.url || "");  // Ensure we handle potential undefined url
+        setChartImageUrl(data.url);
         setIsMockData(false);
         
         // Notify parent component of the new symbol
