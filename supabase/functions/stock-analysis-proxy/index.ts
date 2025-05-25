@@ -10,8 +10,6 @@ const corsHeaders = {
 };
 
 serve(async (req) => {
-  console.log(`Received ${req.method} request from origin: ${req.headers.get('origin')}`);
-  
   // Handle CORS preflight requests FIRST and IMMEDIATELY
   if (req.method === 'OPTIONS') {
     console.log("Handling CORS preflight request");
@@ -22,9 +20,20 @@ serve(async (req) => {
   }
 
   try {
-    console.log(`Processing ${req.method} request`);
+    console.log(`Processing ${req.method} request from origin: ${req.headers.get('origin')}`);
     
-    // Parse request body with better error handling
+    // Only allow POST requests
+    if (req.method !== 'POST') {
+      return new Response(
+        JSON.stringify({ error: "Method not allowed" }),
+        { 
+          status: 405, 
+          headers: { ...corsHeaders, "Content-Type": "application/json" } 
+        }
+      );
+    }
+
+    // Parse request body
     let requestBody;
     try {
       const bodyText = await req.text();
@@ -102,7 +111,7 @@ serve(async (req) => {
     console.log(`Making API call to: ${apiUrl} for ${symbol}:${exchange}`);
     
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 20000); // 20 second timeout
+    const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
     
     let apiResponse;
     try {
