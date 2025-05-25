@@ -5,7 +5,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
   "Access-Control-Max-Age": "86400",
 };
 
@@ -70,13 +70,18 @@ serve(async (req) => {
 
     // Forward to actual API with timeout
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
+    const timeoutId = setTimeout(() => controller.abort(), 20000); // 20 second timeout
 
     try {
       const apiUrl = "https://raichen.app.n8n.cloud/webhook/stock-chart-analysis";
+      console.log(`Calling external API for ${symbol}:${exchange}`);
+      
       const apiResponse = await fetch(apiUrl, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "User-Agent": "Supabase-Edge-Function/1.0"
+        },
         body: JSON.stringify({ symbol, exchange }),
         signal: controller.signal,
       });
@@ -84,18 +89,26 @@ serve(async (req) => {
       clearTimeout(timeoutId);
 
       if (!apiResponse.ok) {
+        console.error(`API responded with status: ${apiResponse.status}`);
         throw new Error(`API responded with status: ${apiResponse.status}`);
       }
 
       const data = await apiResponse.json();
+      console.log("API response received successfully for", symbol);
       
       // Cache the result in Supabase
-      await supabaseAdmin.from('stock_analysis_cache').insert({
-        symbol: symbol,
-        exchange: exchange,
-        chart_url: data.url,
-        analysis_text: data.text,
-      });
+      try {
+        await supabaseAdmin.from('stock_analysis_cache').insert({
+          symbol: symbol,
+          exchange: exchange,
+          chart_url: data.url || "",
+          analysis_text: data.text || "",
+        });
+        console.log("Result cached successfully for", symbol);
+      } catch (cacheError) {
+        console.error("Failed to cache result:", cacheError);
+        // Continue without caching - don't fail the request
+      }
 
       return new Response(JSON.stringify(data), { 
         headers: { 
@@ -105,10 +118,11 @@ serve(async (req) => {
       });
     } catch (fetchError) {
       clearTimeout(timeoutId);
+      console.error("API fetch error:", fetchError);
       throw fetchError;
     }
   } catch (error) {
-    console.error("Error:", error.message);
+    console.error("Error in stock-analysis-proxy:", error);
     
     // Return mock data on error
     return new Response(
