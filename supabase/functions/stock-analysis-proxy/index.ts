@@ -4,18 +4,37 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, user-agent, origin",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, user-agent, origin, x-requested-with, accept",
   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+  "Access-Control-Max-Age": "86400",
 };
 
 serve(async (req) => {
-  // Handle CORS preflight requests
+  // Handle CORS preflight requests immediately
   if (req.method === 'OPTIONS') {
-    return new Response('ok', { headers: corsHeaders });
+    console.log("Handling CORS preflight request");
+    return new Response(null, { 
+      status: 200,
+      headers: corsHeaders 
+    });
   }
 
   try {
-    const { symbol, exchange } = await req.json();
+    console.log(`Processing ${req.method} request from origin: ${req.headers.get('origin')}`);
+    
+    // Parse request body
+    let symbol, exchange;
+    try {
+      const body = await req.json();
+      symbol = body.symbol;
+      exchange = body.exchange;
+    } catch (parseError) {
+      console.error("Failed to parse request body:", parseError);
+      return new Response(
+        JSON.stringify({ error: "Invalid JSON in request body" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
     
     console.log(`Processing request for symbol: ${symbol}, exchange: ${exchange}`);
     
@@ -27,13 +46,18 @@ serve(async (req) => {
     }
 
     // Create Supabase client with the project URL and service_role key
-    const supabaseAdmin = createClient(
-      Deno.env.get("SUPABASE_URL") || "",
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || ""
-    );
+    const supabaseUrl = Deno.env.get("SUPABASE_URL");
+    const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+    
+    if (!supabaseUrl || !supabaseKey) {
+      console.error("Missing Supabase environment variables");
+      return provideMockResponse(symbol, "Missing database configuration");
+    }
+
+    const supabaseAdmin = createClient(supabaseUrl, supabaseKey);
 
     // Check if we have a cached result (less than 1 hour old)
-    const { data: cachedData } = await supabaseAdmin
+    const { data: cachedData, error: cacheError } = await supabaseAdmin
       .from('stock_analysis_cache')
       .select('*')
       .eq('symbol', symbol)
@@ -41,7 +65,11 @@ serve(async (req) => {
       .gt('created_at', new Date(Date.now() - 60 * 60 * 1000).toISOString())
       .order('created_at', { ascending: false })
       .limit(1)
-      .single();
+      .maybeSingle();
+
+    if (cacheError) {
+      console.warn("Cache lookup failed:", cacheError);
+    }
 
     if (cachedData) {
       console.log("Serving cached analysis for", symbol);
@@ -62,22 +90,29 @@ serve(async (req) => {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 25000); // 25 second timeout
     
-    const apiResponse = await fetch(apiUrl, {
-      method: "POST",
-      headers: { 
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-        "User-Agent": "Supabase-Edge-Function/1.0"
-      },
-      body: JSON.stringify({ symbol, exchange }),
-      signal: controller.signal,
-    });
+    let apiResponse;
+    try {
+      apiResponse = await fetch(apiUrl, {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+          "User-Agent": "Supabase-Edge-Function/1.0"
+        },
+        body: JSON.stringify({ symbol, exchange }),
+        signal: controller.signal,
+      });
+    } catch (fetchError) {
+      clearTimeout(timeoutId);
+      console.error("Fetch error:", fetchError);
+      return provideMockResponse(symbol, `Network error: ${fetchError.message}`);
+    }
 
     clearTimeout(timeoutId);
 
     if (!apiResponse.ok) {
       console.error(`API responded with status: ${apiResponse.status}`);
-      throw new Error(`API responded with status: ${apiResponse.status}`);
+      return provideMockResponse(symbol, `API error: ${apiResponse.status}`);
     }
 
     const data = await apiResponse.json();
@@ -85,15 +120,20 @@ serve(async (req) => {
     
     // Cache the result in Supabase
     try {
-      await supabaseAdmin.from('stock_analysis_cache').insert({
+      const { error: insertError } = await supabaseAdmin.from('stock_analysis_cache').insert({
         symbol: symbol,
         exchange: exchange,
         chart_url: data.url,
         analysis_text: data.text,
       });
-      console.log(`Cached analysis for ${symbol}`);
+      
+      if (insertError) {
+        console.warn("Failed to cache result:", insertError);
+      } else {
+        console.log(`Cached analysis for ${symbol}`);
+      }
     } catch (cacheError) {
-      console.warn("Failed to cache result:", cacheError);
+      console.warn("Cache insert failed:", cacheError);
       // Continue even if caching fails
     }
 
@@ -101,21 +141,23 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" } 
     });
   } catch (error) {
-    console.error("Error in edge function:", error.message);
-    
-    // Return mock data on error with more specific error info
-    const mockResponse = {
-      url: "https://placeholder-chart.com/error",
-      text: `# Mock Analysis\n\n## API Connection Issue\n\nError: ${error.message}\n\nWe're experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes`,
-      symbol: "error"
-    };
-    
-    return new Response(
-      JSON.stringify(mockResponse),
-      { 
-        headers: { ...corsHeaders, "Content-Type": "application/json" }, 
-        status: 200 
-      }
-    );
+    console.error("Error in edge function:", error);
+    return provideMockResponse("unknown", `Unexpected error: ${error.message}`);
   }
 });
+
+function provideMockResponse(symbol: string, errorDetails: string) {
+  const mockResponse = {
+    url: "https://placeholder-chart.com/error",
+    text: `# Mock Analysis for ${symbol}\n\n## API Connection Issue\n\nError: ${errorDetails}\n\nWe're experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes\n\n### Technical Details\n\nThe issue appears to be with our external API connectivity. Our team is working to resolve this.`,
+    symbol: symbol
+  };
+  
+  return new Response(
+    JSON.stringify(mockResponse),
+    { 
+      headers: { ...corsHeaders, "Content-Type": "application/json" }, 
+      status: 200 
+    }
+  );
+}
