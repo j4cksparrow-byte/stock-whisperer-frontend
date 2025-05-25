@@ -28,16 +28,20 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     
     console.log('Sending payload:', payload);
     
-    // Configure request with optimal settings for cross-origin requests
+    // Configure request with settings to handle SSL issues in production
     const response = await fetch(API_BASE_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
+        'Origin': window.location.origin,
       },
       body: payload,
-      // Increase timeout to 25 seconds to give the API more time to respond
-      signal: AbortSignal.timeout(25000)
+      // Reduce timeout to 15 seconds for better user experience
+      signal: AbortSignal.timeout(15000),
+      // Add mode and credentials for better CORS handling
+      mode: 'cors',
+      credentials: 'omit'
     });
 
     console.log('Response status:', response.status);
@@ -64,11 +68,13 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
   } catch (error) {
     console.error('Error in fetchStockAnalysis:', error);
     
-    // Special handling for network errors that might happen in production
+    // Special handling for different types of network errors
     if (error instanceof TypeError && error.message.includes('Failed to fetch')) {
-      console.error('Network error occurred. This often happens with CORS issues in production.');
+      console.error('Network error occurred. This could be due to SSL certificate issues or CORS in production.');
     } else if (error instanceof DOMException && error.name === 'TimeoutError') {
-      console.error('Request timed out after 25 seconds. The API may be experiencing high load.');
+      console.error('Request timed out after 15 seconds. The API may be experiencing high load.');
+    } else if (error.message && error.message.includes('ERR_CERT_AUTHORITY_INVALID')) {
+      console.error('SSL certificate error detected.');
     }
     
     // Always provide a fallback for any error
@@ -80,7 +86,7 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
 const provideMockAnalysis = (symbol: string): StockAnalysisResponse => {
   return {
     url: "https://placeholder-chart.com/error",
-    text: `# Mock Analysis for ${symbol}\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes`,
+    text: `# Mock Analysis for ${symbol}\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. This may be due to SSL certificate issues in the production environment.\n\n### What You Can Do\n\n- Try refreshing the page\n- The live TradingView chart above still provides real-time data\n- Check back later when the API service is restored`,
     symbol: symbol
   };
 };
