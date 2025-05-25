@@ -10,12 +10,12 @@ const cleanAnalysisText = (text: string): string => {
   return text.replace(/<br\s*\/?>/gi, '\n');
 };
 
-// API configuration - Use raichen.app.n8n.cloud as the endpoint
+// API configuration
 const API_BASE_URL = import.meta.env.PROD
   ? 'https://egiiqbgumgltatfljbcs.supabase.co/functions/v1/stock-analysis-proxy'
   : '/api/stock-analysis';
 
-// Direct API URL as fallback if the proxy fails
+// Direct API URL as fallback
 const DIRECT_API_URL = 'https://raichen.app.n8n.cloud/webhook/stock-chart-analysis';
 
 export const fetchStockAnalysis = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {
@@ -24,7 +24,6 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     console.log('Environment:', import.meta.env.PROD ? 'Production' : 'Development');
     console.log('Using API URL:', API_BASE_URL);
     
-    // Further sanitize and format the values to prevent issues
     const sanitizedSymbol = symbol.trim().replace(/[^\w.-]/g, '');
     const sanitizedExchange = exchange.trim().replace(/[^\w.-]/g, '');
     
@@ -35,21 +34,15 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     
     console.log('Sending payload:', payload);
     
-    // Configure request with optimal settings for cross-origin requests
+    // Try primary API with SSL error handling
     const response = await fetch(API_BASE_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        // Explicitly specify origin to help with CORS
-        'Origin': window.location.origin,
-        'User-Agent': 'StockAnalysisClient/1.0'
       },
       body: payload,
-      // Don't send credentials in production as it may trigger preflight complexity
-      credentials: import.meta.env.PROD ? 'omit' : 'include',
-      // Increase timeout to 45 seconds to give the API more time to respond
-      signal: AbortSignal.timeout(45000)
+      signal: AbortSignal.timeout(20000)
     });
 
     console.log('Response status:', response.status);
@@ -57,37 +50,18 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     if (!response.ok) {
       const errorText = await response.text();
       console.error('API Error Response:', errorText);
-      console.warn('Primary API request failed. Attempting direct API call as fallback.');
-      
-      // Try direct API call as fallback
-      return await tryDirectApiCall(sanitizedSymbol, sanitizedExchange);
-    }
-
-    const contentType = response.headers.get('content-type');
-    if (!contentType || !contentType.includes('application/json')) {
-      const text = await response.text();
-      console.error('Invalid response type:', contentType, 'Response text:', text);
-      
-      // Try to parse the text as JSON in case the content type header is incorrect
-      try {
-        const extractedJson = extractJsonFromText(text);
-        if (extractedJson) {
-          console.log("Extracted JSON from non-JSON response:", extractedJson);
-          return {
-            ...extractedJson,
-            text: cleanAnalysisText(extractedJson.text)
-          };
-        }
-      } catch (parseError) {
-        console.error("Failed to extract JSON from response:", parseError);
-      }
-      
-      // Try direct API call as fallback if parsing failed
-      return await tryDirectApiCall(sanitizedSymbol, sanitizedExchange);
+      throw new Error(`API responded with status: ${response.status}`);
     }
 
     const data = await response.json();
     console.log("API Response:", data);
+    
+    // Check if response has url property and it's not an error URL
+    if (!data.url || data.url.includes("placeholder-chart.com/error")) {
+      console.warn('Received error response from API, trying direct API call');
+      return await tryDirectApiCall(sanitizedSymbol, sanitizedExchange);
+    }
+    
     return {
       ...data,
       text: cleanAnalysisText(data.text)
@@ -95,27 +69,29 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
   } catch (error) {
     console.error('Error in fetchStockAnalysis:', error);
     
-    // Special handling for network errors that might happen in production
-    if (error instanceof TypeError && error.message.includes('Failed to fetch')) {
-      console.error('Network error occurred. This often happens with CORS issues in production.');
-      
-      // Try direct API call as fallback
-      try {
-        return await tryDirectApiCall(symbol, exchange);
-      } catch (directError) {
-        console.error('Direct API call also failed:', directError);
-      }
-    } else if (error instanceof DOMException && error.name === 'TimeoutError') {
-      console.error('Request timed out. Trying direct API call as fallback.');
+    // Handle SSL certificate errors specifically
+    if (error instanceof TypeError && (
+      error.message.includes('Failed to fetch') || 
+      error.message.includes('ERR_CERT_AUTHORITY_INVALID') ||
+      error.message.includes('SSL')
+    )) {
+      console.error('SSL/Network error detected. Attempting direct API call as fallback.');
       
       try {
         return await tryDirectApiCall(symbol, exchange);
       } catch (directError) {
         console.error('Direct API call also failed:', directError);
+        return provideMockAnalysis(symbol);
       }
     }
     
-    // Always provide a fallback for any error
+    // Handle timeout errors
+    if (error instanceof DOMException && error.name === 'TimeoutError') {
+      console.error('Request timed out. Providing mock analysis.');
+      return provideMockAnalysis(symbol);
+    }
+    
+    // For any other error, provide mock analysis
     return provideMockAnalysis(symbol);
   }
 };
@@ -133,8 +109,7 @@ const tryDirectApiCall = async (symbol: string, exchange: string): Promise<Stock
         'User-Agent': 'StockAnalysisClient/1.0'
       },
       body: JSON.stringify({ symbol, exchange }),
-      // Increase timeout but not too much
-      signal: AbortSignal.timeout(30000)
+      signal: AbortSignal.timeout(25000)
     });
     
     console.log('Direct API response status:', directResponse.status);
@@ -152,36 +127,17 @@ const tryDirectApiCall = async (symbol: string, exchange: string): Promise<Stock
     };
   } catch (error) {
     console.error('Error in direct API call:', error);
-    throw error; // Let the calling function handle this error
+    throw error;
   }
 };
 
-// Try to extract JSON from a string that might contain JSON
-const extractJsonFromText = (text: string): StockAnalysisResponse | null => {
-  try {
-    // Try to find JSON objects in the response
-    const jsonMatch = text.match(/\{.*\}/s);
-    if (jsonMatch) {
-      const jsonStr = jsonMatch[0];
-      const parsed = JSON.parse(jsonStr);
-      
-      // Validate that the parsed object has the required properties
-      if (parsed.url && parsed.text && parsed.symbol) {
-        return parsed as StockAnalysisResponse;
-      }
-    }
-    return null;
-  } catch (e) {
-    console.error("Failed to extract JSON:", e);
-    return null;
-  }
-};
-
-// Provide mock analysis data for better user experience when the API fails
+// Provide mock analysis data for better user experience when APIs fail
 const provideMockAnalysis = (symbol: string): StockAnalysisResponse => {
+  console.log('Providing mock analysis for symbol:', symbol);
+  
   return {
     url: "https://placeholder-chart.com/error",
-    text: `# Mock Analysis for ${symbol}\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes`,
+    text: `# Technical Analysis for ${symbol}\n\n## Connection Issue\n\nWe're currently experiencing connectivity issues with our analysis service. This could be due to:\n\n- SSL certificate validation problems\n- Network connectivity issues\n- Temporary service unavailability\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes\n- Contact support if the issue persists\n\n*This is mock data provided for demonstration purposes.*`,
     symbol: symbol
   };
 };
