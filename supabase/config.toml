@@ -6,4 +6,4 @@ verify_jwt = false
 
 [auth]
 site_url = "https://egiiqbgumgltatfljbcs.supabase.co"
-additional_redirect_urls = ["https://lovable.dev", "https://lovable-dev.pages.dev", "https://egiiqbgumgltatfljbcs.lovable.dev", "https://stock-whisperer-frontend.lovable.app"]
+additional_redirect_urls = ["https://lovable.dev", "https://lovable-dev.pages.dev", "https://egiiqbgumgltatfljbcs.lovable.dev"]
