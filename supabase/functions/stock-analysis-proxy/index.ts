@@ -5,12 +5,17 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Max-Age": "86400",
 };
 
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-    return new Response('ok', { headers: corsHeaders });
+    return new Response(null, { 
+      status: 200,
+      headers: corsHeaders 
+    });
   }
 
   try {
@@ -19,7 +24,13 @@ serve(async (req) => {
     if (!symbol || !exchange) {
       return new Response(
         JSON.stringify({ error: "Symbol and exchange are required" }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        { 
+          status: 400, 
+          headers: { 
+            ...corsHeaders, 
+            "Content-Type": "application/json" 
+          } 
+        }
       );
     }
 
@@ -38,7 +49,7 @@ serve(async (req) => {
       .gt('created_at', new Date(Date.now() - 60 * 60 * 1000).toISOString())
       .order('created_at', { ascending: false })
       .limit(1)
-      .single();
+      .maybeSingle();
 
     if (cachedData) {
       console.log("Serving cached analysis for", symbol);
@@ -48,35 +59,54 @@ serve(async (req) => {
           text: cachedData.analysis_text,
           symbol: symbol
         }),
-        { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        { 
+          headers: { 
+            ...corsHeaders, 
+            "Content-Type": "application/json" 
+          } 
+        }
       );
     }
 
-    // Forward to actual API - Updated to the new endpoint
-    const apiUrl = "https://raichen.app.n8n.cloud/webhook/stock-chart-analysis";
-    const apiResponse = await fetch(apiUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ symbol, exchange }),
-    });
+    // Forward to actual API with timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
 
-    if (!apiResponse.ok) {
-      throw new Error(`API responded with status: ${apiResponse.status}`);
+    try {
+      const apiUrl = "https://raichen.app.n8n.cloud/webhook/stock-chart-analysis";
+      const apiResponse = await fetch(apiUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ symbol, exchange }),
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!apiResponse.ok) {
+        throw new Error(`API responded with status: ${apiResponse.status}`);
+      }
+
+      const data = await apiResponse.json();
+      
+      // Cache the result in Supabase
+      await supabaseAdmin.from('stock_analysis_cache').insert({
+        symbol: symbol,
+        exchange: exchange,
+        chart_url: data.url,
+        analysis_text: data.text,
+      });
+
+      return new Response(JSON.stringify(data), { 
+        headers: { 
+          ...corsHeaders, 
+          "Content-Type": "application/json" 
+        } 
+      });
+    } catch (fetchError) {
+      clearTimeout(timeoutId);
+      throw fetchError;
     }
-
-    const data = await apiResponse.json();
-    
-    // Cache the result in Supabase
-    await supabaseAdmin.from('stock_analysis_cache').insert({
-      symbol: symbol,
-      exchange: exchange,
-      chart_url: data.url,
-      analysis_text: data.text,
-    });
-
-    return new Response(JSON.stringify(data), { 
-      headers: { ...corsHeaders, "Content-Type": "application/json" } 
-    });
   } catch (error) {
     console.error("Error:", error.message);
     
@@ -85,9 +115,15 @@ serve(async (req) => {
       JSON.stringify({
         url: "https://placeholder-chart.com/error",
         text: `# Mock Analysis\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes`,
-        symbol: "error"
+        symbol: symbol || "error"
       }),
-      { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 200 }
+      { 
+        headers: { 
+          ...corsHeaders, 
+          "Content-Type": "application/json" 
+        }, 
+        status: 200 
+      }
     );
   }
 });
