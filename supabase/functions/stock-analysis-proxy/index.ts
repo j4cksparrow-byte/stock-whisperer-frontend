@@ -4,10 +4,9 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, origin",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
   "Access-Control-Max-Age": "86400",
-  "Content-Type": "application/json",
 };
 
 serve(async (req) => {
@@ -20,9 +19,6 @@ serve(async (req) => {
   }
 
   try {
-    console.log('Request method:', req.method);
-    console.log('Request headers:', Object.fromEntries(req.headers.entries()));
-    
     const { symbol, exchange } = await req.json();
     
     if (!symbol || !exchange) {
@@ -30,14 +26,15 @@ serve(async (req) => {
         JSON.stringify({ error: "Symbol and exchange are required" }),
         { 
           status: 400, 
-          headers: corsHeaders
+          headers: { 
+            ...corsHeaders, 
+            "Content-Type": "application/json" 
+          } 
         }
       );
     }
 
-    console.log('Processing request for:', { symbol, exchange });
-
-    // Create Supabase client with proper configuration
+    // Create Supabase client with the project URL and service_role key
     const supabaseAdmin = createClient(
       Deno.env.get("SUPABASE_URL") || "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || ""
@@ -62,13 +59,18 @@ serve(async (req) => {
           text: cachedData.analysis_text,
           symbol: symbol
         }),
-        { headers: corsHeaders }
+        { 
+          headers: { 
+            ...corsHeaders, 
+            "Content-Type": "application/json" 
+          } 
+        }
       );
     }
 
-    // Forward to actual API with enhanced error handling
+    // Forward to actual API with timeout
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 18000); // 18 second timeout
+    const timeoutId = setTimeout(() => controller.abort(), 20000); // 20 second timeout
 
     try {
       const apiUrl = "https://raichen.app.n8n.cloud/webhook/stock-chart-analysis";
@@ -87,14 +89,12 @@ serve(async (req) => {
       clearTimeout(timeoutId);
 
       if (!apiResponse.ok) {
-        console.error(`External API responded with status: ${apiResponse.status}`);
-        const errorText = await apiResponse.text();
-        console.error('External API error details:', errorText);
-        throw new Error(`External API error: ${apiResponse.status}`);
+        console.error(`API responded with status: ${apiResponse.status}`);
+        throw new Error(`API responded with status: ${apiResponse.status}`);
       }
 
       const data = await apiResponse.json();
-      console.log("External API response received successfully for", symbol);
+      console.log("API response received successfully for", symbol);
       
       // Cache the result in Supabase
       try {
@@ -110,26 +110,32 @@ serve(async (req) => {
         // Continue without caching - don't fail the request
       }
 
-      return new Response(JSON.stringify(data), { headers: corsHeaders });
+      return new Response(JSON.stringify(data), { 
+        headers: { 
+          ...corsHeaders, 
+          "Content-Type": "application/json" 
+        } 
+      });
     } catch (fetchError) {
       clearTimeout(timeoutId);
-      console.error("External API fetch error:", fetchError);
+      console.error("API fetch error:", fetchError);
       throw fetchError;
     }
   } catch (error) {
     console.error("Error in stock-analysis-proxy:", error);
     
-    // Return mock data on error with proper CORS headers
-    const mockData = {
-      url: "https://placeholder-chart.com/error",
-      text: `# Mock Analysis\n\n## API Service Temporarily Unavailable\n\nWe're currently experiencing technical difficulties with our analysis service. This could be due to:\n\n- External API connectivity issues\n- SSL certificate problems\n- Service maintenance\n\n### What You Can Do\n\n- Try refreshing the page\n- Check back in a few minutes\n- Contact support if the issue persists\n\nThis is mock data provided for demonstration purposes.`,
-      symbol: symbol || "UNKNOWN"
-    };
-    
+    // Return mock data on error
     return new Response(
-      JSON.stringify(mockData),
+      JSON.stringify({
+        url: "https://placeholder-chart.com/error",
+        text: `# Mock Analysis\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes`,
+        symbol: symbol || "error"
+      }),
       { 
-        headers: corsHeaders,
+        headers: { 
+          ...corsHeaders, 
+          "Content-Type": "application/json" 
+        }, 
         status: 200 
       }
     );

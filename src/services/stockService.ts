@@ -16,7 +16,6 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
   try {
     console.log('Fetching stock analysis for:', { symbol, exchange });
     console.log('Using API URL:', API_BASE_URL);
-    console.log('Environment:', window.location.hostname);
     
     // Further sanitize and format the values to prevent issues
     const sanitizedSymbol = symbol.trim().replace(/[^\w.-]/g, '');
@@ -29,25 +28,19 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     
     console.log('Sending payload:', payload);
     
-    // Configure request with optimal settings for production environments
+    // Configure request with optimal settings for cross-origin requests
     const response = await fetch(API_BASE_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        // Add origin header for CORS
-        'Origin': window.location.origin,
       },
       body: payload,
-      // Reduce timeout for production to fail faster on SSL issues
-      signal: AbortSignal.timeout(15000),
-      // Add mode and credentials for better CORS handling
-      mode: 'cors',
-      credentials: 'omit'
+      // Increase timeout to 25 seconds to give the API more time to respond
+      signal: AbortSignal.timeout(25000)
     });
 
     console.log('Response status:', response.status);
-    console.log('Response headers:', Object.fromEntries(response.headers.entries()));
     
     if (!response.ok) {
       const errorText = await response.text();
@@ -71,16 +64,11 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
   } catch (error) {
     console.error('Error in fetchStockAnalysis:', error);
     
-    // Enhanced error handling for different types of failures
+    // Special handling for network errors that might happen in production
     if (error instanceof TypeError && error.message.includes('Failed to fetch')) {
-      console.error('Network/SSL error occurred. This often happens with certificate issues in production.');
-      if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-        console.error('Production environment detected. SSL certificate may be invalid.');
-      }
+      console.error('Network error occurred. This often happens with CORS issues in production.');
     } else if (error instanceof DOMException && error.name === 'TimeoutError') {
-      console.error('Request timed out after 15 seconds. The API may be experiencing high load.');
-    } else if (error instanceof DOMException && error.name === 'AbortError') {
-      console.error('Request was aborted. This may be due to network connectivity issues.');
+      console.error('Request timed out after 25 seconds. The API may be experiencing high load.');
     }
     
     // Always provide a fallback for any error
@@ -92,7 +80,7 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
 const provideMockAnalysis = (symbol: string): StockAnalysisResponse => {
   return {
     url: "https://placeholder-chart.com/error",
-    text: `# Mock Analysis for ${symbol}\n\n## API Connection Issues\n\nWe're currently experiencing connectivity issues with our analysis service. This could be due to:\n\n- SSL certificate validation errors in production\n- Network connectivity problems\n- Service temporarily unavailable\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes\n\nThis is mock data provided for demonstration purposes.`,
+    text: `# Mock Analysis for ${symbol}\n\n## Due to API Connection Issues\n\nWe're currently experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes`,
     symbol: symbol
   };
 };
