@@ -10,9 +10,13 @@ const cleanAnalysisText = (text: string): string => {
   return text.replace(/<br\s*\/?>/gi, '\n');
 };
 
+// API configuration - Use raichen.app.n8n.cloud as the endpoint
 const API_BASE_URL = import.meta.env.PROD
   ? 'https://egiiqbgumgltatfljbcs.supabase.co/functions/v1/stock-analysis-proxy'
   : '/api/stock-analysis';
+
+// Direct API URL as fallback if the proxy fails
+const DIRECT_API_URL = 'https://raichen.app.n8n.cloud/webhook/stock-chart-analysis';
 
 export const fetchStockAnalysis = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {
   try {
@@ -39,14 +43,13 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
         'Accept': 'application/json',
         // Explicitly specify origin to help with CORS
         'Origin': window.location.origin,
-        // Add a user agent to help identify the request
-        'User-Agent': 'StockAnalysisDashboard/1.0'
+        'User-Agent': 'StockAnalysisClient/1.0'
       },
       body: payload,
       // Don't send credentials in production as it may trigger preflight complexity
       credentials: import.meta.env.PROD ? 'omit' : 'include',
-      // Increase timeout to 30 seconds to give the API more time to respond
-      signal: AbortSignal.timeout(30000)
+      // Increase timeout to 45 seconds to give the API more time to respond
+      signal: AbortSignal.timeout(45000)
     });
 
     console.log('Response status:', response.status);
@@ -54,20 +57,10 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     if (!response.ok) {
       const errorText = await response.text();
       console.error('API Error Response:', errorText);
+      console.warn('Primary API request failed. Attempting direct API call as fallback.');
       
-      // Check for specific error patterns
-      if (errorText.includes('regex') || errorText.includes('invalid character')) {
-        console.warn('Detected regex or special character issue in response. Providing mock data.');
-        return provideMockAnalysis(sanitizedSymbol);
-      }
-      
-      // If we're in development mode and the proxy failed, try direct API call as fallback
-      if (!import.meta.env.PROD && (response.status === 502 || response.status === 504)) {
-        console.log('Proxy failed. Attempting direct API call as fallback...');
-        return await directApiCall(sanitizedSymbol, sanitizedExchange);
-      }
-      
-      throw new Error(errorText || `Failed to fetch analysis (Status: ${response.status})`);
+      // Try direct API call as fallback
+      return await tryDirectApiCall(sanitizedSymbol, sanitizedExchange);
     }
 
     const contentType = response.headers.get('content-type');
@@ -89,7 +82,8 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
         console.error("Failed to extract JSON from response:", parseError);
       }
       
-      throw new Error('Invalid response format from server');
+      // Try direct API call as fallback if parsing failed
+      return await tryDirectApiCall(sanitizedSymbol, sanitizedExchange);
     }
 
     const data = await response.json();
@@ -104,8 +98,21 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     // Special handling for network errors that might happen in production
     if (error instanceof TypeError && error.message.includes('Failed to fetch')) {
       console.error('Network error occurred. This often happens with CORS issues in production.');
+      
+      // Try direct API call as fallback
+      try {
+        return await tryDirectApiCall(symbol, exchange);
+      } catch (directError) {
+        console.error('Direct API call also failed:', directError);
+      }
     } else if (error instanceof DOMException && error.name === 'TimeoutError') {
-      console.error('Request timed out after 30 seconds. Consider using a more responsive API endpoint.');
+      console.error('Request timed out. Trying direct API call as fallback.');
+      
+      try {
+        return await tryDirectApiCall(symbol, exchange);
+      } catch (directError) {
+        console.error('Direct API call also failed:', directError);
+      }
     }
     
     // Always provide a fallback for any error
@@ -113,38 +120,39 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
   }
 };
 
-// Direct API call as a fallback when proxy fails (for development only)
-const directApiCall = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {
+// Try a direct API call as a fallback mechanism
+const tryDirectApiCall = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {
+  console.log('Attempting direct API call to:', DIRECT_API_URL);
+  
   try {
-    console.log('Making direct API call to:', 'https://raichen.app.n8n.cloud/webhook/stock-chart-analysis');
-    
-    const response = await fetch('https://raichen.app.n8n.cloud/webhook/stock-chart-analysis', {
+    const directResponse = await fetch(DIRECT_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'Origin': window.location.origin,
-        'User-Agent': 'StockAnalysisDashboard/1.0 (Direct API Call)'
+        'User-Agent': 'StockAnalysisClient/1.0'
       },
       body: JSON.stringify({ symbol, exchange }),
-      // Don't include credentials for cross-origin requests to avoid CORS issues
-      credentials: 'omit',
-      // Increase timeout for direct API call
-      signal: AbortSignal.timeout(45000)
+      // Increase timeout but not too much
+      signal: AbortSignal.timeout(30000)
     });
     
-    if (!response.ok) {
-      throw new Error(`Direct API call failed with status: ${response.status}`);
+    console.log('Direct API response status:', directResponse.status);
+    
+    if (!directResponse.ok) {
+      throw new Error(`Direct API call failed with status ${directResponse.status}`);
     }
     
-    const data = await response.json();
+    const directData = await directResponse.json();
+    console.log('Direct API response data:', directData);
+    
     return {
-      ...data,
-      text: cleanAnalysisText(data.text)
+      ...directData,
+      text: cleanAnalysisText(directData.text)
     };
   } catch (error) {
     console.error('Error in direct API call:', error);
-    return provideMockAnalysis(symbol);
+    throw error; // Let the calling function handle this error
   }
 };
 
