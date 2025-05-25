@@ -10,7 +10,9 @@ const corsHeaders = {
 };
 
 serve(async (req) => {
-  // Handle CORS preflight requests immediately
+  console.log(`Received ${req.method} request from origin: ${req.headers.get('origin')}`);
+  
+  // Handle CORS preflight requests FIRST and IMMEDIATELY
   if (req.method === 'OPTIONS') {
     console.log("Handling CORS preflight request");
     return new Response(null, { 
@@ -20,32 +22,40 @@ serve(async (req) => {
   }
 
   try {
-    console.log(`Processing ${req.method} request from origin: ${req.headers.get('origin')}`);
+    console.log(`Processing ${req.method} request`);
     
-    // Parse request body
-    let symbol, exchange;
+    // Parse request body with better error handling
+    let requestBody;
     try {
-      const body = await req.json();
-      symbol = body.symbol;
-      exchange = body.exchange;
+      const bodyText = await req.text();
+      console.log("Raw request body:", bodyText);
+      requestBody = JSON.parse(bodyText);
     } catch (parseError) {
       console.error("Failed to parse request body:", parseError);
       return new Response(
         JSON.stringify({ error: "Invalid JSON in request body" }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        { 
+          status: 400, 
+          headers: { ...corsHeaders, "Content-Type": "application/json" } 
+        }
       );
     }
     
+    const { symbol, exchange } = requestBody;
     console.log(`Processing request for symbol: ${symbol}, exchange: ${exchange}`);
     
     if (!symbol || !exchange) {
+      console.error("Missing required parameters");
       return new Response(
         JSON.stringify({ error: "Symbol and exchange are required" }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        { 
+          status: 400, 
+          headers: { ...corsHeaders, "Content-Type": "application/json" } 
+        }
       );
     }
 
-    // Create Supabase client with the project URL and service_role key
+    // Create Supabase client
     const supabaseUrl = Deno.env.get("SUPABASE_URL");
     const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
     
@@ -56,7 +66,8 @@ serve(async (req) => {
 
     const supabaseAdmin = createClient(supabaseUrl, supabaseKey);
 
-    // Check if we have a cached result (less than 1 hour old)
+    // Check for cached result
+    console.log("Checking cache for", symbol);
     const { data: cachedData, error: cacheError } = await supabaseAdmin
       .from('stock_analysis_cache')
       .select('*')
@@ -79,16 +90,19 @@ serve(async (req) => {
           text: cachedData.analysis_text,
           symbol: symbol
         }),
-        { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        { 
+          status: 200,
+          headers: { ...corsHeaders, "Content-Type": "application/json" } 
+        }
       );
     }
 
-    // Make the API call with improved error handling
+    // Make API call to the external service
     const apiUrl = "https://raichen.app.n8n.cloud/webhook/stock-chart-analysis";
     console.log(`Making API call to: ${apiUrl} for ${symbol}:${exchange}`);
     
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 25000); // 25 second timeout
+    const timeoutId = setTimeout(() => controller.abort(), 20000); // 20 second timeout
     
     let apiResponse;
     try {
@@ -102,30 +116,33 @@ serve(async (req) => {
         body: JSON.stringify({ symbol, exchange }),
         signal: controller.signal,
       });
+      clearTimeout(timeoutId);
     } catch (fetchError) {
       clearTimeout(timeoutId);
-      console.error("Fetch error:", fetchError);
+      console.error("API fetch error:", fetchError);
       return provideMockResponse(symbol, `Network error: ${fetchError.message}`);
     }
 
-    clearTimeout(timeoutId);
-
     if (!apiResponse.ok) {
       console.error(`API responded with status: ${apiResponse.status}`);
-      return provideMockResponse(symbol, `API error: ${apiResponse.status}`);
+      const errorText = await apiResponse.text();
+      console.error("API error response:", errorText);
+      return provideMockResponse(symbol, `API error: ${apiResponse.status} - ${errorText}`);
     }
 
     const data = await apiResponse.json();
     console.log(`Successfully received data for ${symbol}`);
     
-    // Cache the result in Supabase
+    // Cache the successful result
     try {
-      const { error: insertError } = await supabaseAdmin.from('stock_analysis_cache').insert({
-        symbol: symbol,
-        exchange: exchange,
-        chart_url: data.url,
-        analysis_text: data.text,
-      });
+      const { error: insertError } = await supabaseAdmin
+        .from('stock_analysis_cache')
+        .insert({
+          symbol: symbol,
+          exchange: exchange,
+          chart_url: data.url,
+          analysis_text: data.text,
+        });
       
       if (insertError) {
         console.warn("Failed to cache result:", insertError);
@@ -134,19 +151,25 @@ serve(async (req) => {
       }
     } catch (cacheError) {
       console.warn("Cache insert failed:", cacheError);
-      // Continue even if caching fails
     }
 
-    return new Response(JSON.stringify(data), { 
-      headers: { ...corsHeaders, "Content-Type": "application/json" } 
-    });
+    return new Response(
+      JSON.stringify(data), 
+      { 
+        status: 200,
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+      }
+    );
+
   } catch (error) {
-    console.error("Error in edge function:", error);
+    console.error("Unexpected error in edge function:", error);
     return provideMockResponse("unknown", `Unexpected error: ${error.message}`);
   }
 });
 
 function provideMockResponse(symbol: string, errorDetails: string) {
+  console.log(`Providing mock response for ${symbol} due to: ${errorDetails}`);
+  
   const mockResponse = {
     url: "https://placeholder-chart.com/error",
     text: `# Mock Analysis for ${symbol}\n\n## API Connection Issue\n\nError: ${errorDetails}\n\nWe're experiencing difficulties connecting to our analysis service. Please try again later.\n\n### What You Can Do\n\n- Try refreshing the page\n- Check your internet connection\n- Try again in a few minutes\n\n### Technical Details\n\nThe issue appears to be with our external API connectivity. Our team is working to resolve this.`,
@@ -156,8 +179,8 @@ function provideMockResponse(symbol: string, errorDetails: string) {
   return new Response(
     JSON.stringify(mockResponse),
     { 
-      headers: { ...corsHeaders, "Content-Type": "application/json" }, 
-      status: 200 
+      status: 200,
+      headers: { ...corsHeaders, "Content-Type": "application/json" } 
     }
   );
 }
