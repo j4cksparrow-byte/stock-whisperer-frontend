@@ -57,14 +57,16 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     console.log("API Response:", data);
     
     // Check if response has url property and it's not an error URL
-    if (!data.url || data.url.includes("placeholder-chart.com/error")) {
+    // Fix: Check if url exists before calling includes()
+    if (!data.url || (data.url && data.url.includes("placeholder-chart.com/error"))) {
       console.warn('Received error response from API, trying direct API call');
       return await tryDirectApiCall(sanitizedSymbol, sanitizedExchange);
     }
     
     return {
-      ...data,
-      text: cleanAnalysisText(data.text)
+      url: data.url || "https://placeholder-chart.com/default",
+      text: cleanAnalysisText(data.text || ""),
+      symbol: data.symbol || sanitizedSymbol
     };
   } catch (error) {
     console.error('Error in fetchStockAnalysis:', error);
@@ -121,9 +123,11 @@ const tryDirectApiCall = async (symbol: string, exchange: string): Promise<Stock
     const directData = await directResponse.json();
     console.log('Direct API response data:', directData);
     
+    // Handle response that may not have url property
     return {
-      ...directData,
-      text: cleanAnalysisText(directData.text)
+      url: directData.url || "https://placeholder-chart.com/analysis",
+      text: cleanAnalysisText(directData.text || ""),
+      symbol: directData.symbol || symbol
     };
   } catch (error) {
     console.error('Error in direct API call:', error);
