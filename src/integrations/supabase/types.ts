@@ -42,7 +42,6 @@ export type Database = {
       stock_analysis_cache: {
         Row: {
           analysis_text: string
-          chart_url: string
           created_at: string
           exchange: string
           id: string
@@ -50,7 +49,6 @@ export type Database = {
         }
         Insert: {
           analysis_text: string
-          chart_url: string
           created_at?: string
           exchange: string
           id?: string
@@ -58,7 +56,6 @@ export type Database = {
         }
         Update: {
           analysis_text?: string
-          chart_url?: string
           created_at?: string
           exchange?: string
           id?: string

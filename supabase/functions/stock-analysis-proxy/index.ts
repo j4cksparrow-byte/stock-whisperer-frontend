@@ -50,7 +50,7 @@ serve(async (req) => {
       console.log("Serving cached analysis for", symbol);
       return new Response(
         JSON.stringify({
-          url: cachedData.chart_url,
+          url: "https://placeholder-chart.com/cached",
           text: cachedData.analysis_text,
           symbol: symbol
         }),
@@ -82,11 +82,10 @@ serve(async (req) => {
     const data = await apiResponse.json();
     console.log("Received valid response from API");
     
-    // Cache the result in Supabase
+    // Cache the result in Supabase (only store analysis_text now)
     const { error: insertError } = await supabaseAdmin.from('stock_analysis_cache').insert({
       symbol: symbol,
       exchange: exchange,
-      chart_url: data.url,
       analysis_text: data.text,
     });
 
