@@ -1,4 +1,3 @@
-
 export type StockAnalysisResponse = {
   url: string;
   text: string;
@@ -15,8 +14,8 @@ const API_BASE_URL = import.meta.env.PROD
   ? 'https://egiiqbgumgltatfljbcs.supabase.co/functions/v1/stock-analysis-proxy'
   : '/api/stock-analysis';
 
-// Direct API URL as fallback
-const DIRECT_API_URL = 'https://raichen.app.n8n.cloud/webhook/stock-chart-analysis';
+// Direct API URL as fallback - updated with new endpoint
+const DIRECT_API_URL = 'https://kingaakash.app.n8n.cloud/webhook/stock-chart-analysis';
 
 export const fetchStockAnalysis = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {
   try {

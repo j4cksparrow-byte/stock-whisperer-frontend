@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     proxy: {
       '/api/stock-analysis': {
-        target: 'https://raichen.app.n8n.cloud',
+        target: 'https://kingaakash.app.n8n.cloud',
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api\/stock-analysis/, '/webhook/stock-chart-analysis'),
