@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { fetchStockAnalysis } from "@/services/stockService";
-import { Loader, AlertTriangle } from "lucide-react";
+import { Loader, AlertTriangle, RefreshCw } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import ReactMarkdown from 'react-markdown';
 import CompanySearch from "./CompanySearch";
@@ -22,6 +22,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [isMockData, setIsMockData] = useState<boolean>(false);
   const [loadingMessage, setLoadingMessage] = useState<string>("");
+  const [retryCount, setRetryCount] = useState<number>(0);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -36,78 +37,91 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
       return;
     }
 
+    await performAnalysis();
+  };
+
+  const performAnalysis = async () => {
+    if (!selectedCompany) return;
+
     // Reset states
     setIsLoading(true);
     setAnalysisText("");
     setErrorMessage("");
     setIsMockData(false);
-    setLoadingMessage("Analyzing stock data...");
+    setLoadingMessage("Connecting to analysis service...");
 
-    // Set up a timeout to update the loading message after 10 seconds
-    const loadingMessageTimeout = setTimeout(() => {
-      setLoadingMessage("This is taking longer than expected. Please wait...");
-    }, 10000);
+    // Set up progressive loading messages
+    const loadingMessages = [
+      "Connecting to analysis service...",
+      "Fetching market data...",
+      "Processing technical indicators...",
+      "This is taking longer than expected...",
+      "Still working on your analysis...",
+    ];
+
+    let messageIndex = 0;
+    const messageInterval = setInterval(() => {
+      if (messageIndex < loadingMessages.length - 1) {
+        messageIndex++;
+        setLoadingMessage(loadingMessages[messageIndex]);
+      }
+    }, 10000); // Update every 10 seconds
 
     try {
       console.log("Fetching stock analysis for:", selectedCompany);
       
-      // Sanitize symbol to remove any potential problematic characters
-      // Allow only letters, numbers, dots, and hyphens
       const sanitizedSymbol = selectedCompany.symbol.replace(/[^\w.-]/g, '');
       console.log("Using sanitized symbol:", sanitizedSymbol);
-      
-      // Add environment info to help debug issues
-      console.log("Environment:", import.meta.env.PROD ? "Production" : "Development");
       
       const data = await fetchStockAnalysis(sanitizedSymbol, selectedCompany.exchange);
       console.log("Response received:", data);
       
       if (data.url.includes("placeholder-chart.com/error")) {
-        // This is our error fallback
-        setErrorMessage("");  // Clear any previous error
-        setAnalysisText(data.text);  // Show the mock analysis as markdown
+        setErrorMessage("");
+        setAnalysisText(data.text);
         setIsMockData(true);
         
         toast({
-          title: "API Connectivity Issue",
-          description: "Using mock analysis due to connection issues. Please try again later.",
+          title: "Service Temporarily Unavailable",
+          description: "Showing fallback information. You can try again or check the live chart.",
           variant: "destructive",
         });
-        
-        // Notify parent component of the new symbol even with mock data
-        if (onAnalysisComplete) {
-          onAnalysisComplete(sanitizedSymbol);
-        }
       } else {
         setAnalysisText(data.text);
         setIsMockData(false);
-        
-        // Notify parent component of the new symbol
-        if (onAnalysisComplete) {
-          onAnalysisComplete(sanitizedSymbol);
-        }
+        setRetryCount(0); // Reset retry count on success
         
         toast({
-          title: "Success",
+          title: "Analysis Complete",
           description: `Analysis for ${selectedCompany.exchange}:${sanitizedSymbol} loaded successfully`,
         });
       }
+      
+      if (onAnalysisComplete) {
+        onAnalysisComplete(sanitizedSymbol);
+      }
+      
     } catch (error) {
       const errorMsg = error instanceof Error ? error.message : 'Failed to fetch analysis';
       setErrorMessage(errorMsg);
       setIsMockData(true);
       
       toast({
-        title: "Error",
-        description: errorMsg,
+        title: "Analysis Failed",
+        description: "The service is currently unavailable. You can try again or view the live chart.",
         variant: "destructive",
       });
       
       console.error("Error fetching stock analysis:", error);
     } finally {
       setIsLoading(false);
-      clearTimeout(loadingMessageTimeout);
+      clearInterval(messageInterval);
     }
+  };
+
+  const handleRetry = () => {
+    setRetryCount(prev => prev + 1);
+    performAnalysis();
   };
 
   return (
@@ -133,27 +147,45 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
               />
             </div>
 
-            <Button 
-              type="submit" 
-              disabled={isLoading || !selectedCompany}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white transition-all"
-            >
-              {isLoading ? (
-                <>
-                  <Loader className="mr-2 h-4 w-4 animate-spin" /> 
-                  Analyzing...
-                </>
-              ) : (
-                "Analyze"
+            <div className="flex gap-2">
+              <Button 
+                type="submit" 
+                disabled={isLoading || !selectedCompany}
+                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white transition-all"
+              >
+                {isLoading ? (
+                  <>
+                    <Loader className="mr-2 h-4 w-4 animate-spin" /> 
+                    Analyzing...
+                  </>
+                ) : (
+                  "Analyze"
+                )}
+              </Button>
+              
+              {(isMockData || errorMessage) && selectedCompany && (
+                <Button 
+                  type="button"
+                  onClick={handleRetry}
+                  disabled={isLoading}
+                  variant="outline"
+                  className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                >
+                  <RefreshCw className="h-4 w-4 mr-2" />
+                  Retry
+                </Button>
               )}
-            </Button>
+            </div>
           </form>
 
           {/* Loading state */}
           {isLoading && (
             <div className="mt-6 flex flex-col items-center justify-center py-8">
               <Loader className="w-12 h-12 text-blue-400 animate-spin mb-4" />
-              <p className="text-gray-400">{loadingMessage}</p>
+              <p className="text-gray-400 text-center">{loadingMessage}</p>
+              {retryCount > 0 && (
+                <p className="text-gray-500 text-sm mt-2">Retry attempt: {retryCount}</p>
+              )}
             </div>
           )}
 
@@ -168,9 +200,9 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
           {!isLoading && isMockData && (
             <Alert className="mt-6 bg-amber-900/30 border-amber-500">
               <AlertTriangle className="h-4 w-4 text-amber-500" />
-              <AlertTitle>Mock Data</AlertTitle>
+              <AlertTitle>Service Notice</AlertTitle>
               <AlertDescription>
-                We're showing mock data due to API connectivity issues. The actual stock analysis is currently unavailable.
+                Our analysis service is temporarily unavailable. The information below is a fallback message. The live chart above shows real market data.
               </AlertDescription>
             </Alert>
           )}

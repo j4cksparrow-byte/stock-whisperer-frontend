@@ -51,7 +51,7 @@ const CompanySearch = ({ onSelect, placeholder = "Search for a company..." }: Co
     const filteredCompanies = ALL_COMPANIES.filter(company => 
       company.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       company.symbol.toLowerCase().includes(searchTerm.toLowerCase())
-    ).slice(0, 5); // Reduced from 10 to 5 suggestions
+    ).slice(0, 5);
 
     setSuggestions(filteredCompanies);
   }, [searchTerm]);
@@ -87,10 +87,10 @@ const CompanySearch = ({ onSelect, placeholder = "Search for a company..." }: Co
             className="absolute left-0 right-0 mt-1 bg-white rounded-md shadow-lg border border-gray-200" 
             style={{ zIndex: 10001 }}
           >
-            <ScrollArea className="h-[250px]"> {/* Changed from 200px to 250px */}
-              {suggestions.map((company) => (
+            <ScrollArea className="h-[250px]">
+              {suggestions.map((company, index) => (
                 <div
-                  key={`${company.exchange}:${company.symbol}`}
+                  key={`${company.exchange}-${company.symbol}-${index}`}
                   className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
                   onClick={() => handleSelect(company)}
                 >
