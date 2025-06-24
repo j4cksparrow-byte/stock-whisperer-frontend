@@ -1,3 +1,4 @@
+
 export type StockAnalysisResponse = {
   url: string;
   text: string;
@@ -33,7 +34,7 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
     
     console.log('Sending payload:', payload);
     
-    // Try primary API with increased timeout to 40 seconds
+    // Try primary API with increased timeout to 60 seconds
     const response = await fetch(API_BASE_URL, {
       method: 'POST',
       headers: {
@@ -41,7 +42,7 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
         'Accept': 'application/json',
       },
       body: payload,
-      signal: AbortSignal.timeout(40000)
+      signal: AbortSignal.timeout(60000)
     });
 
     console.log('Response status:', response.status);
@@ -97,7 +98,7 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
   }
 };
 
-// Try a direct API call as a fallback mechanism with increased timeout
+// Try a direct API call as a fallback mechanism with increased timeout to 60 seconds
 const tryDirectApiCall = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {
   console.log('Attempting direct API call to:', DIRECT_API_URL);
   
@@ -110,7 +111,7 @@ const tryDirectApiCall = async (symbol: string, exchange: string): Promise<Stock
         'User-Agent': 'StockAnalysisClient/1.0'
       },
       body: JSON.stringify({ symbol, exchange }),
-      signal: AbortSignal.timeout(45000)
+      signal: AbortSignal.timeout(60000)
     });
     
     console.log('Direct API response status:', directResponse.status);
