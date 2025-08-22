@@ -20,7 +20,24 @@ export const scoreSentiment = (data: any): PillarScore => {
     const recentArticles: any[] = [];
 
     articles.forEach((article: any) => {
-      const publishedAt = new Date(article.time_published);
+      // Parse AlphaVantage time format: 20250822T151053
+      const timeString = article.time_published;
+      let publishedAt: Date;
+      
+      try {
+        // Format: YYYYMMDDTHHMMSS
+        const year = parseInt(timeString.substring(0, 4));
+        const month = parseInt(timeString.substring(4, 6)) - 1; // Month is 0-indexed
+        const day = parseInt(timeString.substring(6, 8));
+        const hour = parseInt(timeString.substring(9, 11)) || 0;
+        const minute = parseInt(timeString.substring(11, 13)) || 0;
+        const second = parseInt(timeString.substring(13, 15)) || 0;
+        
+        publishedAt = new Date(year, month, day, hour, minute, second);
+      } catch (error) {
+        console.warn('Failed to parse article date:', timeString);
+        publishedAt = new Date(0); // Very old date, will be filtered out
+      }
       
       // Only consider articles from last 7 days
       if (publishedAt >= sevenDaysAgo) {
