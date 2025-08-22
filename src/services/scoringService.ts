@@ -28,13 +28,13 @@ export const calculateStockScore = async (ticker: string): Promise<AggregateResu
 
     // Calculate each pillar score
     console.log('Calculating fundamentals score...');
-    const fundamentals = overviewData ? scoreFundamentals(overviewData) : null;
+    const fundamentals = overviewData ? scoreFundamentals({ overview: overviewData }) : null;
     
     console.log('Calculating technicals score...');
-    const technicals = dailyData ? scoreTechnicals(dailyData) : null;
+    const technicals = dailyData ? scoreTechnicals({ dailySeries: dailyData }) : null;
     
     console.log('Calculating sentiment score...');
-    const sentiment = newsData ? scoreSentiment({ newsSentiment: newsData, ticker }) : null;
+    const sentiment = newsData ? scoreSentiment({ newsSentiment: newsData }) : null;
 
     // Aggregate the scores
     console.log('Aggregating final score...');
