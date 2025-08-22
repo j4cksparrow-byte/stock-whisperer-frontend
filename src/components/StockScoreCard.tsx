@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Badge } from './ui/badge';
 import { Alert, AlertDescription } from './ui/alert';
+import { Card } from './ui/card';
 import { Loader2, TrendingUp, TrendingDown, Minus, Activity, MessageSquare } from 'lucide-react';
 import { stockScoringService } from '../services/scoringService';
 import { AggregateResult } from '../types/stockTypes';
 import { getScoreColor } from '../services/stockAggregator';
 import { Company } from '../data/companies';
+import { CircularScore } from './CircularScore';
 
 interface StockScoreCardProps {
   company: Company | null;
@@ -109,206 +111,240 @@ export const StockScoreCard = ({ company, triggerAnalysis }: StockScoreCardProps
 
       {/* Results Display */}
       {result && (
-        <div className="grid gap-6">
-          {/* Overall Score Card */}
-          <div className="glass-card rounded-lg p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-2xl font-bold text-white">
-                {result.ticker} - Overall Score
-              </h3>
-              <div 
-                className="px-4 py-2 rounded-full text-white font-bold text-sm"
-                style={getRecommendationStyle(result.label)}
-              >
-                {result.label}
-              </div>
-            </div>
-            
-            <div className="text-center space-y-4">
-              {/* Main Score Display */}
-              <div>
-                <div 
-                  className="text-6xl font-bold"
-                  style={{ color: result.aggregateScore ? getScoreColor(result.aggregateScore) : '#6b7280' }}
-                >
-                  {formatScore(result.aggregateScore)}
+        <div className="space-y-6">
+          {/* Main Score Section */}
+          <Card className="p-8">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Left: Company Info and Circular Score */}
+              <div className="text-center md:text-left space-y-4">
+                <div>
+                  <h2 className="text-3xl font-bold tracking-tight">{result.ticker}</h2>
+                  <p className="text-muted-foreground">Stock Analysis Score</p>
                 </div>
-                <div className="text-gray-400 text-lg">out of 100</div>
-              </div>
-              
-              {/* Score Bar */}
-              {result.aggregateScore && (
-                <div className="w-full bg-gray-700 rounded-full h-3">
-                  <div 
-                    className="h-3 rounded-full transition-all duration-500"
-                    style={{ 
-                      width: `${result.aggregateScore}%`,
-                      backgroundColor: getScoreColor(result.aggregateScore)
-                    }}
+                
+                <div className="flex justify-center md:justify-start">
+                  <CircularScore 
+                    score={result.aggregateScore} 
+                    label={`Verdict: ${result.label}`}
+                    size={140}
                   />
                 </div>
-              )}
 
-              {/* Flags */}
-              {result.flags.length > 0 && (
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {result.flags.map((flag) => (
-                    <span 
-                      key={flag} 
-                      className="px-3 py-1 bg-yellow-900/30 border border-yellow-500/50 rounded-full text-yellow-300 text-xs"
-                    >
-                      ⚠️ {flag}
-                    </span>
-                  ))}
+                {/* Weights Display */}
+                {result.weights && (
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-medium text-muted-foreground">Weights</h4>
+                    <div className="grid grid-cols-3 gap-4 text-sm">
+                      <div>
+                        <div className="font-medium">Technical</div>
+                        <div className="text-muted-foreground">{result.weights.technical}%</div>
+                      </div>
+                      <div>
+                        <div className="font-medium">Fundamental</div>
+                        <div className="text-muted-foreground">{result.weights.fundamental}%</div>
+                      </div>
+                      <div>
+                        <div className="font-medium">Sentiment</div>
+                        <div className="text-muted-foreground">{result.weights.sentiment}%</div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Right: Individual Scores */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="text-center p-4 rounded-lg bg-muted/20">
+                  <div className="text-sm text-muted-foreground mb-1">TECHNICAL</div>
+                  <div className="text-2xl font-bold text-primary">
+                    {formatScore(result.scores.technicals?.score)}
+                  </div>
                 </div>
-              )}
-              
-              <div className="text-xs text-gray-500">
-                Analysis completed on {new Date(result.asOf).toLocaleString()}
+                <div className="text-center p-4 rounded-lg bg-muted/20">
+                  <div className="text-sm text-muted-foreground mb-1">FUNDAMENTAL</div>
+                  <div className="text-2xl font-bold text-primary">
+                    {formatScore(result.scores.fundamentals?.score)}
+                  </div>
+                </div>
+                <div className="text-center p-4 rounded-lg bg-muted/20">
+                  <div className="text-sm text-muted-foreground mb-1">SENTIMENT</div>
+                  <div className="text-2xl font-bold text-primary">
+                    {formatScore(result.scores.sentiment?.score)}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Pillar Scores */}
+            {/* Flags */}
+            {result.flags.length > 0 && (
+              <div className="mt-6 flex flex-wrap gap-2">
+                {result.flags.map((flag) => (
+                  <Badge key={flag} variant="outline" className="text-yellow-600 border-yellow-600">
+                    ⚠️ {flag}
+                  </Badge>
+                ))}
+              </div>
+            )}
+
+            {/* Reasons */}
+            {result.reasons && result.reasons.length > 0 && (
+              <div className="mt-6">
+                <h4 className="text-sm font-medium text-muted-foreground mb-3">Key Insights</h4>
+                <div className="grid md:grid-cols-2 gap-2">
+                  {result.reasons.slice(0, 6).map((reason, idx) => (
+                    <div key={idx} className="text-sm flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>{reason}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </Card>
+
+          {/* Detailed Breakdown */}
           <div className="grid md:grid-cols-3 gap-6">
             {/* Fundamentals */}
-            <div className="glass-card rounded-lg p-6">
+            <Card className="p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-blue-500/20 rounded-lg">
-                  <Activity className="h-6 w-6 text-blue-400" />
+                <div className="p-2 bg-primary/10 rounded-lg">
+                  <Activity className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white">Fundamentals</h4>
-                  <p className="text-sm text-gray-400">Weight: 50%</p>
+                  <h4 className="font-semibold">Fundamentals</h4>
+                  <p className="text-sm text-muted-foreground">
+                    {result.weights?.fundamental}% Weight
+                  </p>
                 </div>
               </div>
               
               <div className="space-y-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400">
-                    {formatScore(result.scores.fundamentals?.score || null)}
+                  <div className="text-2xl font-bold text-primary">
+                    {formatScore(result.scores.fundamentals?.score)}
                   </div>
                 </div>
                 
                 {result.scores.fundamentals?.subscores && (
-                  <div className="space-y-2 text-sm">
+                  <div className="space-y-2">
                     {Object.entries(result.scores.fundamentals.subscores).map(([key, value]) => (
-                      <div key={key} className="flex justify-between text-gray-300">
-                        <span className="capitalize">
+                      <div key={key} className="flex justify-between text-sm">
+                        <span className="text-muted-foreground">
                           {key.replace(/([A-Z])/g, ' $1').trim()}
                         </span>
-                        <span className="font-mono">{formatScore(value as number)}</span>
+                        <span className="font-medium">{formatScore(value as number)}</span>
                       </div>
                     ))}
                   </div>
                 )}
                 
                 {result.scores.fundamentals?.notes && result.scores.fundamentals.notes.length > 0 && (
-                  <div className="text-xs text-gray-400 space-y-1 mt-3">
-                    {result.scores.fundamentals.notes.slice(0, 3).map((note, idx) => (
+                  <div className="text-xs text-muted-foreground space-y-1 mt-3">
+                    {result.scores.fundamentals.notes.slice(0, 2).map((note, idx) => (
                       <div key={idx}>• {note}</div>
                     ))}
                   </div>
                 )}
               </div>
-            </div>
+            </Card>
 
             {/* Technicals */}
-            <div className="glass-card rounded-lg p-6">
+            <Card className="p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-green-500/20 rounded-lg">
-                  <TrendingUp className="h-6 w-6 text-green-400" />
+                <div className="p-2 bg-green-500/10 rounded-lg">
+                  <TrendingUp className="h-5 w-5 text-green-600" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white">Technicals</h4>
-                  <p className="text-sm text-gray-400">Weight: 30%</p>
+                  <h4 className="font-semibold">Technicals</h4>
+                  <p className="text-sm text-muted-foreground">
+                    {result.weights?.technical}% Weight
+                  </p>
                 </div>
               </div>
               
               <div className="space-y-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400">
-                    {formatScore(result.scores.technicals?.score || null)}
+                  <div className="text-2xl font-bold text-green-600">
+                    {formatScore(result.scores.technicals?.score)}
                   </div>
                 </div>
                 
                 {result.scores.technicals?.subscores && (
-                  <div className="space-y-2 text-sm">
+                  <div className="space-y-2">
                     {Object.entries(result.scores.technicals.subscores).map(([key, value]) => (
-                      <div key={key} className="flex justify-between text-gray-300">
-                        <span className="capitalize">{key}</span>
-                        <span className="font-mono">{formatScore(value as number)}</span>
+                      <div key={key} className="flex justify-between text-sm">
+                        <span className="text-muted-foreground capitalize">{key}</span>
+                        <span className="font-medium">{formatScore(value as number)}</span>
                       </div>
                     ))}
                   </div>
                 )}
                 
                 {result.scores.technicals?.notes && result.scores.technicals.notes.length > 0 && (
-                  <div className="text-xs text-gray-400 space-y-1 mt-3">
-                    {result.scores.technicals.notes.slice(0, 3).map((note, idx) => (
+                  <div className="text-xs text-muted-foreground space-y-1 mt-3">
+                    {result.scores.technicals.notes.slice(0, 2).map((note, idx) => (
                       <div key={idx}>• {note}</div>
                     ))}
                   </div>
                 )}
               </div>
-            </div>
+            </Card>
 
             {/* Sentiment */}
-            <div className="glass-card rounded-lg p-6">
+            <Card className="p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-purple-500/20 rounded-lg">
-                  <MessageSquare className="h-6 w-6 text-purple-400" />
+                <div className="p-2 bg-purple-500/10 rounded-lg">
+                  <MessageSquare className="h-5 w-5 text-purple-600" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white">Sentiment</h4>
-                  <p className="text-sm text-gray-400">Weight: 20%</p>
+                  <h4 className="font-semibold">Sentiment</h4>
+                  <p className="text-sm text-muted-foreground">
+                    {result.weights?.sentiment}% Weight
+                  </p>
                 </div>
               </div>
               
               <div className="space-y-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400">
-                    {formatScore(result.scores.sentiment?.score || null)}
+                  <div className="text-2xl font-bold text-purple-600">
+                    {formatScore(result.scores.sentiment?.score)}
                   </div>
                 </div>
                 
                 {result.scores.sentiment?.subscores && (
-                  <div className="space-y-2 text-sm">
+                  <div className="space-y-2">
                     {Object.entries(result.scores.sentiment.subscores).map(([key, value]) => (
-                      <div key={key} className="flex justify-between text-gray-300">
-                        <span className="capitalize">
+                      <div key={key} className="flex justify-between text-sm">
+                        <span className="text-muted-foreground">
                           {key.replace(/([A-Z])/g, ' $1').trim()}
                         </span>
-                        <span className="font-mono">{formatScore(value as number)}</span>
+                        <span className="font-medium">{formatScore(value as number)}</span>
                       </div>
                     ))}
                   </div>
                 )}
                 
                 {result.scores.sentiment?.notes && result.scores.sentiment.notes.length > 0 && (
-                  <div className="text-xs text-gray-400 space-y-1 mt-3">
-                    {result.scores.sentiment.notes.slice(0, 3).map((note, idx) => (
+                  <div className="text-xs text-muted-foreground space-y-1 mt-3">
+                    {result.scores.sentiment.notes.slice(0, 2).map((note, idx) => (
                       <div key={idx}>• {note}</div>
                     ))}
                   </div>
                 )}
               </div>
-            </div>
+            </Card>
           </div>
 
           {/* Data Sources Info */}
-          <div className="glass-card rounded-lg p-4">
-            <div className="text-center text-xs text-gray-500">
+          <Card className="p-4">
+            <div className="text-center text-xs text-muted-foreground">
               <div className="mb-1">
-                📡 Data provided by {result.dataSources.provider} • 
-                {result.dataSources.requests.length} API calls made
-              </div>
-              <div>
-                🔗 Endpoints: {result.dataSources.requests.slice(0, 5).join(', ')}
-                {result.dataSources.requests.length > 5 && ` +${result.dataSources.requests.length - 5} more`}
+                📡 Data: {result.dataSources.provider} • 
+                {result.dataSources.requests.length} API calls • 
+                Updated: {new Date(result.asOf).toLocaleString()}
               </div>
             </div>
-          </div>
+          </Card>
         </div>
       )}
     </div>

@@ -79,11 +79,11 @@ export const aggregateScores = (
   
   if (aggregateScore !== null) {
     if (aggregateScore >= 70) {
-      label = "Strong Buy";  // Changed from "BUY" to match the spec
+      label = "Buy";         // BUY if Aggregate ≥ 70
     } else if (aggregateScore >= 40) {
-      label = "Hold";        // 40 ≤ Aggregate < 70
+      label = "Hold";        // HOLD if 40 ≤ Aggregate < 70
     } else {
-      label = "Sell";        // Aggregate < 40
+      label = "Sell";        // SELL if Aggregate < 40
     }
   }
 
@@ -168,7 +168,7 @@ export const aggregateScores = (
 };
 
 export const getScoreLabel = (score: number): AggregateResult['label'] => {
-  if (score >= 70) return "Strong Buy";
+  if (score >= 70) return "Buy";
   if (score >= 40) return "Hold";
   return "Sell";
 };
