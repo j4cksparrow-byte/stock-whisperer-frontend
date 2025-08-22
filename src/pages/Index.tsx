@@ -3,6 +3,7 @@ import StockAnalysis from "@/components/StockAnalysis";
 import TradingViewChart from "@/components/TradingViewChart";
 import GraphLogo from "@/components/GraphLogo";
 import NewsFeed from "@/components/NewsFeed";
+import { StockScoreCard } from "@/components/StockScoreCard";
 import { useState } from "react";
 
 const NASDAQ_INDICES = [
@@ -39,6 +40,11 @@ const Index = () => {
               Get detailed analysis and insights for any publicly traded company
             </p>
           </div>
+        </div>
+
+        {/* Stock Score Aggregator */}
+        <div className="mb-12">
+          <StockScoreCard />
         </div>
 
         <StockAnalysis onAnalysisComplete={handleAnalysisComplete} />
