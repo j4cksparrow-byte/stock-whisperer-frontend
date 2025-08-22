@@ -1,105 +1,98 @@
 
-import StockAnalysis from "@/components/StockAnalysis";
-import TradingViewChart from "@/components/TradingViewChart";
-import GraphLogo from "@/components/GraphLogo";
-import NewsFeed from "@/components/NewsFeed";
-import { StockScoreCard } from "@/components/StockScoreCard";
+import { StockDashboard } from "@/components/Dashboard/StockDashboard";
 import UnifiedStockInput from "@/components/UnifiedStockInput";
 import { useState } from "react";
 import { Company } from "@/data/companies";
-
-const NASDAQ_INDICES = [
-  { symbol: "IXIC", name: "NASDAQ Composite", exchange: "NASDAQ" },
-  { symbol: "NDX", name: "NASDAQ-100", exchange: "NASDAQ" },
-  { symbol: "AAPL", name: "Apple Inc.", exchange: "NASDAQ" },
-  { symbol: "MSFT", name: "Microsoft", exchange: "NASDAQ" },
-  { symbol: "GOOGL", name: "Alphabet", exchange: "NASDAQ" },
-  { symbol: "AMZN", name: "Amazon", exchange: "NASDAQ" },
-  { symbol: "META", name: "Meta", exchange: "NASDAQ" },
-  { symbol: "NVDA", name: "NVIDIA", exchange: "NASDAQ" },
-  { symbol: "TSLA", name: "Tesla", exchange: "NASDAQ" }
-];
+import { stockScoringService } from "@/services/scoringService";
+import { AggregateResult } from "@/types/stockTypes";
 
 const Index = () => {
-  const [selectedSymbol, setSelectedSymbol] = useState<string>("AAPL");
   const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState<boolean>(false);
-  const [triggerAnalysis, setTriggerAnalysis] = useState<boolean>(false);
+  const [analysisResult, setAnalysisResult] = useState<AggregateResult | null>(null);
 
-  const handleAnalyze = (company: Company) => {
+  const handleAnalyze = async (company: Company) => {
     setSelectedCompany(company);
     setIsAnalyzing(true);
-    setTriggerAnalysis(prev => !prev); // Toggle to trigger useEffect
-    setTimeout(() => setIsAnalyzing(false), 1000); // Reset loading state
+    setAnalysisResult(null);
+    
+    try {
+      const result = await stockScoringService.scoreStock(company.symbol);
+      setAnalysisResult(result);
+    } catch (error) {
+      console.error("Analysis failed:", error);
+    } finally {
+      setIsAnalyzing(false);
+    }
   };
 
-  // This function will be called when a stock analysis is completed
-  const handleAnalysisComplete = (symbol: string) => {
-    setSelectedSymbol(symbol);
-  };
+  // Show dashboard if we have a selected company, otherwise show landing page
+  if (selectedCompany) {
+    return (
+      <StockDashboard
+        result={analysisResult}
+        isLoading={isAnalyzing}
+        symbol={selectedCompany.symbol}
+        companyName={selectedCompany.name}
+        onBack={() => setSelectedCompany(null)}
+      />
+    );
+  }
  
   return (
-    <div className="min-h-screen bg-gray-900 py-12 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Centered Logo */}
-        <div className="flex flex-col items-center mb-10">
-          <GraphLogo />
-          <div className="text-center mt-6">
-            <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 sm:text-5xl sm:tracking-tight lg:text-6xl">
-              Stock Analysis Dashboard
-            </h1>
-            <p className="max-w-xl mt-5 mx-auto text-xl text-gray-400">
-              Get detailed analysis and insights for any publicly traded company
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 py-12">
+        {/* Landing Page Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-6xl font-bold mb-4">
+            Stock Analysis
+            <span className="text-primary"> Dashboard</span>
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Get comprehensive analysis and insights for any publicly traded company with 
+            our advanced scoring algorithm
+          </p>
+        </div>
+
+        {/* Search Input */}
+        <div className="max-w-2xl mx-auto mb-16">
+          <UnifiedStockInput onAnalyze={handleAnalyze} isLoading={isAnalyzing} />
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-8 h-8 bg-primary rounded-full" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Technical Analysis</h3>
+            <p className="text-muted-foreground">
+              Advanced technical indicators including RSI, SMA trends, and momentum analysis
+            </p>
+          </div>
+          
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-8 h-8 bg-blue-500 rounded-full" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Fundamental Metrics</h3>
+            <p className="text-muted-foreground">
+              Comprehensive fundamental analysis including P/E ratios, ROE, and growth metrics
+            </p>
+          </div>
+          
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-8 h-8 bg-orange-500 rounded-full" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Sentiment Analysis</h3>
+            <p className="text-muted-foreground">
+              Real-time news sentiment analysis with decay-weighted scoring algorithms
             </p>
           </div>
         </div>
 
-        {/* Unified Input */}
-        <UnifiedStockInput onAnalyze={handleAnalyze} isLoading={isAnalyzing} />
-
-        {/* Two Column Results */}
-        {selectedCompany && (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {/* Stock Score Aggregator - Left Column */}
-            <div className="glass-card rounded-lg p-6">
-              <StockScoreCard company={selectedCompany} triggerAnalysis={triggerAnalysis} />
-            </div>
-
-            {/* Stock Analysis - Right Column */}
-            <div className="glass-card rounded-lg p-6">
-              <StockAnalysis 
-                company={selectedCompany} 
-                triggerAnalysis={triggerAnalysis}
-                onAnalysisComplete={handleAnalysisComplete} 
-              />
-            </div>
-          </div>
-        )}
-        
-        {/* NASDAQ Indices Section */}
-        <div className="mt-48">
-          <h2 className="text-2xl font-bold text-gray-200 mb-6">NASDAQ Market Overview</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {NASDAQ_INDICES.map((index) => (
-              <div key={index.symbol} className="glass-card rounded-lg overflow-hidden hover-lift">
-                <div className="p-4 border-b border-gray-700">
-                  <h3 className="text-lg font-semibold text-gray-200">{index.name}</h3>
-                  <p className="text-sm text-gray-400">{index.exchange}:{index.symbol}</p>
-                </div>
-                <TradingViewChart 
-                  symbol={index.symbol} 
-                  exchange={index.exchange}
-                  height={250} 
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* News Feed Section */}
-        <NewsFeed symbol={selectedSymbol} />
-        
-        <footer className="mt-16 text-center text-gray-500 text-sm">
+        <footer className="text-center text-muted-foreground text-sm">
           <p>Data provided for informational purposes only. Not financial advice.</p>
           <p className="mt-1">© {new Date().getFullYear()} Stock Analysis Dashboard</p>
         </footer>
