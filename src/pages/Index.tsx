@@ -1,5 +1,5 @@
 
-import { StockDashboard } from "@/components/Dashboard/StockDashboard";
+import { ModernStockDashboard } from "@/components/Dashboard/ModernStockDashboard";
 import UnifiedStockInput from "@/components/UnifiedStockInput";
 import { useState } from "react";
 import { Company } from "@/data/companies";
@@ -29,7 +29,7 @@ const Index = () => {
   // Show dashboard if we have a selected company, otherwise show landing page
   if (selectedCompany) {
     return (
-      <StockDashboard
+      <ModernStockDashboard
         result={analysisResult}
         isLoading={isAnalyzing}
         symbol={selectedCompany.symbol}
