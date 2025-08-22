@@ -89,7 +89,7 @@ class AlphaVantageService {
   }
 
   async getDailyAdjusted(symbol: string) {
-    const url = `${BASE_URL}/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}&apikey=${API_KEY}`;
+    const url = `${BASE_URL}/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${API_KEY}`;
     return this.makeRequest(url);
   }
 
