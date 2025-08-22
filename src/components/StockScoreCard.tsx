@@ -1,45 +1,47 @@
-import { useState } from 'react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
+import { useState, useEffect } from 'react';
 import { Badge } from './ui/badge';
 import { Alert, AlertDescription } from './ui/alert';
-import { Loader2, TrendingUp, TrendingDown, Minus, Target, Activity, MessageSquare } from 'lucide-react';
+import { Loader2, TrendingUp, TrendingDown, Minus, Activity, MessageSquare } from 'lucide-react';
 import { stockScoringService } from '../services/scoringService';
 import { AggregateResult } from '../types/stockTypes';
 import { getScoreColor } from '../services/stockAggregator';
+import { Company } from '../data/companies';
 
-export const StockScoreCard = () => {
-  // State to manage the component
-  const [ticker, setTicker] = useState(''); // User input for stock symbol
-  const [loading, setLoading] = useState(false); // Loading state during API calls
-  const [result, setResult] = useState<AggregateResult | null>(null); // Analysis result
-  const [error, setError] = useState<string | null>(null); // Error messages
+interface StockScoreCardProps {
+  company: Company | null;
+  triggerAnalysis: boolean;
+}
 
-  // Function to analyze a stock when user clicks the button
+export const StockScoreCard = ({ company, triggerAnalysis }: StockScoreCardProps) => {
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<AggregateResult | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (company && triggerAnalysis) {
+      handleAnalyze();
+    }
+  }, [company, triggerAnalysis]);
+
   const handleAnalyze = async () => {
-    // Don't proceed if no ticker is entered
-    if (!ticker.trim()) return;
+    if (!company) return;
     
-    // Set loading state and clear previous results
     setLoading(true);
     setError(null);
     setResult(null);
     
     try {
-      console.log(`🔍 Starting analysis for ${ticker.toUpperCase()}...`);
+      console.log(`🔍 Starting analysis for ${company.symbol}...`);
       
-      // Call our scoring service to get the complete analysis
-      const analysis = await stockScoringService.scoreStock(ticker.toUpperCase());
+      const analysis = await stockScoringService.scoreStock(company.symbol);
       
-      console.log(`✅ Analysis complete for ${ticker.toUpperCase()}:`, analysis);
+      console.log(`✅ Analysis complete for ${company.symbol}:`, analysis);
       setResult(analysis);
       
     } catch (err) {
-      // Handle any errors that occurred during analysis
       console.error('❌ Analysis failed:', err);
       setError(err instanceof Error ? err.message : 'Analysis failed');
     } finally {
-      // Always stop loading regardless of success or failure
       setLoading(false);
     }
   };
@@ -71,60 +73,30 @@ export const StockScoreCard = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto space-y-6">
-      {/* Header Card with Input */}
-      <div className="glass-card rounded-lg p-6">
-        <div className="text-center mb-6">
-          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-            📊 Stock Score Aggregator
-          </h2>
-          <p className="text-gray-400 mt-2">
-            Comprehensive analysis combining fundamentals, technicals, and sentiment
-          </p>
-        </div>
-        
-        {/* Input Section */}
-        <div className="flex gap-3 max-w-md mx-auto">
-          <Input
-            placeholder="Enter ticker symbol (e.g., AAPL, TSLA)"
-            value={ticker}
-            onChange={(e) => setTicker(e.target.value.toUpperCase())}
-            onKeyPress={(e) => e.key === 'Enter' && handleAnalyze()}
-            className="flex-1 bg-gray-800 border-gray-600 text-white"
-            disabled={loading}
-          />
-          <Button 
-            onClick={handleAnalyze} 
-            disabled={loading || !ticker.trim()}
-            className="bg-blue-600 hover:bg-blue-700"
-          >
-            {loading ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Analyzing...
-              </>
-            ) : (
-              <>
-                <Target className="mr-2 h-4 w-4" />
-                Analyze
-              </>
-            )}
-          </Button>
-        </div>
-        
-        {/* Loading Progress */}
-        {loading && (
-          <div className="mt-4 text-center">
-            <div className="text-sm text-gray-400 space-y-1">
-              <div>🔍 Fetching company data...</div>
-              <div>📊 Calculating fundamental scores...</div>
-              <div>📈 Analyzing technical indicators...</div>
-              <div>📰 Processing sentiment data...</div>
-              <div>🎯 Aggregating final score...</div>
-            </div>
-          </div>
-        )}
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="text-center">
+        <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+          📊 Stock Score Aggregator
+        </h3>
+        <p className="text-gray-400 mt-2">
+          Comprehensive analysis combining fundamentals, technicals, and sentiment
+        </p>
       </div>
+      
+      {/* Loading Progress */}
+      {loading && (
+        <div className="mt-4 text-center">
+          <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4 text-blue-400" />
+          <div className="text-sm text-gray-400 space-y-1">
+            <div>🔍 Fetching company data...</div>
+            <div>📊 Calculating fundamental scores...</div>
+            <div>📈 Analyzing technical indicators...</div>
+            <div>📰 Processing sentiment data...</div>
+            <div>🎯 Aggregating final score...</div>
+          </div>
+        </div>
+      )}
 
       {/* Error Display */}
       {error && (

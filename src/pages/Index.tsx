@@ -4,7 +4,9 @@ import TradingViewChart from "@/components/TradingViewChart";
 import GraphLogo from "@/components/GraphLogo";
 import NewsFeed from "@/components/NewsFeed";
 import { StockScoreCard } from "@/components/StockScoreCard";
+import UnifiedStockInput from "@/components/UnifiedStockInput";
 import { useState } from "react";
+import { Company } from "@/data/companies";
 
 const NASDAQ_INDICES = [
   { symbol: "IXIC", name: "NASDAQ Composite", exchange: "NASDAQ" },
@@ -20,6 +22,16 @@ const NASDAQ_INDICES = [
 
 const Index = () => {
   const [selectedSymbol, setSelectedSymbol] = useState<string>("AAPL");
+  const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
+  const [isAnalyzing, setIsAnalyzing] = useState<boolean>(false);
+  const [triggerAnalysis, setTriggerAnalysis] = useState<boolean>(false);
+
+  const handleAnalyze = (company: Company) => {
+    setSelectedCompany(company);
+    setIsAnalyzing(true);
+    setTriggerAnalysis(prev => !prev); // Toggle to trigger useEffect
+    setTimeout(() => setIsAnalyzing(false), 1000); // Reset loading state
+  };
 
   // This function will be called when a stock analysis is completed
   const handleAnalysisComplete = (symbol: string) => {
@@ -42,12 +54,27 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Stock Score Aggregator */}
-        <div className="mb-12">
-          <StockScoreCard />
-        </div>
+        {/* Unified Input */}
+        <UnifiedStockInput onAnalyze={handleAnalyze} isLoading={isAnalyzing} />
 
-        <StockAnalysis onAnalysisComplete={handleAnalysisComplete} />
+        {/* Two Column Results */}
+        {selectedCompany && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* Stock Score Aggregator - Left Column */}
+            <div className="glass-card rounded-lg p-6">
+              <StockScoreCard company={selectedCompany} triggerAnalysis={triggerAnalysis} />
+            </div>
+
+            {/* Stock Analysis - Right Column */}
+            <div className="glass-card rounded-lg p-6">
+              <StockAnalysis 
+                company={selectedCompany} 
+                triggerAnalysis={triggerAnalysis}
+                onAnalysisComplete={handleAnalysisComplete} 
+              />
+            </div>
+          </div>
+        )}
         
         {/* NASDAQ Indices Section */}
         <div className="mt-48">

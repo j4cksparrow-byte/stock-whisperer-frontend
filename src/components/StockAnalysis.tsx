@@ -1,22 +1,22 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { fetchStockAnalysis } from "@/services/stockService";
 import { Loader, AlertTriangle, RefreshCw } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import ReactMarkdown from 'react-markdown';
-import CompanySearch from "./CompanySearch";
 import { Company } from "@/data/companies";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import TradingViewChart from "./TradingViewChart";
 
 interface StockAnalysisProps {
+  company: Company | null;
+  triggerAnalysis: boolean;
   onAnalysisComplete?: (symbol: string) => void;
 }
 
-const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
-  const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
+const StockAnalysis = ({ company, triggerAnalysis, onAnalysisComplete }: StockAnalysisProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [analysisText, setAnalysisText] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
@@ -25,23 +25,14 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
   const [retryCount, setRetryCount] = useState<number>(0);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!selectedCompany) {
-      toast({
-        title: "Error",
-        description: "Please select a company",
-        variant: "destructive",
-      });
-      return;
+  useEffect(() => {
+    if (company && triggerAnalysis) {
+      performAnalysis();
     }
-
-    await performAnalysis();
-  };
+  }, [company, triggerAnalysis]);
 
   const performAnalysis = async () => {
-    if (!selectedCompany) return;
+    if (!company) return;
 
     // Reset states
     setIsLoading(true);
@@ -68,12 +59,12 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
     }, 10000); // Update every 10 seconds
 
     try {
-      console.log("Fetching stock analysis for:", selectedCompany);
+      console.log("Fetching stock analysis for:", company);
       
-      const sanitizedSymbol = selectedCompany.symbol.replace(/[^\w.-]/g, '');
+      const sanitizedSymbol = company.symbol.replace(/[^\w.-]/g, '');
       console.log("Using sanitized symbol:", sanitizedSymbol);
       
-      const data = await fetchStockAnalysis(sanitizedSymbol, selectedCompany.exchange);
+      const data = await fetchStockAnalysis(sanitizedSymbol, company.exchange);
       console.log("Response received:", data);
       
       if (data.url.includes("placeholder-chart.com/error")) {
@@ -93,7 +84,7 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
         
         toast({
           title: "Analysis Complete",
-          description: `Analysis for ${selectedCompany.exchange}:${sanitizedSymbol} loaded successfully`,
+          description: `Analysis for ${company.exchange}:${sanitizedSymbol} loaded successfully`,
         });
       }
       
@@ -125,58 +116,30 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
-      <Card className="glass-card border-t-4 border-t-blue-600">
-        <CardHeader className="bg-gradient-to-r from-gray-800 to-gray-900">
-          <CardTitle className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-            Stock Analysis
-          </CardTitle>
-          <CardDescription className="text-gray-300">
-            Search and analyze any publicly traded company
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="pt-6">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="company-search" className="block text-sm font-medium text-gray-300 mb-1">
-                Search Company
-              </label>
-              <CompanySearch
-                onSelect={setSelectedCompany}
-                placeholder="Type company name or symbol..."
-              />
-            </div>
+    <div className="space-y-6">
+      <div className="text-center">
+        <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+          📈 Detailed Stock Analysis
+        </h3>
+        <p className="text-gray-400 mt-2">
+          Comprehensive technical analysis and market insights
+        </p>
+      </div>
 
-            <div className="flex gap-2">
-              <Button 
-                type="submit" 
-                disabled={isLoading || !selectedCompany}
-                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white transition-all"
-              >
-                {isLoading ? (
-                  <>
-                    <Loader className="mr-2 h-4 w-4 animate-spin" /> 
-                    Analyzing...
-                  </>
-                ) : (
-                  "Analyze"
-                )}
-              </Button>
-              
-              {(isMockData || errorMessage) && selectedCompany && (
-                <Button 
-                  type="button"
-                  onClick={handleRetry}
-                  disabled={isLoading}
-                  variant="outline"
-                  className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-                >
-                  <RefreshCw className="h-4 w-4 mr-2" />
-                  Retry
-                </Button>
-              )}
-            </div>
-          </form>
+      {/* Retry button */}
+      {(isMockData || errorMessage) && company && (
+        <div className="text-center">
+          <Button 
+            onClick={handleRetry}
+            disabled={isLoading}
+            variant="outline"
+            className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+          >
+            <RefreshCw className="h-4 w-4 mr-2" />
+            Retry Analysis
+          </Button>
+        </div>
+      )}
 
           {/* Loading state */}
           {isLoading && (
@@ -207,34 +170,32 @@ const StockAnalysis = ({ onAnalysisComplete }: StockAnalysisProps) => {
             </Alert>
           )}
 
-          {/* Results */}
-          {!isLoading && !errorMessage && analysisText && selectedCompany && (
-            <div className="mt-6 space-y-6">
-              <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 border-b border-gray-700 pb-2">
-                Technical Analysis for <span className="font-bold">{selectedCompany.exchange}:{selectedCompany.symbol}</span>
-              </h2>
-              
-              {/* Live TradingView Chart */}
-              <div className="border border-gray-700 rounded-lg overflow-hidden shadow-sm bg-gray-800/50 p-2">
-                <TradingViewChart 
-                  symbol={selectedCompany.symbol} 
-                  exchange={selectedCompany.exchange}
-                  height={400} 
-                />
+      {/* Results */}
+      {!isLoading && !errorMessage && analysisText && company && (
+        <div className="space-y-6">
+          <h4 className="text-xl font-bold text-gray-200 border-b border-gray-700 pb-2">
+            Technical Analysis for <span className="font-bold">{company.exchange}:{company.symbol}</span>
+          </h4>
+          
+          {/* Live TradingView Chart */}
+          <div className="border border-gray-700 rounded-lg overflow-hidden shadow-sm bg-gray-800/50 p-2">
+            <TradingViewChart 
+              symbol={company.symbol} 
+              exchange={company.exchange}
+              height={350} 
+            />
+          </div>
+          
+          {/* Analysis text with markdown rendering */}
+          {analysisText && (
+            <div className="bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-700">
+              <div className="prose prose-invert max-w-none">  
+                <ReactMarkdown>{analysisText}</ReactMarkdown>
               </div>
-              
-              {/* Analysis text with markdown rendering */}
-              {analysisText && (
-                <div className="bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-700">
-                  <div className="prose prose-invert max-w-none">  
-                    <ReactMarkdown>{analysisText}</ReactMarkdown>
-                  </div>
-                </div>
-              )}
             </div>
           )}
-        </CardContent>
-      </Card>
+        </div>
+      )}
     </div>
   );
 };
