@@ -1,48 +1,64 @@
-Awesome—here’s a clean, copy-paste **README.md** for your repo.
+### 🚀 Improved README.md Format
+
+Here is a significantly improved, more professional, and user-friendly `README.md` based on your provided content. This version uses a clearer structure, better headings, and more organized code blocks.
 
 ````markdown
 # Hybrid Stock Analysis API (v3.0)
 
-Analyze stocks with **fundamentals + technicals + sentiment**, then get a clear AI summary.  
-Modular Node.js backend with services/controllers, caching, and rate limiting.
+A modular Node.js API that provides comprehensive stock analysis by combining **fundamental, technical, and sentiment** data, summarized by Google's Gemini AI. The backend is designed for scalability and performance, featuring services/controllers, in-memory caching, and rate limiting.
 
-## Features
-- **Search & Trending**
-  - Company name → symbol auto-complete
-  - Trending list (cached; easy to swap to live data)
-- **Analysis Modes**
-  - **Normal:** Fundamentals + LLM summary
-  - **Advanced:** Fundamentals + Technical Indicators + News Sentiment → single `weightedScore`
-- **Technical Suite**
-  - RSI, SMA/EMA, MACD, Bollinger Bands, Stochastic, ATR, OBV, and basic candlestick patterns
-  - Customizable indicator parameters per request
-- **Weights & Presets**
-  - Validate/normalize to 100%; presets like `conservative`, `technical`, `sentiment`, `balanced`
-- **DX & Ops**
-  - Health checks, API key tests, in-memory caching, rate limiting
+<br>
 
-## Tech Stack
-- Node.js, Express
-- Axios (data fetch), in-memory cache
-- Alpha Vantage (market data), Google Gemini (AI summary)
+---
 
-## Quickstart
+## ✨ Features
 
-### 1) Prerequisites
-- Node.js 18+ and npm
+- **Multi-faceted Analysis:** Analyze stocks using a hybrid approach that integrates fundamentals, technical indicators, and news sentiment.
+- **AI-Powered Insights:** Get a clear, concise AI-generated summary of the analysis for easy interpretation.
+- **Dynamic Analysis Modes:**
+  - **`normal` mode:** Provides fundamentals and an AI summary.
+  - **`advanced` mode:** A comprehensive analysis that generates a single `weightedScore` from all three data points.
+- **Extensive Technical Suite:** Support for key indicators including **RSI, SMA/EMA, MACD, Bollinger Bands, Stochastic, ATR, and OBV**, with configurable parameters per request.
+- **Flexible Weighting & Presets:** Customize the influence of each data point (`fundamental`, `technical`, `sentiment`) or use built-in presets like `conservative`, `technical`, `sentiment`, and `balanced`.
+- **Developer-Friendly:** Includes health checks, API key validation, and connectivity tests for quick setup and debugging.
 
-### 2) Clone & Install
+<br>
+
+---
+
+## 🛠️ Tech Stack
+
+- **Backend:** Node.js, Express.js
+- **Data & APIs:**
+  - **Axios** for HTTP requests
+  - **Alpha Vantage** for market data
+  - **Google Gemini** for AI summaries
+- **Utilities:** In-memory caching
+
+<br>
+
+---
+
+## 🚀 Quickstart
+
+### 1. Prerequisites
+
+- Node.js version 18 or higher
+- npm (Node Package Manager)
+
+### 2. Clone & Install
+
 ```bash
 git clone <your-repo-url>.git
 cd <your-repo-folder>
 npm install
 ````
 
-### 3) Configure Environment
+### 3\. Configure Environment
 
-Create a `.env` in the project root:
+Create a `.env` file in the project root and add your API keys:
 
-```bash
+```
 PORT=3001
 NODE_ENV=development
 
@@ -51,152 +67,138 @@ ALPHA_VANTAGE_API_KEY=your_alpha_vantage_key
 GEMINI_API_KEY=your_gemini_key
 ```
 
-### 4) Run
+### 4\. Run the Server
 
 ```bash
 node server.js
-# or if you use nodemon:
-# npx nodemon server.js
 ```
 
-### 5) Sanity Checks (in another terminal)
+> **Tip:** For development, use `nodemon` to automatically restart the server on code changes:
+> `npx nodemon server.js`
+
+\<br\>
+
+-----
+
+## 🚦 Sanity Checks
+
+Use these endpoints in a separate terminal to verify your setup.
 
 ```bash
-# Health
+# Health Check
 curl "http://localhost:3001/health"
 
-# Verify API keys are loaded (true/false flags)
+# Verify API Keys (returns true/false flags)
 curl "http://localhost:3001/test-keys"
 
-# Attempt live connectivity checks
+# Test Live Connectivity to External APIs
 curl "http://localhost:3001/test-connections"
 ```
 
-> **Windows PowerShell tip:** If `curl` errors, use `Invoke-WebRequest` (PowerShell’s native):
+> **PowerShell Tip:** On Windows, if `curl` isn't available, use `Invoke-WebRequest`.
+> `Invoke-WebRequest "http://localhost:3001/health"`
 
-```powershell
-Invoke-WebRequest "http://localhost:3001/health"
-```
+\<br\>
 
----
+-----
 
-## Base URL
+## 📜 API Endpoints
 
-```
-http://localhost:3001
-```
+**Base URL:** `http://localhost:3001`
 
-## Endpoints
+| Method | Path | Description |
+|---|---|---|
+| `GET` | `/` | Overview & API docs |
+| `GET` | `/health` | Server health check |
+| `GET` | `/test-keys` | API key validation flags |
+| `GET` | `/test-connections` | Live connectivity checks |
 
-### Overview (also available at `/`)
+### Stock API Routes (`/api/stocks`)
 
-* **Docs & examples:** `GET /`
-* **Health:** `GET /health`
-* **API key flags:** `GET /test-keys`
-* **Connectivity test:** `GET /test-connections`
+| Method | Path | Description |
+|---|---|---|
+| `GET` | `/search?query=...` | Search for a company name to get its symbol |
+| `GET` | `/trending` | Get a list of trending stocks (cached) |
+| `GET` | `/indicators` | List all supported technical indicators |
+| `GET` | `/weights/defaults` | Get default weight configurations |
+| `GET` | `/analysis/:symbol` | Perform stock analysis |
 
-### Stocks API (prefix: `/api/stocks`)
+\<br\>
 
-| Method | Path                                           | What it does                                                                         |
-| ------ | ---------------------------------------------- | ------------------------------------------------------------------------------------ |
-| GET    | `/search?query=apple`                          | Name → symbol search (cached; Alpha Vantage fallback)                                |
-| GET    | `/trending`                                    | Returns a trending list (cached; currently generated, easily swappable to live feed) |
-| GET    | `/indicators`                                  | Lists supported technical indicators                                                 |
-| GET    | `/weights/defaults`                            | Returns preset weight configurations                                                 |
-| GET    | `/analysis/:symbol?timeframe=1M&mode=normal`   | Normal analysis (Fundamental + AI)                                                   |
-| GET    | `/analysis/:symbol?timeframe=3M&mode=advanced` | Advanced analysis (Fundamental + Technical + Sentiment + AI)                         |
+-----
 
-### Parameters
+## ⚙️ Usage & Parameters
 
-**Common**
+The core analysis endpoint is `GET /api/stocks/analysis/:symbol`.
 
-* `timeframe`: one of `1D, 1W, 1M (default), 3M, 6M, 1Y, 2Y`
-* `mode`: `normal` or `advanced`
+### Common Parameters
 
-**Advanced (weights)**
+  - `timeframe`: **1D, 1W, 1M** (default), **3M, 6M, 1Y, 2Y**
+  - `mode`: **`normal`** or **`advanced`**
 
-* `fundamental`, `technical`, `sentiment` → integers that sum to 100
-  Example:
+### `advanced` Mode Parameters
 
-  ```
-  /api/stocks/analysis/AAPL?timeframe=3M&mode=advanced&fundamental=30&technical=40&sentiment=30
-  ```
+  - **`fundamental`, `technical`, `sentiment`**: Integers that must sum to `100`.
+      - **Example:** `...&mode=advanced&fundamental=30&technical=40&sentiment=30`
+  - **`indicators`**: A URL-encoded JSON string to customize indicator parameters.
+      - **Example:** `...&indicators={"RSI":{"period":14},"MACD":{...}}`
 
-**Advanced (custom indicators)**
+\<br\>
 
-* `indicators`: JSON string of indicator configs (URL-encoded)
+-----
 
-```bash
-curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&indicators={\"RSI\":{\"period\":14},\"MACD\":{\"fastPeriod\":12,\"slowPeriod\":26,\"signalPeriod\":9}}"
-```
+## 🌐 Example Calls
 
-> **PowerShell:** escape quotes or use `Invoke-WebRequest` and pass a plain URL string.
-
-### Example Calls
+### Search for "Apple"
 
 ```bash
-# Search
 curl "http://localhost:3001/api/stocks/search?query=apple"
+```
 
-# Trending
+### Get Trending Stocks
+
+```bash
 curl "http://localhost:3001/api/stocks/trending"
+```
 
-# Indicators
-curl "http://localhost:3001/api/stocks/indicators"
+### Normal Analysis for AAPL
 
-# Normal analysis
+```bash
 curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=1M&mode=normal"
+```
 
-# Advanced analysis (balanced custom weights)
+### Advanced Analysis for AAPL with Custom Weights
+
+```bash
 curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=3M&mode=advanced&fundamental=40&technical=35&sentiment=25"
 ```
 
----
+\<br\>
 
-## Behavior & Notes
+-----
 
-### Caching
+## 📝 Notes & Behaviors
 
-* Search and trending responses cached in-memory for \~5 minutes to reduce latency and API calls.
+  - **Caching:** Search and trending data are cached in-memory for \~5 minutes to reduce API calls and latency.
+  - **Rate Limiting:** The API uses a server-side rate limit of **100 requests per 15 minutes** per IP address.
+  - **Error Handling:** The API provides consistent JSON error envelopes with clear status codes (e.g., `400` for bad input, `500` for server errors).
+  - **Modular Design:** The project is structured with separate **controllers** (request/response logic) and **services** (data fetching, analysis, caching).
 
-### Rate Limiting
+\<br\>
 
-* Server-side: **100 requests / 15 minutes per IP** (HTTP 429 on exceed).
-* Alpha Vantage has its own limits; the API gracefully surfaces “rate limit” notes when hit.
+-----
 
-### Error Handling
+## 🗺️ Roadmap
 
-* Consistent JSON error envelopes with helpful messages (400 for bad input, 500 on server errors).
+  - [ ] Connect trending data to a live, external feed with backoff/circuit-breaker logic.
+  - [ ] Add more sentiment data sources and richer market health checks.
+  - [ ] Provide a Postman collection and example JSON responses for easier testing.
+  - [ ] Generate an OpenAPI 3.1 specification for full documentation.
 
-### Modular Design
+\<br\>
 
-* **Controllers** focus on request/response.
-* **Services** handle data fetch, technical analysis, weights, caching, and AI summarization.
+-----
 
----
-
-## Development Tips
-
-* Start with `/test-keys` and `/test-connections` to validate setup.
-* Use `/api/stocks/indicators` to see supported indicators and defaults.
-* For complex Windows quoting, prefer **Postman** or **Thunder Client** in VS Code.
-
-## Roadmap
-
-* Wire trending to a live endpoint with backoff/circuit-breaker
-* Expand sentiment sources & add richer market health checks
-* Export a Postman collection and example JSON responses
-
-## License
-
-MIT (or your choice)
 
 ```
-
-**Citations to your code (proving the README details):**  
-- Search + trending endpoints and 5-minute cache logic are defined in the **search controller**. :contentReference[oaicite:0]{index=0}  
-- Health checks, `/test-keys`, `/test-connections`, root docs with endpoint list, timeframe options, and presets live in **server.js**. :contentReference[oaicite:1]{index=1}  
-- Route wiring for `/api/stocks` (search, trending, indicators, analysis, weights) is in **stockRoutes.js**. :contentReference[oaicite:2]{index=2}
-
-Want me to add a tiny **“Copy as Postman collection”** JSON and an **OpenAPI 3.1** stub too?
 ```
