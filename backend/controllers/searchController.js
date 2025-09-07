@@ -1,3 +1,4 @@
+// controllers/searchController.js
 const axios = require('axios');
 
 class SearchController {
@@ -6,11 +7,13 @@ class SearchController {
     this.cacheTimeout = 5 * 60 * 1000; // 5 minutes cache
   }
 
-  // Search for stock symbols with auto-complete
+  // ----------------------------
+  //  Symbol search (unchanged)
+  // ----------------------------
   async searchSymbols(req, res) {
     try {
       const { query } = req.query;
-      
+
       if (!query || query.length < 1) {
         return res.status(400).json({
           status: 'error',
@@ -23,7 +26,7 @@ class SearchController {
       // Check cache first
       const cacheKey = `search_${query.toLowerCase()}`;
       const cached = this.cache.get(cacheKey);
-      
+
       if (cached && Date.now() - cached.timestamp < this.cacheTimeout) {
         console.log('📋 Returning cached results');
         return res.json({
@@ -49,16 +52,15 @@ class SearchController {
         timestamp: Date.now()
       });
 
-      res.json({
+      return res.json({
         status: 'success',
         query,
         results: searchResults,
         source: 'live'
       });
-
     } catch (error) {
       console.error('❌ Search error:', error);
-      res.status(500).json({
+      return res.status(500).json({
         status: 'error',
         message: 'Failed to search symbols',
         error: error.message
@@ -66,21 +68,20 @@ class SearchController {
     }
   }
 
-  // Fetch from Alpha Vantage API
+  // Alpha Vantage SYMBOL_SEARCH (helper)
   async fetchSymbolSearch(query) {
     const apiKey = process.env.ALPHA_VANTAGE_API_KEY;
     const url = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${encodeURIComponent(query)}&apikey=${apiKey}`;
-    
+
     const response = await axios.get(url, { timeout: 10000 });
-    
+
     if (response.data['Error Message']) {
       throw new Error('API Error: ' + response.data['Error Message']);
     }
-    
     if (response.data['Note']) {
       throw new Error('API Rate Limit: ' + response.data['Note']);
     }
-    
+
     const matches = response.data['bestMatches'] || [];
     return matches.slice(0, 10).map(match => ({
       symbol: match['1. symbol'],
@@ -110,19 +111,79 @@ class SearchController {
     ];
 
     const lowerQuery = query.toLowerCase();
-    return popularStocks.filter(stock => 
-      stock.symbol.toLowerCase().includes(lowerQuery) || 
-      stock.name.toLowerCase().includes(lowerQuery)
-    ).slice(0, 5);
+    return popularStocks
+      .filter(
+        s =>
+          s.symbol.toLowerCase().includes(lowerQuery) ||
+          s.name.toLowerCase().includes(lowerQuery)
+      )
+      .slice(0, 5);
   }
 
-  // Get trending symbols
+  // -----------------------------------------
+  //  Alpha Vantage TOP_GAINERS_LOSERS helper
+  // -----------------------------------------
+  async fetchTopGainersLosers() {
+    const apiKey = process.env.ALPHA_VANTAGE_API_KEY;
+    if (!apiKey) throw new Error('Missing ALPHA_VANTAGE_API_KEY');
+
+    const url = `https://www.alphavantage.co/query?function=TOP_GAINERS_LOSERS&apikey=${encodeURIComponent(apiKey)}`;
+    const resp = await axios.get(url, { timeout: 10000 });
+    const data = resp?.data || {};
+
+    if (data.Note) throw new Error(`API Rate Limit: ${data.Note}`);
+    if (data['Error Message']) throw new Error(`API Error: ${data['Error Message']}`);
+
+    const lastUpdated = data.last_updated || new Date().toISOString();
+
+    const normalize = (arr = [], category) =>
+      arr.map(item => ({
+        symbol: item.ticker,
+        name: item.ticker, // name not provided by this endpoint
+        price: item.price ? Number(item.price) : null,
+        changeAmount: item.change_amount ? Number(item.change_amount) : null,
+        change: item.change_percentage || null, // string like "3.21%"
+        volume: item.volume ? Number(item.volume) : null,
+        category
+      }));
+
+    return {
+      lastUpdated,
+      gainers: normalize(data.top_gainers, 'gainer'),
+      losers: normalize(data.top_losers, 'loser'),
+      mostActive: normalize(data.most_actively_traded, 'most_active')
+    };
+  }
+
+  // Optional: light enrichment of names using SYMBOL_SEARCH (best-effort)
+  async enrichNames(list = []) {
+    const out = [];
+    for (const r of list.slice(0, 10)) { // cap to avoid rate limits
+      try {
+        const matches = await this.fetchSymbolSearch(r.symbol);
+        const exact = matches.find(m => m.symbol.toUpperCase() === r.symbol.toUpperCase());
+        out.push({ ...r, name: exact?.name || r.name });
+      } catch {
+        out.push(r); // keep original on failure
+      }
+    }
+    return out.concat(list.slice(10));
+  }
+
+  // ----------------------------
+  //  Trending (now LIVE)
+  // ----------------------------
   async getTrendingSymbols(req, res) {
     try {
-      console.log('📈 Fetching trending symbols...');
+      console.log('📈 Fetching trending symbols (live from Alpha Vantage)...');
 
-      // Check cache first
-      const cached = this.cache.get('trending');
+      const { category, enrich } = req.query; // category: gainers|losers|most_active; enrich=true to look up names
+      const catKey = (category || 'all').toLowerCase();
+      const enrichFlag = String(enrich).toLowerCase() === 'true';
+
+      // Cache check
+      const cacheKey = `trending_${catKey}_${enrichFlag ? 'enriched' : 'plain'}`;
+      const cached = this.cache.get(cacheKey);
       if (cached && Date.now() - cached.timestamp < this.cacheTimeout) {
         console.log('📋 Returning cached trending results');
         return res.json({
@@ -133,37 +194,49 @@ class SearchController {
         });
       }
 
-      // Generate trending symbols (you can enhance this with real API data)
-      const trendingSymbols = [
-        { symbol: 'AAPL', name: 'Apple Inc.', change: '+2.15%', volume: '52.3M' },
-        { symbol: 'TSLA', name: 'Tesla Inc.', change: '+5.67%', volume: '89.1M' },
-        { symbol: 'MSFT', name: 'Microsoft Corporation', change: '+1.23%', volume: '31.7M' },
-        { symbol: 'GOOGL', name: 'Alphabet Inc.', change: '+0.89%', volume: '28.4M' },
-        { symbol: 'AMZN', name: 'Amazon.com Inc.', change: '-1.45%', volume: '45.2M' },
-        { symbol: 'META', name: 'Meta Platforms Inc.', change: '+3.21%', volume: '25.8M' },
-        { symbol: 'NVDA', name: 'NVIDIA Corporation', change: '+7.89%', volume: '67.3M' },
-        { symbol: 'NFLX', name: 'Netflix Inc.', change: '+2.45%', volume: '18.5M' }
-      ];
+      // Live fetch
+      const live = await this.fetchTopGainersLosers();
 
-      // Cache trending results
-      this.cache.set('trending', {
-        data: trendingSymbols,
-        timestamp: Date.now()
-      });
+      // Shape payload
+      let payload;
+      if (catKey === 'gainers') payload = live.gainers;
+      else if (catKey === 'losers') payload = live.losers;
+      else if (catKey === 'most_active' || catKey === 'actives' || catKey === 'mostactive')
+        payload = live.mostActive;
+      else payload = { lastUpdated: live.lastUpdated, ...live };
 
-      res.json({
+      // Optional enrichment (only for array payloads)
+      if (enrichFlag && Array.isArray(payload)) {
+        payload = await this.enrichNames(payload);
+      }
+
+      // Cache & respond
+      this.cache.set(cacheKey, { data: payload, timestamp: Date.now() });
+
+      return res.json({
         status: 'success',
-        trending: trendingSymbols,
-        source: 'generated',
+        trending: payload,
+        source: 'alpha_vantage',
+        lastUpdated: live.lastUpdated,
         timestamp: new Date().toISOString()
       });
-
     } catch (error) {
-      console.error('❌ Trending symbols error:', error);
-      res.status(500).json({
-        status: 'error',
-        message: 'Failed to fetch trending symbols',
-        error: error.message
+      console.error('❌ Trending symbols error:', error.message);
+
+      // graceful fallback to brief generated list
+      const fallback = [
+        { symbol: 'AAPL', name: 'Apple Inc.', change: '+2.15%', volume: 52300000, category: 'gainer' },
+        { symbol: 'TSLA', name: 'Tesla Inc.', change: '+5.67%', volume: 89100000, category: 'gainer' },
+        { symbol: 'AMZN', name: 'Amazon.com Inc.', change: '-1.45%', volume: 45200000, category: 'loser' },
+        { symbol: 'NVDA', name: 'NVIDIA Corporation', change: '+7.89%', volume: 67300000, category: 'most_active' }
+      ];
+
+      return res.status(200).json({
+        status: 'success',
+        trending: fallback,
+        source: 'fallback',
+        note: 'Alpha Vantage unavailable or rate-limited; returned cached/generated data',
+        timestamp: new Date().toISOString()
       });
     }
   }

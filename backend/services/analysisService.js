@@ -1,8 +1,10 @@
+// services/analysisService.js
 const geminiService = require('./geminiService');
 const weightService = require('./weightService');
 const technicalAnalysisService = require('./technicalAnalysisService');
 const dataService = require('./dataService');
-const { fetchAlphaVantageNewsSentiment } = require('./sentimentService'); // add this import
+const { fetchAlphaVantageNewsSentiment } = require('./sentimentService');
+const fundamentalAnalysisService = require('./fundamentalAnalysisService');
 
 class AnalysisService {
   constructor() {
@@ -11,44 +13,92 @@ class AnalysisService {
     this.generateWeightedAISummary = this.generateWeightedAISummary.bind(this);
   }
 
-  // ---------- PUBLIC MODES ----------
-
+  // ---------------------------------------
+  // PUBLIC: NORMAL (Fundamentals + AI text)
+  // ---------------------------------------
   async performNormalAnalysis(symbol, stockData, timeframe) {
-    const fundamental = await this.getFundamentalAnalysis(symbol, stockData);
-    const aiSummary = await geminiService.generateInsights(
-      `Analyze ${symbol} stock fundamentally for ${timeframe} period`
+    const sym = String(symbol || '').toUpperCase();
+
+    // Real fundamentals (Alpha Vantage pipeline with fallback inside)
+    const fundamental = await this.getFundamentalAnalysis(sym);
+
+    // Simple overall from fundamentals
+    const overallScore = Math.round(fundamental?.score ?? 50);
+    const overallReco = this.getRecommendationFromScore(overallScore);
+
+    // AI summary (safe fallback text if Gemini is unavailable)
+    const aiSummary = await this.generateWeightedAISummary(
+      sym,
+      { score: overallScore, ...fundamental },
+      { score: 0 },
+      { score: 0 },
+      { fundamental: 100, technical: 0, sentiment: 0 },
+      overallScore
     );
+
     return {
       status: 'success',
-      symbol: symbol.toUpperCase(),
+      symbol: sym,
       analysis: {
         mode: 'normal',
         timeframe,
         timestamp: new Date().toISOString(),
-        fundamental,
-        aiInsights: { summary: aiSummary }
+
+        fundamental: { ...fundamental, weight: '100%' },
+
+        overall: {
+          score: overallScore,
+          recommendation: overallReco
+        },
+
+        aiInsights: { summary: aiSummary },
+
+        meta: {
+          dataPoints: Array.isArray(stockData?.ohlcv) ? stockData.ohlcv.length : 0,
+          dataSource: stockData?.source || 'unknown',
+          confidenceLevel: this.calculateConfidenceLevel(overallScore),
+          riskLevel: this.calculateRiskLevel(
+            { score: overallScore },
+            { score: 50 },
+            { score: 50 }
+          )
+        }
       }
     };
   }
 
-  async performAdvancedAnalysis(symbol, stockData, timeframe, weights, indicatorsConfig = {}) {
-    console.log('🔬 Performing weighted advanced analysis...');
+  // --------------------------------------------------------------
+  // PUBLIC: ADVANCED (Fundamentals + Technicals + Sentiment + AI)
+  // --------------------------------------------------------------
+  async performAdvancedAnalysis(symbol, stockData, timeframe, rawWeights = {}, indicatorsConfig = {}) {
+    const sym = String(symbol || '').toUpperCase();
 
+    // Validate/normalize weights to 100
+    const weights = weightService.validateAndParseWeights({
+      fundamental: Number(rawWeights?.fundamental ?? weightService.defaultWeights.fundamental),
+      technical: Number(rawWeights?.technical ?? weightService.defaultWeights.technical),
+      sentiment: Number(rawWeights?.sentiment ?? weightService.defaultWeights.sentiment),
+    });
+
+    // Parallel pipelines
     const [fundamentalAnalysis, technicalAnalysis, sentimentAnalysis] = await Promise.all([
-      this.getFundamentalAnalysis(symbol, stockData),
-      this.getTechnicalAnalysis(symbol, stockData, timeframe, indicatorsConfig),
-      this.getSentimentAnalysis(symbol)
+      this.getFundamentalAnalysis(sym),
+      this.getTechnicalAnalysis(sym, stockData, timeframe, indicatorsConfig),
+      this.getSentimentAnalysis(sym),
     ]);
 
+    // Weighted score + recommendation
     const weightedScore = this.calculateWeightedScore(
       fundamentalAnalysis,
       technicalAnalysis,
       sentimentAnalysis,
       weights
     );
+    const recommendation = this.getRecommendationFromScore(weightedScore);
 
+    // AI summary (weights-aware)
     const aiSummary = await this.generateWeightedAISummary(
-      symbol,
+      sym,
       fundamentalAnalysis,
       technicalAnalysis,
       sentimentAnalysis,
@@ -58,38 +108,74 @@ class AnalysisService {
 
     return {
       status: 'success',
-      symbol: symbol.toUpperCase(),
+      symbol: sym,
       analysis: {
         mode: 'advanced',
         timeframe,
-        weights,
         timestamp: new Date().toISOString(),
-        fundamental: { ...fundamentalAnalysis, weight: weights.fundamental + '%' },
-        technical:   { ...technicalAnalysis,   weight: weights.technical   + '%' },
-        sentiment:   { ...sentimentAnalysis,   weight: weights.sentiment   + '%' },
-        weightedScore,
-        aiInsights: aiSummary,
-        analysisMetadata: {
-          dataPoints: stockData.ohlcv.length,
+
+        fundamental: { ...fundamentalAnalysis, weight: `${weights.fundamental}%` },
+        technical:    { ...technicalAnalysis,    weight: `${weights.technical}%` },
+        sentiment:    { ...sentimentAnalysis,    weight: `${weights.sentiment}%` },
+
+        overall: {
+          score: weightedScore,
+          recommendation
+        },
+
+        aiInsights: { summary: aiSummary },
+
+        meta: {
+          dataPoints: Array.isArray(stockData?.ohlcv) ? stockData.ohlcv.length : 0,
           weightsUsed: weights,
           confidenceLevel: this.calculateConfidenceLevel(weightedScore),
-          riskLevel: this.calculateRiskLevel(fundamentalAnalysis, technicalAnalysis, sentimentAnalysis),
-          dataSource: stockData.source
+          riskLevel: this.calculateRiskLevel(
+            fundamentalAnalysis,
+            technicalAnalysis,
+            sentimentAnalysis
+          ),
+          dataSource: stockData?.source || 'unknown'
         }
       }
     };
   }
 
-  // ---------- TECHNICAL ANALYSIS (uses your service) ----------
+  // -------------------------------
+  // FUNDAMENTALS (real pipeline)
+  // -------------------------------
+  async getFundamentalAnalysis(symbol /*, stockData */) {
+    try {
+      return await fundamentalAnalysisService.analyze(symbol);
+    } catch (err) {
+      console.warn('⚠️ FundamentalAnalysisService failed, using neutral fallback:', err.message);
+      return {
+        score: 50,
+        recommendation: 'HOLD',
+        breakdown: { valuation: 50, growth: 50, profitability: 50, leverage: 50, cashflow: 50 },
+        metrics: {},
+        notes: `Fundamentals fallback for ${symbol}: ${err.message}`,
+        source: 'fallback',
+        timestamp: new Date().toISOString(),
+      };
+    }
+  }
 
+  // -------------------------------------------------------
+  // TECHNICALS (uses your technicalAnalysisService)
+  // -------------------------------------------------------
   async getTechnicalAnalysis(symbol, stockData, timeframe, indicatorsConfig = {}) {
     try {
-      console.log('📈 Calculating technical indicators...');
+      if (!Array.isArray(stockData?.ohlcv) || stockData.ohlcv.length < 10) {
+        throw new Error('Insufficient OHLCV data for technical analysis');
+      }
+
       const indicators = await technicalAnalysisService.calculateIndicators(
         stockData.ohlcv,
         indicatorsConfig
       );
+
       const score = this.calculateTechnicalScore(indicators, stockData.ohlcv);
+
       return {
         score,
         indicators,
@@ -97,97 +183,93 @@ class AnalysisService {
         configuration: indicatorsConfig
       };
     } catch (error) {
-      console.error('Technical analysis error:', error);
+      console.error('Technical analysis error:', error.message);
+      // Reasonable fallback from latest bar
+      const last = stockData?.ohlcv?.at(-1) || {};
       return {
-        score: 68,
+        score: 60,
         indicators: {
-          rsi: 62,
-          macd: 'bullish',
-          moving_averages: 'upward_trend',
-          support: stockData.ohlcv[stockData.ohlcv.length - 1].low * 0.95,
-          resistance: stockData.ohlcv[stockData.ohlcv.length - 1].high * 1.05
+          note: 'Fallback indicators due to error',
+          lastClose: last.close,
+          lastHigh: last.high,
+          lastLow: last.low
         },
-        recommendation: 'BUY',
-        error: 'Advanced technical analysis failed, using basic indicators'
+        recommendation: 'HOLD',
+        error: 'Advanced technical analysis failed; using fallback'
       };
     }
   }
 
-  calculateTechnicalScore(indicators, ohlcvData) {
+  // Scoring heuristic using common signals (robust to missing indicators)
+  calculateTechnicalScore(indicators, ohlcv) {
     let score = 50;
-    const latestClose = ohlcvData[ohlcvData.length - 1].close;
+    const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
-    if (indicators.RSI && indicators.RSI.length) {
-      const latestRSI = indicators.RSI.at(-1);
-      if (latestRSI > 70) score -= 10;
-      else if (latestRSI < 30) score += 10;
-      else if (latestRSI > 50) score += 5;
+    const lastClose = Array.isArray(ohlcv) && ohlcv.length ? ohlcv[ohlcv.length - 1].close : null;
+
+    // RSI
+    const rsiSeries = indicators?.RSI || indicators?.rsi;
+    if (Array.isArray(rsiSeries) && rsiSeries.length) {
+      const rsi = Number(rsiSeries.at(-1));
+      if (!Number.isNaN(rsi)) {
+        if (rsi < 30) score += 10;
+        else if (rsi > 70) score -= 10;
+        else if (rsi > 50) score += 5;
+      }
     }
 
-    if (indicators.MACD && indicators.MACD.macd?.length && indicators.MACD.signal?.length) {
-      const latestMACD = indicators.MACD.macd.at(-1);
-      const latestSignal = indicators.MACD.signal.at(-1);
-      score += latestMACD > latestSignal ? 8 : -8;
+    // MACD (histogram bias)
+    const macd = indicators?.MACD || indicators?.macd;
+    if (macd && Array.isArray(macd.histogram || macd.hist)) {
+      const h = Number((macd.histogram || macd.hist).at(-1));
+      if (!Number.isNaN(h)) score += h > 0 ? 7 : -7;
     }
 
-    if (indicators.SMA && indicators.SMA.length) {
-      const latestSMA = indicators.SMA.at(-1);
-      score += latestClose > latestSMA ? 7 : -7;
+    // Simple moving averages (SMA20/SMA50 if present)
+    const sma20 = indicators?.SMA?.values?.at?.(-1) ?? indicators?.SMA20?.at?.(-1);
+    const sma50 = indicators?.SMA50?.at?.(-1);
+    if (lastClose != null) {
+      if (sma20 != null && lastClose > sma20) score += 5;
+      if (sma50 != null && lastClose > sma50) score += 5;
     }
 
-    if (indicators.BollingerBands?.upper?.length && indicators.BollingerBands?.lower?.length) {
-      const latestUpper = indicators.BollingerBands.upper.at(-1);
-      const latestLower = indicators.BollingerBands.lower.at(-1);
-      if (latestClose > latestUpper) score -= 5;
-      else if (latestClose < latestLower) score += 5;
+    // Bollinger – near lower band (support) is slightly bullish; near upper, slightly bearish
+    const bb = indicators?.BollingerBands || indicators?.bollingerBands;
+    if (bb && Array.isArray(bb.lower) && Array.isArray(bb.upper) && lastClose != null) {
+      const lo = Number(bb.lower.at(-1));
+      const up = Number(bb.upper.at(-1));
+      if (!Number.isNaN(lo) && !Number.isNaN(up) && up > lo) {
+        const pos = (lastClose - lo) / (up - lo); // 0=lower, 1=upper
+        if (pos < 0.25) score += 4;
+        if (pos > 0.75) score -= 4;
+      }
     }
 
-    if (indicators.patterns?.length) {
-      const latestPattern = indicators.patterns.at(-1);
-      score += (latestPattern.direction === 'bullish' ? 1 : -1) * (latestPattern.confidence / 10);
+    return clamp(Math.round(score), 0, 100);
     }
 
-    return Math.max(0, Math.min(100, Math.round(score)));
-  }
-
-  // ---------- NEW: FUNDAMENTAL + SENTIMENT (lightweight stubs) ----------
-
-  // If you have fundamentals in dataService, swap this stub to real data lookups.
-  async getFundamentalAnalysis(symbol, stockData) {
-    // Simple placeholder based on trend & volatility proxies from price
-    const closes = (stockData?.ohlcv || []).map(d => d.close);
-    const last = closes.at(-1);
-    const prev = closes.at(-21) ?? closes[0];
-    const pctChg20 = last && prev ? ((last - prev) / prev) * 100 : 0;
-
-    const score =
-      (pctChg20 > 0 ? 55 : 45) // crude trend proxy
-      + Math.max(-5, Math.min(5, pctChg20 / 10));
-
-    return {
-      score: Math.max(0, Math.min(100, Math.round(score))),
-      valuation: 'neutral',
-      notes: 'Placeholder fundamentals; wire to real financials when available'
-    };
-  }
-
-  // You can later replace this with a news/NLP pipeline.
-    async getSentimentAnalysis(symbol) {
+  // ------------------------------
+  // SENTIMENT (Alpha Vantage News)
+  // ------------------------------
+  async getSentimentAnalysis(symbol) {
     try {
-        const s = await fetchAlphaVantageNewsSentiment(symbol);
-        return s;
+      const s = await fetchAlphaVantageNewsSentiment(symbol);
+      // ensure 0..100 score
+      const score = Math.max(0, Math.min(100, Math.round(Number(s?.score ?? 50))));
+      return { ...s, score };
     } catch (err) {
-        console.warn('⚠️ Sentiment fetch failed, using placeholder:', err.message);
-        return {
+      console.warn('⚠️ Sentiment fetch failed, using placeholder:', err.message);
+      return {
         score: 50,
         source: 'placeholder',
         summary: `No external sentiment source configured or fetch failed for ${symbol}.`
-        };
+      };
     }
-    }
+  }
 
-  // ---------- NEW: WEIGHTING / SUMMARY / META ----------
-
+  // -------------------------------
+  // WEIGHTING / SUMMARY / META
+  // -------------------------------
   calculateWeightedScore(fundamental, technical, sentiment, weights) {
     const f = Number(fundamental?.score ?? 50);
     const t = Number(technical?.score ?? 50);
@@ -198,48 +280,73 @@ class AnalysisService {
     const wS = Number(weights?.sentiment ?? 33);
     const wSum = (wF + wT + wS) || 1;
 
-    const weighted =
-      (f * wF + t * wT + s * wS) / wSum;
-
+    const weighted = (f * wF + t * wT + s * wS) / wSum;
     return Math.round(Math.max(0, Math.min(100, weighted)));
   }
 
   async generateWeightedAISummary(symbol, fundamental, technical, sentiment, weights, weightedScore) {
     const prompt = `
-You are a senior equity analyst. Summarize a composite signal.
+You are a senior equity analyst. Summarize the composite signal.
 
 Symbol: ${symbol}
-Scores:
+
+Scores (0–100):
 - Fundamental: ${fundamental?.score}
-- Technical: ${technical?.score}
-- Sentiment: ${sentiment?.score}
+- Technical:   ${technical?.score}
+- Sentiment:   ${sentiment?.score}
 
 Weights (%):
 - Fundamental: ${weights?.fundamental}
-- Technical: ${weights?.technical}
-- Sentiment: ${weights?.sentiment}
+- Technical:   ${weights?.technical}
+- Sentiment:   ${weights?.sentiment}
 
-Overall weighted score: ${weightedScore} (0-100).
-Provide a 3-5 bullet verdict with a BUY/HOLD/SELL call consistent with the score.
-    `.trim();
+Weighted Score: ${weightedScore}
 
-    const summary = await geminiService.generateInsights(prompt);
-    return { summary };
+Key Fundamental Notes: ${fundamental?.notes || '—'}
+Key Technical Signals: ${technical?.recommendation || '—'}
+Key Sentiment Notes: ${sentiment?.summary || '—'}
+
+Write 4–6 short, plain-English bullet points with an overall BUY/HOLD/SELL call.
+`;
+
+    // Try Gemini if available in your geminiService; otherwise fallback
+    try {
+      if (geminiService && typeof geminiService.generateInsights === 'function') {
+        const text = await geminiService.generateInsights(prompt);
+        if (typeof text === 'string' && text.trim().length > 0) return text.trim();
+        if (text?.message) return String(text.message);
+      }
+    } catch (err) {
+      console.warn('Gemini summary failed; using fallback:', err.message);
+    }
+
+    // Fallback summary
+    const rec = this.getRecommendationFromScore(weightedScore);
+    return [
+      `Overall ${rec} with composite score ${weightedScore}/100 based on provided weights.`,
+      `Fundamentals score ${fundamental?.score ?? 50} (${fundamental?.recommendation || '—'}).`,
+      `Technicals score ${technical?.score ?? 50} (${technical?.recommendation || '—'}).`,
+      `Sentiment score ${sentiment?.score ?? 50} (${sentiment?.source || '—'}).`,
+      fundamental?.notes ? `Fundamental note: ${fundamental.notes}` : null,
+      sentiment?.summary ? `Sentiment note: ${sentiment.summary}` : null
+    ].filter(Boolean).join('\n');
   }
 
-  calculateConfidenceLevel(weightedScore) {
-    if (weightedScore >= 75) return 'high';
-    if (weightedScore >= 55) return 'medium';
+  calculateConfidenceLevel(score) {
+    if (score >= 75) return 'high';
+    if (score >= 60) return 'medium';
     return 'low';
   }
 
   calculateRiskLevel(fundamental, technical, sentiment) {
-    const f = fundamental?.score ?? 50;
-    const t = technical?.score ?? 50;
-    const s = sentiment?.score ?? 50;
+    // simple dispersion-based risk
+    const f = Number(fundamental?.score ?? 50);
+    const t = Number(technical?.score ?? 50);
+    const s = Number(sentiment?.score ?? 50);
     const avg = (f + t + s) / 3;
-    if (avg >= 70) return 'moderate';
-    if (avg >= 50) return 'medium';
+    const variance = ((f - avg) ** 2 + (t - avg) ** 2 + (s - avg) ** 2) / 3;
+    if (variance < 100) return 'low';
+    if (variance < 225) return 'medium';
     return 'elevated';
   }
 
