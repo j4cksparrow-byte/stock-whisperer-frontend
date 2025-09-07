@@ -178,9 +178,6 @@ curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=3M&mode=advanced&
 
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## ⚠️ Disclaimer
 
