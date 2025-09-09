@@ -1,6 +1,4 @@
 
-
-```markdown
 # Hybrid Stock Analysis API (v3.0)
 
 A modular Node.js API that provides comprehensive stock analysis by combining **fundamental, technical, and sentiment** data, summarized by Google's Gemini AI. The backend is designed for scalability and performance, featuring services/controllers, in-memory caching, and rate limiting.
