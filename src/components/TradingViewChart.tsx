@@ -1,5 +1,6 @@
 
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useTheme } from '@/contexts/ThemeContext';
 
 declare global {
   interface Window {
@@ -11,10 +12,29 @@ interface TradingViewChartProps {
   symbol: string;
   exchange?: string;
   height?: number;
+  width?: number;
+  interval?: string;
+  studies?: string[];
+  hideTopToolbar?: boolean;
+  hideSideToolbar?: boolean;
+  withDateRanges?: boolean;
+  className?: string;
 }
 
-const TradingViewChart = ({ symbol, exchange = 'NASDAQ', height = 300 }: TradingViewChartProps) => {
+const TradingViewChart: React.FC<TradingViewChartProps> = ({
+  symbol,
+  exchange = 'NASDAQ',
+  height = 300,
+  width,
+  interval = 'D',
+  studies = ['RSI@tv-basicstudies', 'MASimple@tv-basicstudies'],
+  hideTopToolbar = false,
+  hideSideToolbar = false,
+  withDateRanges = true,
+  className = ''
+}) => {
   const container = useRef<HTMLDivElement>(null);
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     // Create the script element for TradingView Widget
@@ -29,22 +49,22 @@ const TradingViewChart = ({ symbol, exchange = 'NASDAQ', height = 300 }: Trading
         console.log('TradingView Widget initializing with symbol:', formattedSymbol);
         
         new window.TradingView.widget({
-          width: '100%',
+          width: width || '100%',
           height: height,
           symbol: formattedSymbol,
-          interval: 'D',
+          interval: interval,
           timezone: 'Etc/UTC',
-          theme: 'dark',
+          theme: resolvedTheme,
           style: '1',
           locale: 'en',
-          toolbar_bg: '#1e293b', // Tailwind slate-800
+          toolbar_bg: resolvedTheme === 'dark' ? '#1e293b' : '#ffffff',
           enable_publishing: false,
           allow_symbol_change: true,
           container_id: container.current.id,
-          hide_top_toolbar: false,
-          hide_side_toolbar: false,
-          withdateranges: true,
-          studies: ['RSI@tv-basicstudies', 'MASimple@tv-basicstudies'],
+          hide_top_toolbar: hideTopToolbar,
+          hide_side_toolbar: hideSideToolbar,
+          withdateranges: withDateRanges,
+          studies: studies,
         });
       }
     };
@@ -55,13 +75,13 @@ const TradingViewChart = ({ symbol, exchange = 'NASDAQ', height = 300 }: Trading
         document.head.removeChild(script);
       }
     };
-  }, [symbol, exchange, height]);
+  }, [symbol, exchange, height, width, interval, studies, hideTopToolbar, hideSideToolbar, withDateRanges, resolvedTheme]);
 
   return (
     <div 
       id={`tradingview_${symbol.replace(/[^\w]/g, '_')}`} 
       ref={container} 
-      className="w-full rounded-lg overflow-hidden"
+      className={`w-full rounded-lg overflow-hidden ${className}`}
       style={{ height: `${height}px` }} 
     />
   );
