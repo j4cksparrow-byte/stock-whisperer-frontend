@@ -1,3 +1,6 @@
+Here's the updated README.md with the new technical analysis features:
+
+```markdown
 # Hybrid Stock Analysis API (v3.0)
 
 A modular Node.js API that provides comprehensive stock analysis by combining **fundamental, technical, and sentiment** data, summarized by Google's Gemini AI. The backend is designed for scalability and performance, featuring services/controllers, in-memory caching, and rate limiting.
@@ -11,8 +14,10 @@ A modular Node.js API that provides comprehensive stock analysis by combining **
 - **Dynamic Analysis Modes:**
   - **`normal` mode:** Provides fundamentals and an AI summary
   - **`advanced` mode:** A comprehensive analysis that generates a single `weightedScore` from all three data points
-- **Extensive Technical Suite:** Support for key indicators including **RSI, SMA/EMA, MACD, Bollinger Bands, Stochastic, ATR, and OBV**, with configurable parameters per request
+- **Advanced Technical Suite:** Support for key indicators including **RSI, SMA/EMA, MACD, Bollinger Bands, Stochastic, ATR, and OBV**, with configurable parameters per request
+- **Pattern Recognition:** Automatic candlestick pattern detection for enhanced technical analysis
 - **Flexible Weighting & Presets:** Customize the influence of each data point (`fundamental`, `technical`, `sentiment`) or use built-in presets like `conservative`, `technical`, `sentiment`, and `balanced`
+- **Custom Indicators:** Enable/disable specific indicators and customize their parameters
 - **Developer-Friendly:** Includes health checks, API key validation, and connectivity tests for quick setup and debugging
 
 ---
@@ -24,7 +29,7 @@ A modular Node.js API that provides comprehensive stock analysis by combining **
   - **Axios** for HTTP requests
   - **Alpha Vantage** for market data
   - **Google Gemini** for AI summaries
-- **Utilities:** In-memory caching
+- **Utilities:** In-memory caching, technical indicator calculations
 
 ---
 
@@ -129,6 +134,7 @@ The core analysis endpoint is `GET /api/stocks/analysis/:symbol`.
   - **Example:** `...&mode=advanced&fundamental=30&technical=40&sentiment=30`
 - **`indicators`**: A URL-encoded JSON string to customize indicator parameters
   - **Example:** `...&indicators={"RSI":{"period":14},"MACD":{...}}`
+  - **Disable patterns:** `...&indicators={"patterns":{"enabled":false}}`
 
 ---
 
@@ -144,6 +150,11 @@ curl "http://localhost:3001/api/stocks/search?query=apple"
 curl "http://localhost:3001/api/stocks/trending"
 ```
 
+### Get Technical Indicators
+```bash
+curl "http://localhost:3001/api/stocks/indicators"
+```
+
 ### Normal Analysis for AAPL
 ```bash
 curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=1M&mode=normal"
@@ -154,6 +165,16 @@ curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=1M&mode=normal"
 curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=3M&mode=advanced&fundamental=40&technical=35&sentiment=25"
 ```
 
+### Advanced Analysis with Custom Indicators
+```bash
+curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&indicators=%7B%22RSI%22%3A%7B%22period%22%3A14%7D%2C%22MACD%22%3A%7B%22fastPeriod%22%3A12%2C%22slowPeriod%22%3A26%2C%22signalPeriod%22%3A9%7D%7D"
+```
+
+### Advanced Analysis with Disabled Patterns
+```bash
+curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&indicators=%7B%22patterns%22%3A%7B%22enabled%22%3Afalse%7D%7D"
+```
+
 ---
 
 ## 📝 Notes & Behaviors
@@ -162,6 +183,8 @@ curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=3M&mode=advanced&
 - **Rate Limiting:** The API uses a server-side rate limit of **100 requests per 15 minutes** per IP address
 - **Error Handling:** The API provides consistent JSON error envelopes with clear status codes (e.g., `400` for bad input, `500` for server errors)
 - **Modular Design:** The project is structured with separate **controllers** (request/response logic) and **services** (data fetching, analysis, caching)
+- **Technical Indicators:** Supports RSI, MACD, Bollinger Bands, SMA, EMA, Stochastic, ATR, and OBV with customizable parameters
+- **Pattern Recognition:** Automatically detects common candlestick patterns for enhanced technical analysis
 
 ---
 
@@ -178,7 +201,16 @@ curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=3M&mode=advanced&
 
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
-
 ## ⚠️ Disclaimer
 
 This API is for educational and research purposes only. Not financial advice. Stock investments carry risks, and past performance doesn't guarantee future results.
+```
+
+Key changes made:
+1. Added new features to the feature list
+2. Enhanced the technical stack section
+3. Added examples for new endpoints
+4. Updated parameters section with indicator customization
+5. Added more example calls for technical analysis features
+6. Enhanced notes section with technical analysis details
+7. Maintained the existing roadmap items

@@ -99,6 +99,7 @@ app.get('/', (req, res) => {
       advancedAnalysis: '/api/stocks/analysis/AAPL?timeframe=3M&mode=advanced',
       customWeightAnalysis: '/api/stocks/analysis/AAPL?timeframe=6M&mode=advanced&fundamental=30&technical=40&sentiment=30',
       customIndicators: '/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&indicators={"RSI":{"period":14},"MACD":{"fastPeriod":12,"slowPeriod":26,"signalPeriod":9}}',
+      disablePatterns: '/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&indicators={"patterns":{"enabled":false}}',
       defaultWeights: '/api/stocks/weights/defaults'
     },
     examples: {
@@ -108,7 +109,8 @@ app.get('/', (req, res) => {
       normalAnalysis: 'curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=1M&mode=normal"',
       advancedAnalysis: 'curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=3M&mode=advanced"',
       customWeights: 'curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=3M&mode=advanced&fundamental=30&technical=40&sentiment=30"',
-      customIndicators: 'curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&indicators={\"RSI\":{\"period\":14},\"MACD\":{\"fastPeriod\":12,\"slowPeriod\":26,\"signalPeriod\":9}}"'
+      customIndicators: 'curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&indicators={\"RSI\":{\"period\":14},\"MACD\":{\"fastPeriod\":12,\"slowPeriod\":26,\"signalPeriod\":9}}"',
+      disablePatterns: 'curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&indicators={\"patterns\":{\"enabled\":false}}"'
     },
     timeframeOptions: {
       description: 'Timeframe parameter controls the historical data period for analysis',
@@ -178,6 +180,8 @@ app.listen(PORT, async () => {
   console.log(`📊 Normal Analysis: http://localhost:${PORT}/api/stocks/analysis/AAPL?timeframe=1M&mode=normal`);
   console.log(`⚖️  Advanced Analysis: http://localhost:${PORT}/api/stocks/analysis/AAPL?timeframe=3M&mode=advanced`);
   console.log(`🎯 Custom Weights: http://localhost:${PORT}/api/stocks/analysis/AAPL?timeframe=3M&mode=advanced&fundamental=30&technical=40&sentiment=30`);
+  console.log(`⚙️  Custom Indicators: http://localhost:${PORT}/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&indicators={"RSI":{"period":14},"MACD":{"fastPeriod":12,"slowPeriod":26,"signalPeriod":9}}`);
+  console.log(`🚫 Disable Patterns: http://localhost:${PORT}/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&indicators={"patterns":{"enabled":false}}`);
   console.log(`⚙️  Default Weights: http://localhost:${PORT}/api/stocks/weights/defaults`);
   console.log('\n⏰ Timeframe Options:');
   console.log('   1D - 1 Day     1W - 1 Week    1M - 1 Month (default)');
@@ -190,6 +194,10 @@ app.listen(PORT, async () => {
   console.log('   • Technical Focus: 20% Fund + 60% Tech + 20% Sent');
   console.log('   • Sentiment Focus: 30% Fund + 25% Tech + 45% Sent');
   console.log('   • Custom: Set your own percentages with timeframe support!');
+  console.log('\n🎯 New: Custom Indicator Selection!');
+  console.log('   • Choose specific indicators to calculate');
+  console.log('   • Customize parameters for each indicator');
+  console.log('   • Disable pattern recognition if not needed');
 
   // Test connections on startup
   console.log('\n🧪 Testing API connections...');

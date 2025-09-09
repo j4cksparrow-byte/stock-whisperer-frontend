@@ -49,6 +49,35 @@ class StockController {
     }
   }
 
+  // Helper method to parse indicators configuration
+  parseIndicatorsConfig(indicatorsParam) {
+    if (!indicatorsParam) return {};
+    
+    try {
+      const config = JSON.parse(indicatorsParam);
+      
+      // Validate the structure
+      const validIndicators = [
+        'SMA', 'EMA', 'MACD', 'RSI', 'Stochastic', 
+        'BollingerBands', 'ATR', 'OBV', 'patterns'
+      ];
+      
+      const validatedConfig = {};
+      for (const [indicator, settings] of Object.entries(config)) {
+        if (validIndicators.includes(indicator)) {
+          validatedConfig[indicator] = settings;
+        } else {
+          console.warn(`Unknown indicator: ${indicator}`);
+        }
+      }
+      
+      return validatedConfig;
+    } catch (error) {
+      console.warn('Invalid indicators parameter, using default configuration:', error.message);
+      return {};
+    }
+  }
+
   // Main analysis method with weight support
   async getStockAnalysis(req, res) {
     try {
@@ -83,17 +112,13 @@ class StockController {
       }
 
       // Parse technical indicators configuration
-      let indicatorsConfig = {};
-      try {
-        indicatorsConfig = JSON.parse(indicators);
-      } catch (e) {
-        console.log('Using default indicator configuration');
-      }
+      const indicatorsConfig = this.parseIndicatorsConfig(indicators);
 
       console.log(`📊 Analyzing ${symbol.toUpperCase()} - ${timeframe} - ${mode} mode`);
       if (mode === 'advanced') {
         console.log(`⚖️  Weights: F:${weights.fundamental}% T:${weights.technical}% S:${weights.sentiment}%`);
         console.log(`📈 Indicators: ${Object.keys(indicatorsConfig).join(', ') || 'Default'}`);
+        console.log(`🤖 AI Analysis: Enhanced mode with full data integration`);
       }
 
       // Check cache

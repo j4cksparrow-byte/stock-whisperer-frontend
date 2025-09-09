@@ -169,6 +169,7 @@ class AnalysisService {
         throw new Error('Insufficient OHLCV data for technical analysis');
       }
 
+      // Use custom indicators if specified, otherwise use all
       const indicators = await technicalAnalysisService.calculateIndicators(
         stockData.ohlcv,
         indicatorsConfig
@@ -207,7 +208,7 @@ class AnalysisService {
 
     const lastClose = Array.isArray(ohlcv) && ohlcv.length ? ohlcv[ohlcv.length - 1].close : null;
 
-    // RSI
+    // RSI - only if RSI was calculated
     const rsiSeries = indicators?.RSI || indicators?.rsi;
     if (Array.isArray(rsiSeries) && rsiSeries.length) {
       const rsi = Number(rsiSeries.at(-1));
@@ -218,35 +219,41 @@ class AnalysisService {
       }
     }
 
-    // MACD (histogram bias)
-    const macd = indicators?.MACD || indicators?.macd;
-    if (macd && Array.isArray(macd.histogram || macd.hist)) {
-      const h = Number((macd.histogram || macd.hist).at(-1));
-      if (!Number.isNaN(h)) score += h > 0 ? 7 : -7;
+    // MACD (histogram bias) - only if MACD was calculated
+    if (indicators?.MACD || indicators?.macd) {
+      const macd = indicators.MACD || indicators.macd;
+      if (macd && Array.isArray(macd.histogram || macd.hist)) {
+        const h = Number((macd.histogram || macd.hist).at(-1));
+        if (!Number.isNaN(h)) score += h > 0 ? 7 : -7;
+      }
     }
 
-    // Simple moving averages (SMA20/SMA50 if present)
-    const sma20 = indicators?.SMA?.values?.at?.(-1) ?? indicators?.SMA20?.at?.(-1);
-    const sma50 = indicators?.SMA50?.at?.(-1);
-    if (lastClose != null) {
-      if (sma20 != null && lastClose > sma20) score += 5;
-      if (sma50 != null && lastClose > sma50) score += 5;
+    // Simple moving averages - only if SMA was calculated
+    if (indicators?.SMA || indicators?.SMA20) {
+      const sma20 = indicators?.SMA?.values?.at?.(-1) ?? indicators?.SMA20?.at?.(-1);
+      const sma50 = indicators?.SMA50?.at?.(-1);
+      if (lastClose != null) {
+        if (sma20 != null && lastClose > sma20) score += 5;
+        if (sma50 != null && lastClose > sma50) score += 5;
+      }
     }
 
-    // Bollinger – near lower band (support) is slightly bullish; near upper, slightly bearish
-    const bb = indicators?.BollingerBands || indicators?.bollingerBands;
-    if (bb && Array.isArray(bb.lower) && Array.isArray(bb.upper) && lastClose != null) {
-      const lo = Number(bb.lower.at(-1));
-      const up = Number(bb.upper.at(-1));
-      if (!Number.isNaN(lo) && !Number.isNaN(up) && up > lo) {
-        const pos = (lastClose - lo) / (up - lo); // 0=lower, 1=upper
-        if (pos < 0.25) score += 4;
-        if (pos > 0.75) score -= 4;
+    // Bollinger Bands - only if BollingerBands was calculated
+    if (indicators?.BollingerBands || indicators?.bollingerBands) {
+      const bb = indicators.BollingerBands || indicators.bollingerBands;
+      if (bb && Array.isArray(bb.lower) && Array.isArray(bb.upper) && lastClose != null) {
+        const lo = Number(bb.lower.at(-1));
+        const up = Number(bb.upper.at(-1));
+        if (!Number.isNaN(lo) && !Number.isNaN(up) && up > lo) {
+          const pos = (lastClose - lo) / (up - lo); // 0=lower, 1=upper
+          if (pos < 0.25) score += 4;
+          if (pos > 0.75) score -= 4;
+        }
       }
     }
 
     return clamp(Math.round(score), 0, 100);
-    }
+  }
 
   // ------------------------------
   // SENTIMENT (Alpha Vantage News)
@@ -285,28 +292,100 @@ class AnalysisService {
   }
 
   async generateWeightedAISummary(symbol, fundamental, technical, sentiment, weights, weightedScore) {
+    // Format technical indicators for the prompt
+    const formatTechnicalIndicators = (indicators) => {
+      if (!indicators) return "No technical indicators available";
+      
+      let result = "";
+      for (const [key, value] of Object.entries(indicators)) {
+        if (key === 'patterns' && Array.isArray(value)) {
+          result += `Patterns detected: ${value.length}\n`;
+          value.forEach(pattern => {
+            result += `  - ${pattern.pattern} (${pattern.direction}, confidence: ${pattern.confidence}%)\n`;
+          });
+        } else if (typeof value === 'object' && value !== null) {
+          // Handle nested indicator objects
+          result += `${key}:\n`;
+          for (const [subKey, subValue] of Object.entries(value)) {
+            if (Array.isArray(subValue)) {
+              // Get the last value for time series indicators
+              const lastValue = subValue[subValue.length - 1];
+              result += `  ${subKey}: ${typeof lastValue === 'number' ? lastValue.toFixed(4) : lastValue}\n`;
+            } else {
+              result += `  ${subKey}: ${subValue}\n`;
+            }
+          }
+        } else if (Array.isArray(value)) {
+          // Get the last value for simple arrays
+          const lastValue = value[value.length - 1];
+          result += `${key}: ${typeof lastValue === 'number' ? lastValue.toFixed(4) : lastValue}\n`;
+        } else {
+          result += `${key}: ${value}\n`;
+        }
+      }
+      return result;
+    };
+
+    // Format fundamental metrics for the prompt
+    const formatFundamentalMetrics = (fundamental) => {
+      if (!fundamental || !fundamental.metrics) return "No fundamental metrics available";
+      
+      let result = "";
+      for (const [key, value] of Object.entries(fundamental.metrics)) {
+        result += `${key}: ${value}\n`;
+      }
+      return result;
+    };
+
     const prompt = `
-You are a senior equity analyst. Summarize the composite signal.
+You are a senior equity analyst providing comprehensive investment analysis.
 
-Symbol: ${symbol}
+STOCK: ${symbol}
+TIMEFRAME: Current analysis
 
-Scores (0–100):
-- Fundamental: ${fundamental?.score}
-- Technical:   ${technical?.score}
-- Sentiment:   ${sentiment?.score}
+COMPREHENSIVE ANALYSIS DATA:
 
-Weights (%):
-- Fundamental: ${weights?.fundamental}
-- Technical:   ${weights?.technical}
-- Sentiment:   ${weights?.sentiment}
+FUNDAMENTAL ANALYSIS (Weight: ${weights?.fundamental}%):
+Score: ${fundamental?.score}/100
+Recommendation: ${fundamental?.recommendation}
+Breakdown:
+- Valuation: ${fundamental?.breakdown?.valuation}/100
+- Growth: ${fundamental?.breakdown?.growth}/100
+- Profitability: ${fundamental?.breakdown?.profitability}/100
+- Leverage: ${fundamental?.breakdown?.leverage}/100
+- Cashflow: ${fundamental?.breakdown?.cashflow}/100
 
-Weighted Score: ${weightedScore}
+Key Metrics:
+${formatFundamentalMetrics(fundamental)}
 
-Key Fundamental Notes: ${fundamental?.notes || '—'}
-Key Technical Signals: ${technical?.recommendation || '—'}
-Key Sentiment Notes: ${sentiment?.summary || '—'}
+TECHNICAL ANALYSIS (Weight: ${weights?.technical}%):
+Score: ${technical?.score}/100
+Recommendation: ${technical?.recommendation}
+Indicators Configuration: ${JSON.stringify(technical?.configuration || {})}
 
-Write 4–6 short, plain-English bullet points with an overall BUY/HOLD/SELL call.
+Technical Indicators:
+${formatTechnicalIndicators(technical?.indicators)}
+
+SENTIMENT ANALYSIS (Weight: ${weights?.sentiment}%):
+Score: ${sentiment?.score}/100
+Summary: ${sentiment?.summary || 'No sentiment data available'}
+
+OVERALL ASSESSMENT:
+Weighted Score: ${weightedScore}/100
+Overall Recommendation: ${this.getRecommendationFromScore(weightedScore)}
+
+ANALYSIS REQUEST:
+Provide a comprehensive investment analysis including:
+
+1. EXECUTIVE SUMMARY: Brief overview of the investment opportunity
+2. FUNDAMENTAL ASSESSMENT: Analysis of company financial health, valuation, and growth prospects
+3. TECHNICAL ASSESSMENT: Price action analysis, trend identification, and key levels
+4. SENTIMENT ASSESSMENT: Market psychology and news impact evaluation
+5. RISK ASSESSMENT: Key risks and risk management recommendations
+6. INVESTMENT RECOMMENDATION: Clear BUY/HOLD/SELL recommendation with specific price targets and time horizons
+7. KEY MONITORING METRICS: What to watch going forward
+
+Format your response with clear section headings and bullet points for readability.
 `;
 
     // Try Gemini if available in your geminiService; otherwise fallback
@@ -320,15 +399,16 @@ Write 4–6 short, plain-English bullet points with an overall BUY/HOLD/SELL cal
       console.warn('Gemini summary failed; using fallback:', err.message);
     }
 
-    // Fallback summary
+    // Fallback summary (enhanced with more details)
     const rec = this.getRecommendationFromScore(weightedScore);
     return [
       `Overall ${rec} with composite score ${weightedScore}/100 based on provided weights.`,
-      `Fundamentals score ${fundamental?.score ?? 50} (${fundamental?.recommendation || '—'}).`,
-      `Technicals score ${technical?.score ?? 50} (${technical?.recommendation || '—'}).`,
-      `Sentiment score ${sentiment?.score ?? 50} (${sentiment?.source || '—'}).`,
+      `Fundamentals: ${fundamental?.score ?? 50}/100 (${fundamental?.recommendation || '—'})`,
+      `Technicals: ${technical?.score ?? 50}/100 (${technical?.recommendation || '—'})`,
+      `Sentiment: ${sentiment?.score ?? 50}/100`,
       fundamental?.notes ? `Fundamental note: ${fundamental.notes}` : null,
-      sentiment?.summary ? `Sentiment note: ${sentiment.summary}` : null
+      sentiment?.summary ? `Sentiment: ${sentiment.summary}` : null,
+      `Analysis includes ${Object.keys(technical?.indicators || {}).length} technical indicators`
     ].filter(Boolean).join('\n');
   }
 

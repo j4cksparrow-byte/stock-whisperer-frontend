@@ -22,6 +22,12 @@ class TechnicalAnalysisService {
 
   // Calculate all requested indicators
   async calculateIndicators(ohlcvData, indicatorsConfig = {}) {
+    // If custom indicators are specified, use them
+    if (Object.keys(indicatorsConfig).length > 0) {
+      return this.getCustomIndicators(ohlcvData, indicatorsConfig);
+    }
+    
+    // Otherwise, use the default behavior (all indicators)
     const results = {};
     const closes = ohlcvData.map(d => d.close);
     const highs = ohlcvData.map(d => d.high);
@@ -71,6 +77,69 @@ class TechnicalAnalysisService {
     } catch (error) {
       console.error('Technical analysis error:', error);
       throw new Error('Failed to calculate technical indicators');
+    }
+  }
+
+  // Calculate only requested indicators
+  getCustomIndicators(ohlcvData, indicatorsConfig = {}) {
+    const results = {};
+    const closes = ohlcvData.map(d => d.close);
+    const highs = ohlcvData.map(d => d.high);
+    const lows = ohlcvData.map(d => d.low);
+    const volumes = ohlcvData.map(d => d.volume);
+    
+    try {
+      // Calculate only requested indicators
+      for (const [indicator, settings] of Object.entries(indicatorsConfig)) {
+        if (settings.enabled === false) continue;
+        
+        switch (indicator) {
+          case 'SMA':
+            results.SMA = this.calculateSMA(closes, settings.period || this.defaultConfig.SMA.period);
+            break;
+          case 'EMA':
+            results.EMA = this.calculateEMA(closes, settings.period || this.defaultConfig.EMA.period);
+            break;
+          case 'MACD':
+            results.MACD = this.calculateMACD(closes, {
+              fastPeriod: settings.fastPeriod || this.defaultConfig.MACD.fastPeriod,
+              slowPeriod: settings.slowPeriod || this.defaultConfig.MACD.slowPeriod,
+              signalPeriod: settings.signalPeriod || this.defaultConfig.MACD.signalPeriod
+            });
+            break;
+          case 'RSI':
+            results.RSI = this.calculateRSI(closes, settings.period || this.defaultConfig.RSI.period);
+            break;
+          case 'Stochastic':
+            results.Stochastic = this.calculateStochastic(highs, lows, closes, {
+              period: settings.period || this.defaultConfig.Stochastic.period,
+              signalPeriod: settings.signalPeriod || this.defaultConfig.Stochastic.signalPeriod
+            });
+            break;
+          case 'BollingerBands':
+            results.BollingerBands = this.calculateBollingerBands(closes, {
+              period: settings.period || this.defaultConfig.BollingerBands.period,
+              stdDev: settings.stdDev || this.defaultConfig.BollingerBands.stdDev
+            });
+            break;
+          case 'ATR':
+            results.ATR = this.calculateATR(highs, lows, closes, settings.period || this.defaultConfig.ATR.period);
+            break;
+          case 'OBV':
+            results.OBV = this.calculateOBV(closes, volumes);
+            break;
+        }
+      }
+      
+      // Add pattern recognition if requested or by default
+      if (indicatorsConfig.patterns === undefined || indicatorsConfig.patterns.enabled !== false) {
+        results.patterns = this.recognizePatterns(ohlcvData);
+      }
+      
+      return results;
+    } catch (error) {
+      console.error('Custom technical analysis error:', error);
+      throw new Error('Failed to calculate custom technical indicators');
     }
   }
 
@@ -220,7 +289,7 @@ class TechnicalAnalysisService {
     return patterns;
   }
 
-  // Pattern detection helpers (unchanged)
+  // Pattern detection helpers
   isHammer(candle) {
     const bodySize = Math.abs(candle.open - candle.close);
     const lowerShadow = Math.min(candle.open, candle.close) - candle.low;
