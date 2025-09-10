@@ -1,4 +1,3 @@
-
 # Hybrid Stock Analysis API (v3.0)
 
 A modular Node.js API that provides comprehensive stock analysis by combining **fundamental, technical, and sentiment** data, summarized by Google's Gemini AI. The backend is designed for scalability and performance, featuring services/controllers, in-memory caching, and rate limiting.
@@ -16,6 +15,7 @@ A modular Node.js API that provides comprehensive stock analysis by combining **
 - **Pattern Recognition:** Automatic candlestick pattern detection for enhanced technical analysis
 - **Flexible Weighting & Presets:** Customize the influence of each data point (`fundamental`, `technical`, `sentiment`) or use built-in presets like `conservative`, `technical`, `sentiment`, and `balanced`
 - **Custom Indicators:** Enable/disable specific indicators and customize their parameters
+- **Centralized Caching:** Unified cache management with monitoring and maintenance endpoints
 - **Developer-Friendly:** Includes health checks, API key validation, and connectivity tests for quick setup and debugging
 
 ---
@@ -27,7 +27,7 @@ A modular Node.js API that provides comprehensive stock analysis by combining **
   - **Axios** for HTTP requests
   - **Alpha Vantage** for market data
   - **Google Gemini** for AI summaries
-- **Utilities:** In-memory caching, technical indicator calculations
+- **Utilities:** Centralized in-memory caching, technical indicator calculations
 
 ---
 
@@ -85,6 +85,9 @@ curl "http://localhost:3001/test-keys"
 
 # Test Live Connectivity to External APIs
 curl "http://localhost:3001/test-connections"
+
+# Check Cache Status
+curl "http://localhost:3001/cache/status"
 ```
 
 > **Windows PowerShell Tip:** Use `Invoke-WebRequest` instead of `curl`:
@@ -104,6 +107,9 @@ curl "http://localhost:3001/test-connections"
 | `GET` | `/health` | Server health check |
 | `GET` | `/test-keys` | API key validation flags |
 | `GET` | `/test-connections` | Live connectivity checks |
+| `GET` | `/cache/status` | Get cache statistics |
+| `DELETE` | `/cache/clear` | Clear all cache |
+| `POST` | `/cache/cleanup` | Clean up expired cache entries |
 
 ### Stock API Routes (`/api/stocks`)
 
@@ -173,11 +179,24 @@ curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&
 curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&indicators=%7B%22patterns%22%3A%7B%22enabled%22%3Afalse%7D%7D"
 ```
 
+### Cache Management Examples
+```bash
+# Check cache status
+curl "http://localhost:3001/cache/status"
+
+# Clear all cache
+curl -X DELETE "http://localhost:3001/cache/clear"
+
+# Clean up expired cache entries
+curl -X POST "http://localhost:3001/cache/cleanup"
+```
+
 ---
 
 ## 📝 Notes & Behaviors
 
-- **Caching:** Search and trending data are cached in-memory for ~5 minutes to reduce API calls and latency
+- **Centralized Caching:** All caching is now handled through a unified cache service with monitoring and management endpoints
+- **Cache Duration:** Data is cached in-memory for 5 minutes to reduce API calls and latency
 - **Rate Limiting:** The API uses a server-side rate limit of **100 requests per 15 minutes** per IP address
 - **Error Handling:** The API provides consistent JSON error envelopes with clear status codes (e.g., `400` for bad input, `500` for server errors)
 - **Modular Design:** The project is structured with separate **controllers** (request/response logic) and **services** (data fetching, analysis, caching)
@@ -192,6 +211,8 @@ curl "http://localhost:3001/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&
 - [ ] Add more sentiment data sources and richer market health checks
 - [ ] Provide a Postman collection and example JSON responses for easier testing
 - [ ] Generate an OpenAPI 3.1 specification for full documentation
+- [ ] Add persistent caching options (Redis integration)
+- [ ] Implement more advanced technical indicators and chart patterns
 
 ---
 
@@ -202,13 +223,3 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## ⚠️ Disclaimer
 
 This API is for educational and research purposes only. Not financial advice. Stock investments carry risks, and past performance doesn't guarantee future results.
-```
-
-Key changes made:
-1. Added new features to the feature list
-2. Enhanced the technical stack section
-3. Added examples for new endpoints
-4. Updated parameters section with indicator customization
-5. Added more example calls for technical analysis features
-6. Enhanced notes section with technical analysis details
-7. Maintained the existing roadmap items
