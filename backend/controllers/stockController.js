@@ -1,3 +1,4 @@
+// controllers/stockController.js
 const cacheService = require('../services/cacheService');
 const weightService = require('../services/weightService');
 const analysisService = require('../services/analysisService');
@@ -121,7 +122,7 @@ class StockController {
         console.log(`🤖 AI Analysis: Enhanced mode with full data integration`);
       }
 
-      // Check cache
+      // Check cache using shared cache service
       const cacheKey = `${symbol}_${timeframe}_${mode}_${JSON.stringify(weights)}_${JSON.stringify(indicatorsConfig)}`;
       const cached = cacheService.get(cacheKey);
       
@@ -148,7 +149,7 @@ class StockController {
         throw new Error('Invalid analysis mode. Use "normal" or "advanced"');
       }
 
-      // Cache the result
+      // Cache the result using shared cache service
       cacheService.set(cacheKey, analysis);
 
       res.json(analysis);

@@ -1,14 +1,14 @@
 // controllers/searchController.js
 const axios = require('axios');
+const cacheService = require('../services/cacheService');
 
 class SearchController {
   constructor() {
-    this.cache = new Map();
-    this.cacheTimeout = 5 * 60 * 1000; // 5 minutes cache
+    // Internal cache removed - using shared cacheService
   }
 
   // ----------------------------
-  //  Symbol search (unchanged)
+  //  Symbol search
   // ----------------------------
   async searchSymbols(req, res) {
     try {
@@ -23,16 +23,16 @@ class SearchController {
 
       console.log(`🔍 Searching symbols for: ${query}`);
 
-      // Check cache first
+      // Check cache using shared cache service
       const cacheKey = `search_${query.toLowerCase()}`;
-      const cached = this.cache.get(cacheKey);
+      const cached = cacheService.get(cacheKey);
 
-      if (cached && Date.now() - cached.timestamp < this.cacheTimeout) {
+      if (cached) {
         console.log('📋 Returning cached results');
         return res.json({
           status: 'success',
           query,
-          results: cached.data,
+          results: cached,
           source: 'cache'
         });
       }
@@ -46,11 +46,8 @@ class SearchController {
         searchResults = this.generateFallbackSearchResults(query);
       }
 
-      // Cache results
-      this.cache.set(cacheKey, {
-        data: searchResults,
-        timestamp: Date.now()
-      });
+      // Cache results using shared cache service
+      cacheService.set(cacheKey, searchResults);
 
       return res.json({
         status: 'success',
@@ -171,7 +168,7 @@ class SearchController {
   }
 
   // ----------------------------
-  //  Trending (now LIVE)
+  //  Trending
   // ----------------------------
   async getTrendingSymbols(req, res) {
     try {
@@ -181,16 +178,17 @@ class SearchController {
       const catKey = (category || 'all').toLowerCase();
       const enrichFlag = String(enrich).toLowerCase() === 'true';
 
-      // Cache check
+      // Cache check using shared cache service
       const cacheKey = `trending_${catKey}_${enrichFlag ? 'enriched' : 'plain'}`;
-      const cached = this.cache.get(cacheKey);
-      if (cached && Date.now() - cached.timestamp < this.cacheTimeout) {
+      const cached = cacheService.get(cacheKey);
+
+      if (cached) {
         console.log('📋 Returning cached trending results');
         return res.json({
           status: 'success',
-          trending: cached.data,
+          trending: cached,
           source: 'cache',
-          timestamp: cached.timestamp
+          timestamp: new Date().toISOString()
         });
       }
 
@@ -210,8 +208,8 @@ class SearchController {
         payload = await this.enrichNames(payload);
       }
 
-      // Cache & respond
-      this.cache.set(cacheKey, { data: payload, timestamp: Date.now() });
+      // Cache using shared cache service
+      cacheService.set(cacheKey, payload);
 
       return res.json({
         status: 'success',

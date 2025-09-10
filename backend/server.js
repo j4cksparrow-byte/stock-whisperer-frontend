@@ -1,3 +1,4 @@
+// server.js
 // Load environment variables
 require('dotenv').config();
 
@@ -7,6 +8,9 @@ const rateLimit = require('express-rate-limit');
 
 // Import routes
 const stockRoutes = require('./routes/stockRoutes');
+
+// Import cache service
+const cacheService = require('./services/cacheService');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -71,6 +75,33 @@ app.get('/test-connections', async (req, res) => {
   });
 });
 
+// Cache management endpoints
+app.get('/cache/status', (req, res) => {
+  const stats = cacheService.stats();
+  res.json({
+    status: 'success',
+    cache: stats,
+    message: `Cache contains ${stats.valid} valid items and ${stats.expired} expired items`
+  });
+});
+
+app.delete('/cache/clear', (req, res) => {
+  const beforeSize = cacheService.size();
+  cacheService.clear();
+  res.json({
+    status: 'success',
+    message: `Cache cleared (removed ${beforeSize} items)`
+  });
+});
+
+app.post('/cache/cleanup', (req, res) => {
+  const removed = cacheService.cleanup();
+  res.json({
+    status: 'success',
+    message: `Removed ${removed} expired cache entries`
+  });
+});
+
 // API Routes - Updated to use plural 'stocks'
 app.use('/api/stocks', stockRoutes);
 
@@ -87,11 +118,15 @@ app.get('/', (req, res) => {
       'Custom Weight Analysis',
       'Advanced Technical Indicators (RSI, MACD, Bollinger Bands, etc.)',
       'Pattern Recognition (Candlestick Patterns)',
-      'Customizable Indicator Parameters'
+      'Customizable Indicator Parameters',
+      'Cache Management'
     ],
     endpoints: {
       testKeys: '/test-keys',
       testConnections: '/test-connections',
+      cacheStatus: '/cache/status',
+      cacheClear: '/cache/clear',
+      cacheCleanup: '/cache/cleanup',
       technicalIndicators: '/api/stocks/indicators',
       stockSearch: '/api/stocks/search?query=SYMBOL',
       trendingStocks: '/api/stocks/trending',
@@ -143,6 +178,9 @@ app.use('*', (req, res) => {
       '/health',
       '/test-keys',
       '/test-connections',
+      '/cache/status',
+      '/cache/clear',
+      '/cache/cleanup',
       '/api/stocks/indicators',
       '/api/stocks/search?query=SYMBOL',
       '/api/stocks/trending',
@@ -174,7 +212,10 @@ app.listen(PORT, async () => {
   console.log('\n📋 Available Endpoints:');
   console.log(`🔍 Test Setup: http://localhost:${PORT}/test-keys`);
   console.log(`🧪 Test Connections: http://localhost:${PORT}/test-connections`);
-  console.log(`📊 Technical Indicators: http://localhost:${PORT}/api/stocks/indicators`);
+  console.log(`📊 Cache Status: http://localhost:${PORT}/cache/status`);
+  console.log(`🗑️  Clear Cache: http://localhost:${PORT}/cache/clear`);
+  console.log(`🧹 Cleanup Cache: http://localhost:${PORT}/cache/cleanup`);
+  console.log(`📈 Technical Indicators: http://localhost:${PORT}/api/stocks/indicators`);
   console.log(`🔎 Search Stocks: http://localhost:${PORT}/api/stocks/search?query=apple`);
   console.log(`📈 Trending: http://localhost:${PORT}/api/stocks/trending`);
   console.log(`📊 Normal Analysis: http://localhost:${PORT}/api/stocks/analysis/AAPL?timeframe=1M&mode=normal`);
@@ -190,6 +231,7 @@ app.listen(PORT, async () => {
   console.log('   • Multiple Technical Indicators (RSI, MACD, Bollinger Bands, etc.)');
   console.log('   • Candlestick Pattern Recognition');
   console.log('   • Customizable Indicator Parameters');
+  console.log('   • Cache Management Endpoints');
   console.log('   • Conservative: 50% Fund + 30% Tech + 20% Sent');
   console.log('   • Technical Focus: 20% Fund + 60% Tech + 20% Sent');
   console.log('   • Sentiment Focus: 30% Fund + 25% Tech + 45% Sent');

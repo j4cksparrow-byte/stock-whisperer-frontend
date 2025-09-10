@@ -1,6 +1,6 @@
 // services/fundamentalAnalysisService.js
 const axios = require('axios');
-const cache = require('./cacheService');
+const cacheService = require('./cacheService');
 
 class FundamentalAnalysisService {
   constructor() {
@@ -25,7 +25,7 @@ class FundamentalAnalysisService {
 
     // cache full analysis to reduce API calls
     const cacheKey = `fa_analysis_${symbol}`;
-    const cached = cache.get(cacheKey);
+    const cached = cacheService.get(cacheKey);
     if (cached) return { ...cached, source: 'cache' };
 
     try {
@@ -51,7 +51,7 @@ class FundamentalAnalysisService {
         timestamp: new Date().toISOString(),
       };
 
-      cache.set(cacheKey, result);
+      cacheService.set(cacheKey, result);
       return result;
 
     } catch (err) {
