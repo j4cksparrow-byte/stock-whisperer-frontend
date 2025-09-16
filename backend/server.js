@@ -85,22 +85,41 @@ app.get('/cache/status', (req, res) => {
   });
 });
 
+// Support both DELETE and GET for cache clear
 app.delete('/cache/clear', (req, res) => {
+  handleCacheClear(req, res);
+});
+
+app.get('/cache/clear', (req, res) => {
+  handleCacheClear(req, res);
+});
+
+// Support both POST and GET for cache cleanup
+app.post('/cache/cleanup', (req, res) => {
+  handleCacheCleanup(req, res);
+});
+
+app.get('/cache/cleanup', (req, res) => {
+  handleCacheCleanup(req, res);
+});
+
+// Helper functions for cache operations
+function handleCacheClear(req, res) {
   const beforeSize = cacheService.size();
   cacheService.clear();
   res.json({
     status: 'success',
     message: `Cache cleared (removed ${beforeSize} items)`
   });
-});
+}
 
-app.post('/cache/cleanup', (req, res) => {
+function handleCacheCleanup(req, res) {
   const removed = cacheService.cleanup();
   res.json({
     status: 'success',
     message: `Removed ${removed} expired cache entries`
   });
-});
+}
 
 // API Routes - Updated to use plural 'stocks'
 app.use('/api/stocks', stockRoutes);
@@ -125,8 +144,8 @@ app.get('/', (req, res) => {
       testKeys: '/test-keys',
       testConnections: '/test-connections',
       cacheStatus: '/cache/status',
-      cacheClear: '/cache/clear',
-      cacheCleanup: '/cache/cleanup',
+      cacheClear: '/cache/clear (DELETE or GET)',
+      cacheCleanup: '/cache/cleanup (POST or GET)',
       technicalIndicators: '/api/stocks/indicators',
       stockSearch: '/api/stocks/search?query=SYMBOL',
       trendingStocks: '/api/stocks/trending',
@@ -212,9 +231,9 @@ app.listen(PORT, async () => {
   console.log('\n📋 Available Endpoints:');
   console.log(`🔍 Test Setup: http://localhost:${PORT}/test-keys`);
   console.log(`🧪 Test Connections: http://localhost:${PORT}/test-connections`);
-  console.log(`📊 Cache Status: http://localhost:${PORT}/cache/status`);
-  console.log(`🗑️  Clear Cache: http://localhost:${PORT}/cache/clear`);
-  console.log(`🧹 Cleanup Cache: http://localhost:${PORT}/cache/cleanup`);
+    console.log(`📊 Cache Status: http://localhost:${PORT}/cache/status`);
+  console.log(`🗑️  Clear Cache: http://localhost:${PORT}/cache/clear (DELETE or GET)`);
+  console.log(`🧹 Cleanup Cache: http://localhost:${PORT}/cache/cleanup (POST or GET)`);
   console.log(`📈 Technical Indicators: http://localhost:${PORT}/api/stocks/indicators`);
   console.log(`🔎 Search Stocks: http://localhost:${PORT}/api/stocks/search?query=apple`);
   console.log(`📈 Trending: http://localhost:${PORT}/api/stocks/trending`);

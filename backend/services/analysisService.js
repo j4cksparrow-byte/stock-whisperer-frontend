@@ -19,6 +19,7 @@ class AnalysisService {
   async performNormalAnalysis(symbol, stockData, timeframe) {
     const sym = String(symbol || '').toUpperCase();
 
+    console.log(`🔍 Starting fundamental analysis for ${sym}...`);
     // Real fundamentals (Alpha Vantage pipeline with fallback inside)
     const fundamental = await this.getFundamentalAnalysis(sym);
 
@@ -36,6 +37,7 @@ class AnalysisService {
       overallScore
     );
 
+    console.log(`✅ Normal analysis completed for ${sym}`);
     return {
       status: 'success',
       symbol: sym,
@@ -80,6 +82,11 @@ class AnalysisService {
       sentiment: Number(rawWeights?.sentiment ?? weightService.defaultWeights.sentiment),
     });
 
+    console.log(`🔍 Starting advanced analysis for ${sym}...`);
+    console.log(`📊 Initiating fundamental analysis for ${sym}...`);
+    console.log(`📊 Initiating technical analysis for ${sym}...`);
+    console.log(`📊 Initiating sentiment analysis for ${sym}...`);
+
     // Parallel pipelines
     const [fundamentalAnalysis, technicalAnalysis, sentimentAnalysis] = await Promise.all([
       this.getFundamentalAnalysis(sym),
@@ -106,6 +113,7 @@ class AnalysisService {
       weightedScore
     );
 
+    console.log(`✅ Advanced analysis completed for ${sym}`);
     return {
       status: 'success',
       symbol: sym,
@@ -145,9 +153,12 @@ class AnalysisService {
   // -------------------------------
   async getFundamentalAnalysis(symbol /*, stockData */) {
     try {
-      return await fundamentalAnalysisService.analyze(symbol);
+      const result = await fundamentalAnalysisService.analyze(symbol);
+      console.log(`✅ Fundamental analysis completed for ${symbol}`);
+      return result;
     } catch (err) {
       console.warn('⚠️ FundamentalAnalysisService failed, using neutral fallback:', err.message);
+      console.log(`⚠️ Fundamental analysis fallback used for ${symbol}`);
       return {
         score: 50,
         recommendation: 'HOLD',
@@ -176,7 +187,9 @@ class AnalysisService {
       );
 
       const score = this.calculateTechnicalScore(indicators, stockData.ohlcv);
-
+      
+      console.log(`✅ Technical analysis completed for ${symbol}`);
+      
       return {
         score,
         indicators,
@@ -185,6 +198,7 @@ class AnalysisService {
       };
     } catch (error) {
       console.error('Technical analysis error:', error.message);
+      console.log(`⚠️ Technical analysis fallback used for ${symbol}`);
       // Reasonable fallback from latest bar
       const last = stockData?.ohlcv?.at(-1) || {};
       return {
@@ -263,9 +277,11 @@ class AnalysisService {
       const s = await fetchAlphaVantageNewsSentiment(symbol);
       // ensure 0..100 score
       const score = Math.max(0, Math.min(100, Math.round(Number(s?.score ?? 50))));
+      console.log(`✅ Sentiment analysis completed for ${symbol}`);
       return { ...s, score };
     } catch (err) {
       console.warn('⚠️ Sentiment fetch failed, using placeholder:', err.message);
+      console.log(`⚠️ Sentiment analysis fallback used for ${symbol}`);
       return {
         score: 50,
         source: 'placeholder',
