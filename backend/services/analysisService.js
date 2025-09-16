@@ -266,6 +266,64 @@ class AnalysisService {
       }
     }
 
+    // ADX (Trend Strength) - only if ADX was calculated
+    if (indicators?.ADX) {
+      const adxSeries = indicators.ADX;
+      if (Array.isArray(adxSeries) && adxSeries.length) {
+        const adx = Number(adxSeries.at(-1));
+        if (!Number.isNaN(adx)) {
+          // ADX > 25 indicates strong trend
+          if (adx > 25) score += 3;
+          // ADX > 40 indicates very strong trend
+          if (adx > 40) score += 2;
+        }
+      }
+    }
+
+    // CCI (Commodity Channel Index) - only if CCI was calculated
+    if (indicators?.CCI) {
+      const cciSeries = indicators.CCI;
+      if (Array.isArray(cciSeries) && cciSeries.length) {
+        const cci = Number(cciSeries.at(-1));
+        if (!Number.isNaN(cci)) {
+          // CCI > 100 indicates overbought
+          if (cci > 100) score -= 8;
+          // CCI < -100 indicates oversold
+          else if (cci < -100) score += 8;
+          // CCI between -100 and 100 indicates neutral
+          else if (cci > 0) score += 2;
+        }
+      }
+    }
+
+    // Williams R - only if WilliamsR was calculated
+    if (indicators?.WilliamsR) {
+      const williamsRSeries = indicators.WilliamsR;
+      if (Array.isArray(williamsRSeries) && williamsRSeries.length) {
+        const williamsR = Number(williamsRSeries.at(-1));
+        if (!Number.isNaN(williamsR)) {
+          // Williams R < -80 indicates oversold
+          if (williamsR < -80) score += 7;
+          // Williams R > -20 indicates overbought
+          else if (williamsR > -20) score -= 7;
+        }
+      }
+    }
+
+    // Money Flow Index - only if MoneyFlowIndex was calculated
+    if (indicators?.MoneyFlowIndex) {
+      const mfiSeries = indicators.MoneyFlowIndex;
+      if (Array.isArray(mfiSeries) && mfiSeries.length) {
+        const mfi = Number(mfiSeries.at(-1));
+        if (!Number.isNaN(mfi)) {
+          // MFI > 80 indicates overbought
+          if (mfi > 80) score -= 6;
+          // MFI < 20 indicates oversold
+          else if (mfi < 20) score += 6;
+        }
+      }
+    }
+
     return clamp(Math.round(score), 0, 100);
   }
 

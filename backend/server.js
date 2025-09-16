@@ -11,6 +11,7 @@ const stockRoutes = require('./routes/stockRoutes');
 
 // Import cache service
 const cacheService = require('./services/cacheService');
+const apiTrackingService = require('./services/apiTrackingService');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -85,6 +86,31 @@ app.get('/cache/status', (req, res) => {
   });
 });
 
+// API tracking endpoints
+app.get('/api/tracking', (req, res) => {
+  const stats = apiTrackingService.getAPIStatistics();
+  res.json({
+    status: 'success',
+    statistics: stats
+  });
+});
+
+app.get('/api/tracking/calls', (req, res) => {
+  const calls = apiTrackingService.getAPICalls();
+  res.json({
+    status: 'success',
+    calls: calls
+  });
+});
+
+app.delete('/api/tracking/clear', (req, res) => {
+  apiTrackingService.clearTracking();
+  res.json({
+    status: 'success',
+    message: 'API tracking data cleared'
+  });
+});
+
 // Support both DELETE and GET for cache clear
 app.delete('/cache/clear', (req, res) => {
   handleCacheClear(req, res);
@@ -138,7 +164,8 @@ app.get('/', (req, res) => {
       'Advanced Technical Indicators (RSI, MACD, Bollinger Bands, etc.)',
       'Pattern Recognition (Candlestick Patterns)',
       'Customizable Indicator Parameters',
-      'Cache Management'
+      'Cache Management',
+      'API Usage Tracking'
     ],
     endpoints: {
       testKeys: '/test-keys',
@@ -146,6 +173,9 @@ app.get('/', (req, res) => {
       cacheStatus: '/cache/status',
       cacheClear: '/cache/clear (DELETE or GET)',
       cacheCleanup: '/cache/cleanup (POST or GET)',
+      apiTracking: '/api/tracking',
+      apiTrackingCalls: '/api/tracking/calls',
+      apiTrackingClear: '/api/tracking/clear (DELETE)',
       technicalIndicators: '/api/stocks/indicators',
       stockSearch: '/api/stocks/search?query=SYMBOL',
       trendingStocks: '/api/stocks/trending',
@@ -242,6 +272,9 @@ app.listen(PORT, async () => {
   console.log(`🎯 Custom Weights: http://localhost:${PORT}/api/stocks/analysis/AAPL?timeframe=3M&mode=advanced&fundamental=30&technical=40&sentiment=30`);
   console.log(`⚙️  Custom Indicators: http://localhost:${PORT}/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&indicators={"RSI":{"period":14},"MACD":{"fastPeriod":12,"slowPeriod":26,"signalPeriod":9}}`);
   console.log(`🚫 Disable Patterns: http://localhost:${PORT}/api/stocks/analysis/AAPL?timeframe=1M&mode=advanced&indicators={"patterns":{"enabled":false}}`);
+  console.log(`📊 API Tracking: http://localhost:${PORT}/api/tracking`);
+  console.log(`📋 API Calls: http://localhost:${PORT}/api/tracking/calls`);
+  console.log(`🗑️  Clear API Tracking: http://localhost:${PORT}/api/tracking/clear (DELETE)`);
   console.log(`⚙️  Default Weights: http://localhost:${PORT}/api/stocks/weights/defaults`);
   console.log('\n⏰ Timeframe Options:');
   console.log('   1D - 1 Day     1W - 1 Week    1M - 1 Month (default)');

@@ -16,7 +16,14 @@ class TechnicalAnalysisService {
       RSI: { period: 14 },
       Stochastic: { period: 14, signalPeriod: 3 },
       BollingerBands: { period: 20, stdDev: 2 },
-      ATR: { period: 14 }
+      ATR: { period: 14 },
+      ADX: { period: 14 },
+      CCI: { period: 20 },
+      WilliamsR: { period: 14 },
+      StandardDeviation: { period: 20 },
+      VolumeSMA: { period: 20 },
+      MoneyFlowIndex: { period: 14 },
+      Ichimoku: { conversionPeriod: 9, basePeriod: 26, spanPeriod: 52, displacement: 26 }
     };
   }
 
@@ -66,6 +73,27 @@ class TechnicalAnalysisService {
             break;
           case 'OBV':
             results.OBV = this.calculateOBV(closes, volumes);
+            break;
+          case 'ADX':
+            results.ADX = this.calculateADX(highs, lows, closes, settings.period);
+            break;
+          case 'CCI':
+            results.CCI = this.calculateCCI(highs, lows, closes, settings.period);
+            break;
+          case 'WilliamsR':
+            results.WilliamsR = this.calculateWilliamsR(highs, lows, closes, settings.period);
+            break;
+          case 'StandardDeviation':
+            results.StandardDeviation = this.calculateStandardDeviation(closes, settings.period);
+            break;
+          case 'VolumeSMA':
+            results.VolumeSMA = this.calculateVolumeSMA(volumes, settings.period);
+            break;
+          case 'MoneyFlowIndex':
+            results.MoneyFlowIndex = this.calculateMoneyFlowIndex(highs, lows, closes, volumes, settings.period);
+            break;
+          case 'Ichimoku':
+            results.Ichimoku = this.calculateIchimokuCloud(highs, lows, closes, settings);
             break;
         }
       }
@@ -127,6 +155,32 @@ class TechnicalAnalysisService {
             break;
           case 'OBV':
             results.OBV = this.calculateOBV(closes, volumes);
+            break;
+          case 'ADX':
+            results.ADX = this.calculateADX(highs, lows, closes, settings.period || this.defaultConfig.ADX.period);
+            break;
+          case 'CCI':
+            results.CCI = this.calculateCCI(highs, lows, closes, settings.period || this.defaultConfig.CCI.period);
+            break;
+          case 'WilliamsR':
+            results.WilliamsR = this.calculateWilliamsR(highs, lows, closes, settings.period || this.defaultConfig.WilliamsR.period);
+            break;
+          case 'StandardDeviation':
+            results.StandardDeviation = this.calculateStandardDeviation(closes, settings.period || this.defaultConfig.StandardDeviation.period);
+            break;
+          case 'VolumeSMA':
+            results.VolumeSMA = this.calculateVolumeSMA(volumes, settings.period || this.defaultConfig.VolumeSMA.period);
+            break;
+          case 'MoneyFlowIndex':
+            results.MoneyFlowIndex = this.calculateMoneyFlowIndex(highs, lows, closes, volumes, settings.period || this.defaultConfig.MoneyFlowIndex.period);
+            break;
+          case 'Ichimoku':
+            results.Ichimoku = this.calculateIchimokuCloud(highs, lows, closes, {
+              conversionPeriod: settings.conversionPeriod || 9,
+              basePeriod: settings.basePeriod || 26,
+              spanPeriod: settings.spanPeriod || 52,
+              displacement: settings.displacement || 26
+            });
             break;
         }
       }
@@ -220,6 +274,76 @@ class TechnicalAnalysisService {
       volume: volumes
     });
     return obv.getResult();
+  }
+
+  calculateADX(highs, lows, closes, period) {
+    const adx = new TechnicalIndicators.ADX({
+      period: period,
+      high: highs,
+      low: lows,
+      close: closes
+    });
+    return adx.getResult();
+  }
+
+  calculateCCI(highs, lows, closes, period) {
+    const cci = new TechnicalIndicators.CCI({
+      period: period,
+      high: highs,
+      low: lows,
+      close: closes
+    });
+    return cci.getResult();
+  }
+
+  calculateWilliamsR(highs, lows, closes, period) {
+    const williamsR = new TechnicalIndicators.WilliamsR({
+      period: period,
+      high: highs,
+      low: lows,
+      close: closes
+    });
+    return williamsR.getResult();
+  }
+
+  calculateStandardDeviation(values, period) {
+    const sd = new TechnicalIndicators.SD({
+      period: period,
+      values: values
+    });
+    return sd.getResult();
+  }
+
+  calculateVolumeSMA(volumes, period) {
+    const volumeSMA = new TechnicalIndicators.SMA({
+      period: period,
+      values: volumes
+    });
+    return volumeSMA.getResult();
+  }
+
+  calculateMoneyFlowIndex(highs, lows, closes, volumes, period) {
+    const mfi = new TechnicalIndicators.MFI({
+      period: period,
+      high: highs,
+      low: lows,
+      close: closes,
+      volume: volumes
+    });
+    return mfi.getResult();
+  }
+
+  calculateIchimokuCloud(highs, lows, closes, config = {}) {
+    const ichimoku = new TechnicalIndicators.IchimokuCloud({
+      conversionPeriod: config.conversionPeriod || 9,
+      basePeriod: config.basePeriod || 26,
+      spanPeriod: config.spanPeriod || 52,
+      displacement: config.displacement || 26,
+      high: highs,
+      low: lows,
+      close: closes
+    });
+    return ichimoku.getResult();
   }
 
   recognizePatterns(ohlcvData) {

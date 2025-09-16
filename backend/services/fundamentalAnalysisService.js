@@ -1,6 +1,7 @@
 // services/fundamentalAnalysisService.js
 const axios = require('axios');
 const cacheService = require('./cacheService');
+const apiTrackingService = require('./apiTrackingService');
 
 class FundamentalAnalysisService {
   constructor() {
@@ -73,34 +74,94 @@ class FundamentalAnalysisService {
   // ---- Fetchers -------------------------------------------------------------
   async fetchOverview(symbol) {
     if (!this.key) throw new Error('Missing ALPHA_VANTAGE_API_KEY');
-    const url = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${encodeURIComponent(symbol)}&apikey=${this.key}`;
-    const data = (await axios.get(url, { timeout: 10000 })).data;
-    this.ensureOk(data);
-    return data; // strings
+    const startTime = Date.now();
+    let success = false;
+    
+    try {
+      const url = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${encodeURIComponent(symbol)}&apikey=${this.key}`;
+      apiTrackingService.logAPICall('Alpha Vantage', 'OVERVIEW', symbol, null, true, 0);
+      
+      const data = (await axios.get(url, { timeout: 10000 })).data;
+      const responseTime = Date.now() - startTime;
+      success = true;
+      
+      this.ensureOk(data);
+      apiTrackingService.logAPICall('Alpha Vantage', 'OVERVIEW', symbol, null, true, responseTime);
+      return data; // strings
+    } catch (error) {
+      const responseTime = Date.now() - startTime;
+      apiTrackingService.logAPICall('Alpha Vantage', 'OVERVIEW', symbol, null, false, responseTime);
+      throw error;
+    }
   }
 
   async fetchIncomeStatement(symbol) {
     if (!this.key) throw new Error('Missing ALPHA_VANTAGE_API_KEY');
-    const url = `https://www.alphavantage.co/query?function=INCOME_STATEMENT&symbol=${encodeURIComponent(symbol)}&apikey=${this.key}`;
-    const data = (await axios.get(url, { timeout: 10000 })).data;
-    this.ensureOk(data);
-    return data?.annualReports || [];
+    const startTime = Date.now();
+    let success = false;
+    
+    try {
+      const url = `https://www.alphavantage.co/query?function=INCOME_STATEMENT&symbol=${encodeURIComponent(symbol)}&apikey=${this.key}`;
+      apiTrackingService.logAPICall('Alpha Vantage', 'INCOME_STATEMENT', symbol, null, true, 0);
+      
+      const data = (await axios.get(url, { timeout: 10000 })).data;
+      const responseTime = Date.now() - startTime;
+      success = true;
+      
+      this.ensureOk(data);
+      apiTrackingService.logAPICall('Alpha Vantage', 'INCOME_STATEMENT', symbol, null, true, responseTime);
+      return data?.annualReports || [];
+    } catch (error) {
+      const responseTime = Date.now() - startTime;
+      apiTrackingService.logAPICall('Alpha Vantage', 'INCOME_STATEMENT', symbol, null, false, responseTime);
+      throw error;
+    }
   }
 
   async fetchBalanceSheet(symbol) {
     if (!this.key) throw new Error('Missing ALPHA_VANTAGE_API_KEY');
-    const url = `https://www.alphavantage.co/query?function=BALANCE_SHEET&symbol=${encodeURIComponent(symbol)}&apikey=${this.key}`;
-    const data = (await axios.get(url, { timeout: 10000 })).data;
-    this.ensureOk(data);
-    return data?.annualReports || [];
+    const startTime = Date.now();
+    let success = false;
+    
+    try {
+      const url = `https://www.alphavantage.co/query?function=BALANCE_SHEET&symbol=${encodeURIComponent(symbol)}&apikey=${this.key}`;
+      apiTrackingService.logAPICall('Alpha Vantage', 'BALANCE_SHEET', symbol, null, true, 0);
+      
+      const data = (await axios.get(url, { timeout: 10000 })).data;
+      const responseTime = Date.now() - startTime;
+      success = true;
+      
+      this.ensureOk(data);
+      apiTrackingService.logAPICall('Alpha Vantage', 'BALANCE_SHEET', symbol, null, true, responseTime);
+      return data?.annualReports || [];
+    } catch (error) {
+      const responseTime = Date.now() - startTime;
+      apiTrackingService.logAPICall('Alpha Vantage', 'BALANCE_SHEET', symbol, null, false, responseTime);
+      throw error;
+    }
   }
 
   async fetchCashFlow(symbol) {
     if (!this.key) throw new Error('Missing ALPHA_VANTAGE_API_KEY');
-    const url = `https://www.alphavantage.co/query?function=CASH_FLOW&symbol=${encodeURIComponent(symbol)}&apikey=${this.key}`;
-    const data = (await axios.get(url, { timeout: 10000 })).data;
-    this.ensureOk(data);
-    return data?.annualReports || [];
+    const startTime = Date.now();
+    let success = false;
+    
+    try {
+      const url = `https://www.alphavantage.co/query?function=CASH_FLOW&symbol=${encodeURIComponent(symbol)}&apikey=${this.key}`;
+      apiTrackingService.logAPICall('Alpha Vantage', 'CASH_FLOW', symbol, null, true, 0);
+      
+      const data = (await axios.get(url, { timeout: 10000 })).data;
+      const responseTime = Date.now() - startTime;
+      success = true;
+      
+      this.ensureOk(data);
+      apiTrackingService.logAPICall('Alpha Vantage', 'CASH_FLOW', symbol, null, true, responseTime);
+      return data?.annualReports || [];
+    } catch (error) {
+      const responseTime = Date.now() - startTime;
+      apiTrackingService.logAPICall('Alpha Vantage', 'CASH_FLOW', symbol, null, false, responseTime);
+      throw error;
+    }
   }
 
   ensureOk(data) {

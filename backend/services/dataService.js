@@ -1,4 +1,5 @@
 const axios = require('axios');
+const apiTrackingService = require('./apiTrackingService');
 
 class DataService {
   constructor() {
@@ -31,6 +32,9 @@ class DataService {
   }
 
   async fetchAlphaVantageData(symbol, timeframe) {
+    const startTime = Date.now();
+    let success = false;
+    
     try {
       // Map timeframe to Alpha Vantage interval/keying
       const intervalMap = {
@@ -48,44 +52,58 @@ class DataService {
       // Alpha Vantage intraday endpoints use function=TIME_SERIES_INTRADAY&interval=5min
       let url;
       let timeSeriesKey;
+      let endpoint;
       if (['1min','5min','15min','30min','60min','5min','30min'].includes(interval)) {
         // Use intraday function with interval param
         url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${encodeURIComponent(symbol)}&interval=${encodeURIComponent(interval)}&apikey=${this.alphaVantageKey}&outputsize=full`;
         timeSeriesKey = `Time Series (${interval})`;
+        endpoint = 'TIME_SERIES_INTRADAY';
       } else if (interval === 'weekly') {
         url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=${encodeURIComponent(symbol)}&apikey=${this.alphaVantageKey}&outputsize=full`;
         timeSeriesKey = 'Weekly Time Series';
+        endpoint = 'TIME_SERIES_WEEKLY';
       } else {
         // daily (EOD)
         url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${encodeURIComponent(symbol)}&apikey=${this.alphaVantageKey}&outputsize=full`;
         timeSeriesKey = 'Time Series (Daily)';
+        endpoint = 'TIME_SERIES_DAILY';
       }
 
+      // Track API call
+      apiTrackingService.logAPICall('Alpha Vantage', endpoint, symbol, timeframe, true, 0);
+      
       const response = await axios.get(url, { timeout: 15000 });
       const data = response?.data;
+      const responseTime = Date.now() - startTime;
+      success = true;
 
       // Detailed error handling for common Alpha Vantage responses
       if (!data) {
         console.error('Alpha Vantage returned empty body');
+        apiTrackingService.logAPICall('Alpha Vantage', endpoint, symbol, timeframe, false, responseTime);
         return null;
       }
       if (data.Note) {
         console.warn('Alpha Vantage rate limit notice:', data.Note);
+        apiTrackingService.logAPICall('Alpha Vantage', endpoint, symbol, timeframe, false, responseTime);
         return null;
       }
       if (data['Error Message']) {
         console.error('Alpha Vantage error message:', data['Error Message']);
+        apiTrackingService.logAPICall('Alpha Vantage', endpoint, symbol, timeframe, false, responseTime);
         return null;
       }
       // Alpha Vantage sometimes returns an 'Information' field (e.g., when symbol missing or other notices)
       if (data.Information) {
         console.warn('Alpha Vantage information:', data.Information);
+        apiTrackingService.logAPICall('Alpha Vantage', endpoint, symbol, timeframe, false, responseTime);
         return null;
       }
 
       const timeSeries = data[timeSeriesKey];
       if (!timeSeries || Object.keys(timeSeries).length === 0) {
         console.warn('Alpha Vantage returned no time series data (keys: ' + Object.keys(data).join(', ') + ')');
+        apiTrackingService.logAPICall('Alpha Vantage', endpoint, symbol, timeframe, false, responseTime);
         return null;
       }
 
@@ -116,10 +134,14 @@ class DataService {
         '2Y': 104
       };
 
+      // Log successful API call with response time
+      apiTrackingService.logAPICall('Alpha Vantage', endpoint, symbol, timeframe, true, responseTime);
       return ohlcv.slice(-(limitMap[timeframe] || 90));
     } catch (error) {
       // Log helpful details for debugging but do not crash the caller
+      const responseTime = Date.now() - startTime;
       console.error('Alpha Vantage API error:', error && error.message ? error.message : error);
+      apiTrackingService.logAPICall('Alpha Vantage', 'TIME_SERIES', symbol, timeframe, false, responseTime);
       return null;
     }
   }

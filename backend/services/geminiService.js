@@ -1,4 +1,5 @@
 const { GoogleGenerativeAI } = require('@google/generative-ai');
+const apiTrackingService = require('./apiTrackingService');
 
 class GeminiService {
   constructor() {
@@ -23,6 +24,9 @@ class GeminiService {
   }
 
   async generateInsights(prompt) {
+    const startTime = Date.now();
+    let success = false;
+    
     try {
       if (!this.model) {
         console.log('⚠️ Gemini AI not available, using fallback response');
@@ -31,15 +35,24 @@ class GeminiService {
 
       console.log('🤖 Generating AI insights...');
       
+      // Track API call
+      apiTrackingService.logAPICall('Gemini', 'generateContent', null, null, true, 0);
+      
       const result = await this.model.generateContent(prompt);
       const response = await result.response;
       const text = response.text();
+      const responseTime = Date.now() - startTime;
+      success = true;
 
       console.log('✅ AI insights generated successfully');
+      // Log successful API call with response time
+      apiTrackingService.logAPICall('Gemini', 'generateContent', null, null, true, responseTime);
       return text;
 
     } catch (error) {
+      const responseTime = Date.now() - startTime;
       console.error('❌ Gemini AI error:', error.message);
+      apiTrackingService.logAPICall('Gemini', 'generateContent', null, null, false, responseTime);
       return this.getFallbackResponse(prompt);
     }
   }
@@ -109,22 +122,34 @@ KEY MONITORING METRICS:
 
   // Test connection method
   async testConnection() {
+    const startTime = Date.now();
+    let success = false;
+    
     try {
       if (!this.model) {
         return { success: false, message: 'Gemini AI not initialized' };
       }
 
       const testPrompt = "Say 'Hello' if you can receive this message.";
+      // Track API call
+      apiTrackingService.logAPICall('Gemini', 'testConnection', null, null, true, 0);
+      
       const result = await this.model.generateContent(testPrompt);
       const response = await result.response;
       const text = response.text();
+      const responseTime = Date.now() - startTime;
+      success = true;
 
+      // Log successful API call with response time
+      apiTrackingService.logAPICall('Gemini', 'testConnection', null, null, true, responseTime);
       return { 
         success: true, 
         message: 'Gemini AI connection successful',
         response: text.substring(0, 100) + '...'
       };
     } catch (error) {
+      const responseTime = Date.now() - startTime;
+      apiTrackingService.logAPICall('Gemini', 'testConnection', null, null, false, responseTime);
       return { 
         success: false, 
         message: `Gemini AI connection failed: ${error.message}` 
