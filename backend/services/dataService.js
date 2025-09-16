@@ -32,7 +32,7 @@ class DataService {
 
   async fetchAlphaVantageData(symbol, timeframe) {
     try {
-      // Map timeframe to Alpha Vantage interval
+      // Map timeframe to Alpha Vantage interval/keying
       const intervalMap = {
         '1D': '5min',
         '1W': '30min',
@@ -42,27 +42,53 @@ class DataService {
         '1Y': 'weekly',
         '2Y': 'weekly'
       };
-      
+
       const interval = intervalMap[timeframe] || 'daily';
-      const url = `https://www.alphavantage.co/query?function=TIME_SERIES_${interval.toUpperCase()}&symbol=${symbol}&apikey=${this.alphaVantageKey}&outputsize=full`;
-      
-      const response = await axios.get(url);
-      const data = response.data;
-      
-      // Parse the response based on interval
-      let timeSeries;
-      if (interval === 'daily') {
-        timeSeries = data['Time Series (Daily)'];
+
+      // Alpha Vantage intraday endpoints use function=TIME_SERIES_INTRADAY&interval=5min
+      let url;
+      let timeSeriesKey;
+      if (['1min','5min','15min','30min','60min','5min','30min'].includes(interval)) {
+        // Use intraday function with interval param
+        url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${encodeURIComponent(symbol)}&interval=${encodeURIComponent(interval)}&apikey=${this.alphaVantageKey}&outputsize=full`;
+        timeSeriesKey = `Time Series (${interval})`;
       } else if (interval === 'weekly') {
-        timeSeries = data['Weekly Time Series'];
+        url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=${encodeURIComponent(symbol)}&apikey=${this.alphaVantageKey}&outputsize=full`;
+        timeSeriesKey = 'Weekly Time Series';
       } else {
-        timeSeries = data[`Time Series (${interval})`];
+        // daily (EOD)
+        url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${encodeURIComponent(symbol)}&apikey=${this.alphaVantageKey}&outputsize=full`;
+        timeSeriesKey = 'Time Series (Daily)';
       }
-      
-      if (!timeSeries) {
-        throw new Error('Invalid response from Alpha Vantage');
+
+      const response = await axios.get(url, { timeout: 15000 });
+      const data = response?.data;
+
+      // Detailed error handling for common Alpha Vantage responses
+      if (!data) {
+        console.error('Alpha Vantage returned empty body');
+        return null;
       }
-      
+      if (data.Note) {
+        console.warn('Alpha Vantage rate limit notice:', data.Note);
+        return null;
+      }
+      if (data['Error Message']) {
+        console.error('Alpha Vantage error message:', data['Error Message']);
+        return null;
+      }
+      // Alpha Vantage sometimes returns an 'Information' field (e.g., when symbol missing or other notices)
+      if (data.Information) {
+        console.warn('Alpha Vantage information:', data.Information);
+        return null;
+      }
+
+      const timeSeries = data[timeSeriesKey];
+      if (!timeSeries || Object.keys(timeSeries).length === 0) {
+        console.warn('Alpha Vantage returned no time series data (keys: ' + Object.keys(data).join(', ') + ')');
+        return null;
+      }
+
       // Convert to OHLCV format
       const ohlcv = [];
       for (const [date, values] of Object.entries(timeSeries)) {
@@ -72,13 +98,13 @@ class DataService {
           high: parseFloat(values['2. high']),
           low: parseFloat(values['3. low']),
           close: parseFloat(values['4. close']),
-          volume: parseFloat(values['5. volume'])
+          volume: parseFloat(values['5. volume'] || values['6. volume'] || 0)
         });
       }
-      
+
       // Sort by date ascending
       ohlcv.sort((a, b) => new Date(a.date) - new Date(b.date));
-      
+
       // Limit based on timeframe
       const limitMap = {
         '1D': 96, // 5min intervals in 8 hours
@@ -89,10 +115,11 @@ class DataService {
         '1Y': 52,
         '2Y': 104
       };
-      
+
       return ohlcv.slice(-(limitMap[timeframe] || 90));
     } catch (error) {
-      console.error('Alpha Vantage API error:', error);
+      // Log helpful details for debugging but do not crash the caller
+      console.error('Alpha Vantage API error:', error && error.message ? error.message : error);
       return null;
     }
   }

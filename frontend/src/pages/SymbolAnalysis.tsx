@@ -1,5 +1,5 @@
 import { useParams, useSearchParams } from 'react-router-dom'
-import { useMemo, useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useAnalysis } from '../lib/queries'
 import WeightsPanel from '../components/WeightsPanel'
 import IndicatorsPanel from '../components/IndicatorsPanel'
@@ -41,6 +41,22 @@ export default function SymbolAnalysis() {
     setSP(params, { replace: true })
   }
 
+  // Format technical indicators for display
+  const formatIndicatorValue = (value: any): string => {
+    if (typeof value === 'number') {
+      return value.toFixed(2);
+    }
+    if (Array.isArray(value) && value.length > 0) {
+      const lastValue = value[value.length - 1];
+      return typeof lastValue === 'number' ? lastValue.toFixed(2) : String(lastValue);
+    }
+    return String(value);
+  };
+
+  // Get technical indicators data
+  const technicalIndicators = data?.analysis?.technical?.indicators || {};
+  const patterns = technicalIndicators.patterns || [];
+
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-3 flex-wrap">
@@ -69,7 +85,10 @@ export default function SymbolAnalysis() {
           </div>
           <div className="border rounded-md p-3 bg-white">
             <div className="font-medium mb-2">Indicators</div>
-            <IndicatorsPanel onChange={setIndConfig} />
+            <IndicatorsPanel 
+              onChange={setIndConfig} 
+              initialConfig={indConfig}
+            />
           </div>
         </div>
       )}
@@ -96,6 +115,9 @@ export default function SymbolAnalysis() {
               <ScoreBadge score={data.analysis.fundamental?.score} />
             </div>
             <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.fundamental?.recommendation} /></div>
+            <div className="text-xs text-slate-500">
+              Weight: {data.analysis.fundamental?.weight || '40%'}
+            </div>
           </div>
           <div className="border rounded-md p-3 bg-white space-y-2">
             <div className="flex items-center justify-between">
@@ -103,6 +125,9 @@ export default function SymbolAnalysis() {
               <ScoreBadge score={data.analysis.technical?.score} />
             </div>
             <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.technical?.recommendation} /></div>
+            <div className="text-xs text-slate-500">
+              Weight: {data.analysis.technical?.weight || '35%'}
+            </div>
           </div>
           <div className="border rounded-md p-3 bg-white space-y-2">
             <div className="flex items-center justify-between">
@@ -110,6 +135,9 @@ export default function SymbolAnalysis() {
               <ScoreBadge score={data.analysis.sentiment?.score} />
             </div>
             <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.sentiment?.recommendation} /></div>
+            <div className="text-xs text-slate-500">
+              Weight: {data.analysis.sentiment?.weight || '25%'}
+            </div>
           </div>
         </div>
       )}
@@ -120,6 +148,63 @@ export default function SymbolAnalysis() {
             <div className="font-medium">Overall</div>
             <ScoreBadge score={data.analysis.overall?.score} />
             <RecommendationChip rec={data.analysis.overall?.recommendation} />
+          </div>
+          <div className="text-xs text-slate-500 mt-1">
+            Weights: F:{data?.analysis?.meta?.weightsUsed?.fundamental || 40}% 
+            T:{data?.analysis?.meta?.weightsUsed?.technical || 35}% 
+            S:{data?.analysis?.meta?.weightsUsed?.sentiment || 25}%
+          </div>
+        </div>
+      )}
+
+      {mode === 'advanced' && Object.keys(technicalIndicators).length > 0 && (
+        <div className="border rounded-md p-3 bg-white">
+          <h3 className="font-medium mb-2">Technical Indicators</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            {Object.entries(technicalIndicators).map(([key, value]) => {
+              // Skip patterns as they're displayed separately
+              if (key === 'patterns') return null;
+              
+              return (
+                <div key={key} className="border rounded p-2">
+                  <div className="font-medium text-sm">{key}</div>
+                  {typeof value === 'object' && value !== null ? (
+                    <div className="text-xs space-y-1 mt-1">
+                      {Object.entries(value).map(([subKey, subValue]) => (
+                        <div key={subKey} className="flex justify-between">
+                          <span className="text-slate-600">{subKey}:</span>
+                          <span className="font-mono">{formatIndicatorValue(subValue)}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="font-mono text-sm mt-1">{formatIndicatorValue(value)}</div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {patterns.length > 0 && (
+        <div className="border rounded-md p-3 bg-white">
+          <h3 className="font-medium mb-2">Pattern Recognition</h3>
+          <div className="flex flex-wrap gap-2">
+            {patterns.map((pattern: any, index: number) => (
+              <div 
+                key={index} 
+                className={`px-3 py-1 rounded-full text-xs font-medium ${
+                  pattern.direction === 'bullish' 
+                    ? 'bg-green-100 text-green-800' 
+                    : pattern.direction === 'bearish' 
+                      ? 'bg-red-100 text-red-800' 
+                      : 'bg-blue-100 text-blue-800'
+                }`}
+              >
+                {pattern.pattern} ({pattern.confidence}%)
+              </div>
+            ))}
           </div>
         </div>
       )}
