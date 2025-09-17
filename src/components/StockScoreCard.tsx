@@ -21,6 +21,185 @@ interface SimpleScoreResult {
   sentimentScore: number;
 }
 
+// Scoring functions
+const calculateTechnicalScore = (marketData: any, historicalData: any[], technicalIndicators: any): number => {
+  let score = 50; // Base score
+  
+  try {
+    // Price momentum (30% weight)
+    const changePercent = marketData.changePercent || 0;
+    if (changePercent > 5) score += 15;
+    else if (changePercent > 2) score += 10;
+    else if (changePercent > 0) score += 5;
+    else if (changePercent > -2) score -= 5;
+    else if (changePercent > -5) score -= 10;
+    else score -= 15;
+    
+    // Volume analysis (20% weight)
+    if (marketData.volume && marketData.avgVolume) {
+      const volumeRatio = marketData.volume / marketData.avgVolume;
+      if (volumeRatio > 2) score += 10;
+      else if (volumeRatio > 1.5) score += 5;
+      else if (volumeRatio < 0.5) score -= 5;
+    }
+    
+    // Volatility analysis (20% weight)
+    if (historicalData && historicalData.length > 20) {
+      const prices = historicalData.slice(-20).map(d => d.close);
+      const avgPrice = prices.reduce((a, b) => a + b, 0) / prices.length;
+      const volatility = Math.sqrt(prices.reduce((sum, price) => sum + Math.pow(price - avgPrice, 2), 0) / prices.length) / avgPrice;
+      
+      if (volatility < 0.02) score += 10; // Low volatility is good
+      else if (volatility > 0.05) score -= 10; // High volatility is risky
+    }
+    
+    // Moving averages (30% weight)
+    if (technicalIndicators) {
+      if (technicalIndicators.sma20 && technicalIndicators.sma50) {
+        if (marketData.price > technicalIndicators.sma20 && technicalIndicators.sma20 > technicalIndicators.sma50) {
+          score += 15; // Bullish trend
+        } else if (marketData.price < technicalIndicators.sma20 && technicalIndicators.sma20 < technicalIndicators.sma50) {
+          score -= 15; // Bearish trend
+        }
+      }
+    }
+    
+  } catch (error) {
+    console.warn('Technical score calculation error:', error);
+  }
+  
+  return Math.max(0, Math.min(100, Math.round(score)));
+};
+
+const calculateFundamentalScore = (companyInfo: any, fundamentalMetrics: any): number => {
+  let score = 50; // Base score
+  
+  try {
+    // Market cap analysis (25% weight)
+    if (companyInfo.marketCap) {
+      if (companyInfo.marketCap > 100e9) score += 12; // Large cap
+      else if (companyInfo.marketCap > 10e9) score += 8; // Mid cap
+      else if (companyInfo.marketCap > 1e9) score += 4; // Small cap
+      else score -= 5; // Micro cap (riskier)
+    }
+    
+    // Sector stability (15% weight)
+    const stableSectors = ['Healthcare', 'Consumer Staples', 'Utilities'];
+    const growthSectors = ['Technology', 'Consumer Discretionary'];
+    if (stableSectors.includes(companyInfo.sector)) score += 8;
+    else if (growthSectors.includes(companyInfo.sector)) score += 6;
+    
+    // Company maturity (10% weight)
+    const currentYear = new Date().getFullYear();
+    const companyAge = currentYear - (companyInfo.founded || currentYear - 10);
+    if (companyAge > 50) score += 5;
+    else if (companyAge > 20) score += 3;
+    else if (companyAge < 5) score -= 3;
+    
+    // Financial metrics (50% weight)
+    if (fundamentalMetrics) {
+      // P/E ratio
+      if (fundamentalMetrics.peRatio) {
+        if (fundamentalMetrics.peRatio > 5 && fundamentalMetrics.peRatio < 20) score += 10;
+        else if (fundamentalMetrics.peRatio < 30) score += 5;
+        else if (fundamentalMetrics.peRatio > 50) score -= 10;
+      }
+      
+      // Debt to equity
+      if (fundamentalMetrics.debtToEquity !== undefined) {
+        if (fundamentalMetrics.debtToEquity < 0.3) score += 8;
+        else if (fundamentalMetrics.debtToEquity < 0.6) score += 4;
+        else if (fundamentalMetrics.debtToEquity > 1.5) score -= 8;
+      }
+      
+      // Revenue growth
+      if (fundamentalMetrics.revenueGrowth !== undefined) {
+        if (fundamentalMetrics.revenueGrowth > 0.2) score += 12;
+        else if (fundamentalMetrics.revenueGrowth > 0.1) score += 8;
+        else if (fundamentalMetrics.revenueGrowth > 0) score += 4;
+        else score -= 8;
+      }
+    }
+    
+  } catch (error) {
+    console.warn('Fundamental score calculation error:', error);
+  }
+  
+  return Math.max(0, Math.min(100, Math.round(score)));
+};
+
+const calculateSentimentScore = (newsItems: any[]): number => {
+  let score = 50; // Base score
+  
+  try {
+    if (!newsItems || newsItems.length === 0) {
+      return 50; // Neutral if no news
+    }
+    
+    let totalSentiment = 0;
+    let sentimentCount = 0;
+    let positiveCount = 0;
+    let negativeCount = 0;
+    
+    newsItems.forEach(item => {
+      if (item.sentiment !== undefined) {
+        totalSentiment += item.sentiment;
+        sentimentCount++;
+        
+        if (item.sentiment > 0.1) positiveCount++;
+        else if (item.sentiment < -0.1) negativeCount++;
+      }
+      
+      // Analyze headlines for key sentiment words
+      const headline = (item.title || '').toLowerCase();
+      const positiveWords = ['buy', 'bullish', 'upgrade', 'growth', 'profit', 'beat', 'strong', 'rise', 'gain'];
+      const negativeWords = ['sell', 'bearish', 'downgrade', 'loss', 'miss', 'weak', 'fall', 'drop', 'decline'];
+      
+      positiveWords.forEach(word => {
+        if (headline.includes(word)) score += 2;
+      });
+      
+      negativeWords.forEach(word => {
+        if (headline.includes(word)) score -= 2;
+      });
+    });
+    
+    // Calculate average sentiment
+    if (sentimentCount > 0) {
+      const avgSentiment = totalSentiment / sentimentCount;
+      score += avgSentiment * 30; // Scale sentiment to score impact
+    }
+    
+    // Sentiment distribution
+    const totalNews = newsItems.length;
+    if (totalNews > 0) {
+      const positiveRatio = positiveCount / totalNews;
+      const negativeRatio = negativeCount / totalNews;
+      
+      if (positiveRatio > 0.6) score += 15;
+      else if (positiveRatio > 0.4) score += 5;
+      
+      if (negativeRatio > 0.6) score -= 15;
+      else if (negativeRatio > 0.4) score -= 5;
+    }
+    
+  } catch (error) {
+    console.warn('Sentiment score calculation error:', error);
+  }
+  
+  return Math.max(0, Math.min(100, Math.round(score)));
+};
+
+const getRecommendation = (aggregateScore: number): string => {
+  if (aggregateScore >= 80) return 'STRONG BUY';
+  if (aggregateScore >= 70) return 'BUY';
+  if (aggregateScore >= 60) return 'MODERATE BUY';
+  if (aggregateScore >= 40) return 'HOLD';
+  if (aggregateScore >= 30) return 'MODERATE SELL';
+  if (aggregateScore >= 20) return 'SELL';
+  return 'STRONG SELL';
+};
+
 export const StockScoreCard = () => {
   // State to manage the component
   const [ticker, setTicker] = useState(''); // User input for stock symbol
@@ -41,9 +220,29 @@ export const StockScoreCard = () => {
     try {
       console.log(`🔍 Starting analysis for ${ticker.toUpperCase()}...`);
       
-      // Use enhanced stock service to get market data and company info
+      // Use enhanced stock service to get comprehensive data
       const marketData = await EnhancedStockService.getMarketData(ticker.toUpperCase());
       const companyInfo = await EnhancedStockService.getCompanyInfo(ticker.toUpperCase());
+      const historicalData = await EnhancedStockService.getHistoricalData(ticker.toUpperCase(), '3M');
+      const technicalIndicators = await EnhancedStockService.getTechnicalIndicators(ticker.toUpperCase());
+      const fundamentalMetrics = await EnhancedStockService.getFundamentalMetrics(ticker.toUpperCase());
+      const newsItems = await EnhancedStockService.getNewsAndSentiment(ticker.toUpperCase(), 7);
+      
+      // Calculate actual scores based on real data
+      const technicalScore = calculateTechnicalScore(marketData, historicalData, technicalIndicators);
+      const fundamentalScore = calculateFundamentalScore(companyInfo, fundamentalMetrics);
+      const sentimentScore = calculateSentimentScore(newsItems);
+      
+      // Calculate weighted aggregate score
+      const weights = { technical: 0.3, fundamental: 0.4, sentiment: 0.3 };
+      const aggregateScore = Math.round(
+        (technicalScore * weights.technical) +
+        (fundamentalScore * weights.fundamental) +
+        (sentimentScore * weights.sentiment)
+      );
+      
+      // Determine recommendation based on aggregate score
+      const recommendation = getRecommendation(aggregateScore);
       
       // Convert enhanced analysis to simple score format
       const simpleResult: SimpleScoreResult = {
@@ -52,12 +251,11 @@ export const StockScoreCard = () => {
         currentPrice: marketData.price,
         priceChange: marketData.change,
         priceChangePercent: marketData.changePercent,
-        // Create mock scores based on available data (replace with actual scoring logic later)
-        aggregateScore: Math.round((Math.random() * 40) + 30), // Mock score 30-70
-        recommendation: marketData.price > 100 ? 'BUY' : marketData.price > 50 ? 'HOLD' : 'SELL',
-        technicalScore: Math.round((Math.random() * 30) + 40),
-        fundamentalScore: Math.round((Math.random() * 30) + 35),
-        sentimentScore: Math.round((Math.random() * 30) + 45)
+        aggregateScore: aggregateScore,
+        recommendation: recommendation,
+        technicalScore: technicalScore,
+        fundamentalScore: fundamentalScore,
+        sentimentScore: sentimentScore
       };
       
       console.log(`✅ Analysis complete for ${ticker.toUpperCase()}:`, simpleResult);
@@ -95,9 +293,13 @@ export const StockScoreCard = () => {
   // Helper function to get recommendation color
   const getRecommendationStyle = (label: string) => {
     const colors = {
+      'STRONG BUY': '#16a34a', // Dark Green
       'BUY': '#22c55e', // Green
+      'MODERATE BUY': '#65a30d', // Light Green
       'HOLD': '#eab308', // Yellow
+      'MODERATE SELL': '#f97316', // Orange
       'SELL': '#ef4444', // Red
+      'STRONG SELL': '#dc2626', // Dark Red
     };
     return { backgroundColor: colors[label as keyof typeof colors] || '#6b7280' };
   };
