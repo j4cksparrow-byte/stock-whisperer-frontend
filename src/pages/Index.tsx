@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import EnhancedStockAnalysis from '@/components/EnhancedStockAnalysis';
 import TradingViewChart from '@/components/TradingViewChart';
+import { StockScoreCard } from '@/components/StockScoreCard';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -149,6 +150,11 @@ const Index = () => {
               Intelligent analysis combining technical, fundamental, and sentiment data for informed investment decisions. 
               Get comprehensive insights with AI-powered recommendations and real-time market data.
             </p>
+
+            {/* Stock Score Aggregator Section */}
+            <div className="my-12">
+              <StockScoreCard />
+            </div>
 
             {/* Interactive Market Overview Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto mt-8">
