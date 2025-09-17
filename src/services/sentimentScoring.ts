@@ -55,7 +55,8 @@ export const sentimentScoring = {
       // Analyze each news item
       newsItems.forEach((item, index) => {
         const text = (item.title + ' ' + (item.summary || '')).toLowerCase();
-        const age = new Date().getTime() - new Date(item.publishedAt).getTime();
+        const publishedDate = new Date(item.pubDate);
+        const age = new Date().getTime() - publishedDate.getTime();
         const daysSincePublished = age / (1000 * 60 * 60 * 24);
         
         // Weight newer news more heavily
@@ -169,7 +170,7 @@ export const sentimentScoring = {
       
       // News Volume Analysis (20% weight)
       const recentNews = newsItems.filter(item => {
-        const age = new Date().getTime() - new Date(item.publishedAt).getTime();
+        const age = new Date().getTime() - new Date(item.pubDate).getTime();
         return age < (7 * 24 * 60 * 60 * 1000); // Last 7 days
       }).length;
       

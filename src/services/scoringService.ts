@@ -1,5 +1,5 @@
 import { EnhancedStockService } from './enhancedStockService';
-import { fundamentalsScoring } from './fundamentalsScoring';
+import { calculateFundamentalScore } from './fundamentalsScoring';
 import { technicalsScoring } from './technicalsScoring';
 import { sentimentScoring } from './sentimentScoring';
 import { aggregateScores } from './stockAggregator';
@@ -93,7 +93,7 @@ export class StockScoringService {
       
       // Calculate individual pillar scores
       console.log(`🧮 Calculating fundamental score for ${ticker}...`);
-      const fundamentalScore = await fundamentalsScoring.calculateScore(
+      const fundamentalScore = await calculateFundamentalScore(
         companyInfo,
         fundamentalMetrics,
         marketData

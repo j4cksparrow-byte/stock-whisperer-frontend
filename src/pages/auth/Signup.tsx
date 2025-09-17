@@ -79,7 +79,7 @@ export default function Signup() {
     try {
       setIsLoading(true);
       setError(null);
-      await signUp(data.email, data.password, data.fullName);
+      await signUp(data.email, data.password, { full_name: data.fullName });
       // The redirect will be handled by the useEffect above
     } catch (err: any) {
       setError(err.message);
