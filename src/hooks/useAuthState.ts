@@ -71,7 +71,13 @@ export function useAuthState() {
         return;
       }
 
-      setAuthState(prev => ({ ...prev, profile: data }));
+      setAuthState(prev => ({ 
+        ...prev, 
+        profile: {
+          ...data,
+          email: prev.user?.email || null
+        }
+      }));
     } catch (error) {
       console.error('Error fetching profile:', error);
     }
