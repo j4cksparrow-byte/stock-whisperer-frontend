@@ -19,10 +19,14 @@ export type Database = {
           aggregate_score: number
           ai_summary: string | null
           analysis_type: string
+          analyst_rating: number | null
+          beta: number | null
           catalysts: Json | null
           confidence: number
           created_at: string
           current_price: number | null
+          debt_to_equity: number | null
+          dividend_yield: number | null
           duration: string
           exchange: string
           expires_at: string
@@ -31,11 +35,16 @@ export type Database = {
           fundamental_weight: number
           id: string
           key_factors: Json | null
+          market_cap: number | null
+          pe_ratio: number | null
+          peg_ratio: number | null
           price_change: number | null
           price_change_percent: number | null
+          price_target: number | null
           recommendation: string
           risk_level: string
           risks: Json | null
+          roe: number | null
           sentiment_data: Json | null
           sentiment_score: number
           sentiment_weight: number
@@ -43,16 +52,22 @@ export type Database = {
           technical_indicators: Json | null
           technical_score: number
           technical_weight: number
+          volatility: number | null
           volume: number | null
+          volume_avg_30d: number | null
         }
         Insert: {
           aggregate_score: number
           ai_summary?: string | null
           analysis_type: string
+          analyst_rating?: number | null
+          beta?: number | null
           catalysts?: Json | null
           confidence: number
           created_at?: string
           current_price?: number | null
+          debt_to_equity?: number | null
+          dividend_yield?: number | null
           duration?: string
           exchange: string
           expires_at?: string
@@ -61,11 +76,16 @@ export type Database = {
           fundamental_weight?: number
           id?: string
           key_factors?: Json | null
+          market_cap?: number | null
+          pe_ratio?: number | null
+          peg_ratio?: number | null
           price_change?: number | null
           price_change_percent?: number | null
+          price_target?: number | null
           recommendation: string
           risk_level: string
           risks?: Json | null
+          roe?: number | null
           sentiment_data?: Json | null
           sentiment_score: number
           sentiment_weight?: number
@@ -73,16 +93,22 @@ export type Database = {
           technical_indicators?: Json | null
           technical_score: number
           technical_weight?: number
+          volatility?: number | null
           volume?: number | null
+          volume_avg_30d?: number | null
         }
         Update: {
           aggregate_score?: number
           ai_summary?: string | null
           analysis_type?: string
+          analyst_rating?: number | null
+          beta?: number | null
           catalysts?: Json | null
           confidence?: number
           created_at?: string
           current_price?: number | null
+          debt_to_equity?: number | null
+          dividend_yield?: number | null
           duration?: string
           exchange?: string
           expires_at?: string
@@ -91,11 +117,16 @@ export type Database = {
           fundamental_weight?: number
           id?: string
           key_factors?: Json | null
+          market_cap?: number | null
+          pe_ratio?: number | null
+          peg_ratio?: number | null
           price_change?: number | null
           price_change_percent?: number | null
+          price_target?: number | null
           recommendation?: string
           risk_level?: string
           risks?: Json | null
+          roe?: number | null
           sentiment_data?: Json | null
           sentiment_score?: number
           sentiment_weight?: number
@@ -103,7 +134,9 @@ export type Database = {
           technical_indicators?: Json | null
           technical_score?: number
           technical_weight?: number
+          volatility?: number | null
           volume?: number | null
+          volume_avg_30d?: number | null
         }
         Relationships: []
       }
@@ -191,14 +224,49 @@ export type Database = {
         }
         Relationships: []
       }
+      market_status: {
+        Row: {
+          id: string
+          is_open: boolean
+          market_name: string
+          next_close: string | null
+          next_open: string | null
+          timezone: string
+          updated_at: string | null
+        }
+        Insert: {
+          id?: string
+          is_open?: boolean
+          market_name: string
+          next_close?: string | null
+          next_open?: string | null
+          timezone: string
+          updated_at?: string | null
+        }
+        Update: {
+          id?: string
+          is_open?: boolean
+          market_name?: string
+          next_close?: string | null
+          next_open?: string | null
+          timezone?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       news_sentiment_cache: {
         Row: {
           created_at: string
           exchange: string
           expires_at: string
           id: string
+          negative_score: number | null
+          neutral_score: number | null
+          news_count: number | null
           news_data: Json
+          positive_score: number | null
           sentiment_analysis: Json
+          sentiment_trend: string | null
           symbol: string
         }
         Insert: {
@@ -206,8 +274,13 @@ export type Database = {
           exchange: string
           expires_at?: string
           id?: string
+          negative_score?: number | null
+          neutral_score?: number | null
+          news_count?: number | null
           news_data: Json
+          positive_score?: number | null
           sentiment_analysis: Json
+          sentiment_trend?: string | null
           symbol: string
         }
         Update: {
@@ -215,8 +288,13 @@ export type Database = {
           exchange?: string
           expires_at?: string
           id?: string
+          negative_score?: number | null
+          neutral_score?: number | null
+          news_count?: number | null
           news_data?: Json
+          positive_score?: number | null
           sentiment_analysis?: Json
+          sentiment_trend?: string | null
           symbol?: string
         }
         Relationships: []
@@ -272,46 +350,133 @@ export type Database = {
         }
         Relationships: []
       }
+      technical_indicators_cache: {
+        Row: {
+          created_at: string | null
+          exchange: string
+          expires_at: string | null
+          id: string
+          indicator_data: Json
+          indicator_type: string
+          symbol: string
+          timeframe: string
+        }
+        Insert: {
+          created_at?: string | null
+          exchange: string
+          expires_at?: string | null
+          id?: string
+          indicator_data: Json
+          indicator_type: string
+          symbol: string
+          timeframe: string
+        }
+        Update: {
+          created_at?: string | null
+          exchange?: string
+          expires_at?: string | null
+          id?: string
+          indicator_data?: Json
+          indicator_type?: string
+          symbol?: string
+          timeframe?: string
+        }
+        Relationships: []
+      }
+      trending_stocks: {
+        Row: {
+          created_at: string | null
+          exchange: string
+          id: string
+          news_mentions: number | null
+          price_change_percent: number | null
+          social_mentions: number | null
+          symbol: string
+          trend_date: string
+          trend_score: number
+          volume_spike: number | null
+        }
+        Insert: {
+          created_at?: string | null
+          exchange: string
+          id?: string
+          news_mentions?: number | null
+          price_change_percent?: number | null
+          social_mentions?: number | null
+          symbol: string
+          trend_date?: string
+          trend_score: number
+          volume_spike?: number | null
+        }
+        Update: {
+          created_at?: string | null
+          exchange?: string
+          id?: string
+          news_mentions?: number | null
+          price_change_percent?: number | null
+          social_mentions?: number | null
+          symbol?: string
+          trend_date?: string
+          trend_score?: number
+          volume_spike?: number | null
+        }
+        Relationships: []
+      }
       user_analysis_preferences: {
         Row: {
           created_at: string
+          custom_indicators: Json | null
           default_analysis_mode: string
           default_duration: string
           default_fundamental_weight: number
           default_sentiment_weight: number
           default_technical_weight: number
+          favorite_symbols: string[] | null
           id: string
+          investment_horizon: string | null
+          notification_preferences: Json | null
           preferred_fundamental_filters: Json | null
           preferred_sentiment_filters: Json | null
           preferred_technical_indicators: Json | null
+          risk_tolerance: string | null
           updated_at: string
           user_id: string
         }
         Insert: {
           created_at?: string
+          custom_indicators?: Json | null
           default_analysis_mode?: string
           default_duration?: string
           default_fundamental_weight?: number
           default_sentiment_weight?: number
           default_technical_weight?: number
+          favorite_symbols?: string[] | null
           id?: string
+          investment_horizon?: string | null
+          notification_preferences?: Json | null
           preferred_fundamental_filters?: Json | null
           preferred_sentiment_filters?: Json | null
           preferred_technical_indicators?: Json | null
+          risk_tolerance?: string | null
           updated_at?: string
           user_id: string
         }
         Update: {
           created_at?: string
+          custom_indicators?: Json | null
           default_analysis_mode?: string
           default_duration?: string
           default_fundamental_weight?: number
           default_sentiment_weight?: number
           default_technical_weight?: number
+          favorite_symbols?: string[] | null
           id?: string
+          investment_horizon?: string | null
+          notification_preferences?: Json | null
           preferred_fundamental_filters?: Json | null
           preferred_sentiment_filters?: Json | null
           preferred_technical_indicators?: Json | null
+          risk_tolerance?: string | null
           updated_at?: string
           user_id?: string
         }
@@ -326,9 +491,20 @@ export type Database = {
         Args: Record<PropertyKey, never>
         Returns: undefined
       }
+      cleanup_expired_technical_indicators: {
+        Args: Record<PropertyKey, never>
+        Returns: undefined
+      }
     }
     Enums: {
-      [_ in never]: never
+      analysis_duration: "1D" | "1W" | "1M" | "3M" | "6M" | "1Y"
+      recommendation_type:
+        | "STRONG_BUY"
+        | "BUY"
+        | "HOLD"
+        | "SELL"
+        | "STRONG_SELL"
+      risk_level: "LOW" | "MEDIUM" | "HIGH" | "VERY_HIGH"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -455,6 +631,10 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      analysis_duration: ["1D", "1W", "1M", "3M", "6M", "1Y"],
+      recommendation_type: ["STRONG_BUY", "BUY", "HOLD", "SELL", "STRONG_SELL"],
+      risk_level: ["LOW", "MEDIUM", "HIGH", "VERY_HIGH"],
+    },
   },
 } as const
