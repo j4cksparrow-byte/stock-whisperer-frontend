@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { Navbar } from "@/components/Layout/Navbar";
 import Index from "./pages/Index";
-import StrategySetup from "./pages/StrategySetup";
 import Profile from "./pages/Profile";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
@@ -28,8 +27,7 @@ const App = () => (
           <BrowserRouter>
             <Navbar />
             <Routes>
-              <Route path="/" element={<StrategySetup />} />
-              <Route path="/dashboard" element={<Index />} />
+              <Route path="/" element={<Index />} />
               <Route path="/profile" element={<Profile />} />
               
               {/* Auth Routes */}
