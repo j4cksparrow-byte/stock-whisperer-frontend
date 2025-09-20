@@ -112,7 +112,24 @@ class AlphaVantageService {
 
   async getDailyAdjusted(symbol: string) {
     const url = `${BASE_URL}/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}&apikey=${API_KEY}`;
-    return this.makeRequest(url);
+    const result = await this.makeRequest(url);
+    
+    // If Alpha Vantage requires premium, fall back to Yahoo Finance
+    if (result?.isPremium || result?.isEmpty || result?.isInvalid) {
+      console.log(`Alpha Vantage premium required for ${symbol}, trying Yahoo Finance fallback...`);
+      try {
+        const yahooResponse = await fetch(`https://egiiqbgumgltatfljbcs.supabase.co/functions/v1/yahoo-finance-proxy?symbol=${symbol}&range=1y&interval=1d`);
+        if (yahooResponse.ok) {
+          const yahooData = await yahooResponse.json();
+          console.log(`Successfully got ${symbol} data from Yahoo Finance fallback`);
+          return yahooData;
+        }
+      } catch (error) {
+        console.warn(`Yahoo Finance fallback failed for ${symbol}:`, error);
+      }
+    }
+    
+    return result;
   }
 
   async getSMA(symbol: string, interval: string = 'daily', period: number = 50) {
