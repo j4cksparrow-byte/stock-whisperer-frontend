@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Search, ChevronDown } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface DashboardHeaderProps {
   onStockSelect?: (symbol: string) => void;
@@ -10,10 +11,18 @@ interface DashboardHeaderProps {
 }
 
 export const DashboardHeader = ({ onStockSelect, selectedStock = "AAPL" }: DashboardHeaderProps) => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('Dashboard');
   const [searchTerm, setSearchTerm] = useState('');
   
   const tabs = ['Dashboard', 'Analyze', 'Watchlist', 'Alerts', 'Settings'];
+  
+  const handleTabClick = (tab: string) => {
+    setActiveTab(tab);
+    if (tab === 'Analyze') {
+      navigate('/');
+    }
+  };
   
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,7 +47,7 @@ export const DashboardHeader = ({ onStockSelect, selectedStock = "AAPL" }: Dashb
             {tabs.map((tab) => (
               <button
                 key={tab}
-                onClick={() => setActiveTab(tab)}
+                onClick={() => handleTabClick(tab)}
                 className={`text-sm font-medium px-3 py-2 rounded-md transition-colors ${
                   activeTab === tab 
                     ? 'text-primary bg-accent' 

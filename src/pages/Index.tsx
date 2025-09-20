@@ -7,10 +7,13 @@ import { RightSidebar } from "@/components/Dashboard/RightSidebar";
 import { stockScoringService } from "@/services/scoringService";
 import { AggregateResult } from "@/types/stockTypes";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 
 const Index = () => {
-  const [selectedSymbol, setSelectedSymbol] = useState<string>("AAPL");
+  const location = useLocation();
+  const config = location.state?.config;
+  const [selectedSymbol, setSelectedSymbol] = useState<string>(config?.symbol || "AAPL");
   const [analysisResult, setAnalysisResult] = useState<AggregateResult | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -29,9 +32,9 @@ const Index = () => {
     }
   };
 
-  // Load initial data for AAPL
+  // Load initial data for configured symbol or AAPL
   useEffect(() => {
-    handleStockSelect("AAPL");
+    handleStockSelect(config?.symbol || "AAPL");
   }, []);
 
   return (
