@@ -11,30 +11,23 @@ export const calculateStockScore = async (ticker: string): Promise<AggregateResu
   try {
     console.log(`Starting stock analysis for ${ticker}...`);
     
-    // Step 1: Get OVERVIEW data for fundamentals
-    console.log('Fetching company overview...');
-    const overviewData = await alphaVantageService.getCompanyOverview(ticker);
+    // Get all data using the getAllData method which structures it properly
+    console.log('Fetching all Alpha Vantage data...');
+    const allData = await alphaVantageService.getAllData(ticker);
+    
     requests.push(`OVERVIEW&symbol=${ticker}`);
-    
-    // Step 2: Get TIME_SERIES_DAILY data for technicals  
-    console.log('Fetching daily price data...');
-    const dailyData = await alphaVantageService.getDailyAdjusted(ticker);
     requests.push(`TIME_SERIES_DAILY&symbol=${ticker}`);
-    
-    // Step 3: Get NEWS_SENTIMENT data for sentiment analysis
-    console.log('Fetching news sentiment...');
-    const newsData = await alphaVantageService.getNewsSentiment(ticker);
     requests.push(`NEWS_SENTIMENT&tickers=${ticker}`);
 
-    // Calculate each pillar score
+    // Calculate each pillar score with the structured data
     console.log('Calculating fundamentals score...');
-    const fundamentals = overviewData ? scoreFundamentals(overviewData) : null;
+    const fundamentals = scoreFundamentals(allData);
     
     console.log('Calculating technicals score...');
-    const technicals = dailyData ? scoreTechnicals(dailyData) : null;
+    const technicals = scoreTechnicals(allData);
     
     console.log('Calculating sentiment score...');
-    const sentiment = newsData ? scoreSentiment({ newsSentiment: newsData, ticker }) : null;
+    const sentiment = scoreSentiment(allData);
 
     // Aggregate the scores
     console.log('Aggregating final score...');
