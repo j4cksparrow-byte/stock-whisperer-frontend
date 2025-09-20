@@ -11,13 +11,13 @@ const cleanAnalysisText = (text: string): string => {
   return text.replace(/<br\s*\/?>/gi, '\n');
 };
 
-// API configuration
-const API_BASE_URL = import.meta.env.PROD
-  ? 'https://egiiqbgumgltatfljbcs.supabase.co/functions/v1/stock-analysis-proxy'
-  : '/api/stock-analysis';
+// Supabase configuration
+const SUPABASE_URL = 'https://egiiqbgumgltatfljbcs.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVnaWlxYmd1bWdsdGF0ZmxqYmNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcyMzg2NjUsImV4cCI6MjA2MjgxNDY2NX0.ECaOGNSTRN5kWE4BImOPlfBemrmofzLR_wVFzH71j9o';
 
-// Direct API URL as fallback - updated with new endpoint
-const DIRECT_API_URL = 'https://kingaakash.app.n8n.cloud/webhook/stock-chart-analysis';
+// Updated API configuration to use Supabase edge functions
+const STOCK_DATA_SERVICE = `${SUPABASE_URL}/functions/v1/stock-data-service`;
+const GEMINI_INSIGHTS_SERVICE = `${SUPABASE_URL}/functions/v1/gemini-insights-service`;
 
 // Retry configuration
 const MAX_RETRIES = 2;
@@ -30,132 +30,145 @@ export const fetchStockAnalysis = async (symbol: string, exchange: string): Prom
   const sanitizedExchange = exchange.trim().replace(/[^\w.-]/g, '');
   
   console.log('Fetching stock analysis for:', { symbol: sanitizedSymbol, exchange: sanitizedExchange });
-  console.log('Environment:', import.meta.env.PROD ? 'Production' : 'Development');
-  
-  // Try with retries
-  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-    try {
-      console.log(`Attempt ${attempt}/${MAX_RETRIES} - Using API URL:`, API_BASE_URL);
-      
-      const payload = JSON.stringify({
-        symbol: sanitizedSymbol,
-        exchange: sanitizedExchange
-      });
-      
-      console.log('Sending payload:', payload);
-      
-      // Try primary API with timeout
-      const response = await fetch(API_BASE_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
-        body: payload,
-        signal: AbortSignal.timeout(45000) // Reduced to 45 seconds to allow for retries
-      });
-
-      console.log('Response status:', response.status);
-      
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.error('API Error Response:', errorText);
-        throw new Error(`API responded with status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      console.log("API Response:", data);
-      
-      // Check if response has url property and it's not an error URL
-      if (!data.url || (data.url && data.url.includes("placeholder-chart.com/error"))) {
-        console.warn('Received error response from API, trying direct API call');
-        return await tryDirectApiCall(sanitizedSymbol, sanitizedExchange);
-      }
-      
-      return {
-        url: data.url || "https://placeholder-chart.com/default",
-        text: cleanAnalysisText(data.text || ""),
-        symbol: data.symbol || sanitizedSymbol
-      };
-      
-    } catch (error) {
-      console.error(`Attempt ${attempt}/${MAX_RETRIES} failed:`, error);
-      
-      // If it's the last attempt, handle the error
-      if (attempt === MAX_RETRIES) {
-        // Handle SSL certificate errors specifically
-        if (error instanceof TypeError && (
-          error.message.includes('Failed to fetch') || 
-          error.message.includes('ERR_CERT_AUTHORITY_INVALID') ||
-          error.message.includes('SSL')
-        )) {
-          console.error('SSL/Network error detected. Attempting direct API call as fallback.');
-          
-          try {
-            return await tryDirectApiCall(sanitizedSymbol, sanitizedExchange);
-          } catch (directError) {
-            console.error('Direct API call also failed:', directError);
-            return provideMockAnalysis(sanitizedSymbol, 'API connectivity issues');
-          }
-        }
-        
-        // Handle timeout errors
-        if (error instanceof DOMException && error.name === 'TimeoutError') {
-          console.error('Request timed out after multiple attempts. Providing mock analysis.');
-          return provideMockAnalysis(sanitizedSymbol, 'Request timeout');
-        }
-        
-        // For any other error, provide mock analysis
-        return provideMockAnalysis(sanitizedSymbol, error instanceof Error ? error.message : 'Unknown error');
-      }
-      
-      // Wait before retrying (except for the last attempt)
-      if (attempt < MAX_RETRIES) {
-        console.log(`Waiting ${RETRY_DELAY}ms before retry...`);
-        await sleep(RETRY_DELAY);
-      }
-    }
-  }
-  
-  // This should never be reached, but just in case
-  return provideMockAnalysis(sanitizedSymbol, 'Maximum retries exceeded');
-};
-
-// Try a direct API call as a fallback mechanism
-const tryDirectApiCall = async (symbol: string, exchange: string): Promise<StockAnalysisResponse> => {
-  console.log('Attempting direct API call to:', DIRECT_API_URL);
   
   try {
-    const directResponse = await fetch(DIRECT_API_URL, {
+    // Step 1: Get basic stock data
+    console.log('Fetching stock data from Alpha Vantage...');
+    const stockDataResponse = await fetch(STOCK_DATA_SERVICE, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'User-Agent': 'StockAnalysisClient/1.0'
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'apikey': SUPABASE_ANON_KEY
       },
-      body: JSON.stringify({ symbol, exchange }),
-      signal: AbortSignal.timeout(30000) // Shorter timeout for direct API
+      body: JSON.stringify({
+        symbol: sanitizedSymbol,
+        exchange: sanitizedExchange
+      }),
+      signal: AbortSignal.timeout(30000)
     });
+
+    if (!stockDataResponse.ok) {
+      throw new Error(`Stock data service failed: ${stockDataResponse.status}`);
+    }
+
+    const stockData = await stockDataResponse.json();
+    console.log('Stock data received:', stockData);
     
-    console.log('Direct API response status:', directResponse.status);
+    // Step 2: Get AI insights from Gemini
+    console.log('Getting AI insights from Gemini...');
+    const insightsResponse = await fetch(GEMINI_INSIGHTS_SERVICE, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'apikey': SUPABASE_ANON_KEY
+      },
+      body: JSON.stringify({
+        symbol: sanitizedSymbol,
+        exchange: sanitizedExchange,
+        stockData: stockData
+      }),
+      signal: AbortSignal.timeout(45000)
+    });
+
+    if (!insightsResponse.ok) {
+      throw new Error(`Gemini insights service failed: ${insightsResponse.status}`);
+    }
+
+    const insights = await insightsResponse.json();
+    console.log('Gemini insights received:', insights);
     
-    if (!directResponse.ok) {
-      throw new Error(`Direct API call failed with status ${directResponse.status}`);
+    return {
+      url: `https://tradingview.com/symbols/${sanitizedExchange}-${sanitizedSymbol}/`,
+      text: cleanAnalysisText(insights.analysis || insights.text || ''),
+      symbol: sanitizedSymbol
+    };
+    
+  } catch (error) {
+    console.error('Error fetching stock analysis:', error);
+    
+    // Fallback: Try to get just Alpha Vantage data without Gemini
+    try {
+      console.log('Attempting fallback with Alpha Vantage only...');
+      const fallbackResponse = await fetch(STOCK_DATA_SERVICE, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'apikey': SUPABASE_ANON_KEY
+        },
+        body: JSON.stringify({
+          symbol: sanitizedSymbol,
+          exchange: sanitizedExchange
+        }),
+        signal: AbortSignal.timeout(15000)
+      });
+
+      if (fallbackResponse.ok) {
+        const fallbackData = await fallbackResponse.json();
+        console.log('Fallback data received:', fallbackData);
+        
+        return {
+          url: `https://tradingview.com/symbols/${sanitizedExchange}-${sanitizedSymbol}/`,
+          text: generateBasicAnalysis(fallbackData, sanitizedSymbol),
+          symbol: sanitizedSymbol
+        };
+      }
+    } catch (fallbackError) {
+      console.error('Fallback also failed:', fallbackError);
     }
     
-    const directData = await directResponse.json();
-    console.log('Direct API response data:', directData);
-    
-    // Handle response that may not have url property
-    return {
-      url: directData.url || "https://placeholder-chart.com/analysis",
-      text: cleanAnalysisText(directData.text || ""),
-      symbol: directData.symbol || symbol
-    };
-  } catch (error) {
-    console.error('Error in direct API call:', error);
-    throw error;
+    // Final fallback: Mock analysis
+    return provideMockAnalysis(sanitizedSymbol, error instanceof Error ? error.message : 'Unknown error');
   }
+};
+
+// Generate basic analysis from Alpha Vantage data when Gemini is unavailable
+const generateBasicAnalysis = (stockData: any, symbol: string): string => {
+  if (!stockData || (!stockData.overview && !stockData.news)) {
+    return `# Basic Analysis for ${symbol}\n\n## Data Unavailable\n\nUnable to retrieve comprehensive data for analysis.`;
+  }
+
+  let analysis = `# Stock Analysis for ${symbol}\n\n`;
+  
+  if (stockData.overview) {
+    const overview = stockData.overview;
+    analysis += `## Company Overview\n\n`;
+    analysis += `**${overview.Name || symbol}** (${overview.Exchange || 'N/A'})\n\n`;
+    
+    if (overview.Description) {
+      analysis += `${overview.Description.slice(0, 300)}...\n\n`;
+    }
+    
+    analysis += `### Key Metrics\n\n`;
+    if (overview.MarketCapitalization) {
+      const marketCap = (parseFloat(overview.MarketCapitalization) / 1000000000).toFixed(1);
+      analysis += `- **Market Cap**: $${marketCap}B\n`;
+    }
+    if (overview.PERatio) analysis += `- **P/E Ratio**: ${overview.PERatio}\n`;
+    if (overview.DividendYield) analysis += `- **Dividend Yield**: ${(parseFloat(overview.DividendYield) * 100).toFixed(2)}%\n`;
+    if (overview.Beta) analysis += `- **Beta**: ${overview.Beta}\n`;
+    
+    analysis += `\n`;
+  }
+  
+  if (stockData.news && stockData.news.feed && stockData.news.feed.length > 0) {
+    analysis += `## Recent News Sentiment\n\n`;
+    const recentNews = stockData.news.feed.slice(0, 3);
+    
+    recentNews.forEach((article: any, index: number) => {
+      analysis += `${index + 1}. **${article.title}**\n`;
+      if (article.summary) {
+        analysis += `   ${article.summary.slice(0, 150)}...\n`;
+      }
+      analysis += `\n`;
+    });
+  }
+  
+  analysis += `\n*This is a basic analysis. Full AI-powered insights are temporarily unavailable.*`;
+  
+  return analysis;
 };
 
 // Provide mock analysis data for better user experience when APIs fail
