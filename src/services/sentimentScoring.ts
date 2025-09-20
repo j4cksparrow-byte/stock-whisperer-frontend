@@ -10,7 +10,7 @@ export const scoreSentiment = (data: any): PillarScore => {
   let lowNews = false;
   let articleCount = 0;
 
-  if (data.newsSentiment?.feed) {
+  if (data.newsSentiment?.feed && !data.newsSentiment?.isEmpty && !data.newsSentiment?.isInvalid && !data.newsSentiment?.isPremium) {
     const articles = data.newsSentiment.feed;
     const now = new Date();
     const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
@@ -88,13 +88,20 @@ export const scoreSentiment = (data: any): PillarScore => {
     notes.push(`Based on ${articleCount} articles from last 7 days`);
 
   } else {
-    // No news data available
+    // No news data available or API errors
     lowNews = true;
     sentimentScore = 50; // Neutral
-    notes.push("No recent news data available - using neutral sentiment");
+    
+    let message = "No recent news data available - using neutral sentiment";
+    if (data.newsSentiment?.isEmpty) message = "Empty response from news API";
+    if (data.newsSentiment?.isInvalid) message = "Invalid ticker for news API";
+    if (data.newsSentiment?.isPremium) message = "Premium subscription required for news data";
+    
+    notes.push(message);
     dataUsed.articleCount = 0;
     dataUsed.aggregatePolarity = 0;
     dataUsed.lowNews = true;
+    dataUsed.error = data.newsSentiment?.message || message;
   }
 
   // Store the low news flag for use in final aggregation

@@ -38,8 +38,30 @@ class AlphaVantageService {
         throw new Error(data.Error || data['Error Message']);
       }
 
+      if (data.Information) {
+        // Handle premium endpoint messages
+        if (data.Information.includes('premium endpoint')) {
+          console.warn(`Premium endpoint required: ${url}`);
+          return { isPremium: true, message: data.Information };
+        }
+        // Handle invalid inputs
+        if (data.Information.includes('Invalid inputs')) {
+          console.warn(`Invalid inputs for API call: ${url}`);
+          return { isInvalid: true, message: data.Information };
+        }
+        // Handle other informational messages
+        console.warn(`API Information: ${data.Information}`);
+        return { hasInfo: true, message: data.Information };
+      }
+
       if (data.Note && data.Note.includes('call frequency')) {
         throw new Error('API rate limit exceeded');
+      }
+
+      // Check for empty response
+      if (Object.keys(data).length === 0) {
+        console.warn(`Empty response from API: ${url}`);
+        return { isEmpty: true, message: 'No data returned from API' };
       }
       
       // Cache the response

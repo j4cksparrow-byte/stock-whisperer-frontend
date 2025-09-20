@@ -9,12 +9,17 @@ export const scoreFundamentals = (data: any): PillarScore => {
   // Extract data from OVERVIEW only (as per new specification)
   const overview = data.overview;
   
-  if (!overview) {
-    notes.push("No company overview data available");
+  if (!overview || overview?.isEmpty || overview?.isInvalid || overview?.isPremium) {
+    let message = "No company overview data available";
+    if (overview?.isEmpty) message = "Empty response from Alpha Vantage API";
+    if (overview?.isInvalid) message = "Invalid ticker symbol";
+    if (overview?.isPremium) message = "Premium Alpha Vantage subscription required";
+    
+    notes.push(message);
     return {
       score: 50, // Neutral score when no data
       subscores: {},
-      data_used: {},
+      data_used: { error: overview?.message || message },
       notes
     };
   }

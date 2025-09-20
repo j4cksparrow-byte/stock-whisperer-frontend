@@ -46,7 +46,7 @@ export const scoreTechnicals = (data: any, config: TechnicalConfig = DEFAULT_CON
   let volumes: number[] = [];
   let hasLimitedHistory = false;
 
-  if (data.dailySeries?.['Time Series (Daily)']) {
+  if (data.dailySeries?.['Time Series (Daily)'] && !data.dailySeries?.isPremium && !data.dailySeries?.isEmpty && !data.dailySeries?.isInvalid) {
     const dailyData = data.dailySeries['Time Series (Daily)'];
     const sortedDates = Object.keys(dailyData).sort(); // Ascending order
     
@@ -70,6 +70,17 @@ export const scoreTechnicals = (data: any, config: TechnicalConfig = DEFAULT_CON
     if (closePrices.length < 50) {
       hasLimitedHistory = true;
       notes.push("Limited price history - some indicators may be less reliable");
+    }
+  } else {
+    // Handle API errors
+    if (data.dailySeries?.isPremium) {
+      notes.push("Premium Alpha Vantage subscription required for daily price data");
+    } else if (data.dailySeries?.isEmpty) {
+      notes.push("Empty response from daily price API");
+    } else if (data.dailySeries?.isInvalid) {
+      notes.push("Invalid ticker symbol for daily price data");
+    } else {
+      notes.push("No daily price data available");
     }
   }
 
