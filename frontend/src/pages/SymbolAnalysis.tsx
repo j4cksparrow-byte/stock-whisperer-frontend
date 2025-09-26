@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useAnalysis } from '../lib/queries'
 import WeightsPanel from '../components/WeightsPanel'
 import IndicatorsPanel from '../components/IndicatorsPanel'
-import PriceChart from '../components/PriceChart'
+import SimpleTradingViewChart from '../components/SimpleTradingViewChart'
 import ScoreBadge from '../components/ScoreBadge'
 import RecommendationChip from '../components/RecommendationChip'
 import AISummary from '../components/AISummary'
@@ -93,7 +93,7 @@ export default function SymbolAnalysis() {
         </div>
       )}
 
-      <PriceChart />
+      <SimpleTradingViewChart symbol={symbol || 'AAPL'} height={500} />
 
       {error && (
         <div className="border border-red-200 rounded-md p-4 bg-red-50">
