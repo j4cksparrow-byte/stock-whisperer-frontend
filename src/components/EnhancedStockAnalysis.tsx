@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // allow runtime require fallback in this file
 declare const require: any;
 import { Button } from '@/components/ui/button';
@@ -6,11 +6,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Input } from '@/components/ui/input';
 // Using simple elements instead of small UI primitives that aren't present
 import { Loader, TrendingUp, TrendingDown, Minus, AlertTriangle, CheckCircle, Info, BarChart3, PieChart, Newspaper, Calculator } from 'lucide-react';
 // useToast not available in this workspace; use console fallback
-import SearchBox from './SearchBox';
 import PriceChart from './PriceChart';
+import LoadingSpinner from './LoadingSpinner';
+import { useSearch } from '../lib/queries';
 // Optional service - may not exist in this repo; guarded at runtime
 let EnhancedStockService: any = undefined;
 try {
@@ -32,11 +34,21 @@ const EnhancedStockAnalysis: React.FC = () => {
   const [loadingMessage, setLoadingMessage] = useState('Preparing analysis...');
   const [error, setError] = useState<string | null>(null);
   const [analysisResult, setAnalysisResult] = useState<any | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState('');
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedQuery(searchQuery.trim()), 300);
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+  
+  const { data: searchResults, isLoading: isSearching } = useSearch(debouncedQuery);
 
   const toast = (opts: any) => console.log('TOAST:', opts);
 
   const handleCompanySelect = (company: any) => {
     setSelectedCompany(company);
+    setSearchQuery(company.symbol);
     setError(null);
     setAnalysisResult(null);
   };
@@ -156,7 +168,45 @@ const EnhancedStockAnalysis: React.FC = () => {
 
           <div className="mb-6">
             <label htmlFor="company-search" className="block text-sm font-medium text-foreground mb-2">Search Company</label>
-            <SearchBox />
+            <div className="relative">
+              <Input
+                className="text-lg pr-10"
+                placeholder="Search for a symbol (e.g., AAPL, TSLA)..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              {isSearching && (
+                <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                  <LoadingSpinner size="sm" />
+                </div>
+              )}
+            </div>
+            {debouncedQuery && (
+              <div className="mt-2 border rounded-md bg-white max-h-64 overflow-auto shadow-lg">
+                {isSearching ? (
+                  <div className="px-3 py-4 text-center text-slate-500">
+                    <LoadingSpinner size="sm" className="mx-auto mb-2" />
+                    <div className="text-sm">Searching...</div>
+                  </div>
+                ) : searchResults?.results?.length ? (
+                  searchResults.results.map((r) => (
+                    <button
+                      key={r.symbol}
+                      onClick={() => handleCompanySelect(r)}
+                      className="w-full text-left px-3 py-2 hover:bg-slate-50 transition-colors border-b last:border-b-0"
+                    >
+                      <div className="font-medium">{r.symbol}</div>
+                      <div className="text-xs text-slate-500 truncate">{r.name ?? ('type' in r ? r.type : '') ?? ''}</div>
+                      {r.region && <div className="text-xs text-slate-400">{r.region}</div>}
+                    </button>
+                  ))
+                ) : (
+                  <div className="px-3 py-4 text-center text-slate-500 text-sm">
+                    No results found for "{debouncedQuery}"
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           <div className="mb-6">
