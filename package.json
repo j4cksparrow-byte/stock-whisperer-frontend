@@ -7,6 +7,7 @@
     "start": "node start.js",
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "echo \"(add eslint later)\""
   },
