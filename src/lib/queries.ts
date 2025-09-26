@@ -110,7 +110,7 @@ export function useAnalysis(params: AnalysisParams) {
   return useQuery({
     queryKey: ['analysis', params],
     queryFn: async () => {
-      const { data } = await api.get(`/api/stocks/analysis/${symbol}`, { params: rest })
+      const { data } = await api.get(`/stock-analysis/${symbol}`, { params: rest })
       return parse(AnalysisResponse, data)
     },
     enabled: !!symbol,
