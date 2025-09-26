@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSearch } from '../lib/queries'
+import { Input } from '@/components/ui/input'
 import LoadingSpinner from './LoadingSpinner'
 
 export default function SearchBox() {
@@ -16,8 +17,8 @@ export default function SearchBox() {
   return (
     <div className="w-full max-w-xl mx-auto">
       <div className="relative">
-        <input
-          className="w-full rounded-md border px-3 py-2 pr-10 text-lg"
+        <Input
+          className="text-lg pr-10"
           placeholder="Search for a symbol (e.g., AAPL, TSLA)..."
           value={q}
           onChange={(e) => setQ(e.target.value)}
