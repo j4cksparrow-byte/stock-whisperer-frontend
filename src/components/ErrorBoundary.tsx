@@ -41,7 +41,7 @@ export default class ErrorBoundary extends Component<Props, State> {
             >
               Reload Page
             </button>
-            {import.meta.env.DEV && this.state.error && (
+            {import.meta.env?.DEV && this.state.error && (
               <details className="mt-4 text-left">
                 <summary className="cursor-pointer text-sm text-gray-500">Error Details</summary>
                 <pre className="mt-2 text-xs bg-gray-100 p-2 rounded overflow-auto">

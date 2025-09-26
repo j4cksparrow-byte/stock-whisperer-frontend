@@ -1,6 +1,7 @@
 import api from '../lib/api'
 import { useQuery } from '@tanstack/react-query'
 import { useState } from 'react'
+import { HealthResponse, ConfigResponse, CacheResponse } from '../types/admin'
 
 function useEndpoint<T>(url: string) {
   return useQuery({
@@ -11,10 +12,10 @@ function useEndpoint<T>(url: string) {
 }
 
 export default function Admin() {
-  const health = useEndpoint('/health')
-  const keys = useEndpoint('/test-keys')
-  const conn = useEndpoint('/test-connections')
-  const cache = useEndpoint('/cache/status')
+  const health = useEndpoint<HealthResponse>('/health')
+  const keys = useEndpoint<ConfigResponse>('/test-keys')
+  const conn = useEndpoint<ConfigResponse>('/test-connections')
+  const cache = useEndpoint<CacheResponse>('/cache/status')
   const [isClearing, setIsClearing] = useState(false)
   const [isCleaning, setIsCleaning] = useState(false)
 

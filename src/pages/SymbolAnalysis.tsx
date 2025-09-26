@@ -126,7 +126,7 @@ export default function SymbolAnalysis() {
             </div>
             <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.technical?.recommendation} /></div>
             <div className="text-xs text-slate-500">
-              Weight: {data.analysis.technical?.weight || '35%'}
+              Weight: {data.analysis.technical?.configuration?.weight || '35%'}
             </div>
           </div>
           <div className="border rounded-md p-3 bg-white space-y-2">
