@@ -116,7 +116,7 @@ export default function SymbolAnalysis() {
             </div>
             <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.fundamental?.recommendation} /></div>
             <div className="text-xs text-slate-500">
-              Weight: {data.analysis.fundamental?.weight || '40%'}
+              Weight: {data.analysis.meta?.weights?.fundamental ? `${Math.round(data.analysis.meta.weights.fundamental)}%` : '40%'}
             </div>
           </div>
           <div className="border rounded-md p-3 bg-white space-y-2">
@@ -126,7 +126,7 @@ export default function SymbolAnalysis() {
             </div>
             <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.technical?.recommendation} /></div>
             <div className="text-xs text-slate-500">
-              Weight: {data.analysis.technical?.weight || '35%'}
+              Weight: {data.analysis.meta?.weights?.technical ? `${Math.round(data.analysis.meta.weights.technical)}%` : '35%'}
             </div>
           </div>
           <div className="border rounded-md p-3 bg-white space-y-2">
@@ -136,7 +136,7 @@ export default function SymbolAnalysis() {
             </div>
             <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.sentiment?.recommendation} /></div>
             <div className="text-xs text-slate-500">
-              Weight: {data.analysis.sentiment?.weight || '25%'}
+              Weight: {data.analysis.meta?.weights?.sentiment ? `${Math.round(data.analysis.meta.weights.sentiment)}%` : '25%'}
             </div>
           </div>
         </div>
