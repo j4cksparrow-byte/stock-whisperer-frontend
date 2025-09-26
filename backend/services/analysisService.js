@@ -5,6 +5,7 @@ const technicalAnalysisService = require('./technicalAnalysisService');
 const dataService = require('./dataService');
 const { fetchAlphaVantageNewsSentiment } = require('./sentimentService');
 const fundamentalAnalysisService = require('./fundamentalAnalysisService');
+const enhancedScoringService = require('./enhancedScoringService');
 
 class AnalysisService {
   constructor() {
@@ -27,14 +28,15 @@ class AnalysisService {
     const overallScore = Math.round(fundamental?.score ?? 50);
     const overallReco = this.getRecommendationFromScore(overallScore);
 
-    // AI summary (safe fallback text if Gemini is unavailable)
-    const aiSummary = await this.generateWeightedAISummary(
-      sym,
+    // AI summary using enhanced Gemini service (safe fallback text if Gemini is unavailable)
+    const aiSummary = await geminiService.generateWeightedAISummary(
       { score: overallScore, ...fundamental },
-      { score: 0 },
-      { score: 0 },
+      { score: 0, indicators: {} },
+      { score: 0, summary: 'Analysis focused on fundamentals only' },
       { fundamental: 100, technical: 0, sentiment: 0 },
-      overallScore
+      sym,
+      timeframe,
+      'normal' // beginner-friendly mode
     );
 
     console.log(`✅ Normal analysis completed for ${sym}`);
@@ -103,7 +105,7 @@ class AnalysisService {
     );
     const recommendation = this.getRecommendationFromScore(weightedScore);
 
-    // AI summary (weights-aware)
+    // AI summary (enhanced with mode detection)
     const aiSummary = await this.generateWeightedAISummary(
       sym,
       fundamentalAnalysis,
@@ -462,15 +464,28 @@ Provide a comprehensive investment analysis including:
 Format your response with clear section headings and bullet points for readability.
 `;
 
-    // Try Gemini if available in your geminiService; otherwise fallback
+    // Use enhanced Gemini service with dual-mode support
     try {
-      if (geminiService && typeof geminiService.generateInsights === 'function') {
-        const text = await geminiService.generateInsights(prompt);
-        if (typeof text === 'string' && text.trim().length > 0) return text.trim();
-        if (text?.message) return String(text.message);
+      if (geminiService && typeof geminiService.generateWeightedAISummary === 'function') {
+        // Determine user mode based on weights complexity and indicators usage
+        const userMode = this.determineUserMode(weights, technical);
+        
+        const enhancedSummary = await geminiService.generateWeightedAISummary(
+          fundamental,
+          technical, 
+          sentiment,
+          weights,
+          symbol,
+          'current', // timeframe
+          userMode
+        );
+        
+        if (typeof enhancedSummary === 'string' && enhancedSummary.trim().length > 0) {
+          return enhancedSummary.trim();
+        }
       }
     } catch (err) {
-      console.warn('Gemini summary failed; using fallback:', err.message);
+      console.warn('Enhanced Gemini summary failed; using fallback:', err.message);
     }
 
     // Fallback summary (enhanced with more details)
@@ -508,6 +523,281 @@ Format your response with clear section headings and bullet points for readabili
     if (score >= 70) return 'BUY';
     if (score >= 50) return 'HOLD';
     return 'SELL';
+  }
+
+  // Determine user mode based on complexity of analysis
+  determineUserMode(weights, technical) {
+    // Advanced mode if:
+    // 1. Using custom weights (not default)
+    // 2. Using multiple technical indicators
+    // 3. Technical analysis has high weight
+    
+    const defaultWeights = weightService.defaultWeights;
+    const isCustomWeights = (
+      weights.fundamental !== defaultWeights.fundamental ||
+      weights.technical !== defaultWeights.technical ||
+      weights.sentiment !== defaultWeights.sentiment
+    );
+    
+    const indicatorCount = Object.keys(technical?.indicators || {}).length;
+    const isComplexTechnical = indicatorCount > 3 || weights.technical > 50;
+    
+    return (isCustomWeights || isComplexTechnical) ? 'advanced' : 'normal';
+  }
+
+  // Helper methods for enhanced analysis
+  getConfidenceDescription(confidence) {
+    if (confidence >= 0.8) return 'High - Strong data quality and agreement';
+    if (confidence >= 0.6) return 'Medium - Good data quality with some limitations';
+    if (confidence >= 0.4) return 'Low - Limited data or conflicting signals';
+    return 'Very Low - Insufficient or unreliable data';
+  }
+
+  getEnhancedRecommendationText(label, score) {
+    const recommendations = {
+      'STRONG BUY': `Exceptional investment opportunity with score of ${score}/100. Strong fundamentals, positive technical signals, and favorable sentiment align for potential significant returns.`,
+      'BUY': `Attractive investment with score of ${score}/100. Multiple positive factors suggest good upside potential with reasonable risk.`,
+      'WEAK BUY': `Cautious optimism with score of ${score}/100. Some positive signals present but consider smaller position size and monitor closely.`,
+      'HOLD': `Neutral outlook with score of ${score}/100. Mixed signals suggest maintaining current position and waiting for clearer direction.`,
+      'WEAK SELL': `Concerns emerging with score of ${score}/100. Consider reducing position size and monitoring risk factors closely.`,
+      'SELL': `Significant concerns with score of ${score}/100. Multiple negative factors suggest reducing or exiting position.`,
+      'STRONG SELL': `High-risk situation with score of ${score}/100. Strong negative signals across multiple areas suggest immediate action may be warranted.`
+    };
+
+    return recommendations[label] || `Score of ${score}/100 with ${label} recommendation.`;
+  }
+
+  // --------------------------------------------------------------
+  // PUBLIC: ENHANCED ANALYSIS - Advanced Scoring with Detailed Breakdown
+  // --------------------------------------------------------------
+  async performEnhancedAnalysis(symbol, stockData, timeframe, rawWeights = {}, indicatorsConfig = {}) {
+    const sym = String(symbol || '').toUpperCase();
+
+    // Validate/normalize weights to 100
+    const weights = weightService.validateAndParseWeights({
+      fundamental: Number(rawWeights?.fundamental ?? weightService.defaultWeights.fundamental),
+      technical: Number(rawWeights?.technical ?? weightService.defaultWeights.technical),
+      sentiment: Number(rawWeights?.sentiment ?? weightService.defaultWeights.sentiment),
+    });
+
+    console.log(`🚀 Starting enhanced analysis for ${sym}...`);
+    console.log(`📊 Enhanced scoring with detailed breakdown and confidence levels`);
+
+    try {
+      // Get basic analysis data first
+      const [fundamentalAnalysis, technicalAnalysis, sentimentAnalysis] = await Promise.all([
+        this.getFundamentalAnalysis(sym),
+        this.getTechnicalAnalysis(sym, stockData, timeframe, indicatorsConfig),
+        this.getSentimentAnalysis(sym),
+      ]);
+
+      // Apply enhanced scoring algorithms
+      console.log(`🎯 Applying enhanced fundamental scoring...`);
+      const enhancedFundamental = enhancedScoringService.calculateEnhancedFundamentalScore(
+        fundamentalAnalysis
+      );
+
+      console.log(`📈 Applying enhanced technical scoring...`);
+      const enhancedTechnical = enhancedScoringService.calculateEnhancedTechnicalScore(
+        technicalAnalysis.indicators,
+        stockData?.ohlcv?.at?.(-1) || {},
+        stockData?.ohlcv || []
+      );
+
+      console.log(`💭 Applying enhanced sentiment scoring...`);
+      const enhancedSentiment = enhancedScoringService.calculateEnhancedSentimentScore(
+        sentimentAnalysis
+      );
+
+      // Calculate enhanced aggregate score
+      const aggregateResult = enhancedScoringService.calculateAggregateScore(
+        enhancedFundamental,
+        enhancedTechnical,
+        enhancedSentiment,
+        {
+          fundamental: weights.fundamental / 100,
+          technical: weights.technical / 100,
+          sentiment: weights.sentiment / 100
+        }
+      );
+
+      console.log(`✅ Enhanced analysis completed for ${sym} - Score: ${aggregateResult.aggregateScore}/100 (${aggregateResult.label})`);
+
+      return {
+        status: 'success',
+        symbol: sym,
+        analysis: {
+          mode: 'enhanced',
+          type: 'detailed_breakdown_analysis',
+          timeframe,
+          timestamp: new Date().toISOString(),
+
+          // Enhanced scoring results
+          enhanced: {
+            aggregateScore: aggregateResult.aggregateScore,
+            recommendation: aggregateResult.label,
+            confidence: aggregateResult.confidence,
+            
+            fundamental: {
+              ...enhancedFundamental,
+              weight: `${weights.fundamental}%`,
+              originalScore: fundamentalAnalysis.score
+            },
+            technical: {
+              ...enhancedTechnical,
+              weight: `${weights.technical}%`,
+              originalScore: technicalAnalysis.score
+            },
+            sentiment: {
+              ...enhancedSentiment,
+              weight: `${weights.sentiment}%`,
+              originalScore: sentimentAnalysis.score
+            }
+          },
+
+          // Detailed insights
+          insights: {
+            keyStrengths: aggregateResult.details.slice(0, 5),
+            riskFactors: aggregateResult.flags.slice(0, 5),
+            confidenceLevel: this.getConfidenceDescription(aggregateResult.confidence),
+            recommendation: this.getEnhancedRecommendationText(aggregateResult.label, aggregateResult.aggregateScore)
+          },
+
+          // Original analysis for comparison
+          original: {
+            fundamental: { ...fundamentalAnalysis, weight: `${weights.fundamental}%` },
+            technical: { ...technicalAnalysis, weight: `${weights.technical}%` },
+            sentiment: { ...sentimentAnalysis, weight: `${weights.sentiment}%` }
+          },
+
+          // Metadata
+          meta: {
+            dataPoints: Array.isArray(stockData?.ohlcv) ? stockData.ohlcv.length : 0,
+            weightsUsed: weights,
+            enhancementApplied: true,
+            algorithmVersion: '2.0',
+            totalDetails: aggregateResult.details.length,
+            totalFlags: aggregateResult.flags.length,
+            dataSource: stockData?.source || 'unknown'
+          }
+        }
+      };
+
+    } catch (error) {
+      console.error(`❌ Enhanced analysis failed for ${sym}:`, error);
+      
+      // Fallback to regular analysis
+      console.log(`🔄 Falling back to regular advanced analysis for ${sym}...`);
+      return await this.performAdvancedAnalysis(symbol, stockData, timeframe, rawWeights, indicatorsConfig);
+    }
+  }
+
+  // --------------------------------------------------------------
+  // PUBLIC: TECHNICAL CHART ANALYSIS - Enhanced Visual Insights
+  // --------------------------------------------------------------
+  async performTechnicalChartAnalysis(symbol, stockData, timeframe, userMode = 'normal') {
+    const sym = String(symbol || '').toUpperCase();
+    
+    try {
+      console.log(`📊 Starting technical chart analysis for ${sym} in ${userMode} mode...`);
+      
+      // Get comprehensive technical analysis data
+      const technicalData = await this.getTechnicalAnalysis(sym, stockData, timeframe, {
+        RSI: true,
+        MACD: true,
+        BollingerBands: true,
+        SMA: true,
+        EMA: true,
+        Volume: true,
+        ATR: true,
+        DMI: true,
+        OBV: true
+      });
+
+      // Generate AI-enhanced technical chart analysis
+      let chartAnalysis;
+      try {
+        if (geminiService && typeof geminiService.generateTechnicalChartAnalysis === 'function') {
+          chartAnalysis = await geminiService.generateTechnicalChartAnalysis(
+            sym,
+            technicalData,
+            stockData,
+            userMode
+          );
+        } else {
+          // Use fallback if Gemini service is unavailable
+          chartAnalysis = geminiService.getTechnicalChartFallback(sym, technicalData, userMode);
+        }
+      } catch (error) {
+        console.warn(`⚠️ AI chart analysis failed for ${sym}:`, error.message);
+        chartAnalysis = geminiService.getTechnicalChartFallback(sym, technicalData, userMode);
+      }
+
+      console.log(`✅ Technical chart analysis completed for ${sym}`);
+      
+      return {
+        status: 'success',
+        symbol: sym,
+        analysis: {
+          mode: userMode,
+          type: 'technical_chart_analysis',
+          timeframe,
+          timestamp: new Date().toISOString(),
+          
+          // Core technical data
+          technical: {
+            ...technicalData,
+            confidence: geminiService.calculateTechnicalConfidence(technicalData),
+            weight: '100%'
+          },
+          
+          // AI-enhanced chart insights
+          chartInsights: {
+            analysis: chartAnalysis.analysis,
+            confidence: chartAnalysis.confidence || 'medium',
+            source: chartAnalysis.source || 'ai',
+            type: 'technical_chart_analysis',
+            mode: userMode
+          },
+          
+          // Additional metadata
+          meta: {
+            dataPoints: Array.isArray(stockData?.ohlcv) ? stockData.ohlcv.length : 0,
+            dataSource: stockData?.source || 'unknown',
+            indicatorsUsed: Object.keys(technicalData?.indicators || {}),
+            confidenceLevel: geminiService.calculateTechnicalConfidence(technicalData),
+            chartType: 'comprehensive_technical_analysis',
+            userExperience: userMode
+          }
+        }
+      };
+
+    } catch (error) {
+      console.error(`❌ Technical chart analysis failed for ${sym}:`, error);
+      
+      return {
+        status: 'error',
+        symbol: sym,
+        error: {
+          message: 'Technical chart analysis unavailable',
+          details: error.message,
+          fallback: `Unable to generate comprehensive chart analysis for ${sym}. Please check data availability and try again.`
+        },
+        analysis: {
+          mode: userMode,
+          type: 'technical_chart_analysis',
+          timeframe,
+          timestamp: new Date().toISOString(),
+          chartInsights: {
+            analysis: `# **📊 TECHNICAL CHART ANALYSIS: ${sym}**\n\n⚠️ **Analysis Temporarily Unavailable**\n\nWe're unable to generate comprehensive chart analysis at the moment. This could be due to:\n- Data service limitations\n- Network connectivity issues\n- Temporary system maintenance\n\n**What You Can Do:**\n- Try again in a few minutes\n- Check if ${sym} is a valid stock symbol\n- Use other analysis modes while we resolve this\n\n*We apologize for the inconvenience and are working to restore full functionality.*`,
+            confidence: 'low',
+            source: 'fallback',
+            type: 'error_fallback',
+            mode: userMode
+          }
+        }
+      };
+    }
   }
 }
 

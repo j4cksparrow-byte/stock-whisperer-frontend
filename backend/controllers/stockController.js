@@ -163,6 +163,141 @@ class StockController {
       });
     }
   }
+
+  // Enhanced Technical Chart Analysis - Visual insights with candlestick patterns, volume, and indicators
+  async getTechnicalChartAnalysis(req, res) {
+    try {
+      const { symbol } = req.params;
+      const { 
+        timeframe = '1y',
+        mode = 'normal' // 'normal' for beginners, 'advanced' for pro traders
+      } = req.query;
+
+      // Validate symbol
+      if (!symbol || typeof symbol !== 'string' || symbol.trim() === '') {
+        return res.status(400).json({
+          status: 'error',
+          message: 'Valid symbol is required'
+        });
+      }
+
+      // Validate mode
+      const validModes = ['normal', 'advanced'];
+      const userMode = validModes.includes(mode) ? mode : 'normal';
+
+      console.log(`📊 Starting technical chart analysis for ${symbol.toUpperCase()} - ${timeframe} - ${userMode} mode`);
+      console.log(`🔍 Chart Analysis: Candlestick patterns, volume analysis, RSI/DMI interpretation`);
+      console.log(`🎯 Focus: Support/resistance levels and trade setup recommendations`);
+
+      // Check cache for chart analysis
+      const cacheKey = `chart_analysis_${symbol}_${timeframe}_${userMode}`;
+      const cached = cacheService.get(cacheKey);
+      
+      if (cached) {
+        console.log('📋 Returning cached chart analysis');
+        return res.json(cached);
+      }
+
+      // Fetch stock data for chart analysis
+      const stockData = await dataService.fetchStockData(symbol, timeframe);
+      
+      // Perform technical chart analysis
+      const chartAnalysis = await analysisService.performTechnicalChartAnalysis(
+        symbol,
+        stockData,
+        timeframe,
+        userMode
+      );
+
+      // Cache the result (shorter cache time for chart analysis due to frequent updates)
+      cacheService.set(cacheKey, chartAnalysis, 3 * 60 * 1000); // 3 minutes cache
+
+      console.log(`✅ Technical chart analysis completed for ${symbol.toUpperCase()}`);
+      res.json(chartAnalysis);
+
+    } catch (error) {
+      console.error('❌ Technical chart analysis error:', error);
+      res.status(500).json({
+        status: 'error',
+        message: 'Failed to generate technical chart analysis',
+        error: error.message,
+        fallback: 'Chart analysis is temporarily unavailable. Please try the regular analysis endpoint.'
+      });
+    }
+  }
+
+  // Enhanced Analysis - Detailed breakdown with confidence levels and advanced scoring
+  async getEnhancedAnalysis(req, res) {
+    try {
+      const { symbol } = req.params;
+      const { 
+        timeframe = '1y',
+        fundamental = this.defaultWeights.fundamental,
+        technical = this.defaultWeights.technical,
+        sentiment = this.defaultWeights.sentiment,
+        indicators = ''
+      } = req.query;
+
+      // Validate symbol
+      if (!symbol || typeof symbol !== 'string' || symbol.trim() === '') {
+        return res.status(400).json({
+          status: 'error',
+          message: 'Valid symbol is required'
+        });
+      }
+
+      // Parse and validate weights
+      const weights = weightService.validateAndParseWeights({
+        fundamental: parseFloat(fundamental),
+        technical: parseFloat(technical),
+        sentiment: parseFloat(sentiment)
+      });
+
+      // Parse technical indicators configuration
+      const indicatorsConfig = this.parseIndicatorsConfig(indicators);
+
+      console.log(`🚀 Enhanced analysis for ${symbol.toUpperCase()} - ${timeframe}`);
+      console.log(`⚖️  Enhanced Weights: F:${weights.fundamental}% T:${weights.technical}% S:${weights.sentiment}%`);
+      console.log(`📈 Advanced Scoring: Confidence levels, detailed breakdown, and reasoning`);
+      console.log(`🎯 Enhanced Algorithms: Integrated from stock-whisperer-frontend`);
+
+      // Check cache for enhanced analysis
+      const cacheKey = `enhanced_${symbol}_${timeframe}_${JSON.stringify(weights)}_${JSON.stringify(indicatorsConfig)}`;
+      const cached = cacheService.get(cacheKey);
+      
+      if (cached) {
+        console.log('📋 Returning cached enhanced analysis');
+        return res.json(cached);
+      }
+
+      // Fetch stock data
+      const stockData = await dataService.fetchStockData(symbol, timeframe);
+      
+      // Perform enhanced analysis
+      const enhancedAnalysis = await analysisService.performEnhancedAnalysis(
+        symbol,
+        stockData,
+        timeframe,
+        weights,
+        indicatorsConfig
+      );
+
+      // Cache the result (standard 5-minute cache)
+      cacheService.set(cacheKey, enhancedAnalysis);
+
+      console.log(`✅ Enhanced analysis completed for ${symbol.toUpperCase()}: ${enhancedAnalysis.analysis.enhanced.aggregateScore}/100 (${enhancedAnalysis.analysis.enhanced.recommendation})`);
+      res.json(enhancedAnalysis);
+
+    } catch (error) {
+      console.error('❌ Enhanced analysis error:', error);
+      res.status(500).json({
+        status: 'error',
+        message: 'Failed to generate enhanced analysis',
+        error: error.message,
+        fallback: 'Enhanced analysis is temporarily unavailable. Please try the regular analysis endpoint.'
+      });
+    }
+  }
 }
 
 module.exports = new StockController();

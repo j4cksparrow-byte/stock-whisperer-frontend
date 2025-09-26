@@ -1,6 +1,10 @@
 import { useWeightDefaults } from '../lib/queries'
-import WeightsPanel from '../components/WeightsPanel'
+import EnhancedWeightsPanel from '../components/EnhancedWeightsPanel'
 import { useState } from 'react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { TrendingUp, Activity, MessageSquare, Lightbulb, BarChart3, Sliders } from 'lucide-react'
 
 export default function Weights() {
   const { data } = useWeightDefaults()
@@ -8,93 +12,153 @@ export default function Weights() {
   const presets = data?.examples ?? []
   
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Weights</h1>
-      
-      <div className="prose max-w-none">
-        <p className="text-slate-600">
-          Customize how much weight to give each analysis component in your overall score. 
-          The system automatically normalizes weights to total 100%.
-        </p>
-      </div>
-      
-      <div className="border rounded-md p-4 bg-white">
-        <h2 className="text-lg font-medium mb-3">Analysis Components</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="border rounded p-3">
-            <h3 className="font-medium text-blue-700 mb-2">Fundamental (40%)</h3>
-            <p className="text-sm text-slate-600">
-              Company financials, ratios, valuation metrics, and intrinsic value analysis.
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+      {/* Header Section */}
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight">Analysis Weights</h1>
+            <p className="text-muted-foreground mt-2">
+              Customize the importance of different analysis factors for your investment strategy
             </p>
           </div>
-          <div className="border rounded p-3">
-            <h3 className="font-medium text-green-700 mb-2">Technical (35%)</h3>
-            <p className="text-sm text-slate-600">
-              Price patterns, indicators, momentum, and market trends from chart analysis.
-            </p>
-          </div>
-          <div className="border rounded p-3">
-            <h3 className="font-medium text-purple-700 mb-2">Sentiment (25%)</h3>
-            <p className="text-sm text-slate-600">
-              News sentiment, social media analysis, and market psychology indicators.
-            </p>
-          </div>
+          <Badge variant="secondary" className="text-sm">
+            <Sliders className="h-3 w-3 mr-1" />
+            {weights.fundamental}% / {weights.technical}% / {weights.sentiment}%
+          </Badge>
         </div>
       </div>
-      
-      <div>
-        <h2 className="text-lg font-medium mb-3">Preset Weighting Strategies</h2>
-        <div className="flex gap-2 flex-wrap mb-4">
-          {presets.map((p: any, i: number) => (
-            <button
-              key={i}
-              className="px-3 py-2 rounded-md bg-white border text-sm hover:bg-slate-50"
-              onClick={() => setWeights({ fundamental: p.fundamental, technical: p.technical, sentiment: p.sentiment })}
-            >
-              <div className="font-medium">{p.name}</div>
-              <div className="text-xs text-slate-500">
-                F:{p.fundamental} T:{p.technical} S:{p.sentiment}
+
+      {/* Main Content Grid */}
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
+        {/* Weights Panel - Takes up 2 columns on XL screens */}
+        <div className="xl:col-span-2">
+          <EnhancedWeightsPanel 
+            initial={weights}
+            onChange={setWeights} 
+          />
+        </div>
+        
+        {/* Info Sidebar */}
+        <div className="space-y-6">
+          {/* Analysis Components Overview */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg flex items-center space-x-2">
+                <BarChart3 className="h-5 w-5" />
+                <span>Analysis Components</span>
+              </CardTitle>
+              <CardDescription>
+                Understanding the three pillars of stock analysis
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <TrendingUp className="h-5 w-5 mt-1 text-blue-500" />
+                  <div>
+                    <h4 className="font-medium text-sm">Fundamental Analysis</h4>
+                    <p className="text-xs text-muted-foreground">
+                      Company financials, ratios, valuation metrics, and intrinsic value
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <Activity className="h-5 w-5 mt-1 text-purple-500" />
+                  <div>
+                    <h4 className="font-medium text-sm">Technical Analysis</h4>
+                    <p className="text-xs text-muted-foreground">
+                      Price patterns, indicators, trends, and market momentum
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <MessageSquare className="h-5 w-5 mt-1 text-green-500" />
+                  <div>
+                    <h4 className="font-medium text-sm">Sentiment Analysis</h4>
+                    <p className="text-xs text-muted-foreground">
+                      News sentiment, social media mood, and market psychology
+                    </p>
+                  </div>
+                </div>
               </div>
-            </button>
-          ))}
-        </div>
-      </div>
-      
-      <div className="border rounded-md p-3 bg-white">
-        <WeightsPanel initial={weights} onChange={setWeights} />
-      </div>
-      
-      <div className="border rounded-md p-4 bg-white">
-        <h2 className="text-lg font-medium mb-3">Weighting Strategies Explained</h2>
-        <div className="space-y-3">
-          <div>
-            <h3 className="font-medium text-slate-800">Conservative Value Investing</h3>
-            <p className="text-sm text-slate-600">
-              Focus on company fundamentals with 50% weight, technical analysis at 30%, and sentiment at 20%.
-              Best for long-term investors who prioritize financial health over short-term market movements.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-medium text-slate-800">Technical Trading</h3>
-            <p className="text-sm text-slate-600">
-              Emphasis on price action and technical indicators with 60% weight, fundamentals at 20%, and sentiment at 20%.
-              Ideal for active traders who rely on chart patterns and momentum signals.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-medium text-slate-800">Sentiment Momentum</h3>
-            <p className="text-sm text-slate-600">
-              Follow market psychology and news sentiment with 45% weight, technical analysis at 30%, and fundamentals at 25%.
-              Suited for traders who capitalize on market hype and news-driven movements.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-medium text-slate-800">Balanced Multi-Factor</h3>
-            <p className="text-sm text-slate-600">
-              Equal consideration of all factors with 40% fundamentals, 35% technicals, and 25% sentiment.
-              Provides a well-rounded approach for most investment styles.
-            </p>
-          </div>
+            </CardContent>
+          </Card>
+
+          {/* Preset Strategies */}
+          {presets.length > 0 && (
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center space-x-2">
+                  <Lightbulb className="h-5 w-5" />
+                  <span>Preset Strategies</span>
+                </CardTitle>
+                <CardDescription>
+                  Quick start with proven weighting strategies
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  {presets.map((p: any, i: number) => (
+                    <Button
+                      key={i}
+                      variant="outline"
+                      size="sm"
+                      className="w-full justify-start h-auto p-3"
+                      onClick={() => setWeights({ fundamental: p.fundamental, technical: p.technical, sentiment: p.sentiment })}
+                    >
+                      <div className="text-left">
+                        <div className="font-medium text-sm">{p.name}</div>
+                        <div className="text-xs text-muted-foreground">
+                          F:{p.fundamental}% T:{p.technical}% S:{p.sentiment}%
+                        </div>
+                      </div>
+                    </Button>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Strategy Explanations */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Strategy Guide</CardTitle>
+              <CardDescription>
+                Understanding different weighting approaches
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-3 text-sm">
+                <div>
+                  <h4 className="font-medium">Conservative Value</h4>
+                  <p className="text-xs text-muted-foreground">
+                    High fundamental weight for long-term investors prioritizing financial health
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-medium">Technical Trading</h4>
+                  <p className="text-xs text-muted-foreground">
+                    High technical weight for active traders using chart patterns
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-medium">Sentiment Momentum</h4>
+                  <p className="text-xs text-muted-foreground">
+                    High sentiment weight for news-driven and momentum trading
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-medium">Balanced Approach</h4>
+                  <p className="text-xs text-muted-foreground">
+                    Equal consideration for well-rounded investment decisions
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>

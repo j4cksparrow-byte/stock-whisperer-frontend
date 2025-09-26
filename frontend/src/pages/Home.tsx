@@ -1,5 +1,6 @@
 import SearchBox from '../components/SearchBox'
 import TrendingTabs from '../components/TrendingTabs'
+import EnhancedStockAnalysis from '@/components/EnhancedStockAnalysis'
 
 export default function Home() {
   return (
@@ -53,6 +54,11 @@ export default function Home() {
           <span className="text-sm text-gray-500">Live market data</span>
         </div>
         <TrendingTabs />
+      </section>
+
+      {/* Hybrid Analysis Section (from updated-UI) */}
+      <section className="mt-8">
+        <EnhancedStockAnalysis />
       </section>
 
       {/* CTA Section */}
