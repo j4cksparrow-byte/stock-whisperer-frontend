@@ -14,6 +14,36 @@ export type Database = {
   }
   public: {
     Tables: {
+      cache: {
+        Row: {
+          cache_key: string
+          cache_value: Json
+          created_at: string
+          expires_at: string | null
+          id: string
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          cache_key: string
+          cache_value: Json
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          cache_key?: string
+          cache_value?: Json
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string | null
@@ -52,7 +82,23 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      cleanup_expired_cache: {
+        Args: Record<PropertyKey, never>
+        Returns: number
+      }
+      get_cache_value: {
+        Args: { _cache_key: string; _user_id?: string }
+        Returns: Json
+      }
+      set_cache_value: {
+        Args: {
+          _cache_key: string
+          _cache_value: Json
+          _expires_at?: string
+          _user_id?: string
+        }
+        Returns: undefined
+      }
     }
     Enums: {
       [_ in never]: never
