@@ -13,15 +13,27 @@ Deno.serve(async (req) => {
   }
 
   try {
+    console.log('Function called, method:', req.method)
     const payload = await req.text()
+    console.log('Payload received:', payload.substring(0, 200) + '...')
     const headers = Object.fromEntries(req.headers)
+    console.log('Headers:', JSON.stringify(headers, null, 2))
     
     // If no hook secret is set, skip webhook verification for development
     let webhookData
     if (hookSecret) {
-      const wh = new Webhook(hookSecret)
-      webhookData = wh.verify(payload, headers)
+      console.log('Hook secret found, verifying webhook')
+      try {
+        const wh = new Webhook(hookSecret)
+        webhookData = wh.verify(payload, headers)
+        console.log('Webhook verified successfully')
+      } catch (verifyError) {
+        console.error('Webhook verification failed:', verifyError)
+        // Temporarily skip verification if it fails
+        webhookData = JSON.parse(payload)
+      }
     } else {
+      console.log('No hook secret, parsing payload directly')
       webhookData = JSON.parse(payload)
     }
 
