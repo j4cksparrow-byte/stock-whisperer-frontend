@@ -14,6 +14,8 @@ import Portfolio from './pages/Portfolio'
 import LearnPage from './pages/LearnPage'
 import Admin from './pages/Admin'
 import Auth from './pages/Auth'
+import Subscription from './pages/Subscription'
+import SubscriptionSuccess from './pages/SubscriptionSuccess'
 import UIShowcase from './components/UIShowcase'
 
 export default function App() {
@@ -34,6 +36,8 @@ export default function App() {
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/learn" element={<LearnPage />} />
                 <Route path="/admin" element={<Admin />} />
+                <Route path="/subscription" element={<Subscription />} />
+                <Route path="/subscription-success" element={<SubscriptionSuccess />} />
                 <Route path="/showcase" element={<UIShowcase />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
