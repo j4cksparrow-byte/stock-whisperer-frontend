@@ -63,18 +63,24 @@ export default function Auth() {
     if (!validateForm(formData, false)) return;
 
     setIsLoading(true);
-    const { error } = await signIn(formData.email, formData.password);
-    
-    if (error) {
-      if (error.message.includes('Invalid login credentials')) {
-        toast.error('Invalid email or password. Please check your credentials.');
-      } else if (error.message.includes('Email not confirmed')) {
-        toast.error('Please check your email and click the confirmation link before signing in.');
+    try {
+      const { error } = await signIn(formData.email, formData.password);
+      
+      if (error) {
+        console.error('Sign in error:', error);
+        if (error.message.includes('Invalid login credentials')) {
+          toast.error('Invalid email or password. Please check your credentials.');
+        } else if (error.message.includes('Email not confirmed')) {
+          toast.error('Please check your email and click the confirmation link before signing in.');
+        } else {
+          toast.error(error.message || 'Failed to sign in. Please try again.');
+        }
       } else {
-        toast.error(error.message || 'Failed to sign in. Please try again.');
+        toast.success('Successfully signed in!');
       }
-    } else {
-      toast.success('Successfully signed in!');
+    } catch (error) {
+      console.error('Sign in exception:', error);
+      toast.error('An unexpected error occurred. Please try again.');
     }
     setIsLoading(false);
   };
@@ -84,16 +90,22 @@ export default function Auth() {
     if (!validateForm(formData, true)) return;
 
     setIsLoading(true);
-    const { error } = await signUp(formData.email, formData.password, formData.fullName);
-    
-    if (error) {
-      if (error.message.includes('User already registered')) {
-        toast.error('An account with this email already exists. Please sign in instead.');
+    try {
+      const { error } = await signUp(formData.email, formData.password, formData.fullName);
+      
+      if (error) {
+        console.error('Sign up error:', error);
+        if (error.message.includes('User already registered')) {
+          toast.error('An account with this email already exists. Please sign in instead.');
+        } else {
+          toast.error(error.message || 'Failed to create account. Please try again.');
+        }
       } else {
-        toast.error(error.message || 'Failed to create account. Please try again.');
+        toast.success('Account created! Please check your email to confirm your account.');
       }
-    } else {
-      toast.success('Account created! Please check your email to confirm your account.');
+    } catch (error) {
+      console.error('Sign up exception:', error);
+      toast.error('An unexpected error occurred. Please try again.');
     }
     setIsLoading(false);
   };
@@ -109,9 +121,15 @@ export default function Auth() {
       });
       
       if (error) {
-        toast.error(`Failed to sign in with ${provider}. Please try again.`);
+        console.error('Social login error:', error);
+        if (error.message.includes('not enabled')) {
+          toast.error(`${provider.charAt(0).toUpperCase() + provider.slice(1)} login is not configured yet. Please use email/password for now.`);
+        } else {
+          toast.error(`Failed to sign in with ${provider}: ${error.message}`);
+        }
       }
     } catch (error) {
+      console.error('Social login exception:', error);
       toast.error(`Failed to sign in with ${provider}. Please try again.`);
     } finally {
       setIsLoading(false);
