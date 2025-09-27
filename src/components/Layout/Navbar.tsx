@@ -20,7 +20,8 @@ import {
   Activity,
   Target,
   Shield,
-  Sliders
+  Sliders,
+  Crown
 } from 'lucide-react';
 import {
   DropdownMenu,
@@ -96,6 +97,12 @@ const Navbar = () => {
       label: 'Portfolio', 
       icon: TrendingUp,
       description: 'Portfolio management'
+    },
+    { 
+      href: '/subscription', 
+      label: 'Pricing', 
+      icon: Crown,
+      description: 'Subscription plans'
     },
     { 
       href: '/learn', 
