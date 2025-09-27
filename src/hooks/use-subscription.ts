@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
+import { useNavigate } from 'react-router-dom';
 
 interface SubscriptionData {
   subscribed: boolean;
@@ -15,6 +16,7 @@ export const useSubscription = () => {
     subscription_end: null
   });
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   const checkSubscription = async () => {
     try {
@@ -52,7 +54,8 @@ export const useSubscription = () => {
       const { data: { session } } = await supabase.auth.getSession();
       
       if (!session) {
-        toast.error("Please sign in to upgrade your plan");
+        // Redirect to auth page instead of showing error
+        navigate('/auth');
         return;
       }
 
@@ -78,7 +81,8 @@ export const useSubscription = () => {
       const { data: { session } } = await supabase.auth.getSession();
       
       if (!session) {
-        toast.error("Please sign in to manage your subscription");
+        // Redirect to auth page instead of showing error  
+        navigate('/auth');
         return;
       }
 
