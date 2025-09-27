@@ -1,42 +1,33 @@
 import React from 'npm:react@18.3.1'
-import { Webhook } from 'https://esm.sh/standardwebhooks@1.0.0'
 import { Resend } from 'https://esm.sh/resend@4.0.0'
 import { renderAsync } from 'https://esm.sh/@react-email/components@0.0.22'
 import { AuthEmail } from './_templates/auth-email.tsx'
 
 const resend = new Resend(Deno.env.get('RESEND_API_KEY') as string)
-const hookSecret = Deno.env.get('SEND_AUTH_EMAIL_HOOK_SECRET') as string
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+}
 
 Deno.serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders });
+  }
+
   if (req.method !== 'POST') {
-    return new Response('Method not allowed', { status: 405 })
+    return new Response('Method not allowed', { status: 405, headers: corsHeaders })
   }
 
   try {
-    console.log('Function called, method:', req.method)
     const payload = await req.text()
-    console.log('Payload received:', payload.substring(0, 200) + '...')
-    const headers = Object.fromEntries(req.headers)
-    console.log('Headers:', JSON.stringify(headers, null, 2))
+    console.log('Auth email function called')
     
-    // If no hook secret is set, skip webhook verification for development
-    let webhookData
-    if (hookSecret) {
-      console.log('Hook secret found, verifying webhook')
-      try {
-        const wh = new Webhook(hookSecret)
-        webhookData = wh.verify(payload, headers)
-        console.log('Webhook verified successfully')
-      } catch (verifyError) {
-        console.error('Webhook verification failed:', verifyError)
-        // Temporarily skip verification if it fails
-        webhookData = JSON.parse(payload)
-      }
-    } else {
-      console.log('No hook secret, parsing payload directly')
-      webhookData = JSON.parse(payload)
-    }
+    // Parse the webhook data
+    const webhookData = JSON.parse(payload)
 
+    // Extract the required data
     const {
       user,
       email_data: { token, token_hash, redirect_to, email_action_type, site_url },
@@ -55,6 +46,7 @@ Deno.serve(async (req) => {
 
     console.log('Sending auth email to:', user.email, 'Type:', email_action_type)
 
+    // Create the email HTML quickly
     const html = await renderAsync(
       React.createElement(AuthEmail, {
         supabase_url: Deno.env.get('SUPABASE_URL') ?? '',
@@ -66,6 +58,7 @@ Deno.serve(async (req) => {
       })
     )
 
+    // Send the email
     const { data, error } = await resend.emails.send({
       from: 'StockViz <onboarding@resend.dev>',
       to: [user.email],
@@ -82,7 +75,7 @@ Deno.serve(async (req) => {
     
     return new Response(JSON.stringify({ success: true, data }), {
       status: 200,
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', ...corsHeaders },
     })
   } catch (error) {
     console.error('Error in send-auth-email function:', error)
@@ -90,12 +83,11 @@ Deno.serve(async (req) => {
       JSON.stringify({
         error: {
           message: error instanceof Error ? error.message : 'Unknown error',
-          stack: error instanceof Error ? error.stack : undefined,
         },
       }),
       {
         status: 500,
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...corsHeaders },
       }
     )
   }
