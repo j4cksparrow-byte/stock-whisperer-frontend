@@ -64,18 +64,27 @@ export default function Auth() {
 
     setIsLoading(true);
     try {
+      console.log('Attempting email sign in for:', formData.email);
       const { error } = await signIn(formData.email, formData.password);
       
       if (error) {
         console.error('Sign in error:', error);
+        console.error('Error message:', error.message);
+        console.error('Error status:', error.status);
+        
         if (error.message.includes('Invalid login credentials')) {
-          toast.error('Invalid email or password. Please check your credentials.');
+          toast.error('Invalid email or password. Please check your credentials or sign up if you don\'t have an account.');
         } else if (error.message.includes('Email not confirmed')) {
           toast.error('Please check your email and click the confirmation link before signing in.');
+        } else if (error.message.includes('signup_disabled')) {
+          toast.error('Sign up is currently disabled. Please contact support.');
+        } else if (error.message.includes('too many requests')) {
+          toast.error('Too many sign-in attempts. Please wait a moment and try again.');
         } else {
           toast.error(error.message || 'Failed to sign in. Please try again.');
         }
       } else {
+        console.log('Sign in successful');
         toast.success('Successfully signed in!');
       }
     } catch (error) {
