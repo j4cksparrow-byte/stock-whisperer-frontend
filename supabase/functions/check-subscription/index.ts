@@ -72,11 +72,15 @@ serve(async (req) => {
 
     if (hasActiveSub) {
       const subscription = subscriptions.data[0];
-      subscriptionEnd = new Date(subscription.current_period_end * 1000).toISOString();
+      // Safely handle the timestamp conversion
+      if (subscription.current_period_end && typeof subscription.current_period_end === 'number') {
+        subscriptionEnd = new Date(subscription.current_period_end * 1000).toISOString();
+      }
       tier = "premium";
       logStep("Active subscription found", { 
         subscriptionId: subscription.id, 
-        endDate: subscriptionEnd 
+        endDate: subscriptionEnd,
+        rawEndTime: subscription.current_period_end
       });
     } else {
       logStep("No active subscription found");
