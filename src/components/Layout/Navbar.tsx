@@ -290,11 +290,11 @@ const Navbar = () => {
               </DropdownMenu>
             ) : (
               <div className="flex items-center space-x-2">
-                <Button variant="ghost" size="sm">
-                  Sign In
+                <Button variant="ghost" size="sm" asChild>
+                  <Link to="/auth">Sign In</Link>
                 </Button>
-                <Button size="sm" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                  Sign Up
+                <Button size="sm" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700" asChild>
+                  <Link to="/auth">Sign Up</Link>
                 </Button>
               </div>
             )}
@@ -342,7 +342,7 @@ const Navbar = () => {
                     );
                   })}
                   
-                  {user && (
+                  {user ? (
                     <>
                       <div className="border-t border-border pt-4">
                         <div className="flex items-center space-x-3 px-3 py-2">
@@ -367,6 +367,21 @@ const Navbar = () => {
                         <span>Log out</span>
                       </Button>
                     </>
+                  ) : (
+                    <div className="border-t border-border pt-4 space-y-2">
+                      <Button variant="ghost" className="justify-start w-full" asChild>
+                        <Link to="/auth" onClick={() => setIsMobileMenuOpen(false)}>
+                          <User className="mr-2 h-4 w-4" />
+                          <span>Sign In</span>
+                        </Link>
+                      </Button>
+                      <Button className="justify-start w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700" asChild>
+                        <Link to="/auth" onClick={() => setIsMobileMenuOpen(false)}>
+                          <User className="mr-2 h-4 w-4" />
+                          <span>Sign Up</span>
+                        </Link>
+                      </Button>
+                    </div>
                   )}
                 </div>
               </SheetContent>

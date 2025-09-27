@@ -1,19 +1,13 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-
-interface User {
-  id: string;
-  email: string;
-  user_metadata?: {
-    full_name?: string;
-    avatar_url?: string;
-  };
-}
+import { supabase } from '@/integrations/supabase/client';
+import { User, Session } from '@supabase/supabase-js';
 
 interface AuthContextType {
   user: User | null;
-  signOut: () => Promise<void>;
-  signIn: (email: string, password: string) => Promise<void>;
-  signUp: (email: string, password: string) => Promise<void>;
+  session: Session | null;
+  signOut: () => Promise<{ error: any }>;
+  signIn: (email: string, password: string) => Promise<{ error: any }>;
+  signUp: (email: string, password: string, fullName?: string) => Promise<{ error: any }>;
   loading: boolean;
 }
 
@@ -33,56 +27,66 @@ interface AuthProviderProps {
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
+  const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading and check for stored user session
-    const storedUser = localStorage.getItem('stockviz_user');
-    if (storedUser) {
-      try {
-        setUser(JSON.parse(storedUser));
-      } catch (error) {
-        localStorage.removeItem('stockviz_user');
+    // Set up auth state listener FIRST
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        setSession(session);
+        setUser(session?.user ?? null);
+        if (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') {
+          setLoading(false);
+        }
+        if (event === 'SIGNED_OUT') {
+          setLoading(false);
+        }
       }
-    }
-    setLoading(false);
+    );
+
+    // THEN check for existing session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setUser(session?.user ?? null);
+      setLoading(false);
+    });
+
+    return () => subscription.unsubscribe();
   }, []);
 
-  const signOut = async (): Promise<void> => {
-    setUser(null);
-    localStorage.removeItem('stockviz_user');
+  const signOut = async () => {
+    const { error } = await supabase.auth.signOut();
+    return { error };
   };
 
-  const signIn = async (email: string, password: string): Promise<void> => {
-    // Simulate sign in - in real app this would call your auth API
-    const mockUser: User = {
-      id: '1',
+  const signIn = async (email: string, password: string) => {
+    const { error } = await supabase.auth.signInWithPassword({
       email,
-      user_metadata: {
-        full_name: 'Demo User',
-        avatar_url: undefined
-      }
-    };
-    setUser(mockUser);
-    localStorage.setItem('stockviz_user', JSON.stringify(mockUser));
+      password,
+    });
+    return { error };
   };
 
-  const signUp = async (email: string, password: string): Promise<void> => {
-    // Simulate sign up - in real app this would call your auth API
-    const mockUser: User = {
-      id: '1',
+  const signUp = async (email: string, password: string, fullName?: string) => {
+    const redirectUrl = `${window.location.origin}/`;
+    
+    const { error } = await supabase.auth.signUp({
       email,
-      user_metadata: {
-        full_name: 'New User',
-        avatar_url: undefined
+      password,
+      options: {
+        emailRedirectTo: redirectUrl,
+        data: {
+          full_name: fullName || '',
+        }
       }
-    };
-    setUser(mockUser);
-    localStorage.setItem('stockviz_user', JSON.stringify(mockUser));
+    });
+    return { error };
   };
 
   const value: AuthContextType = {
     user,
+    session,
     signOut,
     signIn,
     signUp,

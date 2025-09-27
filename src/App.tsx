@@ -13,6 +13,7 @@ import Market from './pages/Market'
 import Portfolio from './pages/Portfolio'
 import LearnPage from './pages/LearnPage'
 import Admin from './pages/Admin'
+import Auth from './pages/Auth'
 import UIShowcase from './components/UIShowcase'
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
             <main className="flex-1">
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/auth" element={<Auth />} />
                 <Route path="/symbol/:symbol" element={<SymbolAnalysis />} />
                 <Route path="/indicators" element={<Indicators />} />
                 <Route path="/weights" element={<Weights />} />
