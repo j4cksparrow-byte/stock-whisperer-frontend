@@ -11,8 +11,8 @@ type Database = {
   }
 }
 
-const SUPABASE_URL = import.meta.env?.VITE_SUPABASE_URL || '';
-const SUPABASE_PUBLISHABLE_KEY = import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY || '';
+const SUPABASE_URL = 'https://egiiqbgumgltatfljbcs.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVnaWlxYmd1bWdsdGF0ZmxqYmNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcyMzg2NjUsImV4cCI6MjA2MjgxNDY2NX0.ECaOGNSTRN5kWE4BImOPlfBemrmofzLR_wVFzH71j9o';
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
