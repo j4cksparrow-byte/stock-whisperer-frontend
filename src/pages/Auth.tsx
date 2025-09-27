@@ -113,25 +113,35 @@ export default function Auth() {
   const handleSocialLogin = async (provider: 'google' | 'github') => {
     try {
       setIsLoading(true);
-      const { error } = await supabase.auth.signInWithOAuth({
+      console.log(`Attempting ${provider} login...`);
+      
+      const redirectTo = `${window.location.origin}/`;
+      console.log('Redirect URL:', redirectTo);
+      
+      const { data, error } = await supabase.auth.signInWithOAuth({
         provider,
         options: {
-          redirectTo: `${window.location.origin}/`
+          redirectTo
         }
       });
+      
+      console.log('OAuth response:', { data, error });
       
       if (error) {
         console.error('Social login error:', error);
         if (error.message.includes('not enabled')) {
-          toast.error(`${provider.charAt(0).toUpperCase() + provider.slice(1)} login is not configured yet. Please use email/password for now.`);
+          toast.error(`${provider.charAt(0).toUpperCase() + provider.slice(1)} login is not configured. Please check Supabase settings.`);
+        } else if (error.message.includes('Invalid')) {
+          toast.error(`${provider.charAt(0).toUpperCase() + provider.slice(1)} OAuth configuration error. Please check redirect URLs.`);
         } else {
           toast.error(`Failed to sign in with ${provider}: ${error.message}`);
         }
+        setIsLoading(false);
       }
+      // Note: If successful, the page will redirect, so we don't set loading to false here
     } catch (error) {
       console.error('Social login exception:', error);
       toast.error(`Failed to sign in with ${provider}. Please try again.`);
-    } finally {
       setIsLoading(false);
     }
   };
