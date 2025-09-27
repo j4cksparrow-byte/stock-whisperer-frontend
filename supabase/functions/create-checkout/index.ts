@@ -49,9 +49,8 @@ serve(async (req) => {
       logStep("No existing customer found");
     }
 
-    // TODO: Replace with actual price ID from Stripe dashboard
-    // This is a placeholder - you'll need to create a product in Stripe dashboard first
-    const priceId = "price_REPLACE_WITH_ACTUAL_PRICE_ID";
+    // Premium Plan Price ID from Stripe
+    const priceId = "price_1SC29RCik1TD0BcqeWsoSg2N";
 
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
