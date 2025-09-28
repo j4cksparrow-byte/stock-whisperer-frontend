@@ -49,11 +49,16 @@ serve(async (req) => {
         .limit(1)
         .maybeSingle();
 
-      if (cachedResult) {
+    if (cachedResult) {
         console.log('Returning cached result for', symbol);
         return new Response(JSON.stringify({
           status: 'ok',
-          analysis: formatAnalysisResponse(cachedResult)
+          symbol,
+          analysis: {
+            mode,
+            timeframe,
+            ...formatAnalysisResponse(cachedResult)
+          }
         }), {
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
@@ -82,7 +87,12 @@ serve(async (req) => {
 
     return new Response(JSON.stringify({
       status: 'ok',
-      analysis: formatAnalysisResponse(analysisResult)
+      symbol,
+      analysis: {
+        mode,
+        timeframe,
+        ...formatAnalysisResponse(analysisResult)
+      }
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
@@ -92,7 +102,13 @@ serve(async (req) => {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
     return new Response(JSON.stringify({ 
       error: errorMessage,
-      analysis: getMockAnalysis() // Fallback to mock data
+      status: 'error',
+      symbol: symbol || 'UNKNOWN',
+      analysis: {
+        mode: 'normal',
+        timeframe: '1M',
+        ...getMockAnalysis()
+      }
     }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
