@@ -21,9 +21,11 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders });
   }
 
+  let symbol: string | undefined;
+  
   try {
     const url = new URL(req.url);
-    const symbol = url.pathname.split('/').pop()?.toUpperCase();
+    symbol = url.pathname.split('/').pop()?.toUpperCase();
     const timeframe = url.searchParams.get('timeframe') || '1M';
     const mode = url.searchParams.get('mode') || 'normal';
     const bypassCache = url.searchParams.get('bypassCache') === 'true';
@@ -51,13 +53,14 @@ serve(async (req) => {
 
     if (cachedResult) {
         console.log('Returning cached result for', symbol);
+        const analysisData = formatAnalysisResponse(cachedResult);
         return new Response(JSON.stringify({
           status: 'ok',
           symbol,
           analysis: {
             mode,
             timeframe,
-            ...formatAnalysisResponse(cachedResult)
+            ...analysisData
           }
         }), {
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -85,13 +88,14 @@ serve(async (req) => {
       console.error('Cache insert error:', insertError);
     }
 
+    const analysisData = formatAnalysisResponse(analysisResult);
     return new Response(JSON.stringify({
       status: 'ok',
       symbol,
       analysis: {
         mode,
         timeframe,
-        ...formatAnalysisResponse(analysisResult)
+        ...analysisData
       }
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -100,6 +104,7 @@ serve(async (req) => {
   } catch (error) {
     console.error('Error in stock-analysis function:', error);
     const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+    const mockData = getMockAnalysis();
     return new Response(JSON.stringify({ 
       error: errorMessage,
       status: 'error',
@@ -107,7 +112,7 @@ serve(async (req) => {
       analysis: {
         mode: 'normal',
         timeframe: '1M',
-        ...getMockAnalysis()
+        ...mockData
       }
     }), {
       status: 500,
