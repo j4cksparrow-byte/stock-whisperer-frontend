@@ -14,6 +14,99 @@ export type Database = {
   }
   public: {
     Tables: {
+      analysis_results: {
+        Row: {
+          aggregate_score: number | null
+          ai_summary: string | null
+          analysis_type: string
+          confidence: number | null
+          created_at: string
+          current_price: number | null
+          duration: string
+          exchange: string
+          expires_at: string | null
+          fundamental_metrics: Json | null
+          fundamental_score: number | null
+          fundamental_weight: number | null
+          id: string
+          key_factors: string[] | null
+          price_change: number | null
+          price_change_percent: number | null
+          recommendation: string | null
+          risk_level: string | null
+          risks: string[] | null
+          sentiment_data: Json | null
+          sentiment_score: number | null
+          sentiment_weight: number | null
+          symbol: string
+          technical_indicators: Json | null
+          technical_score: number | null
+          technical_weight: number | null
+          updated_at: string
+          volume: number | null
+        }
+        Insert: {
+          aggregate_score?: number | null
+          ai_summary?: string | null
+          analysis_type?: string
+          confidence?: number | null
+          created_at?: string
+          current_price?: number | null
+          duration?: string
+          exchange?: string
+          expires_at?: string | null
+          fundamental_metrics?: Json | null
+          fundamental_score?: number | null
+          fundamental_weight?: number | null
+          id?: string
+          key_factors?: string[] | null
+          price_change?: number | null
+          price_change_percent?: number | null
+          recommendation?: string | null
+          risk_level?: string | null
+          risks?: string[] | null
+          sentiment_data?: Json | null
+          sentiment_score?: number | null
+          sentiment_weight?: number | null
+          symbol: string
+          technical_indicators?: Json | null
+          technical_score?: number | null
+          technical_weight?: number | null
+          updated_at?: string
+          volume?: number | null
+        }
+        Update: {
+          aggregate_score?: number | null
+          ai_summary?: string | null
+          analysis_type?: string
+          confidence?: number | null
+          created_at?: string
+          current_price?: number | null
+          duration?: string
+          exchange?: string
+          expires_at?: string | null
+          fundamental_metrics?: Json | null
+          fundamental_score?: number | null
+          fundamental_weight?: number | null
+          id?: string
+          key_factors?: string[] | null
+          price_change?: number | null
+          price_change_percent?: number | null
+          recommendation?: string | null
+          risk_level?: string | null
+          risks?: string[] | null
+          sentiment_data?: Json | null
+          sentiment_score?: number | null
+          sentiment_weight?: number | null
+          symbol?: string
+          technical_indicators?: Json | null
+          technical_score?: number | null
+          technical_weight?: number | null
+          updated_at?: string
+          volume?: number | null
+        }
+        Relationships: []
+      }
       cache: {
         Row: {
           cache_key: string

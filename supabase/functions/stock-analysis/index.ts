@@ -21,9 +21,11 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders });
   }
 
+  let symbol: string | undefined;
+  
   try {
     const url = new URL(req.url);
-    const symbol = url.pathname.split('/').pop()?.toUpperCase();
+    symbol = url.pathname.split('/').pop()?.toUpperCase();
     const timeframe = url.searchParams.get('timeframe') || '1M';
     const mode = url.searchParams.get('mode') || 'normal';
     const bypassCache = url.searchParams.get('bypassCache') === 'true';
@@ -49,11 +51,17 @@ serve(async (req) => {
         .limit(1)
         .maybeSingle();
 
-      if (cachedResult) {
+    if (cachedResult) {
         console.log('Returning cached result for', symbol);
+        const analysisData = formatAnalysisResponse(cachedResult);
         return new Response(JSON.stringify({
           status: 'ok',
-          analysis: formatAnalysisResponse(cachedResult)
+          symbol,
+          analysis: {
+            mode,
+            timeframe,
+            ...analysisData
+          }
         }), {
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
@@ -80,9 +88,15 @@ serve(async (req) => {
       console.error('Cache insert error:', insertError);
     }
 
+    const analysisData = formatAnalysisResponse(analysisResult);
     return new Response(JSON.stringify({
       status: 'ok',
-      analysis: formatAnalysisResponse(analysisResult)
+      symbol,
+      analysis: {
+        mode,
+        timeframe,
+        ...analysisData
+      }
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
@@ -90,9 +104,16 @@ serve(async (req) => {
   } catch (error) {
     console.error('Error in stock-analysis function:', error);
     const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+    const mockData = getMockAnalysis();
     return new Response(JSON.stringify({ 
       error: errorMessage,
-      analysis: getMockAnalysis() // Fallback to mock data
+      status: 'error',
+      symbol: symbol || 'UNKNOWN',
+      analysis: {
+        mode: 'normal',
+        timeframe: '1M',
+        ...mockData
+      }
     }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
