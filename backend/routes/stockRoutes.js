@@ -19,6 +19,9 @@ router.get('/enhanced-analysis/:symbol', stockController.getEnhancedAnalysis.bin
 router.get('/search', searchController.searchSymbols.bind(searchController));
 router.get('/trending', searchController.getTrendingSymbols.bind(searchController));
 
+// Data Sources Status Route
+router.get('/data-sources/status', searchController.getDataSourcesStatus.bind(searchController));
+
 // New endpoint to get default weights
 router.get('/weights/defaults', stockController.getDefaultWeights.bind(stockController));
 

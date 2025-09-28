@@ -2,6 +2,7 @@ import api from '../lib/api'
 import { useQuery } from '@tanstack/react-query'
 import { useState } from 'react'
 import { HealthResponse, ConfigResponse, CacheResponse } from '../types/admin'
+import DataSourceStatus from '../components/DataSourceStatus'
 
 function useEndpoint<T>(url: string) {
   return useQuery({
@@ -51,6 +52,9 @@ export default function Admin() {
       </div>
 
       <section className="grid grid-cols-1 gap-6">
+        {/* Data Sources Status - New Multi-Source Integration */}
+        <DataSourceStatus />
+        
         <div className="border rounded-md p-4 bg-white">
           <h2 className="text-lg font-medium mb-3">System Health</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

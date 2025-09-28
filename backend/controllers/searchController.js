@@ -1,5 +1,5 @@
 // controllers/searchController.js
-const axios = require('axios');
+const dataSourceManager = require('../services/dataSourceManager');
 const cacheService = require('../services/cacheService');
 
 class SearchController {
@@ -37,12 +37,13 @@ class SearchController {
         });
       }
 
-      // Fetch from Alpha Vantage or use fallback
+      // Use the new multi-source data manager for search
       let searchResults;
       try {
-        searchResults = await this.fetchSymbolSearch(query);
+        const searchResponse = await dataSourceManager.searchSymbols(query);
+        searchResults = searchResponse.results || [];
       } catch (error) {
-        console.log('⚠️ Alpha Vantage search failed, using fallback');
+        console.log('⚠️ Multi-source search failed, using fallback');
         searchResults = this.generateFallbackSearchResults(query);
       }
 
@@ -65,7 +66,26 @@ class SearchController {
     }
   }
 
-  // Alpha Vantage SYMBOL_SEARCH (helper)
+  // Get data sources status (new endpoint)
+  async getDataSourcesStatus(req, res) {
+    try {
+      const status = dataSourceManager.getStatus();
+      return res.json({
+        status: 'success',
+        dataSources: status,
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      console.error('❌ Error getting data sources status:', error);
+      return res.status(500).json({
+        status: 'error',
+        message: 'Failed to get data sources status',
+        error: error.message
+      });
+    }
+  }
+
+  // Keep existing Alpha Vantage method for backwards compatibility
   async fetchSymbolSearch(query) {
     const apiKey = process.env.ALPHA_VANTAGE_API_KEY;
     const url = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${encodeURIComponent(query)}&apikey=${apiKey}`;
@@ -172,68 +192,47 @@ class SearchController {
   // ----------------------------
   async getTrendingSymbols(req, res) {
     try {
-      console.log('📈 Fetching trending symbols (live from Alpha Vantage)...');
+      console.log('📈 Fetching trending symbols via enhanced trending service...');
 
-      const { category, enrich } = req.query; // category: gainers|losers|most_active; enrich=true to look up names
-      const catKey = (category || 'all').toLowerCase();
-      const enrichFlag = String(enrich).toLowerCase() === 'true';
-
-      // Cache check using shared cache service
-      const cacheKey = `trending_${catKey}_${enrichFlag ? 'enriched' : 'plain'}`;
-      const cached = cacheService.get(cacheKey);
-
-      if (cached) {
-        console.log('📋 Returning cached trending results');
-        return res.json({
-          status: 'success',
-          trending: cached,
-          source: 'cache',
-          timestamp: new Date().toISOString()
+      const { category } = req.query;
+      const validCategories = ['gainers', 'losers', 'mostActive'];
+      const catKey = (category || 'gainers').toLowerCase();
+      
+      if (!validCategories.includes(catKey)) {
+        return res.status(400).json({
+          status: 'error',
+          message: 'Invalid category. Use: gainers, losers, or mostActive'
         });
       }
 
-      // Live fetch
-      const live = await this.fetchTopGainersLosers();
-
-      // Shape payload
-      let payload;
-      if (catKey === 'gainers') payload = live.gainers;
-      else if (catKey === 'losers') payload = live.losers;
-      else if (catKey === 'most_active' || catKey === 'actives' || catKey === 'mostactive')
-        payload = live.mostActive;
-      else payload = { lastUpdated: live.lastUpdated, ...live };
-
-      // Optional enrichment (only for array payloads)
-      if (enrichFlag && Array.isArray(payload)) {
-        payload = await this.enrichNames(payload);
-      }
-
-      // Cache using shared cache service
-      cacheService.set(cacheKey, payload);
+      // Use enhanced trending service for better reliability
+      const enhancedTrendingService = require('../services/enhancedTrendingService');
+      const trendingData = await enhancedTrendingService.getTrendingStocks(catKey);
 
       return res.json({
         status: 'success',
-        trending: payload,
-        source: 'alpha_vantage',
-        lastUpdated: live.lastUpdated,
-        timestamp: new Date().toISOString()
+        trending: trendingData.results,
+        source: trendingData.source,
+        category: catKey,
+        timestamp: trendingData.timestamp
       });
     } catch (error) {
-      console.error('❌ Trending symbols error:', error.message);
+      console.error('❌ Enhanced trending symbols error:', error.message);
 
-      // graceful fallback to brief generated list
+      // Final fallback to brief generated list
       const fallback = [
-        { symbol: 'AAPL', name: 'Apple Inc.', change: '+2.15%', volume: 52300000, category: 'gainer' },
-        { symbol: 'TSLA', name: 'Tesla Inc.', change: '+5.67%', volume: 89100000, category: 'gainer' },
-        { symbol: 'AMZN', name: 'Amazon.com Inc.', change: '-1.45%', volume: 45200000, category: 'loser' },
-        { symbol: 'NVDA', name: 'NVIDIA Corporation', change: '+7.89%', volume: 67300000, category: 'most_active' }
+        { symbol: 'AAPL', name: 'Apple Inc.', price: 175.50, change: 3.75, changePercent: 2.18, volume: '52.3M', category: 'gainer' },
+        { symbol: 'TSLA', name: 'Tesla Inc.', price: 248.20, change: 14.20, changePercent: 6.07, volume: '89.1M', category: 'gainer' },
+        { symbol: 'AMZN', name: 'Amazon.com Inc.', price: 145.80, change: -2.15, changePercent: -1.45, volume: '45.2M', category: 'loser' },
+        { symbol: 'NVDA', name: 'NVIDIA Corporation', price: 875.50, change: 65.30, changePercent: 8.05, volume: '67.3M', category: 'most_active' }
       ];
 
       return res.status(200).json({
         status: 'success',
         trending: fallback,
         source: 'fallback',
-        note: 'Alpha Vantage unavailable or rate-limited; returned cached/generated data',
+        category: req.query.category || 'gainers',
+        note: 'All trending services unavailable; returned generated data',
         timestamp: new Date().toISOString()
       });
     }

@@ -1,5 +1,6 @@
 import TradingViewTrending from '../components/TradingViewTrending'
 import EnhancedStockAnalysis from '@/components/EnhancedStockAnalysis'
+import DataSourceBanner from '@/components/DataSourceBanner'
 
 export default function Home() {
   return (
@@ -24,6 +25,9 @@ export default function Home() {
             <EnhancedStockAnalysis />
           </div>
         </section>
+
+        {/* Data Source Enhancement Banner */}
+        <DataSourceBanner />
 
         {/* Trending Section */}
         <section className="space-y-6 sm:space-y-8">
