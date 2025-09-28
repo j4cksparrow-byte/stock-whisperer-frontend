@@ -35,6 +35,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
+import NavbarSearch from '../NavbarSearch';
 
 const Navbar = () => {
   const { user, signOut } = useAuth();
@@ -175,13 +176,7 @@ const Navbar = () => {
 
           {/* Center Search Bar */}
           <div className="hidden md:flex flex-1 max-w-md mx-8">
-            <div className="relative w-full">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-              <Input
-                placeholder="Search stocks, companies..."
-                className="pl-10 bg-muted/50 border-border/50 focus:bg-background transition-all duration-200"
-              />
-            </div>
+            <NavbarSearch />
           </div>
 
           {/* Right Side Actions */}
@@ -318,11 +313,7 @@ const Navbar = () => {
                 <div className="flex flex-col space-y-6 mt-8">
                   {/* Mobile Search */}
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-                    <Input
-                      placeholder="Search stocks..."
-                      className="pl-10 bg-muted/50"
-                    />
+                    <NavbarSearch />
                   </div>
 
                   {/* Mobile Navigation */}
