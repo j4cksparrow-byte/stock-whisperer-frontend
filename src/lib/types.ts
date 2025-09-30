@@ -78,8 +78,10 @@ export const TrendingBucket = z.object({
   price: z.number().optional(),
   change: z.number().optional(),
   changeAmount: z.number().optional(),
-  volume: z.number().optional(),
-  category: z.string().optional()
+  changePercent: z.number().optional(),
+  volume: z.union([z.number(), z.string()]).optional(),
+  category: z.string().optional(),
+  exchange: z.string().optional()
 })
 
 export const TrendingResponse = z.object({

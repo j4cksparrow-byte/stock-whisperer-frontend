@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { TrendingUp, TrendingDown, Activity, RefreshCw, Clock, AlertCircle } from 'lucide-react'
-import tradingViewService from '../services/tradingViewService'
+import { useTrending } from '../lib/queries'
 
 // TradingView widget types
 declare global {
@@ -30,13 +30,28 @@ interface MarketOverview {
 
 export default function TradingViewTrending() {
   const [tab, setTab] = useState<typeof tabs[number]>('gainers')
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const [stocks, setStocks] = useState<TrendingStock[]>([])
   const [marketOverview, setMarketOverview] = useState<MarketOverview | null>(null)
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date())
   const containerRef = useRef<HTMLDivElement>(null)
   const widgetRef = useRef<any>(null)
+  
+  // Use the hybrid API via React Query
+  const { data: trendingData, isLoading, error: queryError, refetch } = useTrending(tab)
+  
+  // Extract stocks array from the trending data structure
+  const stocks: TrendingStock[] = Array.isArray(trendingData?.trending) 
+    ? trendingData.trending.map(item => ({
+        symbol: item.symbol,
+        name: item.name || item.symbol,
+        price: item.price || 0,
+        change: item.change || 0,
+        changePercent: item.changePercent || 0,
+        volume: typeof item.volume === 'string' ? item.volume : String(item.volume || '0'),
+        exchange: item.exchange || 'US'
+      }))
+    : []
+  
+  const error = queryError ? 'Failed to load trending data. Please try again.' : null
 
   // Load TradingView script
   useEffect(() => {
@@ -68,56 +83,50 @@ export default function TradingViewTrending() {
     }
   }, [])
 
-  // Load data from TradingView service
+  // Update last updated time and market overview when data changes
   useEffect(() => {
-    const loadData = async () => {
-      setIsLoading(true)
-      setError(null)
+    if (trendingData && !isLoading && stocks.length > 0) {
+      setLastUpdated(new Date())
+      // Calculate market overview from trending data
+      const gainersCount = stocks.filter((s: TrendingStock) => s.change > 0).length
+      const losersCount = stocks.filter((s: TrendingStock) => s.change < 0).length
+      const unchangedCount = stocks.filter((s: TrendingStock) => s.change === 0).length
       
-      try {
-        const [stocksData, overviewData] = await Promise.all([
-          tradingViewService.getTrendingStocks(tab),
-          tradingViewService.getMarketOverview()
-        ])
-        
-        setStocks(stocksData)
-        setMarketOverview(overviewData)
-        setLastUpdated(new Date())
-        setIsLoading(false)
-      } catch (err) {
-        console.error('Failed to load trending data:', err)
-        setError('Failed to load trending data. Please try again.')
-        setIsLoading(false)
+      // Determine market status
+      const now = new Date()
+      const hour = now.getHours()
+      const isWeekend = now.getDay() === 0 || now.getDay() === 6
+      
+      let marketStatus: 'open' | 'closed' | 'pre-market' | 'after-hours' = 'closed'
+      if (!isWeekend) {
+        if (hour >= 9 && hour < 16) {
+          marketStatus = 'open'
+        } else if (hour >= 4 && hour < 9) {
+          marketStatus = 'pre-market'
+        } else if (hour >= 16 && hour < 20) {
+          marketStatus = 'after-hours'
+        }
       }
+      
+      setMarketOverview({
+        totalGainers: gainersCount,
+        totalLosers: losersCount,
+        totalUnchanged: unchangedCount,
+        marketStatus
+      })
     }
-
-    loadData()
-  }, [tab])
+  }, [trendingData, isLoading, stocks])
 
   // Auto-refresh every 30 seconds for live data
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isLoading) {
-        const loadData = async () => {
-          try {
-            const [stocksData, overviewData] = await Promise.all([
-              tradingViewService.getTrendingStocks(tab),
-              tradingViewService.getMarketOverview()
-            ])
-            
-            setStocks(stocksData)
-            setMarketOverview(overviewData)
-            setLastUpdated(new Date())
-          } catch (err) {
-            console.warn('Auto-refresh failed:', err)
-          }
-        }
-        loadData()
+        refetch()
       }
     }, 30 * 1000) // 30 seconds for live data
 
     return () => clearInterval(interval)
-  }, [tab, isLoading])
+  }, [isLoading, refetch])
 
   const getTrendIcon = (change: number) => {
     return change >= 0 ? (
@@ -131,25 +140,8 @@ export default function TradingViewTrending() {
     return change >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'
   }
 
-  const handleRefresh = async () => {
-    setIsLoading(true)
-    setError(null)
-    
-    try {
-      const [stocksData, overviewData] = await Promise.all([
-        tradingViewService.getTrendingStocks(tab),
-        tradingViewService.getMarketOverview()
-      ])
-      
-      setStocks(stocksData)
-      setMarketOverview(overviewData)
-      setLastUpdated(new Date())
-      setIsLoading(false)
-    } catch (err) {
-      console.error('Refresh failed:', err)
-      setError('Failed to refresh data. Please try again.')
-      setIsLoading(false)
-    }
+  const handleRefresh = () => {
+    refetch()
   }
 
   const getMarketStatusColor = (status: string) => {
