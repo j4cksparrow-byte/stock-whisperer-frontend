@@ -13,6 +13,7 @@ import Market from './pages/Market'
 import Portfolio from './pages/Portfolio'
 import LearnPage from './pages/LearnPage'
 import Admin from './pages/Admin'
+import ApiStatus from './pages/ApiStatus'
 import Auth from './pages/Auth'
 import Subscription from './pages/Subscription'
 import SubscriptionSuccess from './pages/SubscriptionSuccess'
@@ -35,7 +36,8 @@ export default function App() {
                 <Route path="/market" element={<Market />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/learn" element={<LearnPage />} />
-                <Route path="/admin" element={<Admin />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/api-status" element={<ApiStatus />} />
                 <Route path="/subscription" element={<Subscription />} />
                 <Route path="/subscription-success" element={<SubscriptionSuccess />} />
                 <Route path="/showcase" element={<UIShowcase />} />

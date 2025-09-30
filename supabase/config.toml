@@ -11,3 +11,6 @@ verify_jwt = true
 
 [functions.customer-portal]
 verify_jwt = true
+
+[functions.test-api-connections]
+verify_jwt = false
