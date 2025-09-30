@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { TrendingUp, TrendingDown, Activity, RefreshCw, Clock, AlertCircle } from 'lucide-react'
 import { useTrending } from '../lib/queries'
 
@@ -38,18 +38,21 @@ export default function TradingViewTrending() {
   // Use the hybrid API via React Query
   const { data: trendingData, isLoading, error: queryError, refetch } = useTrending(tab)
   
-  // Extract stocks array from the trending data structure
-  const stocks: TrendingStock[] = Array.isArray(trendingData?.trending) 
-    ? trendingData.trending.map(item => ({
-        symbol: item.symbol,
-        name: item.name || item.symbol,
-        price: item.price || 0,
-        change: item.change || 0,
-        changePercent: item.changePercent || 0,
-        volume: typeof item.volume === 'string' ? item.volume : String(item.volume || '0'),
-        exchange: item.exchange || 'US'
-      }))
-    : []
+  // Extract stocks array from the trending data structure using useMemo to prevent infinite loops
+  const stocks: TrendingStock[] = useMemo(() => 
+    Array.isArray(trendingData?.trending) 
+      ? trendingData.trending.map(item => ({
+          symbol: item.symbol,
+          name: item.name || item.symbol,
+          price: item.price || 0,
+          change: item.change || 0,
+          changePercent: item.changePercent || 0,
+          volume: typeof item.volume === 'string' ? item.volume : String(item.volume || '0'),
+          exchange: item.exchange || 'US'
+        }))
+      : [],
+    [trendingData]
+  )
   
   const error = queryError ? 'Failed to load trending data. Please try again.' : null
 
@@ -115,7 +118,7 @@ export default function TradingViewTrending() {
         marketStatus
       })
     }
-  }, [trendingData, isLoading, stocks])
+  }, [trendingData, isLoading])
 
   // Auto-refresh every 30 seconds for live data
   useEffect(() => {
