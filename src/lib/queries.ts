@@ -31,7 +31,7 @@ export function useSearch(query: string) {
         console.log('[useSearch] Calling stocks-api/search endpoint')
         const { data } = await api.get('/stocks-api/search', { params: { query } })
         console.log('[useSearch] API response:', data)
-        const parsed = parse(SearchResponse, { status: 'ok', results: data })
+        const parsed = parse(SearchResponse, data)
         console.log('[useSearch] Parsed results:', parsed)
         return parsed
       } catch (err) {
@@ -109,7 +109,7 @@ export function useIndicators() {
       console.log('[useIndicators] Fetching indicators')
       const { data } = await api.get('/stocks-api/indicators')
       console.log('[useIndicators] API response:', data)
-      const parsed = parse(IndicatorsResponse, { status: 'ok', ...data })
+      const parsed = parse(IndicatorsResponse, data)
       console.log('[useIndicators] Parsed data:', parsed)
       return parsed
     },
@@ -124,7 +124,7 @@ export function useWeightDefaults() {
       console.log('[useWeightDefaults] Fetching default weights')
       const { data } = await api.get('/stocks-api/weights/defaults')
       console.log('[useWeightDefaults] API response:', data)
-      const parsed = parse(WeightsDefaultsResponse, { status: 'ok', defaultWeights: data })
+      const parsed = parse(WeightsDefaultsResponse, data)
       console.log('[useWeightDefaults] Parsed data:', parsed)
       return parsed
     },

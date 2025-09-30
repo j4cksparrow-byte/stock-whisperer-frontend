@@ -17,8 +17,15 @@ serve(async (req) => {
     // Search endpoint
     if (path === '/search') {
       const query = url.searchParams.get('query') || '';
+      console.log(`🔍 [STOCKS-API] Search request for: "${query}"`);
       const searchResults = await searchSymbols(query);
-      return new Response(JSON.stringify(searchResults), {
+      console.log(`📊 [STOCKS-API] Search returned ${searchResults.length} results`);
+      
+      // Return in the expected format: { status: 'ok', results: [...] }
+      return new Response(JSON.stringify({ 
+        status: 'ok', 
+        results: searchResults 
+      }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
@@ -34,16 +41,18 @@ serve(async (req) => {
     
     // Indicators endpoint
     if (path === '/indicators') {
+      console.log(`📊 [STOCKS-API] Fetching indicators`);
       const indicators = getAvailableIndicators();
-      return new Response(JSON.stringify(indicators), {
+      return new Response(JSON.stringify({ status: 'ok', ...indicators }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
     
     // Default weights endpoint
     if (path === '/weights/defaults') {
+      console.log(`⚖️ [STOCKS-API] Fetching default weights`);
       const weights = getDefaultWeights();
-      return new Response(JSON.stringify(weights), {
+      return new Response(JSON.stringify({ status: 'ok', defaultWeights: weights }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
@@ -65,27 +74,42 @@ async function searchSymbols(query: string) {
   const ALPHA_VANTAGE_KEY = Deno.env.get("ALPHA_VANTAGE_API_KEY");
   
   if (!query || query.length < 1) {
+    console.log(`⚠️ [SEARCH] Empty query provided`);
     return [];
   }
 
+  console.log(`🔎 [SEARCH] Searching for: "${query}"`);
+
   try {
+    if (!ALPHA_VANTAGE_KEY) {
+      console.warn(`⚠️ [SEARCH] Alpha Vantage API key not configured, using fallback`);
+      return getFallbackSearchResults(query);
+    }
+
     const url = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${encodeURIComponent(query)}&apikey=${ALPHA_VANTAGE_KEY}`;
+    console.log(`📡 [SEARCH] Calling Alpha Vantage...`);
+    
     const response = await fetch(url);
     const data = await response.json();
     
-    if (data.bestMatches) {
-      return data.bestMatches.map((match: any) => ({
+    console.log(`📊 [SEARCH] Alpha Vantage response:`, JSON.stringify(data).substring(0, 200));
+    
+    if (data.bestMatches && Array.isArray(data.bestMatches) && data.bestMatches.length > 0) {
+      const results = data.bestMatches.map((match: any) => ({
         symbol: match['1. symbol'],
         name: match['2. name'],
         type: match['3. type'],
         region: match['4. region'],
         currency: match['8. currency']
       }));
+      console.log(`✅ [SEARCH] Found ${results.length} results from Alpha Vantage`);
+      return results;
     }
     
-    return [];
+    console.log(`⚠️ [SEARCH] No matches from Alpha Vantage, using fallback`);
+    return getFallbackSearchResults(query);
   } catch (error) {
-    console.error("Search error:", error);
+    console.error("❌ [SEARCH] Error:", error);
     return getFallbackSearchResults(query);
   }
 }
