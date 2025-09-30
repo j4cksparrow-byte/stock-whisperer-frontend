@@ -27,6 +27,16 @@ export const TechnicalAnalysisSchema = z.object({
 export const AnalysisResponse = z.object({
   status: z.string(),
   symbol: z.string(),
+  timeframe: z.string().optional(),
+  currentPrice: z.number().optional(),
+  priceHistory: z.array(z.object({
+    time: z.string(),
+    open: z.number(),
+    high: z.number(),
+    low: z.number(),
+    close: z.number(),
+    volume: z.number().optional()
+  })).optional(),
   analysis: z.object({
     mode: z.string(),
     timeframe: z.string(),
@@ -36,8 +46,22 @@ export const AnalysisResponse = z.object({
     sentiment: ScoreBlock.optional(),
     overall: ScoreBlock.optional(),
     aiInsights: z.object({ summary: z.string().optional() }).optional(),
-    meta: z.record(z.any()).optional()
-  })
+    meta: z.record(z.any()).optional(),
+    priceHistory: z.array(z.object({
+      time: z.string(),
+      open: z.number(),
+      high: z.number(),
+      low: z.number(),
+      close: z.number(),
+      volume: z.number().optional()
+    })).optional(),
+    currentPrice: z.number().optional()
+  }),
+  meta: z.object({
+    timestamp: z.string().optional(),
+    dataSource: z.string().optional(),
+    cached: z.boolean().optional()
+  }).optional()
 })
 
 export type AnalysisResponse = z.infer<typeof AnalysisResponse>

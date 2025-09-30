@@ -23,7 +23,7 @@ export default function SymbolAnalysis() {
   const [indConfig, setIndConfig] = useState<Record<string, any>>(decodeState(sp.get('ind') ) ?? {})
 
   const includeHeadlines = sp.get('headlines') !== 'false'
-  const bypassCache = sp.get('refresh') === '1'
+  const [bypassCache, setBypassCache] = useState(false)
 
   const { data, isFetching, refetch, error } = useAnalysis({
     symbol, timeframe, mode,
@@ -31,6 +31,16 @@ export default function SymbolAnalysis() {
     indicators: Object.keys(indConfig).length ? indConfig : undefined,
     includeHeadlines, bypassCache
   })
+
+  const handleRunAnalysis = () => {
+    setBypassCache(true)
+    syncURL()
+    refetch().finally(() => setBypassCache(false))
+  }
+
+  // Extract price data and current price from analysis
+  const priceData = data?.priceHistory || data?.analysis?.priceHistory
+  const currentPrice = data?.currentPrice || data?.analysis?.currentPrice
 
   function syncURL() {
     const ind = encodeState(indConfig)
@@ -69,13 +79,35 @@ export default function SymbolAnalysis() {
         </select>
         <button 
           className="ml-auto px-3 py-2 rounded bg-slate-900 text-white text-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2" 
-          onClick={() => { syncURL(); refetch() }}
+          onClick={handleRunAnalysis}
           disabled={isFetching}
         >
           {isFetching && <LoadingSpinner size="sm" />}
           {isFetching ? 'Analyzing...' : 'Run Analysis'}
         </button>
       </div>
+
+      {data?.meta && (
+        <div className="flex items-center gap-4 text-xs text-slate-600 bg-slate-50 rounded-md p-2">
+          {data.meta.dataSource && (
+            <div className="flex items-center gap-1">
+              <span className="font-medium">Source:</span>
+              <span className="px-2 py-0.5 bg-blue-100 text-blue-700 rounded">{data.meta.dataSource}</span>
+            </div>
+          )}
+          {data.meta.cached && (
+            <div className="flex items-center gap-1">
+              <span className="px-2 py-0.5 bg-yellow-100 text-yellow-700 rounded">Cached</span>
+            </div>
+          )}
+          {data.meta.timestamp && (
+            <div className="flex items-center gap-1">
+              <span className="font-medium">Updated:</span>
+              <span>{new Date(data.meta.timestamp).toLocaleString()}</span>
+            </div>
+          )}
+        </div>
+      )}
 
       {mode === 'advanced' && (
         <div className="grid md:grid-cols-2 gap-4">
@@ -93,7 +125,12 @@ export default function SymbolAnalysis() {
         </div>
       )}
 
-      <PriceChart />
+      <PriceChart 
+        symbol={symbol}
+        priceData={priceData}
+        currentPrice={currentPrice}
+        isLoading={isFetching}
+      />
 
       {error && (
         <div className="border border-red-200 rounded-md p-4 bg-red-50">
