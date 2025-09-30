@@ -53,7 +53,10 @@ function incrementAPI(apiName: string): void {
 }
 
 Deno.serve(async (req) => {
+  console.log('🌐 [STOCK-ANALYSIS] Incoming request:', req.method, req.url)
+  
   if (req.method === 'OPTIONS') {
+    console.log('✅ [STOCK-ANALYSIS] Returning CORS preflight response')
     return new Response(null, { headers: corsHeaders })
   }
 
@@ -63,79 +66,128 @@ Deno.serve(async (req) => {
     const timeframe = url.searchParams.get('timeframe') || '1M'
     const bypassCache = url.searchParams.get('bypassCache') === 'true'
 
+    console.log('📋 [STOCK-ANALYSIS] Request params:', { symbol, timeframe, bypassCache })
+
     if (!symbol) {
+      console.error('❌ [STOCK-ANALYSIS] Missing symbol parameter')
       return new Response(
         JSON.stringify({ error: 'Symbol is required' }),
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
 
-    console.log(`🔍 Analysis Request: ${symbol} | Timeframe: ${timeframe} | BypassCache: ${bypassCache}`)
+    console.log(`🔍 [STOCK-ANALYSIS] Analysis Request: ${symbol} | Timeframe: ${timeframe} | BypassCache: ${bypassCache}`)
+    console.log(`🔑 [STOCK-ANALYSIS] API Keys Available:`, {
+      twelveData: !!TWELVE_DATA_KEY,
+      polygon: !!POLYGON_KEY,
+      alphaVantage: !!ALPHA_VANTAGE_KEY,
+      finnhub: !!FINNHUB_KEY,
+      fmp: !!FMP_KEY,
+      gemini: !!GEMINI_KEY
+    })
 
     // Check cache first
     if (!bypassCache) {
+      console.log(`🔍 [STOCK-ANALYSIS] Checking cache for ${symbol}`)
       const cacheKey = `analysis:${symbol}:${timeframe}`
-      const { data: cached } = await supabase.rpc('get_cache_value', { 
-        _cache_key: cacheKey 
-      })
-      
-      if (cached) {
-        console.log(`✅ Cache HIT for ${symbol}`)
-        return new Response(
-          JSON.stringify({ ...cached, meta: { ...cached.meta, cached: true } }),
-          { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        )
+      try {
+        const { data: cached, error: cacheError } = await supabase.rpc('get_cache_value', { 
+          _cache_key: cacheKey 
+        })
+        
+        if (cacheError) {
+          console.warn(`⚠️ [STOCK-ANALYSIS] Cache error:`, cacheError)
+        }
+        
+        if (cached) {
+          console.log(`✅ [STOCK-ANALYSIS] Cache HIT for ${symbol}`)
+          return new Response(
+            JSON.stringify({ ...cached, meta: { ...cached.meta, cached: true } }),
+            { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+          )
+        }
+        console.log(`❌ [STOCK-ANALYSIS] Cache MISS for ${symbol}`)
+      } catch (cacheErr) {
+        console.error(`❌ [STOCK-ANALYSIS] Cache check failed:`, cacheErr)
       }
-      console.log(`❌ Cache MISS for ${symbol}`)
+    } else {
+      console.log(`⏭️ [STOCK-ANALYSIS] Bypassing cache (bypassCache=true)`)
     }
 
     // Perform fresh analysis
+    console.log(`🚀 [STOCK-ANALYSIS] Performing fresh analysis for ${symbol}`)
     const analysis = await performStockAnalysis(symbol, timeframe)
+    console.log(`✅ [STOCK-ANALYSIS] Analysis complete for ${symbol}`)
 
     // Cache the result
-    const cacheKey = `analysis:${symbol}:${timeframe}`
-    await supabase.rpc('set_cache_value', {
-      _cache_key: cacheKey,
-      _cache_value: analysis,
-      _expires_at: new Date(Date.now() + 5 * 60 * 1000).toISOString()
-    })
+    try {
+      const cacheKey = `analysis:${symbol}:${timeframe}`
+      const { error: setCacheError } = await supabase.rpc('set_cache_value', {
+        _cache_key: cacheKey,
+        _cache_value: analysis,
+        _expires_at: new Date(Date.now() + 5 * 60 * 1000).toISOString()
+      })
+      
+      if (setCacheError) {
+        console.warn(`⚠️ [STOCK-ANALYSIS] Failed to cache result:`, setCacheError)
+      } else {
+        console.log(`💾 [STOCK-ANALYSIS] Cached analysis for ${symbol}`)
+      }
+    } catch (cacheErr) {
+      console.error(`❌ [STOCK-ANALYSIS] Cache save failed:`, cacheErr)
+    }
 
-    console.log(`💾 Cached analysis for ${symbol}`)
-
+    console.log(`📤 [STOCK-ANALYSIS] Returning analysis for ${symbol}`)
     return new Response(
       JSON.stringify(analysis),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
-  } catch (error) {
-    console.error('❌ Analysis Error:', error)
+  } catch (error: any) {
+    console.error('❌ [STOCK-ANALYSIS] Fatal Error:', error)
+    console.error('❌ [STOCK-ANALYSIS] Error stack:', error.stack)
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ 
+        error: error.message,
+        details: error.stack?.split('\n').slice(0, 5).join('\n')
+      }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }
 })
 
 async function performStockAnalysis(symbol: string, timeframe: string) {
-  console.log(`🚀 Starting analysis for ${symbol}`)
+  console.log(`🚀 [ANALYSIS] Starting comprehensive analysis for ${symbol}`)
   
   // Fetch data from multiple sources in parallel
+  console.log(`📡 [ANALYSIS] Fetching data from multiple sources...`)
+  const startTime = Date.now()
+  
   const [stockData, fundamentalData, sentimentData] = await Promise.all([
     fetchStockDataMultiSource(symbol, timeframe),
     fetchFundamentalDataMultiSource(symbol),
     fetchSentimentDataMultiSource(symbol)
   ])
+  
+  const fetchTime = Date.now() - startTime
+  console.log(`⏱️ [ANALYSIS] Data fetch completed in ${fetchTime}ms`)
 
-  console.log(`📈 Stock Data Source: ${stockData.source}`)
-  console.log(`📊 Fundamental Data Source: ${fundamentalData.source}`)
-  console.log(`💭 Sentiment Data Source: ${sentimentData.source}`)
+  console.log(`📈 [ANALYSIS] Stock Data Source: ${stockData.source}`)
+  console.log(`📊 [ANALYSIS] Fundamental Data Source: ${fundamentalData.source}`)
+  console.log(`💭 [ANALYSIS] Sentiment Data Source: ${sentimentData.source}`)
+  console.log(`📊 [ANALYSIS] Price History Points: ${stockData.data.priceHistory?.length || 0}`)
+  console.log(`💰 [ANALYSIS] Current Price: ${stockData.data.currentPrice}`)
 
   // Calculate technical indicators
+  console.log(`📊 [ANALYSIS] Calculating technical indicators...`)
   const technical = calculateTechnicalIndicators(stockData.data)
   
   // Calculate scores
+  console.log(`🎯 [ANALYSIS] Calculating scores...`)
   const fundamentalScore = calculateFundamentalScore(fundamentalData.data)
   const technicalScore = technical.score
   const sentimentScore = sentimentData.data.score
+
+  console.log(`📊 [ANALYSIS] Scores - Fundamental: ${fundamentalScore}, Technical: ${technicalScore}, Sentiment: ${sentimentScore}`)
 
   // Aggregate overall score
   const overallScore = Math.round(
@@ -143,10 +195,13 @@ async function performStockAnalysis(symbol: string, timeframe: string) {
   )
 
   const recommendation = overallScore >= 70 ? 'BUY' : overallScore <= 40 ? 'SELL' : 'HOLD'
+  
+  console.log(`🎯 [ANALYSIS] Overall Score: ${overallScore} | Recommendation: ${recommendation}`)
 
   // Generate AI summary if Gemini is available
   let aiSummary = 'Analysis complete. Check individual metrics for details.'
   if (GEMINI_KEY) {
+    console.log(`🤖 [ANALYSIS] Generating AI summary with Gemini...`)
     try {
       aiSummary = await generateAISummary(symbol, {
         fundamental: fundamentalScore,
@@ -155,12 +210,15 @@ async function performStockAnalysis(symbol: string, timeframe: string) {
         overall: overallScore,
         recommendation
       })
+      console.log(`✅ [ANALYSIS] AI summary generated successfully`)
     } catch (error) {
-      console.error('AI Summary Error:', error)
+      console.error('❌ [ANALYSIS] AI Summary Error:', error)
     }
+  } else {
+    console.log(`⚠️ [ANALYSIS] Gemini API key not configured, skipping AI summary`)
   }
 
-  return {
+  const result = {
     status: 'ok',
     symbol,
     timeframe,
@@ -201,6 +259,15 @@ async function performStockAnalysis(symbol: string, timeframe: string) {
       cached: false
     }
   }
+  
+  console.log(`✅ [ANALYSIS] Analysis complete for ${symbol}`, {
+    overallScore,
+    recommendation,
+    dataSources: result.meta.dataSource,
+    pricePoints: result.priceHistory?.length || 0
+  })
+  
+  return result
 }
 
 // Multi-source data fetching functions
