@@ -35,14 +35,29 @@ const OnboardingPopup = () => {
   useEffect(() => {
     // Check if user has seen onboarding
     const hasSeenOnboarding = localStorage.getItem('stockviz_onboarding_completed');
+    console.log('[OnboardingPopup] Checking localStorage:', hasSeenOnboarding);
     
-    if (!hasSeenOnboarding) {
+    // For debugging: check if there's a URL parameter to reset onboarding
+    const urlParams = new URLSearchParams(window.location.search);
+    const resetOnboarding = urlParams.get('reset_onboarding');
+    if (resetOnboarding === 'true') {
+      console.log('[OnboardingPopup] Reset onboarding requested via URL parameter');
+      localStorage.removeItem('stockviz_onboarding_completed');
+    }
+    
+    const finalCheck = localStorage.getItem('stockviz_onboarding_completed');
+    console.log('[OnboardingPopup] Final localStorage check:', finalCheck);
+    
+    if (!finalCheck || finalCheck !== 'true') {
+      console.log('[OnboardingPopup] User has not seen onboarding, showing popup');
       // Show onboarding after a brief delay
       const timer = setTimeout(() => {
         setIsOpen(true);
       }, 1000);
       
       return () => clearTimeout(timer);
+    } else {
+      console.log('[OnboardingPopup] User has already seen onboarding, not showing popup');
     }
   }, []);
 
@@ -154,11 +169,13 @@ const OnboardingPopup = () => {
   };
 
   const handleSkip = () => {
+    console.log('[OnboardingPopup] User skipped onboarding, setting localStorage');
     localStorage.setItem('stockviz_onboarding_completed', 'true');
     setIsOpen(false);
   };
 
   const handleComplete = () => {
+    console.log('[OnboardingPopup] User completed onboarding, setting localStorage');
     localStorage.setItem('stockviz_onboarding_completed', 'true');
     setIsOpen(false);
   };
