@@ -1,33 +1,20 @@
-const axios = require('axios');
-const apiTrackingService = require('./apiTrackingService');
+const dataSourceManager = require('./dataSourceManager');
 
 class DataService {
   constructor() {
-    this.alphaVantageKey = process.env.ALPHA_VANTAGE_API_KEY;
+    // Delegate to the new DataSourceManager
+    this.dataSourceManager = dataSourceManager;
   }
 
   async fetchStockData(symbol, timeframe) {
-    console.log(`📊 Fetching data for ${symbol} (${timeframe})`);
+    console.log(`📊 Fetching data for ${symbol} (${timeframe}) via DataSourceManager`);
     
     try {
-      // Try to get real data from Alpha Vantage
-      if (this.alphaVantageKey) {
-        const ohlcvData = await this.fetchAlphaVantageData(symbol, timeframe);
-        if (ohlcvData && ohlcvData.length > 0) {
-          return {
-            symbol,
-            ohlcv: ohlcvData,
-            timeframe,
-            source: 'Alpha Vantage'
-          };
-        }
-      }
-      
-      // Fall back to mock data if Alpha Vantage fails or no API key
-      return this.generateMockData(symbol, timeframe);
+      // Use the new multi-source manager
+      return await this.dataSourceManager.fetchStockData(symbol, timeframe);
     } catch (error) {
       console.error('Error fetching stock data:', error);
-      return this.generateMockData(symbol, timeframe);
+      return this.dataSourceManager.generateMockData(symbol, timeframe);
     }
   }
 

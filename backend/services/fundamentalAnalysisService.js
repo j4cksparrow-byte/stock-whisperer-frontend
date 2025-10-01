@@ -1,14 +1,13 @@
 // services/fundamentalAnalysisService.js
-const axios = require('axios');
+const dataSourceManager = require('./dataSourceManager');
 const cacheService = require('./cacheService');
 const apiTrackingService = require('./apiTrackingService');
 
 class FundamentalAnalysisService {
   constructor() {
+    this.dataSourceManager = dataSourceManager;
+    // Keep legacy key for backwards compatibility
     this.key = process.env.ALPHA_VANTAGE_API_KEY;
-    if (!this.key) {
-      console.warn('⚠️ ALPHA_VANTAGE_API_KEY is not set. Fundamentals will fall back.');
-    }
 
     // category weights → overall score
     this.weights = {
@@ -30,6 +29,32 @@ class FundamentalAnalysisService {
     if (cached) return { ...cached, source: 'cache' };
 
     try {
+      // Try to use the new multi-source data manager first
+      let fundamentalData;
+      try {
+        fundamentalData = await this.dataSourceManager.fetchFundamentalData(symbol);
+        if (fundamentalData && fundamentalData.overview) {
+          // Use the new data format
+          const metrics = this.buildMetricsFromMultiSource(fundamentalData.overview);
+          const breakdown = this.scoreCategories(metrics);
+          const score = this.weightedScore(breakdown, this.weights);
+          const recommendation = this.recommend(score);
+
+          return {
+            score,
+            recommendation,
+            breakdown,
+            metrics,
+            notes: `Computed from ${fundamentalData.source} fundamentals.`,
+            source: fundamentalData.source,
+            timestamp: new Date().toISOString(),
+          };
+        }
+      } catch (multiSourceError) {
+        console.warn('Multi-source fetch failed, falling back to Alpha Vantage:', multiSourceError.message);
+      }
+
+      // Fallback to original Alpha Vantage approach
       const [overview, income, balance, cash] = await Promise.all([
         this.fetchOverview(symbol),
         this.fetchIncomeStatement(symbol),
@@ -265,6 +290,33 @@ class FundamentalAnalysisService {
       fcfMargin, interestCoverage,
       // misc
       eps, dividendYield: dy,
+    };
+  }
+
+  // Build metrics from multi-source overview data (FMP, Finnhub, etc.)
+  buildMetricsFromMultiSource(overview) {
+    const num = (x) => (x === undefined || x === null || x === '' ? null : Number(x));
+
+    return {
+      // valuation
+      pe: num(overview?.PERatio),
+      peg: num(overview?.PEGRatio), 
+      pb: num(overview?.PriceToBookRatio),
+      // growth - limited data from overview only
+      revenueCAGR: null, // Would need historical data
+      // profitability
+      returnOnEquity: num(overview?.ReturnOnEquityTTM),
+      profitMargin: num(overview?.ProfitMargin),
+      operatingMargin: num(overview?.OperatingMarginTTM),
+      // leverage - limited data
+      debtToEquity: null,
+      currentRatio: null,
+      // cashflow - limited data
+      fcfMargin: null,
+      interestCoverage: null,
+      // misc
+      eps: num(overview?.EPS),
+      dividendYield: num(overview?.DividendYield),
     };
   }
 
