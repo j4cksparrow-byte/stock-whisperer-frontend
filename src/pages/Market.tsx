@@ -103,13 +103,20 @@ const Market = () => {
   ];
 
   const popularStocks = [
-    { symbol: 'AAPL', name: 'Apple Inc.', price: '185.92', change: '+1.2%', trend: 'up' },
-    { symbol: 'MSFT', name: 'Microsoft', price: '415.26', change: '+0.8%', trend: 'up' },
-    { symbol: 'GOOGL', name: 'Alphabet', price: '142.56', change: '-0.3%', trend: 'down' },
-    { symbol: 'AMZN', name: 'Amazon', price: '178.12', change: '+2.1%', trend: 'up' },
-    { symbol: 'META', name: 'Meta', price: '485.58', change: '+1.5%', trend: 'up' },
-    { symbol: 'NVDA', name: 'NVIDIA', price: '950.02', change: '+3.2%', trend: 'up' },
+    { symbol: 'AAPL', name: 'Apple Inc.', price: '254.63', change: '+0.20', trend: 'up' },
+    { symbol: 'MSFT', name: 'Microsoft Corporation', price: '517.95', change: '+0.65', trend: 'up' },
+    { symbol: 'GOOGL', name: 'Alphabet Inc.', price: '142.56', change: '+0.87', trend: 'up' },
+    { symbol: 'AMZN', name: 'Amazon.com Inc.', price: '219.57', change: '-2.60', trend: 'down' },
+    { symbol: 'META', name: 'Meta Platforms Inc.', price: '485.58', change: '+3.21', trend: 'up' },
+    { symbol: 'NVDA', name: 'NVIDIA Corporation', price: '186.58', change: '+4.73', trend: 'up' },
+    { symbol: 'TSLA', name: 'Tesla Inc.', price: '248.50', change: '-1.23', trend: 'down' },
+    { symbol: 'NFLX', name: 'Netflix Inc.', price: '485.30', change: '+2.15', trend: 'up' },
+    { symbol: 'AMD', name: 'Advanced Micro Devices', price: '145.67', change: '+1.89', trend: 'up' },
+    { symbol: 'INTC', name: 'Intel Corporation', price: '45.23', change: '-0.45', trend: 'down' },
+    { symbol: 'ORCL', name: 'Oracle Corporation', price: '125.34', change: '+1.23', trend: 'up' },
+    { symbol: 'CRM', name: 'Salesforce Inc.', price: '285.67', change: '-2.15', trend: 'down' },
   ];
+
 
   const educationalContent = [
     {

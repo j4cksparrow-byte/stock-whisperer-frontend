@@ -67,6 +67,7 @@ function TradingViewTrendingComponent() {
   const widgetRef = useRef<any>(null)
   const scriptRef = useRef<HTMLScriptElement | null>(null)
   
+  
   // Mount tracking
   useEffect(() => {
     setIsMounted(true)
