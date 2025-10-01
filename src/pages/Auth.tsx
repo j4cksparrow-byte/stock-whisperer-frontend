@@ -73,7 +73,9 @@ export default function Auth() {
         console.error('Error status:', error.status);
         
         if (error.message.includes('Invalid login credentials')) {
-          toast.error('Invalid email or password. Please check your credentials or sign up if you don\'t have an account.');
+          toast.error('Invalid email or password. If you just signed up, please check your email for a confirmation link first.', {
+            duration: 6000,
+          });
         } else if (error.message.includes('Email not confirmed')) {
           toast.error('Please check your email and click the confirmation link before signing in.');
         } else if (error.message.includes('signup_disabled')) {
@@ -110,7 +112,9 @@ export default function Auth() {
           toast.error(error.message || 'Failed to create account. Please try again.');
         }
       } else {
-        toast.success('Account created! Please check your email to confirm your account.');
+        toast.success('Account created! Please check your email to confirm your account before signing in.', {
+          duration: 8000,
+        });
       }
     } catch (error) {
       console.error('Sign up exception:', error);
@@ -189,6 +193,9 @@ export default function Auth() {
             <CardDescription>
               Sign in to your account or create a new one to get started
             </CardDescription>
+            <div className="mt-3 text-xs text-muted-foreground bg-muted/50 p-3 rounded-md">
+              <strong>Note:</strong> Email confirmation is required by default. After signing up, check your email for a confirmation link before signing in.
+            </div>
           </CardHeader>
           <CardContent>
             {/* Social Login Buttons */}
