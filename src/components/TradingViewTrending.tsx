@@ -1,6 +1,36 @@
-import { useState, useEffect, useRef, useMemo } from 'react'
+import React, { useState, useEffect, useRef, useMemo } from 'react'
 import { TrendingUp, TrendingDown, Activity, RefreshCw, Clock, AlertCircle } from 'lucide-react'
 import { useTrending } from '../lib/queries'
+
+// Error boundary component for TradingView
+class TradingViewErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props)
+    this.state = { hasError: false }
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true }
+  }
+
+  componentDidCatch(error: Error) {
+    console.warn('TradingView component error:', error)
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="p-4 text-center text-gray-500 dark:text-gray-400">
+          <p>TradingView widget temporarily unavailable</p>
+        </div>
+      )
+    }
+    return this.props.children
+  }
+}
 
 // TradingView widget types
 declare global {
@@ -28,12 +58,20 @@ interface MarketOverview {
   marketStatus: 'open' | 'closed' | 'pre-market' | 'after-hours';
 }
 
-export default function TradingViewTrending() {
+function TradingViewTrendingComponent() {
   const [tab, setTab] = useState<typeof tabs[number]>('gainers')
   const [marketOverview, setMarketOverview] = useState<MarketOverview | null>(null)
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date())
+  const [isMounted, setIsMounted] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const widgetRef = useRef<any>(null)
+  const scriptRef = useRef<HTMLScriptElement | null>(null)
+  
+  // Mount tracking
+  useEffect(() => {
+    setIsMounted(true)
+    return () => setIsMounted(false)
+  }, [])
   
   // Use the hybrid API via React Query
   const { data: trendingData, isLoading, error: queryError, refetch } = useTrending(tab)
@@ -58,6 +96,13 @@ export default function TradingViewTrending() {
 
   // Load TradingView script
   useEffect(() => {
+    if (!isMounted) return
+
+    const existingScript = document.querySelector('script[src*="embed-widget-ticker-tape.js"]')
+    if (existingScript) {
+      return // Script already loaded, no need to add another
+    }
+
     const script = document.createElement('script')
     script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js'
     script.async = true
@@ -79,10 +124,36 @@ export default function TradingViewTrending() {
       locale: "en"
     })
     
+    scriptRef.current = script
     document.head.appendChild(script)
     
     return () => {
-      document.head.removeChild(script)
+      try {
+        if (scriptRef.current && scriptRef.current.parentNode) {
+          scriptRef.current.parentNode.removeChild(scriptRef.current)
+        }
+        if (containerRef.current) {
+          containerRef.current.innerHTML = ''
+        }
+      } catch (error) {
+        console.warn('Failed to remove TradingView script:', error)
+      }
+    }
+  }, [isMounted])
+
+  // Cleanup on component unmount
+  useEffect(() => {
+    return () => {
+      try {
+        if (containerRef.current) {
+          containerRef.current.innerHTML = ''
+        }
+        if (scriptRef.current && scriptRef.current.parentNode) {
+          scriptRef.current.parentNode.removeChild(scriptRef.current)
+        }
+      } catch (error) {
+        console.warn('Cleanup error:', error)
+      }
     }
   }, [])
 
@@ -163,6 +234,11 @@ export default function TradingViewTrending() {
       case 'after-hours': return <Clock className="h-4 w-4 text-orange-500" />
       default: return <AlertCircle className="h-4 w-4 text-gray-500" />
     }
+  }
+
+  // Don't render if not mounted
+  if (!isMounted) {
+    return null
   }
 
   return (
@@ -304,5 +380,14 @@ export default function TradingViewTrending() {
         )}
       </div>
     </div>
+  )
+}
+
+// Export with error boundary
+export default function TradingViewTrending() {
+  return (
+    <TradingViewErrorBoundary>
+      <TradingViewTrendingComponent />
+    </TradingViewErrorBoundary>
   )
 }
