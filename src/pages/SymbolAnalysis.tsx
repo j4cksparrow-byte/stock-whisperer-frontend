@@ -1,5 +1,7 @@
-import { useParams, useSearchParams } from 'react-router-dom'
+import { useParams, useSearchParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { Button } from '@/components/ui/button'
+import { ArrowLeft } from 'lucide-react'
 import { useAnalysis } from '../lib/queries'
 import WeightsPanel from '../components/WeightsPanel'
 import IndicatorsPanel from '../components/IndicatorsPanel'
@@ -16,6 +18,7 @@ const modes = ['normal','advanced'] as const
 
 export default function SymbolAnalysis() {
   const { symbol = '' } = useParams()
+  const navigate = useNavigate()
   const [sp, setSP] = useSearchParams()
   const [timeframe, setTimeframe] = useState(sp.get('tf') ?? '1M')
   const [mode, setMode] = useState<'normal'|'advanced'>((sp.get('mode') as any) ?? 'normal')
@@ -58,127 +61,157 @@ export default function SymbolAnalysis() {
   const patterns = technicalIndicators.patterns || [];
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center gap-3 flex-wrap">
-        <h1 className="text-2xl font-semibold">{symbol}</h1>
-        <select className="border rounded px-2 py-1" value={timeframe} onChange={e => setTimeframe(e.target.value)}>
-          {timeframes.map(tf => <option key={tf} value={tf}>{tf}</option>)}
-        </select>
-        <select className="border rounded px-2 py-1" value={mode} onChange={e => setMode(e.target.value as any)}>
-          {modes.map(m => <option key={m} value={m}>{m}</option>)}
-        </select>
-        <button 
-          className="ml-auto px-3 py-2 rounded bg-slate-900 text-white text-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2" 
-          onClick={() => { syncURL(); refetch() }}
-          disabled={isFetching}
-        >
-          {isFetching && <LoadingSpinner size="sm" />}
-          {isFetching ? 'Analyzing...' : 'Run Analysis'}
-        </button>
-      </div>
-
-      {mode === 'advanced' && (
-        <div className="grid md:grid-cols-2 gap-4">
-          <div className="border rounded-md p-3 bg-white">
-            <div className="font-medium mb-2">Weights</div>
-            <WeightsPanel initial={weights} onChange={setWeights} />
-          </div>
-          <div className="border rounded-md p-3 bg-white">
-            <div className="font-medium mb-2">Indicators</div>
-            <IndicatorsPanel 
-              onChange={setIndConfig} 
-              initialConfig={indConfig}
-            />
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+      <div className="container mx-auto px-4 py-6 space-y-6">
+        {/* Header with Back Button */}
+        <div className="flex items-center gap-4 mb-6">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back
+          </Button>
+          <div className="h-6 w-px bg-border" />
+          <h1 className="text-3xl font-bold text-foreground">{symbol}</h1>
         </div>
-      )}
 
-      <PriceChart />
-
-      {error && (
-        <div className="border border-red-200 rounded-md p-4 bg-red-50">
-          <div className="flex items-center gap-2 text-red-800">
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span className="font-medium">Error loading analysis</span>
+        {/* Controls */}
+        <div className="flex items-center gap-3 flex-wrap bg-card p-4 rounded-lg border">
+          <div className="flex items-center gap-2">
+            <label className="text-sm font-medium text-foreground">Timeframe:</label>
+            <select 
+              className="border border-input rounded-md px-3 py-1.5 bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent" 
+              value={timeframe} 
+              onChange={e => setTimeframe(e.target.value)}
+            >
+              {timeframes.map(tf => <option key={tf} value={tf}>{tf}</option>)}
+            </select>
           </div>
-          <p className="text-red-700 text-sm mt-1">Please try again or check if the symbol is valid.</p>
+          <div className="flex items-center gap-2">
+            <label className="text-sm font-medium text-foreground">Mode:</label>
+            <select 
+              className="border border-input rounded-md px-3 py-1.5 bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent" 
+              value={mode} 
+              onChange={e => setMode(e.target.value as any)}
+            >
+              {modes.map(m => <option key={m} value={m}>{m}</option>)}
+            </select>
+          </div>
+          <Button 
+            className="ml-auto bg-primary hover:bg-primary/90 text-primary-foreground" 
+            onClick={() => { syncURL(); refetch() }}
+            disabled={isFetching}
+          >
+            {isFetching && <LoadingSpinner size="sm" className="mr-2" />}
+            {isFetching ? 'Analyzing...' : 'Run Analysis'}
+          </Button>
         </div>
-      )}
 
-      {data?.analysis && (
-        <div className="grid md:grid-cols-3 gap-4">
-          <div className="border rounded-md p-3 bg-white space-y-2">
-            <div className="flex items-center justify-between">
-              <div className="font-medium">Fundamental</div>
-              <ScoreBadge score={data.analysis.fundamental?.score} />
+        {mode === 'advanced' && (
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="border border-border rounded-md p-4 bg-card">
+              <div className="font-medium mb-3 text-foreground">Weights</div>
+              <WeightsPanel initial={weights} onChange={setWeights} />
             </div>
-            <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.fundamental?.recommendation} /></div>
-            <div className="text-xs text-slate-500">
-              Weight: {data.analysis.fundamental?.weight || '40%'}
-            </div>
-          </div>
-          <div className="border rounded-md p-3 bg-white space-y-2">
-            <div className="flex items-center justify-between">
-              <div className="font-medium">Technical</div>
-              <ScoreBadge score={data.analysis.technical?.score} />
-            </div>
-            <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.technical?.recommendation} /></div>
-            <div className="text-xs text-slate-500">
-              Weight: {data.analysis.technical?.configuration?.weight || '35%'}
+            <div className="border border-border rounded-md p-4 bg-card">
+              <div className="font-medium mb-3 text-foreground">Indicators</div>
+              <IndicatorsPanel 
+                onChange={setIndConfig} 
+                initialConfig={indConfig}
+              />
             </div>
           </div>
-          <div className="border rounded-md p-3 bg-white space-y-2">
-            <div className="flex items-center justify-between">
-              <div className="font-medium">Sentiment</div>
-              <ScoreBadge score={data.analysis.sentiment?.score} />
-            </div>
-            <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.sentiment?.recommendation} /></div>
-            <div className="text-xs text-slate-500">
-              Weight: {data.analysis.sentiment?.weight || '25%'}
-            </div>
-          </div>
-        </div>
-      )}
+        )}
 
-      {data?.analysis?.overall && (
-        <div className="border rounded-md p-3 bg-white">
-          <div className="flex items-center gap-3">
-            <div className="font-medium">Overall</div>
-            <ScoreBadge score={data.analysis.overall?.score} />
-            <RecommendationChip rec={data.analysis.overall?.recommendation} />
-          </div>
-          <div className="text-xs text-slate-500 mt-1">
-            Weights: F:{data?.analysis?.meta?.weightsUsed?.fundamental || 40}% 
-            T:{data?.analysis?.meta?.weightsUsed?.technical || 35}% 
-            S:{data?.analysis?.meta?.weightsUsed?.sentiment || 25}%
-          </div>
-        </div>
-      )}
+        <PriceChart />
 
-      {mode === 'advanced' && Object.keys(technicalIndicators).length > 0 && (
-        <div className="border rounded-md p-3 bg-white">
-          <h3 className="font-medium mb-2">Technical Indicators</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        {error && (
+          <div className="border border-destructive/50 rounded-md p-4 bg-destructive/10">
+            <div className="flex items-center gap-2 text-destructive">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="font-medium">Error loading analysis</span>
+            </div>
+            <p className="text-destructive/80 text-sm mt-1">Please try again or check if the symbol is valid.</p>
+          </div>
+        )}
+
+        {data?.analysis && (
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="border border-border rounded-md p-4 bg-card space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="font-medium text-foreground">Fundamental</div>
+                <ScoreBadge score={data.analysis.fundamental?.score} />
+              </div>
+              <div className="text-sm text-muted-foreground">Rec: <RecommendationChip rec={data.analysis.fundamental?.recommendation} /></div>
+              <div className="text-xs text-muted-foreground">
+                Weight: {data.analysis.fundamental?.weight || '40%'}
+              </div>
+            </div>
+            <div className="border border-border rounded-md p-4 bg-card space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="font-medium text-foreground">Technical</div>
+                <ScoreBadge score={data.analysis.technical?.score} />
+              </div>
+              <div className="text-sm text-muted-foreground">Rec: <RecommendationChip rec={data.analysis.technical?.recommendation} /></div>
+              <div className="text-xs text-muted-foreground">
+                Weight: {data.analysis.technical?.configuration?.weight || '35%'}
+              </div>
+            </div>
+            <div className="border border-border rounded-md p-4 bg-card space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="font-medium text-foreground">Sentiment</div>
+                <ScoreBadge score={data.analysis.sentiment?.score} />
+              </div>
+              <div className="text-sm text-muted-foreground">Rec: <RecommendationChip rec={data.analysis.sentiment?.recommendation} /></div>
+              <div className="text-xs text-muted-foreground">
+                Weight: {data.analysis.sentiment?.weight || '25%'}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {data?.analysis?.overall && (
+          <div className="border border-border rounded-md p-4 bg-card">
+            <div className="flex items-center gap-3">
+              <div className="font-medium text-foreground">Overall</div>
+              <ScoreBadge score={data.analysis.overall?.score} />
+              <RecommendationChip rec={data.analysis.overall?.recommendation} />
+            </div>
+            <div className="text-xs text-muted-foreground mt-1">
+              Weights: F:{data?.analysis?.meta?.weightsUsed?.fundamental || 40}% 
+              T:{data?.analysis?.meta?.weightsUsed?.technical || 35}% 
+              S:{data?.analysis?.meta?.weightsUsed?.sentiment || 25}%
+            </div>
+          </div>
+        )}
+
+        {mode === 'advanced' && Object.keys(technicalIndicators).length > 0 && (
+          <div className="border border-border rounded-md p-4 bg-card">
+            <h3 className="font-medium mb-3 text-foreground">Technical Indicators</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {Object.entries(technicalIndicators).map(([key, value]) => {
               // Skip patterns as they're displayed separately
               if (key === 'patterns') return null;
               
               return (
-                <div key={key} className="border rounded p-2">
-                  <div className="font-medium text-sm">{key}</div>
+                <div key={key} className="border border-border rounded p-3 bg-card">
+                  <div className="font-medium text-sm text-foreground">{key}</div>
                   {typeof value === 'object' && value !== null ? (
                     <div className="text-xs space-y-1 mt-1">
                       {Object.entries(value).map(([subKey, subValue]) => (
                         <div key={subKey} className="flex justify-between">
-                          <span className="text-slate-600">{subKey}:</span>
-                          <span className="font-mono">{formatIndicatorValue(subValue)}</span>
+                          <span className="text-muted-foreground">{subKey}:</span>
+                          <span className="font-mono text-foreground">{formatIndicatorValue(subValue)}</span>
                         </div>
                       ))}
                     </div>
                   ) : (
-                    <div className="font-mono text-sm mt-1">{formatIndicatorValue(value)}</div>
+                    <div className="font-mono text-sm mt-1 text-foreground">{formatIndicatorValue(value)}</div>
                   )}
                 </div>
               );
@@ -187,29 +220,30 @@ export default function SymbolAnalysis() {
         </div>
       )}
 
-      {patterns.length > 0 && (
-        <div className="border rounded-md p-3 bg-white">
-          <h3 className="font-medium mb-2">Pattern Recognition</h3>
-          <div className="flex flex-wrap gap-2">
-            {patterns.map((pattern: any, index: number) => (
-              <div 
-                key={index} 
-                className={`px-3 py-1 rounded-full text-xs font-medium ${
-                  pattern.direction === 'bullish' 
-                    ? 'bg-green-100 text-green-800' 
-                    : pattern.direction === 'bearish' 
-                      ? 'bg-red-100 text-red-800' 
-                      : 'bg-blue-100 text-blue-800'
-                }`}
-              >
-                {pattern.pattern} ({pattern.confidence}%)
-              </div>
-            ))}
+        {patterns.length > 0 && (
+          <div className="border border-border rounded-md p-4 bg-card">
+            <h3 className="font-medium mb-3 text-foreground">Pattern Recognition</h3>
+            <div className="flex flex-wrap gap-2">
+              {patterns.map((pattern: any, index: number) => (
+                <div 
+                  key={index} 
+                  className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    pattern.direction === 'bullish' 
+                      ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400' 
+                      : pattern.direction === 'bearish' 
+                        ? 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-400' 
+                        : 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400'
+                  }`}
+                >
+                  {pattern.pattern} ({pattern.confidence}%)
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <AISummary text={data?.analysis?.aiInsights?.summary} />
+        <AISummary text={data?.analysis?.aiInsights?.summary} />
+      </div>
     </div>
   )
 }

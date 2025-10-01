@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
 import { useTheme } from '@/contexts/ThemeContext';
+import { useWatchlist } from '@/contexts/WatchlistContext';
 import { 
   Sun, 
   Moon, 
@@ -35,11 +36,12 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
-import NavbarSearch from '../NavbarSearch';
+import ExpandableSearch from '../ExpandableSearch';
 
 const Navbar = () => {
   const { user, signOut } = useAuth();
   const { theme, setTheme } = useTheme();
+  const { watchlist } = useWatchlist();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -165,6 +167,11 @@ const Navbar = () => {
                   >
                     <Icon className="h-4 w-4" />
                     <span>{item.label}</span>
+                    {item.href === '/portfolio' && watchlist.length > 0 && (
+                      <Badge variant="secondary" className="ml-1 h-5 px-1.5 text-xs">
+                        {watchlist.length}
+                      </Badge>
+                    )}
                     {isActive(item.href) && (
                       <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary-foreground rounded-full" />
                     )}
@@ -175,8 +182,8 @@ const Navbar = () => {
           </div>
 
           {/* Center Search Bar */}
-          <div className="hidden md:flex flex-1 max-w-md mx-8">
-            <NavbarSearch />
+          <div className="hidden lg:flex flex-1 mx-4">
+            <ExpandableSearch />
           </div>
 
           {/* Right Side Actions */}
@@ -313,7 +320,7 @@ const Navbar = () => {
                 <div className="flex flex-col space-y-6 mt-8">
                   {/* Mobile Search */}
                   <div className="relative">
-                    <NavbarSearch />
+                    <ExpandableSearch />
                   </div>
 
                   {/* Mobile Navigation */}
@@ -333,7 +340,14 @@ const Navbar = () => {
                       >
                         <Icon className="h-5 w-5" />
                         <div className="flex-1">
-                          <div>{item.label}</div>
+                          <div className="flex items-center gap-2">
+                            <div>{item.label}</div>
+                            {item.href === '/portfolio' && watchlist.length > 0 && (
+                              <Badge variant="secondary" className="h-4 px-1.5 text-xs">
+                                {watchlist.length}
+                              </Badge>
+                            )}
+                          </div>
                           <div className="text-xs text-muted-foreground">{item.description}</div>
                         </div>
                       </Link>

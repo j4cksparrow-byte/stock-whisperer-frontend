@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { useWatchlist } from '../contexts/WatchlistContext';
+import ChartExpandModal from '../components/ChartExpandModal';
+import { toast } from 'sonner';
 import { 
   TrendingUp, 
   TrendingDown, 
@@ -22,12 +26,74 @@ import {
   TrendingUp as TrendingUpIcon,
   DollarSign,
   Users,
-  Zap
+  Zap,
+  Eye
 } from 'lucide-react';
 
 const Market = () => {
+  const navigate = useNavigate();
+  const { addToWatchlist, removeFromWatchlist, isWatched } = useWatchlist();
   const [selectedTimeframe, setSelectedTimeframe] = useState('1D');
   const [selectedChart, setSelectedChart] = useState('NASDAQ');
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [expandedChart, setExpandedChart] = useState<{
+    isOpen: boolean;
+    symbol: string;
+    name: string;
+    value: string;
+    change: string;
+    trend: 'up' | 'down';
+  }>({
+    isOpen: false,
+    symbol: '',
+    name: '',
+    value: '',
+    change: '',
+    trend: 'up'
+  });
+
+  useEffect(() => {
+    // Simulate initial loading to prevent race conditions
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted/20">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-muted-foreground">Loading market data...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted/20">
+        <div className="text-center max-w-md mx-auto p-6">
+          <div className="text-red-600 mb-4">
+            <svg className="mx-auto h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+          </div>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Something went wrong</h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-4">We're sorry, but something unexpected happened.</p>
+          <button 
+            onClick={() => window.location.reload()}
+            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+          >
+            Reload Page
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   const marketIndices = [
     { symbol: 'NASDAQ', name: 'NASDAQ Composite', value: '16,742.38', change: '+0.85%', trend: 'up', volume: '2.1B' },
@@ -79,8 +145,54 @@ const Market = () => {
     return trend === 'up' ? 'text-green-500' : 'text-red-500';
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+  // Error boundary for component-level errors
+  const handleError = (error: Error) => {
+    console.error('Market component error:', error);
+    setError(error.message);
+  };
+
+  // Handle analyze button click
+  const handleAnalyze = (symbol: string) => {
+    navigate(`/symbol/${symbol}`);
+  };
+
+  // Handle watch button click
+  const handleWatch = (stock: any) => {
+    if (isWatched(stock.symbol)) {
+      removeFromWatchlist(stock.symbol);
+      toast.success(`${stock.symbol} removed from watchlist`);
+    } else {
+      addToWatchlist({
+        symbol: stock.symbol,
+        name: stock.name,
+        price: parseFloat(stock.price),
+        change: parseFloat(stock.change.replace('%', '')),
+        changePercent: parseFloat(stock.change.replace('%', ''))
+      });
+      toast.success(`${stock.symbol} added to watchlist`);
+    }
+  };
+
+  // Handle chart expand
+  const handleChartExpand = (index: any) => {
+    setExpandedChart({
+      isOpen: true,
+      symbol: index.symbol,
+      name: index.name,
+      value: index.value,
+      change: index.change,
+      trend: index.trend
+    });
+  };
+
+  // Close expanded chart
+  const handleCloseChart = () => {
+    setExpandedChart(prev => ({ ...prev, isOpen: false }));
+  };
+
+  try {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
@@ -277,14 +389,22 @@ const Market = () => {
                       >
                         {index.change}
                       </Badge>
-                      <Button size="sm" variant="ghost" className="h-8 w-8 p-0 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                      <Button 
+                        size="sm" 
+                        variant="ghost" 
+                        className="h-8 w-8 p-0 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                        onClick={() => handleChartExpand(index)}
+                      >
                         <Maximize2 className="h-4 w-4 text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors" />
                       </Button>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent className="relative p-6 pt-0">
-                  <div className="h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-xl flex items-center justify-center border border-gray-200 dark:border-gray-600">
+                  <div 
+                    className="h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-xl flex items-center justify-center border border-gray-200 dark:border-gray-600 cursor-pointer hover:bg-gradient-to-br hover:from-gray-100 hover:to-gray-200 dark:hover:from-gray-600 dark:hover:to-gray-700 transition-all duration-200"
+                    onClick={() => handleChartExpand(index)}
+                  >
                     <div className="text-center">
                       <BarChart3 className="h-12 w-12 sm:h-16 sm:w-16 mx-auto text-gray-400 dark:text-gray-500 mb-3 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors" />
                       <p className="text-sm sm:text-base font-medium text-gray-500 dark:text-gray-400 mb-1">Interactive Chart</p>
@@ -365,13 +485,34 @@ const Market = () => {
                     </div>
                     
                     <div className="grid grid-cols-2 gap-3">
-                      <Button className="w-full h-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200" variant="default">
+                      <Button 
+                        className="w-full h-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200" 
+                        variant="default"
+                        onClick={() => handleAnalyze(stock.symbol)}
+                      >
                         <BarChart3 className="mr-2 h-4 w-4" />
                         Analyze
                       </Button>
-                      <Button className="w-full h-10 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200" variant="outline">
-                        <TrendingUpIcon className="mr-2 h-4 w-4" />
-                        Watch
+                      <Button 
+                        className={`w-full h-10 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 ${
+                          isWatched(stock.symbol)
+                            ? 'bg-green-600 hover:bg-green-700 text-white border-2 border-green-600'
+                            : 'bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600'
+                        }`}
+                        variant="outline"
+                        onClick={() => handleWatch(stock)}
+                      >
+                        {isWatched(stock.symbol) ? (
+                          <>
+                            <Eye className="mr-2 h-4 w-4" />
+                            Watching
+                          </>
+                        ) : (
+                          <>
+                            <TrendingUpIcon className="mr-2 h-4 w-4" />
+                            Watch
+                          </>
+                        )}
                       </Button>
                     </div>
                   </div>
@@ -552,8 +693,41 @@ const Market = () => {
           </div>
         </div>
       </section>
+
+      {/* Chart Expand Modal */}
+      <ChartExpandModal
+        isOpen={expandedChart.isOpen}
+        onClose={handleCloseChart}
+        symbol={expandedChart.symbol}
+        name={expandedChart.name}
+        value={expandedChart.value}
+        change={expandedChart.change}
+        trend={expandedChart.trend}
+      />
     </div>
-  );
+    );
+  } catch (error) {
+    console.error('Market component render error:', error);
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted/20">
+        <div className="text-center max-w-md mx-auto p-6">
+          <div className="text-red-600 mb-4">
+            <svg className="mx-auto h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+          </div>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Something went wrong</h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-4">We're sorry, but something unexpected happened.</p>
+          <button 
+            onClick={() => window.location.reload()}
+            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+          >
+            Reload Page
+          </button>
+        </div>
+      </div>
+    );
+  }
 };
 
 export default Market;

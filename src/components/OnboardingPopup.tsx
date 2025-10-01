@@ -154,8 +154,8 @@ const OnboardingPopup = () => {
   };
 
   const handleSkip = () => {
+    localStorage.setItem('stockviz_onboarding_completed', 'true');
     setIsOpen(false);
-    // Mark as completed but don't prevent showing again
   };
 
   const handleComplete = () => {

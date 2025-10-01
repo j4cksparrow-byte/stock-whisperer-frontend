@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider } from './contexts/AuthContext'
 import { ThemeProvider } from './contexts/ThemeContext'
+import { WatchlistProvider } from './contexts/WatchlistContext'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import Navbar from './components/Layout/Navbar'
 import Footer from './components/Layout/Footer'
@@ -22,7 +23,8 @@ export default function App() {
   return (
     <ThemeProvider defaultTheme="system" storageKey="stockviz-ui-theme">
       <AuthProvider>
-        <TooltipProvider>
+        <WatchlistProvider>
+          <TooltipProvider>
           <div className="min-h-screen flex flex-col bg-background">
             <Navbar />
             <main className="flex-1">
@@ -45,7 +47,8 @@ export default function App() {
             <Footer />
             <OnboardingPopup />
           </div>
-        </TooltipProvider>
+          </TooltipProvider>
+        </WatchlistProvider>
       </AuthProvider>
     </ThemeProvider>
   )

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { useWatchlist } from '../contexts/WatchlistContext';
 import { 
   TrendingUp, 
   TrendingDown, 
@@ -16,6 +18,8 @@ import {
 } from 'lucide-react';
 
 const Portfolio = () => {
+  const navigate = useNavigate();
+  const { watchlist, removeFromWatchlist } = useWatchlist();
   const [showValues, setShowValues] = useState(true);
 
   const portfolioData = {
@@ -316,6 +320,101 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
+      {/* Watchlist Section */}
+      {watchlist.length > 0 && (
+        <section className="py-12 sm:py-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 mb-4">
+                Watchlist
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+                Track the stocks you're monitoring
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {watchlist.map((stock) => (
+                <Card key={stock.symbol} className="group relative overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 rounded-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <CardContent className="relative p-6 sm:p-8">
+                    <div className="flex items-center justify-between mb-6">
+                      <div>
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{stock.name}</h3>
+                        <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">{stock.symbol}</p>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        {stock.change >= 0 ? 
+                          <TrendingUp className="h-4 w-4 text-green-500" /> : 
+                          <TrendingDown className="h-4 w-4 text-red-500" />
+                        }
+                        <Badge 
+                          className={`text-xs sm:text-sm font-semibold px-3 py-1 ${
+                            stock.change >= 0 
+                              ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' 
+                              : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400'
+                          }`}
+                        >
+                          {stock.change >= 0 ? '+' : ''}{stock.changePercent.toFixed(2)}%
+                        </Badge>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      <div className="flex justify-between items-center">
+                        <span className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                          ${stock.price.toFixed(2)}
+                        </span>
+                        <div className="text-right">
+                          <p className="text-xs text-gray-500 dark:text-gray-400">Change</p>
+                          <p className={`text-sm font-semibold ${stock.change >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                            {stock.change >= 0 ? '+' : ''}${stock.change.toFixed(2)}
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="text-xs text-gray-500 dark:text-gray-400">
+                        Added: {new Date(stock.addedAt).toLocaleDateString()}
+                      </div>
+                      
+                      <div className="grid grid-cols-2 gap-3">
+                        <Button 
+                          className="w-full h-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200" 
+                          variant="default"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            navigate(`/symbol/${stock.symbol}`);
+                          }}
+                        >
+                          <BarChart3 className="mr-2 h-4 w-4" />
+                          Analyze
+                        </Button>
+                        <Button 
+                          className="w-full h-10 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200" 
+                          variant="default"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            removeFromWatchlist(stock.symbol);
+                          }}
+                        >
+                          <EyeOff className="mr-2 h-4 w-4" />
+                          Remove
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                  
+                  {/* Hover effect overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 };

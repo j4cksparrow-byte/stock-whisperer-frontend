@@ -1,6 +1,37 @@
-import { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { TrendingUp, TrendingDown, Activity, RefreshCw, Clock, AlertCircle } from 'lucide-react'
 import tradingViewService from '../services/tradingViewService'
+
+// Error boundary component for TradingView
+class TradingViewErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props)
+    this.state = { hasError: false }
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true }
+  }
+
+  componentDidCatch(error: Error) {
+    console.warn('TradingView component error:', error)
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="p-4 text-center text-gray-500 dark:text-gray-400">
+          <p>TradingView widget temporarily unavailable</p>
+        </div>
+      )
+    }
+
+    return this.props.children
+  }
+}
 
 // TradingView widget types
 declare global {
@@ -28,18 +59,34 @@ interface MarketOverview {
   marketStatus: 'open' | 'closed' | 'pre-market' | 'after-hours';
 }
 
-export default function TradingViewTrending() {
+function TradingViewTrendingComponent() {
   const [tab, setTab] = useState<typeof tabs[number]>('gainers')
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [stocks, setStocks] = useState<TrendingStock[]>([])
   const [marketOverview, setMarketOverview] = useState<MarketOverview | null>(null)
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date())
+  const [isMounted, setIsMounted] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const widgetRef = useRef<any>(null)
+  const scriptRef = useRef<HTMLScriptElement | null>(null)
+
+  // Mount tracking
+  useEffect(() => {
+    setIsMounted(true)
+    return () => setIsMounted(false)
+  }, [])
 
   // Load TradingView script
   useEffect(() => {
+    if (!isMounted) return
+
+    // Check if script already exists
+    const existingScript = document.querySelector('script[src*="embed-widget-ticker-tape.js"]')
+    if (existingScript) {
+      return // Script already loaded, no need to add another
+    }
+
     const script = document.createElement('script')
     script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js'
     script.async = true
@@ -61,12 +108,24 @@ export default function TradingViewTrending() {
       locale: "en"
     })
     
+    scriptRef.current = script
     document.head.appendChild(script)
     
     return () => {
-      document.head.removeChild(script)
+      // Safely remove the script element
+      try {
+        if (scriptRef.current && scriptRef.current.parentNode) {
+          scriptRef.current.parentNode.removeChild(scriptRef.current)
+        }
+        // Also clean up any TradingView widgets
+        if (containerRef.current) {
+          containerRef.current.innerHTML = ''
+        }
+      } catch (error) {
+        console.warn('Failed to remove TradingView script:', error)
+      }
     }
-  }, [])
+  }, [isMounted])
 
   // Load data from TradingView service
   useEffect(() => {
@@ -119,6 +178,23 @@ export default function TradingViewTrending() {
     return () => clearInterval(interval)
   }, [tab, isLoading])
 
+  // Cleanup on component unmount
+  useEffect(() => {
+    return () => {
+      // Clean up TradingView widgets and scripts
+      try {
+        if (containerRef.current) {
+          containerRef.current.innerHTML = ''
+        }
+        if (scriptRef.current && scriptRef.current.parentNode) {
+          scriptRef.current.parentNode.removeChild(scriptRef.current)
+        }
+      } catch (error) {
+        console.warn('Cleanup error:', error)
+      }
+    }
+  }, [])
+
   const getTrendIcon = (change: number) => {
     return change >= 0 ? (
       <TrendingUp className="h-4 w-4 text-green-500" />
@@ -170,6 +246,11 @@ export default function TradingViewTrending() {
     }
   }
 
+  // Don't render if not mounted
+  if (!isMounted) {
+    return null
+  }
+
   return (
     <div className="space-y-6">
       {/* Market Overview & TradingView Ticker Tape */}
@@ -213,7 +294,7 @@ export default function TradingViewTrending() {
           </div>
         </div>
         <div className="h-16 flex items-center">
-          <div className="tradingview-widget-container w-full h-full">
+          <div ref={containerRef} className="tradingview-widget-container w-full h-full">
             <div className="tradingview-widget-container__widget w-full h-full"></div>
           </div>
         </div>
@@ -309,5 +390,14 @@ export default function TradingViewTrending() {
         )}
       </div>
     </div>
+  )
+}
+
+// Export with error boundary
+export default function TradingViewTrending() {
+  return (
+    <TradingViewErrorBoundary>
+      <TradingViewTrendingComponent />
+    </TradingViewErrorBoundary>
   )
 }
