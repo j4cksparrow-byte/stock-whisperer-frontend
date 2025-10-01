@@ -71,14 +71,14 @@ export default function SymbolAnalysis() {
     <div className="space-y-6">
       <div className="flex items-center gap-3 flex-wrap">
         <h1 className="text-2xl font-semibold">{symbol}</h1>
-        <select className="border rounded px-2 py-1" value={timeframe} onChange={e => setTimeframe(e.target.value)}>
+        <select className="border border-border rounded px-3 py-2 bg-background text-foreground" value={timeframe} onChange={e => setTimeframe(e.target.value)}>
           {timeframes.map(tf => <option key={tf} value={tf}>{tf}</option>)}
         </select>
-        <select className="border rounded px-2 py-1" value={mode} onChange={e => setMode(e.target.value as any)}>
+        <select className="border border-border rounded px-3 py-2 bg-background text-foreground" value={mode} onChange={e => setMode(e.target.value as any)}>
           {modes.map(m => <option key={m} value={m}>{m}</option>)}
         </select>
         <button 
-          className="ml-auto px-3 py-2 rounded bg-slate-900 text-white text-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2" 
+          className="ml-auto px-3 py-2 rounded bg-primary text-primary-foreground text-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 hover:bg-primary/90 transition-colors" 
           onClick={handleRunAnalysis}
           disabled={isFetching}
         >
@@ -88,16 +88,16 @@ export default function SymbolAnalysis() {
       </div>
 
       {data?.meta && (
-        <div className="flex items-center gap-4 text-xs text-slate-600 bg-slate-50 rounded-md p-2">
+        <div className="flex items-center gap-4 text-xs text-muted-foreground bg-muted/50 rounded-md p-3">
           {data.meta.dataSource && (
             <div className="flex items-center gap-1">
               <span className="font-medium">Source:</span>
-              <span className="px-2 py-0.5 bg-blue-100 text-blue-700 rounded">{data.meta.dataSource}</span>
+              <span className="px-2 py-0.5 bg-primary/10 text-primary rounded">{data.meta.dataSource}</span>
             </div>
           )}
           {data.meta.cached && (
             <div className="flex items-center gap-1">
-              <span className="px-2 py-0.5 bg-yellow-100 text-yellow-700 rounded">Cached</span>
+              <span className="px-2 py-0.5 bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 rounded">Cached</span>
             </div>
           )}
           {data.meta.timestamp && (
@@ -111,12 +111,12 @@ export default function SymbolAnalysis() {
 
       {mode === 'advanced' && (
         <div className="grid md:grid-cols-2 gap-4">
-          <div className="border rounded-md p-3 bg-white">
-            <div className="font-medium mb-2">Weights</div>
+          <div className="border border-border rounded-md p-4 bg-card">
+            <div className="font-medium mb-3 text-foreground">Weights</div>
             <WeightsPanel initial={weights} onChange={setWeights} />
           </div>
-          <div className="border rounded-md p-3 bg-white">
-            <div className="font-medium mb-2">Indicators</div>
+          <div className="border border-border rounded-md p-4 bg-card">
+            <div className="font-medium mb-3 text-foreground">Indicators</div>
             <IndicatorsPanel 
               onChange={setIndConfig} 
               initialConfig={indConfig}
@@ -146,33 +146,33 @@ export default function SymbolAnalysis() {
 
       {data?.analysis && (
         <div className="grid md:grid-cols-3 gap-4">
-          <div className="border rounded-md p-3 bg-white space-y-2">
+          <div className="border border-border rounded-md p-4 bg-card space-y-2">
             <div className="flex items-center justify-between">
-              <div className="font-medium">Fundamental</div>
+              <div className="font-medium text-foreground">Fundamental</div>
               <ScoreBadge score={data.analysis.fundamental?.score} />
             </div>
-            <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.fundamental?.recommendation} /></div>
-            <div className="text-xs text-slate-500">
+            <div className="text-sm text-foreground">Rec: <RecommendationChip rec={data.analysis.fundamental?.recommendation} /></div>
+            <div className="text-xs text-muted-foreground">
               Weight: {data.analysis.fundamental?.weight || '40%'}
             </div>
           </div>
-          <div className="border rounded-md p-3 bg-white space-y-2">
+          <div className="border border-border rounded-md p-4 bg-card space-y-2">
             <div className="flex items-center justify-between">
-              <div className="font-medium">Technical</div>
+              <div className="font-medium text-foreground">Technical</div>
               <ScoreBadge score={data.analysis.technical?.score} />
             </div>
-            <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.technical?.recommendation} /></div>
-            <div className="text-xs text-slate-500">
+            <div className="text-sm text-foreground">Rec: <RecommendationChip rec={data.analysis.technical?.recommendation} /></div>
+            <div className="text-xs text-muted-foreground">
               Weight: {data.analysis.technical?.configuration?.weight || '35%'}
             </div>
           </div>
-          <div className="border rounded-md p-3 bg-white space-y-2">
+          <div className="border border-border rounded-md p-4 bg-card space-y-2">
             <div className="flex items-center justify-between">
-              <div className="font-medium">Sentiment</div>
+              <div className="font-medium text-foreground">Sentiment</div>
               <ScoreBadge score={data.analysis.sentiment?.score} />
             </div>
-            <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.sentiment?.recommendation} /></div>
-            <div className="text-xs text-slate-500">
+            <div className="text-sm text-foreground">Rec: <RecommendationChip rec={data.analysis.sentiment?.recommendation} /></div>
+            <div className="text-xs text-muted-foreground">
               Weight: {data.analysis.sentiment?.weight || '25%'}
             </div>
           </div>
@@ -195,27 +195,27 @@ export default function SymbolAnalysis() {
       )}
 
       {mode === 'advanced' && Object.keys(technicalIndicators).length > 0 && (
-        <div className="border rounded-md p-3 bg-white">
-          <h3 className="font-medium mb-2">Technical Indicators</h3>
+        <div className="border border-border rounded-md p-4 bg-card">
+          <h3 className="font-medium mb-3 text-foreground">Technical Indicators</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {Object.entries(technicalIndicators).map(([key, value]) => {
               // Skip patterns as they're displayed separately
               if (key === 'patterns') return null;
               
               return (
-                <div key={key} className="border rounded p-2">
-                  <div className="font-medium text-sm">{key}</div>
+                <div key={key} className="border border-border rounded p-3 bg-background">
+                  <div className="font-medium text-sm text-foreground">{key}</div>
                   {typeof value === 'object' && value !== null ? (
                     <div className="text-xs space-y-1 mt-1">
                       {Object.entries(value).map(([subKey, subValue]) => (
                         <div key={subKey} className="flex justify-between">
-                          <span className="text-slate-600">{subKey}:</span>
-                          <span className="font-mono">{formatIndicatorValue(subValue)}</span>
+                          <span className="text-muted-foreground">{subKey}:</span>
+                          <span className="font-mono text-foreground">{formatIndicatorValue(subValue)}</span>
                         </div>
                       ))}
                     </div>
                   ) : (
-                    <div className="font-mono text-sm mt-1">{formatIndicatorValue(value)}</div>
+                    <div className="font-mono text-sm mt-1 text-foreground">{formatIndicatorValue(value)}</div>
                   )}
                 </div>
               );

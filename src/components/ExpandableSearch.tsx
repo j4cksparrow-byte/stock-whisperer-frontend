@@ -96,7 +96,7 @@ export default function ExpandableSearch() {
                 onChange={(e) => setQuery(e.target.value)}
                 onFocus={() => setIsOpen(true)}
                 onKeyPress={handleKeyPress}
-                className="border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 flex-1"
+                className="border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 flex-1 text-foreground placeholder:text-muted-foreground"
               />
               {isLoading && (
                 <div className="mr-2">
@@ -113,7 +113,7 @@ export default function ExpandableSearch() {
             
             {/* Search Results Dropdown - floating with blur */}
             {isOpen && debouncedQuery && (
-              <div className="absolute top-full left-0 right-0 mt-1 bg-background/95 backdrop-blur-sm border border-border rounded-lg shadow-xl max-h-64 overflow-auto z-50">
+              <div className="absolute top-full left-0 right-0 mt-1 bg-background/95 backdrop-blur-sm border border-border rounded-lg shadow-xl max-h-80 overflow-auto z-50 min-w-80">
                 {isLoading ? (
                   <div className="px-4 py-3 text-center text-muted-foreground">
                     <LoadingSpinner size="sm" className="mx-auto mb-2" />

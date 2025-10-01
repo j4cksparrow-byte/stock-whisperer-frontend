@@ -79,7 +79,7 @@ export default function IndicatorsPanel({ onChange, initialConfig }: Props) {
   }
 
   // Show loading message while fetching data from the server
-  if (isLoading) return <div>Loading indicators…</div>
+  if (isLoading) return <div className="text-muted-foreground">Loading indicators…</div>
 
   // Extract the available indicators and their default settings from the API response
   // availableIndicators = { trend: ["SMA", "EMA"], momentum: ["RSI", "Stochastic"], ... }
@@ -91,10 +91,10 @@ export default function IndicatorsPanel({ onChange, initialConfig }: Props) {
     <div className="grid gap-3">
       {/* Header with title and reset button */}
       <div className="flex justify-between items-center">
-        <div className="text-sm text-slate-600">Available Indicators</div>
+        <div className="text-sm text-muted-foreground">Available Indicators</div>
         {/* Button to reset all indicators to their default server settings */}
         <button
-          className="text-xs text-blue-600 hover:text-blue-800"
+          className="text-xs text-primary hover:text-primary/80 transition-colors"
           onClick={() => setConfig(defaultConfig)} // Replace current config with server defaults
         >
           Reset to defaults
@@ -105,14 +105,14 @@ export default function IndicatorsPanel({ onChange, initialConfig }: Props) {
       <div className="space-y-2">
         {/* Loop through each group (trend, momentum, volatility, volume) */}
         {Object.entries(availableIndicators).map(([group, indicators]) => (
-          <div key={group} className="border rounded-md bg-white">
+          <div key={group} className="border border-border rounded-md bg-card">
             {/* Clickable header for each group that can expand/collapse */}
             <button
-              className="w-full px-3 py-2 text-left flex justify-between items-center"
+              className="w-full px-3 py-2 text-left flex justify-between items-center hover:bg-muted/50 transition-colors"
               onClick={() => toggleGroup(group)} // Expand or collapse this group when clicked
             >
               {/* Group name (like "trend", "momentum") with capital first letter */}
-              <span className="font-medium text-sm capitalize">{group}</span>
+              <span className="font-medium text-sm capitalize text-foreground">{group}</span>
               {/* Arrow icon that rotates when group is expanded */}
               <svg 
                 className={`w-4 h-4 transition-transform ${expandedGroups[group] ? 'rotate-180' : ''}`} 
@@ -138,7 +138,7 @@ export default function IndicatorsPanel({ onChange, initialConfig }: Props) {
                   const indicatorConfig = config[indicator] || defaultConfig[indicator] || {}
                   
                   return (
-                    <div key={indicator} className="border rounded p-2">
+                    <div key={indicator} className="border border-border rounded p-2 bg-background">
                       {/* Checkbox and indicator name */}
                       <div className="flex items-center justify-between">
                         <label className="flex items-center space-x-2">
@@ -147,10 +147,10 @@ export default function IndicatorsPanel({ onChange, initialConfig }: Props) {
                             type="checkbox"
                             checked={isEnabled} // Show checked if indicator is enabled
                             onChange={() => toggleIndicator(indicator)} // Toggle on/off when clicked
-                            className="rounded"
+                            className="rounded border-border"
                           />
                           {/* Display the indicator name (like "RSI", "MACD") */}
-                          <span className="text-sm font-medium">{indicator}</span>
+                          <span className="text-sm font-medium text-foreground">{indicator}</span>
                         </label>
                       </div>
                       
@@ -161,7 +161,7 @@ export default function IndicatorsPanel({ onChange, initialConfig }: Props) {
                           {Object.entries(defaultConfig[indicator]).map(([key, defaultValue]) => (
                             <div key={key} className="flex items-center justify-between">
                               {/* Parameter name (like "period:", "fastPeriod:") */}
-                              <label className="text-xs text-slate-600 capitalize">{key}:</label>
+                              <label className="text-xs text-muted-foreground capitalize">{key}:</label>
                               {/* Number input to change the parameter value */}
                               <input
                                 type="number"
@@ -169,7 +169,7 @@ export default function IndicatorsPanel({ onChange, initialConfig }: Props) {
                                 value={indicatorConfig[key] ?? defaultValue}
                                 // Update the parameter when user types a new number
                                 onChange={(e) => updateIndicatorConfig(indicator, key, Number(e.target.value))}
-                                className="w-16 text-xs border rounded px-1 py-0.5"
+                                className="w-16 text-xs border border-border rounded px-1 py-0.5 bg-background text-foreground"
                               />
                             </div>
                           ))}
@@ -185,7 +185,7 @@ export default function IndicatorsPanel({ onChange, initialConfig }: Props) {
       </div>
       
       {/* Help text at the bottom */}
-      <div className="text-xs text-slate-500">
+      <div className="text-xs text-muted-foreground">
         Select which indicators to calculate and customize their parameters.
       </div>
     </div>

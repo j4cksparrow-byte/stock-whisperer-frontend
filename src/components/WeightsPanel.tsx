@@ -77,33 +77,33 @@ export default function WeightsPanel({ initial, onChange }: Props) {
             <input type="range" min={0} max={100} value={row.value} onChange={(e) => row.set(parseInt(e.target.value))} className="w-full" />
           </div>
         ))}
-        <div className="text-xs text-slate-500">Weights auto-normalised to 100% on request.</div>
+        <div className="text-xs text-muted-foreground">Weights auto-normalised to 100% on request.</div>
       </div>
 
       <div className="border-t pt-3">
-        <div className="text-sm font-medium mb-2">Weighting Style</div>
-        <div className="text-xs text-slate-600 bg-slate-50 p-2 rounded">
+        <div className="text-sm font-medium mb-2 text-foreground">Weighting Style</div>
+        <div className="text-xs text-muted-foreground bg-muted/50 p-2 rounded">
           {weightingStyle}
         </div>
       </div>
 
       {alternatives.length > 0 && (
         <div className="border-t pt-3">
-          <div className="text-sm font-medium mb-2">Suggested Alternatives</div>
+          <div className="text-sm font-medium mb-2 text-foreground">Suggested Alternatives</div>
           <div className="space-y-2">
             {alternatives.map((alt, index) => (
               <button
                 key={index}
-                className="w-full text-left p-2 border rounded text-xs hover:bg-slate-50"
+                className="w-full text-left p-2 border border-border rounded text-xs hover:bg-muted/50 transition-colors"
                 onClick={() => {
                   setF(alt.weights.fundamental);
                   setT(alt.weights.technical);
                   setS(alt.weights.sentiment);
                 }}
               >
-                <div className="font-medium">{alt.name}</div>
-                <div className="text-slate-600">{alt.description}</div>
-                <div className="text-slate-500 mt-1">
+                <div className="font-medium text-foreground">{alt.name}</div>
+                <div className="text-muted-foreground">{alt.description}</div>
+                <div className="text-muted-foreground/70 mt-1">
                   F:{alt.weights.fundamental}% T:{alt.weights.technical}% S:{alt.weights.sentiment}%
                 </div>
               </button>
