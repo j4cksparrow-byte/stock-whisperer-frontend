@@ -20,3 +20,6 @@ verify_jwt = false
 
 [functions.stock-analysis]
 verify_jwt = false
+
+[functions.fetch-stock-news]
+verify_jwt = false

@@ -1,258 +1,178 @@
 import { useParams, useSearchParams } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useAnalysis } from '../lib/queries'
+import { useStockNews } from '../lib/newsQueries'
 import WeightsPanel from '../components/WeightsPanel'
-import IndicatorsPanel from '../components/IndicatorsPanel'
 import TradingViewChart from '../components/TradingViewChart'
-import ScoreBadge from '../components/ScoreBadge'
-import RecommendationChip from '../components/RecommendationChip'
 import AISummary from '../components/AISummary'
-import HeadlineList from '../components/HeadlineList'
 import LoadingSpinner from '../components/LoadingSpinner'
-import HybridAnalysis from '../components/HybridAnalysis'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs'
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
-import { Badge } from '../components/ui/badge'
-import { TrendingUp, BarChart3 } from 'lucide-react'
+import CircularGauge from '../components/CircularGauge'
+import MetricCard from '../components/MetricCard'
+import SentimentBar from '../components/SentimentBar'
+import NewsCard from '../components/NewsCard'
+import FundamentalsTable from '../components/FundamentalsTable'
+import { Card } from '../components/ui/card'
 import { encodeState, decodeState } from '../lib/urlState'
-
-const timeframes = ['1D','1W','1M','3M','6M','1Y','2Y'] as const
-const modes = ['normal','advanced'] as const
 
 export default function SymbolAnalysis() {
   const { symbol = '' } = useParams()
-  const [sp, setSP] = useSearchParams()
-  const [timeframe, setTimeframe] = useState(sp.get('tf') ?? '1M')
-  const [mode, setMode] = useState<'normal'|'advanced'>((sp.get('mode') as any) ?? 'normal')
+  const [sp] = useSearchParams()
   const [weights, setWeights] = useState({ fundamental: 40, technical: 35, sentiment: 25 })
-  const [indConfig, setIndConfig] = useState<Record<string, any>>(decodeState(sp.get('ind') ) ?? {})
 
+  const timeframe = sp.get('tf') ?? '1M'
+  const mode = (sp.get('mode') as 'normal' | 'advanced') ?? 'normal'
   const includeHeadlines = sp.get('headlines') !== 'false'
   const bypassCache = sp.get('refresh') === '1'
 
-  const { data, isFetching, refetch, error } = useAnalysis({
-    symbol, timeframe, mode,
+  const { data, isFetching, error } = useAnalysis({
+    symbol,
+    timeframe,
+    mode,
     weights: mode === 'advanced' ? weights : undefined,
-    indicators: Object.keys(indConfig).length ? indConfig : undefined,
-    includeHeadlines, bypassCache
+    includeHeadlines,
+    bypassCache
   })
 
-  function syncURL() {
-    const ind = encodeState(indConfig)
-    const params = new URLSearchParams(sp)
-    params.set('tf', timeframe)
-    params.set('mode', mode)
-    if (ind) params.set('ind', ind)
-    setSP(params, { replace: true })
+  // Fetch news
+  const { data: newsData } = useStockNews(symbol)
+
+  // Extract analysis data
+  const technicalScore = data?.analysis?.technical?.score ?? 0
+  const fundamentalScore = data?.analysis?.fundamental?.score ?? 0
+  const sentimentScore = data?.analysis?.sentiment?.score ?? 0
+  const overallScore = data?.analysis?.overall?.score ?? 0
+  const recommendation = data?.analysis?.overall?.recommendation ?? 'HOLD'
+  const aiSummary = data?.analysis?.aiInsights?.summary
+
+  // Technical indicators
+  const technicalIndicators = data?.analysis?.technical?.indicators || {}
+  const rsi = Array.isArray(technicalIndicators.RSI) 
+    ? technicalIndicators.RSI[technicalIndicators.RSI.length - 1] 
+    : technicalIndicators.RSI ?? 0
+  const sma = Array.isArray(technicalIndicators.SMA)
+    ? technicalIndicators.SMA[technicalIndicators.SMA.length - 1]
+    : technicalIndicators.SMA ?? 0
+
+  // Calculate SMA change (mock for now)
+  const smaChange = '+0.32%'
+
+  // Confidence level
+  const confidence = overallScore >= 70 ? 'High' : overallScore >= 50 ? 'Medium' : 'Low'
+
+  // Get news from API or fallback to mock
+  const newsItems = newsData?.news || [
+    { title: `${symbol} latest market updates`, date: 'Today', sentiment: 'neutral' as const },
+  ]
+
+  // Fundamentals data (mock - replace with actual data from API)
+  const fundamentalsData = {
+    peRatio: 28.3,
+    pegRatio: 2.1,
+    dividendYield: 0.55,
+    marketCap: '2.65T'
   }
 
-  // Format technical indicators for display
-  const formatIndicatorValue = (value: any): string => {
-    if (typeof value === 'number') {
-      return value.toFixed(2);
-    }
-    if (Array.isArray(value) && value.length > 0) {
-      const lastValue = value[value.length - 1];
-      return typeof lastValue === 'number' ? lastValue.toFixed(2) : String(lastValue);
-    }
-    return String(value);
-  };
+  if (isFetching) {
+    return (
+      <div className="flex items-center justify-center min-h-[400px]">
+        <LoadingSpinner size="lg" />
+      </div>
+    )
+  }
 
-  // Get technical indicators data
-  const technicalIndicators = data?.analysis?.technical?.indicators || {};
-  const patterns = technicalIndicators.patterns || [];
+  if (error) {
+    return (
+      <div className="container mx-auto p-4">
+        <div className="p-4 border border-red-300 bg-red-50 rounded-lg text-red-800">
+          Error loading analysis: {error.message}
+        </div>
+      </div>
+    )
+  }
 
   return (
-    <div className="space-y-6">
+    <div className="container mx-auto p-4 space-y-6">
       {/* Header */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <TrendingUp className="w-6 h-6" />
-              <span className="text-2xl font-semibold">{symbol}</span>
-              <Badge variant="outline">Stock Analysis</Badge>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold">{symbol}</h1>
+          <p className="text-muted-foreground">Market Open</p>
+        </div>
+      </div>
+
+      {/* Top Metrics Row */}
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <MetricCard 
+          title="SMA TREND" 
+          value={typeof sma === 'number' ? sma.toFixed(2) : sma} 
+          change={smaChange}
+        />
+        <MetricCard 
+          title="RSI" 
+          value={typeof rsi === 'number' ? rsi.toFixed(1) : rsi}
+        />
+        <Card className="p-4">
+          <div className="text-sm font-medium text-muted-foreground mb-2">SENTIMENT</div>
+          <SentimentBar score={sentimentScore} />
+        </Card>
+        <MetricCard 
+          title="FUNDAMENTALS" 
+          value={fundamentalScore}
+        />
+        <Card className="p-4 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950">
+          <div className="text-sm font-medium text-muted-foreground mb-1">AGGREGATE SCORE</div>
+          <div className="text-center">
+            <div className="text-4xl font-bold">{overallScore}</div>
+            <div className={`text-lg font-semibold mt-1 ${
+              recommendation === 'BUY' ? 'text-green-600' : 
+              recommendation === 'SELL' ? 'text-red-600' : 'text-yellow-600'
+            }`}>
+              Verdict: {recommendation}
             </div>
-          </CardTitle>
-        </CardHeader>
-      </Card>
-
-      <Tabs defaultValue="hybrid" className="w-full">
-        <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="hybrid" className="flex items-center gap-2">
-            <BarChart3 className="w-4 h-4" />
-            Hybrid Analysis
-          </TabsTrigger>
-          <TabsTrigger value="charts">Price Charts</TabsTrigger>
-          <TabsTrigger value="legacy">Legacy Analysis</TabsTrigger>
-        </TabsList>
-
-        {/* Hybrid Analysis Tab */}
-        <TabsContent value="hybrid" className="mt-6">
-          <HybridAnalysis 
-            symbol={symbol} 
-          />
-        </TabsContent>
-
-        {/* Charts Tab */}
-        <TabsContent value="charts" className="mt-6">
-          <TradingViewChart symbol={symbol} />
-        </TabsContent>
-
-        {/* Legacy Analysis Tab */}
-        <TabsContent value="legacy" className="mt-6">
-          <div className="space-y-6">
-            <div className="flex items-center gap-3 flex-wrap">
-              <select className="border rounded px-2 py-1" value={timeframe} onChange={e => setTimeframe(e.target.value)}>
-                {timeframes.map(tf => <option key={tf} value={tf}>{tf}</option>)}
-              </select>
-              <select className="border rounded px-2 py-1" value={mode} onChange={e => setMode(e.target.value as any)}>
-                {modes.map(m => <option key={m} value={m}>{m}</option>)}
-              </select>
-              <button 
-                className="ml-auto px-3 py-2 rounded bg-slate-900 text-white text-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2" 
-                onClick={() => { syncURL(); refetch() }}
-                disabled={isFetching}
-              >
-                {isFetching && <LoadingSpinner size="sm" />}
-                {isFetching ? 'Analyzing...' : 'Run Analysis'}
-              </button>
-            </div>
-
-            {mode === 'advanced' && (
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="border rounded-md p-3 bg-white">
-                  <div className="font-medium mb-2">Weights</div>
-                  <WeightsPanel initial={weights} onChange={setWeights} />
-                </div>
-                <div className="border rounded-md p-3 bg-white">
-                  <div className="font-medium mb-2">Indicators</div>
-                  <IndicatorsPanel 
-                    onChange={setIndConfig} 
-                    initialConfig={indConfig}
-                  />
-                </div>
-              </div>
-            )}
-
-            {error && (
-              <div className="border border-red-200 rounded-md p-4 bg-red-50">
-                <div className="flex items-center gap-2 text-red-800">
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span className="font-medium">Error loading analysis</span>
-                </div>
-                <p className="text-red-700 text-sm mt-1">Please try again or check if the symbol is valid.</p>
-              </div>
-            )}
-
-            {data?.analysis && (
-              <div className="grid md:grid-cols-3 gap-4">
-                <div className="border rounded-md p-3 bg-white space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="font-medium">Fundamental</div>
-                    <ScoreBadge score={data.analysis.fundamental?.score} />
-                  </div>
-                  <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.fundamental?.recommendation} /></div>
-                  <div className="text-xs text-slate-500">
-                    Weight: {data.analysis.fundamental?.weight || '40%'}
-                  </div>
-                </div>
-                <div className="border rounded-md p-3 bg-white space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="font-medium">Technical</div>
-                    <ScoreBadge score={data.analysis.technical?.score} />
-                  </div>
-                  <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.technical?.recommendation} /></div>
-                  <div className="text-xs text-slate-500">
-                    Weight: {data.analysis.technical?.configuration?.weight || '35%'}
-                  </div>
-                </div>
-                <div className="border rounded-md p-3 bg-white space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="font-medium">Sentiment</div>
-                    <ScoreBadge score={data.analysis.sentiment?.score} />
-                  </div>
-                  <div className="text-sm">Rec: <RecommendationChip rec={data.analysis.sentiment?.recommendation} /></div>
-                  <div className="text-xs text-slate-500">
-                    Weight: {data.analysis.sentiment?.weight || '25%'}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {data?.analysis?.overall && (
-              <div className="border rounded-md p-3 bg-white">
-                <div className="flex items-center gap-3">
-                  <div className="font-medium">Overall</div>
-                  <ScoreBadge score={data.analysis.overall?.score} />
-                  <RecommendationChip rec={data.analysis.overall?.recommendation} />
-                </div>
-                <div className="text-xs text-slate-500 mt-1">
-                  Weights: F:{data?.analysis?.meta?.weightsUsed?.fundamental || 40}% 
-                  T:{data?.analysis?.meta?.weightsUsed?.technical || 35}% 
-                  S:{data?.analysis?.meta?.weightsUsed?.sentiment || 25}%
-                </div>
-              </div>
-            )}
-
-            {mode === 'advanced' && Object.keys(technicalIndicators).length > 0 && (
-              <div className="border rounded-md p-3 bg-white">
-                <h3 className="font-medium mb-2">Technical Indicators</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                  {Object.entries(technicalIndicators).map(([key, value]) => {
-                    // Skip patterns as they're displayed separately
-                    if (key === 'patterns') return null;
-                    
-                    return (
-                      <div key={key} className="border rounded p-2">
-                        <div className="font-medium text-sm">{key}</div>
-                        {typeof value === 'object' && value !== null ? (
-                          <div className="text-xs space-y-1 mt-1">
-                            {Object.entries(value).map(([subKey, subValue]) => (
-                              <div key={subKey} className="flex justify-between">
-                                <span className="text-slate-600">{subKey}:</span>
-                                <span className="font-mono">{formatIndicatorValue(subValue)}</span>
-                              </div>
-                            ))}
-                          </div>
-                        ) : (
-                          <div className="font-mono text-sm mt-1">{formatIndicatorValue(value)}</div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-
-            {patterns.length > 0 && (
-              <div className="border rounded-md p-3 bg-white">
-                <h3 className="font-medium mb-2">Pattern Recognition</h3>
-                <div className="flex flex-wrap gap-2">
-                  {patterns.map((pattern: any, index: number) => (
-                    <div 
-                      key={index} 
-                      className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        pattern.direction === 'bullish' 
-                          ? 'bg-green-100 text-green-800' 
-                          : pattern.direction === 'bearish' 
-                            ? 'bg-red-100 text-red-800' 
-                            : 'bg-blue-100 text-blue-800'
-                      }`}
-                    >
-                      {pattern.pattern} ({pattern.confidence}%)
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            <AISummary text={data?.analysis?.aiInsights?.summary} />
+            <div className="text-xs text-muted-foreground mt-1">Confidence: {confidence}</div>
           </div>
-        </TabsContent>
-      </Tabs>
+        </Card>
+      </div>
+
+      {/* Main Dashboard Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Left Side - Chart & Fundamentals */}
+        <div className="lg:col-span-2 space-y-6">
+          <TradingViewChart symbol={symbol} height={500} />
+          <FundamentalsTable data={fundamentalsData} />
+        </div>
+
+        {/* Right Sidebar */}
+        <div className="space-y-6">
+          {/* Verdict Gauge */}
+          <Card>
+            <CircularGauge 
+              score={overallScore} 
+              verdict={recommendation} 
+              confidence={confidence}
+            />
+          </Card>
+
+          {/* Weights Panel */}
+          <Card className="p-4">
+            <h3 className="font-semibold mb-4">Weights</h3>
+            <WeightsPanel initial={weights} onChange={setWeights} />
+          </Card>
+
+          {/* News & Sentiment */}
+          <NewsCard items={newsItems} />
+        </div>
+      </div>
+
+      {/* AI Summary */}
+      {aiSummary && (
+        <Card className="p-6">
+          <h3 className="font-semibold text-lg mb-4">AI Analysis Summary</h3>
+          <div className="prose prose-sm max-w-none dark:prose-invert">
+            <AISummary text={aiSummary} />
+          </div>
+        </Card>
+      )}
     </div>
   )
 }
