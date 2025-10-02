@@ -53,12 +53,13 @@ const EnhancedStockAnalysis: React.FC = () => {
     setLoadingMessage('Initializing analysis...');
 
     try {
-      // Call backend analysis endpoint
+      // Call Supabase edge function for hybrid multi-source analysis
       setLoadingMessage('Fetching market data...');
-      console.log('[EnhancedStockAnalysis] Calling /api/stocks/analysis for:', selectedCompany.symbol);
+      console.log('[EnhancedStockAnalysis] Calling stock-analysis edge function for:', selectedCompany.symbol);
       
-      const { data: res } = await api.get(`/api/stocks/analysis/${selectedCompany.symbol}`, {
+      const { data: res } = await api.get(`/stock-analysis/analyze`, {
         params: {
+          symbol: selectedCompany.symbol,
           timeframe: analysisDuration,
           bypassCache: false
         }
