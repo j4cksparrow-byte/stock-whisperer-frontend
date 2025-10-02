@@ -7,6 +7,7 @@ import Footer from './components/Layout/Footer'
 import OnboardingPopup from './components/OnboardingPopup'
 import Home from './pages/Home'
 import SymbolAnalysis from './pages/SymbolAnalysis'
+import AnalysisResultsPage from './pages/AnalysisResultsPage'
 import Indicators from './pages/Indicators'
 import Weights from './pages/Weights'
 import Market from './pages/Market'
@@ -26,6 +27,7 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/symbol/:symbol" element={<SymbolAnalysis />} />
+                <Route path="/analysis/:symbol" element={<AnalysisResultsPage />} />
                 <Route path="/indicators" element={<Indicators />} />
                 <Route path="/weights" element={<Weights />} />
                 <Route path="/market" element={<Market />} />

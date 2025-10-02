@@ -1,11 +1,5 @@
-import { useEffect, useRef } from 'react'
-import { useTheme } from '../contexts/ThemeContext'
-
-interface TradingViewChartProps {
-  symbol?: string
-  height?: number
-  width?: string
-}
+import React, { useEffect, useRef, memo } from 'react';
+import { useTheme } from '../contexts/ThemeContext';
 
 declare global {
   interface Window {
@@ -13,101 +7,103 @@ declare global {
   }
 }
 
-// Helper function to format symbol for TradingView
-const formatSymbolForTradingView = (symbol: string): string => {
-  if (!symbol) return 'NASDAQ:AAPL'
-  
-  // If symbol already has exchange prefix, return as is
-  if (symbol.includes(':')) return symbol
-  
-  // Common exchange mappings for popular symbols
-  const exchangeMap: Record<string, string> = {
-    // Major US stocks
-    'AAPL': 'NASDAQ:AAPL',
-    'GOOGL': 'NASDAQ:GOOGL',
-    'MSFT': 'NASDAQ:MSFT',
-    'AMZN': 'NASDAQ:AMZN',
-    'TSLA': 'NASDAQ:TSLA',
-    'META': 'NASDAQ:META',
-    'NFLX': 'NASDAQ:NFLX',
-    'NVDA': 'NASDAQ:NVDA',
-    'AMD': 'NASDAQ:AMD',
-    // Major NYSE stocks
-    'JPM': 'NYSE:JPM',
-    'JNJ': 'NYSE:JNJ',
-    'V': 'NYSE:V',
-    'PG': 'NYSE:PG',
-    'UNH': 'NYSE:UNH',
-    'HD': 'NYSE:HD',
-    'MA': 'NYSE:MA',
-    'BAC': 'NYSE:BAC',
-    'XOM': 'NYSE:XOM',
-    'CVX': 'NYSE:CVX'
-  }
-  
-  // Check if we have a specific mapping
-  const upperSymbol = symbol.toUpperCase()
-  if (exchangeMap[upperSymbol]) {
-    return exchangeMap[upperSymbol]
-  }
-  
-  // Default to NASDAQ for unknown symbols (most tech stocks)
-  return `NASDAQ:${upperSymbol}`
+interface TradingViewChartProps {
+  symbol?: string;
+  height?: number;
+  width?: string;
 }
 
-export default function TradingViewChart({ 
-  symbol = 'AAPL', 
-  height = 400,
-  width = '100%' 
-}: TradingViewChartProps) {
-  const containerRef = useRef<HTMLDivElement | null>(null)
-  const { resolvedTheme } = useTheme()
-  const formattedSymbol = formatSymbolForTradingView(symbol)
+// Helper function to format symbol for TradingView
+const formatSymbolForTradingView = (symbol: string): string => {
+  if (!symbol) return 'NASDAQ:AAPL';
+  if (symbol.includes(':')) return symbol.toUpperCase();
+
+  // Pre-populated exchange map for common stocks
+  const exchangeMap: Record<string, string> = {
+    'AAPL': 'NASDAQ', 'GOOGL': 'NASDAQ', 'MSFT': 'NASDAQ', 'AMZN': 'NASDAQ', 'TSLA': 'NASDAQ',
+    'META': 'NASDAQ', 'NFLX': 'NASDAQ', 'NVDA': 'NASDAQ', 'AMD': 'NASDAQ', 'INTC': 'NASDAQ',
+    'JPM': 'NYSE', 'JNJ': 'NYSE', 'V': 'NYSE', 'PG': 'NYSE', 'UNH': 'NYSE',
+    'HD': 'NYSE', 'MA': 'NYSE', 'BAC': 'NYSE', 'XOM': 'NYSE', 'CVX': 'NYSE',
+    'RELIANCE': 'BSE', 'TCS': 'BSE', 'HDFCBANK': 'BSE',
+    'INFY': 'NSE', 'HDFC': 'NSE', 'ICICIBANK': 'NSE',
+  };
+
+  const upperSymbol = symbol.toUpperCase();
+  const exchange = exchangeMap[upperSymbol] || 'NASDAQ'; // Default to NASDAQ
+  return `${exchange}:${upperSymbol}`;
+};
+
+const TradingViewChart: React.FC<TradingViewChartProps> = ({
+  symbol = 'AAPL',
+  height = 500,
+}) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scriptRef = useRef<HTMLScriptElement | null>(null);
+  const { resolvedTheme } = useTheme();
+  const formattedSymbol = formatSymbolForTradingView(symbol);
 
   useEffect(() => {
-    if (!containerRef.current) return
+    const createWidget = () => {
+      if (!containerRef.current || !window.TradingView) {
+        return;
+      }
 
-    const containerId = `tradingview_${Date.now()}`
-    
-    // Clean up any existing content
-    containerRef.current.innerHTML = `
-      <div id="${containerId}" style="height: ${height}px; width: 100%;">
-        <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666;">
-          Loading chart...
-        </div>
-      </div>
-    `
+      const widgetOptions = {
+        autosize: true,
+        symbol: formattedSymbol,
+        interval: 'D',
+        timezone: 'Etc/UTC',
+        theme: resolvedTheme === 'dark' ? 'dark' : 'light',
+        style: '1',
+        locale: 'en',
+        enable_publishing: false,
+        allow_symbol_change: true,
+        container_id: `tradingview-widget-container-${symbol}`,
+      };
 
-    // Create the TradingView widget script
-    const widgetScript = document.createElement('script')
-    widgetScript.type = 'text/javascript'
-    widgetScript.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js'
-    widgetScript.async = true
-    
-    const widgetConfig = {
-      "autosize": true,
-      "symbol": formattedSymbol,
-      "interval": "D",
-      "timezone": "Etc/UTC",
-      "theme": resolvedTheme,
-      "style": "1",
-      "locale": "en",
-      "enable_publishing": false,
-      "allow_symbol_change": false,
-      "calendar": false,
-      "support_host": "https://www.tradingview.com"
+      new window.TradingView.widget(widgetOptions);
+    };
+
+    const container = containerRef.current;
+    if (!container) return;
+
+    // Clear previous widget
+    container.innerHTML = '';
+    const widgetContainer = document.createElement('div');
+    widgetContainer.id = `tradingview-widget-container-${symbol}`;
+    widgetContainer.style.height = '100%';
+    widgetContainer.style.width = '100%';
+    container.appendChild(widgetContainer);
+
+    if (scriptRef.current && document.body.contains(scriptRef.current)) {
+      // If script is already there, just create the widget
+      if (window.TradingView) {
+        createWidget();
+      } else {
+        scriptRef.current.onload = createWidget;
+      }
+    } else {
+      // If script is not there, create and append it
+      const script = document.createElement('script');
+      script.src = 'https://s3.tradingview.com/tv.js';
+      script.async = true;
+      script.onload = createWidget;
+      document.body.appendChild(script);
+      scriptRef.current = script;
     }
-    
-    widgetScript.innerHTML = JSON.stringify(widgetConfig)
-    
-    // Find the container and append the script
-    const container = document.getElementById(containerId)
-    if (container) {
-      container.innerHTML = ''
-      container.appendChild(widgetScript)
-    }
 
-  }, [formattedSymbol, resolvedTheme, height, width])
+    return () => {
+      // Cleanup script on component unmount
+      if (scriptRef.current && document.body.contains(scriptRef.current)) {
+        // To prevent memory leaks, we might not want to remove the script itself,
+        // as it could be used by other chart instances.
+        // Instead, we just clean the container.
+        if (container) {
+          container.innerHTML = '';
+        }
+      }
+    };
+  }, [symbol, resolvedTheme, formattedSymbol]);
 
   return (
     <div className="w-full border rounded-md overflow-hidden bg-white dark:bg-gray-900">
@@ -116,11 +112,13 @@ export default function TradingViewChart({
           {formattedSymbol} Chart
         </h3>
       </div>
-      <div 
-        ref={containerRef} 
+      <div
+        ref={containerRef}
         className="w-full"
         style={{ height: `${height}px` }}
       />
     </div>
-  )
-}
+  );
+};
+
+export default memo(TradingViewChart);

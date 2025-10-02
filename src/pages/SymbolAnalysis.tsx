@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useAnalysis } from '../lib/queries'
 import WeightsPanel from '../components/WeightsPanel'
 import IndicatorsPanel from '../components/IndicatorsPanel'
-import PriceChart from '../components/PriceChart'
+import TradingViewChart from '../components/TradingViewChart'
 import ScoreBadge from '../components/ScoreBadge'
 import RecommendationChip from '../components/RecommendationChip'
 import AISummary from '../components/AISummary'
@@ -91,15 +91,12 @@ export default function SymbolAnalysis() {
         <TabsContent value="hybrid" className="mt-6">
           <HybridAnalysis 
             symbol={symbol} 
-            onAnalysisComplete={(result) => {
-              console.log('Analysis completed:', result);
-            }}
           />
         </TabsContent>
 
         {/* Charts Tab */}
         <TabsContent value="charts" className="mt-6">
-          <PriceChart />
+          <TradingViewChart symbol={symbol} />
         </TabsContent>
 
         {/* Legacy Analysis Tab */}
