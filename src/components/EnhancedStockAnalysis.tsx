@@ -53,9 +53,9 @@ const EnhancedStockAnalysis: React.FC = () => {
     setLoadingMessage('Initializing analysis...');
 
     try {
-      // Call the actual stock-analysis edge function
+      // Call backend analysis endpoint
       setLoadingMessage('Fetching market data...');
-      console.log('[EnhancedStockAnalysis] Calling stock-analysis API for:', selectedCompany.symbol);
+      console.log('[EnhancedStockAnalysis] Calling /api/stocks/analysis for:', selectedCompany.symbol);
       
       const { data: res } = await api.get(`/api/stocks/analysis/${selectedCompany.symbol}`, {
         params: {

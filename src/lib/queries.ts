@@ -24,12 +24,12 @@ export function useSearch(query: string) {
     queryFn: async () => {
       if (!query) return { results: [] }
 
-      console.log('[useSearch] Starting search for:', query)
+  console.log('[useSearch] Starting search for:', query)
 
       // First attempt: remote API
       try {
-        console.log('[useSearch] Calling stocks-api/search endpoint')
-        const { data } = await api.get('/stocks-api/search', { params: { query } })
+  console.log('[useSearch] Calling /api/stocks/search endpoint')
+  const { data } = await api.get('/api/stocks/search', { params: { query } })
         console.log('[useSearch] API response:', data)
         const parsed = parse(SearchResponse, data)
         console.log('[useSearch] Parsed results:', parsed)
@@ -74,10 +74,7 @@ export function useTrending(category: 'gainers'|'losers'|'mostActive') {
   return useQuery({
     queryKey: ['trending', category],
     queryFn: async () => {
-      console.log('[useTrending] Fetching trending for category:', category)
-      
-      // Skip backend API and go directly to popular stocks data
-      console.log('[useTrending] Using popular stocks data directly')
+  console.log('[useTrending] Fetching trending for category:', category)
       
       // Base market prices with live randomization
       const baseStocks = [
@@ -144,7 +141,7 @@ export function useTrending(category: 'gainers'|'losers'|'mostActive') {
         source: 'Live Market Data'
       }
       
-      console.log('[useTrending] Using live market data:', fallbackData)
+  console.log('[useTrending] Using live market data:', fallbackData)
       return parse(TrendingResponse, fallbackData)
     },
     staleTime: 30 * 1000, // Refresh every 30 seconds for more live feel
@@ -192,8 +189,8 @@ export function useIndicators() {
   return useQuery({
     queryKey: ['indicators'],
     queryFn: async () => {
-      console.log('[useIndicators] Fetching indicators')
-      const { data } = await api.get('/stocks-api/indicators')
+  console.log('[useIndicators] Fetching indicators')
+  const { data } = await api.get('/api/stocks/indicators')
       console.log('[useIndicators] API response:', data)
       const parsed = parse(IndicatorsResponse, data)
       console.log('[useIndicators] Parsed data:', parsed)
@@ -207,8 +204,8 @@ export function useWeightDefaults() {
   return useQuery({
     queryKey: ['weights-defaults'],
     queryFn: async () => {
-      console.log('[useWeightDefaults] Fetching default weights')
-      const { data } = await api.get('/stocks-api/weights/defaults')
+  console.log('[useWeightDefaults] Fetching default weights')
+  const { data } = await api.get('/api/stocks/weights/defaults')
       console.log('[useWeightDefaults] API response:', data)
       const parsed = parse(WeightsDefaultsResponse, data)
       console.log('[useWeightDefaults] Parsed data:', parsed)
@@ -235,9 +232,9 @@ export function useAnalysis(params: AnalysisParams) {
     queryFn: async () => {
       console.log('[useAnalysis] Starting analysis for:', symbol, 'params:', rest)
       try {
-        const url = `/stock-analysis/analyze`
-        console.log('[useAnalysis] Calling:', url, 'with params:', { symbol, ...rest })
-        const { data } = await api.get(url, { params: { symbol, ...rest } })
+        const url = `/api/stocks/analysis/${symbol}`
+        console.log('[useAnalysis] Calling:', url, 'with params:', rest)
+        const { data } = await api.get(url, { params: rest })
         console.log('[useAnalysis] Raw API response:', data)
         const parsed = parse(AnalysisResponse, data)
         console.log('[useAnalysis] Parsed analysis:', parsed)
