@@ -595,23 +595,40 @@ function calculateFundamentalScore(metrics: any): number {
 }
 
 async function generateAISummary(symbol: string, scores: any): Promise<string> {
-  const response = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GEMINI_KEY}`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{
-          parts: [{
-            text: `Generate a concise 2-3 sentence investment summary for ${symbol}. Overall score: ${scores.overall}/100 (${scores.recommendation}). Technical: ${scores.technical}/100, Fundamental: ${scores.fundamental}/100, Sentiment: ${scores.sentiment}/100.`
+  try {
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GEMINI_KEY}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{
+            parts: [{
+              text: `Generate a concise 2-3 sentence investment summary for ${symbol}. Overall score: ${scores.overall}/100 (${scores.recommendation}). Technical: ${scores.technical}/100, Fundamental: ${scores.fundamental}/100, Sentiment: ${scores.sentiment}/100.`
+            }]
           }]
-        }]
-      })
+        })
+      }
+    )
+    
+    if (!response.ok) {
+      const errorText = await response.text()
+      console.error('❌ [AI] Gemini API error:', response.status, errorText)
+      throw new Error(`Gemini API returned ${response.status}`)
     }
-  )
-  
-  const data = await response.json()
-  return data.candidates[0].content.parts[0].text
+    
+    const data = await response.json()
+    
+    if (!data.candidates || !data.candidates[0] || !data.candidates[0].content) {
+      console.error('❌ [AI] Invalid Gemini response structure:', JSON.stringify(data))
+      throw new Error('Invalid response from Gemini API')
+    }
+    
+    return data.candidates[0].content.parts[0].text
+  } catch (error) {
+    console.error('❌ [AI] Failed to generate summary:', error)
+    return `${symbol} shows a ${scores.recommendation} signal with an overall score of ${scores.overall}/100. Technical indicators are at ${scores.technical}/100, fundamentals at ${scores.fundamental}/100, and market sentiment at ${scores.sentiment}/100.`
+  }
 }
 
 // Mock data generators
