@@ -57,9 +57,8 @@ const EnhancedStockAnalysis: React.FC = () => {
       setLoadingMessage('Fetching market data...');
       console.log('[EnhancedStockAnalysis] Calling stock-analysis API for:', selectedCompany.symbol);
       
-      const { data: res } = await api.get('/stock-analysis/analyze', {
+      const { data: res } = await api.get(`/api/stocks/analysis/${selectedCompany.symbol}`, {
         params: {
-          symbol: selectedCompany.symbol,
           timeframe: analysisDuration,
           bypassCache: false
         }

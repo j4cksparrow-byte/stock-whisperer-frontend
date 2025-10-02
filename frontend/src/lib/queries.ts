@@ -1,41 +1,4 @@
-import { useQuery } from '@      try {
-        const { data } = await aexport function useTrending(category: 'gainers'|'losers'|'mostActive') {
-  return useQuery({
-    queryKey: ['trending', category],
-    queryFn: async () => {
-      // Temp fix: use popular stocks for gainers/losers/most-active
-      if (['gainers', 'losers', 'mostActive'].includes(category)) {
-        console.log('[useTrending] Using popular stocks data directly')
-        const data = {
-          status: 'ok',
-          trending: [
-            { symbol: 'AAPL', name: 'Apple Inc.', change: '+1.25', price: '150.00', change_percent: '0.84%' },
-            { symbol: 'GOOGL', name: 'Alphabet Inc.', change: '-0.50', price: '2750.00', change_percent: '-0.02%' },
-            { symbol: 'MSFT', name: 'Microsoft Corp.', change: '+2.10', price: '300.00', change_percent: '0.71%' },
-            { symbol: 'AMZN', name: 'Amazon.com, Inc.', change: '-10.00', price: '3300.00', change_percent: '-0.30%' },
-            { symbol: 'TSLA', name: 'Tesla, Inc.', change: '+5.50', price: '700.00', change_percent: '0.79%' },
-            { symbol: 'META', name: 'Meta Platforms, Inc.', change: '+1.80', price: '350.00', change_percent: '0.52%' },
-          ],
-          lastUpdated: new Date().toISOString(),
-          source: 'Live Market Data'
-        }
-        console.log('[useTrending] Using live market data:', data)
-        return parse(TrendingResponse, data)
-      }
-      console.log(`[useTrending] Fetching trending for category: ${category}`)
-      const { data } = await api.get('/api/stocks/trending', { params: { category } })
-      return parse(TrendingResponse, data)
-    },
-    staleTime: 2 * 60 * 1000,
-  })
-}pi/stocks/search', { params: { query } })
-        console.log('[useSearch] Using API search results')
-        return parse(SearchResponse, data)
-      } catch (err) {
-        console.log('[useSearch] API failed, falling back to local search:', err)
-        // API failed or invalid response — fall back to local search
-        try {
-          const q = query.trim().toLowerCase()k/react-query'
+import { useQuery } from '@tanstack/react-query'
 import api from './api'
 import { z } from 'zod'
 import { AnalysisResponse, IndicatorsResponse, WeightsDefaultsResponse, SearchResponse, TrendingResponse } from './types'
@@ -78,12 +41,10 @@ export function useSearch(query: string) {
           ]
 
           const results = pool
-            .filter((c) => {
-              return (
-                c.symbol.toLowerCase().includes(q) ||
-                c.name.toLowerCase().includes(q)
-              )
-            })
+            .filter((c) => (
+              c.symbol.toLowerCase().includes(q) ||
+              c.name.toLowerCase().includes(q)
+            ))
             .slice(0, 20)
             .map((c) => ({ symbol: c.symbol, name: c.name, region: c.exchange }))
 
