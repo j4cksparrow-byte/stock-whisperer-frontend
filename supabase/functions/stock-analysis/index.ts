@@ -596,6 +596,34 @@ function calculateFundamentalScore(metrics: any): number {
 
 async function generateAISummary(symbol: string, scores: any): Promise<string> {
   try {
+    const prompt = `Please provide a fundamental and technical analysis of the stock chart for ${symbol}. Focus on:
+
+## **1. Candlestick Patterns and Overall Price Trends**
+Analyze the candlestick formations and identify the dominant price trend direction.
+
+## **2. Volume Analysis**
+Examine the volume patterns and their correlation with price movements.
+
+## **3. RSI (Relative Strength Index) Interpretation**
+Current RSI is ${scores.technical}/100. Provide interpretation of overbought/oversold conditions.
+
+## **4. DMI (Directional Movement Index) Interpretation**
+Analyze the directional movement and trend strength indicators.
+
+## **5. Key Support and Resistance Levels**
+Identify critical price levels that may act as support or resistance.
+
+## **6. Overall Outlook and Trade Setup Ideas**
+Based on the analysis above, provide a brief overall outlook and potential trade setup ideas.
+
+**Current Scores:**
+- Overall Score: ${scores.overall}/100 (${scores.recommendation})
+- Technical: ${scores.technical}/100
+- Fundamental: ${scores.fundamental}/100
+- Sentiment: ${scores.sentiment}/100
+
+Please format your response with proper markdown including bold headings (##) and adequate spacing between sections for readability.`
+
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GEMINI_KEY}`,
       {
@@ -604,7 +632,7 @@ async function generateAISummary(symbol: string, scores: any): Promise<string> {
         body: JSON.stringify({
           contents: [{
             parts: [{
-              text: `Generate a concise 2-3 sentence investment summary for ${symbol}. Overall score: ${scores.overall}/100 (${scores.recommendation}). Technical: ${scores.technical}/100, Fundamental: ${scores.fundamental}/100, Sentiment: ${scores.sentiment}/100.`
+              text: prompt
             }]
           }]
         })
@@ -627,7 +655,31 @@ async function generateAISummary(symbol: string, scores: any): Promise<string> {
     return data.candidates[0].content.parts[0].text
   } catch (error) {
     console.error('❌ [AI] Failed to generate summary:', error)
-    return `${symbol} shows a ${scores.recommendation} signal with an overall score of ${scores.overall}/100. Technical indicators are at ${scores.technical}/100, fundamentals at ${scores.fundamental}/100, and market sentiment at ${scores.sentiment}/100.`
+    return `## **Analysis for ${symbol}**
+
+## **1. Candlestick Patterns and Overall Price Trends**
+The stock is showing a ${scores.recommendation} signal based on current technical patterns.
+
+## **2. Volume Analysis**
+Volume patterns indicate ${scores.sentiment >= 60 ? 'strong' : scores.sentiment >= 40 ? 'moderate' : 'weak'} market participation.
+
+## **3. RSI (Relative Strength Index) Interpretation**
+RSI at ${scores.technical}/100 suggests the stock is ${scores.technical >= 70 ? 'overbought' : scores.technical <= 30 ? 'oversold' : 'neutral'}.
+
+## **4. DMI (Directional Movement Index) Interpretation**
+Trend strength is ${scores.technical >= 60 ? 'strong' : scores.technical >= 40 ? 'moderate' : 'weak'} based on current indicators.
+
+## **5. Key Support and Resistance Levels**
+Key levels should be monitored for potential breakouts or reversals.
+
+## **6. Overall Outlook and Trade Setup Ideas**
+**Recommendation: ${scores.recommendation}**
+- Overall Score: ${scores.overall}/100
+- Technical: ${scores.technical}/100
+- Fundamental: ${scores.fundamental}/100
+- Sentiment: ${scores.sentiment}/100
+
+Consider ${scores.recommendation === 'BUY' ? 'long positions' : scores.recommendation === 'SELL' ? 'short positions or reducing exposure' : 'waiting for clearer signals'} based on the current market conditions.`
   }
 }
 
