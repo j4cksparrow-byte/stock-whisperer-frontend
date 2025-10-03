@@ -625,7 +625,7 @@ Based on the analysis above, provide a brief overall outlook and potential trade
 Please format your response with proper markdown including bold headings (##) and adequate spacing between sections for readability.`
 
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GEMINI_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
