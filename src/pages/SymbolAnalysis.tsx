@@ -140,6 +140,16 @@ export default function SymbolAnalysis() {
         <div className="lg:col-span-2 space-y-6">
           <TradingViewChart symbol={symbol} height={500} />
           <FundamentalsTable data={fundamentalsData} />
+          
+          {/* AI Summary */}
+          {aiSummary && (
+            <Card className="p-6">
+              <h3 className="font-semibold text-lg mb-4">AI Analysis Summary</h3>
+              <div className="prose prose-sm max-w-none dark:prose-invert">
+                <AISummary text={aiSummary} />
+              </div>
+            </Card>
+          )}
         </div>
 
         {/* Right Sidebar */}
@@ -164,15 +174,6 @@ export default function SymbolAnalysis() {
         </div>
       </div>
 
-      {/* AI Summary */}
-      {aiSummary && (
-        <Card className="p-6">
-          <h3 className="font-semibold text-lg mb-4">AI Analysis Summary</h3>
-          <div className="prose prose-sm max-w-none dark:prose-invert">
-            <AISummary text={aiSummary} />
-          </div>
-        </Card>
-      )}
     </div>
   )
 }
