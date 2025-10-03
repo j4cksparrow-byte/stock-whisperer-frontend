@@ -43,6 +43,14 @@ export default function SymbolAnalysis() {
   const overallScore = data?.analysis?.overall?.score ?? 0
   const recommendation = data?.analysis?.overall?.recommendation ?? 'HOLD'
   const aiSummary = data?.analysis?.aiInsights?.summary
+  const currentPrice = data?.currentPrice ?? 0
+  const priceHistory = data?.priceHistory || []
+  const priceChange = priceHistory.length >= 2 
+    ? priceHistory[priceHistory.length - 1].close - priceHistory[priceHistory.length - 2].close 
+    : 0
+  const priceChangePercent = priceHistory.length >= 2 && priceHistory[priceHistory.length - 2].close > 0
+    ? ((priceChange / priceHistory[priceHistory.length - 2].close) * 100)
+    : 0
 
   // Technical indicators
   const technicalIndicators = data?.analysis?.technical?.indicators || {}
@@ -97,6 +105,15 @@ export default function SymbolAnalysis() {
         <div>
           <h1 className="text-3xl font-bold">{symbol}</h1>
           <p className="text-muted-foreground">Market Open</p>
+        </div>
+        <div className="text-right">
+          <div className="text-3xl font-bold">
+            ${typeof currentPrice === 'number' ? currentPrice.toFixed(2) : currentPrice}
+          </div>
+          <div className={`text-lg font-medium ${priceChange >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+            {priceChange >= 0 ? '+' : ''}{typeof priceChange === 'number' ? priceChange.toFixed(2) : priceChange} 
+            ({priceChange >= 0 ? '+' : ''}{typeof priceChangePercent === 'number' ? priceChangePercent.toFixed(2) : priceChangePercent}%)
+          </div>
         </div>
       </div>
 
