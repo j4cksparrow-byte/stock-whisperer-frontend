@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { useWatchlist } from '../contexts/WatchlistContext';
 import ChartExpandModal from '../components/ChartExpandModal';
+import TradingViewChart from '../components/TradingViewChart';
 import { toast } from 'sonner';
 import { 
   TrendingUp, 
@@ -408,15 +409,12 @@ const Market = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="relative p-6 pt-0">
-                  <div 
-                    className="h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-xl flex items-center justify-center border border-gray-200 dark:border-gray-600 cursor-pointer hover:bg-gradient-to-br hover:from-gray-100 hover:to-gray-200 dark:hover:from-gray-600 dark:hover:to-gray-700 transition-all duration-200"
-                    onClick={() => handleChartExpand(index)}
-                  >
-                    <div className="text-center">
-                      <BarChart3 className="h-12 w-12 sm:h-16 sm:w-16 mx-auto text-gray-400 dark:text-gray-500 mb-3 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors" />
-                      <p className="text-sm sm:text-base font-medium text-gray-500 dark:text-gray-400 mb-1">Interactive Chart</p>
-                      <p className="text-xs text-gray-400 dark:text-gray-500">Click to expand and analyze</p>
-                    </div>
+                  <div className="cursor-pointer" onClick={() => handleChartExpand(index)}>
+                    <TradingViewChart 
+                      symbol={index.symbol} 
+                      height={280}
+                      width="100%"
+                    />
                   </div>
                   
                   {/* Additional Info */}
