@@ -183,6 +183,17 @@ export type Database = {
         Args: { _cache_key: string; _user_id?: string }
         Returns: Json
       }
+      get_cached_analysis: {
+        Args: { p_symbol: string }
+        Returns: {
+          analysis_data: Json
+          created_at: string
+        }[]
+      }
+      save_analysis_cache: {
+        Args: { p_analysis_data: Json; p_symbol: string }
+        Returns: undefined
+      }
       set_cache_value: {
         Args: {
           _cache_key: string
