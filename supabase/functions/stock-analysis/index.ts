@@ -86,7 +86,7 @@ Deno.serve(async (req) => {
 
     // Check cache using the generic cache function (unless bypassing)
     if (!bypassCache) {
-      const cacheKey = `stock_analysis_v2_${symbol}` // Updated cache version to invalidate old entries
+      const cacheKey = `stock_analysis_v3_${symbol}` // Updated to v3 with price data and new Gemini model
       const { data: cachedData, error: cacheError } = await supabase
         .rpc('get_cache_value', { 
           _cache_key: cacheKey,
@@ -112,7 +112,7 @@ Deno.serve(async (req) => {
     const analysisResult = await performStockAnalysis(symbol)
 
     // Save to cache with 24 hour expiration
-    const cacheKey = `stock_analysis_v2_${symbol}` // Use same cache version
+    const cacheKey = `stock_analysis_v3_${symbol}` // Use same v3 cache version
     const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString()
     const { error: saveError } = await supabase
       .rpc('set_cache_value', {
@@ -166,6 +166,8 @@ async function performStockAnalysis(symbol: string) {
     const result = {
       status: 'success',
       symbol,
+      currentPrice: priceHistory.currentPrice,
+      priceHistory: priceHistory.priceHistory,
       analysis: {
         mode: 'normal',
         timeframe: '1M',
@@ -511,7 +513,7 @@ Please format your response with proper markdown including bold headings (##) an
     }
 
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-001:generateContent?key=${GEMINI_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${GEMINI_KEY}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

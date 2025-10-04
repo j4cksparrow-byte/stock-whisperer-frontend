@@ -24,7 +24,7 @@ export default function SymbolAnalysis() {
   const timeframe = sp.get('tf') ?? '1M'
   const mode = (sp.get('mode') as 'normal' | 'advanced') ?? 'normal'
   const includeHeadlines = sp.get('headlines') !== 'false'
-  const bypassCache = sp.get('refresh') === '1'
+  const bypassCache = !!sp.get('refresh') // Any refresh param value triggers bypass
 
   const { data, isFetching, error } = useAnalysis({
     symbol,
@@ -36,8 +36,9 @@ export default function SymbolAnalysis() {
   })
 
   const handleRefresh = () => {
-    // Force refetch by temporarily setting refresh parameter and then refetching the query
-    window.location.href = `${window.location.pathname}?tf=${timeframe}&mode=${mode}&refresh=1`
+    // Force a full page reload with cache-busting timestamp
+    const timestamp = Date.now()
+    window.location.href = `${window.location.pathname}?tf=${timeframe}&mode=${mode}&refresh=${timestamp}`
   }
 
   // Fetch news
