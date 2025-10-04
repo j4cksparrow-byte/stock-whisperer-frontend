@@ -352,13 +352,13 @@ async function fetchTechnicalIndicators(symbol: string): Promise<any> {
 
     const [rsi, dmi, macd] = await Promise.all([rsiPromise, dmiPromise, macdPromise])
     
-    const indicators = { rsi, dmi, macd };
+    const indicators = { RSI: rsi, DMI: dmi, MACD: macd };
     console.log(`[Data] Fetched Technical Indicators for ${symbol}:`, JSON.stringify(indicators, null, 2));
     return indicators;
 
   } catch (error) {
     console.error(`[Data] Error in fetchTechnicalIndicators for ${symbol}:`, error.message);
-    return { rsi: 50, dmi: {}, macd: {} }; // Return default structure on error
+    return { RSI: 50, DMI: {}, MACD: {} }; // Return default structure on error
   }
 }
 
@@ -382,14 +382,14 @@ function calculateScores(metrics: any, sentiment: any, indicators: any) {
 
 function calculateTechnicalScore(indicators: any): number {
   let score = 50
-  const rsi = indicators?.rsi ?? 50
+  const rsi = indicators?.RSI ?? 50
   
   if (rsi > 70) score -= (rsi - 70) * 1.5 // More penalty for overbought
   else if (rsi < 30) score += (30 - rsi) * 1.5 // More reward for oversold
   
   // MACD logic
-  if (indicators?.macd) {
-    if (indicators.macd.macd > indicators.macd.signal) {
+  if (indicators?.MACD) {
+    if (indicators.MACD.macd > indicators.MACD.signal) {
       score += 10; // Bullish crossover
     } else {
       score -= 10; // Bearish crossover
