@@ -153,30 +153,52 @@ async function performStockAnalysis(symbol: string) {
     const aiSummary = await generateAISummary(symbol, { ...scores, recommendation })
 
     const result = {
+      status: 'success',
       symbol,
-      recommendation,
-      scores,
-      aiSummary,
-      data: {
-        priceHistory,
-        companyInfo,
-        financialMetrics,
-        newsSentiment,
-        technicalIndicators,
+      analysis: {
+        mode: 'normal',
+        timeframe: '1M',
+        timestamp: new Date().toISOString(),
+        fundamental: {
+          score: scores.fundamental,
+          recommendation: getRecommendation(scores.fundamental),
+        },
+        technical: {
+          score: scores.technical,
+          recommendation: getRecommendation(scores.technical),
+          indicators: technicalIndicators,
+        },
+        sentiment: {
+          score: scores.sentiment,
+          recommendation: getRecommendation(scores.sentiment),
+        },
+        overall: {
+          score: scores.overall,
+          recommendation,
+        },
+        aiInsights: {
+          summary: aiSummary,
+        },
       },
-      timestamp: new Date().toISOString(),
     }
 
     console.log(`[Analysis Service] Completed analysis for ${symbol}.`)
     return result
   } catch (error) {
     console.error(`[Analysis Service] Error during analysis for ${symbol}:`, error.message)
-    // If analysis fails, return a structured error response
+    // Return a structured error response matching the expected schema
     return {
-      error: true,
+      status: 'error',
       symbol: symbol,
-      message: `Failed to perform analysis: ${error.message}`,
-      timestamp: new Date().toISOString(),
+      analysis: {
+        mode: 'normal',
+        timeframe: '1M',
+        timestamp: new Date().toISOString(),
+        overall: {
+          score: 0,
+          recommendation: 'Error',
+        },
+      },
     }
   }
 }
