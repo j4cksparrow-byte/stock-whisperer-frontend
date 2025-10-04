@@ -71,7 +71,12 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { symbol } = await req.json()
+    const url = new URL(req.url)
+    const symbol = url.searchParams.get('symbol')
+    const bypassCache = url.searchParams.get('bypassCache') === 'true'
+    
+    console.log(`[Analysis] Received request for symbol: ${symbol}, bypassCache: ${bypassCache}`)
+    
     if (!symbol) {
       return new Response(JSON.stringify({ error: 'Symbol is required' }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -79,26 +84,29 @@ Deno.serve(async (req) => {
       })
     }
 
-    console.log(`[Analysis] Received request for symbol: ${symbol}`)
+    // Check cache only if not bypassing
+    if (!bypassCache) {
+      const { data: cachedData, error: cacheError } = await supabase
+        .rpc('get_cached_analysis', { p_symbol: symbol })
 
-    const { data: cachedData, error: cacheError } = await supabase
-      .rpc('get_cached_analysis', { p_symbol: symbol })
-
-    if (cacheError) {
-      console.error(`[Cache] Error fetching from cache for ${symbol}:`, cacheError.message)
-    }
-
-    if (cachedData && cachedData.length > 0) {
-      const age = Date.now() - new Date(cachedData[0].created_at).getTime()
-      if (age < 24 * 60 * 60 * 1000) { // 24 hours
-        console.log(`[Cache] Found valid cache entry for ${symbol}.`)
-        return new Response(JSON.stringify(cachedData[0].analysis_data), {
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        })
+      if (cacheError) {
+        console.error(`[Cache] Error fetching from cache for ${symbol}:`, cacheError.message)
       }
-      console.log(`[Cache] Stale cache entry found for ${symbol}. Refetching...`)
+
+      if (cachedData && cachedData.length > 0) {
+        const age = Date.now() - new Date(cachedData[0].created_at).getTime()
+        if (age < 24 * 60 * 60 * 1000) { // 24 hours
+          console.log(`[Cache] Found valid cache entry for ${symbol}.`)
+          return new Response(JSON.stringify(cachedData[0].analysis_data), {
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          })
+        }
+        console.log(`[Cache] Stale cache entry found for ${symbol}. Refetching...`)
+      } else {
+        console.log(`[Cache] No cache entry found for ${symbol}. Fetching fresh data...`)
+      }
     } else {
-      console.log(`[Cache] No cache entry found for ${symbol}. Fetching fresh data...`)
+      console.log(`[Cache] Bypassing cache for ${symbol} as requested.`)
     }
 
     const analysisResult = await performStockAnalysis(symbol)
@@ -148,7 +156,7 @@ async function performStockAnalysis(symbol: string) {
 
     const scores = calculateScores(financialMetrics, newsSentiment, technicalIndicators)
     const recommendation = getRecommendation(scores.overall)
-    const aiSummary = await generateAISummary(symbol, { ...scores, recommendation })
+    const aiSummary = await generateAISummary(symbol, { ...scores, recommendation }, technicalIndicators, priceHistory)
 
     const result = {
       symbol,
@@ -436,53 +444,101 @@ async function getChartImageAsBase64(symbol: string) {
   }
 }
 
-async function generateAISummary(symbol: string, scores: any): Promise<string> {
+async function generateAISummary(symbol: string, scores: any, indicators: any, priceData: any): Promise<string> {
   try {
-    const prompt = `Please provide a fundamental and technical analysis of the stock chart for ${symbol}. Focus on:
+    const rsi = indicators?.RSI || 50
+    const macd = indicators?.MACD || {}
+    const dmi = indicators?.DMI || {}
+    
+    // Get price trend
+    const priceHistory = priceData?.priceHistory || []
+    const currentPrice = priceData?.currentPrice || 0
+    const oldPrice = priceHistory.length > 30 ? priceHistory[priceHistory.length - 30].close : currentPrice
+    const priceTrend = currentPrice > oldPrice ? 'uptrend' : 'downtrend'
+    const priceChangePercent = oldPrice > 0 ? ((currentPrice - oldPrice) / oldPrice * 100).toFixed(2) : '0'
 
-## **1. Candlestick Patterns and Overall Price Trends**
-Analyze the candlestick formations and identify the dominant price trend direction.
+    const prompt = `You are a professional stock analyst. Provide a clear, structured technical and fundamental analysis for ${symbol.toUpperCase()}.
 
-## **2. Volume Analysis**
-Examine the volume patterns and their correlation with price movements.
+**IMPORTANT FORMATTING RULES:**
+1. Use clear headings with ## for each section
+2. Use bullet points (•) for listing key points
+3. Keep each section concise (2-3 sentences maximum)
+4. Use bold (**text**) for important metrics and signals
+5. End with a clear, actionable summary
 
-## **3. RSI (Relative Strength Index) Interpretation**
-Current RSI is ${scores.technical}/100. Provide interpretation of overbought/oversold conditions.
+---
 
-## **4. DMI (Directional Movement Index) Interpretation**
-Analyze the directional movement and trend strength indicators.
+## 📊 Current Market Overview
+**Symbol:** ${symbol.toUpperCase()}
+**Current Trend:** ${priceTrend.toUpperCase()} (${priceChangePercent}% over 30 days)
+**Overall Score:** ${scores.overall}/100 - **${scores.recommendation}**
 
-## **5. Key Support and Resistance Levels**
-Identify critical price levels that may act as support or resistance.
+---
 
-## **6. Overall Outlook and Trade Setup Ideas**
-Based on the analysis above, provide a brief overall outlook and potential trade setup ideas.
+## 📈 Technical Analysis (Score: ${scores.technical}/100)
 
-**Attached is a chart image for your visual analysis.**
+### RSI Indicator (${rsi.toFixed(1)})
+${rsi > 70 ? '• **OVERBOUGHT** - Stock may be due for a pullback' : rsi < 30 ? '• **OVERSOLD** - Potential buying opportunity' : '• **NEUTRAL** - Stock is in balanced territory'}
+• Signal: ${rsi > 70 ? 'Consider taking profits or waiting for pullback' : rsi < 30 ? 'Look for entry points on confirmation' : 'Wait for stronger directional signals'}
 
-**Current Scores:**
-- Overall Score: ${scores.overall}/100 (${scores.recommendation})
-- Technical: ${scores.technical}/100
-- Fundamental: ${scores.fundamental}/100
-- Sentiment: ${scores.sentiment}/100
+### MACD Analysis
+${macd.macd && macd.signal ? (
+  macd.macd > macd.signal 
+    ? '• **BULLISH CROSSOVER** - Upward momentum building\n• Signal strength: ' + (macd.macd > 0 ? 'Strong' : 'Moderate')
+    : '• **BEARISH CROSSOVER** - Downward pressure present\n• Signal strength: ' + (macd.macd < 0 ? 'Strong' : 'Moderate')
+) : '• Insufficient data for MACD analysis'}
 
-Please format your response with proper markdown including bold headings (##) and adequate spacing between sections for readability.`
+### Directional Movement (DMI)
+${dmi.adx ? (
+  dmi.adx > 25 
+    ? `• **STRONG TREND** detected (ADX: ${dmi.adx.toFixed(1)})\n• Direction: ${dmi.di_plus > dmi.di_minus ? 'Upward' : 'Downward'}`
+    : `• **WEAK TREND** (ADX: ${dmi.adx.toFixed(1)}) - Market consolidating`
+) : '• Trend strength analysis pending'}
 
-    const chartImage = await getChartImageAsBase64(symbol);
+---
 
-    const requestParts: GeminiRequestPart[] = [{ text: prompt }];
-    if (chartImage) {
-      requestParts.push(chartImage);
-    }
+## 💼 Fundamental Analysis (Score: ${scores.fundamental}/100)
+
+${scores.fundamental > 60 ? '• **STRONG FUNDAMENTALS** - Company shows solid financial health' : scores.fundamental < 40 ? '• **WEAK FUNDAMENTALS** - Exercise caution with fundamentals' : '• **MODERATE FUNDAMENTALS** - Standard financial position'}
+• Valuation: ${scores.fundamental > 60 ? 'Attractive at current levels' : scores.fundamental < 40 ? 'May be overvalued' : 'Fair value range'}
+• Risk level: ${scores.fundamental > 60 ? 'Lower risk profile' : scores.fundamental < 40 ? 'Higher risk - monitor closely' : 'Medium risk'}
+
+---
+
+## 📰 Market Sentiment (Score: ${scores.sentiment}/100)
+
+${scores.sentiment > 60 ? '• **POSITIVE SENTIMENT** - Market optimism prevails' : scores.sentiment < 40 ? '• **NEGATIVE SENTIMENT** - Market concerns present' : '• **NEUTRAL SENTIMENT** - Balanced market view'}
+• News flow: ${scores.sentiment > 60 ? 'Predominantly positive coverage' : scores.sentiment < 40 ? 'Caution in recent reports' : 'Mixed market commentary'}
+
+---
+
+## 🎯 Trading Recommendation
+
+**Overall Signal:** ${scores.recommendation}
+
+**Key Action Points:**
+${scores.overall > 70 ? '• Strong buy signal - Consider entering positions\n• Set stop-loss at recent support levels\n• Target: Next resistance zone' : 
+  scores.overall > 60 ? '• Buy signal - Good entry opportunity\n• Monitor technical indicators for confirmation\n• Use proper risk management' :
+  scores.overall > 40 ? '• Hold current positions\n• Wait for clearer directional signals\n• Avoid new entries until trend confirms' :
+  scores.overall > 25 ? '• Consider reducing exposure\n• Watch support levels closely\n• Protect capital with tight stops' :
+  '• Strong sell signal - Exit positions\n• Market showing significant weakness\n• Wait for reversal signals before re-entry'}
+
+**Risk Management:**
+• Confidence Level: ${scores.overall >= 70 ? 'HIGH' : scores.overall >= 50 ? 'MEDIUM' : 'LOW'}
+• Position sizing: ${scores.overall >= 70 ? 'Standard allocation' : scores.overall >= 50 ? 'Reduced allocation' : 'Minimal or no position'}
+
+---
+
+*This analysis is based on current technical indicators and market data. Always conduct your own research and consider your risk tolerance before trading.*`
 
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${GEMINI_KEY}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           contents: [{
-            parts: requestParts
+            parts: [{ text: prompt }]
           }]
         })
       }
