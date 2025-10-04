@@ -1,8 +1,13 @@
 /// <reference types="https://deno.land/x/deno/cli/types/dts/index.d.ts" />
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
-import { corsHeaders } from '../_shared/cors.ts'
 
 console.log('Stock analysis function booting up...')
+
+// CORS headers
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+}
 
 // --- API Keys and Clients ---
 const supabaseUrl = Deno.env.get('SUPABASE_URL')!
