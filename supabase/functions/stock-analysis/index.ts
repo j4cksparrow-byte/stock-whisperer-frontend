@@ -462,20 +462,24 @@ async function generateAISummary(symbol: string, scores: any, indicators: any, p
     const priceTrend = currentPrice > oldPrice ? 'uptrend' : 'downtrend'
     const priceChangePercent = oldPrice > 0 ? ((currentPrice - oldPrice) / oldPrice * 100).toFixed(2) : '0'
 
-    const prompt = `You are a professional stock analyst. Provide a clear, structured technical and fundamental analysis for ${symbol.toUpperCase()}.
+    const prompt = `Generate a professional stock analysis report for ${symbol.toUpperCase()} using the data below. Present the analysis directly without any disclaimers, introductions, or meta-commentary. Start immediately with the first section heading.
 
-**IMPORTANT FORMATTING RULES:**
-1. Use clear headings with ## for each section
-2. Use bullet points (•) for listing key points
-3. Keep each section concise (2-3 sentences maximum)
-4. Use bold (**text**) for important metrics and signals
-5. End with a clear, actionable summary
+**DATA TO ANALYZE:**
+- Current Price Trend: ${priceTrend.toUpperCase()} (${priceChangePercent}% change over 30 days)
+- Overall Score: ${scores.overall}/100
+- Recommendation: ${scores.recommendation}
+- Technical Score: ${scores.technical}/100
+- Fundamental Score: ${scores.fundamental}/100
+- Sentiment Score: ${scores.sentiment}/100
+- RSI: ${rsi.toFixed(1)}
+- MACD: ${macd.macd ? `MACD: ${macd.macd.toFixed(2)}, Signal: ${macd.signal.toFixed(2)}` : 'Data unavailable'}
+- DMI/ADX: ${dmi.adx ? `ADX: ${dmi.adx.toFixed(1)}, +DI: ${dmi.di_plus?.toFixed(1) || 'N/A'}, -DI: ${dmi.di_minus?.toFixed(1) || 'N/A'}` : 'Data unavailable'}
 
----
+**REQUIRED FORMAT (output EXACTLY in this structure):**
 
 ## 📊 Current Market Overview
 **Symbol:** ${symbol.toUpperCase()}
-**Current Trend:** ${priceTrend.toUpperCase()} (${priceChangePercent}% over 30 days)
+**Current Trend:** [State the trend with context]
 **Overall Score:** ${scores.overall}/100 - **${scores.recommendation}**
 
 ---
@@ -483,37 +487,29 @@ async function generateAISummary(symbol: string, scores: any, indicators: any, p
 ## 📈 Technical Analysis (Score: ${scores.technical}/100)
 
 ### RSI Indicator (${rsi.toFixed(1)})
-${rsi > 70 ? '• **OVERBOUGHT** - Stock may be due for a pullback' : rsi < 30 ? '• **OVERSOLD** - Potential buying opportunity' : '• **NEUTRAL** - Stock is in balanced territory'}
-• Signal: ${rsi > 70 ? 'Consider taking profits or waiting for pullback' : rsi < 30 ? 'Look for entry points on confirmation' : 'Wait for stronger directional signals'}
+[Interpret the RSI value: if >70 = overbought with pullback warning, if <30 = oversold with opportunity, else neutral]
+• Signal: [Provide specific trading signal based on RSI]
 
 ### MACD Analysis
-${macd.macd && macd.signal ? (
-  macd.macd > macd.signal 
-    ? '• **BULLISH CROSSOVER** - Upward momentum building\n• Signal strength: ' + (macd.macd > 0 ? 'Strong' : 'Moderate')
-    : '• **BEARISH CROSSOVER** - Downward pressure present\n• Signal strength: ' + (macd.macd < 0 ? 'Strong' : 'Moderate')
-) : '• Insufficient data for MACD analysis'}
+[Interpret MACD crossover: bullish if MACD > signal, bearish if MACD < signal, include momentum strength]
 
 ### Directional Movement (DMI)
-${dmi.adx ? (
-  dmi.adx > 25 
-    ? `• **STRONG TREND** detected (ADX: ${dmi.adx.toFixed(1)})\n• Direction: ${dmi.di_plus > dmi.di_minus ? 'Upward' : 'Downward'}`
-    : `• **WEAK TREND** (ADX: ${dmi.adx.toFixed(1)}) - Market consolidating`
-) : '• Trend strength analysis pending'}
+[Interpret trend strength: if ADX >25 = strong trend with direction, else weak trend/consolidation]
 
 ---
 
 ## 💼 Fundamental Analysis (Score: ${scores.fundamental}/100)
 
-${scores.fundamental > 60 ? '• **STRONG FUNDAMENTALS** - Company shows solid financial health' : scores.fundamental < 40 ? '• **WEAK FUNDAMENTALS** - Exercise caution with fundamentals' : '• **MODERATE FUNDAMENTALS** - Standard financial position'}
-• Valuation: ${scores.fundamental > 60 ? 'Attractive at current levels' : scores.fundamental < 40 ? 'May be overvalued' : 'Fair value range'}
-• Risk level: ${scores.fundamental > 60 ? 'Lower risk profile' : scores.fundamental < 40 ? 'Higher risk - monitor closely' : 'Medium risk'}
+[Interpret fundamental score: >60 = strong fundamentals, <40 = weak fundamentals, else moderate]
+• Valuation: [Assess if attractive, overvalued, or fair]
+• Risk level: [State risk level based on fundamentals]
 
 ---
 
 ## 📰 Market Sentiment (Score: ${scores.sentiment}/100)
 
-${scores.sentiment > 60 ? '• **POSITIVE SENTIMENT** - Market optimism prevails' : scores.sentiment < 40 ? '• **NEGATIVE SENTIMENT** - Market concerns present' : '• **NEUTRAL SENTIMENT** - Balanced market view'}
-• News flow: ${scores.sentiment > 60 ? 'Predominantly positive coverage' : scores.sentiment < 40 ? 'Caution in recent reports' : 'Mixed market commentary'}
+[Interpret sentiment: >60 = positive, <40 = negative, else neutral]
+• News flow: [Describe general news sentiment]
 
 ---
 
@@ -522,15 +518,16 @@ ${scores.sentiment > 60 ? '• **POSITIVE SENTIMENT** - Market optimism prevails
 **Overall Signal:** ${scores.recommendation}
 
 **Key Action Points:**
-${scores.overall > 70 ? '• Strong buy signal - Consider entering positions\n• Set stop-loss at recent support levels\n• Target: Next resistance zone' : 
-  scores.overall > 60 ? '• Buy signal - Good entry opportunity\n• Monitor technical indicators for confirmation\n• Use proper risk management' :
-  scores.overall > 40 ? '• Hold current positions\n• Wait for clearer directional signals\n• Avoid new entries until trend confirms' :
-  scores.overall > 25 ? '• Consider reducing exposure\n• Watch support levels closely\n• Protect capital with tight stops' :
-  '• Strong sell signal - Exit positions\n• Market showing significant weakness\n• Wait for reversal signals before re-entry'}
+[Provide 3-4 specific actionable points based on the overall score:
+- >70: Strong buy signals with entry strategy
+- >60: Buy signals with confirmation needed
+- >40: Hold with caution
+- >25: Reduce exposure warnings
+- ≤25: Strong sell with exit strategy]
 
 **Risk Management:**
-• Confidence Level: ${scores.overall >= 70 ? 'HIGH' : scores.overall >= 50 ? 'MEDIUM' : 'LOW'}
-• Position sizing: ${scores.overall >= 70 ? 'Standard allocation' : scores.overall >= 50 ? 'Reduced allocation' : 'Minimal or no position'}
+• Confidence Level: [HIGH/MEDIUM/LOW based on score]
+• Position sizing: [Standard/Reduced/Minimal based on score]
 
 ---
 
@@ -544,7 +541,12 @@ ${scores.overall > 70 ? '• Strong buy signal - Consider entering positions\n�
         body: JSON.stringify({
           contents: [{
             parts: [{ text: prompt }]
-          }]
+          }],
+          generationConfig: {
+            temperature: 0.3,
+            topK: 20,
+            topP: 0.8,
+          }
         })
       }
     )
