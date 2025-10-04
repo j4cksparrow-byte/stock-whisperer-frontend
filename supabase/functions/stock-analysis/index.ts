@@ -116,14 +116,25 @@ Deno.serve(async (req) => {
 
     const analysisResult = await performStockAnalysis(symbol)
 
+    // Check if analysis resulted in an error
+    if (analysisResult.error) {
+      return new Response(JSON.stringify(analysisResult), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        status: 500,
+      })
+    }
+
     // Transform to match frontend schema
-    const currentPrice = analysisResult.data.priceHistory?.[analysisResult.data.priceHistory.length - 1]?.close || 0
+    const priceHistory = analysisResult.data?.priceHistory || []
+    const currentPrice = priceHistory.length > 0 ? priceHistory[priceHistory.length - 1]?.close || 0 : 0
+    
+    console.log(`[Response] Current price: ${currentPrice}, Price history length: ${priceHistory.length}`)
     
     const formattedResponse = {
       status: 'success',
       symbol: analysisResult.symbol,
       currentPrice,
-      priceHistory: analysisResult.data.priceHistory || [],
+      priceHistory,
       analysis: {
         mode: 'hybrid',
         timeframe: 'daily',
