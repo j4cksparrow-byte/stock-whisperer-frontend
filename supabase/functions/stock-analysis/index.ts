@@ -102,7 +102,14 @@ Deno.serve(async (req) => {
         const age = Date.now() - new Date(cachedData[0].created_at).getTime()
         if (age < 24 * 60 * 60 * 1000) { // 24 hours
           console.log(`[Cache] Found valid cache entry for ${symbol}.`)
-          return new Response(JSON.stringify(cachedData[0].analysis_data), {
+          const cachedResponse = {
+            ...cachedData[0].analysis_data,
+            meta: {
+              ...cachedData[0].analysis_data?.meta,
+              cached: true,
+            }
+          }
+          return new Response(JSON.stringify(cachedResponse), {
             headers: { ...corsHeaders, 'Content-Type': 'application/json' },
           })
         }
@@ -116,10 +123,43 @@ Deno.serve(async (req) => {
 
     const analysisResult = await performStockAnalysis(symbol)
 
+    // Transform to match frontend expected format
+    const response = {
+      status: 'success',
+      symbol: analysisResult.symbol,
+      currentPrice: analysisResult.data?.priceHistory?.currentPrice,
+      priceHistory: analysisResult.data?.priceHistory?.priceHistory,
+      analysis: {
+        mode: 'normal',
+        timeframe: '1d',
+        timestamp: analysisResult.timestamp,
+        fundamental: {
+          score: analysisResult.scores.fundamental,
+          recommendation: analysisResult.recommendation,
+        },
+        technical: {
+          score: analysisResult.scores.technical,
+          recommendation: analysisResult.recommendation,
+          indicators: analysisResult.data?.technicalIndicators || {},
+        },
+        sentiment: {
+          score: analysisResult.scores.sentiment,
+          recommendation: analysisResult.recommendation,
+        },
+        overall: {
+          score: analysisResult.scores.overall,
+          recommendation: analysisResult.recommendation,
+        },
+        aiInsights: {
+          summary: analysisResult.aiSummary,
+        },
+      },
+    }
+
     const { error: saveError } = await supabase
       .rpc('save_analysis_cache', {
         p_symbol: symbol,
-        p_analysis_data: analysisResult,
+        p_analysis_data: response,
       })
 
     if (saveError) {
@@ -128,7 +168,7 @@ Deno.serve(async (req) => {
       console.log(`[Cache] Successfully cached analysis for ${symbol}.`)
     }
 
-    return new Response(JSON.stringify(analysisResult), {
+    return new Response(JSON.stringify(response), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       status: 200,
     })
