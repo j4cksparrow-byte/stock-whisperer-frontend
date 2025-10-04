@@ -71,12 +71,7 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const url = new URL(req.url)
-    const symbol = url.searchParams.get('symbol')
-    const bypassCache = url.searchParams.get('bypassCache') === 'true'
-    
-    console.log(`[Analysis] Received request for symbol: ${symbol}, bypassCache: ${bypassCache}`)
-    
+    const { symbol } = await req.json()
     if (!symbol) {
       return new Response(JSON.stringify({ error: 'Symbol is required' }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -84,42 +79,34 @@ Deno.serve(async (req) => {
       })
     }
 
-    // Check cache using the generic cache function (unless bypassing)
-    if (!bypassCache) {
-      const cacheKey = `stock_analysis_v3_${symbol}` // Updated to v3 with price data and new Gemini model
-      const { data: cachedData, error: cacheError } = await supabase
-        .rpc('get_cache_value', { 
-          _cache_key: cacheKey,
-          _user_id: null 
-        })
+    console.log(`[Analysis] Received request for symbol: ${symbol}`)
 
-      if (cacheError) {
-        console.error(`[Cache] Error fetching from cache for ${symbol}:`, cacheError.message)
-      }
+    const { data: cachedData, error: cacheError } = await supabase
+      .rpc('get_cached_analysis', { p_symbol: symbol })
 
-      if (cachedData) {
+    if (cacheError) {
+      console.error(`[Cache] Error fetching from cache for ${symbol}:`, cacheError.message)
+    }
+
+    if (cachedData && cachedData.length > 0) {
+      const age = Date.now() - new Date(cachedData[0].created_at).getTime()
+      if (age < 24 * 60 * 60 * 1000) { // 24 hours
         console.log(`[Cache] Found valid cache entry for ${symbol}.`)
-        return new Response(JSON.stringify(cachedData), {
+        return new Response(JSON.stringify(cachedData[0].analysis_data), {
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         })
-      } else {
-        console.log(`[Cache] No cache entry found for ${symbol}. Fetching fresh data...`)
       }
+      console.log(`[Cache] Stale cache entry found for ${symbol}. Refetching...`)
     } else {
-      console.log(`[Cache] Bypassing cache for ${symbol} as requested.`)
+      console.log(`[Cache] No cache entry found for ${symbol}. Fetching fresh data...`)
     }
 
     const analysisResult = await performStockAnalysis(symbol)
 
-    // Save to cache with 24 hour expiration
-    const cacheKey = `stock_analysis_v3_${symbol}` // Use same v3 cache version
-    const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString()
     const { error: saveError } = await supabase
-      .rpc('set_cache_value', {
-        _cache_key: cacheKey,
-        _cache_value: analysisResult,
-        _expires_at: expiresAt,
-        _user_id: null
+      .rpc('save_analysis_cache', {
+        p_symbol: symbol,
+        p_analysis_data: analysisResult,
       })
 
     if (saveError) {
@@ -164,54 +151,30 @@ async function performStockAnalysis(symbol: string) {
     const aiSummary = await generateAISummary(symbol, { ...scores, recommendation })
 
     const result = {
-      status: 'success',
       symbol,
-      currentPrice: priceHistory.currentPrice,
-      priceHistory: priceHistory.priceHistory,
-      analysis: {
-        mode: 'normal',
-        timeframe: '1M',
-        timestamp: new Date().toISOString(),
-        fundamental: {
-          score: scores.fundamental,
-          recommendation: getRecommendation(scores.fundamental),
-        },
-        technical: {
-          score: scores.technical,
-          recommendation: getRecommendation(scores.technical),
-          indicators: technicalIndicators,
-        },
-        sentiment: {
-          score: scores.sentiment,
-          recommendation: getRecommendation(scores.sentiment),
-        },
-        overall: {
-          score: scores.overall,
-          recommendation,
-        },
-        aiInsights: {
-          summary: aiSummary,
-        },
+      recommendation,
+      scores,
+      aiSummary,
+      data: {
+        priceHistory,
+        companyInfo,
+        financialMetrics,
+        newsSentiment,
+        technicalIndicators,
       },
+      timestamp: new Date().toISOString(),
     }
 
     console.log(`[Analysis Service] Completed analysis for ${symbol}.`)
     return result
   } catch (error) {
     console.error(`[Analysis Service] Error during analysis for ${symbol}:`, error.message)
-    // Return a structured error response matching the expected schema
+    // If analysis fails, return a structured error response
     return {
-      status: 'error',
+      error: true,
       symbol: symbol,
-      analysis: {
-        mode: 'normal',
-        timeframe: '1M',
-        timestamp: new Date().toISOString(),
-        overall: {
-          score: 0,
-          recommendation: 'Error',
-        },
-      },
+      message: `Failed to perform analysis: ${error.message}`,
+      timestamp: new Date().toISOString(),
     }
   }
 }
@@ -513,7 +476,7 @@ Please format your response with proper markdown including bold headings (##) an
     }
 
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${GEMINI_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
