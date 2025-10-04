@@ -117,9 +117,13 @@ Deno.serve(async (req) => {
     const analysisResult = await performStockAnalysis(symbol)
 
     // Transform to match frontend schema
+    const currentPrice = analysisResult.data.priceHistory?.[analysisResult.data.priceHistory.length - 1]?.close || 0
+    
     const formattedResponse = {
       status: 'success',
       symbol: analysisResult.symbol,
+      currentPrice,
+      priceHistory: analysisResult.data.priceHistory || [],
       analysis: {
         mode: 'hybrid',
         timeframe: 'daily',
