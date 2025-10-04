@@ -36,18 +36,8 @@ export default function SymbolAnalysis() {
   })
 
   const handleRefresh = () => {
-    setSp(prev => {
-      const newParams = new URLSearchParams(prev)
-      newParams.set('refresh', '1')
-      return newParams
-    })
-    setTimeout(() => {
-      setSp(prev => {
-        const newParams = new URLSearchParams(prev)
-        newParams.delete('refresh')
-        return newParams
-      })
-    }, 100)
+    // Force refetch by temporarily setting refresh parameter and then refetching the query
+    window.location.href = `${window.location.pathname}?tf=${timeframe}&mode=${mode}&refresh=1`
   }
 
   // Fetch news
