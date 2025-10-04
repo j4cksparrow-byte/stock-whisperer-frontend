@@ -116,10 +116,41 @@ Deno.serve(async (req) => {
 
     const analysisResult = await performStockAnalysis(symbol)
 
+    // Transform to match frontend schema
+    const formattedResponse = {
+      status: 'success',
+      symbol: analysisResult.symbol,
+      analysis: {
+        mode: 'hybrid',
+        timeframe: 'daily',
+        timestamp: analysisResult.timestamp,
+        fundamental: {
+          score: analysisResult.scores.fundamental,
+          recommendation: getRecommendation(analysisResult.scores.fundamental),
+        },
+        technical: {
+          score: analysisResult.scores.technical,
+          recommendation: getRecommendation(analysisResult.scores.technical),
+          indicators: analysisResult.data.technicalIndicators,
+        },
+        sentiment: {
+          score: analysisResult.scores.sentiment,
+          recommendation: getRecommendation(analysisResult.scores.sentiment),
+        },
+        overall: {
+          score: analysisResult.scores.overall,
+          recommendation: analysisResult.recommendation,
+        },
+        aiInsights: {
+          summary: analysisResult.aiSummary,
+        },
+      },
+    }
+
     const { error: saveError } = await supabase
       .rpc('save_analysis_cache', {
         p_symbol: symbol,
-        p_analysis_data: analysisResult,
+        p_analysis_data: formattedResponse,
       })
 
     if (saveError) {
@@ -128,7 +159,7 @@ Deno.serve(async (req) => {
       console.log(`[Cache] Successfully cached analysis for ${symbol}.`)
     }
 
-    return new Response(JSON.stringify(analysisResult), {
+    return new Response(JSON.stringify(formattedResponse), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       status: 200,
     })
