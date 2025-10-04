@@ -75,14 +75,14 @@ Deno.serve(async (req) => {
     const symbol = url.searchParams.get('symbol')
     const bypassCache = url.searchParams.get('bypassCache') === 'true'
     
+    console.log(`[Analysis] Received request for symbol: ${symbol}, bypassCache: ${bypassCache}`)
+    
     if (!symbol) {
       return new Response(JSON.stringify({ error: 'Symbol is required' }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         status: 400,
       })
     }
-
-    console.log(`[Analysis] Received request for symbol: ${symbol}`)
 
     // Check cache using the generic cache function (unless bypassing)
     if (!bypassCache) {
