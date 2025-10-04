@@ -12,11 +12,13 @@ import SentimentBar from '../components/SentimentBar'
 import NewsCard from '../components/NewsCard'
 import FundamentalsTable from '../components/FundamentalsTable'
 import { Card } from '../components/ui/card'
+import { Button } from '../components/ui/button'
+import { RefreshCw } from 'lucide-react'
 import { encodeState, decodeState } from '../lib/urlState'
 
 export default function SymbolAnalysis() {
   const { symbol = '' } = useParams()
-  const [sp] = useSearchParams()
+  const [sp, setSp] = useSearchParams()
   const [weights, setWeights] = useState({ fundamental: 40, technical: 35, sentiment: 25 })
 
   const timeframe = sp.get('tf') ?? '1M'
@@ -32,6 +34,21 @@ export default function SymbolAnalysis() {
     includeHeadlines,
     bypassCache
   })
+
+  const handleRefresh = () => {
+    setSp(prev => {
+      const newParams = new URLSearchParams(prev)
+      newParams.set('refresh', '1')
+      return newParams
+    })
+    setTimeout(() => {
+      setSp(prev => {
+        const newParams = new URLSearchParams(prev)
+        newParams.delete('refresh')
+        return newParams
+      })
+    }, 100)
+  }
 
   // Fetch news
   const { data: newsData } = useStockNews(symbol)
@@ -106,13 +123,24 @@ export default function SymbolAnalysis() {
           <h1 className="text-3xl font-bold">{symbol}</h1>
           <p className="text-muted-foreground">Market Open</p>
         </div>
-        <div className="text-right">
-          <div className="text-3xl font-bold">
-            ${typeof currentPrice === 'number' ? currentPrice.toFixed(2) : currentPrice}
-          </div>
-          <div className={`text-lg font-medium ${priceChange >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-            {priceChange >= 0 ? '+' : ''}{typeof priceChange === 'number' ? priceChange.toFixed(2) : priceChange} 
-            ({priceChange >= 0 ? '+' : ''}{typeof priceChangePercent === 'number' ? priceChangePercent.toFixed(2) : priceChangePercent}%)
+        <div className="flex items-center gap-4">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleRefresh}
+            disabled={isFetching}
+          >
+            <RefreshCw className={`h-4 w-4 mr-2 ${isFetching ? 'animate-spin' : ''}`} />
+            Refresh Analysis
+          </Button>
+          <div className="text-right">
+            <div className="text-3xl font-bold">
+              ${typeof currentPrice === 'number' ? currentPrice.toFixed(2) : currentPrice}
+            </div>
+            <div className={`text-lg font-medium ${priceChange >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+              {priceChange >= 0 ? '+' : ''}{typeof priceChange === 'number' ? priceChange.toFixed(2) : priceChange} 
+              ({priceChange >= 0 ? '+' : ''}{typeof priceChangePercent === 'number' ? priceChangePercent.toFixed(2) : priceChangePercent}%)
+            </div>
           </div>
         </div>
       </div>

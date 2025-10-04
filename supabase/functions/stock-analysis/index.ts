@@ -73,6 +73,7 @@ Deno.serve(async (req) => {
   try {
     const url = new URL(req.url)
     const symbol = url.searchParams.get('symbol')
+    const bypassCache = url.searchParams.get('bypassCache') === 'true'
     
     if (!symbol) {
       return new Response(JSON.stringify({ error: 'Symbol is required' }), {
@@ -83,25 +84,29 @@ Deno.serve(async (req) => {
 
     console.log(`[Analysis] Received request for symbol: ${symbol}`)
 
-    // Check cache using the generic cache function
-    const cacheKey = `stock_analysis_${symbol}`
-    const { data: cachedData, error: cacheError } = await supabase
-      .rpc('get_cache_value', { 
-        _cache_key: cacheKey,
-        _user_id: null 
-      })
+    // Check cache using the generic cache function (unless bypassing)
+    if (!bypassCache) {
+      const cacheKey = `stock_analysis_${symbol}`
+      const { data: cachedData, error: cacheError } = await supabase
+        .rpc('get_cache_value', { 
+          _cache_key: cacheKey,
+          _user_id: null 
+        })
 
-    if (cacheError) {
-      console.error(`[Cache] Error fetching from cache for ${symbol}:`, cacheError.message)
-    }
+      if (cacheError) {
+        console.error(`[Cache] Error fetching from cache for ${symbol}:`, cacheError.message)
+      }
 
-    if (cachedData) {
-      console.log(`[Cache] Found valid cache entry for ${symbol}.`)
-      return new Response(JSON.stringify(cachedData), {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      })
+      if (cachedData) {
+        console.log(`[Cache] Found valid cache entry for ${symbol}.`)
+        return new Response(JSON.stringify(cachedData), {
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        })
+      } else {
+        console.log(`[Cache] No cache entry found for ${symbol}. Fetching fresh data...`)
+      }
     } else {
-      console.log(`[Cache] No cache entry found for ${symbol}. Fetching fresh data...`)
+      console.log(`[Cache] Bypassing cache for ${symbol} as requested.`)
     }
 
     const analysisResult = await performStockAnalysis(symbol)
