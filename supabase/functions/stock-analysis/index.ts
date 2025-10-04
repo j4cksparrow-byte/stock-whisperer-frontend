@@ -86,7 +86,7 @@ Deno.serve(async (req) => {
 
     // Check cache using the generic cache function (unless bypassing)
     if (!bypassCache) {
-      const cacheKey = `stock_analysis_${symbol}`
+      const cacheKey = `stock_analysis_v2_${symbol}` // Updated cache version to invalidate old entries
       const { data: cachedData, error: cacheError } = await supabase
         .rpc('get_cache_value', { 
           _cache_key: cacheKey,
@@ -112,6 +112,7 @@ Deno.serve(async (req) => {
     const analysisResult = await performStockAnalysis(symbol)
 
     // Save to cache with 24 hour expiration
+    const cacheKey = `stock_analysis_v2_${symbol}` // Use same cache version
     const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString()
     const { error: saveError } = await supabase
       .rpc('set_cache_value', {
