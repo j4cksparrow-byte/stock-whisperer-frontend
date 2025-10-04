@@ -83,32 +83,37 @@ Deno.serve(async (req) => {
 
     console.log(`[Analysis] Received request for symbol: ${symbol}`)
 
+    // Check cache using the generic cache function
+    const cacheKey = `stock_analysis_${symbol}`
     const { data: cachedData, error: cacheError } = await supabase
-      .rpc('get_cached_analysis', { p_symbol: symbol })
+      .rpc('get_cache_value', { 
+        _cache_key: cacheKey,
+        _user_id: null 
+      })
 
     if (cacheError) {
       console.error(`[Cache] Error fetching from cache for ${symbol}:`, cacheError.message)
     }
 
-    if (cachedData && cachedData.length > 0) {
-      const age = Date.now() - new Date(cachedData[0].created_at).getTime()
-      if (age < 24 * 60 * 60 * 1000) { // 24 hours
-        console.log(`[Cache] Found valid cache entry for ${symbol}.`)
-        return new Response(JSON.stringify(cachedData[0].analysis_data), {
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        })
-      }
-      console.log(`[Cache] Stale cache entry found for ${symbol}. Refetching...`)
+    if (cachedData) {
+      console.log(`[Cache] Found valid cache entry for ${symbol}.`)
+      return new Response(JSON.stringify(cachedData), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      })
     } else {
       console.log(`[Cache] No cache entry found for ${symbol}. Fetching fresh data...`)
     }
 
     const analysisResult = await performStockAnalysis(symbol)
 
+    // Save to cache with 24 hour expiration
+    const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString()
     const { error: saveError } = await supabase
-      .rpc('save_analysis_cache', {
-        p_symbol: symbol,
-        p_analysis_data: analysisResult,
+      .rpc('set_cache_value', {
+        _cache_key: cacheKey,
+        _cache_value: analysisResult,
+        _expires_at: expiresAt,
+        _user_id: null
       })
 
     if (saveError) {
