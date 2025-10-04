@@ -71,7 +71,9 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { symbol } = await req.json()
+    const url = new URL(req.url)
+    const symbol = url.searchParams.get('symbol')
+    
     if (!symbol) {
       return new Response(JSON.stringify({ error: 'Symbol is required' }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
