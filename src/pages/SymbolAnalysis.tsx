@@ -108,6 +108,95 @@ export default function SymbolAnalysis() {
     )
   }
 
+  // Pro mode layout - detailed score breakdown
+  if (mode === 'advanced') {
+    return (
+      <div className="container mx-auto p-4 space-y-6">
+        {/* Header */}
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold">{symbol}</h1>
+            <p className="text-muted-foreground">Pro Analysis Mode</p>
+          </div>
+          <div className="text-right">
+            <div className="text-3xl font-bold">
+              ${typeof currentPrice === 'number' ? currentPrice.toFixed(2) : currentPrice}
+            </div>
+            <div className={`text-lg font-medium ${priceChange >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+              {priceChange >= 0 ? '+' : ''}{typeof priceChange === 'number' ? priceChange.toFixed(2) : priceChange} 
+              ({priceChange >= 0 ? '+' : ''}{typeof priceChangePercent === 'number' ? priceChangePercent.toFixed(2) : priceChangePercent}%)
+            </div>
+          </div>
+        </div>
+
+        {/* Score Breakdown Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Card className="p-6">
+            <h3 className="text-sm font-medium text-muted-foreground mb-2">TECHNICAL SCORE</h3>
+            <div className="text-5xl font-bold mb-2">{technicalScore}</div>
+            <p className="text-sm text-muted-foreground">
+              Based on {decodedIndicators ? decodedIndicators.length : 0} indicators
+            </p>
+            {decodedIndicators && (
+              <div className="mt-3 flex flex-wrap gap-1">
+                {decodedIndicators.map((ind: string) => (
+                  <span key={ind} className="px-2 py-1 text-xs bg-primary/10 text-primary rounded">
+                    {ind}
+                  </span>
+                ))}
+              </div>
+            )}
+          </Card>
+
+          <Card className="p-6">
+            <h3 className="text-sm font-medium text-muted-foreground mb-2">FUNDAMENTAL SCORE</h3>
+            <div className="text-5xl font-bold mb-2">{fundamentalScore}</div>
+            <p className="text-sm text-muted-foreground">Company fundamentals analysis</p>
+          </Card>
+
+          <Card className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950">
+            <h3 className="text-sm font-medium text-muted-foreground mb-2">AGGREGATE SCORE</h3>
+            <div className="text-5xl font-bold mb-2">{overallScore}</div>
+            <div className={`text-xl font-semibold ${
+              recommendation === 'BUY' ? 'text-green-600' : 
+              recommendation === 'SELL' ? 'text-red-600' : 'text-yellow-600'
+            }`}>
+              Verdict: {recommendation}
+            </div>
+            <div className="text-sm text-muted-foreground mt-1">Confidence: {confidence}</div>
+          </Card>
+        </div>
+
+        {/* Chart and Details */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2 space-y-6">
+            <TradingViewChart symbol={symbol} height={500} />
+            <FundamentalsTable data={fundamentalsData} />
+            <AISummary text={aiSummary} />
+          </div>
+
+          <div className="space-y-6">
+            <Card>
+              <CircularGauge 
+                score={overallScore} 
+                verdict={recommendation} 
+                confidence={confidence}
+              />
+            </Card>
+
+            <Card className="p-4">
+              <h3 className="font-semibold mb-4">Custom Weights</h3>
+              <WeightsPanel initial={weights} onChange={setWeights} />
+            </Card>
+
+            <NewsCard items={newsItems} />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // Smart mode layout - simple view
   return (
     <div className="container mx-auto p-4 space-y-6">
       {/* Header */}
