@@ -9,7 +9,10 @@ import { Input } from '@/components/ui/input';
 import { Loader, TrendingUp, TrendingDown, Minus, AlertTriangle } from 'lucide-react';
 import PriceChart from './PriceChart';
 import LoadingSpinner from './LoadingSpinner';
+import WeightsPanel from './WeightsPanel';
+import IndicatorsPanel from './IndicatorsPanel';
 import { useSearch } from '../lib/queries';
+import { encodeState } from '../lib/urlState';
 import api from '../lib/api';
 
 // Minimal types to keep this file self-contained; adapt as needed
@@ -23,6 +26,10 @@ const EnhancedStockAnalysis: React.FC = () => {
   const [analysisDuration, setAnalysisDuration] = useState<AnalysisDuration>('1M');
   const [searchQuery, setSearchQuery] = useState('');
   const [debouncedQuery, setDebouncedQuery] = useState('');
+  
+  // Pro mode state
+  const [weights, setWeights] = useState({ fundamental: 40, technical: 35, sentiment: 25 });
+  const [indicators, setIndicators] = useState<Record<string, any>>({});
   
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedQuery(searchQuery.trim()), 300);
@@ -48,6 +55,14 @@ const EnhancedStockAnalysis: React.FC = () => {
     const params = new URLSearchParams();
     params.set('tf', analysisDuration);
     params.set('mode', analysisMode === 'smart' ? 'normal' : 'advanced');
+    
+    // If Pro mode, include weights and indicators
+    if (analysisMode === 'pro') {
+      params.set('weights', encodeState(weights));
+      if (Object.keys(indicators).length > 0) {
+        params.set('indicators', encodeState(indicators));
+      }
+    }
     
     navigate(`/symbol/${selectedCompany.symbol}?${params.toString()}`);
   };
@@ -106,6 +121,28 @@ const EnhancedStockAnalysis: React.FC = () => {
               </Select>
             </div>
           </div>
+
+          {/* Pro Mode Options */}
+          {analysisMode === 'pro' && (
+            <div className="space-y-4 animate-fade-in">
+              <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
+                <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">Advanced Configuration</h3>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                  {/* Weights Panel */}
+                  <div className="bg-white/50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Analysis Weights</h4>
+                    <WeightsPanel initial={weights} onChange={setWeights} />
+                  </div>
+                  
+                  {/* Indicators Panel */}
+                  <div className="bg-white/50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Technical Indicators</h4>
+                    <IndicatorsPanel initialConfig={indicators} onChange={setIndicators} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Search Bar - Middle */}
           <div className="space-y-2">
