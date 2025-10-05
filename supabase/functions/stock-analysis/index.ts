@@ -19,7 +19,7 @@ const POLYGON_KEY = Deno.env.get('POLYGON_API_KEY')
 const ALPHA_VANTAGE_KEY = Deno.env.get('ALPHA_VANTAGE_API_KEY')
 const FINNHUB_KEY = Deno.env.get('FINNHUB_API_KEY')
 const FMP_KEY = Deno.env.get('FMP_API_KEY')
-const GEMINI_KEY = Deno.env.get('GEMINI_API_KEY')
+const GEMINI_KEY = Deno.env.get('GEMINI_API_KEY_2') // Switched to second API key
 const CHART_IMG_KEY = Deno.env.get('CHART_IMG_API_KEY')
 
 console.log('--- API Key Status ---')
