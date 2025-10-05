@@ -10,7 +10,7 @@ import { Loader, TrendingUp, TrendingDown, Minus, AlertTriangle } from 'lucide-r
 import PriceChart from './PriceChart';
 import LoadingSpinner from './LoadingSpinner';
 import WeightsPanel from './WeightsPanel';
-import IndicatorsPanel from './IndicatorsPanel';
+import ProIndicatorsSelector from './ProIndicatorsSelector';
 import { useSearch } from '../lib/queries';
 import { encodeState } from '../lib/urlState';
 import api from '../lib/api';
@@ -29,7 +29,7 @@ const EnhancedStockAnalysis: React.FC = () => {
   
   // Pro mode state
   const [weights, setWeights] = useState({ fundamental: 40, technical: 35, sentiment: 25 });
-  const [indicators, setIndicators] = useState<Record<string, any>>({});
+  const [selectedIndicators, setSelectedIndicators] = useState<string[]>(['RSI', 'MACD', 'SMA', 'BB', 'STOCH']);
   
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedQuery(searchQuery.trim()), 300);
@@ -59,8 +59,8 @@ const EnhancedStockAnalysis: React.FC = () => {
     // If Pro mode, include weights and indicators
     if (analysisMode === 'pro') {
       params.set('weights', encodeState(weights));
-      if (Object.keys(indicators).length > 0) {
-        params.set('indicators', encodeState(indicators));
+      if (selectedIndicators.length > 0) {
+        params.set('indicators', encodeState(selectedIndicators));
       }
     }
     
@@ -136,8 +136,11 @@ const EnhancedStockAnalysis: React.FC = () => {
                   
                   {/* Indicators Panel */}
                   <div className="bg-white/50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Technical Indicators</h4>
-                    <IndicatorsPanel initialConfig={indicators} onChange={setIndicators} />
+                    <ProIndicatorsSelector 
+                      initialIndicators={selectedIndicators} 
+                      onChange={setSelectedIndicators}
+                      maxSelection={5}
+                    />
                   </div>
                 </div>
               </div>
