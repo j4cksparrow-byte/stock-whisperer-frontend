@@ -1,5 +1,6 @@
 /// <reference types="https://deno.land/x/deno/cli/types/dts/index.d.ts" />
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
+import { GeminiKeyManager } from '../_shared/geminiKeyManager.ts'
 
 console.log('Stock analysis function booting up...')
 
@@ -19,8 +20,10 @@ const POLYGON_KEY = Deno.env.get('POLYGON_API_KEY')
 const ALPHA_VANTAGE_KEY = Deno.env.get('ALPHA_VANTAGE_API_KEY')
 const FINNHUB_KEY = Deno.env.get('FINNHUB_API_KEY')
 const FMP_KEY = Deno.env.get('FMP_API_KEY')
-const GEMINI_KEY = Deno.env.get('GEMINI_API_KEY')
 const CHART_IMG_KEY = Deno.env.get('CHART_IMG_API_KEY')
+
+// Initialize Gemini key manager for rotation
+const keyManager = new GeminiKeyManager()
 
 console.log('--- API Key Status ---')
 console.log(`TWELVE_DATA_KEY: ${TWELVE_DATA_KEY ? 'Loaded' : 'Missing'}`)
@@ -28,7 +31,6 @@ console.log(`POLYGON_KEY: ${POLYGON_KEY ? 'Loaded' : 'Missing'}`)
 console.log(`ALPHA_VANTAGE_KEY: ${ALPHA_VANTAGE_KEY ? 'Loaded' : 'Missing'}`)
 console.log(`FINNHUB_KEY: ${FINNHUB_KEY ? 'Loaded' : 'Missing'}`)
 console.log(`FMP_KEY: ${FMP_KEY ? 'Loaded' : 'Missing'}`)
-console.log(`GEMINI_KEY: ${GEMINI_KEY ? 'Loaded' : 'Missing'}`)
 console.log(`CHART_IMG_KEY: ${CHART_IMG_KEY ? 'Loaded' : 'Missing'}`)
 console.log('----------------------')
 
@@ -496,8 +498,11 @@ async function getChartImageAsBase64(symbol: string) {
   }
 }
 
-async function generateAISummary(symbol: string, scores: any, indicators: any, priceData: any): Promise<string> {
+async function generateAISummary(symbol: string, scores: any, indicators: any, priceData: any, retryCount: number = 0): Promise<string> {
   try {
+    // Get active Gemini API key with rotation support
+    const activeKey = await keyManager.getActiveKey();
+    
     const rsi = indicators?.RSI || 50
     const macd = indicators?.MACD || {}
     const dmi = indicators?.DMI || {}
@@ -584,7 +589,7 @@ ${scores.overall > 70 ? 'â€¢ Strong buy signal - Consider entering positions\nâ€
 *This analysis is based on current technical indicators and market data. Always conduct your own research and consider your risk tolerance before trading.*`
 
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${GEMINI_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${activeKey}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -598,7 +603,9 @@ ${scores.overall > 70 ? 'â€¢ Strong buy signal - Consider entering positions\nâ€
     
     if (!response.ok) {
       const errorBody = await response.text()
-      throw new Error(`Gemini API request failed with status ${response.status}: ${errorBody}`)
+      const error = new Error(`Gemini API request failed with status ${response.status}: ${errorBody}`)
+      error.status = response.status
+      throw error
     }
 
     const data = await response.json()
@@ -608,9 +615,18 @@ ${scores.overall > 70 ? 'â€¢ Strong buy signal - Consider entering positions\nâ€
       throw new Error('Could not generate AI summary.')
     }
     return summary
-  } catch (error) {
-    console.error('[AI] Error generating AI summary:', error.message)
-    return null
+  } catch (error: any) {
+    console.error('[AI] Error generating AI summary:', error);
+    
+    // Try to handle quota error and retry with alternate key
+    const switched = await keyManager.handleQuotaError(error);
+    
+    if (switched && retryCount < 1) {
+      console.log('[AI] Retrying analysis with alternate API key...');
+      return generateAISummary(symbol, scores, indicators, priceData, retryCount + 1);
+    }
+    
+    return null;
   }
 }
 
