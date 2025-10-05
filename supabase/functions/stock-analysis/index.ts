@@ -125,16 +125,17 @@ Deno.serve(async (req) => {
     }
 
     // Transform to match frontend schema
-    const priceHistory = analysisResult.data?.priceHistory || []
-    const currentPrice = priceHistory.length > 0 ? priceHistory[priceHistory.length - 1]?.close || 0 : 0
+    // fetchPriceHistory returns { priceHistory: [...], currentPrice: ... }
+    const priceHistoryData = analysisResult.data?.priceHistory?.priceHistory || []
+    const currentPrice = analysisResult.data?.priceHistory?.currentPrice || 0
     
-    console.log(`[Response] Current price: ${currentPrice}, Price history length: ${priceHistory.length}`)
+    console.log(`[Response] Current price: ${currentPrice}, Price history length: ${priceHistoryData.length}`)
     
     const formattedResponse = {
       status: 'success',
       symbol: analysisResult.symbol,
       currentPrice,
-      priceHistory,
+      priceHistory: priceHistoryData,
       analysis: {
         mode: 'hybrid',
         timeframe: 'daily',
