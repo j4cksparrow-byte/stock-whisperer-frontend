@@ -45,7 +45,7 @@ export const AnalysisResponse = z.object({
     technical: TechnicalAnalysisSchema.optional(),
     sentiment: ScoreBlock.optional(),
     overall: ScoreBlock.optional(),
-    aiInsights: z.object({ summary: z.string().optional() }).optional(),
+    aiInsights: z.object({ summary: z.string().nullish() }).optional(),
     meta: z.record(z.any()).optional(),
     priceHistory: z.array(z.object({
       time: z.string(),
