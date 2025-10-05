@@ -17,7 +17,16 @@ import { encodeState, decodeState } from '../lib/urlState'
 export default function SymbolAnalysis() {
   const { symbol = '' } = useParams()
   const [sp] = useSearchParams()
-  const [weights, setWeights] = useState({ fundamental: 40, technical: 35, sentiment: 25 })
+  
+  // Decode Pro mode parameters from URL
+  const weightsParam = sp.get('weights')
+  const indicatorsParam = sp.get('indicators')
+  const decodedWeights = weightsParam ? decodeState(weightsParam) : null
+  const decodedIndicators = indicatorsParam ? decodeState(indicatorsParam) : null
+  
+  const [weights, setWeights] = useState(
+    decodedWeights || { fundamental: 40, technical: 35, sentiment: 25 }
+  )
 
   const timeframe = sp.get('tf') ?? '1M'
   const mode = (sp.get('mode') as 'normal' | 'advanced') ?? 'normal'
@@ -29,6 +38,7 @@ export default function SymbolAnalysis() {
     timeframe,
     mode,
     weights: mode === 'advanced' ? weights : undefined,
+    indicators: mode === 'advanced' && decodedIndicators ? decodedIndicators : undefined,
     includeHeadlines,
     bypassCache
   })
