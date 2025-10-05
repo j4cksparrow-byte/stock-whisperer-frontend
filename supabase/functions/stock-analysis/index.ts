@@ -79,8 +79,11 @@ Deno.serve(async (req) => {
     const url = new URL(req.url)
     const symbol = url.searchParams.get('symbol')
     const bypassCache = url.searchParams.get('bypassCache') === 'true'
+    const mode = url.searchParams.get('mode') || 'normal'
+    const indicatorsParam = url.searchParams.get('indicators')
+    const indicators = indicatorsParam ? JSON.parse(indicatorsParam) : null
     
-    console.log(`[Analysis] Received request for symbol: ${symbol}, bypassCache: ${bypassCache}`)
+    console.log(`[Analysis] Received request for symbol: ${symbol}, mode: ${mode}, bypassCache: ${bypassCache}`)
     
     if (!symbol) {
       return new Response(JSON.stringify({ error: 'Symbol is required' }), {
@@ -114,7 +117,7 @@ Deno.serve(async (req) => {
       console.log(`[Cache] Bypassing cache for ${symbol} as requested.`)
     }
 
-    const analysisResult = await performStockAnalysis(symbol)
+    const analysisResult = await performStockAnalysis(symbol, mode, indicators)
 
     // Check if analysis resulted in an error
     if (analysisResult.error) {
@@ -189,8 +192,8 @@ Deno.serve(async (req) => {
 })
 
 // --- Core Analysis Orchestration ---
-async function performStockAnalysis(symbol: string) {
-  console.log(`[Analysis Service] Starting analysis for ${symbol}...`)
+async function performStockAnalysis(symbol: string, mode: string = 'normal', selectedIndicators: any = null) {
+  console.log(`[Analysis Service] Starting analysis for ${symbol} (mode: ${mode})...`)
   try {
     const [
       priceHistory,
@@ -208,7 +211,7 @@ async function performStockAnalysis(symbol: string) {
 
     const scores = calculateScores(financialMetrics, newsSentiment, technicalIndicators)
     const recommendation = getRecommendation(scores.overall)
-    const aiSummary = await generateAISummary(symbol, { ...scores, recommendation }, technicalIndicators, priceHistory)
+    const aiSummary = await generateAISummary(symbol, { ...scores, recommendation }, technicalIndicators, priceHistory, mode, selectedIndicators)
 
     const result = {
       symbol,
@@ -496,7 +499,14 @@ async function getChartImageAsBase64(symbol: string) {
   }
 }
 
-async function generateAISummary(symbol: string, scores: any, indicators: any, priceData: any): Promise<string> {
+async function generateAISummary(
+  symbol: string, 
+  scores: any, 
+  indicators: any, 
+  priceData: any,
+  mode: string = 'normal',
+  selectedIndicators: any = null
+): Promise<string> {
   try {
     const rsi = indicators?.RSI || 50
     const macd = indicators?.MACD || {}
@@ -509,24 +519,80 @@ async function generateAISummary(symbol: string, scores: any, indicators: any, p
     const priceTrend = currentPrice > oldPrice ? 'uptrend' : 'downtrend'
     const priceChangePercent = oldPrice > 0 ? ((currentPrice - oldPrice) / oldPrice * 100).toFixed(2) : '0'
 
-    const prompt = `You are a professional stock analyst. Provide a clear, structured technical and fundamental analysis for ${symbol.toUpperCase()}.
-
-**IMPORTANT FORMATTING RULES:**
-1. Use clear headings with ## for each section
-2. Use bullet points (•) for listing key points
-3. Keep each section concise (2-3 sentences maximum)
-4. Use bold (**text**) for important metrics and signals
-5. End with a clear, actionable summary
-
----
-
-## 📊 Current Market Overview
-**Symbol:** ${symbol.toUpperCase()}
-**Current Trend:** ${priceTrend.toUpperCase()} (${priceChangePercent}% over 30 days)
-**Overall Score:** ${scores.overall}/100 - **${scores.recommendation}**
-
----
-
+    // Build indicator details for Pro mode
+    let indicatorSection = ''
+    if (mode === 'advanced' && selectedIndicators) {
+      indicatorSection = '\n## 🔧 Selected Technical Indicators (Pro Mode)\n\n'
+      
+      // RSI
+      if (selectedIndicators.RSI?.enabled) {
+        const period = selectedIndicators.RSI.period || 14
+        indicatorSection += `### RSI (${period} period): ${rsi.toFixed(1)}\n`
+        if (rsi > 70) {
+          indicatorSection += '• **OVERBOUGHT** (>70) - Potential reversal down or profit-taking opportunity\n'
+        } else if (rsi < 30) {
+          indicatorSection += '• **OVERSOLD** (<30) - Potential reversal up or buying opportunity\n'
+        } else {
+          indicatorSection += '• **NEUTRAL** (30-70) - Stock in balanced territory\n'
+        }
+        indicatorSection += '\n'
+      }
+      
+      // MACD
+      if (selectedIndicators.MACD?.enabled) {
+        const fast = selectedIndicators.MACD.fast || 12
+        const slow = selectedIndicators.MACD.slow || 26
+        const signal = selectedIndicators.MACD.signal || 9
+        indicatorSection += `### MACD (${fast},${slow},${signal})\n`
+        if (macd.macd && macd.signal) {
+          const bullish = macd.macd > macd.signal
+          indicatorSection += `• **MACD Line**: ${macd.macd.toFixed(2)}\n`
+          indicatorSection += `• **Signal Line**: ${macd.signal.toFixed(2)}\n`
+          indicatorSection += `• **Histogram**: ${macd.hist?.toFixed(2) || 'N/A'}\n`
+          indicatorSection += `• **Signal**: ${bullish ? '🟢 BULLISH CROSSOVER - Upward momentum' : '🔴 BEARISH CROSSOVER - Downward pressure'}\n`
+        } else {
+          indicatorSection += '• Insufficient data for MACD calculation\n'
+        }
+        indicatorSection += '\n'
+      }
+      
+      // Bollinger Bands
+      if (selectedIndicators.BollingerBands?.enabled) {
+        const period = selectedIndicators.BollingerBands.period || 20
+        const stdDev = selectedIndicators.BollingerBands.stdDev || 2
+        indicatorSection += `### Bollinger Bands (${period} period, ${stdDev}σ)\n`
+        indicatorSection += '• Tracks price volatility and potential breakout zones\n'
+        indicatorSection += '• Bands expand during high volatility, contract during consolidation\n'
+        indicatorSection += '\n'
+      }
+      
+      // Stochastic
+      if (selectedIndicators.Stochastic?.enabled) {
+        const k = selectedIndicators.Stochastic.k || 14
+        const d = selectedIndicators.Stochastic.d || 3
+        indicatorSection += `### Stochastic Oscillator (%K=${k}, %D=${d})\n`
+        indicatorSection += '• Measures momentum by comparing closing price to price range\n'
+        indicatorSection += '• Values >80: Overbought | Values <20: Oversold\n'
+        indicatorSection += '\n'
+      }
+      
+      // ADX
+      if (selectedIndicators.ADX?.enabled) {
+        const period = selectedIndicators.ADX.period || 14
+        indicatorSection += `### ADX (${period} period)\n`
+        if (dmi.adx) {
+          indicatorSection += `• **ADX Value**: ${dmi.adx.toFixed(1)}\n`
+          indicatorSection += `• **Trend Strength**: ${dmi.adx > 25 ? 'STRONG trend in progress' : 'WEAK trend or consolidation'}\n`
+        } else {
+          indicatorSection += '• Measures trend strength (>25 = strong trend)\n'
+        }
+        indicatorSection += '\n'
+      }
+      
+      indicatorSection += '---\n'
+    } else {
+      // Normal mode - show basic RSI and MACD
+      indicatorSection = `
 ## 📈 Technical Analysis (Score: ${scores.technical}/100)
 
 ### RSI Indicator (${rsi.toFixed(1)})
@@ -540,14 +606,29 @@ ${macd.macd && macd.signal ? (
     : '• **BEARISH CROSSOVER** - Downward pressure present\n• Signal strength: ' + (macd.macd < 0 ? 'Strong' : 'Moderate')
 ) : '• Insufficient data for MACD analysis'}
 
-### Directional Movement (DMI)
-${dmi.adx ? (
-  dmi.adx > 25 
-    ? `• **STRONG TREND** detected (ADX: ${dmi.adx.toFixed(1)})\n• Direction: ${dmi.di_plus > dmi.di_minus ? 'Upward' : 'Downward'}`
-    : `• **WEAK TREND** (ADX: ${dmi.adx.toFixed(1)}) - Market consolidating`
-) : '• Trend strength analysis pending'}
+---
+`
+    }
+
+    const prompt = `You are a professional stock analyst. Provide a clear, structured technical and fundamental analysis for ${symbol.toUpperCase()}.
+
+**IMPORTANT FORMATTING RULES:**
+1. Use clear headings with ## for each section
+2. Use bullet points (•) for listing key points
+3. Keep each section concise (2-3 sentences maximum)
+4. Use bold (**text**) for important metrics and signals
+5. End with a clear, actionable summary
 
 ---
+
+## 📊 Current Market Overview
+**Symbol:** ${symbol.toUpperCase()}${mode === 'advanced' ? ' (Pro Mode Analysis)' : ''}
+**Current Trend:** ${priceTrend.toUpperCase()} (${priceChangePercent}% over 30 days)
+**Overall Score:** ${scores.overall}/100 - **${scores.recommendation}**
+
+---
+
+${indicatorSection}
 
 ## 💼 Fundamental Analysis (Score: ${scores.fundamental}/100)
 
@@ -581,7 +662,7 @@ ${scores.overall > 70 ? '• Strong buy signal - Consider entering positions\n�
 
 ---
 
-*This analysis is based on current technical indicators and market data. Always conduct your own research and consider your risk tolerance before trading.*`
+*This analysis is based on ${mode === 'advanced' ? 'your selected technical indicators' : 'current technical indicators'} and market data. Always conduct your own research and consider your risk tolerance before trading.*`
 
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${GEMINI_KEY}`,

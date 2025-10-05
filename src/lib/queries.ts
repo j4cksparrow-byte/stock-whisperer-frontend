@@ -163,15 +163,22 @@ type AnalysisParams = {
 }
 
 export function useAnalysis(params: AnalysisParams) {
-  const { symbol, ...rest } = params
+  const { symbol, indicators, ...rest } = params
   return useQuery({
     queryKey: ['analysis', params],
     queryFn: async () => {
       console.log('[useAnalysis] Starting analysis for:', symbol, 'params:', rest)
       try {
         const url = `/stock-analysis/analyze`
-        console.log('[useAnalysis] Calling:', url, 'with params:', { symbol, ...rest })
-        const { data } = await api.get(url, { params: { symbol, ...rest } })
+        
+        // Stringify indicators if present
+        const queryParams: any = { symbol, ...rest }
+        if (indicators) {
+          queryParams.indicators = JSON.stringify(indicators)
+        }
+        
+        console.log('[useAnalysis] Calling:', url, 'with params:', queryParams)
+        const { data } = await api.get(url, { params: queryParams })
         console.log('[useAnalysis] Raw API response:', data)
         const parsed = parse(AnalysisResponse, data)
         console.log('[useAnalysis] Parsed analysis:', parsed)
