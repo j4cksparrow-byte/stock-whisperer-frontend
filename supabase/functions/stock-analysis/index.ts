@@ -610,7 +610,7 @@ ${scores.overall > 70 ? 'â€¢ Strong buy signal - Consider entering positions\nâ€
     return summary
   } catch (error) {
     console.error('[AI] Error generating AI summary:', error.message)
-    return 'An error occurred while generating the AI summary. Please try again later.'
+    return null
   }
 }
 
